@@ -266,9 +266,5 @@ After tuning:
 All plots are generated with Matplotlib; you can swap colormaps (e.g. `Set2`, `Dark2`, `tab20`) to spice up the visualization.
 
 ## Contributing
-
-<<<<<<< HEAD
-We actually welcome pull and push requests (yes, really), but please follow the guidelines so there isn't a mess :)
-=======
 Pull and push requests are actually welcomed (yes, really), but please follow the guidelines so there isn't a mess :)
->>>>>>> cf0a2e297c9fafb555171e0e2adbe4257d61560b
+
