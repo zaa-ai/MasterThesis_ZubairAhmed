@@ -1,5 +1,8 @@
 # MasterThesis_ZubairAhmed
-The Git repository is for the Master Thesis 'A Machine Learning-Driven Approach to Optimizing Regression Test Binning: Enhancing Debugging Efficiency in Digital Front-end Verification'
+The Git repository is for the Master Thesis '**A Machine Learning-Driven Approach to Optimizing Regression Test Binning: Enhancing Debugging Efficiency in Digital Front-end Verification'**
+
+## Setup and Installation
+Use the command `https://github.com/zaa-ai/MasterThesis_ZubairAhmed.git` to clone the repo in your work directory.
 
 ## Git Structure
 
