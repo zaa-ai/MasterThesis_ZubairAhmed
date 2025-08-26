@@ -1,0 +1,1066 @@
++++ calling  ./simv_52144_dsi3_sync_pin +UVM_VERBOSITY=UVM_MEDIUM +bus_conflict_off +warn=noFCICIO -ucli -assert nopostproc +UVM_LOG_RECORD -verdi_opts '-ssr Verdi.ses' +uvm_set_type_override=top_default_seq,dsi3_sync_pin_seq -i run.tcl -vcs_assert off +UVM_VERDI_TRACE="UVM_AWARE+RAL+TLM+MSG+HIER+PRINT" +UVM_LOG_RECORD +UVM_TESTNAME=dsi3_sync_pin +UVM_TR_RECORD +vcs+lic+wait -reportstats -cm line+cond+fsm+tgl+branch+assert -cm_dir DIGITAL/results/vcs/dsi3_sync_pin.vdb -lca   +fsdbfile+dsi3_sync_pin.fsdb
+ ++ in dir   /nfs/wrk.zaa/sim/52144/m52144a/dsi3_sync_pin
+ ++ on host  ex04.elmos.de
+ ++ user     zaa
+ ++ start    2025-05-07T08:47:56
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Warning-[LCA_FEATURES_ENABLED] Usage warning
+  LCA features enabled by '-lca' argument on the command line.  For more 
+  information regarding list of LCA features please refer to Chapter "LCA 
+  features" in the VCS Release Notes
+
+Chronologic VCS simulator copyright 1991-2021
+Contains Synopsys proprietary information.
+Compiler version S-2021.09-1_Full64; Runtime version S-2021.09-1_Full64;  May  7 10:47 2025
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+
+ VCS Coverage Metrics Release S-2021.09-1_Full64 Copyright (c) 1991-2021 by Synopsys Inc.
+ucli% source dump.tcl
+*Verdi* Loading libsscore_vcsmx202109.so
+FSDB Dumper for VCS-MX, Release Verdi_U-2023.03-1, Linux x86_64/64bit, 04/17/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'dsi3_sync_pin.fsdb'
+*Verdi* : fsdbDumpon("glitch") - All FSDB files at 0 ps.
+*Verdi* : Begin traversing the scope (top_tb), layer (0).
+*Verdi* : Enable +all dumping.
+*Verdi* : End of traversing.
+*Verdi* : Flush all FSDB Files at 0 ps.
+1
+ucli% if { [info exists ::env(GATE_LEVEL)] } {
+	source tcheck.tcl
+}
+ucli% run
+*Verdi* Enable Verdi Message Catcher.
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/verdi/uvm_custom_install_verdi_recorder.sv(283) @ 0: reporter [VERDI_TR_AUTO] +UVM_TR_RECORD implicitly enables recording_details to UVM_FULL for all components. For explicit control use +UVM_DISABLE_AUTO_COMPONENT and set recording_detail on components accordingly
+UVM_INFO @ 0: reporter [RNTST] Running test top_test...
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VRR applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VREF applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VBG applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+UVM_INFO @ 0: reporter [UVM_CMDLINE_PROC] Applying type override from the command line: +uvm_set_type_override=top_default_seq,dsi3_sync_pin_seq
+UVM_INFO   @       0.0000000us:  [UVM_VERDI_DPI]         uvm_verdi DPI routines are compiled off. Recompile without +define+UVM_NO_VERDI_DPI 
+UVM_INFO   @       0.0000000us:  [dsi3_sync_pin_seq]     dsi3_sync_pin_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+*Verdi* Enable Verdi Recorder.
+Info: Verdi UVM 1.2 Hooks File 06/17/2014 
+UVM_INFO   @       0.0010000us:  [sim:task]              dsi3_sync_pin 
+UVM_INFO   @    2120.0010000us:  [sim:description]       '''Testcase for DSI3 synchronize channels using SYNCB pin''' 
+UVM_INFO   @    2120.0010000us:  [measure_t_dsi3_sync_seq] measure_t_dsi3_sync_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2120.0020000us:  [sim:description:1]     *measure t__DSI3,sync__ 
+UVM_INFO   @    2120.0020000us:  [sim:description:2]     **apply SYNCB with a delay of 100ns 
+UVM_INFO   @    2822.5620000us:  [sim:description:2]     **apply SYNCB with a delay of 200ns 
+UVM_INFO   @    3525.1220000us:  [sim:description:2]     **apply SYNCB with a delay of 300ns 
+UVM_INFO   @    4227.6820000us:  [sim:description:2]     **apply SYNCB with a delay of 400ns 
+UVM_INFO   @    4930.2420000us:  [sim:description:2]     **apply SYNCB with a delay of 500ns 
+UVM_INFO   @    5632.8020000us:  [sim:description:2]     **apply SYNCB with a delay of 600ns 
+UVM_INFO   @    6335.3620000us:  [sim:description:2]     **apply SYNCB with a delay of 700ns 
+UVM_INFO   @    6848.3031870us:  [sim:measure]           't__DSI3,sync__' = '0.700000' 
+UVM_INFO   @    6848.3031870us:  [external_sync_crm_seq] external_sync_crm_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    6848.3041870us:  [sim:description:1]     *sync CRM using SYNCB pin 
+UVM_INFO   @    7690.9441870us:  [external_sync_pdcm_seq] external_sync_pdcm_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    7690.9451870us:  [sim:description:1]     *sync PDCM using SYNCB pin 
+UVM_INFO   @    7690.9451870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    7748.6261870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 200 us
+  0 | Symbols:   4 | SID_8Bit | Start:    57 -    67  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    7802.4661870us:  [sim:description:1]     *sync CRM using SYNCB pin, SYNC_PDCM = 0 
+UVM_INFO   @    7811.1461870us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @    7832.5611870us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 200  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @    7832.5611870us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 200  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @    8166.7909650us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @    8168.7909260us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @    8366.7909260us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @    8366.7909260us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @    8368.7909420us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @    8368.7909420us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 200.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @    8566.7909420us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @    8566.7909420us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @    8568.7909580us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @    8568.7909580us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_ERROR  @    8851.7611870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @    8851.7611870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @    8855.6011870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @    8855.6011870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @    8855.7061870us:  [sim:description:1]     *sync CRM using SYNCB pin, SYNC_PDCM = 1 
+UVM_ERROR  @    8859.4411870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @    8859.4411870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @    8864.2811870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @    8864.2811870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @    8864.3861870us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_ERROR  @    8868.1211870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @    8868.1211870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @    8881.9611870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @    8881.9611870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @    8885.8011870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @    8885.8011870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @    8885.8011870us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 200  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @    8885.8011870us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 200  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_ERROR  @    9189.6411870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @    9189.6411870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @    9193.4811870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @    9193.4811870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @    9197.3211870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @    9197.3211870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @    9220.0686990us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @    9222.0687060us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_ERROR  @    9301.1611870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @    9301.1611870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @    9306.9146990us:  [m_master_transmission_checker_0] unexpected PDCM slave transaction, checker is not in PDCM state  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(363) 
+UVM_ERROR  @    9307.6577060us:  [m_master_transmission_checker_1] unexpected PDCM slave transaction, checker is not in PDCM state  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(363) 
+UVM_INFO   @    9420.0687060us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @    9420.0687060us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @    9422.0687220us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @    9422.0687220us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 200.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @    9620.0687220us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @    9620.0687220us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @    9622.0687380us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @    9622.0687380us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_ERROR  @    9905.0011870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @    9905.0011870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @    9908.8411870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @    9908.8411870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @    9908.9461870us:  [syncb_only_some_channels_seq] syncb_only_some_channels_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    9908.9471870us:  [sim:description:1]     *sync onyl some channels using SYNCB pin 
+UVM_INFO   @    9908.9471870us:  [sim:description:2]     **sync CRM  at channels 0b01 using SYNCB pin 
+UVM_ERROR  @    9912.6821870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @    9912.6821870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @    9926.5221870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @    9926.5221870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @    9932.2821870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @    9932.2821870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   10236.1221870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   10236.1221870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   10239.9621870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   10239.9621870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   10243.8021870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   10243.8021870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   10567.6421870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   10567.6421870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   11021.4821870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   11021.4821870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   11025.3221870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   11025.3221870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @   11025.4271870us:  [sim:description:2]     **sync CRM  at channels 0b10 using SYNCB pin 
+UVM_ERROR  @   11029.1621870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   11029.1621870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   11043.0021870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   11043.0021870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   11048.7621870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   11048.7621870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   11352.6021870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   11352.6021870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   11356.4421870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   11356.4421870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   11360.2821870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   11360.2821870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   11684.1221870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   11684.1221870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   12137.9621870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   12137.9621870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   12141.8021870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   12141.8021870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @   12141.9071870us:  [mixed_external_internal_sync_seq] mixed_external_internal_sync_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   12141.9081870us:  [sim:description:1]     *sync some channels using SYNCB pin and some using internal sync 
+UVM_INFO   @   12141.9081870us:  [sim:description:2]     **sync channels 0b01 using SYNCB pin and channels 0b10 using internal sync 
+UVM_ERROR  @   12145.6431870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   12145.6431870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   12159.4831870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   12159.4831870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   12168.1231870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   12168.1231870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   12271.9631870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   12271.9631870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   12275.8031870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   12275.8031870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   12279.6431870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   12279.6431870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   12621.9631870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   12621.9631870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   13071.9631870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   13071.9631870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   13075.8031870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   13075.8031870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   13191.9631870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   13191.9631870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   13671.9631870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   13671.9631870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   13675.8031870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   13675.8031870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @   13675.9081870us:  [sim:description:2]     **sync channels 0b10 using SYNCB pin and channels 0b01 using internal sync 
+UVM_ERROR  @   13679.6431870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   13679.6431870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   13693.4831870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   13693.4831870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   13702.1231870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   13702.1231870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   13805.9631870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   13805.9631870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   13809.8031870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   13809.8031870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   13813.6431870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   13813.6431870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   14155.9631870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   14155.9631870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   14605.9631870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   14605.9631870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   14609.8031870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   14609.8031870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   14725.9631870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   14725.9631870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   15205.9631870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   15205.9631870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   15209.8031870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   15209.8031870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @   15209.9081870us:  [syncb_already_active_seq] syncb_already_active_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   15209.9091870us:  [sim:description:1]     *SYNCB already active 
+UVM_ERROR  @   15315.5641870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   15315.5641870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   15619.4041870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   15619.4041870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   15923.2441870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   15923.2441870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @   16423.3491870us:  [syncb_during_running_crm_seq] syncb_during_running_crm_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   16423.3501870us:  [sim:description:1]     *sync CRM using SYNCB pin during an already running CRM 
+UVM_ERROR  @   16531.8851870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   16531.8851870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   17690.5251870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   17690.5251870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @   18740.6301870us:  [syncb_sync_error_seq]  syncb_sync_error_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   18740.6311870us:  [sim:description:1]     *sync error at waiting for SYCB pin 
+UVM_ERROR  @   18846.2861870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   18846.2861870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   19149.1661870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   19149.1661870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   19453.0061870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   19453.0061870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   19456.8461870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   19456.8461870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   19461.6861870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   19461.6861870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   19465.5261870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   19465.5261870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   19970.3661870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   19970.3661870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   19974.2061870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   19974.2061870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @   19974.3111870us:  [syncb_random_commands_seq] syncb_random_commands_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   19974.3121870us:  [sim:description:1]     *synchronize mixed/random commands 
+UVM_ERROR  @   19978.0471870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   19978.0471870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   19982.8871870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   19982.8871870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @   19983.9921870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_ERROR  @   19991.5681870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   19991.5681870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @   20041.6731870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 610 us
+  0 | Symbols:  42 | SID_0Bit | Start:    63 -   106  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   20141.6731870us:  [sim:description:2]     **sync 3 random commands ( WAIT,  CRM,  PDCM) using different SPI frames at all channels 
+UVM_INFO   @   20151.1681870us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 610  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @   20175.2909300us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   20539.1681870us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 610  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @   20567.2909700us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   20759.0809300us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 610  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @   21151.0809700us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 610  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @   29126.9020650us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   29126.9020650us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   29404.2731870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 29110.692000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   29404.2731870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 29110.692000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   30404.2731870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_ERROR  @   30411.8491870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   30411.8491870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @   30461.9541870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 336 us
+  0 | Symbols:  18 | SID_4Bit | Start:    51 -    82  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   30561.9541870us:  [sim:description:2]     **sync 3 random commands ( CRM,  CRM,  WAIT) using different SPI frames at all channels 
+UVM_INFO   @   38225.3941870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 37931.803000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   38225.3941870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 37931.803000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   39225.3941870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   39283.0751870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 354 us
+  0 | Symbols:  23 | SID_16Bit_CRC | Start:    68 -    96  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   39383.0751870us:  [sim:description:2]     **sync 2 random commands ( CRM,  CRM) using different SPI frames at all channels 
+UVM_INFO   @   46445.5951870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 46152.025000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   46445.5951870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 46152.025000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   47445.5951870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   47503.2761870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 415 us
+  0 | Symbols:  31 | SID_8Bit | Start:    56 -    88  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   47603.2761870us:  [sim:description:2]     **sync 5 random commands ( WAIT,  CLEAR_DSI_BUFFERS,  CRM,  PDCM,  CRM) using different SPI frames at all channels 
+UVM_INFO   @   47917.5311870us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 5 pulses and a PDCM period of 415  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @   47917.5311870us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 5 pulses and a PDCM period of 415  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @   47942.1242780us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   47946.1243100us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   48357.1242860us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   48357.1242860us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 415.000000 us - 3 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @   48361.1242890us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   48361.1242890us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 415.000000 us - 3 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @   48772.1242940us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   48772.1242940us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 415.000000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @   48776.1242610us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   48776.1242610us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 415.000000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @   49187.1243020us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   49187.1243020us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 415.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @   49191.1242620us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   49191.1242620us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 415.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @   49602.1243100us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   49602.1243100us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 415.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @   49606.1242700us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   49606.1242700us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 415.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @   56929.6361870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 56636.025000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   56929.6361870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 56636.025000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   57929.6361870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_ERROR  @   57937.2121870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   57937.2121870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @   57987.3171870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 490 us
+  0 | Symbols:  41 | SID_0Bit | Start:    24 -    59  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   58087.3171870us:  [sim:description:2]     **sync 2 random commands ( PDCM,  PDCM) using different SPI frames at all channels 
+UVM_INFO   @   58094.8921870us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 490  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @   58094.8921870us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 2 pulses and a PDCM period of 490  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @   58118.0131530us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   58122.0131740us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   58608.0131740us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   58608.0131740us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 490.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @   58612.0131450us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   58612.0131450us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 490.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @   59102.0131660us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   59102.0131660us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 490.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @   65790.9971870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 65497.414000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   65790.9971870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 65497.414000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   66790.9971870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_ERROR  @   66798.5731870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   66798.5731870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @   66848.6781870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 550 us
+  0 | Symbols:  42 | SID_4Bit | Start:    28 -    65  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   66948.6781870us:  [sim:description:2]     **sync 3 random commands ( WAIT,  PDCM,  CRM) using different SPI frames at all channels 
+UVM_INFO   @   67394.1731870us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 550  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @   67416.3587340us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 550  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @   76829.9020380us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   76829.9020380us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   77107.2781870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 76813.692000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   77107.2781870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 76813.692000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   78107.2781870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_ERROR  @   78114.8541870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @   78114.8541870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @   78164.9591870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 327 us
+  0 | Symbols:  13 | SID_0Bit | Start:    50 -    81  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   78264.9591870us:  [sim:description:2]     **sync 5 random commands ( CRM,  CRM,  PDCM,  CRM,  WAIT) using different SPI frames at all channels 
+UVM_INFO   @   85434.2391870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 85140.637000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   85434.2391870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 85140.637000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   86434.2391870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   86491.9201870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 341 us
+  0 | Symbols:  19 | SID_8Bit | Start:    39 -    79  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   86591.9201870us:  [sim:description:2]     **sync 5 random commands ( CRM,  WAIT,  CRM,  CRM,  WAIT) using different SPI frames at all channels 
+UVM_INFO   @   95269.1601870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 94975.581000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   95269.1601870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 94975.581000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   96269.1601870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   96326.8411870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 199 us
+  0 | Symbols:  10 | SID_0Bit | Start:    32 -    57  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   96426.8411870us:  [sim:description:2]     **sync 5 random commands ( PDCM,  CRM,  PDCM,  PDCM,  PDCM) using different SPI frames at all channels 
+UVM_INFO   @   96439.2161870us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 199  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @   96462.3465100us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   96661.3465180us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   96661.3465180us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 199.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @   96900.1355100us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 199  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @   96922.0131820us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   97094.8031820us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 4 pulses and a PDCM period of 199  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @   97116.3464860us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   97315.3464940us:  [sim:measure]           't__DSI,BIT,8__' = '7.999000' condition = 'at channel 1' 
+UVM_INFO   @   97315.3464940us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 199.001000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @   97514.3465020us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   97514.3465020us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 199.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @   97713.3465100us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   97713.3465100us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 199.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @   97886.1365100us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 2 pulses and a PDCM period of 199  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @   97907.6798140us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   98106.6798220us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   98106.6798220us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 199.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  105120.3211870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 104826.748000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  105120.3211870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 104826.748000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  106120.3211870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_ERROR  @  106127.8971870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @  106127.8971870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @  106178.0021870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 599 us
+  0 | Symbols:  53 | SID_8Bit | Start:    63 -    78  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  106278.0021870us:  [sim:description:2]     **sync 5 random commands ( WAIT,  WAIT,  CRM,  WAIT,  WAIT) using different SPI frames at all channels 
+UVM_INFO   @  107209.8586980us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 599  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  107700.8031820us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 599  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  115803.0131740us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  115803.0131740us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  116080.4021870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 115786.803000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  116080.4021870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 115786.803000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  117080.4021870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_ERROR  @  117087.9781870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @  117087.9781870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @  117138.0831870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 265 us
+  0 | Symbols:   9 | SID_8Bit | Start:    32 -    82  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  117238.0831870us:  [sim:description:2]     **sync 4 random commands ( PDCM,  WAIT,  CRM,  PDCM) using different SPI frames at all channels 
+UVM_INFO   @  117250.4581870us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 265  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  117273.5687130us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  117711.3587130us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 265  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  117733.0131810us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  117998.0131660us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  117998.0131660us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 265.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  118263.0131730us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  118263.0131730us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 265.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  126279.5631870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 125985.970000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  126279.5631870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 125985.970000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  127279.5631870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_ERROR  @  127287.1391870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @  127287.1391870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @  127337.2441870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 515 us
+  0 | Symbols:  39 | SID_4Bit | Start:    54 -    95  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  127437.2441870us:  [sim:description:2]     **sync 5 random commands ( PDCM,  PDCM,  PDCM,  CRM,  PDCM) using different SPI frames at all channels 
+UVM_INFO   @  127447.6991870us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 2 pulses and a PDCM period of 515  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  127470.8465190us:  [sim:measure]           't__DSI,BIT,8__' = '8.001000' condition = 'at channel 1' 
+UVM_INFO   @  127908.6365190us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 4 pulses and a PDCM period of 515  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  127934.8465060us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  127985.8464820us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  127985.8464820us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 515.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  128449.8465220us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  128449.8465220us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 515.000000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  128474.6364820us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 2 pulses and a PDCM period of 515  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  128498.8464820us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  128964.8465190us:  [sim:measure]           't__DSI,BIT,8__' = '8.001000' condition = 'at channel 0' 
+UVM_INFO   @  128964.8465190us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 514.999000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  129013.8464980us:  [sim:measure]           't__DSI,BIT,8__' = '7.999000' condition = 'at channel 1' 
+UVM_INFO   @  129013.8464980us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 515.001000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  129479.8464820us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  129479.8464820us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 515.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  129502.6374980us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 4 pulses and a PDCM period of 515  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  129526.8464980us:  [sim:measure]           't__DSI,BIT,8__' = '7.999000' condition = 'at channel 1' 
+UVM_INFO   @  129968.6364820us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 515  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  130041.8465140us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  130041.8465140us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 515.000000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  130556.8465110us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  130556.8465110us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 515.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  131071.8464910us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  131071.8464910us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 514.999000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  132016.0809380us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 515  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  133976.4576330us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  133976.4576330us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  134253.8041870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 133960.248000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  134253.8041870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 133960.248000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  135253.8041870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_ERROR  @  135261.3801870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @  135261.3801870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @  135311.4851870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 545 us
+  0 | Symbols:  32 | SID_16Bit_CRC | Start:    50 -    93  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  135411.4851870us:  [sim:description:2]     **sync 5 random commands ( PDCM,  CRM,  PDCM,  CRM,  WAIT) using different SPI frames at all channels 
+UVM_INFO   @  135424.8201870us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 5 pulses and a PDCM period of 545  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  135424.8201870us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 5 pulses and a PDCM period of 545  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  135448.0131580us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  135452.0131900us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  135993.0131730us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  135993.0131730us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 545.000000 us - 3 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  135997.0131580us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  135997.0131580us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 545.000000 us - 3 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  136538.0131660us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  136538.0131660us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 545.000000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  136542.0131980us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  136542.0131980us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 545.000000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  137083.0131810us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  137083.0131810us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 545.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  137087.0131660us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  137087.0131660us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 545.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  137628.0131740us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  137628.0131740us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 545.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  137632.0131450us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  137632.0131450us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 545.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  138609.8031450us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 4 pulses and a PDCM period of 545  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  138632.1242610us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  139177.1242940us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  139177.1242940us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 545.000000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  139326.9142620us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 545  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  139722.1242620us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  139722.1242620us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 545.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  140267.1243020us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  140267.1243020us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 545.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  140785.9143020us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 545  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  141887.5687500us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  141887.5687500us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  142164.9251870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 141871.359000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  142164.9251870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 141871.359000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  143164.9251870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_ERROR  @  143172.5011870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @  143172.5011870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @  143222.6061870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 466 us
+  0 | Symbols:  27 | SID_8Bit | Start:    28 -    38  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  143322.6061870us:  [sim:description:2]     **sync 3 random commands ( PDCM,  WAIT,  PDCM) using different SPI frames at all channels 
+UVM_INFO   @  143330.1811870us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 4 pulses and a PDCM period of 466  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  143330.1811870us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 466  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  143353.2909620us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  143357.2909220us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  143819.2909460us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  143819.2909460us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 466.000000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  143823.2909430us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  143823.2909430us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 466.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  144285.2909300us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  144285.2909300us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 466.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  144289.2909620us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  144289.2909620us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 466.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  144729.0809620us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 466  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  144751.2909510us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  144751.2909510us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 466.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  145562.0809510us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 466  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  145584.7909580us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  146050.7909420us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  146050.7909420us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 466.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  146516.7909260us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  146516.7909260us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 466.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  146956.5809260us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 466  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  150307.9020540us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  150307.9020540us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  150585.2861870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 150291.692000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  150585.2861870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 150291.692000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  151585.2861870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_ERROR  @  151592.8621870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @  151592.8621870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @  151642.9671870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 351 us
+  0 | Symbols:  15 | SID_0Bit | Start:    32 -    61  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  151742.9671870us:  [sim:description:2]     **sync 2 random commands ( PDCM,  CRM) using different SPI frames at all channels 
+UVM_INFO   @  151750.5421870us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 351  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  151750.5421870us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 351  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  151773.7353780us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  151777.7354100us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  152124.7353780us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  152124.7353780us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 351.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  152128.7354100us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  152128.7354100us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 351.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  152475.7353780us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  152475.7353780us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 351.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  152479.7354100us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  152479.7354100us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 351.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  152804.5254100us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 351  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  153259.5254100us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 351  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  161409.2909430us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  161409.2909430us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  161686.6471870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 161393.081000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  161686.6471870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 161393.081000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  162686.6471870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_ERROR  @  162694.2231870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @  162694.2231870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @  162744.3281870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 560 us
+  0 | Symbols:  31 | SID_0Bit | Start:    53 -    98  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  162844.3281870us:  [sim:description:2]     **sync 2 random commands ( CRM,  PDCM) using different SPI frames at all channels 
+UVM_INFO   @  172168.9281870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 171875.359000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  172168.9281870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 171875.359000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  173168.9281870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  173226.6091870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 362 us
+  0 | Symbols:  12 | SID_4Bit | Start:    32 -    62  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  173326.6091870us:  [sim:description:2]     **sync 4 random commands ( WAIT,  PDCM,  CRM,  WAIT) using different SPI frames at all channels 
+UVM_INFO   @  173339.9441870us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 362  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  173363.6242580us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  173679.9441870us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 362  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  173707.6242740us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  183165.0491870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 182871.470000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  183165.0491870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 182871.470000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  184165.0491870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_ERROR  @  184172.6251870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @  184172.6251870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @  184222.7301870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 444 us
+  0 | Symbols:  30 | SID_0Bit | Start:    26 -    48  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  184322.7301870us:  [sim:description:2]     **sync 2 random commands ( WAIT,  CRM) using different SPI frames at all channels 
+UVM_INFO   @  190333.2901870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 190039.692000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  190333.2901870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 190039.692000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  191333.2901870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  191390.9711870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 531 us
+  0 | Symbols:  28 | SID_0Bit | Start:    32 -    77  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  191490.9711870us:  [sim:description:2]     **sync 4 random commands ( CRM,  PDCM,  PDCM,  PDCM) using different SPI frames at all channels 
+UVM_INFO   @  191500.4661870us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 531  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  191528.0687220us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  191957.8587300us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 5 pulses and a PDCM period of 531  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  191980.0687380us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  192032.8587220us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 531  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  192511.0687380us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  192511.0687380us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 531.000000 us - 3 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  193042.0687380us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  193042.0687380us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 531.000000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  193573.0687380us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  193573.0687380us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 531.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  194104.0687380us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  194104.0687380us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 531.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  194608.8587380us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 531  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  194630.4020340us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  195135.1920340us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 531  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  200572.1798260us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  200572.1798260us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  200849.5711870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 200555.970000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  200849.5711870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 200555.970000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  201849.5711870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_ERROR  @  201857.1471870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @  201857.1471870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @  201907.2521870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 270 us
+  0 | Symbols:  14 | SID_16Bit_CRC | Start:    56 -    83  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  202007.2521870us:  [sim:description:2]     **sync 2 random commands ( PDCM,  CRM) using different SPI frames at all channels 
+UVM_INFO   @  202016.7471870us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 270  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  202039.8464980us:  [sim:measure]           't__DSI,BIT,8__' = '7.999000' condition = 'at channel 0' 
+UVM_INFO   @  202309.8464980us:  [sim:measure]           't__DSI,BIT,8__' = '7.999000' condition = 'at channel 0' 
+UVM_INFO   @  202309.8464980us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 270.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  202579.8464980us:  [sim:measure]           't__DSI,BIT,8__' = '7.999000' condition = 'at channel 0' 
+UVM_INFO   @  202579.8464980us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 270.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  212106.8521870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 211813.248000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  212106.8521870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 211813.248000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  213106.8521870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_ERROR  @  213114.4281870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @  213164.5331870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 451 us
+  0 | Symbols:  35 | SID_0Bit | Start:    35 -    45  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  213264.5331870us:  [sim:description:2]     **sync 4 random commands ( WAIT,  CLEAR_DSI_BUFFERS,  WAIT,  CRM) using different SPI frames at all channels 
+UVM_INFO   @  219305.9731870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 219012.414000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  219305.9731870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 219012.414000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  220305.9731870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  220363.6541870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 402 us
+  0 | Symbols:  24 | SID_16Bit_CRC | Start:    70 -    93  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  220463.6541870us:  [sim:description:2]     **sync 5 random commands ( PDCM,  WAIT,  CRM,  CRM,  CRM) using different SPI frames at all channels 
+UVM_INFO   @  220480.8291870us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 4 pulses and a PDCM period of 402  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  220503.9575910us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  220905.9576260us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  220905.9576260us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 402.000000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  221307.9576020us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  221307.9576020us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 402.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  221709.9575910us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  221709.9575910us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 402.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  229946.9341870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 229653.359000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  229946.9341870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 229653.359000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  230946.9341870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_ERROR  @  230954.5101870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @  231004.6151870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 586 us
+  0 | Symbols:  44 | SID_16Bit_CRC | Start:    29 -    54  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  231104.6151870us:  [sim:description:2]     **sync 4 random commands ( CRM,  PDCM,  CRM,  CRM) using different SPI frames at all channels 
+UVM_INFO   @  231117.9501870us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 586  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  231575.3587260us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 4 pulses and a PDCM period of 586  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  231597.0131740us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  232183.0131820us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  232183.0131820us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 586.000000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  232769.0131900us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  232769.0131900us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 586.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  233355.0131730us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  233355.0131730us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 586.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  233914.8031730us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 586  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  239714.6798380us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  239714.6798380us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  239992.0551870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 239698.470000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  239992.0551870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 239698.470000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  240992.0551870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_ERROR  @  240999.6311870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @  240999.6311870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @  241049.7361870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 330 us
+  0 | Symbols:  22 | SID_0Bit | Start:    47 -    90  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  241149.7361870us:  [sim:description:2]     **sync 5 random commands ( CRM,  CRM,  CLEAR_DSI_BUFFERS,  PDCM,  WAIT) using different SPI frames at all channels 
+UVM_INFO   @  241626.4698220us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 330  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  241648.1242700us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  241978.1242530us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  241978.1242530us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 330.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  242077.9142780us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 330  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  242100.1242860us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  242308.1242940us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  242308.1242940us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 330.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  242430.1242620us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  242430.1242620us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 330.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  242760.1243100us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  242760.1243100us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 330.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  251267.0961870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 250973.525000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  251267.0961870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 250973.525000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  252267.0961870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_ERROR  @  252274.6721870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @  252274.6721870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @  252324.7771870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 401 us
+  0 | Symbols:  13 | SID_16Bit_CRC | Start:    66 -   100  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  252424.7771870us:  [sim:description:2]     **sync 2 random commands ( PDCM,  WAIT) using different SPI frames at all channels 
+UVM_INFO   @  252431.3921870us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 401  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  252631.3921870us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 401  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  260004.1243100us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  260004.1243100us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  260281.4971870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 259987.914000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  260281.4971870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 259987.914000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  261281.4971870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_ERROR  @  261289.0731870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @  261289.0731870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @  261339.1781870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 388 us
+  0 | Symbols:  31 | SID_16Bit_CRC | Start:    67 -    80  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  261439.1781870us:  [sim:description:2]     **sync 2 random commands ( PDCM,  CRM) using different SPI frames at all channels 
+UVM_INFO   @  261448.6731870us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 5 pulses and a PDCM period of 388  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  261448.6731870us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 5 pulses and a PDCM period of 388  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  261471.8464830us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  261475.8464980us:  [sim:measure]           't__DSI,BIT,8__' = '7.999000' condition = 'at channel 1' 
+UVM_INFO   @  261859.8464910us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  261859.8464910us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 388.000000 us - 3 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  261863.8465060us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  261863.8465060us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 388.000000 us - 3 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  262247.8464820us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  262247.8464820us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 388.000000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  262251.8465140us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  262251.8465140us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 388.000000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  262635.8464900us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  262635.8464900us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 388.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  262639.8465220us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  262639.8465220us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 388.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  263023.8464980us:  [sim:measure]           't__DSI,BIT,8__' = '7.999000' condition = 'at channel 0' 
+UVM_INFO   @  263023.8464980us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 388.001000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  263027.8465300us:  [sim:measure]           't__DSI,BIT,8__' = '8.001000' condition = 'at channel 1' 
+UVM_INFO   @  263027.8465300us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 387.999000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  270648.7781870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 270355.192000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  270648.7781870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 270355.192000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  271648.7781870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_ERROR  @  271656.3541870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @  271656.3541870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @  271706.4591870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 310 us
+  0 | Symbols:  22 | SID_0Bit | Start:    60 -    87  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  271806.4591870us:  [sim:description:2]     **sync 5 random commands ( CRM,  CLEAR_DSI_BUFFERS,  CRM,  PDCM,  PDCM) using different SPI frames at all channels 
+UVM_INFO   @  271820.7541870us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 4 pulses and a PDCM period of 310  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  271848.3465330us:  [sim:measure]           't__DSI,BIT,8__' = '8.001000' condition = 'at channel 1' 
+UVM_INFO   @  272158.3464940us:  [sim:measure]           't__DSI,BIT,8__' = '7.999000' condition = 'at channel 1' 
+UVM_INFO   @  272158.3464940us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 310.001000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  272468.3465250us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  272468.3465250us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 310.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  272778.3464860us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  272778.3464860us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 309.999000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  273062.1364860us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 2 pulses and a PDCM period of 310  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  273083.6798140us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  273393.6798460us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  273393.6798460us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 310.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  278120.8591870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 277827.303000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  278120.8591870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 277827.303000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  279120.8591870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_ERROR  @  279128.4351870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @  279178.5401870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 332 us
+  0 | Symbols:  28 | SID_8Bit | Start:    36 -    48  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  279278.5401870us:  [sim:description:2]     **sync 3 random commands ( CLEAR_DSI_BUFFERS,  PDCM,  CRM) using different SPI frames at all channels 
+UVM_INFO   @  279288.9951870us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 332  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  279312.2909300us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  279644.2909230us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  279644.2909230us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 332.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  288134.1001870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 287840.525000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  288134.1001870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 287840.525000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  289134.1001870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_ERROR  @  289141.6761870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @  289191.7811870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 621 us
+  0 | Symbols:  43 | SID_8Bit | Start:    61 -    82  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  289291.7811870us:  [sim:description:2]     **sync 5 random commands ( CRM,  CRM,  PDCM,  CRM,  PDCM) using different SPI frames at all channels 
+UVM_INFO   @  290221.9143020us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 621  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  290225.9142620us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 621  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  290244.0131980us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  290248.0131580us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  291301.8031900us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 5 pulses and a PDCM period of 621  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  291324.0131980us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  291945.0131730us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  291945.0131730us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 621.000000 us - 3 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  292566.0131980us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  292566.0131980us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 621.000000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  293187.0131730us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  293187.0131730us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 621.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  293808.0131980us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  293808.0131980us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 621.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(788) 
+UVM_INFO   @  298028.1011870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 297734.525000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  298028.1011870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 297734.525000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  299028.1011870us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_ERROR  @  299035.6771870us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @  299035.6771870us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @  299085.7821870us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 412 us
+  0 | Symbols:  26 | SID_16Bit_CRC | Start:    47 -    65  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  299185.7821870us:  [sim:description:2]     **sync 2 random commands ( WAIT,  CRM) using different SPI frames at all channels 
+UVM_INFO   @  305181.3421870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 304887.748000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  305181.3421870us:  [syncb_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 304887.748000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  307181.3421870us:  [external_sync_crm_short_pulse_seq] external_sync_crm_short_pulse_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  307181.3431870us:  [sim:description:1]     *sync CRM using SYNCB pin and short pulses directly after CSB 
+UVM_INFO   @  358070.0231870us:  [sync_master_crm_seq]   sync_master_crm_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  358070.0241870us:  [sim:description:1]     *sync CRM and using SYNCB master feature 
+UVM_INFO   @  358092.5441870us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @  358315.4142660us:  [sim:measure]           't__DSI3,master_sync__' = ' 10.00' 
+UVM_INFO   @  358839.4542660us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @  358849.4542660us:  [syncb_short_pin_activation_seq] syncb_short_pin_activation_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  358849.4552660us:  [sim:description:1]     *SYNCB with very short pin activation times 
+UVM_INFO   @  358849.4552660us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  358907.1362660us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 337 us
+  0 | Symbols:   8 | SID_16Bit_CRC | Start:    70 -   119  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  359110.8712660us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 337  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  359110.8712660us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 337  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  359821.4322660us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1212) 
+UVM_INFO   @  360835.8432660us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1212) 
+UVM_INFO   @  361362.4020870us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  361362.4020870us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  361673.1920870us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 337  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  361673.1920870us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 337  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_ERROR  @  361850.2642660us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @  361850.2642660us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x10dc 0x8d42
+ channel 0b01 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x10dc 0x8d42  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1212) 
+UVM_ERROR  @  361850.2642660us:  [m_master_transmission_checker_0] unexpected packet count in frame header for read at channel 0, expected 0, got 1 packets  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1253) 
+UVM_ERROR  @  361850.2642660us:  [m_master_transmission_checker_0] unexpected symbol count in packet 0 at channel 0, expected 0, got 8  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1261) 
+UVM_ERROR  @  361850.2642660us:  [m_master_transmission_checker_0] unexpected data in packet 0 at index 0 at channel 0, expected 0x0000, got 0x10dc  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1266) 
+UVM_ERROR  @  361850.2642660us:  [m_master_transmission_checker_0] unexpected data in packet 0 at index 1 at channel 0, expected 0x0000, got 0x8d42  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1266) 
+UVM_ERROR  @  361850.2642660us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @  361850.2642660us:  [m_master_transmission_checker_1] unexpected packet count in frame header for read at channel 1, expected 0, got 1 packets  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1253) 
+UVM_ERROR  @  361850.2642660us:  [m_master_transmission_checker_1] unexpected symbol count in packet 0 at channel 1, expected 0, got 8  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1261) 
+UVM_ERROR  @  361850.2642660us:  [m_master_transmission_checker_1] unexpected data in packet 0 at index 0 at channel 1, expected 0x0000, got 0x10dc  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1266) 
+UVM_ERROR  @  361850.2642660us:  [m_master_transmission_checker_1] unexpected data in packet 0 at index 1 at channel 1, expected 0x0000, got 0x8d42  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1266) 
+UVM_INFO   @  362864.6952660us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1212) 
+UVM_INFO   @  363879.1362660us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1212) 
+UVM_INFO   @  364893.5872660us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1212) 
+UVM_INFO   @  365420.1798580us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  365420.1798580us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  365730.9698580us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 337  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  365730.9698580us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 337  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_ERROR  @  365908.0482660us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @  365908.0482660us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x423f 0x9a5c
+ channel 0b01 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x423f 0x9a5c  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1212) 
+UVM_ERROR  @  365908.0482660us:  [m_master_transmission_checker_0] unexpected packet count in frame header for read at channel 0, expected 0, got 1 packets  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1253) 
+UVM_ERROR  @  365908.0482660us:  [spi_dsi_data_packet]    Flag CRC was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(59) 
+UVM_ERROR  @  365908.0482660us:  [m_master_transmission_checker_0] unexpected symbol count in packet 0 at channel 0, expected 0, got 8  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1261) 
+UVM_ERROR  @  365908.0482660us:  [m_master_transmission_checker_0] unexpected data in packet 0 at index 0 at channel 0, expected 0x0000, got 0x423f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1266) 
+UVM_ERROR  @  365908.0482660us:  [m_master_transmission_checker_0] unexpected data in packet 0 at index 1 at channel 0, expected 0x0000, got 0x9a5c  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1266) 
+UVM_ERROR  @  365908.0482660us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @  365908.0482660us:  [m_master_transmission_checker_1] unexpected packet count in frame header for read at channel 1, expected 0, got 1 packets  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1253) 
+UVM_ERROR  @  365908.0482660us:  [spi_dsi_data_packet]    Flag CRC was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(59) 
+UVM_ERROR  @  365908.0482660us:  [m_master_transmission_checker_1] unexpected symbol count in packet 0 at channel 1, expected 0, got 8  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1261) 
+UVM_ERROR  @  365908.0482660us:  [m_master_transmission_checker_1] unexpected data in packet 0 at index 0 at channel 1, expected 0x0000, got 0x423f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1266) 
+UVM_ERROR  @  365908.0482660us:  [m_master_transmission_checker_1] unexpected data in packet 0 at index 1 at channel 1, expected 0x0000, got 0x9a5c  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1266) 
+UVM_INFO   @  366434.6242820us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  366434.6242820us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  366745.4142820us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 337  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  366745.4142820us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 337  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_ERROR  @  366922.5192660us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @  366922.5192660us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0xe24a 0x1b9e
+ channel 0b01 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0xe24a 0x1b9e  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1212) 
+UVM_ERROR  @  366922.5192660us:  [m_master_transmission_checker_0] unexpected packet count in frame header for read at channel 0, expected 0, got 1 packets  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1253) 
+UVM_ERROR  @  366922.5192660us:  [m_master_transmission_checker_0] unexpected symbol count in packet 0 at channel 0, expected 0, got 8  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1261) 
+UVM_ERROR  @  366922.5192660us:  [m_master_transmission_checker_0] unexpected data in packet 0 at index 0 at channel 0, expected 0x0000, got 0xe24a  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1266) 
+UVM_ERROR  @  366922.5192660us:  [m_master_transmission_checker_0] unexpected data in packet 0 at index 1 at channel 0, expected 0x0000, got 0x1b9e  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1266) 
+UVM_ERROR  @  366922.5192660us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @  366922.5192660us:  [m_master_transmission_checker_1] unexpected packet count in frame header for read at channel 1, expected 0, got 1 packets  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1253) 
+UVM_ERROR  @  366922.5192660us:  [m_master_transmission_checker_1] unexpected symbol count in packet 0 at channel 1, expected 0, got 8  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1261) 
+UVM_ERROR  @  366922.5192660us:  [m_master_transmission_checker_1] unexpected data in packet 0 at index 0 at channel 1, expected 0x0000, got 0xe24a  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1266) 
+UVM_ERROR  @  366922.5192660us:  [m_master_transmission_checker_1] unexpected data in packet 0 at index 1 at channel 1, expected 0x0000, got 0x1b9e  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1266) 
+UVM_INFO   @  367449.0687060us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  367449.0687060us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  367759.8587060us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 337  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  367759.8587060us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 337  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_ERROR  @  367937.0002660us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @  367937.0002660us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x9e97 0x4c7a
+ channel 0b01 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x9e97 0x4c7a  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1212) 
+UVM_ERROR  @  367937.0002660us:  [m_master_transmission_checker_0] unexpected packet count in frame header for read at channel 0, expected 0, got 1 packets  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1253) 
+UVM_ERROR  @  367937.0002660us:  [m_master_transmission_checker_0] unexpected symbol count in packet 0 at channel 0, expected 0, got 8  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1261) 
+UVM_ERROR  @  367937.0002660us:  [m_master_transmission_checker_0] unexpected data in packet 0 at index 0 at channel 0, expected 0x0000, got 0x9e97  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1266) 
+UVM_ERROR  @  367937.0002660us:  [m_master_transmission_checker_0] unexpected data in packet 0 at index 1 at channel 0, expected 0x0000, got 0x4c7a  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1266) 
+UVM_ERROR  @  367937.0002660us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @  367937.0002660us:  [m_master_transmission_checker_1] unexpected packet count in frame header for read at channel 1, expected 0, got 1 packets  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1253) 
+UVM_ERROR  @  367937.0002660us:  [m_master_transmission_checker_1] unexpected symbol count in packet 0 at channel 1, expected 0, got 8  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1261) 
+UVM_ERROR  @  367937.0002660us:  [m_master_transmission_checker_1] unexpected data in packet 0 at index 0 at channel 1, expected 0x0000, got 0x9e97  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1266) 
+UVM_ERROR  @  367937.0002660us:  [m_master_transmission_checker_1] unexpected data in packet 0 at index 1 at channel 1, expected 0x0000, got 0x4c7a  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1266) 
+UVM_INFO   @  368463.5687130us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  368463.5687130us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  368774.3587130us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 337  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_INFO   @  368774.3587130us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 337  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1081) 
+UVM_ERROR  @  368951.4912660us:  [m_master_transmission_checker_0] PD0 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 0  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_INFO   @  368951.4912660us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x3a49 0xef8d
+ channel 0b01 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x3a49 0xef8d  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1212) 
+UVM_ERROR  @  368951.4912660us:  [m_master_transmission_checker_0] unexpected packet count in frame header for read at channel 0, expected 0, got 1 packets  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1253) 
+UVM_ERROR  @  368951.4912660us:  [spi_dsi_data_packet]    Flag CRC was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(59) 
+UVM_ERROR  @  368951.4912660us:  [m_master_transmission_checker_0] unexpected symbol count in packet 0 at channel 0, expected 0, got 8  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1261) 
+UVM_ERROR  @  368951.4912660us:  [m_master_transmission_checker_0] unexpected data in packet 0 at index 0 at channel 0, expected 0x0000, got 0x3a49  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1266) 
+UVM_ERROR  @  368951.4912660us:  [m_master_transmission_checker_0] unexpected data in packet 0 at index 1 at channel 0, expected 0x0000, got 0xef8d  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1266) 
+UVM_ERROR  @  368951.4912660us:  [m_master_transmission_checker_1] PD1 flag in status word found, but no data is expected to be contained in PDCM buffer of channel 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(259) 
+UVM_ERROR  @  368951.4912660us:  [m_master_transmission_checker_1] unexpected packet count in frame header for read at channel 1, expected 0, got 1 packets  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1253) 
+UVM_ERROR  @  368951.4912660us:  [spi_dsi_data_packet]    Flag CRC was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(59) 
+UVM_ERROR  @  368951.4912660us:  [m_master_transmission_checker_1] unexpected symbol count in packet 0 at channel 1, expected 0, got 8  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1261) 
+UVM_ERROR  @  368951.4912660us:  [m_master_transmission_checker_1] unexpected data in packet 0 at index 0 at channel 1, expected 0x0000, got 0x3a49  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1266) 
+UVM_ERROR  @  368951.4912660us:  [m_master_transmission_checker_1] unexpected data in packet 0 at index 1 at channel 1, expected 0x0000, got 0xef8d  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1266) 
+UVM_INFO   @  369751.5962660us:  [sim:status]            PASS 
+UVM_INFO   @  369751.5962660us:  [sim:end]               dsi3_sync_pin sequence completed 
+UVM_INFO   @  369751.5962660us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  369751.5962660us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  369751.5962660us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  369751.5962660us:  [dsi3_master_coverage]  Coverage score = 37.5%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/dsi3_master/dsi3_master_coverage.sv(52) 
+UVM_INFO   @  369751.5962660us:  [dsi3_master_coverage]  Coverage score = 37.5%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/dsi3_master/dsi3_master_coverage.sv(52) 
+UVM_INFO   @  369751.5962660us:  [dsi3_slave_coverage]   Coverage score = 18.5%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/dsi3_slave/dsi3_slave_coverage.sv(57) 
+UVM_INFO   @  369751.5962660us:  [dsi3_slave_coverage]   Coverage score = 18.5%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/dsi3_slave/dsi3_slave_coverage.sv(57) 
+UVM_INFO   @  369751.5962660us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  369751.5962660us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  369751.5962660us:  [digital_signal_coverage] Coverage score = 37.5%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  369751.5962660us:  [jtag_master_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/jtag_master/jtag_master_coverage.sv(57) 
+UVM_INFO   @  369751.5962660us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  369751.5962660us:  [osc_coverage]          Coverage score = 25.8%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/osc/osc_coverage.sv(52) 
+UVM_INFO   @  369751.5962660us:  [digital_signal_coverage] Coverage score = 37.5%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  369751.5962660us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  369751.5962660us:  [digital_signal_coverage] Coverage score = 87.5%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  369751.5962660us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  369751.5962660us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  369751.5962660us:  [digital_signal_coverage] Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  369751.5962660us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  369751.5962660us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  369751.5962660us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  369751.5962660us:  [UVM/REPORT/CATCHER]    
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+  	/common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_report_catcher.svh(705) 
+UVM_INFO   @  369751.5962660us:  [UVM/REPORT/SERVER]     
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  572
+UVM_WARNING :    0
+UVM_ERROR :  238
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[UVM_CMDLINE_PROC]     1
+[UVM_VERDI_DPI]     1
+[VERDI_TR_AUTO]     1
+[digital_signal_coverage]     8
+[dsi3_master_coverage]     2
+[dsi3_master_transmission_checker]   177
+[dsi3_slave_coverage]     2
+[dsi3_sync_pin_seq]     1
+[external_sync_crm_seq]     1
+[external_sync_crm_short_pulse_seq]     1
+[external_sync_pdcm_seq]     1
+[jtag_master_coverage]     1
+[m_master_transmission_checker_0]   117
+[m_master_transmission_checker_1]   117
+[measure_t_dsi3_sync_seq]     1
+[mixed_external_internal_sync_seq]     1
+[osc_coverage]     1
+[real_signal_coverage]     8
+[sim:description]     1
+[sim:description:1]    14
+[sim:description:2]    41
+[sim:end]     1
+[sim:measure]   171
+[sim:status]     1
+[sim:task]     1
+[spi_dsi_data_packet]     4
+[sync_master_crm_seq]     1
+[syncb_already_active_seq]     1
+[syncb_during_running_crm_seq]     1
+[syncb_only_some_channels_seq]     1
+[syncb_random_commands_seq]    61
+[syncb_short_pin_activation_seq]     1
+[syncb_sync_error_seq]     1
+[upload_tdma_scheme_seq]    64
+  	/common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_report_server.svh(904) 
+$finish called from file "/common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_root.svh", line 527.
+$finish at simulation time         369751596266
+Reporting coverage at the end of simulation ...
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, FSM, branch, tgl was monitored
+---------------------------------------------------------------------------
+
+ Coverage status: End of All Coverages ...
+
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 369751596266 ps
+
+Simulation Performance Summary
+==============================
+Simulation started at :  Wed May  7 10:47:57 2025
+Elapsed Time          :  361 sec
+CPU Time              :  405.7 sec
+Virtual memory size   :  886.3 MB
+Resident set size     :  419.9 MB
+Shared memory size    :  2.6 MB
+Private memory size   :  417.3 MB
+Major page faults     :  4
+Machine name          :  ex04.elmos.de
+==============================
+
+Wed May  7 10:53:57 2025
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++ ready:   ./simv_52144_dsi3_sync_pin +UVM_VERBOSITY=UVM_MEDIUM +bus_conflict_off +warn=noFCICIO -ucli -assert nopostproc +UVM_LOG_RECORD -verdi_opts '-ssr Verdi.ses' +uvm_set_type_override=top_default_seq,dsi3_sync_pin_seq -i run.tcl -vcs_assert off +UVM_VERDI_TRACE="UVM_AWARE+RAL+TLM+MSG+HIER+PRINT" +UVM_LOG_RECORD +UVM_TESTNAME=top_test +UVM_TR_RECORD +vcs+lic+wait -reportstats -cm line+cond+fsm+tgl+branch+assert -cm_dir DIGITAL/results/vcs/dsi3_sync_pin.vdb -lca   +fsdbfile+dsi3_sync_pin.fsdb
+ ++ in dir   /nfs/wrk.zaa/sim/52144/m52144a/dsi3_sync_pin
+ ++ on host  ex04.elmos.de
+ ++ user     zaa
+ ++ endtime  2025-05-07T08:53:57
+ ++ took     361 seconds
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

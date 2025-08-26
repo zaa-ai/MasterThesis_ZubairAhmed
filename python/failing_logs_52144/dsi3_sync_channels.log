@@ -1,0 +1,882 @@
++++ calling  ./simv_52144_dsi3_sync_channels +UVM_VERBOSITY=UVM_MEDIUM +bus_conflict_off +warn=noFCICIO -ucli -assert nopostproc +UVM_LOG_RECORD -verdi_opts '-ssr Verdi.ses' +uvm_set_type_override=top_default_seq,dsi3_sync_channels_seq -i run.tcl -vcs_assert off +UVM_VERDI_TRACE="UVM_AWARE+RAL+TLM+MSG+HIER+PRINT" +UVM_LOG_RECORD +UVM_TESTNAME=top_test +UVM_TR_RECORD +vcs+lic+wait -reportstats -cm line+cond+fsm+tgl+branch+assert -cm_dir DIGITAL/results/vcs/dsi3_sync_channels.vdb -lca   +fsdbfile+dsi3_sync_channels.fsdb
+ ++ in dir   /nfs/wrk.zaa/sim/52144/m52144a/dsi3_sync_channels
+ ++ on host  ex04.elmos.de
+ ++ user     zaa
+ ++ start    2025-05-06T18:37:23
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Warning-[LCA_FEATURES_ENABLED] Usage warning
+  LCA features enabled by '-lca' argument on the command line.  For more 
+  information regarding list of LCA features please refer to Chapter "LCA 
+  features" in the VCS Release Notes
+
+Chronologic VCS simulator copyright 1991-2021
+Contains Synopsys proprietary information.
+Compiler version S-2021.09-1_Full64; Runtime version S-2021.09-1_Full64;  May  6 20:37 2025
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+
+ VCS Coverage Metrics Release S-2021.09-1_Full64 Copyright (c) 1991-2021 by Synopsys Inc.
+ucli% source dump.tcl
+*Verdi* Loading libsscore_vcsmx202109.so
+FSDB Dumper for VCS-MX, Release Verdi_U-2023.03-1, Linux x86_64/64bit, 04/17/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'dsi3_sync_channels.fsdb'
+*Verdi* : fsdbDumpon("glitch") - All FSDB files at 0 ps.
+*Verdi* : Begin traversing the scope (top_tb), layer (0).
+*Verdi* : Enable +all dumping.
+*Verdi* : End of traversing.
+*Verdi* : Flush all FSDB Files at 0 ps.
+1
+ucli% if { [info exists ::env(GATE_LEVEL)] } {
+	source tcheck.tcl
+}
+ucli% run
+*Verdi* Enable Verdi Message Catcher.
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/verdi/uvm_custom_install_verdi_recorder.sv(283) @ 0: reporter [VERDI_TR_AUTO] +UVM_TR_RECORD implicitly enables recording_details to UVM_FULL for all components. For explicit control use +UVM_DISABLE_AUTO_COMPONENT and set recording_detail on components accordingly
+UVM_INFO @ 0: reporter [RNTST] Running test top_test...
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VRR applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VREF applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VBG applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+UVM_INFO @ 0: reporter [UVM_CMDLINE_PROC] Applying type override from the command line: +uvm_set_type_override=top_default_seq,dsi3_sync_channels_seq
+UVM_INFO   @       0.0000000us:  [UVM_VERDI_DPI]         uvm_verdi DPI routines are compiled off. Recompile without +define+UVM_NO_VERDI_DPI 
+UVM_INFO   @       0.0000000us:  [dsi3_sync_channels_seq] dsi3_sync_channels_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+*Verdi* Enable Verdi Recorder.
+Info: Verdi UVM 1.2 Hooks File 06/17/2014 
+UVM_INFO   @       0.0010000us:  [sim:task]              dsi3_sync_channels 
+UVM_INFO   @    2120.0010000us:  [sim:description]       '''Testcase for DSI3 synchronize channels command''' 
+UVM_INFO   @    2120.0010000us:  [check_sync_reg_for_crm_seq] check_sync_reg_for_crm_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2120.0020000us:  [sim:description:1]     *check SYNC register for CRM 
+UVM_INFO   @    2128.6820000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @    2137.3620000us:  [sim:measure]           'DSI_TX_SHIFT' status = PASS 
+UVM_INFO   @    4850.6420000us:  [check_sync_reg_for_pdcm_seq] check_sync_reg_for_pdcm_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    4850.6430000us:  [sim:description:1]     *check SYNC register for PDCM 
+UVM_INFO   @    4859.3230000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @    4868.0030000us:  [sim:measure]           'DSI_TX_SHIFT' status = PASS 
+UVM_INFO   @    4868.0030000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    4925.6840000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:  12 | SID_0Bit | Start:    30 -    44  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    4997.6590000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 300  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    4997.6590000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 300  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    5020.8464980us:  [sim:measure]           't__DSI,BIT,8__' = '7.999000' condition = 'at channel 0' 
+UVM_INFO   @    5024.8465110us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @    5320.8465220us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @    5320.8465220us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 300.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @    5324.8464820us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @    5324.8464820us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 299.999000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @    5620.8464740us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @    5620.8464740us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 299.999000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @    5624.8465060us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @    5624.8465060us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 300.001000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @    5898.6365060us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 300  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    6194.6364740us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 300  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    6217.6242740us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @    6217.6242740us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @    6517.6242980us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @    6517.6242980us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 300.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @    6517.6242980us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @    6517.6242980us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 300.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @    6817.6242750us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @    6817.6242750us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 300.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @    6817.6242750us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @    6817.6242750us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 300.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @    7750.4590000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 300  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    7750.4590000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 300  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    7773.6242660us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @    7777.6242980us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @    8073.6242900us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @    8073.6242900us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 300.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @    8077.6242750us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @    8077.6242750us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 300.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @    8373.6242670us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @    8373.6242670us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 300.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @    8377.6242740us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @    8377.6242740us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 300.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @    8647.4142670us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 300  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    8951.4142740us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 300  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    8974.4020740us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @    8974.4020740us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @    9274.4020260us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @    9274.4020260us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 300.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @    9274.4020260us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @    9274.4020260us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 300.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @    9574.4020500us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @    9574.4020500us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 300.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @    9574.4020500us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @    9574.4020500us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 300.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   10485.1240000us:  [check_sync_reg_for_channel_pairs_seq] check_sync_reg_for_channel_pairs_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   10485.1250000us:  [sim:description:1]     *check SYNC register for channel pairs 
+UVM_INFO   @   10485.1250000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   10542.8060000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 133 us
+  0 | Symbols:   4 | SID_8Bit | Start:    57 -    67  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   10618.6210000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 133  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   10646.2353900us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   10779.2353740us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   10779.2353740us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 133.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   10912.2353610us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   10912.2353610us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 133.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   11376.0253980us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 133  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   11399.4575900us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   11532.4576410us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   11532.4576410us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 133.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   11665.4576300us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   11665.4576300us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 133.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   11853.2860000us:  [first_sync_at_all_channels_then_single_crms_seq] first_sync_at_all_channels_then_single_crms_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   11853.2870000us:  [sim:description:1]     *first synchronize at all channels then CRM transmit on each channel 
+UVM_INFO   @   11861.9670000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @   11870.6470000us:  [sim:measure]           'DSI_TX_SHIFT' status = PASS 
+UVM_INFO   @   13040.8070000us:  [first_sync_at_all_channels_then_single_crms_seq] => syncronized channels 0b11, start of channel 0 at 12048.136000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   13040.8070000us:  [first_sync_at_all_channels_then_single_crms_seq] => syncronized channels 0b11, start of channel 1 at 12048.136000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   13040.8070000us:  [sync_multiple_crm_in_one_frame_seq] sync_multiple_crm_in_one_frame_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   13040.8080000us:  [sim:description:1]     *synchronize multiple commands for CRM in one SPI frame 
+UVM_INFO   @   13049.4880000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @   13058.1680000us:  [sim:measure]           'DSI_TX_SHIFT' status = PASS 
+UVM_INFO   @   14069.6880000us:  [sync_multiple_crm_in_one_frame_seq] => syncronized channels 0b11, start of channel 0 at 13537.192000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   14069.6880000us:  [sync_multiple_crm_in_one_frame_seq] => syncronized channels 0b11, start of channel 1 at 13537.192000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   14077.3680000us:  [sync_multiple_crm_in_different_frames_seq] sync_multiple_crm_in_different_frames_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   14077.3690000us:  [sim:description:1]     *synchronize multiple commands for CRM in multiple SPI frames 
+UVM_INFO   @   14086.0490000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @   14094.7290000us:  [sim:measure]           'DSI_TX_SHIFT' status = PASS 
+UVM_INFO   @   15112.0090000us:  [sync_multiple_crm_in_different_frames_seq] => syncronized channels 0b11, start of channel 0 at 14571.192000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   15112.0090000us:  [sync_multiple_crm_in_different_frames_seq] => syncronized channels 0b11, start of channel 1 at 14571.192000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   15119.6890000us:  [double_sync_crm_in_different_frames_seq] double_sync_crm_in_different_frames_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   15119.6900000us:  [sim:description:1]     *two synchronize commands in a row for CRM 
+UVM_INFO   @   15128.3700000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @   15137.0500000us:  [sim:measure]           'DSI_TX_SHIFT' status = PASS 
+UVM_INFO   @   16154.3300000us:  [double_sync_crm_in_different_frames_seq] => syncronized channels 0b11, start of channel 0 at 15658.692000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   16154.3300000us:  [double_sync_crm_in_different_frames_seq] => syncronized channels 0b11, start of channel 1 at 15658.692000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   16154.3300000us:  [sync_multiple_crm_per_channel_in_different_frames_seq] sync_multiple_crm_per_channel_in_different_frames_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   16154.3310000us:  [sim:description:1]     *synchronize multiple commands for CRM in multiple SPI frames sync foreach channel 
+UVM_INFO   @   16163.0110000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @   16171.6910000us:  [sim:measure]           'DSI_TX_SHIFT' status = PASS 
+UVM_INFO   @   18188.0110000us:  [sync_multiple_crm_per_channel_in_different_frames_seq] => syncronized channels 0b11, start of channel 0 at 17097.192000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   18188.0110000us:  [sync_multiple_crm_per_channel_in_different_frames_seq] => syncronized channels 0b11, start of channel 1 at 17097.192000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   18195.6910000us:  [wait_for_sync_flag_seq] wait_for_sync_flag_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   18195.6920000us:  [sim:description:1]     *check DSI_STAT.SYNC flag for all channels 
+UVM_INFO   @   18195.6920000us:  [sim:description:2]     **check DSI_STAT.SYNC flag for channel 0 
+UVM_INFO   @   18204.3720000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @   18213.0520000us:  [sim:measure]           'DSI_TX_SHIFT' status = PASS 
+UVM_INFO   @   19734.1720000us:  [wait_for_sync_flag_seq] => syncronized channels 0b11, start of channel 0 at 19241.470000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   19734.1720000us:  [wait_for_sync_flag_seq] => syncronized channels 0b11, start of channel 1 at 19241.470000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   19734.1720000us:  [sim:description:2]     **check DSI_STAT.SYNC flag for channel 1 
+UVM_INFO   @   19742.8520000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @   19751.5320000us:  [sim:measure]           'DSI_TX_SHIFT' status = PASS 
+UVM_INFO   @   21272.6520000us:  [wait_for_sync_flag_seq] => syncronized channels 0b11, start of channel 0 at 20779.970000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   21272.6520000us:  [wait_for_sync_flag_seq] => syncronized channels 0b11, start of channel 1 at 20779.970000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   21272.6520000us:  [shut_off_during_sync_seq] shut_off_during_sync_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   21272.6530000us:  [sim:description:1]     *disable DSI channel during synchronize CRM 
+UVM_INFO   @   21281.3330000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @   21290.0130000us:  [sim:measure]           'DSI_TX_SHIFT' status = PASS 
+UVM_INFO   @   21290.0130000us:  [sim:description:2]     **disable DSI channel 0 during sync CRM 
+UVM_INFO   @   22820.0930000us:  [sim:description:2]     **disable DSI channel 1 during sync CRM 
+UVM_INFO   @   24807.8530000us:  [shut_off_before_sync_seq] shut_off_before_sync_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   24807.8540000us:  [sim:description:1]     *disable DSI channel before synchronizing CRM 
+UVM_INFO   @   24807.8540000us:  [sim:description:2]     **disable DSI channels 0b1 before sync CRM 
+UVM_ERROR  @   25893.5340000us:  [registers]             COM_ERR is not set correctly. Got 1 but expected 0 (regmodel.DSI[0].DSI3_channel_registers.DSI_IRQ_STAT.COM_ERR)  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/common/register_util.svh(38) 
+UVM_INFO   @   25902.2140000us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   25914.7340000us:  [sim:measure]           'DSI_IRQ_STAT' status = PASS 
+UVM_INFO   @   25923.4140000us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   26131.1340000us:  [sim:description:2]     **disable DSI channels 0b10 before sync CRM 
+UVM_INFO   @   27216.8140000us:  [sim:measure]           'DSI_IRQ_STAT' status = PASS 
+UVM_INFO   @   27225.4940000us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_ERROR  @   27238.0140000us:  [registers]             COM_ERR is not set correctly. Got 1 but expected 0 (regmodel.DSI[1].DSI3_channel_registers.DSI_IRQ_STAT.COM_ERR)  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/common/register_util.svh(38) 
+UVM_INFO   @   27246.6940000us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   27454.4140000us:  [sim:description:2]     **disable DSI channels 0b11 before sync CRM 
+UVM_ERROR  @   28540.0940000us:  [registers]             COM_ERR is not set correctly. Got 1 but expected 0 (regmodel.DSI[0].DSI3_channel_registers.DSI_IRQ_STAT.COM_ERR)  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/common/register_util.svh(38) 
+UVM_INFO   @   28548.7740000us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_ERROR  @   28561.2940000us:  [registers]             COM_ERR is not set correctly. Got 1 but expected 0 (regmodel.DSI[1].DSI3_channel_registers.DSI_IRQ_STAT.COM_ERR)  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/common/register_util.svh(38) 
+UVM_INFO   @   28569.9740000us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   29242.1740000us:  [clear_queue_during_sync_seq] clear_queue_during_sync_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   29242.1750000us:  [sim:description:1]     *clear DSI command queue during synchronize CRM 
+UVM_INFO   @   29250.8550000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @   29259.5350000us:  [sim:measure]           'DSI_TX_SHIFT' status = PASS 
+UVM_INFO   @   29259.5350000us:  [sim:description:2]     **clear command queue of DSI channel 0 during sync CRM 
+UVM_INFO   @   30766.3350000us:  [sim:description:2]     **clear command queue of DSI channel 1 during sync CRM 
+UVM_INFO   @   32677.9350000us:  [clear_queue_of_all_channels_during_sync_seq] clear_queue_of_all_channels_during_sync_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   32677.9360000us:  [sim:description:1]     *clear DSI command queue of all channels during synchronize CRM 
+UVM_INFO   @   34471.2960000us:  [sync_pdcm_at_all_channels_seq] sync_pdcm_at_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   34471.2970000us:  [sim:description:1]     *synchronize PDCM at all channels 
+UVM_INFO   @   34479.9770000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @   34488.6570000us:  [sim:measure]           'DSI_TX_SHIFT' status = PASS 
+UVM_INFO   @   34488.6570000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   34557.8580000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 4 packets, period = 618 us
+  0 | Symbols:   6 | SID_0Bit | Start:    43 -    66
+  1 | Symbols:   6 | SID_0Bit | Start:   148 -   189
+  2 | Symbols:   8 | SID_8Bit | Start:   304 -   339
+  3 | Symbols:   8 | SID_8Bit | Start:   471 -   519  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   34557.8580000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   34630.8990000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 5 packets, period = 863 us
+  0 | Symbols:   8 | SID_8Bit | Start:    35 -    48
+  1 | Symbols:   8 | SID_4Bit | Start:   150 -   191
+  2 | Symbols:   8 | SID_0Bit | Start:   328 -   340
+  3 | Symbols:   8 | SID_4Bit | Start:   468 -   506
+  4 | Symbols:   8 | SID_8Bit | Start:   627 -   655  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   34634.6340000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 618  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   34634.6340000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 2 pulses and a PDCM period of 863  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   34657.7353860us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   34661.7354180us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   35249.5253860us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 618  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   35524.7354100us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   35524.7354100us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 863.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   36361.5254100us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 863  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   36383.4020340us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   36383.4020340us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   37074.2950340us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   38278.5390000us:  [sync_pdcm_at_all_channels_seq] => syncronized channels 0b11, start of channel 0 at 36367.192000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   38278.5390000us:  [sync_pdcm_at_all_channels_seq] => syncronized channels 0b11, start of channel 1 at 36367.192000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   38278.5390000us:  [sync_crm_seq]          sync_crm_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   38278.5400000us:  [sim:description:1]     *synchronize CRM transmits 
+UVM_INFO   @   38287.2200000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @   38295.9000000us:  [sim:measure]           'DSI_TX_SHIFT' status = PASS 
+UVM_INFO   @   38295.9000000us:  [sim:description:2]     **sync CRM transmit at channels 0b0001 with CRM transmit at channels 0b0011 
+UVM_INFO   @   39304.5400000us:  [sync_crm_seq]          => syncronized channels 0b11, start of channel 0 at 38768.192000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   39304.5400000us:  [sync_crm_seq]          => syncronized channels 0b11, start of channel 1 at 38768.192000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   39304.5400000us:  [sim:description:2]     **sync CRM transmit at channels 0b0010 with CRM transmit at channels 0b0011 
+UVM_INFO   @   40313.1800000us:  [sync_crm_seq]          => syncronized channels 0b11, start of channel 0 at 39776.192000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   40313.1800000us:  [sync_crm_seq]          => syncronized channels 0b11, start of channel 1 at 39776.192000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   40313.1800000us:  [sim:description:2]     **sync CRM transmit at channels 0b0011 with CRM transmit at channels 0b0011 
+UVM_INFO   @   41321.8200000us:  [sync_crm_seq]          => syncronized channels 0b11, start of channel 0 at 40789.192000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   41321.8200000us:  [sync_crm_seq]          => syncronized channels 0b11, start of channel 1 at 40789.192000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   41321.8200000us:  [sync_pdcm_seq]         sync_pdcm_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   41321.8210000us:  [sim:description:1]     *synchronize PDCMs 
+UVM_INFO   @   41321.8210000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   41387.1820000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 3 packets, period = 575 us
+  0 | Symbols:   6 | SID_8Bit | Start:    21 -    38
+  1 | Symbols:   6 | SID_16Bit_CRC | Start:   149 -   181
+  2 | Symbols:   8 | SID_8Bit | Start:   306 -   321  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   41445.8620000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @   41454.5420000us:  [sim:measure]           'DSI_TX_SHIFT' status = PASS 
+UVM_INFO   @   41454.5420000us:  [sim:description:2]     **sync PDCM with period of 575us at channels 0b01 with CRM transmit at channels 0b11 
+UVM_INFO   @   41459.2370000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 575  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   41459.2370000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 575  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   41482.3465180us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   42057.3465100us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   42057.3465100us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 575.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   42606.1365100us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 575  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   42627.9575910us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   42627.9575910us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   44459.3420000us:  [sync_pdcm_seq]         => syncronized channels 0b11, start of channel 0 at 42611.748000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   44459.3420000us:  [sync_pdcm_seq]         => syncronized channels 0b11, start of channel 1 at 42611.748000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   44459.3420000us:  [sim:description:2]     **sync PDCM with period of 575us at channels 0b10 with CRM transmit at channels 0b11 
+UVM_INFO   @   44464.0370000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 575  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   44464.0370000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 575  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   44487.1798420us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   45035.9698420us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 575  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   45057.7909290us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   45057.7909290us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   47464.1420000us:  [sync_pdcm_seq]         => syncronized channels 0b11, start of channel 0 at 45041.581000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   47464.1420000us:  [sync_pdcm_seq]         => syncronized channels 0b11, start of channel 1 at 45041.581000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   47464.1420000us:  [sim:description:2]     **sync PDCM with period of 575us at channels 0b11 with CRM transmit at channels 0b11 
+UVM_INFO   @   47468.8370000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 575  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   47468.8370000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 575  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   47492.0131660us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   47496.0131980us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   48040.8031660us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 575  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   48044.8031980us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 575  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   48066.6242660us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   48066.6242660us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   50468.9420000us:  [sync_pdcm_seq]         => syncronized channels 0b11, start of channel 0 at 48050.414000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   50468.9420000us:  [sync_pdcm_seq]         => syncronized channels 0b11, start of channel 1 at 48050.414000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   50468.9420000us:  [sync_random_commands_seq] sync_random_commands_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   50468.9430000us:  [sim:description:1]     *synchronize mixed/random commands 
+UVM_INFO   @   50477.6230000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @   50486.3030000us:  [sim:measure]           'DSI_TX_SHIFT' status = PASS 
+UVM_INFO   @   50486.3030000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   50543.9840000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 506 us
+  0 | Symbols:  40 | SID_8Bit | Start:    69 -   101  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   50593.9840000us:  [sim:description:2]     **sync 4 random commands ( CLEAR_DSI_BUFFERS,  CRM,  WAIT,  WAIT) using different SPI frames at all channels 
+UVM_INFO   @   51063.0809540us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 506  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   51455.0809510us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 506  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   51479.6242820us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   51479.6242820us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   52449.5040000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 51463.414000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   52449.5040000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 51463.414000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   52449.5040000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   52507.1850000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 521 us
+  0 | Symbols:  29 | SID_4Bit | Start:    58 -    92  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   52557.1850000us:  [sim:description:2]     **sync 2 random commands ( CLEAR_DSI_BUFFERS,  CLEAR_DSI_BUFFERS) using different SPI frames at all channels 
+UVM_INFO   @   52562.8400000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 521  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   52562.8400000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 521  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   52586.8465060us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   52586.8465060us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   53583.9450000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 52570.637000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   53583.9450000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 52570.637000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   53583.9450000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   53641.6260000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 451 us
+  0 | Symbols:  25 | SID_0Bit | Start:    50 -    99  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   53691.6260000us:  [sim:description:2]     **sync 5 random commands ( PDCM,  PDCM,  WAIT,  PDCM,  CLEAR_DSI_BUFFERS) using different SPI frames at all channels 
+UVM_INFO   @   53703.0410000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 5 pulses and a PDCM period of 451  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   53703.0410000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 5 pulses and a PDCM period of 451  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   53726.4575900us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   53730.4576220us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   54177.4575980us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   54177.4575980us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 451.000000 us - 3 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   54181.4576300us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   54181.4576300us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 451.000000 us - 3 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   54628.4576060us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   54628.4576060us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 451.000000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   54632.4576330us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   54632.4576330us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 451.000000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   55079.4576140us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   55079.4576140us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 451.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   55083.4576050us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   55083.4576050us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 451.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   55530.4576220us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   55530.4576220us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 451.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   55534.4575820us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   55534.4575820us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 451.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   55955.2476220us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 451  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   55978.4576060us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   59639.1460000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 56408.970000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   59639.1460000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 56408.970000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   59639.1460000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   59696.8270000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 420 us
+  0 | Symbols:  25 | SID_8Bit | Start:    51 -    87  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   59746.8270000us:  [sim:description:2]     **sync 4 random commands ( CLEAR_DSI_BUFFERS,  PDCM,  PDCM,  PDCM) using different SPI frames at all channels 
+UVM_INFO   @   59756.3220000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 420  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   59779.8465220us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   62806.4270000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 60179.359000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   62806.4270000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 60179.359000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   62806.4270000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   62864.1080000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 440 us
+  0 | Symbols:  31 | SID_8Bit | Start:    71 -    93  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   62914.1080000us:  [sim:description:2]     **sync 2 random commands ( WAIT,  CLEAR_DSI_BUFFERS) using different SPI frames at all channels 
+UVM_INFO   @   62920.7230000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 440  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   62920.7230000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 440  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   62944.9020540us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   62944.9020540us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   64189.8280000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 62928.692000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   64189.8280000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 62928.692000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   64189.8280000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   64247.5090000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 421 us
+  0 | Symbols:  25 | SID_4Bit | Start:    22 -    65  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   64297.5090000us:  [sim:description:2]     **sync 4 random commands ( PDCM,  WAIT,  CRM,  PDCM) using different SPI frames at all channels 
+UVM_INFO   @   64309.8840000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 421  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   64309.8840000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 421  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   64333.0687380us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   64337.0686980us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   65187.3031590us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 421  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   65209.5131670us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   65630.5131870us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   65630.5131870us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 421.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   66051.5131780us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   66051.5131780us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 421.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   67599.9890000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 66452.025000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   67599.9890000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 66452.025000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   67599.9890000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   67657.6700000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 754 us
+  0 | Symbols:  59 | SID_0Bit | Start:    63 -    90  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   67707.6700000us:  [sim:description:2]     **sync 4 random commands ( CLEAR_DSI_BUFFERS,  PDCM,  CRM,  WAIT) using different SPI frames at all channels 
+UVM_INFO   @   67718.1250000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 5 pulses and a PDCM period of 754  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   67741.4020500us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   68179.1920500us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 754  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   68495.4020340us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   68495.4020340us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 754.000000 us - 3 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   69249.4020510us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   69249.4020510us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 754.000000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   70003.4020740us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   70003.4020740us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 754.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   70757.4020580us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   70757.4020580us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 754.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   71485.1920580us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 754  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   71507.0131900us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   71507.0131900us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   73587.2300000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 71490.803000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   73587.2300000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 71490.803000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   73587.2300000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   73644.9110000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 385 us
+  0 | Symbols:  14 | SID_0Bit | Start:    42 -    73  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   73694.9110000us:  [sim:description:2]     **sync 2 random commands ( CLEAR_DSI_BUFFERS,  WAIT) using different SPI frames at all channels 
+UVM_INFO   @   74124.5260000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 385  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   74124.5260000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 385  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   74149.8464980us:  [sim:measure]           't__DSI,BIT,8__' = '7.999000' condition = 'at channel 1' 
+UVM_INFO   @   74149.8464980us:  [sim:measure]           't__DSI,BIT,8__' = '7.999000' condition = 'at channel 0' 
+UVM_INFO   @   75009.6310000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 74133.637000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   75009.6310000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 74133.637000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   75009.6310000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   75067.3120000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 240 us
+  0 | Symbols:  11 | SID_4Bit | Start:    69 -    82  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   75117.3120000us:  [sim:description:2]     **sync 3 random commands ( CRM,  CRM,  CRM) using different SPI frames at all channels 
+UVM_INFO   @   77431.7120000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 76051.192000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   77431.7120000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 76051.192000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   77431.7120000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   77489.3930000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 308 us
+  0 | Symbols:  11 | SID_8Bit | Start:    33 -    75  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   77539.3930000us:  [sim:description:2]     **sync 3 random commands ( CRM,  PDCM,  PDCM) using different SPI frames at all channels 
+UVM_INFO   @   77549.8480000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 308  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   77573.4020820us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   77881.4020590us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   77881.4020590us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 308.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   78189.4020420us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   78189.4020420us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 308.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   80181.9530000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 78476.914000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   80181.9530000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 78476.914000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   80181.9530000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   80239.6340000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 600 us
+  0 | Symbols:  50 | SID_16Bit_CRC | Start:    41 -    67  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   80289.6340000us:  [sim:description:2]     **sync 5 random commands ( CRM,  PDCM,  CRM,  PDCM,  CLEAR_DSI_BUFFERS) using different SPI frames at all channels 
+UVM_INFO   @   80303.9290000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 4 pulses and a PDCM period of 600  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   80303.9290000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 4 pulses and a PDCM period of 600  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   80327.5687500us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   80331.5687100us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   80927.5687260us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   80927.5687260us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 600.000000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   80931.5687130us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   80931.5687130us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 600.000000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   81527.5687020us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   81527.5687020us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 600.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   81531.5687340us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   81531.5687340us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 600.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   82127.5687500us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   82127.5687500us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 600.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   82131.5687100us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   82131.5687100us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 600.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   82701.3587500us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 600  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   82723.5687210us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   83161.3587210us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 600  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   83183.5687020us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   83323.5687420us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   83323.5687420us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 600.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   83783.5687500us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   83783.5687500us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 600.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   83923.5687180us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   83923.5687180us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 600.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   84383.5687260us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   84383.5687260us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 600.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   86354.0340000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 84963.081000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   86354.0340000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 84963.081000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   86354.0340000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   86411.7150000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 627 us
+  0 | Symbols:  36 | SID_16Bit_CRC | Start:    68 -   110  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   86461.7150000us:  [sim:description:2]     **sync 2 random commands ( CRM,  CRM) using different SPI frames at all channels 
+UVM_INFO   @   86932.6920300us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 627  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   87384.9142700us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 627  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   87407.2909460us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   87407.2909460us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   88498.3150000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 87391.081000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   88498.3150000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 87391.081000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   88498.3150000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   88555.9960000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 342 us
+  0 | Symbols:  14 | SID_16Bit_CRC | Start:    27 -    59  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   88605.9960000us:  [sim:description:2]     **sync 4 random commands ( CLEAR_DSI_BUFFERS,  PDCM,  WAIT,  PDCM) using different SPI frames at all channels 
+UVM_INFO   @   88616.4510000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 4 pulses and a PDCM period of 342  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   88616.4510000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 4 pulses and a PDCM period of 342  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   88639.7909420us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   88643.7909740us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   88981.7909420us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   88981.7909420us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 342.000000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   88985.7909740us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   88985.7909740us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 342.000000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   89323.7909420us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   89323.7909420us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 342.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   89327.7909740us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   89327.7909740us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 342.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   89665.7909420us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   89665.7909420us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 342.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   89669.7909740us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   89669.7909740us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 342.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   89981.5809420us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 5 pulses and a PDCM period of 342  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   89985.5809740us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 5 pulses and a PDCM period of 342  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   90003.7909290us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   90007.7909420us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   90345.7909290us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   90345.7909290us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 342.000000 us - 3 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   90349.7909420us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   90349.7909420us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 342.000000 us - 3 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   90687.7909290us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   90687.7909290us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 342.000000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   90691.7909420us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   90691.7909420us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 342.000000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   91029.7909290us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   91029.7909290us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 342.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   91033.7909420us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   91033.7909420us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 342.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   91371.7909290us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   91371.7909290us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 342.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   91375.7909420us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   91375.7909420us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 342.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   92860.5560000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 91697.303000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   92860.5560000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 91697.303000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   92860.5560000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   92918.2370000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 355 us
+  0 | Symbols:  25 | SID_4Bit | Start:    69 -    80  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   92968.2370000us:  [sim:description:2]     **sync 3 random commands ( CRM,  WAIT,  PDCM) using different SPI frames at all channels 
+UVM_INFO   @   93439.3031670us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 355  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   93461.0131420us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   93789.8031420us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 355  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   93926.3031780us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 355  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   93949.1798260us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   94277.9698260us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 355  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   94299.7909340us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   94299.7909340us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   95128.8370000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 94283.581000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   95128.8370000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 94283.581000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   95128.8370000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   95186.5180000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 289 us
+  0 | Symbols:  17 | SID_4Bit | Start:    55 -    97  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   95236.5180000us:  [sim:description:2]     **sync 3 random commands ( WAIT,  CRM,  CLEAR_DSI_BUFFERS) using different SPI frames at all channels 
+UVM_INFO   @   95869.4698290us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 289  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   95873.4698380us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 289  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   95895.2909540us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   95895.2909540us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   96650.1180000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 95879.081000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   96650.1180000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 95879.081000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   96650.1180000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   96707.7990000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 372 us
+  0 | Symbols:  28 | SID_0Bit | Start:    61 -    85  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   96757.7990000us:  [sim:description:2]     **sync 2 random commands ( PDCM,  CRM) using different SPI frames at all channels 
+UVM_INFO   @   96765.3740000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 372  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   96788.5131870us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   97226.3031870us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 372  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   97589.7475940us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 372  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   97612.2909380us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   97612.2909380us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   98459.4790000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 97596.081000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   98459.4790000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 97596.081000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @   98459.4790000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   98517.1600000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 415 us
+  0 | Symbols:  19 | SID_16Bit_CRC | Start:    33 -    69  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   98567.1600000us:  [sim:description:2]     **sync 5 random commands ( WAIT,  CLEAR_DSI_BUFFERS,  PDCM,  CLEAR_DSI_BUFFERS,  CLEAR_DSI_BUFFERS) using different SPI frames at all channels 
+UVM_INFO   @   98578.5750000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 4 pulses and a PDCM period of 415  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   98602.3464940us:  [sim:measure]           't__DSI,BIT,8__' = '7.999000' condition = 'at channel 1' 
+UVM_INFO   @   99017.3465020us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   99017.3465020us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 415.000000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   99432.3465100us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   99432.3465100us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 415.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   99847.3465180us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   99847.3465180us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 415.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @  101666.6800000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 100241.859000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  101666.6800000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 100241.859000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  101666.6800000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  101724.3610000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 262 us
+  0 | Symbols:  18 | SID_4Bit | Start:    37 -    58  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  101774.3610000us:  [sim:description:2]     **sync 5 random commands ( WAIT,  CLEAR_DSI_BUFFERS,  CRM,  WAIT,  CRM) using different SPI frames at all channels 
+UVM_INFO   @  103721.6810000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 102341.359000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  103721.6810000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 102341.359000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  103721.6810000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  103779.3620000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 347 us
+  0 | Symbols:  25 | SID_16Bit_CRC | Start:    35 -    81  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  103829.3620000us:  [sim:description:2]     **sync 2 random commands ( CLEAR_DSI_BUFFERS,  CRM) using different SPI frames at all channels 
+UVM_INFO   @  103836.9370000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 347  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @  103836.9370000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 347  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @  103861.2354060us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  103861.2354060us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  105134.0420000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 103845.025000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  105134.0420000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 103845.025000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  105134.0420000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  105191.7230000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 631 us
+  0 | Symbols:  35 | SID_16Bit_CRC | Start:    64 -   104  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  105241.7230000us:  [sim:description:2]     **sync 2 random commands ( PDCM,  WAIT) using different SPI frames at all channels 
+UVM_INFO   @  105248.3380000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 631  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @  105248.3380000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 631  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @  105271.5131620us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  105275.5131940us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  105902.5131700us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  105902.5131700us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 631.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @  105906.5131950us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  105906.5131950us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 631.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @  106533.5131780us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  106533.5131780us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 631.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @  106537.5131670us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  106537.5131670us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 631.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @  107138.3031780us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 631  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @  107142.3031670us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 631  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @  107164.1242940us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  107164.1242940us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  108498.4430000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 107147.914000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  108498.4430000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 107147.914000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  108498.4430000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  108556.1240000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 284 us
+  0 | Symbols:  16 | SID_16Bit_CRC | Start:    64 -    74  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  108606.1240000us:  [sim:description:2]     **sync 4 random commands ( CRM,  CRM,  CRM,  CLEAR_DSI_BUFFERS) using different SPI frames at all channels 
+UVM_INFO   @  109076.9698420us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 284  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @  109536.9142940us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 284  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @  109559.2909700us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  109559.2909700us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  110753.5640000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 109543.081000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  110753.5640000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 109543.081000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  110753.5640000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  110811.2450000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 216 us
+  0 | Symbols:   7 | SID_4Bit | Start:    41 -    80  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  110861.2450000us:  [sim:description:2]     **sync 3 random commands ( PDCM,  PDCM,  CRM) using different SPI frames at all channels 
+UVM_INFO   @  110871.7000000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 216  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @  110894.8464820us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  111110.8464820us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  111110.8464820us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 216.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @  111326.8464820us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  111326.8464820us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 216.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @  111516.6364820us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 4 pulses and a PDCM period of 216  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @  111538.1798500us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  111754.1798500us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  111754.1798500us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 216.000000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @  111970.1798500us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  111970.1798500us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 216.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @  112186.1798500us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  112186.1798500us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 216.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @  113783.8050000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 112381.692000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  113783.8050000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 112381.692000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  113783.8050000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  113841.4860000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 642 us
+  0 | Symbols:  52 | SID_8Bit | Start:    50 -    60  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  113891.4860000us:  [sim:description:2]     **sync 2 random commands ( CRM,  WAIT) using different SPI frames at all channels 
+UVM_INFO   @  114159.0210000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 642  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @  114357.4142660us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 642  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @  114379.2909380us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  114379.2909380us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  115751.1260000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 114363.081000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  115751.1260000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 114363.081000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  115751.1260000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  115808.8070000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 514 us
+  0 | Symbols:  28 | SID_16Bit_CRC | Start:    39 -    86  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  115858.8070000us:  [sim:description:2]     **sync 3 random commands ( CLEAR_DSI_BUFFERS,  CRM,  PDCM) using different SPI frames at all channels 
+UVM_INFO   @  115869.2620000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 514  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @  115897.0687350us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  117783.3670000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 116390.581000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  117783.3670000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 116390.581000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  117783.3670000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  117841.0480000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 449 us
+  0 | Symbols:  32 | SID_4Bit | Start:    26 -    69  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  117891.0480000us:  [sim:description:2]     **sync 2 random commands ( CRM,  WAIT) using different SPI frames at all channels 
+UVM_INFO   @  118361.1920340us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 449  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @  118740.1920740us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 449  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @  118763.4576140us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  118763.4576140us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  119681.6880000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 118747.248000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  119681.6880000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 118747.248000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  119681.6880000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  119739.3690000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 556 us
+  0 | Symbols:  36 | SID_16Bit_CRC | Start:    35 -    62  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  119789.3690000us:  [sim:description:2]     **sync 4 random commands ( CRM,  PDCM,  WAIT,  CLEAR_DSI_BUFFERS) using different SPI frames at all channels 
+UVM_INFO   @  120263.2476140us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 556  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @  120285.0131740us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  120841.0131580us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  120841.0131580us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 556.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @  121397.0131420us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  121397.0131420us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 556.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @  122884.8490000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 121932.525000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  122884.8490000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 121932.525000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  122884.8490000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  122942.5300000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 276 us
+  0 | Symbols:  16 | SID_0Bit | Start:    23 -    43  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  122992.5300000us:  [sim:description:2]     **sync 2 random commands ( CRM,  WAIT) using different SPI frames at all channels 
+UVM_INFO   @  123001.0650000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 276  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @  123365.0650000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 276  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @  123390.2353980us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  123390.2353980us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  124591.1700000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 123374.025000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  124591.1700000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 123374.025000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  124591.1700000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  124648.8510000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 639 us
+  0 | Symbols:  44 | SID_8Bit | Start:    43 -    58  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  124698.8510000us:  [sim:description:2]     **sync 4 random commands ( CRM,  WAIT,  PDCM,  PDCM) using different SPI frames at all channels 
+UVM_INFO   @  125207.2260000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 4 pulses and a PDCM period of 639  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @  125232.2353740us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  125871.2353740us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  125871.2353740us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 639.000000 us - 2 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @  126510.2353740us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  126510.2353740us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 639.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @  127149.2353740us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  127149.2353740us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 639.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @  129802.3310000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 127767.748000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  129802.3310000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 127767.748000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  129802.3310000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  129860.0120000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 609 us
+  0 | Symbols:  43 | SID_16Bit_CRC | Start:    37 -    76  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  129910.0120000us:  [sim:description:2]     **sync 3 random commands ( CRM,  PDCM,  WAIT) using different SPI frames at all channels 
+UVM_INFO   @  130377.0809300us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 609  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @  130399.0131580us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  130696.0809620us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 609  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @  131296.8031580us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 609  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @  131319.7909580us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  131319.7909580us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  132402.6120000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 131303.581000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  132402.6120000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 131303.581000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  132402.6120000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  132460.2930000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 379 us
+  0 | Symbols:  26 | SID_8Bit | Start:    51 -    68  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  132510.2930000us:  [sim:description:2]     **sync 2 random commands ( CRM,  PDCM) using different SPI frames at all channels 
+UVM_INFO   @  132975.4142670us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 379  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @  132979.4142740us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 379  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @  133001.0131660us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  133353.8031660us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 379  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @  133375.6242750us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @  133375.6242750us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @  134225.9730000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 0 at 133359.414000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  134225.9730000us:  [sync_random_commands_seq] => syncronized channels 0b11, start of channel 1 at 133359.414000us  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/sync/dsi3_sync_base_seq.sv(73) 
+UVM_INFO   @  134425.9730000us:  [sim:status]            PASS 
+UVM_INFO   @  134425.9730000us:  [sim:end]               dsi3_sync_channels sequence completed 
+UVM_INFO   @  134425.9730000us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  134425.9730000us:  [digital_signal_coverage] Coverage score = 37.5%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  134425.9730000us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  134425.9730000us:  [dsi3_master_coverage]  Coverage score = 37.5%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/dsi3_master/dsi3_master_coverage.sv(52) 
+UVM_INFO   @  134425.9730000us:  [dsi3_master_coverage]  Coverage score = 37.5%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/dsi3_master/dsi3_master_coverage.sv(52) 
+UVM_INFO   @  134425.9730000us:  [dsi3_slave_coverage]   Coverage score = 18.5%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/dsi3_slave/dsi3_slave_coverage.sv(57) 
+UVM_INFO   @  134425.9730000us:  [dsi3_slave_coverage]   Coverage score = 18.5%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/dsi3_slave/dsi3_slave_coverage.sv(57) 
+UVM_INFO   @  134425.9730000us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  134425.9730000us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  134425.9730000us:  [digital_signal_coverage] Coverage score = 37.5%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  134425.9730000us:  [jtag_master_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/jtag_master/jtag_master_coverage.sv(57) 
+UVM_INFO   @  134425.9730000us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  134425.9730000us:  [osc_coverage]          Coverage score = 25.8%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/osc/osc_coverage.sv(52) 
+UVM_INFO   @  134425.9730000us:  [digital_signal_coverage] Coverage score = 37.5%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  134425.9730000us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  134425.9730000us:  [digital_signal_coverage] Coverage score = 37.5%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  134425.9730000us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  134425.9730000us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  134425.9730000us:  [digital_signal_coverage] Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  134425.9730000us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  134425.9730000us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  134425.9730000us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  134425.9730000us:  [UVM/REPORT/CATCHER]    
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+  	/common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_report_catcher.svh(705) 
+UVM_INFO   @  134425.9730000us:  [UVM/REPORT/SERVER]     
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  643
+UVM_WARNING :    0
+UVM_ERROR :    4
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[UVM_CMDLINE_PROC]     1
+[UVM_VERDI_DPI]     1
+[VERDI_TR_AUTO]     1
+[check_sync_reg_for_channel_pairs_seq]     1
+[check_sync_reg_for_crm_seq]     1
+[check_sync_reg_for_pdcm_seq]     1
+[clear_queue_during_sync_seq]     1
+[clear_queue_of_all_channels_during_sync_seq]     1
+[digital_signal_coverage]     8
+[double_sync_crm_in_different_frames_seq]     3
+[dsi3_master_coverage]     2
+[dsi3_master_transmission_checker]   167
+[dsi3_slave_coverage]     2
+[dsi3_sync_channels_seq]     1
+[first_sync_at_all_channels_then_single_crms_seq]     3
+[jtag_master_coverage]     1
+[m_master_transmission_checker_0]     1
+[osc_coverage]     1
+[real_signal_coverage]     8
+[registers]     4
+[shut_off_before_sync_seq]     1
+[shut_off_during_sync_seq]     1
+[sim:description]     1
+[sim:description:1]    17
+[sim:description:2]    45
+[sim:end]     1
+[sim:measure]   205
+[sim:status]     1
+[sim:task]     1
+[sync_crm_seq]     7
+[sync_multiple_crm_in_different_frames_seq]     3
+[sync_multiple_crm_in_one_frame_seq]     3
+[sync_multiple_crm_per_channel_in_different_frames_seq]     3
+[sync_pdcm_at_all_channels_seq]     3
+[sync_pdcm_seq]     7
+[sync_random_commands_seq]    61
+[upload_tdma_scheme_seq]    70
+[wait_for_sync_flag_seq]     5
+  	/common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_report_server.svh(904) 
+$finish called from file "/common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_root.svh", line 527.
+$finish at simulation time         134425973000
+Reporting coverage at the end of simulation ...
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, FSM, branch, tgl was monitored
+---------------------------------------------------------------------------
+
+ Coverage status: End of All Coverages ...
+
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 134425973000 ps
+
+Simulation Performance Summary
+==============================
+Simulation started at :  Tue May  6 20:37:24 2025
+Elapsed Time          :  156 sec
+CPU Time              :  180.6 sec
+Virtual memory size   :  886.9 MB
+Resident set size     :  416.3 MB
+Shared memory size    :  2.6 MB
+Private memory size   :  413.8 MB
+Major page faults     :  4
+Machine name          :  ex04.elmos.de
+==============================
+
+Tue May  6 20:39:59 2025
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++ ready:   ./simv_52144_dsi3_sync_channels +UVM_VERBOSITY=UVM_MEDIUM +bus_conflict_off +warn=noFCICIO -ucli -assert nopostproc +UVM_LOG_RECORD -verdi_opts '-ssr Verdi.ses' +uvm_set_type_override=top_default_seq,dsi3_sync_channels_seq -i run.tcl -vcs_assert off +UVM_VERDI_TRACE="UVM_AWARE+RAL+TLM+MSG+HIER+PRINT" +UVM_LOG_RECORD +UVM_TESTNAME=top_test +UVM_TR_RECORD +vcs+lic+wait -reportstats -cm line+cond+fsm+tgl+branch+assert -cm_dir DIGITAL/results/vcs/dsi3_sync_channels.vdb -lca   +fsdbfile+dsi3_sync_channels.fsdb
+ ++ in dir   /nfs/wrk.zaa/sim/52144/m52144a/dsi3_sync_channels
+ ++ on host  ex04.elmos.de
+ ++ user     zaa
+ ++ endtime  2025-05-06T18:39:59
+ ++ took     156 seconds
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

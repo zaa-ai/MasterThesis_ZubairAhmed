@@ -1,0 +1,296 @@
++++ calling  ./simv_52144_otp_pulse_width +UVM_VERBOSITY=UVM_MEDIUM +bus_conflict_off +warn=noFCICIO -ucli -assert nopostproc +UVM_LOG_RECORD -verdi_opts '-ssr Verdi.ses' +uvm_set_type_override=top_default_seq,otp_pulse_width_seq -i run.tcl -vcs_assert off +UVM_VERDI_TRACE="UVM_AWARE+RAL+TLM+MSG+HIER+PRINT" +UVM_LOG_RECORD +UVM_TESTNAME=top_test +UVM_TR_RECORD +vcs+lic+wait -reportstats -cm line+cond+fsm+tgl+branch+assert -cm_dir DIGITAL/results/vcs/otp_pulse_width.vdb -lca   +fsdbfile+otp_pulse_width.fsdb
+ ++ in dir   /nfs/wrk.zaa/sim/52144/m52144a/otp_pulse_width
+ ++ on host  ex04.elmos.de
+ ++ user     zaa
+ ++ start    2025-06-08T19:08:49
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Warning-[LCA_FEATURES_ENABLED] Usage warning
+  LCA features enabled by '-lca' argument on the command line.  For more 
+  information regarding list of LCA features please refer to Chapter "LCA 
+  features" in the VCS Release Notes
+
+Chronologic VCS simulator copyright 1991-2021
+Contains Synopsys proprietary information.
+Compiler version S-2021.09-1_Full64; Runtime version S-2021.09-1_Full64;  Jun  8 21:08 2025
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+
+ VCS Coverage Metrics Release S-2021.09-1_Full64 Copyright (c) 1991-2021 by Synopsys Inc.
+ucli% source dump.tcl
+*Verdi* Loading libsscore_vcsmx202109.so
+FSDB Dumper for VCS-MX, Release Verdi_U-2023.03-1, Linux x86_64/64bit, 04/17/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'otp_pulse_width.fsdb'
+*Verdi* : fsdbDumpon("glitch") - All FSDB files at 0 ps.
+*Verdi* : Begin traversing the scope (top_tb), layer (0).
+*Verdi* : Enable +all dumping.
+*Verdi* : End of traversing.
+*Verdi* : Flush all FSDB Files at 0 ps.
+1
+ucli% if { [info exists ::env(GATE_LEVEL)] } {
+	source tcheck.tcl
+}
+ucli% run
+*Verdi* Enable Verdi Message Catcher.
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/verdi/uvm_custom_install_verdi_recorder.sv(283) @ 0: reporter [VERDI_TR_AUTO] +UVM_TR_RECORD implicitly enables recording_details to UVM_FULL for all components. For explicit control use +UVM_DISABLE_AUTO_COMPONENT and set recording_detail on components accordingly
+UVM_INFO @ 0: reporter [RNTST] Running test top_test...
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VRR applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VREF applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VBG applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+UVM_INFO @ 0: reporter [UVM_CMDLINE_PROC] Applying type override from the command line: +uvm_set_type_override=top_default_seq,otp_pulse_width_seq
+UVM_INFO   @       0.0000000us:  [UVM_VERDI_DPI]         uvm_verdi DPI routines are compiled off. Recompile without +define+UVM_NO_VERDI_DPI 
+UVM_INFO   @       0.0000000us:  [otp_pulse_width_seq]   otp_pulse_width_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(96) 
+*Verdi* Enable Verdi Recorder.
+Info: Verdi UVM 1.2 Hooks File 06/17/2014 
+UVM_INFO   @       0.0010000us:  [sim:task]              otp_pulse_width 
+UVM_INFO   @    2120.0010000us:  [sim:description]       '''Testcase for OTP pulse width setting''' 
+UVM_INFO   @    2349.9407800us:  [sim:measure]           'f__OSC,OSC20M__' = '17.86' condition = 'oscillator frequency @ 18.00MHz' 
+UVM_INFO   @    2365.2807800us:  [sim:description:1]     *OTP program pulse width with f__OSC,OSC20M__=18MHz 
+UVM_INFO   @    2516.6327800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    2617.0327800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    2717.5327800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    2817.9327800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    3043.5647800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    3144.2647800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    3244.6647800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    3345.0647800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    3675.0367800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    3775.4367800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    3875.8367800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    3976.2367800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    4306.5087800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    4406.9087800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    4507.4087800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    4607.9087800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    4937.7807800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    5038.2807800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    5138.6807800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    5239.0807800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    5673.3927800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    5773.7927800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    5874.1927800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    5974.6927800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    6722.1247800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    6822.5247800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    6923.1247800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    7023.5247800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    7457.8367800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    7558.3367800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    7658.7367800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    7759.1367800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    8506.6687800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    8607.0687800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    8824.9207800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    8824.9687800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    8925.3207800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    9025.7207800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    9126.4207800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    9560.7327800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    9661.1327800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    9761.6327800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @    9862.1327800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   10505.0247800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   10605.5247800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   10705.9247800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   10806.3247800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   11449.4167800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   11549.9167800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   11650.3167800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   11750.8167800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   12289.4687800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   12389.9687800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   12490.4687800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   12590.8687800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   13025.1807800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   13125.6807800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   13226.0807800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   13326.4807800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   13969.7727800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   14070.2727800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   14170.6727800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   14271.2727800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   14496.6047800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   14597.0047800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   14697.4047800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   14797.9047800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   15440.9967800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   15541.3967800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   15641.8967800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   15742.4967800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   16281.0487800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   16381.5487800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   16482.0487800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   16582.4487800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   17016.7607800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   17117.3607800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   17217.9607800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   17318.3607800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   17543.7927800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   17644.2927800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   17744.6927800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   17845.1927800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   18384.1447800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   18484.6447800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   18702.1447800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   18702.1967800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   18802.5967800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   18903.0967800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   19003.5967800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   19542.2487800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   19642.6487800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   19743.3487800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.20' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   19843.8487800us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=18MHz' 
+UVM_INFO   @   20061.7167800us:  [otp_pulse_width_seq]   reading c86 @ 513  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(116) 
+UVM_ERROR  @   20061.7167800us:  [otp_pulse_width_seq]   Write OTP BIST with SOAK, Data @ adress 513 is expected cd8 but is c86  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(119) 
+UVM_INFO   @   20074.6147800us:  [otp_pulse_width_seq]   reading cd8 @ 514  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(116) 
+UVM_ERROR  @   20074.6147800us:  [otp_pulse_width_seq]   Write OTP BIST with SOAK, Data @ adress 514 is expected bdd but is cd8  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(119) 
+UVM_INFO   @   20087.5127800us:  [otp_pulse_width_seq]   reading bdd @ 515  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(116) 
+UVM_ERROR  @   20087.5127800us:  [otp_pulse_width_seq]   Write OTP BIST with SOAK, Data @ adress 515 is expected aa5 but is bdd  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(119) 
+UVM_INFO   @   20100.4107800us:  [otp_pulse_width_seq]   reading aa5 @ 516  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(116) 
+UVM_ERROR  @   20100.4107800us:  [otp_pulse_width_seq]   Write OTP BIST with SOAK, Data @ adress 516 is expected afd but is aa5  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(119) 
+UVM_INFO   @   20113.3087800us:  [otp_pulse_width_seq]   reading afd @ 517  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(116) 
+UVM_ERROR  @   20113.3087800us:  [otp_pulse_width_seq]   Write OTP BIST with SOAK, Data @ adress 517 is expected 006 but is afd  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(119) 
+UVM_INFO   @   20126.2067800us:  [otp_pulse_width_seq]   reading 006 @ 518  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(116) 
+UVM_ERROR  @   20126.2067800us:  [otp_pulse_width_seq]   Write OTP BIST with SOAK, Data @ adress 518 is expected e0e but is 006  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(119) 
+UVM_INFO   @   20139.1047800us:  [otp_pulse_width_seq]   reading e0e @ 519  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(116) 
+UVM_ERROR  @   20139.1047800us:  [otp_pulse_width_seq]   Write OTP BIST with SOAK, Data @ adress 519 is expected fa6 but is e0e  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(119) 
+UVM_INFO   @   20152.0027800us:  [otp_pulse_width_seq]   reading fa6 @ 51a  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(116) 
+UVM_ERROR  @   20152.0027800us:  [otp_pulse_width_seq]   Write OTP BIST with SOAK, Data @ adress 51a is expected bb9 but is fa6  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(119) 
+UVM_INFO   @   20164.9007800us:  [otp_pulse_width_seq]   reading bb9 @ 51b  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(116) 
+UVM_ERROR  @   20164.9007800us:  [otp_pulse_width_seq]   Write OTP BIST with SOAK, Data @ adress 51b is expected 5b9 but is bb9  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(119) 
+UVM_INFO   @   20177.7987800us:  [otp_pulse_width_seq]   reading 5b9 @ 51c  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(116) 
+UVM_ERROR  @   20177.7987800us:  [otp_pulse_width_seq]   Write OTP BIST with SOAK, Data @ adress 51c is expected 569 but is 5b9  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(119) 
+UVM_INFO   @   20190.6967800us:  [otp_pulse_width_seq]   reading 569 @ 51d  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(116) 
+UVM_ERROR  @   20190.6967800us:  [otp_pulse_width_seq]   Write OTP BIST with SOAK, Data @ adress 51d is expected e3d but is 569  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(119) 
+UVM_INFO   @   20203.5947800us:  [otp_pulse_width_seq]   reading e3d @ 51e  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(116) 
+UVM_ERROR  @   20203.5947800us:  [otp_pulse_width_seq]   Write OTP BIST with SOAK, Data @ adress 51e is expected 8d0 but is e3d  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(119) 
+UVM_INFO   @   20216.4927800us:  [otp_pulse_width_seq]   reading 8d0 @ 51f  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(116) 
+UVM_ERROR  @   20216.4927800us:  [otp_pulse_width_seq]   Write OTP BIST with SOAK, Data @ adress 51f is expected 4f7 but is 8d0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(119) 
+UVM_INFO   @   20229.3907800us:  [otp_pulse_width_seq]   reading 4f7 @ 520  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(116) 
+UVM_ERROR  @   20229.3907800us:  [otp_pulse_width_seq]   Write OTP BIST with SOAK, Data @ adress 520 is expected b8b but is 4f7  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(119) 
+UVM_INFO   @   20242.2887800us:  [otp_pulse_width_seq]   reading b8b @ 521  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(116) 
+UVM_ERROR  @   20242.2887800us:  [otp_pulse_width_seq]   Write OTP BIST with SOAK, Data @ adress 521 is expected 3d2 but is b8b  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(119) 
+UVM_INFO   @   20255.1867800us:  [otp_pulse_width_seq]   reading 3d2 @ 522  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(116) 
+UVM_ERROR  @   20255.1867800us:  [otp_pulse_width_seq]   Write OTP BIST with SOAK, Data @ adress 522 is expected 321 but is 3d2  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(119) 
+UVM_INFO   @   20268.0847800us:  [otp_pulse_width_seq]   reading 321 @ 523  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(116) 
+UVM_ERROR  @   20268.0847800us:  [otp_pulse_width_seq]   Write OTP BIST with SOAK, Data @ adress 523 is expected d4d but is 321  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(119) 
+UVM_INFO   @   20280.9827800us:  [otp_pulse_width_seq]   reading d4d @ 524  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(116) 
+UVM_ERROR  @   20280.9827800us:  [otp_pulse_width_seq]   Write OTP BIST with SOAK, Data @ adress 524 is expected 120 but is d4d  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(119) 
+UVM_INFO   @   20293.8807800us:  [otp_pulse_width_seq]   reading 120 @ 525  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(116) 
+UVM_ERROR  @   20293.8807800us:  [otp_pulse_width_seq]   Write OTP BIST with SOAK, Data @ adress 525 is expected 6d5 but is 120  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(119) 
+UVM_INFO   @   20306.7787800us:  [otp_pulse_width_seq]   reading 6d5 @ 526  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(116) 
+UVM_ERROR  @   20306.7787800us:  [otp_pulse_width_seq]   Write OTP BIST with SOAK, Data @ adress 526 is expected c86 but is 6d5  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/otp_pulse_width_seq.sv(119) 
+UVM_INFO   @   20523.7545300us:  [sim:measure]           'f__OSC,OSC20M__' = '21.74' condition = 'oscillator frequency @ 22.00MHz' 
+UVM_INFO   @   20544.4345300us:  [sim:measure]           'OTP_WRITE_PULSE_WIDTH' status = PASS 
+UVM_INFO   @   20544.4345300us:  [sim:description:1]     *OTP program pulse width with f__OSC,OSC20M__=22MHz 
+UVM_INFO   @   20684.7465300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.00' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   20785.0465300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   20885.3465300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   20985.7465300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   21420.5585300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   21520.9585300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   21621.1585300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.00' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   21721.6585300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.00' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   22051.8305300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   22152.1305300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.00' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   22252.5305300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.00' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   22352.8305300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   22787.5425300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   22888.0425300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.00' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   22988.4425300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   23088.7425300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   23418.9145300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.00' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   23519.2145300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   23619.6145300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.00' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   23720.1145300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.00' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   23946.0465300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   24046.3465300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   24146.6465300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   24246.9465300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   24681.6585300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   24781.9585300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   24882.2585300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   24982.5585300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.00' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   25521.7105300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   25622.0105300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.00' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   25722.5105300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   25822.8105300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   26257.5225300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   26357.8225300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.00' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   26458.3225300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   26558.6225300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   26888.7945300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   26989.0945300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   27089.4945300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   27189.7945300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   28041.9665300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   28142.3665300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   28242.6665300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   28342.9665300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.00' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   28882.1185300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   28982.4185300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   29082.8185300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   29183.1185300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   29409.0505300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   29509.4505300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   29609.7505300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.00' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   29710.1505300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   29936.0825300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   30036.3825300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.00' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   30136.6825300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.00' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   30237.1825300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   30567.4545300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   30667.7545300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   30767.9545300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.00' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   30868.3545300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   31407.4065300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.00' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   31507.8065300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   31608.2065300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   31708.5065300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   32143.2185300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   32243.4185300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.00' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   32343.7185300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.00' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   32444.0185300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.00' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   32983.2705300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   33083.5705300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   33183.8705300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.00' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   33284.1705300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.00' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   33718.8825300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   33819.1825300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.00' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   33919.4825300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.00' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   34019.8825300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.00' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   34767.6145300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   34868.0145300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   34968.2145300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.00' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   35068.6145300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+UVM_INFO   @   35712.1065300us:  [sim:measure]           't__OTP,prog_pulse__' = ' 100.10' condition = 'f__OSC,OSC20M__=22MHz' 
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++ ready:   ./simv_52144_otp_pulse_width +UVM_VERBOSITY=UVM_MEDIUM +bus_conflict_off +warn=noFCICIO -ucli -assert nopostproc +UVM_LOG_RECORD -verdi_opts '-ssr Verdi.ses' +uvm_set_type_override=top_default_seq,otp_pulse_width_seq -i run.tcl -vcs_assert off +UVM_VERDI_TRACE="UVM_AWARE+RAL+TLM+MSG+HIER+PRINT" +UVM_LOG_RECORD +UVM_TESTNAME=top_test +UVM_TR_RECORD +vcs+lic+wait -reportstats -cm line+cond+fsm+tgl+branch+assert -cm_dir DIGITAL/results/vcs/otp_pulse_width.vdb -lca   +fsdbfile+otp_pulse_width.fsdb
+ ++ in dir   /nfs/wrk.zaa/sim/52144/m52144a/otp_pulse_width
+ ++ on host  ex04.elmos.de
+ ++ user     zaa
+ ++ endtime  2025-06-08T19:09:52
+ ++ took     63 seconds
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

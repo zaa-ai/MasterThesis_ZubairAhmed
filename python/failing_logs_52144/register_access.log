@@ -1,0 +1,719 @@
++++ calling  ./simv_52144_register_access +UVM_VERBOSITY=UVM_MEDIUM +bus_conflict_off +warn=noFCICIO -ucli -assert nopostproc +UVM_LOG_RECORD -verdi_opts '-ssr Verdi.ses' +uvm_set_type_override=top_default_seq,register_access_seq -i run.tcl -vcs_assert off +UVM_VERDI_TRACE="UVM_AWARE+RAL+TLM+MSG+HIER+PRINT" +UVM_LOG_RECORD +UVM_TESTNAME=top_test +UVM_TR_RECORD +vcs+lic+wait -reportstats -cm line+cond+fsm+tgl+branch+assert -cm_dir DIGITAL/results/vcs/register_access.vdb -lca   +fsdbfile+register_access.fsdb
+ ++ in dir   /nfs/wrk.zaa/sim/52144/m52144a/register_access
+ ++ on host  ex04.elmos.de
+ ++ user     zaa
+ ++ start    2025-05-06T22:52:11
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Warning-[LCA_FEATURES_ENABLED] Usage warning
+  LCA features enabled by '-lca' argument on the command line.  For more 
+  information regarding list of LCA features please refer to Chapter "LCA 
+  features" in the VCS Release Notes
+
+Chronologic VCS simulator copyright 1991-2021
+Contains Synopsys proprietary information.
+Compiler version S-2021.09-1_Full64; Runtime version S-2021.09-1_Full64;  May  7 00:52 2025
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+
+ VCS Coverage Metrics Release S-2021.09-1_Full64 Copyright (c) 1991-2021 by Synopsys Inc.
+ucli% source dump.tcl
+*Verdi* Loading libsscore_vcsmx202109.so
+FSDB Dumper for VCS-MX, Release Verdi_U-2023.03-1, Linux x86_64/64bit, 04/17/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'register_access.fsdb'
+*Verdi* : fsdbDumpon("glitch") - All FSDB files at 0 ps.
+*Verdi* : Begin traversing the scope (top_tb), layer (0).
+*Verdi* : Enable +all dumping.
+*Verdi* : End of traversing.
+*Verdi* : Flush all FSDB Files at 0 ps.
+1
+ucli% if { [info exists ::env(GATE_LEVEL)] } {
+	source tcheck.tcl
+}
+ucli% run
+*Verdi* Enable Verdi Message Catcher.
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/verdi/uvm_custom_install_verdi_recorder.sv(283) @ 0: reporter [VERDI_TR_AUTO] +UVM_TR_RECORD implicitly enables recording_details to UVM_FULL for all components. For explicit control use +UVM_DISABLE_AUTO_COMPONENT and set recording_detail on components accordingly
+UVM_INFO @ 0: reporter [RNTST] Running test top_test...
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VRR applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VREF applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VBG applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+UVM_INFO @ 0: reporter [UVM_CMDLINE_PROC] Applying type override from the command line: +uvm_set_type_override=top_default_seq,register_access_seq
+UVM_INFO   @       0.0000000us:  [UVM_VERDI_DPI]         uvm_verdi DPI routines are compiled off. Recompile without +define+UVM_NO_VERDI_DPI 
+UVM_INFO   @       0.0000000us:  [register_access_seq]   register_access_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+*Verdi* Enable Verdi Recorder.
+Info: Verdi UVM 1.2 Hooks File 06/17/2014 
+UVM_INFO   @       0.0010000us:  [sim:task]              register_access 
+UVM_INFO   @    2120.0010000us:  [sim:description]       '''Testcase for master register access''' 
+UVM_INFO   @    2120.0010000us:  [register_check_ic_revision_seq] register_check_ic_revision_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2120.0020000us:  [sim:description:1]     *Check IC_REVISION register 
+UVM_INFO   @    2123.8420000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @    2123.8420000us:  [register_read_tb_cnt_register_seq] register_read_tb_cnt_register_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2123.8430000us:  [sim:description:1]     *Read TB_CNT register 
+UVM_INFO   @    2166.0830000us:  [register_check_ring_buffers_seq] register_check_ring_buffers_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2166.0840000us:  [sim:description:1]     *check ring buffer register reset values 
+UVM_INFO   @    2273.6040000us:  [register_miso_crc_example_seq] register_miso_crc_example_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2273.6050000us:  [sim:description:1]     *example of MISO crc calculation 
+UVM_INFO   @    2329.3650000us:  [register_irq_en_enable_all_irqs_seq] register_irq_en_enable_all_irqs_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2329.3660000us:  [sim:description:1]     *enable all IRQs in IRQ_MASK register 
+UVM_INFO   @    2352.8860000us:  [register_dsi_irq_en_frontdoor_access_seq] register_dsi_irq_en_frontdoor_access_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2352.8870000us:  [sim:description:1]     *check frontdoor access (read/write) to DSI_IRQ_MASK register of each channel 
+UVM_INFO   @    2536.4870000us:  [register_multiple_writes_in_one_frame_seq] register_multiple_writes_in_one_frame_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2536.4880000us:  [sim:description:1]     *multiple register write in a single SPI command frame 
+UVM_INFO   @    2536.4880000us:  [sim:description:2]     **64 register writes in one SPI frame 
+UVM_ERROR  @    2702.0080000us:  [register_multiple_writes_in_one_frame] 64 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    2705.8480000us:  [register_multiple_writes_in_one_frame] 64 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    2709.6880000us:  [register_multiple_writes_in_one_frame] 64 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x27  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    2713.5280000us:  [register_multiple_writes_in_one_frame] 64 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x1c  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    2727.3680000us:  [sim:description:2]     **65 register writes in one SPI frame 
+UVM_ERROR  @    2894.8080000us:  [register_multiple_writes_in_one_frame] 65 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    2898.6480000us:  [register_multiple_writes_in_one_frame] 65 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    2902.4880000us:  [register_multiple_writes_in_one_frame] 65 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    2906.3280000us:  [register_multiple_writes_in_one_frame] 65 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    2920.1680000us:  [sim:description:2]     **66 register writes in one SPI frame 
+UVM_ERROR  @    3089.5280000us:  [register_multiple_writes_in_one_frame] 66 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    3093.3680000us:  [register_multiple_writes_in_one_frame] 66 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    3097.2080000us:  [register_multiple_writes_in_one_frame] 66 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    3101.0480000us:  [register_multiple_writes_in_one_frame] 66 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    3114.8880000us:  [sim:description:2]     **67 register writes in one SPI frame 
+UVM_ERROR  @    3286.1680000us:  [register_multiple_writes_in_one_frame] 67 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    3290.0080000us:  [register_multiple_writes_in_one_frame] 67 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    3293.8480000us:  [register_multiple_writes_in_one_frame] 67 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    3297.6880000us:  [register_multiple_writes_in_one_frame] 67 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    3311.5280000us:  [sim:description:2]     **68 register writes in one SPI frame 
+UVM_ERROR  @    3484.7280000us:  [register_multiple_writes_in_one_frame] 68 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    3488.5680000us:  [register_multiple_writes_in_one_frame] 68 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    3492.4080000us:  [register_multiple_writes_in_one_frame] 68 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    3496.2480000us:  [register_multiple_writes_in_one_frame] 68 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    3510.0880000us:  [sim:description:2]     **69 register writes in one SPI frame 
+UVM_ERROR  @    3685.2080000us:  [register_multiple_writes_in_one_frame] 69 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    3689.0480000us:  [register_multiple_writes_in_one_frame] 69 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    3692.8880000us:  [register_multiple_writes_in_one_frame] 69 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    3696.7280000us:  [register_multiple_writes_in_one_frame] 69 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    3710.5680000us:  [sim:description:2]     **70 register writes in one SPI frame 
+UVM_ERROR  @    3887.6080000us:  [register_multiple_writes_in_one_frame] 70 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    3891.4480000us:  [register_multiple_writes_in_one_frame] 70 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    3895.2880000us:  [register_multiple_writes_in_one_frame] 70 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    3899.1280000us:  [register_multiple_writes_in_one_frame] 70 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    3912.9680000us:  [sim:description:2]     **71 register writes in one SPI frame 
+UVM_ERROR  @    4091.9280000us:  [register_multiple_writes_in_one_frame] 71 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    4095.7680000us:  [register_multiple_writes_in_one_frame] 71 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    4099.6080000us:  [register_multiple_writes_in_one_frame] 71 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    4103.4480000us:  [register_multiple_writes_in_one_frame] 71 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    4117.2880000us:  [sim:description:2]     **72 register writes in one SPI frame 
+UVM_ERROR  @    4298.1680000us:  [register_multiple_writes_in_one_frame] 72 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    4302.0080000us:  [register_multiple_writes_in_one_frame] 72 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    4305.8480000us:  [register_multiple_writes_in_one_frame] 72 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    4309.6880000us:  [register_multiple_writes_in_one_frame] 72 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    4323.5280000us:  [sim:description:2]     **73 register writes in one SPI frame 
+UVM_ERROR  @    4506.3280000us:  [register_multiple_writes_in_one_frame] 73 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    4510.1680000us:  [register_multiple_writes_in_one_frame] 73 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    4514.0080000us:  [register_multiple_writes_in_one_frame] 73 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    4517.8480000us:  [register_multiple_writes_in_one_frame] 73 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    4531.6880000us:  [sim:description:2]     **74 register writes in one SPI frame 
+UVM_ERROR  @    4716.4080000us:  [register_multiple_writes_in_one_frame] 74 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    4720.2480000us:  [register_multiple_writes_in_one_frame] 74 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    4724.0880000us:  [register_multiple_writes_in_one_frame] 74 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    4727.9280000us:  [register_multiple_writes_in_one_frame] 74 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    4741.7680000us:  [sim:description:2]     **75 register writes in one SPI frame 
+UVM_ERROR  @    4928.4080000us:  [register_multiple_writes_in_one_frame] 75 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    4932.2480000us:  [register_multiple_writes_in_one_frame] 75 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    4936.0880000us:  [register_multiple_writes_in_one_frame] 75 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    4939.9280000us:  [register_multiple_writes_in_one_frame] 75 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    4953.7680000us:  [sim:description:2]     **76 register writes in one SPI frame 
+UVM_ERROR  @    5142.3280000us:  [register_multiple_writes_in_one_frame] 76 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    5146.1680000us:  [register_multiple_writes_in_one_frame] 76 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    5150.0080000us:  [register_multiple_writes_in_one_frame] 76 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    5153.8480000us:  [register_multiple_writes_in_one_frame] 76 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    5167.6880000us:  [sim:description:2]     **77 register writes in one SPI frame 
+UVM_ERROR  @    5358.1680000us:  [register_multiple_writes_in_one_frame] 77 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    5362.0080000us:  [register_multiple_writes_in_one_frame] 77 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    5365.8480000us:  [register_multiple_writes_in_one_frame] 77 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    5369.6880000us:  [register_multiple_writes_in_one_frame] 77 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    5383.5280000us:  [sim:description:2]     **78 register writes in one SPI frame 
+UVM_ERROR  @    5575.9280000us:  [register_multiple_writes_in_one_frame] 78 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    5579.7680000us:  [register_multiple_writes_in_one_frame] 78 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    5583.6080000us:  [register_multiple_writes_in_one_frame] 78 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    5587.4480000us:  [register_multiple_writes_in_one_frame] 78 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    5601.2880000us:  [sim:description:2]     **79 register writes in one SPI frame 
+UVM_ERROR  @    5795.6080000us:  [register_multiple_writes_in_one_frame] 79 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    5799.4480000us:  [register_multiple_writes_in_one_frame] 79 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    5803.2880000us:  [register_multiple_writes_in_one_frame] 79 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    5807.1280000us:  [register_multiple_writes_in_one_frame] 79 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    5820.9680000us:  [sim:description:2]     **80 register writes in one SPI frame 
+UVM_ERROR  @    6017.2080000us:  [register_multiple_writes_in_one_frame] 80 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    6021.0480000us:  [register_multiple_writes_in_one_frame] 80 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    6024.8880000us:  [register_multiple_writes_in_one_frame] 80 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    6028.7280000us:  [register_multiple_writes_in_one_frame] 80 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    6042.5680000us:  [sim:description:2]     **81 register writes in one SPI frame 
+UVM_ERROR  @    6240.7280000us:  [register_multiple_writes_in_one_frame] 81 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    6244.5680000us:  [register_multiple_writes_in_one_frame] 81 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    6248.4080000us:  [register_multiple_writes_in_one_frame] 81 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    6252.2480000us:  [register_multiple_writes_in_one_frame] 81 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    6266.0880000us:  [sim:description:2]     **82 register writes in one SPI frame 
+UVM_ERROR  @    6466.1680000us:  [register_multiple_writes_in_one_frame] 82 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    6470.0080000us:  [register_multiple_writes_in_one_frame] 82 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    6473.8480000us:  [register_multiple_writes_in_one_frame] 82 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    6477.6880000us:  [register_multiple_writes_in_one_frame] 82 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    6491.5280000us:  [sim:description:2]     **83 register writes in one SPI frame 
+UVM_ERROR  @    6693.5280000us:  [register_multiple_writes_in_one_frame] 83 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    6697.3680000us:  [register_multiple_writes_in_one_frame] 83 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    6701.2080000us:  [register_multiple_writes_in_one_frame] 83 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    6705.0480000us:  [register_multiple_writes_in_one_frame] 83 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    6718.8880000us:  [sim:description:2]     **84 register writes in one SPI frame 
+UVM_ERROR  @    6922.8080000us:  [register_multiple_writes_in_one_frame] 84 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    6926.6480000us:  [register_multiple_writes_in_one_frame] 84 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    6930.4880000us:  [register_multiple_writes_in_one_frame] 84 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    6934.3280000us:  [register_multiple_writes_in_one_frame] 84 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    6948.1680000us:  [sim:description:2]     **85 register writes in one SPI frame 
+UVM_ERROR  @    7154.0080000us:  [register_multiple_writes_in_one_frame] 85 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    7157.8480000us:  [register_multiple_writes_in_one_frame] 85 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    7161.6880000us:  [register_multiple_writes_in_one_frame] 85 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    7165.5280000us:  [register_multiple_writes_in_one_frame] 85 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    7179.3680000us:  [sim:description:2]     **86 register writes in one SPI frame 
+UVM_ERROR  @    7387.1280000us:  [register_multiple_writes_in_one_frame] 86 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    7390.9680000us:  [register_multiple_writes_in_one_frame] 86 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    7394.8080000us:  [register_multiple_writes_in_one_frame] 86 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    7398.6480000us:  [register_multiple_writes_in_one_frame] 86 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    7412.4880000us:  [sim:description:2]     **87 register writes in one SPI frame 
+UVM_ERROR  @    7622.1680000us:  [register_multiple_writes_in_one_frame] 87 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    7626.0080000us:  [register_multiple_writes_in_one_frame] 87 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    7629.8480000us:  [register_multiple_writes_in_one_frame] 87 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    7633.6880000us:  [register_multiple_writes_in_one_frame] 87 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    7647.5280000us:  [sim:description:2]     **88 register writes in one SPI frame 
+UVM_ERROR  @    7859.1280000us:  [register_multiple_writes_in_one_frame] 88 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    7862.9680000us:  [register_multiple_writes_in_one_frame] 88 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    7866.8080000us:  [register_multiple_writes_in_one_frame] 88 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    7870.6480000us:  [register_multiple_writes_in_one_frame] 88 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    7884.4880000us:  [sim:description:2]     **89 register writes in one SPI frame 
+UVM_ERROR  @    8098.0080000us:  [register_multiple_writes_in_one_frame] 89 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    8101.8480000us:  [register_multiple_writes_in_one_frame] 89 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    8105.6880000us:  [register_multiple_writes_in_one_frame] 89 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    8109.5280000us:  [register_multiple_writes_in_one_frame] 89 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    8123.3680000us:  [sim:description:2]     **90 register writes in one SPI frame 
+UVM_ERROR  @    8338.8080000us:  [register_multiple_writes_in_one_frame] 90 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    8342.6480000us:  [register_multiple_writes_in_one_frame] 90 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    8346.4880000us:  [register_multiple_writes_in_one_frame] 90 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    8350.3280000us:  [register_multiple_writes_in_one_frame] 90 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    8364.1680000us:  [sim:description:2]     **91 register writes in one SPI frame 
+UVM_ERROR  @    8581.5280000us:  [register_multiple_writes_in_one_frame] 91 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    8585.3680000us:  [register_multiple_writes_in_one_frame] 91 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    8589.2080000us:  [register_multiple_writes_in_one_frame] 91 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    8593.0480000us:  [register_multiple_writes_in_one_frame] 91 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    8606.8880000us:  [sim:description:2]     **92 register writes in one SPI frame 
+UVM_ERROR  @    8826.1680000us:  [register_multiple_writes_in_one_frame] 92 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    8830.0080000us:  [register_multiple_writes_in_one_frame] 92 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    8833.8480000us:  [register_multiple_writes_in_one_frame] 92 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    8837.6880000us:  [register_multiple_writes_in_one_frame] 92 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    8851.5280000us:  [sim:description:2]     **93 register writes in one SPI frame 
+UVM_ERROR  @    9072.7280000us:  [register_multiple_writes_in_one_frame] 93 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    9076.5680000us:  [register_multiple_writes_in_one_frame] 93 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    9080.4080000us:  [register_multiple_writes_in_one_frame] 93 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    9084.2480000us:  [register_multiple_writes_in_one_frame] 93 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    9098.0880000us:  [sim:description:2]     **94 register writes in one SPI frame 
+UVM_ERROR  @    9321.2080000us:  [register_multiple_writes_in_one_frame] 94 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    9325.0480000us:  [register_multiple_writes_in_one_frame] 94 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    9328.8880000us:  [register_multiple_writes_in_one_frame] 94 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    9332.7280000us:  [register_multiple_writes_in_one_frame] 94 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    9346.5680000us:  [sim:description:2]     **95 register writes in one SPI frame 
+UVM_ERROR  @    9571.6080000us:  [register_multiple_writes_in_one_frame] 95 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    9575.4480000us:  [register_multiple_writes_in_one_frame] 95 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    9579.2880000us:  [register_multiple_writes_in_one_frame] 95 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    9583.1280000us:  [register_multiple_writes_in_one_frame] 95 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    9596.9680000us:  [sim:description:2]     **96 register writes in one SPI frame 
+UVM_ERROR  @    9823.9280000us:  [register_multiple_writes_in_one_frame] 96 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    9827.7680000us:  [register_multiple_writes_in_one_frame] 96 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    9831.6080000us:  [register_multiple_writes_in_one_frame] 96 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @    9835.4480000us:  [register_multiple_writes_in_one_frame] 96 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @    9849.2880000us:  [sim:description:2]     **97 register writes in one SPI frame 
+UVM_ERROR  @   10078.1680000us:  [register_multiple_writes_in_one_frame] 97 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   10082.0080000us:  [register_multiple_writes_in_one_frame] 97 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   10085.8480000us:  [register_multiple_writes_in_one_frame] 97 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   10089.6880000us:  [register_multiple_writes_in_one_frame] 97 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   10103.5280000us:  [sim:description:2]     **98 register writes in one SPI frame 
+UVM_ERROR  @   10334.3280000us:  [register_multiple_writes_in_one_frame] 98 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   10338.1680000us:  [register_multiple_writes_in_one_frame] 98 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   10342.0080000us:  [register_multiple_writes_in_one_frame] 98 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   10345.8480000us:  [register_multiple_writes_in_one_frame] 98 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   10359.6880000us:  [sim:description:2]     **99 register writes in one SPI frame 
+UVM_ERROR  @   10592.4080000us:  [register_multiple_writes_in_one_frame] 99 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   10596.2480000us:  [register_multiple_writes_in_one_frame] 99 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   10600.0880000us:  [register_multiple_writes_in_one_frame] 99 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   10603.9280000us:  [register_multiple_writes_in_one_frame] 99 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   10617.7680000us:  [sim:description:2]     **100 register writes in one SPI frame 
+UVM_ERROR  @   10852.4080000us:  [register_multiple_writes_in_one_frame] 100 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   10856.2480000us:  [register_multiple_writes_in_one_frame] 100 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   10860.0880000us:  [register_multiple_writes_in_one_frame] 100 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   10863.9280000us:  [register_multiple_writes_in_one_frame] 100 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   10877.7680000us:  [sim:description:2]     **101 register writes in one SPI frame 
+UVM_ERROR  @   11114.3280000us:  [register_multiple_writes_in_one_frame] 101 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   11118.1680000us:  [register_multiple_writes_in_one_frame] 101 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   11122.0080000us:  [register_multiple_writes_in_one_frame] 101 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   11125.8480000us:  [register_multiple_writes_in_one_frame] 101 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   11139.6880000us:  [sim:description:2]     **102 register writes in one SPI frame 
+UVM_ERROR  @   11378.1680000us:  [register_multiple_writes_in_one_frame] 102 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   11382.0080000us:  [register_multiple_writes_in_one_frame] 102 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   11385.8480000us:  [register_multiple_writes_in_one_frame] 102 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   11389.6880000us:  [register_multiple_writes_in_one_frame] 102 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   11403.5280000us:  [sim:description:2]     **103 register writes in one SPI frame 
+UVM_ERROR  @   11643.9280000us:  [register_multiple_writes_in_one_frame] 103 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   11647.7680000us:  [register_multiple_writes_in_one_frame] 103 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   11651.6080000us:  [register_multiple_writes_in_one_frame] 103 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   11655.4480000us:  [register_multiple_writes_in_one_frame] 103 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   11669.2880000us:  [sim:description:2]     **104 register writes in one SPI frame 
+UVM_ERROR  @   11911.6080000us:  [register_multiple_writes_in_one_frame] 104 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   11915.4480000us:  [register_multiple_writes_in_one_frame] 104 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   11919.2880000us:  [register_multiple_writes_in_one_frame] 104 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   11923.1280000us:  [register_multiple_writes_in_one_frame] 104 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   11936.9680000us:  [sim:description:2]     **105 register writes in one SPI frame 
+UVM_ERROR  @   12181.2080000us:  [register_multiple_writes_in_one_frame] 105 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   12185.0480000us:  [register_multiple_writes_in_one_frame] 105 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   12188.8880000us:  [register_multiple_writes_in_one_frame] 105 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   12192.7280000us:  [register_multiple_writes_in_one_frame] 105 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   12206.5680000us:  [sim:description:2]     **106 register writes in one SPI frame 
+UVM_ERROR  @   12452.7280000us:  [register_multiple_writes_in_one_frame] 106 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   12456.5680000us:  [register_multiple_writes_in_one_frame] 106 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   12460.4080000us:  [register_multiple_writes_in_one_frame] 106 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   12464.2480000us:  [register_multiple_writes_in_one_frame] 106 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   12478.0880000us:  [sim:description:2]     **107 register writes in one SPI frame 
+UVM_ERROR  @   12726.1680000us:  [register_multiple_writes_in_one_frame] 107 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   12730.0080000us:  [register_multiple_writes_in_one_frame] 107 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   12733.8480000us:  [register_multiple_writes_in_one_frame] 107 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   12737.6880000us:  [register_multiple_writes_in_one_frame] 107 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   12751.5280000us:  [sim:description:2]     **108 register writes in one SPI frame 
+UVM_ERROR  @   13001.5280000us:  [register_multiple_writes_in_one_frame] 108 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   13005.3680000us:  [register_multiple_writes_in_one_frame] 108 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   13009.2080000us:  [register_multiple_writes_in_one_frame] 108 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   13013.0480000us:  [register_multiple_writes_in_one_frame] 108 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   13026.8880000us:  [sim:description:2]     **109 register writes in one SPI frame 
+UVM_ERROR  @   13278.8080000us:  [register_multiple_writes_in_one_frame] 109 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   13282.6480000us:  [register_multiple_writes_in_one_frame] 109 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   13286.4880000us:  [register_multiple_writes_in_one_frame] 109 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   13290.3280000us:  [register_multiple_writes_in_one_frame] 109 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   13304.1680000us:  [sim:description:2]     **110 register writes in one SPI frame 
+UVM_ERROR  @   13558.0080000us:  [register_multiple_writes_in_one_frame] 110 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   13561.8480000us:  [register_multiple_writes_in_one_frame] 110 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   13565.6880000us:  [register_multiple_writes_in_one_frame] 110 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   13569.5280000us:  [register_multiple_writes_in_one_frame] 110 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   13583.3680000us:  [sim:description:2]     **111 register writes in one SPI frame 
+UVM_ERROR  @   13839.1280000us:  [register_multiple_writes_in_one_frame] 111 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   13842.9680000us:  [register_multiple_writes_in_one_frame] 111 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   13846.8080000us:  [register_multiple_writes_in_one_frame] 111 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   13850.6480000us:  [register_multiple_writes_in_one_frame] 111 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   13864.4880000us:  [sim:description:2]     **112 register writes in one SPI frame 
+UVM_ERROR  @   14122.1680000us:  [register_multiple_writes_in_one_frame] 112 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   14126.0080000us:  [register_multiple_writes_in_one_frame] 112 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   14129.8480000us:  [register_multiple_writes_in_one_frame] 112 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   14133.6880000us:  [register_multiple_writes_in_one_frame] 112 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   14147.5280000us:  [sim:description:2]     **113 register writes in one SPI frame 
+UVM_ERROR  @   14407.1280000us:  [register_multiple_writes_in_one_frame] 113 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   14410.9680000us:  [register_multiple_writes_in_one_frame] 113 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   14414.8080000us:  [register_multiple_writes_in_one_frame] 113 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   14418.6480000us:  [register_multiple_writes_in_one_frame] 113 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   14432.4880000us:  [sim:description:2]     **114 register writes in one SPI frame 
+UVM_ERROR  @   14694.0080000us:  [register_multiple_writes_in_one_frame] 114 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   14697.8480000us:  [register_multiple_writes_in_one_frame] 114 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   14701.6880000us:  [register_multiple_writes_in_one_frame] 114 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   14705.5280000us:  [register_multiple_writes_in_one_frame] 114 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   14719.3680000us:  [sim:description:2]     **115 register writes in one SPI frame 
+UVM_ERROR  @   14982.8080000us:  [register_multiple_writes_in_one_frame] 115 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   14986.6480000us:  [register_multiple_writes_in_one_frame] 115 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   14990.4880000us:  [register_multiple_writes_in_one_frame] 115 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   14994.3280000us:  [register_multiple_writes_in_one_frame] 115 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   15008.1680000us:  [sim:description:2]     **116 register writes in one SPI frame 
+UVM_ERROR  @   15273.5280000us:  [register_multiple_writes_in_one_frame] 116 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   15277.3680000us:  [register_multiple_writes_in_one_frame] 116 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   15281.2080000us:  [register_multiple_writes_in_one_frame] 116 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   15285.0480000us:  [register_multiple_writes_in_one_frame] 116 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   15298.8880000us:  [sim:description:2]     **117 register writes in one SPI frame 
+UVM_ERROR  @   15566.1680000us:  [register_multiple_writes_in_one_frame] 117 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   15570.0080000us:  [register_multiple_writes_in_one_frame] 117 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   15573.8480000us:  [register_multiple_writes_in_one_frame] 117 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   15577.6880000us:  [register_multiple_writes_in_one_frame] 117 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   15591.5280000us:  [sim:description:2]     **118 register writes in one SPI frame 
+UVM_ERROR  @   15860.7280000us:  [register_multiple_writes_in_one_frame] 118 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   15864.5680000us:  [register_multiple_writes_in_one_frame] 118 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   15868.4080000us:  [register_multiple_writes_in_one_frame] 118 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   15872.2480000us:  [register_multiple_writes_in_one_frame] 118 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   15886.0880000us:  [sim:description:2]     **119 register writes in one SPI frame 
+UVM_ERROR  @   16157.2080000us:  [register_multiple_writes_in_one_frame] 119 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   16161.0480000us:  [register_multiple_writes_in_one_frame] 119 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   16164.8880000us:  [register_multiple_writes_in_one_frame] 119 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   16168.7280000us:  [register_multiple_writes_in_one_frame] 119 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   16182.5680000us:  [sim:description:2]     **120 register writes in one SPI frame 
+UVM_ERROR  @   16455.6080000us:  [register_multiple_writes_in_one_frame] 120 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   16459.4480000us:  [register_multiple_writes_in_one_frame] 120 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   16463.2880000us:  [register_multiple_writes_in_one_frame] 120 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   16467.1280000us:  [register_multiple_writes_in_one_frame] 120 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   16480.9680000us:  [sim:description:2]     **121 register writes in one SPI frame 
+UVM_ERROR  @   16755.9280000us:  [register_multiple_writes_in_one_frame] 121 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   16759.7680000us:  [register_multiple_writes_in_one_frame] 121 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   16763.6080000us:  [register_multiple_writes_in_one_frame] 121 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   16767.4480000us:  [register_multiple_writes_in_one_frame] 121 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   16781.2880000us:  [sim:description:2]     **122 register writes in one SPI frame 
+UVM_ERROR  @   17058.1680000us:  [register_multiple_writes_in_one_frame] 122 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   17062.0080000us:  [register_multiple_writes_in_one_frame] 122 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   17065.8480000us:  [register_multiple_writes_in_one_frame] 122 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   17069.6880000us:  [register_multiple_writes_in_one_frame] 122 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   17083.5280000us:  [sim:description:2]     **123 register writes in one SPI frame 
+UVM_ERROR  @   17362.3280000us:  [register_multiple_writes_in_one_frame] 123 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   17366.1680000us:  [register_multiple_writes_in_one_frame] 123 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   17370.0080000us:  [register_multiple_writes_in_one_frame] 123 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   17373.8480000us:  [register_multiple_writes_in_one_frame] 123 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   17387.6880000us:  [sim:description:2]     **124 register writes in one SPI frame 
+UVM_ERROR  @   17668.4080000us:  [register_multiple_writes_in_one_frame] 124 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   17672.2480000us:  [register_multiple_writes_in_one_frame] 124 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   17676.0880000us:  [register_multiple_writes_in_one_frame] 124 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   17679.9280000us:  [register_multiple_writes_in_one_frame] 124 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   17693.7680000us:  [sim:description:2]     **125 register writes in one SPI frame 
+UVM_ERROR  @   17976.4080000us:  [register_multiple_writes_in_one_frame] 125 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   17980.2480000us:  [register_multiple_writes_in_one_frame] 125 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   17984.0880000us:  [register_multiple_writes_in_one_frame] 125 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   17987.9280000us:  [register_multiple_writes_in_one_frame] 125 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   18001.7680000us:  [sim:description:2]     **126 register writes in one SPI frame 
+UVM_ERROR  @   18286.3280000us:  [register_multiple_writes_in_one_frame] 126 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   18290.1680000us:  [register_multiple_writes_in_one_frame] 126 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   18294.0080000us:  [register_multiple_writes_in_one_frame] 126 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   18297.8480000us:  [register_multiple_writes_in_one_frame] 126 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   18311.6880000us:  [sim:description:2]     **127 register writes in one SPI frame 
+UVM_ERROR  @   18598.1680000us:  [register_multiple_writes_in_one_frame] 127 writes per SPI frame, read unexpected value in register address 0x62, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   18602.0080000us:  [register_multiple_writes_in_one_frame] 127 writes per SPI frame, read unexpected value in register address 0x81, expected 0x0, got 0x1f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   18605.8480000us:  [register_multiple_writes_in_one_frame] 127 writes per SPI frame, read unexpected value in register address 0xa9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_ERROR  @   18609.6880000us:  [register_multiple_writes_in_one_frame] 127 writes per SPI frame, read unexpected value in register address 0xc9, expected 0x0, got 0x7f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/register/register_multiple_writes_in_one_frame_seq.svh(58) 
+UVM_INFO   @   18623.5280000us:  [sim:description:2]     **128 register writes in one SPI frame 
+UVM_INFO   @   18985.0480000us:  [register_multiple_writes_with_tx_crc_in_one_frame_seq] register_multiple_writes_with_tx_crc_in_one_frame_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   18985.0490000us:  [sim:description:1]     *multiple register writes with TX CRC in a single SPI command frame 
+UVM_INFO   @   19168.0090000us:  [register_multiple_writes_with_tx_crc_in_one_wrong_crc_frame_seq] register_multiple_writes_with_tx_crc_in_one_wrong_crc_frame_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   19168.0100000us:  [sim:description:1]     *multiple register writes with TX CRC in a single SPI command frame 
+UVM_INFO   @   19381.6900000us:  [register_write_to_invalid_addresses_seq] register_write_to_invalid_addresses_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   19381.6910000us:  [sim:description:1]     *write to undefined addresses 
+UVM_INFO   @   19381.6910000us:  [sim:description:2]     **write random value to address 0x0155 
+UVM_INFO   @   19393.2110000us:  [sim:description:2]     **write random value to address 0x01da 
+UVM_INFO   @   19404.7310000us:  [sim:description:2]     **write random value to address 0x08a1 
+UVM_INFO   @   19416.2510000us:  [sim:description:2]     **write random value to address 0x0929 
+UVM_INFO   @   19427.7710000us:  [sim:description:2]     **write random value to address 0x0b7e 
+UVM_INFO   @   19439.2910000us:  [sim:description:2]     **write random value to address 0x0f09 
+UVM_INFO   @   19450.8110000us:  [sim:description:2]     **write random value to address 0x0683 
+UVM_INFO   @   19462.3310000us:  [sim:description:2]     **write random value to address 0x0ffe 
+UVM_INFO   @   19473.8510000us:  [sim:description:2]     **write random value to address 0x0289 
+UVM_INFO   @   19485.3710000us:  [sim:description:2]     **write random value to address 0x0abe 
+UVM_INFO   @   19496.8910000us:  [sim:description:2]     **write random value to address 0x0789 
+UVM_INFO   @   19508.4110000us:  [sim:description:2]     **write random value to address 0x0d12 
+UVM_INFO   @   19519.9310000us:  [sim:description:2]     **write random value to address 0x052d 
+UVM_INFO   @   19531.4510000us:  [sim:description:2]     **write random value to address 0x019d 
+UVM_INFO   @   19542.9710000us:  [sim:description:2]     **write random value to address 0x0d7a 
+UVM_INFO   @   19554.4910000us:  [sim:description:2]     **write random value to address 0x0b48 
+UVM_INFO   @   19566.0110000us:  [sim:description:2]     **write random value to address 0x0032 
+UVM_INFO   @   19577.5310000us:  [sim:description:2]     **write random value to address 0x0efe 
+UVM_INFO   @   19589.0510000us:  [sim:description:2]     **write random value to address 0x0ef9 
+UVM_INFO   @   19600.5710000us:  [sim:description:2]     **write random value to address 0x023e 
+UVM_INFO   @   19612.0910000us:  [sim:description:2]     **write random value to address 0x0a2b 
+UVM_INFO   @   19623.6110000us:  [sim:description:2]     **write random value to address 0x0602 
+UVM_INFO   @   19635.1310000us:  [sim:description:2]     **write random value to address 0x0842 
+UVM_INFO   @   19646.6510000us:  [sim:description:2]     **write random value to address 0x0c73 
+UVM_INFO   @   19658.1710000us:  [sim:description:2]     **write random value to address 0x09b9 
+UVM_INFO   @   19669.6910000us:  [sim:description:2]     **write random value to address 0x0a92 
+UVM_INFO   @   19681.2110000us:  [sim:description:2]     **write random value to address 0x0e50 
+UVM_INFO   @   19692.7310000us:  [sim:description:2]     **write random value to address 0x0876 
+UVM_INFO   @   19704.2510000us:  [sim:description:2]     **write random value to address 0x0715 
+UVM_INFO   @   19715.7710000us:  [sim:description:2]     **write random value to address 0x0f0e 
+UVM_INFO   @   19727.2910000us:  [sim:description:2]     **write random value to address 0x00fd 
+UVM_INFO   @   19738.8110000us:  [sim:description:2]     **write random value to address 0x0cd8 
+UVM_INFO   @   19750.3310000us:  [sim:description:2]     **write random value to address 0x0c16 
+UVM_INFO   @   19761.8510000us:  [sim:description:2]     **write random value to address 0x02d9 
+UVM_INFO   @   19773.3710000us:  [sim:description:2]     **write random value to address 0x0af1 
+UVM_INFO   @   19784.8910000us:  [sim:description:2]     **write random value to address 0x0499 
+UVM_INFO   @   19796.4110000us:  [sim:description:2]     **write random value to address 0x0c26 
+UVM_INFO   @   19807.9310000us:  [sim:description:2]     **write random value to address 0x0d9a 
+UVM_INFO   @   19819.4510000us:  [sim:description:2]     **write random value to address 0x0538 
+UVM_INFO   @   19830.9710000us:  [sim:description:2]     **write random value to address 0x04fc 
+UVM_INFO   @   19842.4910000us:  [sim:description:2]     **write random value to address 0x01ca 
+UVM_INFO   @   19854.0110000us:  [sim:description:2]     **write random value to address 0x0862 
+UVM_INFO   @   19865.5310000us:  [sim:description:2]     **write random value to address 0x04e9 
+UVM_INFO   @   19877.0510000us:  [sim:description:2]     **write random value to address 0x0fe9 
+UVM_INFO   @   19888.5710000us:  [sim:description:2]     **write random value to address 0x0fe5 
+UVM_INFO   @   19900.0910000us:  [sim:description:2]     **write random value to address 0x0c15 
+UVM_INFO   @   19911.6110000us:  [sim:description:2]     **write random value to address 0x006e 
+UVM_INFO   @   19923.1310000us:  [sim:description:2]     **write random value to address 0x0c89 
+UVM_INFO   @   19934.6510000us:  [sim:description:2]     **write random value to address 0x0bb7 
+UVM_INFO   @   19946.1710000us:  [sim:description:2]     **write random value to address 0x021d 
+UVM_INFO   @   19957.6910000us:  [sim:description:2]     **write random value to address 0x0c5a 
+UVM_INFO   @   19969.2110000us:  [sim:description:2]     **write random value to address 0x0ad3 
+UVM_INFO   @   19980.7310000us:  [sim:description:2]     **write random value to address 0x0824 
+UVM_INFO   @   19992.2510000us:  [sim:description:2]     **write random value to address 0x07d4 
+UVM_INFO   @   20003.7710000us:  [sim:description:2]     **write random value to address 0x06e8 
+UVM_INFO   @   20015.2910000us:  [sim:description:2]     **write random value to address 0x0219 
+UVM_INFO   @   20026.8110000us:  [sim:description:2]     **write random value to address 0x098d 
+UVM_INFO   @   20038.3310000us:  [sim:description:2]     **write random value to address 0x0a90 
+UVM_INFO   @   20049.8510000us:  [sim:description:2]     **write random value to address 0x0c9b 
+UVM_INFO   @   20061.3710000us:  [sim:description:2]     **write random value to address 0x02c6 
+UVM_INFO   @   20072.8910000us:  [sim:description:2]     **write random value to address 0x0b54 
+UVM_INFO   @   20084.4110000us:  [sim:description:2]     **write random value to address 0x0601 
+UVM_INFO   @   20095.9310000us:  [sim:description:2]     **write random value to address 0x080b 
+UVM_INFO   @   20107.4510000us:  [sim:description:2]     **write random value to address 0x050b 
+UVM_INFO   @   20118.9710000us:  [sim:description:2]     **write random value to address 0x0335 
+UVM_INFO   @   20130.4910000us:  [sim:description:2]     **write random value to address 0x00f5 
+UVM_INFO   @   20142.0110000us:  [sim:description:2]     **write random value to address 0x05bb 
+UVM_INFO   @   20153.5310000us:  [sim:description:2]     **write random value to address 0x0999 
+UVM_INFO   @   20165.0510000us:  [sim:description:2]     **write random value to address 0x0d38 
+UVM_INFO   @   20176.5710000us:  [sim:description:2]     **write random value to address 0x0369 
+UVM_INFO   @   20188.0910000us:  [sim:description:2]     **write random value to address 0x06a9 
+UVM_INFO   @   20199.6110000us:  [sim:description:2]     **write random value to address 0x0832 
+UVM_INFO   @   20211.1310000us:  [sim:description:2]     **write random value to address 0x0be8 
+UVM_INFO   @   20222.6510000us:  [sim:description:2]     **write random value to address 0x056a 
+UVM_INFO   @   20234.1710000us:  [sim:description:2]     **write random value to address 0x0b97 
+UVM_INFO   @   20245.6910000us:  [sim:description:2]     **write random value to address 0x0faa 
+UVM_INFO   @   20257.2110000us:  [sim:description:2]     **write random value to address 0x0287 
+UVM_INFO   @   20268.7310000us:  [sim:description:2]     **write random value to address 0x07a0 
+UVM_INFO   @   20280.2510000us:  [sim:description:2]     **write random value to address 0x0154 
+UVM_INFO   @   20291.7710000us:  [sim:description:2]     **write random value to address 0x05c0 
+UVM_INFO   @   20303.2910000us:  [sim:description:2]     **write random value to address 0x0bc6 
+UVM_INFO   @   20314.8110000us:  [sim:description:2]     **write random value to address 0x0849 
+UVM_INFO   @   20326.3310000us:  [sim:description:2]     **write random value to address 0x0dfd 
+UVM_INFO   @   20337.8510000us:  [sim:description:2]     **write random value to address 0x0fe5 
+UVM_INFO   @   20349.3710000us:  [sim:description:2]     **write random value to address 0x0271 
+UVM_INFO   @   20360.8910000us:  [sim:description:2]     **write random value to address 0x03eb 
+UVM_INFO   @   20372.4110000us:  [sim:description:2]     **write random value to address 0x0a3c 
+UVM_INFO   @   20383.9310000us:  [sim:description:2]     **write random value to address 0x0df2 
+UVM_INFO   @   20395.4510000us:  [sim:description:2]     **write random value to address 0x0115 
+UVM_INFO   @   20406.9710000us:  [sim:description:2]     **write random value to address 0x04d6 
+UVM_INFO   @   20418.4910000us:  [sim:description:2]     **write random value to address 0x01df 
+UVM_INFO   @   20430.0110000us:  [sim:description:2]     **write random value to address 0x017d 
+UVM_INFO   @   20441.5310000us:  [sim:description:2]     **write random value to address 0x08b2 
+UVM_INFO   @   20453.0510000us:  [sim:description:2]     **write random value to address 0x0a7d 
+UVM_INFO   @   20464.5710000us:  [sim:description:2]     **write random value to address 0x00d3 
+UVM_INFO   @   20476.0910000us:  [sim:description:2]     **write random value to address 0x02c5 
+UVM_INFO   @   20487.6110000us:  [sim:description:2]     **write random value to address 0x0b3a 
+UVM_INFO   @   20499.1310000us:  [sim:description:2]     **write random value to address 0x0cbb 
+UVM_INFO   @   20510.6510000us:  [sim:description:2]     **write random value to address 0x02e5 
+UVM_INFO   @   20522.1710000us:  [sim:description:2]     **write random value to address 0x01e5 
+UVM_INFO   @   20533.6910000us:  [register_spi_burst_read_zero_address_seq] register_spi_burst_read_zero_address_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   20533.6920000us:  [sim:description:1]     *multiple SPI burst reads using zero as address 
+UVM_INFO   @   20566.5320000us:  [register_spi_burst_read_to_improve_coverage_seq] register_spi_burst_read_to_improve_coverage_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   20566.5330000us:  [sim:description:1]     *SPI burst read higher areas of address space 
+UVM_INFO   @   23524.2930000us:  [register_jtag_burst_read_to_improve_coverage_seq] register_jtag_burst_read_to_improve_coverage_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   23524.2940000us:  [sim:description:1]     *JTAG read higher areas of address space 
+UVM_INFO   @   26024.3180000us:  [register_read_ic_revision_during_startup_seq] register_read_ic_revision_during_startup_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   26024.3190000us:  [sim:description:1]     *Read IC_REVISION during startup 
+UVM_INFO   @   26228.1590000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26231.9990000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26235.8390000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26239.6790000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26243.5190000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26247.3590000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26251.1990000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26255.0390000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26258.8790000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26262.7190000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26266.5590000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26270.3990000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26274.2390000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26278.0790000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26281.9190000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26285.7590000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26289.5990000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26293.4390000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26297.2790000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26301.1190000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26304.9590000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26308.7990000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26312.6390000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26316.4790000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26320.3190000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26324.1590000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26327.9990000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26331.8390000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26335.6790000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26339.5190000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26343.3590000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26347.1990000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26351.0390000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26354.8790000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26358.7190000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26362.5590000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26366.3990000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26370.2390000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26374.0790000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26377.9190000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26381.7590000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26385.5990000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26389.4390000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26393.2790000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26397.1190000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26400.9590000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26404.7990000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26408.6390000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26412.4790000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26416.3190000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26420.1590000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26423.9990000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26427.8390000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26431.6790000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26435.5190000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26439.3590000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26443.1990000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26447.0390000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26450.8790000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26454.7190000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26458.5590000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26462.3990000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26466.2390000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26470.0790000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26473.9190000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26477.7590000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26481.5990000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26485.4390000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26489.2790000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26493.1190000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26496.9590000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26500.7990000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26504.6390000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26508.4790000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26512.3190000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26516.1590000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26519.9990000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26523.8390000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26527.6790000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26531.5190000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26535.3590000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26539.1990000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26543.0390000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26546.8790000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26550.7190000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26554.5590000us:  [sim:measure]           'IC_REV' = '1178' status = Tape out revision 
+UVM_INFO   @   26654.5590000us:  [sim:status]            PASS 
+UVM_INFO   @   26654.5590000us:  [sim:end]               register_access sequence completed 
+UVM_INFO   @   26654.5590000us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @   26654.5590000us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @   26654.5590000us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @   26654.5590000us:  [dsi3_master_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/dsi3_master/dsi3_master_coverage.sv(52) 
+UVM_INFO   @   26654.5590000us:  [dsi3_master_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/dsi3_master/dsi3_master_coverage.sv(52) 
+UVM_INFO   @   26654.5590000us:  [dsi3_slave_coverage]   Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/dsi3_slave/dsi3_slave_coverage.sv(57) 
+UVM_INFO   @   26654.5590000us:  [dsi3_slave_coverage]   Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/dsi3_slave/dsi3_slave_coverage.sv(57) 
+UVM_INFO   @   26654.5590000us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @   26654.5590000us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @   26654.5590000us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @   26654.5590000us:  [jtag_master_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/jtag_master/jtag_master_coverage.sv(57) 
+UVM_INFO   @   26654.5590000us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @   26654.5590000us:  [osc_coverage]          Coverage score = 25.8%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/osc/osc_coverage.sv(52) 
+UVM_INFO   @   26654.5590000us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @   26654.5590000us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @   26654.5590000us:  [digital_signal_coverage] Coverage score = 37.5%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @   26654.5590000us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @   26654.5590000us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @   26654.5590000us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @   26654.5590000us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @   26654.5590000us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @   26654.5590000us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @   26654.5590000us:  [UVM/REPORT/CATCHER]    
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+  	/common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_report_catcher.svh(705) 
+UVM_INFO   @   26654.5590000us:  [UVM/REPORT/SERVER]     
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  313
+UVM_WARNING :    0
+UVM_ERROR :  256
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[UVM_CMDLINE_PROC]     1
+[UVM_VERDI_DPI]     1
+[VERDI_TR_AUTO]     1
+[digital_signal_coverage]     8
+[dsi3_master_coverage]     2
+[dsi3_slave_coverage]     2
+[jtag_master_coverage]     1
+[osc_coverage]     1
+[real_signal_coverage]     8
+[register_access_seq]     1
+[register_check_ic_revision_seq]     1
+[register_check_ring_buffers_seq]     1
+[register_dsi_irq_en_frontdoor_access_seq]     1
+[register_irq_en_enable_all_irqs_seq]     1
+[register_jtag_burst_read_to_improve_coverage_seq]     1
+[register_miso_crc_example_seq]     1
+[register_multiple_writes_in_one_frame]   256
+[register_multiple_writes_in_one_frame_seq]     1
+[register_multiple_writes_with_tx_crc_in_one_frame_seq]     1
+[register_multiple_writes_with_tx_crc_in_one_wrong_crc_frame_seq]     1
+[register_read_ic_revision_during_startup_seq]     1
+[register_read_tb_cnt_register_seq]     1
+[register_spi_burst_read_to_improve_coverage_seq]     1
+[register_spi_burst_read_zero_address_seq]     1
+[register_write_to_invalid_addresses_seq]     1
+[sim:description]     1
+[sim:description:1]    14
+[sim:description:2]   165
+[sim:end]     1
+[sim:measure]    87
+[sim:status]     1
+[sim:task]     1
+  	/common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_report_server.svh(904) 
+$finish called from file "/common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_root.svh", line 527.
+$finish at simulation time          26654559000
+Reporting coverage at the end of simulation ...
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, FSM, branch, tgl was monitored
+---------------------------------------------------------------------------
+
+ Coverage status: End of All Coverages ...
+
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 26654559000 ps
+
+Simulation Performance Summary
+==============================
+Simulation started at :  Wed May  7 00:52:12 2025
+Elapsed Time          :  152 sec
+CPU Time              :  166.4 sec
+Virtual memory size   :  924.6 MB
+Resident set size     :  455.4 MB
+Shared memory size    :  2.5 MB
+Private memory size   :  452.8 MB
+Major page faults     :  5
+Machine name          :  ex04.elmos.de
+==============================
+
+Wed May  7 00:54:43 2025
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++ ready:   ./simv_52144_register_access +UVM_VERBOSITY=UVM_MEDIUM +bus_conflict_off +warn=noFCICIO -ucli -assert nopostproc +UVM_LOG_RECORD -verdi_opts '-ssr Verdi.ses' +uvm_set_type_override=top_default_seq,register_access_seq -i run.tcl -vcs_assert off +UVM_VERDI_TRACE="UVM_AWARE+RAL+TLM+MSG+HIER+PRINT" +UVM_LOG_RECORD +UVM_TESTNAME=top_test +UVM_TR_RECORD +vcs+lic+wait -reportstats -cm line+cond+fsm+tgl+branch+assert -cm_dir DIGITAL/results/vcs/register_access.vdb -lca   +fsdbfile+register_access.fsdb
+ ++ in dir   /nfs/wrk.zaa/sim/52144/m52144a/register_access
+ ++ on host  ex04.elmos.de
+ ++ user     zaa
+ ++ endtime  2025-05-06T22:54:43
+ ++ took     152 seconds
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

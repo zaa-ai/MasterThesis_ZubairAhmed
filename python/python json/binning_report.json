@@ -1,0 +1,165 @@
+{
+    "bucket": [
+        {
+            "act_invoke_rule_file": "",
+            "binning_error_info": [
+                {
+                    "assert_start_time": 1874207510.0,
+                    "error_type": "Assertion Error",
+                    "scope": "asic_tb.th.i_dut_wrapper.asic_inst.digital_inst.core_iomux_inst.core_inst.acm0_core_sys_sfl_inst.crc32_shell_aux_inst.genblk1.wb_if_sp_dummy_dma_sec_inst.no_access_to_dummy",
+                    "time": 1874207510.0,
+                    "timescale": "ps"
+                }
+            ],
+            "cases": [
+                "./53390_UVM/ADC_TRIG_MUX_SW_TEST.log",
+                "./53390_UVM/ADC_READ_ACCESS_ERROR_TEST.log",
+                "./53390_UVM/ADC_READ_ACCESS_SLAVE_ERROR_TEST.log"
+            ],
+            "count": 3,
+            "debug_facilitator_template": "/nfs/wrk.zaa/regression_binning/rda_intro_binning_demo_v012623.tar_1/binning_training/rca.work/binning/df_scripts/run_to_error_7c9cc4e1fc34bc61.tcl",
+            "disable_DF": false,
+            "disable_RCA": false,
+            "error_type": "Assertion Error",
+            "hint": "RTL",
+            "hint_case": "./53390_UVM/ADC_READ_ACCESS_SLAVE_ERROR_TEST.log",
+            "hint_message": "\"/nfs/qtr60077/common/run/unix/zusers/zdbuild/Bamboo_exsim10_BuildAgent1/xml-data/build-dir/DIGELA0993-RS-REG/ASIC/DIGITAL/CORE_IOMUX/CORE/STD_COMPONENTS/BUS_IF_LIB/hdl/wb_if_sp_dummy.sv\", 35: asic_tb.th.i_dut_wrapper.asic_inst.digital_inst.core_iomux_inst.core_inst.acm0_core_sys_sfl_inst.crc32_shell_aux_inst.genblk1.wb_if_sp_dummy_dma_sec_inst.no_access_to_dummy: started at 1874207510ps failed at 1874207510ps\n\tOffending '(!wb.cyc)'",
+            "id": 1,
+            "instant_recall_script": "/nfs/wrk.zaa/regression_binning/rda_intro_binning_demo_v012623.tar_1/binning_training/rca.work/binning/df_scripts/regdbg_7c9cc4e1fc34bc61.tcl",
+            "rule_id": 4,
+            "seed": "",
+            "status": "FAIL",
+            "suspect_dut": [
+                "asic_tb.th.i_dut_wrapper.asic_inst.digital_inst.core_iomux_inst.core_inst.acm0_core_sys_sfl_inst.crc32_shell_aux_inst.genblk1.wb_if_sp_dummy_dma_sec_inst.no_access_to_dummy#1874207510"
+            ],
+            "time": "1874207510",
+            "time_unit": "ps"
+        },
+        {
+            "act_invoke_rule_file": "",
+            "binning_error_info": [
+                {
+                    "error_type": "UVM Error",
+                    "scope": "[swd_enter_debug_state_seq]",
+                    "time": 24435952500.0,
+                    "timescale": "ps"
+                }
+            ],
+            "cases": [
+                "./53390_UVM/ADC_WDOG_CPU_HALTED_REACTION_TEST.log"
+            ],
+            "count": 1,
+            "debug_facilitator_template": "/nfs/wrk.zaa/regression_binning/rda_intro_binning_demo_v012623.tar_1/binning_training/rca.work/binning/df_scripts/run_to_error_40a496680661f17c.tcl",
+            "disable_DF": false,
+            "disable_RCA": false,
+            "error_type": "UVM Error",
+            "hint": "RTL",
+            "hint_case": "./53390_UVM/ADC_WDOG_CPU_HALTED_REACTION_TEST.log",
+            "hint_message": "UVM_FATAL  @   24435952500.0ps:  [swd_enter_debug_state_seq] ENTER_DEBUG_STATE: timeout!  \t/swd_enter_debug_state_seq.svh(58)",
+            "id": 2,
+            "instant_recall_script": "/nfs/wrk.zaa/regression_binning/rda_intro_binning_demo_v012623.tar_1/binning_training/rca.work/binning/df_scripts/regdbg_40a496680661f17c.tcl",
+            "rule_id": 0,
+            "seed": "",
+            "status": "FAIL",
+            "suspect_dut": [
+                "[swd_enter_debug_state_seq]#24435952500"
+            ],
+            "time": "24435952500",
+            "time_unit": "ps"
+        },
+        {
+            "act_invoke_rule_file": "",
+            "binning_error_info": [
+                {
+                    "assert_start_time": 1869832510.0,
+                    "error_type": "Assertion Error",
+                    "scope": "asic_tb.wb_gpioa_tester.dato_never_x",
+                    "time": 1869832510.0,
+                    "timescale": "ps"
+                }
+            ],
+            "cases": [
+                "./53390_UVM/GPIOA_TB.log"
+            ],
+            "count": 1,
+            "debug_facilitator_template": "/nfs/wrk.zaa/regression_binning/rda_intro_binning_demo_v012623.tar_1/binning_training/rca.work/binning/df_scripts/run_to_error_308efeb065a3bcc2.tcl",
+            "disable_DF": false,
+            "disable_RCA": false,
+            "error_type": "Assertion Error",
+            "hint": "RTL",
+            "hint_case": "./53390_UVM/GPIOA_TB.log",
+            "hint_message": "\"/nfs/qtr60077/common/run/unix/zusers/zdbuild/Bamboo_exsim09_BuildAgent1/xml-data/build-dir/DIGELA0993-RS-RS/ASIC/DIGITAL/CORE_IOMUX/CORE/STD_COMPONENTS/BUS_IF_LIB/hdl/wb_if.sv\", 768: asic_tb.wb_gpioa_tester.dato_never_x: started at 1869832510ps failed at 1869832510ps\n\tOffending '(!$isunknown(dato))'",
+            "id": 3,
+            "instant_recall_script": "/nfs/wrk.zaa/regression_binning/rda_intro_binning_demo_v012623.tar_1/binning_training/rca.work/binning/df_scripts/regdbg_308efeb065a3bcc2.tcl",
+            "rule_id": 4,
+            "seed": "",
+            "status": "FAIL",
+            "suspect_dut": [
+                "asic_tb.wb_gpioa_tester.dato_never_x#1869832510"
+            ],
+            "time": "1869832510",
+            "time_unit": "ps"
+        },
+        {
+            "act_invoke_rule_file": "",
+            "binning_error_info": [
+                {
+                    "assert_start_time": 98495582500.0,
+                    "error_type": "Assertion Error",
+                    "scope": "asic_tb.asic_inst.digital_inst.core_iomux_inst.core_inst.spi_1_inst.utils_gen_fifo_rec_inst.fifo_underrun",
+                    "time": 98495582500.0,
+                    "timescale": "ps"
+                }
+            ],
+            "cases": [
+                "./53390_UVM/SPI_1_TB.log"
+            ],
+            "count": 1,
+            "debug_facilitator_template": "/nfs/wrk.zaa/regression_binning/rda_intro_binning_demo_v012623.tar_1/binning_training/rca.work/binning/df_scripts/run_to_error_43130c95898dd81f.tcl",
+            "disable_DF": false,
+            "disable_RCA": false,
+            "error_type": "Assertion Error",
+            "hint": "RTL",
+            "hint_case": "./53390_UVM/SPI_1_TB.log",
+            "hint_message": "\"/nfs/qtr60077/common/run/unix/zusers/zdbuild/Bamboo_exsim12_BuildAgent1/xml-data/build-dir/DIGELA0993-RS-RS/ASIC/DIGITAL/CORE_IOMUX/CORE/STD_COMPONENTS/UTILS_LIB/hdl/utils_gen_fifo.sv\", 158: asic_tb.asic_inst.digital_inst.core_iomux_inst.core_inst.spi_1_inst.utils_gen_fifo_rec_inst.fifo_underrun: started at 98495582500ps failed at 98495582500ps\n\tOffending '(!underrun)'",
+            "id": 4,
+            "instant_recall_script": "/nfs/wrk.zaa/regression_binning/rda_intro_binning_demo_v012623.tar_1/binning_training/rca.work/binning/df_scripts/regdbg_43130c95898dd81f.tcl",
+            "rule_id": 4,
+            "seed": "",
+            "status": "FAIL",
+            "suspect_dut": [
+                "asic_tb.asic_inst.digital_inst.core_iomux_inst.core_inst.spi_1_inst.utils_gen_fifo_rec_inst.fifo_underrun#98495582500"
+            ],
+            "time": "98495582500",
+            "time_unit": "ps"
+        },
+        {
+            "cases": [
+                "./53390_UVM/MON_CTRL_OC_ENABLE_test.log",
+                "./53390_UVM/REF_CLK_38M_to_48M.log",
+                "./53390_UVM/Register_sw_reset_test.log",
+                "./53390_UVM/Register_swd_bit_bash_test.log",
+                "./53390_UVM/SIGCON_READ_LT1_test.log",
+                "./53390_UVM/TEST_Top_Timer_Digital.log"
+            ],
+            "count": 6,
+            "disable_DF": true,
+            "disable_DF_reason": "No need to do DF for unknown buckets",
+            "disable_RCA": true,
+            "disable_RCA_reason": "No need to do RCA for unknown buckets",
+            "hint_case": "./53390_UVM/MON_CTRL_OC_ENABLE_test.log",
+            "id": 5,
+            "status": "UNKNOWN"
+        }
+    ],
+    "summary": {
+        "binning_rule": "/nfs/wrk.zaa/regression_binning/rda_intro_binning_demo_v012623.tar_1/binning_training/rca.work/binning/rule.json",
+        "binning_type": "single_error",
+        "file_type": "RDA report file",
+        "need_load": [
+            "binning_type",
+            "binning_rule"
+        ],
+        "version": "1.0"
+    }
+}

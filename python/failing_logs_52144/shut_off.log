@@ -1,0 +1,1644 @@
++++ calling  ./simv_52144_shut_off +UVM_VERBOSITY=UVM_MEDIUM +bus_conflict_off +warn=noFCICIO -ucli -assert nopostproc +UVM_LOG_RECORD -verdi_opts '-ssr Verdi.ses' +uvm_set_type_override=top_default_seq,shut_off_seq -i run.tcl -vcs_assert off +UVM_VERDI_TRACE="UVM_AWARE+RAL+TLM+MSG+HIER+PRINT" +UVM_LOG_RECORD +UVM_TESTNAME=top_test +UVM_TR_RECORD +vcs+lic+wait -reportstats -cm line+cond+fsm+tgl+branch+assert -cm_dir DIGITAL/results/vcs/shut_off.vdb -lca   +fsdbfile+shut_off.fsdb
+ ++ in dir   /nfs/wrk.zaa/sim/52144/m52144a/shut_off
+ ++ on host  ex04.elmos.de
+ ++ user     zaa
+ ++ start    2025-05-06T18:49:41
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Warning-[LCA_FEATURES_ENABLED] Usage warning
+  LCA features enabled by '-lca' argument on the command line.  For more 
+  information regarding list of LCA features please refer to Chapter "LCA 
+  features" in the VCS Release Notes
+
+Chronologic VCS simulator copyright 1991-2021
+Contains Synopsys proprietary information.
+Compiler version S-2021.09-1_Full64; Runtime version S-2021.09-1_Full64;  May  6 20:49 2025
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+
+ VCS Coverage Metrics Release S-2021.09-1_Full64 Copyright (c) 1991-2021 by Synopsys Inc.
+ucli% source dump.tcl
+*Verdi* Loading libsscore_vcsmx202109.so
+FSDB Dumper for VCS-MX, Release Verdi_U-2023.03-1, Linux x86_64/64bit, 04/17/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'shut_off.fsdb'
+*Verdi* : fsdbDumpon("glitch") - All FSDB files at 0 ps.
+*Verdi* : Begin traversing the scope (top_tb), layer (0).
+*Verdi* : Enable +all dumping.
+*Verdi* : End of traversing.
+*Verdi* : Flush all FSDB Files at 0 ps.
+1
+ucli% if { [info exists ::env(GATE_LEVEL)] } {
+	source tcheck.tcl
+}
+ucli% run
+*Verdi* Enable Verdi Message Catcher.
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/verdi/uvm_custom_install_verdi_recorder.sv(283) @ 0: reporter [VERDI_TR_AUTO] +UVM_TR_RECORD implicitly enables recording_details to UVM_FULL for all components. For explicit control use +UVM_DISABLE_AUTO_COMPONENT and set recording_detail on components accordingly
+UVM_INFO @ 0: reporter [RNTST] Running test top_test...
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VRR applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VREF applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VBG applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+UVM_INFO @ 0: reporter [UVM_CMDLINE_PROC] Applying type override from the command line: +uvm_set_type_override=top_default_seq,shut_off_seq
+UVM_INFO   @       0.0000000us:  [UVM_VERDI_DPI]         uvm_verdi DPI routines are compiled off. Recompile without +define+UVM_NO_VERDI_DPI 
+UVM_INFO   @       0.0000000us:  [shut_off_seq]          shut_off_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+*Verdi* Enable Verdi Recorder.
+Info: Verdi UVM 1.2 Hooks File 06/17/2014 
+UVM_INFO   @       0.0010000us:  [sim:task]              shut_off 
+UVM_INFO   @    2120.0010000us:  [sim:description]       '''Testcases for shutting down transceiver e.g. overtemperature, overvoltage and undervoltage''' 
+UVM_INFO   @    2120.0010000us:  [dsi_enable_ignore_new_commands_seq] dsi_enable_ignore_new_commands_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2120.0020000us:  [sim:description:1]     *ignore new DSI commands if DSI_ENABLE.TRE is disabled 
+UVM_INFO   @    2120.0020000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2177.6830000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 331 us
+  0 | Symbols:   8 | SID_16Bit_CRC | Start:    44 -    91  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    2183.3380000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 331  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    2206.4576300us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @    2687.2830000us:  [sim:measure]           'SPI_IRQ_STAT' status = PASS 
+UVM_INFO   @    2695.9630000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @    2790.3380000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 331  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    2815.4576060us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_ERROR  @    3625.2830000us:  [registers]             COM_ERR is not set correctly. Got 1 but expected 0 (regmodel.DSI[0].DSI3_channel_registers.DSI_IRQ_STAT.COM_ERR)  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/common/register_util.svh(38) 
+UVM_INFO   @    3629.1230000us:  [sim:measure]           'DSI_IRQ_STAT' status = PASS 
+UVM_INFO   @    3637.8030000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @    3693.4580000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 331  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    3718.5687420us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @    4543.6580000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 1 packets
+  0 |   |   | TE|   |   |   |   8 symbols:  0xac6c 0x71f9
+ channel 0b01 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x2498 0x388c  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @    4543.6580000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @    4543.6580000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+ channel 0b01 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x6c4b 0x3328  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @    4664.7780000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 331  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    4687.9020540us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @    5168.7230000us:  [sim:measure]           'SPI_IRQ_STAT' status = PASS 
+UVM_INFO   @    5177.4030000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @    5271.7780000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 331  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    5294.9020650us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @    6106.7230000us:  [sim:measure]           'DSI_IRQ_STAT' status = PASS 
+UVM_ERROR  @    6110.5630000us:  [registers]             COM_ERR is not set correctly. Got 1 but expected 0 (regmodel.DSI[1].DSI3_channel_registers.DSI_IRQ_STAT.COM_ERR)  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/common/register_util.svh(38) 
+UVM_INFO   @    6119.2430000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @    6174.8980000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 331  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    6200.0131660us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @    7025.0980000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x97ed 0xe885
+ channel 0b01 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x63a3 0x5f30  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @    7025.0980000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x7db7 0x2df9
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @    7146.2180000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 331  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    7169.3464780us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @    7650.1630000us:  [sim:measure]           'SPI_IRQ_STAT' status = PASS 
+UVM_INFO   @    7658.8430000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_ERROR  @    8588.1630000us:  [registers]             COM_ERR is not set correctly. Got 1 but expected 0 (regmodel.DSI[0].DSI3_channel_registers.DSI_IRQ_STAT.COM_ERR)  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/common/register_util.svh(38) 
+UVM_ERROR  @    8592.0030000us:  [registers]             COM_ERR is not set correctly. Got 1 but expected 0 (regmodel.DSI[1].DSI3_channel_registers.DSI_IRQ_STAT.COM_ERR)  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/common/register_util.svh(38) 
+UVM_INFO   @    8600.6830000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @    8656.3380000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 331  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    8681.4575900us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @    9506.5380000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x32fc 0xf3d0
+ channel 0b01 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x8bcf 0x6f44  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @    9506.5380000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @    9622.0030000us:  [dsi_enable_abort_crm_seq] dsi_enable_abort_crm_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   10240.2840000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   11264.3240000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   12490.2840000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   13514.3240000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   14122.0040000us:  [dsi_enable_abort_pdcm_seq] dsi_enable_abort_pdcm_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   14122.0050000us:  [sim:description:1]     *abort PDCM using DSI_ENABLE register 
+UVM_INFO   @   14122.0050000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   14179.6860000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:  16 | SID_0Bit | Start:    20 -    25  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   14182.4610000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 300  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   14182.4610000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 300  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   14205.6242670us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   14207.6242580us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   14505.6242660us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   14505.6242660us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 300.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   14507.6242820us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   14507.6242820us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 300.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   14611.2460000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   14807.6243060us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   14807.6243060us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 300.000000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   15125.5410000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |  16 symbols:  0xf0b8 0x3028 0xa1a7 0x40bf
+ channel 0b01 [  ] 1 packets
+  0 |   |   |   |   |   |   |  16 symbols:  0xf0b8 0x3028 0xa1a7 0x40bf  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   15125.5410000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   15125.5410000us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   15189.9410000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000 0x0000 0x0000
+ channel 0b01 [  ] 1 packets
+  0 |   |   | TE|   |   |   |  16 symbols:  0xe0a3 0xebea 0xe4c3 0x2b7d  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   15189.9410000us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   15254.3410000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000 0x0000 0x0000
+ channel 0b01 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |  16 symbols:  0xb122 0xae96 0xb83b 0x65c5  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   15254.3410000us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   15263.1260000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   15315.9010000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 300  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   15339.0131730us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   15630.3010000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 1 packets
+  0 |   |   | TE|   |   |   |  16 symbols:  0x07ea 0xa60e 0x326d 0xeb2c
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000 0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   15630.3010000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   15733.1810000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 300  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   15733.1810000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 300  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   15756.3464860us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   15758.3465020us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   16056.3465100us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   16056.3465100us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 300.001000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   16058.3465250us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   16058.3465250us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 300.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   16161.9660000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   16356.3465330us:  [sim:measure]           't__DSI,BIT,8__' = '8.001000' condition = 'at channel 0' 
+UVM_INFO   @   16356.3465330us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 299.999000 us - 0 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   16676.2610000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |  16 symbols:  0x7e6b 0xcc17 0x0636 0xc07f
+ channel 0b01 [  ] 1 packets
+  0 |   |   |   |   |   |   |  16 symbols:  0x7e6b 0xcc17 0x0636 0xc07f  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   16676.2610000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   16676.2610000us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   16740.6610000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |  16 symbols:  0x9c3f 0xb37d 0xce67 0xef99
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000 0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   16740.6610000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   16805.0610000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |  16 symbols:  0x4492 0x1e32 0x8522 0xa63b
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000 0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   16805.0610000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   16813.8460000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   16866.6210000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 300  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   16891.7353860us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   17181.0210000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000 0x0000 0x0000
+ channel 0b01 [  ] 1 packets
+  0 |   |   |   |   |   |   |  16 symbols:  0xa8cd 0xfe01 0xe658 0x65e7  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   17181.0210000us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   17281.1260000us:  [dsi_enable_abort_multi_packet_pdcm_seq] dsi_enable_abort_multi_packet_pdcm_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   17281.1270000us:  [sim:description:1]     *abort multi packet PDCM (Denso scheme) using DSI_ENABLE register 
+UVM_INFO   @   17281.1270000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   17361.8480000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 7 packets, period = 1000 us
+  0 | Symbols:   8 | SID_8Bit | Start:    30 -    70
+  1 | Symbols:   8 | SID_8Bit | Start:   165 -   205
+  2 | Symbols:   8 | SID_8Bit | Start:   300 -   340
+  3 | Symbols:   8 | SID_8Bit | Start:   435 -   475
+  4 | Symbols:   8 | SID_8Bit | Start:   570 -   610
+  5 | Symbols:   8 | SID_8Bit | Start:   705 -   745
+  6 | Symbols:   8 | SID_8Bit | Start:   840 -   880  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   17368.4630000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 1000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   17368.4630000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 1000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   17391.6242670us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   17393.6242580us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   18391.6242750us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   18391.6242750us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 1000.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   18393.6242660us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   18393.6242660us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 1000.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   19182.2480000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   19458.9280000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   20503.9430000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 7 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x2dda 0x2c7b
+  1 |   |   |   |   |   |   |   8 symbols:  0xf0d6 0x6e21
+  2 |   |CRC|   |   |   |   |   8 symbols:  0x3a22 0x88b1
+  3 |   |   |   |   |   |   |   8 symbols:  0x7dc1 0x9bc0
+  4 |   |   |   |   |   |   |   8 symbols:  0x8de5 0xfb55
+  5 |   |   |   |   |   |   |   8 symbols:  0x748b 0x5c14
+  6 |   |CRC|   |   |   |   |   8 symbols:  0x05bd 0x17bd
+ channel 0b01 [  ] 7 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0xffce 0x2964
+  1 |   |CRC|   |   |   |   |   8 symbols:  0xee77 0xdaae
+  2 |   |   |   |   |   |   |   8 symbols:  0x6ee4 0x7501
+  3 |   |   |   |   |   |   |   8 symbols:  0xa3cf 0xba0d
+  4 |   |   |   |   |   |   |   8 symbols:  0xff5b 0x9398
+  5 |   |CRC|   |   |   |   |   8 symbols:  0x94fa 0x4769
+  6 |   |   |   |   |   |   |   8 symbols:  0x56c3 0xcd3d  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   20503.9430000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   20503.9430000us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 4 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   20599.0630000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   20694.1830000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   20800.9030000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 1000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   20800.9030000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 1000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   20824.0687140us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   20826.0687300us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   21824.0687220us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   21824.0687220us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 1000.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   21826.0687380us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   21826.0687380us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 1000.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   21925.6880000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   21948.3680000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   22068.4847220us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   22083.6457380us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   22206.9147220us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   22216.3327380us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   22337.4337220us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   22356.1487380us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   22467.3397220us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   22491.0787380us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   22600.7487380us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   22624.7377220us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   22740.9507220us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   22756.2787380us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   22993.3830000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 7 packets
+  0 |   |CRC| TE|   |   |   |   8 symbols:  0x3b6f 0x3d8f
+  1 |   |   |   |   |   |   |   8 symbols:  0x47bd 0xe0f1
+  2 |   |   |   |   |   |   |   8 symbols:  0xd5ac 0x9479
+  3 |   |CRC|   |   |   |   |   8 symbols:  0x327c 0x2f07
+  4 |   |   |   |   |   |   |   8 symbols:  0x484e 0xac0f
+  5 |   |   |   |   |   |   |   8 symbols:  0xa0bb 0x1206
+  6 |   |   |   |   |   |   |   8 symbols:  0x0528 0x87e8
+ channel 0b01 [  ] 7 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x5993 0x295d
+  1 |   |   |   |   |   |   |   8 symbols:  0xc9a5 0x5be5
+  2 |   |   |   |   |   |   |   8 symbols:  0xc7d6 0x6d95
+  3 |   |   |   |   |   |   |   8 symbols:  0xb555 0x9b76
+  4 |   |   |   |   |   |   |   8 symbols:  0x48ac 0xf434
+  5 |   |   | TE|   |   |   |   8 symbols:  0x8caa 0x5f12
+  6 |   |CRC|   |   |   |   |   8 symbols:  0x26ed 0x2e74  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   22993.3830000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   22993.3830000us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 3 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   22993.3830000us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 5 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   23088.5030000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   23183.6230000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   23290.3430000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 1000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   23290.3430000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 1000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   23313.5131590us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   23315.5131460us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   24313.5131670us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   24313.5131670us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 1000.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   24315.5131540us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   24315.5131540us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 1000.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   24694.1280000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   24862.8080000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   24942.6121670us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   24970.7211540us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   25078.9061670us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   25098.2131540us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   25236.4011670us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   25243.7871540us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   25907.8230000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 7 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x1ef6 0x50aa
+  1 |   |   |   |   |   |   |   8 symbols:  0x7b05 0x703d
+  2 |   |   |   |   |   |   |   8 symbols:  0xea67 0xceb4
+  3 |   |   |   |   |   |   |   8 symbols:  0xeb04 0x1ad2
+  4 |   |   |   |   |   |   |   8 symbols:  0x317f 0x625a
+  5 |   |CRC|   |   |   |   |   8 symbols:  0xd0da 0x5f29
+  6 |   |   |   |   |   |   |   8 symbols:  0x06d5 0x11e0
+ channel 0b01 [  ] 7 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x17ab 0xd0b1
+  1 |   |   |   |   |   |   |   8 symbols:  0x91d2 0x1478
+  2 |   |   |   |   |   |   |   8 symbols:  0x896b 0x9e4b
+  3 |   |   |   |   |   |   |   8 symbols:  0x9538 0xcec9
+  4 |   |   |   |   |   |   |   8 symbols:  0xc3cd 0xaa5b
+  5 |   |   |   |   |   |   |   8 symbols:  0xb730 0xf5ed
+  6 |   |   |   |   |   |   |   8 symbols:  0x4e48 0x0d73  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   25907.8230000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 2 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   25907.8230000us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 2 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   26002.9430000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   26098.0630000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   26204.7830000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 1000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   26204.7830000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 1000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   26227.9576340us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   26229.9575910us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   27230.5680000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   27413.2480000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   27457.5725990us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   27492.4716420us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   27598.0705990us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   27616.8526420us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   27733.7025990us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   27753.4686420us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   27860.4515990us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   27860.7036420us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   27998.1105990us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   28026.7786420us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   28145.3485990us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   28161.0566420us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   28458.2630000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 7 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0xc798 0x4245
+  1 |   |   |   |   |   |   |   8 symbols:  0x3f2d 0x809e
+  2 |   |CRC|   |   |   |   |   8 symbols:  0xdeee 0x4466
+  3 |   |CRC|   |   |   |   |   8 symbols:  0x9b4f 0x9dbd
+  4 |   |   |   |   |   |   |   8 symbols:  0xe673 0xea72
+  5 |   |   |   |   |   |   |   8 symbols:  0xcfd4 0x9868
+  6 |   |   |   |   |   |   |   8 symbols:  0xa961 0xd834
+ channel 0b01 [  ] 7 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x1f5a 0x5186
+  1 |   |   |   |   |   |   |   8 symbols:  0x8d10 0x466f
+  2 |   |   |   |   |   |   |   8 symbols:  0x740e 0xd6c5
+  3 |   |   |   |   |   |   |   8 symbols:  0x9aba 0xa008
+  4 |   |CRC|   |   |   |   |   8 symbols:  0x355b 0x2443
+  5 |   |   |   |   |   |   |   8 symbols:  0x53ed 0x30cf
+  6 |   |   |   |   |   |   |   8 symbols:  0x78a9 0xd17d  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   28458.2630000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   28458.2630000us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 2 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   28553.3830000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   28648.5030000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   28755.2230000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 1000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   28755.2230000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 1000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   28778.4020340us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   28780.4020500us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   29778.4020420us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   29778.4020420us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 1000.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   29780.4020580us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   29780.4020580us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 1000.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   30320.0080000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   30581.6880000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   30690.8920420us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   30699.4380580us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   31626.7030000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 7 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x1d71 0x8ee1
+  1 |   |   |   |   |   |   |   8 symbols:  0x6c96 0x9f21
+  2 |   |   |   |   |   |   |   8 symbols:  0x4621 0x0161
+  3 |   |   | TE|   |   |   |   8 symbols:  0x316d 0x172a
+  4 |   |CRC|   |   |   |   |   8 symbols:  0x4990 0x736b
+  5 |   |   |   |   |   |   |   8 symbols:  0xb56e 0x2f0a
+  6 |   |   |   |   |   |   |   8 symbols:  0x9bb6 0x57f6
+ channel 0b01 [  ] 7 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x3cf6 0x9d31
+  1 |   |   |   |   |   |   |   8 symbols:  0x80db 0xac50
+  2 |   |CRC|   |   |   |   |   8 symbols:  0x79e7 0x2be9
+  3 |   |CRC|   |   |   |   |   8 symbols:  0x0fe3 0x650c
+  4 |   |CRC|   |   |   |   |   8 symbols:  0xe6ff 0x19f7
+  5 |   |CRC|   |   |   |   |   8 symbols:  0x2e5d 0x00b2
+  6 |   |   |   |   |   |   |   8 symbols:  0x895a 0xc948  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   31626.7030000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 3 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   31626.7030000us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   31721.8230000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   31816.9430000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   31923.6630000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 1000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   31923.6630000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 1000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   31946.8464820us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   31948.8464980us:  [sim:measure]           't__DSI,BIT,8__' = '7.999000' condition = 'at channel 1' 
+UVM_INFO   @   32946.8464900us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   32946.8464900us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 1000.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   32948.8465060us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   32948.8465060us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 1000.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   33273.4480000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   33524.1280000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   33583.5444900us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   33595.4145060us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   33715.3685060us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   33744.5154900us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   33849.5064900us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   33874.1695060us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   34569.1430000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 7 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0xd4ff 0x1484
+  1 |   |   |   |   |   |   |   8 symbols:  0x3f5c 0x1c2a
+  2 |   |CRC|   |   |   |   |   8 symbols:  0x4749 0x1a93
+  3 |   |CRC|   |   |   |   |   8 symbols:  0x70b1 0xeada
+  4 |   |CRC|   |   |   |   |   8 symbols:  0x01e5 0x3e69
+  5 |   |   |   |   |   |   |   8 symbols:  0xcb4e 0x8079
+  6 |   |CRC|   |   |   |   |   8 symbols:  0x9cf3 0x67a9
+ channel 0b01 [  ] 7 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0xc182 0x4e18
+  1 |   |   |   |   |   |   |   8 symbols:  0xb88b 0x350a
+  2 |   |   |   |   |   |   |   8 symbols:  0x7d13 0xbad7
+  3 |   |CRC|   |   |   |   |   8 symbols:  0x5af0 0x2e18
+  4 |   |   |   |   |   |   |   8 symbols:  0x0837 0x08b2
+  5 |   |   |   |   |   |   |   8 symbols:  0x8b4a 0x3428
+  6 |   |CRC|   |   |   |   |   8 symbols:  0xb9b5 0x15c4  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   34569.1430000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 6 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   34569.1430000us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 1 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   34569.1430000us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 2 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   34664.2630000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   34759.3830000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   34866.1030000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 1000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   34866.1030000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 1000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   34889.2909220us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   34891.2909380us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   35889.2909300us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   35889.2909300us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 1000.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   35891.2909460us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   35891.2909460us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 1000.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   36210.8880000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   36338.5680000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   36399.5629460us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   36403.3889300us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   36524.4929300us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   36553.3219460us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   36677.8009460us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   36678.6169300us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   36795.7349300us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   36829.1629460us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   37383.5830000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 7 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x6e3e 0xdd08
+  1 |   |CRC|   |   |   |   |   8 symbols:  0x3cc8 0x01e3
+  2 |   |CRC|   |   |   |   |   8 symbols:  0x3b8e 0x1373
+  3 |   |   |   |   |   |   |   8 symbols:  0x864c 0x81ef
+  4 |   |CRC|   |   |   |   |   8 symbols:  0xa47a 0x85a8
+  5 |   |CRC|   |   |   |   |   8 symbols:  0xe217 0xc1c6
+  6 |   |   |   |   |   |   |   8 symbols:  0x463e 0x724a
+ channel 0b01 [  ] 7 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x3e09 0xe957
+  1 |   |   |   |   |   |   |   8 symbols:  0xd923 0xefde
+  2 |   |   |   |   |   |   |   8 symbols:  0xfe54 0x77ad
+  3 |   |CRC|   |   |   |   |   8 symbols:  0x11e5 0xc8a1
+  4 |   |   |   |   |   |   |   8 symbols:  0xeecf 0x4098
+  5 |   |   |   |   |   |   |   8 symbols:  0xe40b 0xcb09
+  6 |   |CRC|   |   |   |   |   8 symbols:  0x8996 0x0553  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   37383.5830000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 3 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   37383.5830000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 5 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   37383.5830000us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 1 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   37478.7030000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   37573.8230000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   37680.5430000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 1000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   37680.5430000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 1000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   37703.7354180us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   37705.7353830us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   38703.7353750us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   38703.7353750us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 1000.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   38705.7353700us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   38705.7353700us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 1000.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   38821.3280000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   38949.0080000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   38960.0803700us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   39088.9493750us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   39100.2133700us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   39201.9153700us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   39231.1923750us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   39357.1003700us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   39360.0273750us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   39478.9093700us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   39494.0033750us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   39601.8573750us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   39615.5813700us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   39994.0230000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 7 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0xd5a0 0xca68
+  1 |   |   |   |   |   |   |   8 symbols:  0x5b04 0x2752
+  2 |   |   |   |   |   |   |   8 symbols:  0xc267 0x6ad0
+  3 |   |   |   |   |   |   |   8 symbols:  0x2042 0x8d4d
+  4 |   |CRC|   |   |   |   |   8 symbols:  0x2b73 0x3338
+  5 |   |CRC|   |   |   |   |   8 symbols:  0xa181 0x11c4
+  6 |   |   |   |   |   |   |   8 symbols:  0x33ae 0x3ca1
+ channel 0b01 [  ] 7 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x22d8 0x66ef
+  1 |   |CRC|   |   |   |   |   8 symbols:  0x22aa 0x9108
+  2 |   |CRC|   |   |   |   |   8 symbols:  0x7c16 0x2a16
+  3 |   |   |   |   |   |   |   8 symbols:  0xe1df 0x730a
+  4 |   |   |   |   |   |   |   8 symbols:  0x025d 0xc803
+  5 |   |CRC|   |   |   |   |   8 symbols:  0x90ab 0xdb78
+  6 |   |CRC|   |   |   |   |   8 symbols:  0xf61c 0xc2a3  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   40089.1430000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   40184.2630000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   40290.9830000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 1000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   40290.9830000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 1000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   40314.1798660us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   40316.1798150us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   41314.1798070us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   41314.1798070us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 1000.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   41316.1798180us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   41316.1798180us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 1000.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   41983.7680000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   42245.4480000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   43290.4630000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 7 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x85eb 0x6464
+  1 |   |CRC|   |   |   |   |   8 symbols:  0x945e 0x49a5
+  2 |   |CRC|   |   |   |   |   8 symbols:  0x0e24 0x7115
+  3 |   |   |   |   |   |   |   8 symbols:  0xc10e 0xb95a
+  4 |   |   |   |   |   |   |   8 symbols:  0xd317 0x6eba
+  5 |   |   |   |   |   |   |   8 symbols:  0x431f 0x4681
+  6 |   |   | TE|   |   |   |   8 symbols:  0x87a2 0xe1b5
+ channel 0b01 [  ] 7 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x7be4 0x9970
+  1 |   |   |   |   |   |   |   8 symbols:  0x4be2 0x8a61
+  2 |   |   |   |   |   |   |   8 symbols:  0xe52f 0x6f01
+  3 |   |   |   |   |   |   |   8 symbols:  0xf183 0x3f70
+  4 |   |   |   |   |   |   |   8 symbols:  0xe950 0xe5ad
+  5 |   |CRC|   |   |   |   |   8 symbols:  0x2818 0x9a83
+  6 |   |   |   |   |   |   |   8 symbols:  0x5628 0x34d5  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   43290.4630000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 2 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   43290.4630000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 6 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   43290.4630000us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 1 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   43385.5830000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   43480.7030000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   43587.4230000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 1000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   43587.4230000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 1000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   43610.6242580us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   43612.6242740us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   44610.6242660us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   44610.6242660us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 1000.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   44612.6242820us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   44612.6242820us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 1000.000000 us - 1 pulses left  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   44874.2080000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   45155.8880000us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   45239.6432660us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   45254.1242820us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   45381.8842660us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   45397.2962820us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   45519.6902820us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   45542.4082660us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   46200.9030000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 7 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0xe305 0x218b
+  1 |   |CRC|   |   |   |   |   8 symbols:  0x5e58 0x9328
+  2 |   |   |   |   |   |   |   8 symbols:  0x7881 0xb59b
+  3 |   |   |   |   |   |   |   8 symbols:  0x4d67 0x3664
+  4 |   |   |   |   |   |   |   8 symbols:  0x288d 0x4dd4
+  5 |   |   |   |   |   |   |   8 symbols:  0x4d2c 0x2102
+  6 |   |   |   |   |   |   |   8 symbols:  0xb41c 0x49c0
+ channel 0b01 [  ] 7 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x7351 0xa405
+  1 |   |   |   |   |   |   |   8 symbols:  0xde96 0x8546
+  2 |   |CRC|   |   |   |   |   8 symbols:  0x17f1 0x3908
+  3 |   |CRC|   |   |   |   |   8 symbols:  0x496c 0x99e0
+  4 |   |   |   |   |   |   |   8 symbols:  0x5ff3 0xb203
+  5 |   |CRC|   |   |   |   |   8 symbols:  0xbb56 0x0fb9
+  6 |   |   |   |   |   |   |   8 symbols:  0x455e 0x96bc  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   46200.9030000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 5 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   46200.9030000us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 2 because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   46296.0230000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   46391.1430000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+ channel 0b01 [  ] 0 packets
+  0 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  1 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  2 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  3 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  4 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  5 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000
+  6 |   |   |   |   |   |   |   0 symbols:  0x0000 0x0000  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_INFO   @   46491.2480000us:  [dsi_enable_abort_discovery_mode_seq] dsi_enable_abort_discovery_mode_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   46491.2490000us:  [sim:description:1]     *abort Discovery Mode using DSI_ENABLE register 
+UVM_INFO   @   46491.2490000us:  [sim:description:2]     **abort Discovery Mode after slave number 2 using DSI_ENABLE register 
+UVM_INFO   @   46602.8093970us:  [sim:measure]           't__Disc_dly_valid,8__' = '73.678000' condition = 'at channel 0' 
+UVM_INFO   @   46604.2133740us:  [sim:measure]           't__Disc_dly_valid,8__' = '72.231000' condition = 'at channel 1' 
+UVM_INFO   @   46642.1365330us:  [sim:measure]           't__Disc_per,8__' = '125.111000' condition = 'at channel 0' 
+UVM_INFO   @   46644.1364780us:  [sim:measure]           't__Disc_per,8__' = '125.111000' condition = 'at channel 1' 
+UVM_INFO   @   46730.3424780us:  [sim:measure]           't__Disc_dly_valid,8__' = '74.353000' condition = 'at channel 1' 
+UVM_INFO   @   46730.4555330us:  [sim:measure]           't__Disc_dly_valid,8__' = '76.743000' condition = 'at channel 0' 
+UVM_INFO   @   46767.1920820us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   46769.1920590us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   46809.7053740us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   46918.3853740us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   46922.2253740us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   46926.0653740us:  [sim:measure]           'DSI_IRQ_STAT' status = PASS 
+UVM_INFO   @   46929.9053740us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   46933.7453740us:  [sim:measure]           'DSI_IRQ_STAT' status = PASS 
+UVM_INFO   @   47433.7453740us:  [spec_CRM_command_seq]  spec_CRM_command_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   47433.7463740us:  [sim:description:2]     **CRM Command Sequence(Equal commands) 
+UVM_INFO   @   48560.6263740us:  [sim:description:2]     **abort Discovery Mode after slave number 7 using DSI_ENABLE register 
+UVM_INFO   @   48670.8703030us:  [sim:measure]           't__Disc_dly_valid,8__' = '72.304000' condition = 'at channel 0' 
+UVM_INFO   @   48678.3172580us:  [sim:measure]           't__Disc_dly_valid,8__' = '78.579000' condition = 'at channel 1' 
+UVM_INFO   @   48711.1920820us:  [sim:measure]           't__Disc_per,8__' = '124.778000' condition = 'at channel 0' 
+UVM_INFO   @   48713.1920590us:  [sim:measure]           't__Disc_per,8__' = '124.778000' condition = 'at channel 1' 
+UVM_INFO   @   48790.9260820us:  [sim:measure]           't__Disc_dly_valid,8__' = '68.272000' condition = 'at channel 0' 
+UVM_INFO   @   48802.0360590us:  [sim:measure]           't__Disc_dly_valid,8__' = '77.704000' condition = 'at channel 1' 
+UVM_INFO   @   48836.2476300us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   48838.2476410us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   48920.0266300us:  [sim:measure]           't__Disc_dly_valid,8__' = '72.938000' condition = 'at channel 0' 
+UVM_INFO   @   48922.3216410us:  [sim:measure]           't__Disc_dly_valid,8__' = '72.037000' condition = 'at channel 1' 
+UVM_INFO   @   48961.3031780us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   48963.3031940us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   49043.8831780us:  [sim:measure]           't__Disc_dly_valid,8__' = '70.681000' condition = 'at channel 0' 
+UVM_INFO   @   49049.2021940us:  [sim:measure]           't__Disc_dly_valid,8__' = '74.391000' condition = 'at channel 1' 
+UVM_INFO   @   49086.3587260us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   49088.3587420us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   49170.5087260us:  [sim:measure]           't__Disc_dly_valid,8__' = '72.435000' condition = 'at channel 0' 
+UVM_INFO   @   49175.7027420us:  [sim:measure]           't__Disc_dly_valid,8__' = '74.824000' condition = 'at channel 1' 
+UVM_INFO   @   49211.4142740us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   49213.4142900us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   49292.3982740us:  [sim:measure]           't__Disc_dly_valid,8__' = '68.441000' condition = 'at channel 0' 
+UVM_INFO   @   49297.2232900us:  [sim:measure]           't__Disc_dly_valid,8__' = '72.531000' condition = 'at channel 1' 
+UVM_INFO   @   49336.4698220us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   49338.4698380us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   49415.4258220us:  [sim:measure]           't__Disc_dly_valid,8__' = '67.080000' condition = 'at channel 0' 
+UVM_INFO   @   49425.3248380us:  [sim:measure]           't__Disc_dly_valid,8__' = '75.324000' condition = 'at channel 1' 
+UVM_INFO   @   49461.5253700us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   49463.5253860us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   49504.0942580us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   49612.7742580us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   49616.6142580us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   49620.4542580us:  [sim:measure]           'DSI_IRQ_STAT' status = PASS 
+UVM_INFO   @   49624.2942580us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   49628.1342580us:  [sim:measure]           'DSI_IRQ_STAT' status = PASS 
+UVM_INFO   @   50128.1342580us:  [spec_CRM_command_seq]  spec_CRM_command_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   50128.1352580us:  [sim:description:2]     **CRM Command Sequence(Equal commands) 
+UVM_INFO   @   51255.0152580us:  [sim:description:2]     **abort Discovery Mode after slave number 12 using DSI_ENABLE register 
+UVM_INFO   @   51364.6931580us:  [sim:measure]           't__Disc_dly_valid,8__' = '71.715000' condition = 'at channel 0' 
+UVM_INFO   @   51370.9811740us:  [sim:measure]           't__Disc_dly_valid,8__' = '76.877000' condition = 'at channel 1' 
+UVM_INFO   @   51405.5253700us:  [sim:measure]           't__Disc_per,8__' = '124.722000' condition = 'at channel 0' 
+UVM_INFO   @   51407.5253860us:  [sim:measure]           't__Disc_per,8__' = '124.722000' condition = 'at channel 1' 
+UVM_INFO   @   51484.5373700us:  [sim:measure]           't__Disc_dly_valid,8__' = '68.194000' condition = 'at channel 0' 
+UVM_INFO   @   51497.2033860us:  [sim:measure]           't__Disc_dly_valid,8__' = '77.365000' condition = 'at channel 1' 
+UVM_INFO   @   51530.5809180us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   51532.5809340us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   51616.0889180us:  [sim:measure]           't__Disc_dly_valid,8__' = '73.724000' condition = 'at channel 0' 
+UVM_INFO   @   51621.9669340us:  [sim:measure]           't__Disc_dly_valid,8__' = '78.430000' condition = 'at channel 1' 
+UVM_INFO   @   51655.6364830us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   51657.6364820us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   51738.5254830us:  [sim:measure]           't__Disc_dly_valid,8__' = '71.450000' condition = 'at channel 0' 
+UVM_INFO   @   51742.1274820us:  [sim:measure]           't__Disc_dly_valid,8__' = '71.695000' condition = 'at channel 1' 
+UVM_INFO   @   51780.6920650us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   51782.6920300us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   51869.7680650us:  [sim:measure]           't__Disc_dly_valid,8__' = '78.189000' condition = 'at channel 0' 
+UVM_INFO   @   51870.3810300us:  [sim:measure]           't__Disc_dly_valid,8__' = '75.767000' condition = 'at channel 1' 
+UVM_INFO   @   51905.7476340us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   51907.7475910us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   51993.0915910us:  [sim:measure]           't__Disc_dly_valid,8__' = '74.181000' condition = 'at channel 1' 
+UVM_INFO   @   51993.5316340us:  [sim:measure]           't__Disc_dly_valid,8__' = '77.058000' condition = 'at channel 0' 
+UVM_INFO   @   52030.8031820us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   52032.8031730us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   52114.7691730us:  [sim:measure]           't__Disc_dly_valid,8__' = '69.400000' condition = 'at channel 1' 
+UVM_INFO   @   52122.8691820us:  [sim:measure]           't__Disc_dly_valid,8__' = '79.293000' condition = 'at channel 0' 
+UVM_INFO   @   52155.8587300us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   52157.8587460us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   52240.4897460us:  [sim:measure]           't__Disc_dly_valid,8__' = '70.594000' condition = 'at channel 1' 
+UVM_INFO   @   52244.1087300us:  [sim:measure]           't__Disc_dly_valid,8__' = '76.558000' condition = 'at channel 0' 
+UVM_INFO   @   52280.9142780us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   52282.9142940us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   52365.1542940us:  [sim:measure]           't__Disc_dly_valid,8__' = '70.732000' condition = 'at channel 1' 
+UVM_INFO   @   52368.9122780us:  [sim:measure]           't__Disc_dly_valid,8__' = '75.846000' condition = 'at channel 0' 
+UVM_INFO   @   52405.9698260us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   52407.9698420us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   52488.3168260us:  [sim:measure]           't__Disc_dly_valid,8__' = '71.598000' condition = 'at channel 0' 
+UVM_INFO   @   52490.4078420us:  [sim:measure]           't__Disc_dly_valid,8__' = '69.550000' condition = 'at channel 1' 
+UVM_INFO   @   52531.0253740us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   52533.0253900us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   52617.4703740us:  [sim:measure]           't__Disc_dly_valid,8__' = '74.776000' condition = 'at channel 0' 
+UVM_INFO   @   52619.1273900us:  [sim:measure]           't__Disc_dly_valid,8__' = '74.019000' condition = 'at channel 1' 
+UVM_INFO   @   52656.0809230us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   52658.0809380us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   52746.5259230us:  [sim:measure]           't__Disc_dly_valid,8__' = '78.684000' condition = 'at channel 0' 
+UVM_INFO   @   52746.6969380us:  [sim:measure]           't__Disc_dly_valid,8__' = '76.096000' condition = 'at channel 1' 
+UVM_INFO   @   52781.1365050us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   52783.1364860us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   52823.4831740us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   52932.1631740us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   52936.0031740us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   52939.8431740us:  [sim:measure]           'DSI_IRQ_STAT' status = PASS 
+UVM_INFO   @   52943.6831740us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   52947.5231740us:  [sim:measure]           'DSI_IRQ_STAT' status = PASS 
+UVM_INFO   @   53447.5231740us:  [spec_CRM_command_seq]  spec_CRM_command_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   53447.5241740us:  [sim:description:2]     **CRM Command Sequence(Equal commands) 
+UVM_INFO   @   54574.4041740us:  [sim:description:2]     **abort Discovery Mode after slave number 9 using DSI_ENABLE register 
+UVM_INFO   @   54683.4580340us:  [sim:measure]           't__Disc_dly_valid,8__' = '71.022000' condition = 'at channel 0' 
+UVM_INFO   @   54691.5340500us:  [sim:measure]           't__Disc_dly_valid,8__' = '78.363000' condition = 'at channel 1' 
+UVM_INFO   @   54725.1365050us:  [sim:measure]           't__Disc_per,8__' = '124.944000' condition = 'at channel 0' 
+UVM_INFO   @   54727.1364860us:  [sim:measure]           't__Disc_per,8__' = '124.945000' condition = 'at channel 1' 
+UVM_INFO   @   54804.5294860us:  [sim:measure]           't__Disc_dly_valid,8__' = '66.712000' condition = 'at channel 1' 
+UVM_INFO   @   54812.7505050us:  [sim:measure]           't__Disc_dly_valid,8__' = '76.360000' condition = 'at channel 0' 
+UVM_INFO   @   54850.1920870us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   54852.1920340us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   54931.3950870us:  [sim:measure]           't__Disc_dly_valid,8__' = '68.407000' condition = 'at channel 0' 
+UVM_INFO   @   54936.7250340us:  [sim:measure]           't__Disc_dly_valid,8__' = '71.898000' condition = 'at channel 1' 
+UVM_INFO   @   54975.2476380us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   54977.2476130us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   55056.3486380us:  [sim:measure]           't__Disc_dly_valid,8__' = '68.834000' condition = 'at channel 0' 
+UVM_INFO   @   55057.3256130us:  [sim:measure]           't__Disc_dly_valid,8__' = '68.156000' condition = 'at channel 1' 
+UVM_INFO   @   55100.3031860us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   55102.3031950us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   55185.6791860us:  [sim:measure]           't__Disc_dly_valid,8__' = '73.845000' condition = 'at channel 0' 
+UVM_INFO   @   55194.6681950us:  [sim:measure]           't__Disc_dly_valid,8__' = '79.408000' condition = 'at channel 1' 
+UVM_INFO   @   55225.3587340us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   55227.3587500us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   55313.2857500us:  [sim:measure]           't__Disc_dly_valid,8__' = '73.384000' condition = 'at channel 1' 
+UVM_INFO   @   55314.9017340us:  [sim:measure]           't__Disc_dly_valid,8__' = '77.207000' condition = 'at channel 0' 
+UVM_INFO   @   55350.4142820us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   55352.4142980us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   55433.1082820us:  [sim:measure]           't__Disc_dly_valid,8__' = '71.899000' condition = 'at channel 0' 
+UVM_INFO   @   55441.9232980us:  [sim:measure]           't__Disc_dly_valid,8__' = '76.529000' condition = 'at channel 1' 
+UVM_INFO   @   55475.4698300us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   55477.4698460us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   55557.9588460us:  [sim:measure]           't__Disc_dly_valid,8__' = '68.912000' condition = 'at channel 1' 
+UVM_INFO   @   55561.2408300us:  [sim:measure]           't__Disc_dly_valid,8__' = '74.999000' condition = 'at channel 0' 
+UVM_INFO   @   55600.5253780us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   55602.5253940us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   55683.2313780us:  [sim:measure]           't__Disc_dly_valid,8__' = '70.876000' condition = 'at channel 0' 
+UVM_INFO   @   55683.4613940us:  [sim:measure]           't__Disc_dly_valid,8__' = '68.876000' condition = 'at channel 1' 
+UVM_INFO   @   55725.5809260us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   55727.5809420us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   55767.8720500us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   55876.5520500us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   55880.3920500us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   55884.2320500us:  [sim:measure]           'DSI_IRQ_STAT' status = PASS 
+UVM_INFO   @   55888.0720500us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   55891.9120500us:  [sim:measure]           'DSI_IRQ_STAT' status = PASS 
+UVM_INFO   @   56391.9120500us:  [spec_CRM_command_seq]  spec_CRM_command_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   56391.9130500us:  [sim:description:2]     **CRM Command Sequence(Equal commands) 
+UVM_INFO   @   57518.7930500us:  [sim:description:2]     **abort Discovery Mode after slave number 13 using DSI_ENABLE register 
+UVM_INFO   @   57627.8449340us:  [sim:measure]           't__Disc_dly_valid,8__' = '71.480000' condition = 'at channel 0' 
+UVM_INFO   @   57635.3659500us:  [sim:measure]           't__Disc_dly_valid,8__' = '76.771000' condition = 'at channel 1' 
+UVM_INFO   @   57669.5809260us:  [sim:measure]           't__Disc_per,8__' = '125.000000' condition = 'at channel 0' 
+UVM_INFO   @   57671.5809420us:  [sim:measure]           't__Disc_per,8__' = '125.000000' condition = 'at channel 1' 
+UVM_INFO   @   57754.3859260us:  [sim:measure]           't__Disc_dly_valid,8__' = '71.894000' condition = 'at channel 0' 
+UVM_INFO   @   57755.5069420us:  [sim:measure]           't__Disc_dly_valid,8__' = '73.200000' condition = 'at channel 1' 
+UVM_INFO   @   57794.6364740us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   57796.6364900us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   57882.0624740us:  [sim:measure]           't__Disc_dly_valid,8__' = '75.320000' condition = 'at channel 0' 
+UVM_INFO   @   57886.4304900us:  [sim:measure]           't__Disc_dly_valid,8__' = '76.882000' condition = 'at channel 1' 
+UVM_INFO   @   57919.6920370us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   57921.6920380us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   57999.4940370us:  [sim:measure]           't__Disc_dly_valid,8__' = '68.064000' condition = 'at channel 0' 
+UVM_INFO   @   58013.2480380us:  [sim:measure]           't__Disc_dly_valid,8__' = '78.622000' condition = 'at channel 1' 
+UVM_INFO   @   58044.7476190us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   58046.7475860us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   58125.7515860us:  [sim:measure]           't__Disc_dly_valid,8__' = '67.404000' condition = 'at channel 1' 
+UVM_INFO   @   58126.3916190us:  [sim:measure]           't__Disc_dly_valid,8__' = '69.676000' condition = 'at channel 0' 
+UVM_INFO   @   58169.8031900us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   58171.8031450us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   58251.6501900us:  [sim:measure]           't__Disc_dly_valid,8__' = '70.270000' condition = 'at channel 0' 
+UVM_INFO   @   58253.9891450us:  [sim:measure]           't__Disc_dly_valid,8__' = '70.931000' condition = 'at channel 1' 
+UVM_INFO   @   58294.8587380us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   58296.8587270us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   58379.3847270us:  [sim:measure]           't__Disc_dly_valid,8__' = '71.018000' condition = 'at channel 1' 
+UVM_INFO   @   58386.3337380us:  [sim:measure]           't__Disc_dly_valid,8__' = '78.541000' condition = 'at channel 0' 
+UVM_INFO   @   58419.9142860us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   58421.9143020us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   58504.6183020us:  [sim:measure]           't__Disc_dly_valid,8__' = '71.288000' condition = 'at channel 1' 
+UVM_INFO   @   58507.3122860us:  [sim:measure]           't__Disc_dly_valid,8__' = '74.625000' condition = 'at channel 0' 
+UVM_INFO   @   58544.9698340us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   58546.9698500us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   58635.7128340us:  [sim:measure]           't__Disc_dly_valid,8__' = '78.177000' condition = 'at channel 0' 
+UVM_INFO   @   58637.1848500us:  [sim:measure]           't__Disc_dly_valid,8__' = '78.431000' condition = 'at channel 1' 
+UVM_INFO   @   58670.0253820us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   58672.0253980us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   58754.3413980us:  [sim:measure]           't__Disc_dly_valid,8__' = '70.187000' condition = 'at channel 1' 
+UVM_INFO   @   58755.7173820us:  [sim:measure]           't__Disc_dly_valid,8__' = '73.517000' condition = 'at channel 0' 
+UVM_INFO   @   58795.0809300us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   58797.0809460us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   58885.7859300us:  [sim:measure]           't__Disc_dly_valid,8__' = '78.714000' condition = 'at channel 0' 
+UVM_INFO   @   58888.1039460us:  [sim:measure]           't__Disc_dly_valid,8__' = '78.779000' condition = 'at channel 1' 
+UVM_INFO   @   58920.1364780us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   58922.1364940us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   59004.2494780us:  [sim:measure]           't__Disc_dly_valid,8__' = '73.203000' condition = 'at channel 0' 
+UVM_INFO   @   59010.8644940us:  [sim:measure]           't__Disc_dly_valid,8__' = '76.368000' condition = 'at channel 1' 
+UVM_INFO   @   59045.1920590us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   59047.1920420us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   59130.6080590us:  [sim:measure]           't__Disc_dly_valid,8__' = '74.000000' condition = 'at channel 0' 
+UVM_INFO   @   59135.9230420us:  [sim:measure]           't__Disc_dly_valid,8__' = '76.326000' condition = 'at channel 1' 
+UVM_INFO   @   59170.2476410us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   59172.2475900us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   59212.2609500us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   59320.9409500us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   59324.7809500us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   59328.6209500us:  [sim:measure]           'DSI_IRQ_STAT' status = PASS 
+UVM_INFO   @   59332.4609500us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   59336.3009500us:  [sim:measure]           'DSI_IRQ_STAT' status = PASS 
+UVM_INFO   @   59836.3009500us:  [spec_CRM_command_seq]  spec_CRM_command_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   59836.3019500us:  [sim:description:2]     **CRM Command Sequence(Equal commands) 
+UVM_INFO   @   60963.1819500us:  [sim:description:2]     **abort Discovery Mode after slave number 10 using DSI_ENABLE register 
+UVM_INFO   @   61071.6458430us:  [sim:measure]           't__Disc_dly_valid,8__' = '69.788000' condition = 'at channel 0' 
+UVM_INFO   @   61076.7058180us:  [sim:measure]           't__Disc_dly_valid,8__' = '73.745000' condition = 'at channel 1' 
+UVM_INFO   @   61113.2476380us:  [sim:measure]           't__Disc_per,8__' = '124.278000' condition = 'at channel 0' 
+UVM_INFO   @   61115.2476130us:  [sim:measure]           't__Disc_per,8__' = '124.278000' condition = 'at channel 1' 
+UVM_INFO   @   61204.1106380us:  [sim:measure]           't__Disc_dly_valid,8__' = '78.734000' condition = 'at channel 0' 
+UVM_INFO   @   61205.9756130us:  [sim:measure]           't__Disc_dly_valid,8__' = '77.886000' condition = 'at channel 1' 
+UVM_INFO   @   61238.3031860us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   61240.3031950us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   61324.8821860us:  [sim:measure]           't__Disc_dly_valid,8__' = '74.450000' condition = 'at channel 0' 
+UVM_INFO   @   61329.4581950us:  [sim:measure]           't__Disc_dly_valid,8__' = '78.153000' condition = 'at channel 1' 
+UVM_INFO   @   61363.3587340us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   61365.3587500us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   61447.4697500us:  [sim:measure]           't__Disc_dly_valid,8__' = '69.844000' condition = 'at channel 1' 
+UVM_INFO   @   61451.7567340us:  [sim:measure]           't__Disc_dly_valid,8__' = '76.430000' condition = 'at channel 0' 
+UVM_INFO   @   61488.4142820us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   61490.4142980us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   61573.4892980us:  [sim:measure]           't__Disc_dly_valid,8__' = '70.762000' condition = 'at channel 1' 
+UVM_INFO   @   61577.3742820us:  [sim:measure]           't__Disc_dly_valid,8__' = '76.095000' condition = 'at channel 0' 
+UVM_INFO   @   61613.4698300us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   61615.4698460us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   61700.1168300us:  [sim:measure]           't__Disc_dly_valid,8__' = '73.874000' condition = 'at channel 0' 
+UVM_INFO   @   61703.3018460us:  [sim:measure]           't__Disc_dly_valid,8__' = '76.646000' condition = 'at channel 1' 
+UVM_INFO   @   61738.5253780us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   61740.5253940us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   61822.1033780us:  [sim:measure]           't__Disc_dly_valid,8__' = '72.714000' condition = 'at channel 0' 
+UVM_INFO   @   61822.5913940us:  [sim:measure]           't__Disc_dly_valid,8__' = '69.155000' condition = 'at channel 1' 
+UVM_INFO   @   61863.5809260us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   61865.5809420us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   61945.1779260us:  [sim:measure]           't__Disc_dly_valid,8__' = '70.641000' condition = 'at channel 0' 
+UVM_INFO   @   61953.9629420us:  [sim:measure]           't__Disc_dly_valid,8__' = '75.609000' condition = 'at channel 1' 
+UVM_INFO   @   61988.6364740us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   61990.6364900us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   62076.4904900us:  [sim:measure]           't__Disc_dly_valid,8__' = '74.575000' condition = 'at channel 1' 
+UVM_INFO   @   62078.4514740us:  [sim:measure]           't__Disc_dly_valid,8__' = '78.238000' condition = 'at channel 0' 
+UVM_INFO   @   62113.6920370us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   62115.6920380us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   62196.3990370us:  [sim:measure]           't__Disc_dly_valid,8__' = '71.337000' condition = 'at channel 0' 
+UVM_INFO   @   62204.3510380us:  [sim:measure]           't__Disc_dly_valid,8__' = '75.771000' condition = 'at channel 1' 
+UVM_INFO   @   62238.7476190us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   62240.7475860us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   62281.6498180us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   62390.3298180us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   62394.1698180us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   62398.0098180us:  [sim:measure]           'DSI_IRQ_STAT' status = PASS 
+UVM_INFO   @   62401.8498180us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   62405.6898180us:  [sim:measure]           'DSI_IRQ_STAT' status = PASS 
+UVM_INFO   @   62905.6898180us:  [spec_CRM_command_seq]  spec_CRM_command_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   62905.6908180us:  [sim:description:2]     **CRM Command Sequence(Equal commands) 
+UVM_INFO   @   64032.5708180us:  [sim:description:2]     **abort Discovery Mode after slave number 15 using DSI_ENABLE register 
+UVM_INFO   @   64145.9997100us:  [sim:measure]           't__Disc_dly_valid,8__' = '74.409000' condition = 'at channel 1' 
+UVM_INFO   @   64148.8196940us:  [sim:measure]           't__Disc_dly_valid,8__' = '78.309000' condition = 'at channel 0' 
+UVM_INFO   @   64182.7476190us:  [sim:measure]           't__Disc_per,8__' = '124.389000' condition = 'at channel 0' 
+UVM_INFO   @   64184.7475860us:  [sim:measure]           't__Disc_per,8__' = '124.389000' condition = 'at channel 1' 
+UVM_INFO   @   64261.9196190us:  [sim:measure]           't__Disc_dly_valid,8__' = '68.400000' condition = 'at channel 0' 
+UVM_INFO   @   64271.5855860us:  [sim:measure]           't__Disc_dly_valid,8__' = '74.088000' condition = 'at channel 1' 
+UVM_INFO   @   64307.8031900us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   64309.8031450us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   64392.8391450us:  [sim:measure]           't__Disc_dly_valid,8__' = '71.666000' condition = 'at channel 1' 
+UVM_INFO   @   64392.8391900us:  [sim:measure]           't__Disc_dly_valid,8__' = '74.333000' condition = 'at channel 0' 
+UVM_INFO   @   64432.8587380us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   64434.8587270us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   64519.4027380us:  [sim:measure]           't__Disc_dly_valid,8__' = '74.829000' condition = 'at channel 0' 
+UVM_INFO   @   64523.3327270us:  [sim:measure]           't__Disc_dly_valid,8__' = '77.380000' condition = 'at channel 1' 
+UVM_INFO   @   64557.9142860us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   64559.9143020us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   64644.0933020us:  [sim:measure]           't__Disc_dly_valid,8__' = '72.993000' condition = 'at channel 1' 
+UVM_INFO   @   64647.1822860us:  [sim:measure]           't__Disc_dly_valid,8__' = '77.576000' condition = 'at channel 0' 
+UVM_INFO   @   64682.9698340us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   64684.9698500us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   64764.7398340us:  [sim:measure]           't__Disc_dly_valid,8__' = '69.618000' condition = 'at channel 0' 
+UVM_INFO   @   64768.9378500us:  [sim:measure]           't__Disc_dly_valid,8__' = '72.230000' condition = 'at channel 1' 
+UVM_INFO   @   64808.0253820us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   64810.0253980us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   64886.5833820us:  [sim:measure]           't__Disc_dly_valid,8__' = '67.004000' condition = 'at channel 0' 
+UVM_INFO   @   64891.4113980us:  [sim:measure]           't__Disc_dly_valid,8__' = '68.935000' condition = 'at channel 1' 
+UVM_INFO   @   64933.0809300us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   64935.0809460us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   65020.1709300us:  [sim:measure]           't__Disc_dly_valid,8__' = '75.858000' condition = 'at channel 0' 
+UVM_INFO   @   65025.2339460us:  [sim:measure]           't__Disc_dly_valid,8__' = '77.840000' condition = 'at channel 1' 
+UVM_INFO   @   65058.1364780us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   65060.1364940us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   65138.5114940us:  [sim:measure]           't__Disc_dly_valid,8__' = '67.119000' condition = 'at channel 1' 
+UVM_INFO   @   65147.0484780us:  [sim:measure]           't__Disc_dly_valid,8__' = '77.864000' condition = 'at channel 0' 
+UVM_INFO   @   65183.1920590us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   65185.1920420us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   65269.6980590us:  [sim:measure]           't__Disc_dly_valid,8__' = '75.044000' condition = 'at channel 0' 
+UVM_INFO   @   65271.4610420us:  [sim:measure]           't__Disc_dly_valid,8__' = '73.887000' condition = 'at channel 1' 
+UVM_INFO   @   65308.2476410us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   65310.2475900us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   65395.7086410us:  [sim:measure]           't__Disc_dly_valid,8__' = '76.597000' condition = 'at channel 0' 
+UVM_INFO   @   65399.4295900us:  [sim:measure]           't__Disc_dly_valid,8__' = '78.433000' condition = 'at channel 1' 
+UVM_INFO   @   65433.3031940us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   65435.3031670us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   65515.0651940us:  [sim:measure]           't__Disc_dly_valid,8__' = '70.208000' condition = 'at channel 0' 
+UVM_INFO   @   65523.3431670us:  [sim:measure]           't__Disc_dly_valid,8__' = '76.417000' condition = 'at channel 1' 
+UVM_INFO   @   65558.3587420us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   65560.3587490us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   65642.1957490us:  [sim:measure]           't__Disc_dly_valid,8__' = '70.145000' condition = 'at channel 1' 
+UVM_INFO   @   65646.9337420us:  [sim:measure]           't__Disc_dly_valid,8__' = '76.216000' condition = 'at channel 0' 
+UVM_INFO   @   65683.4142900us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   65685.4143060us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   65769.4702900us:  [sim:measure]           't__Disc_dly_valid,8__' = '73.375000' condition = 'at channel 0' 
+UVM_INFO   @   65772.3093060us:  [sim:measure]           't__Disc_dly_valid,8__' = '75.479000' condition = 'at channel 1' 
+UVM_INFO   @   65808.4698380us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   65810.4698540us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   65886.6808380us:  [sim:measure]           't__Disc_dly_valid,8__' = '67.002000' condition = 'at channel 0' 
+UVM_INFO   @   65891.3938540us:  [sim:measure]           't__Disc_dly_valid,8__' = '69.623000' condition = 'at channel 1' 
+UVM_INFO   @   65933.5253860us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   65935.5254020us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   65976.0387100us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   66084.7187100us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   66088.5587100us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   66092.3987100us:  [sim:measure]           'DSI_IRQ_STAT' status = PASS 
+UVM_INFO   @   66096.2387100us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   66100.0787100us:  [sim:measure]           'DSI_IRQ_STAT' status = PASS 
+UVM_INFO   @   66600.0787100us:  [spec_CRM_command_seq]  spec_CRM_command_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   66600.0797100us:  [sim:description:2]     **CRM Command Sequence(Equal commands) 
+UVM_INFO   @   67726.9597100us:  [sim:description:2]     **abort Discovery Mode after slave number 11 using DSI_ENABLE register 
+UVM_INFO   @   67832.6016180us:  [sim:measure]           't__Disc_dly_valid,8__' = '68.185000' condition = 'at channel 0' 
+UVM_INFO   @   67843.2366340us:  [sim:measure]           't__Disc_dly_valid,8__' = '76.222000' condition = 'at channel 1' 
+UVM_INFO   @   67877.5253860us:  [sim:measure]           't__Disc_per,8__' = '124.777000' condition = 'at channel 0' 
+UVM_INFO   @   67879.5254020us:  [sim:measure]           't__Disc_per,8__' = '124.777000' condition = 'at channel 1' 
+UVM_INFO   @   67964.2224020us:  [sim:measure]           't__Disc_dly_valid,8__' = '72.821000' condition = 'at channel 1' 
+UVM_INFO   @   67968.0943860us:  [sim:measure]           't__Disc_dly_valid,8__' = '78.003000' condition = 'at channel 0' 
+UVM_INFO   @   68002.5809340us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   68004.5809500us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   68085.3469340us:  [sim:measure]           't__Disc_dly_valid,8__' = '70.522000' condition = 'at channel 0' 
+UVM_INFO   @   68090.7959500us:  [sim:measure]           't__Disc_dly_valid,8__' = '74.316000' condition = 'at channel 1' 
+UVM_INFO   @   68127.6364820us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   68129.6364980us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   68215.0794820us:  [sim:measure]           't__Disc_dly_valid,8__' = '76.234000' condition = 'at channel 0' 
+UVM_INFO   @   68216.1624980us:  [sim:measure]           't__Disc_dly_valid,8__' = '74.810000' condition = 'at channel 1' 
+UVM_INFO   @   68252.6920300us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   68254.6920460us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   68342.1800460us:  [sim:measure]           't__Disc_dly_valid,8__' = '75.658000' condition = 'at channel 1' 
+UVM_INFO   @   68343.8100300us:  [sim:measure]           't__Disc_dly_valid,8__' = '78.713000' condition = 'at channel 0' 
+UVM_INFO   @   68377.7475910us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   68379.7475940us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   68457.6275940us:  [sim:measure]           't__Disc_dly_valid,8__' = '67.131000' condition = 'at channel 1' 
+UVM_INFO   @   68470.0035910us:  [sim:measure]           't__Disc_dly_valid,8__' = '79.276000' condition = 'at channel 0' 
+UVM_INFO   @   68502.8031730us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   68504.8031420us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   68580.8701730us:  [sim:measure]           't__Disc_dly_valid,8__' = '67.203000' condition = 'at channel 0' 
+UVM_INFO   @   68592.7621420us:  [sim:measure]           't__Disc_dly_valid,8__' = '75.968000' condition = 'at channel 1' 
+UVM_INFO   @   68627.8587460us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   68629.8586990us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   68711.4466990us:  [sim:measure]           't__Disc_dly_valid,8__' = '70.563000' condition = 'at channel 1' 
+UVM_INFO   @   68718.3267460us:  [sim:measure]           't__Disc_dly_valid,8__' = '77.626000' condition = 'at channel 0' 
+UVM_INFO   @   68752.9142940us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   68754.9142810us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   68835.7482940us:  [sim:measure]           't__Disc_dly_valid,8__' = '71.947000' condition = 'at channel 0' 
+UVM_INFO   @   68838.2172810us:  [sim:measure]           't__Disc_dly_valid,8__' = '70.507000' condition = 'at channel 1' 
+UVM_INFO   @   68877.9698420us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   68879.9698580us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   68965.7258420us:  [sim:measure]           't__Disc_dly_valid,8__' = '75.397000' condition = 'at channel 0' 
+UVM_INFO   @   68969.3148580us:  [sim:measure]           't__Disc_dly_valid,8__' = '76.434000' condition = 'at channel 1' 
+UVM_INFO   @   69003.0253900us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   69005.0254060us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   69085.5883900us:  [sim:measure]           't__Disc_dly_valid,8__' = '71.170000' condition = 'at channel 0' 
+UVM_INFO   @   69095.0134060us:  [sim:measure]           't__Disc_dly_valid,8__' = '77.330000' condition = 'at channel 1' 
+UVM_INFO   @   69128.0809380us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   69130.0809540us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   69170.4276340us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   69279.1076340us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   69282.9476340us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   69286.7876340us:  [sim:measure]           'DSI_IRQ_STAT' status = PASS 
+UVM_INFO   @   69290.6276340us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   69294.4676340us:  [sim:measure]           'DSI_IRQ_STAT' status = PASS 
+UVM_INFO   @   69794.4676340us:  [spec_CRM_command_seq]  spec_CRM_command_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   69794.4686340us:  [sim:description:2]     **CRM Command Sequence(Equal commands) 
+UVM_INFO   @   70921.3486340us:  [sim:description:2]     **abort Discovery Mode after slave number 4 using DSI_ENABLE register 
+UVM_INFO   @   71037.7985020us:  [sim:measure]           't__Disc_dly_valid,8__' = '78.556000' condition = 'at channel 0' 
+UVM_INFO   @   71039.3715180us:  [sim:measure]           't__Disc_dly_valid,8__' = '78.222000' condition = 'at channel 1' 
+UVM_INFO   @   71072.0809380us:  [sim:measure]           't__Disc_per,8__' = '124.944000' condition = 'at channel 0' 
+UVM_INFO   @   71074.0809540us:  [sim:measure]           't__Disc_per,8__' = '124.945000' condition = 'at channel 1' 
+UVM_INFO   @   71157.6219540us:  [sim:measure]           't__Disc_dly_valid,8__' = '71.113000' condition = 'at channel 1' 
+UVM_INFO   @   71160.1029380us:  [sim:measure]           't__Disc_dly_valid,8__' = '75.364000' condition = 'at channel 0' 
+UVM_INFO   @   71197.1364860us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   71199.1365020us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   71277.5564860us:  [sim:measure]           't__Disc_dly_valid,8__' = '69.509000' condition = 'at channel 0' 
+UVM_INFO   @   71281.0345020us:  [sim:measure]           't__Disc_dly_valid,8__' = '70.781000' condition = 'at channel 1' 
+UVM_INFO   @   71322.1920340us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   71324.1920500us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   71404.0190500us:  [sim:measure]           't__Disc_dly_valid,8__' = '68.181000' condition = 'at channel 1' 
+UVM_INFO   @   71407.7910340us:  [sim:measure]           't__Disc_dly_valid,8__' = '74.758000' condition = 'at channel 0' 
+UVM_INFO   @   71447.2476130us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   71449.2475980us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   71489.8165180us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   71598.4965180us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   71602.3365180us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   71606.1765180us:  [sim:measure]           'DSI_IRQ_STAT' status = PASS 
+UVM_INFO   @   71610.0165180us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   71613.8565180us:  [sim:measure]           'DSI_IRQ_STAT' status = PASS 
+UVM_INFO   @   72113.8565180us:  [spec_CRM_command_seq]  spec_CRM_command_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   72113.8575180us:  [sim:description:2]     **CRM Command Sequence(Equal commands) 
+UVM_INFO   @   73240.7375180us:  [sim:description:2]     **abort Discovery Mode after slave number 9 using DSI_ENABLE register 
+UVM_INFO   @   73350.9883700us:  [sim:measure]           't__Disc_dly_valid,8__' = '73.093000' condition = 'at channel 0' 
+UVM_INFO   @   73353.4013860us:  [sim:measure]           't__Disc_dly_valid,8__' = '74.150000' condition = 'at channel 1' 
+UVM_INFO   @   73391.2476130us:  [sim:measure]           't__Disc_per,8__' = '124.723000' condition = 'at channel 0' 
+UVM_INFO   @   73393.2475980us:  [sim:measure]           't__Disc_per,8__' = '124.723000' condition = 'at channel 1' 
+UVM_INFO   @   73481.1805980us:  [sim:measure]           't__Disc_dly_valid,8__' = '76.149000' condition = 'at channel 1' 
+UVM_INFO   @   73482.1356130us:  [sim:measure]           't__Disc_dly_valid,8__' = '78.782000' condition = 'at channel 0' 
+UVM_INFO   @   73516.3031950us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   73518.3031460us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   73597.8111950us:  [sim:measure]           't__Disc_dly_valid,8__' = '70.069000' condition = 'at channel 0' 
+UVM_INFO   @   73608.2301460us:  [sim:measure]           't__Disc_dly_valid,8__' = '77.361000' condition = 'at channel 1' 
+UVM_INFO   @   73641.3587500us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   73643.3587210us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   73726.5907500us:  [sim:measure]           't__Disc_dly_valid,8__' = '73.287000' condition = 'at channel 0' 
+UVM_INFO   @   73730.0257210us:  [sim:measure]           't__Disc_dly_valid,8__' = '73.733000' condition = 'at channel 1' 
+UVM_INFO   @   73766.4142980us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   73768.4143030us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   73851.3752980us:  [sim:measure]           't__Disc_dly_valid,8__' = '72.602000' condition = 'at channel 0' 
+UVM_INFO   @   73853.4873030us:  [sim:measure]           't__Disc_dly_valid,8__' = '73.634000' condition = 'at channel 1' 
+UVM_INFO   @   73891.4698460us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   73893.4698620us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   73976.0788620us:  [sim:measure]           't__Disc_dly_valid,8__' = '71.147000' condition = 'at channel 1' 
+UVM_INFO   @   73979.3968460us:  [sim:measure]           't__Disc_dly_valid,8__' = '76.327000' condition = 'at channel 0' 
+UVM_INFO   @   74016.5253940us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   74018.5254100us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   74102.2534100us:  [sim:measure]           't__Disc_dly_valid,8__' = '72.864000' condition = 'at channel 1' 
+UVM_INFO   @   74104.5703940us:  [sim:measure]           't__Disc_dly_valid,8__' = '75.525000' condition = 'at channel 0' 
+UVM_INFO   @   74141.5809420us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   74143.5809580us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   74224.3599420us:  [sim:measure]           't__Disc_dly_valid,8__' = '69.868000' condition = 'at channel 0' 
+UVM_INFO   @   74234.3579580us:  [sim:measure]           't__Disc_dly_valid,8__' = '78.717000' condition = 'at channel 1' 
+UVM_INFO   @   74266.6364900us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 0' 
+UVM_INFO   @   74268.6365060us:  [sim:measure]           't__Disc_per,8__' = '125.056000' condition = 'at channel 1' 
+UVM_INFO   @   74345.6644900us:  [sim:measure]           't__Disc_dly_valid,8__' = '68.301000' condition = 'at channel 0' 
+UVM_INFO   @   74351.7265060us:  [sim:measure]           't__Disc_dly_valid,8__' = '70.570000' condition = 'at channel 1' 
+UVM_INFO   @   74391.6920380us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 0' 
+UVM_INFO   @   74393.6920540us:  [sim:measure]           't__Disc_per,8__' = '125.055000' condition = 'at channel 1' 
+UVM_INFO   @   74434.2053860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   74542.8853860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   74546.7253860us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   74550.5653860us:  [sim:measure]           'DSI_IRQ_STAT' status = PASS 
+UVM_INFO   @   74554.4053860us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   74558.2453860us:  [sim:measure]           'DSI_IRQ_STAT' status = PASS 
+UVM_INFO   @   75058.2453860us:  [spec_CRM_command_seq]  spec_CRM_command_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   75058.2463860us:  [sim:description:2]     **CRM Command Sequence(Equal commands) 
+UVM_INFO   @   76185.1263860us:  [dsi_enable_abort_command_queue_seq] dsi_enable_abort_command_queue_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   76185.1273860us:  [sim:description:1]     *abort/clear command queue by DSI_ENABLE.TRE 
+UVM_INFO   @   76185.1273860us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   76242.8083860us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 318 us
+  0 | Symbols:   8 | SID_16Bit_CRC | Start:    42 -    89  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   76463.0083860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   76571.6883860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   79410.1283860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   79518.8083860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   82355.3283860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   82464.0083860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   85297.6483860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   85406.3283860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   88241.8883860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   88350.5683860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   90863.9033860us:  [m_master_transmission_checker_0] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   91188.0483860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   91296.7283860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   94133.2483860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   94241.9283860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   97077.4883860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @   97186.1683860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @  100016.9283860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @  100125.6083860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @  102964.0483860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @  103072.7283860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @  105686.1683860us:  [overtemperature_shut_off_seq] overtemperature_shut_off_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  105686.1693860us:  [sim:description:1]     *overtemperature shut off at  CRM with channels=11 and time   160.00 
+UVM_INFO   @  107210.1693860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @  107214.0093860us:  [sim:measure]           'SUP_CTRL' status = PASS 
+UVM_INFO   @  107501.9293860us:  [overtemperature_shut_off_seq] overtemperature_shut_off_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  107501.9303860us:  [sim:description:1]     *overtemperature shut off at  CRM with channels=11 and time   400.00 
+UVM_INFO   @  109025.9303860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @  109029.7703860us:  [sim:measure]           'SUP_CTRL' status = PASS 
+UVM_INFO   @  109317.6903860us:  [overtemperature_shut_off_seq] overtemperature_shut_off_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  109317.6913860us:  [sim:description:1]     *overtemperature shut off at  CRM with channels=11 and time   310.00 
+UVM_INFO   @  110841.6913860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @  110845.5313860us:  [sim:measure]           'SUP_CTRL' status = PASS 
+UVM_INFO   @  111133.4513860us:  [overtemperature_shut_off_seq] overtemperature_shut_off_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  111133.4523860us:  [sim:description:1]     *overtemperature shut off at PDCM with channels=11 and time    80.00 
+UVM_INFO   @  111136.3323860us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  111194.0133860us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_0Bit | Start:    30 -    50  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  112709.3733860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @  112713.2133860us:  [sim:measure]           'SUP_CTRL' status = PASS 
+UVM_INFO   @  113004.9733860us:  [overtemperature_shut_off_seq] overtemperature_shut_off_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  113004.9743860us:  [sim:description:1]     *overtemperature shut off at PDCM with channels=11 and time   300.00 
+UVM_INFO   @  113007.8543860us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  113065.5353860us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_0Bit | Start:    30 -    50  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  114580.8953860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @  114584.7353860us:  [sim:measure]           'SUP_CTRL' status = PASS 
+UVM_INFO   @  114876.4953860us:  [overtemperature_shut_off_seq] overtemperature_shut_off_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  114876.4963860us:  [sim:description:1]     *overtemperature shut off at PDCM with channels=11 and time   330.00 
+UVM_INFO   @  114879.3763860us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  114937.0573860us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_0Bit | Start:    30 -    50  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  116452.4173860us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @  116456.2573860us:  [sim:measure]           'SUP_CTRL' status = PASS 
+UVM_INFO   @  116748.0173860us:  [voltage_shut_off_seq]  voltage_shut_off_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  116748.0183860us:  [sim:description:1]     *voltage shut off at  CRM with channels=11 and time   130.00 
+UVM_INFO   @  124281.6431900us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @  124285.4831900us:  [sim:measure]           'SUP_CTRL' status = PASS 
+UVM_INFO   @  132058.5631900us:  [voltage_shut_off_seq]  voltage_shut_off_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  132058.5641900us:  [sim:description:1]     *voltage shut off at PDCM with channels=11 and time    80.00 
+UVM_INFO   @  132061.4441900us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  132119.1251900us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_0Bit | Start:    30 -    50  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  139643.5320700us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @  139647.3720700us:  [sim:measure]           'SUP_CTRL' status = PASS 
+UVM_INFO   @  147424.2920700us:  [voltage_shut_off_seq]  voltage_shut_off_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  147424.2930700us:  [sim:description:1]     *voltage shut off at  CRM with channels=11 and time   130.00 
+UVM_INFO   @  154957.9209300us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @  154961.7609300us:  [sim:measure]           'SUP_CTRL' status = PASS 
+UVM_INFO   @  162734.8409300us:  [voltage_shut_off_seq]  voltage_shut_off_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  162734.8419300us:  [sim:description:1]     *voltage shut off at PDCM with channels=11 and time    80.00 
+UVM_INFO   @  162737.7219300us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  162795.4029300us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_0Bit | Start:    30 -    50  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  170319.8098150us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @  170323.6498150us:  [sim:measure]           'SUP_CTRL' status = PASS 
+UVM_INFO   @  178100.5698150us:  [ldo_disable_shut_off_seq] ldo_disable_shut_off_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  178100.5708150us:  [sim:description:1]     *ldo disable shut off at  CRM with channels=11 and time   600.00 
+UVM_INFO   @  178739.0387420us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @  178742.8787420us:  [sim:measure]           'SUP_CTRL' status = PASS 
+UVM_INFO   @  179020.7987420us:  [sim:measure]           'LDO enable' status = PASS 
+UVM_INFO   @  179020.7987420us:  [ldo_disable_shut_off_seq] ldo_disable_shut_off_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  179020.7997420us:  [sim:description:1]     *ldo disable shut off at PDCM with channels=11 and time   400.00 
+UVM_INFO   @  179023.6797420us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  179081.3607420us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_0Bit | Start:    30 -    50  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  179510.5942940us:  [sim:measure]           'DSI_ENABLE' status = PASS 
+UVM_INFO   @  179514.4342940us:  [sim:measure]           'SUP_CTRL' status = PASS 
+UVM_INFO   @  179796.1942940us:  [sim:measure]           'LDO enable' status = PASS 
+UVM_INFO   @  179796.1942940us:  [sim:description:1]     *measure overtemperature debouncing 
+UVM_INFO   @  179821.1943030us:  [sim:measure]           't__OT,deb__' = '10.22' 
+UVM_INFO   @  179821.1943030us:  [sim:measure]           't__OT,deb__' = ' 9.78' 
+UVM_INFO   @  179921.1943030us:  [overtemperature_status_seq] overtemperature_status_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  179921.1953030us:  [sim:description:1]     *check over temperature status registers 
+UVM_INFO   @  180871.0353030us:  [dsi_shut_off_and_check_crm_buffer_seq] dsi_shut_off_and_check_crm_buffer_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  180871.0363030us:  [sim:description:1]     *switch off channel during CRM using DSI_ENABLE 
+UVM_INFO   @  183234.8993500us:  [sim:description:1]     *switch off channel during CRM using over temperature 
+UVM_INFO   @  185663.6175200us:  [sim:description:1]     *switch off channel during CRM using over voltage 
+UVM_INFO   @  188127.4852900us:  [sim:description:1]     *switch off channel during CRM using under voltage 
+UVM_INFO   @  190591.3322600us:  [sim:description:1]     *switch off channel during CRM using LDO disable 
+UVM_INFO   @  192960.0192300us:  [dsi_shut_off_and_check_pdcm_buffer_seq] dsi_shut_off_and_check_pdcm_buffer_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  192960.0202300us:  [sim:description:1]     *switch off channel during PDCM using DSI_ENABLE 
+UVM_INFO   @  193680.6546000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  193738.3356000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 450 us
+  0 | Symbols:   8 | SID_8Bit | Start:   280 -   300  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  195380.6156000us:  [sim:description:1]     *switch off channel during PDCM using over temperature 
+UVM_INFO   @  196101.2447700us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  196158.9257700us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 450 us
+  0 | Symbols:   8 | SID_8Bit | Start:   280 -   300  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  197866.0457700us:  [sim:description:1]     *switch off channel during PDCM using over voltage 
+UVM_INFO   @  198586.6645400us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  198644.3455400us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 450 us
+  0 | Symbols:   8 | SID_8Bit | Start:   280 -   300  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  200386.6255400us:  [sim:description:1]     *switch off channel during PDCM using under voltage 
+UVM_INFO   @  201107.2076900us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  201164.8886900us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 450 us
+  0 | Symbols:   8 | SID_8Bit | Start:   280 -   300  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  202907.1686900us:  [sim:description:1]     *switch off channel during PDCM using LDO disable 
+UVM_INFO   @  203627.7508400us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  203685.4318400us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 450 us
+  0 | Symbols:   8 | SID_8Bit | Start:   280 -   300  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @  205432.5518400us:  [sim:status]            PASS 
+UVM_INFO   @  205432.5518400us:  [sim:end]               shut_off sequence completed 
+UVM_INFO   @  205432.5518400us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  205432.5518400us:  [digital_signal_coverage] Coverage score = 37.5%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  205432.5518400us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  205432.5518400us:  [dsi3_master_coverage]  Coverage score = 62.5%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/dsi3_master/dsi3_master_coverage.sv(52) 
+UVM_INFO   @  205432.5518400us:  [dsi3_master_coverage]  Coverage score = 62.5%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/dsi3_master/dsi3_master_coverage.sv(52) 
+UVM_INFO   @  205432.5518400us:  [dsi3_slave_coverage]   Coverage score = 25.7%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/dsi3_slave/dsi3_slave_coverage.sv(57) 
+UVM_INFO   @  205432.5518400us:  [dsi3_slave_coverage]   Coverage score = 25.7%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/dsi3_slave/dsi3_slave_coverage.sv(57) 
+UVM_INFO   @  205432.5518400us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  205432.5518400us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  205432.5518400us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  205432.5518400us:  [jtag_master_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/jtag_master/jtag_master_coverage.sv(57) 
+UVM_INFO   @  205432.5518400us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  205432.5518400us:  [osc_coverage]          Coverage score = 25.8%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/osc/osc_coverage.sv(52) 
+UVM_INFO   @  205432.5518400us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  205432.5518400us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  205432.5518400us:  [digital_signal_coverage] Coverage score = 37.5%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  205432.5518400us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  205432.5518400us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  205432.5518400us:  [digital_signal_coverage] Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  205432.5518400us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  205432.5518400us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  205432.5518400us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  205432.5518400us:  [UVM/REPORT/CATCHER]    
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+  	/common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_report_catcher.svh(705) 
+UVM_INFO   @  205432.5518400us:  [UVM/REPORT/SERVER]     
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  915
+UVM_WARNING :    0
+UVM_ERROR :    4
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[UVM_CMDLINE_PROC]     1
+[UVM_VERDI_DPI]     1
+[VERDI_TR_AUTO]     1
+[digital_signal_coverage]     8
+[dsi3_master_coverage]     2
+[dsi3_master_transmission_checker]   102
+[dsi3_slave_coverage]     2
+[dsi_enable_abort_command_queue_seq]     1
+[dsi_enable_abort_crm_seq]     1
+[dsi_enable_abort_discovery_mode_seq]     1
+[dsi_enable_abort_multi_packet_pdcm_seq]     1
+[dsi_enable_abort_pdcm_seq]     1
+[dsi_enable_ignore_new_commands_seq]     1
+[dsi_shut_off_and_check_crm_buffer_seq]     1
+[dsi_shut_off_and_check_pdcm_buffer_seq]     1
+[jtag_master_coverage]     1
+[ldo_disable_shut_off_seq]     2
+[m_master_transmission_checker_0]    49
+[m_master_transmission_checker_1]    48
+[osc_coverage]     1
+[overtemperature_shut_off_seq]     6
+[overtemperature_status_seq]     1
+[real_signal_coverage]     8
+[registers]     4
+[shut_off_seq]     1
+[sim:description]     1
+[sim:description:1]    29
+[sim:description:2]    20
+[sim:end]     1
+[sim:measure]   573
+[sim:status]     1
+[sim:task]     1
+[spec_CRM_command_seq]    10
+[upload_tdma_scheme_seq]    30
+[voltage_shut_off_seq]     4
+  	/common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_report_server.svh(904) 
+$finish called from file "/common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_root.svh", line 527.
+$finish at simulation time         205432551840
+Reporting coverage at the end of simulation ...
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, FSM, branch, tgl was monitored
+---------------------------------------------------------------------------
+
+ Coverage status: End of All Coverages ...
+
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 205432551840 ps
+
+Simulation Performance Summary
+==============================
+Simulation started at :  Tue May  6 20:49:41 2025
+Elapsed Time          :  253 sec
+CPU Time              :  289.7 sec
+Virtual memory size   :  920.5 MB
+Resident set size     :  452.9 MB
+Shared memory size    :  2.6 MB
+Private memory size   :  450.4 MB
+Major page faults     :  6
+Machine name          :  ex04.elmos.de
+==============================
+
+Tue May  6 20:53:53 2025
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++ ready:   ./simv_52144_shut_off +UVM_VERBOSITY=UVM_MEDIUM +bus_conflict_off +warn=noFCICIO -ucli -assert nopostproc +UVM_LOG_RECORD -verdi_opts '-ssr Verdi.ses' +uvm_set_type_override=top_default_seq,shut_off_seq -i run.tcl -vcs_assert off +UVM_VERDI_TRACE="UVM_AWARE+RAL+TLM+MSG+HIER+PRINT" +UVM_LOG_RECORD +UVM_TESTNAME=top_test +UVM_TR_RECORD +vcs+lic+wait -reportstats -cm line+cond+fsm+tgl+branch+assert -cm_dir DIGITAL/results/vcs/shut_off.vdb -lca   +fsdbfile+shut_off.fsdb
+ ++ in dir   /nfs/wrk.zaa/sim/52144/m52144a/shut_off
+ ++ on host  ex04.elmos.de
+ ++ user     zaa
+ ++ endtime  2025-05-06T18:53:54
+ ++ took     253 seconds
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

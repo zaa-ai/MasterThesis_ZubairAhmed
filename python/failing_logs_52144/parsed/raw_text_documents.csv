@@ -1,0 +1,31 @@
+file,text,cluster
+app_exm_in_spec.log,unexpected sce symbol count error flag in packet header at channel 0 expected 0 read 0 unexpected sce symbol count error flag in packet header at channel 1 expected 0 read 0,1
+applicative_pattern.log,expected pdcm period of channel 0 differ by 0000000 us expected maximum difference is 0001000 us expected pdcm period of channel 1 differ by 0000000 us expected maximum difference is 0001000 us,2
+debounce_times.log,condition for parameter tresbdeb did not occur after expected end time condition for parameter tvccuvdeb did not occur after expected end time,3
+dsi3_clear_command_buffer.log,recorded unexpected number of master transactions at channel 0 expected 1 got 0,4
+dsi3_crc.log,unexpected sce symbol count error flag in packet header of packet index 0 at channel 0 expected 0 read 0 unexpected sce symbol count error flag in packet header of packet index 1 at channel 0 expected 0 read 0,1
+dsi3_crm.log,unexpected flags at channel 0 flag se was not set correctly exp 0 but got 1,5
+dsi3_crm_ecc_2_bit_error_sim.log,unexpected flags at channel 1 flag sce was not set correctly exp 0 but got 1 unexpected data at channel 1 at word index 0 expected 0 x 47 b 0 got 0 x 0000,6
+dsi3_crm_timing.log,unexpected crc flag for crcen  0 in packet header at channel 0 expected 0 read 0 unexpected crc flag for crcen  0 in packet header at channel 0 expected 0 read 0,7
+dsi3_discovery_mode.log,unable to get otp model interface from config db unable to get otp model interface from config db,8
+dsi3_pdcm.log,unexpected data in packet 4 at index 1 at channel 0 expected 0 x 075 b got 0 x 975 b unexpected data in packet 4 at index 1 at channel 1 expected 0 x 075 b got 0 x 975 b,4
+dsi3_pdcm_timing.log,unexpected sce symbol count error flag in packet header of packet index 0 at channel 0 expected 0 read 0 unexpected sce symbol count error flag in packet header of packet index 0 at channel 0 expected 0 read 0,1
+dsi3_quiscent_current.log,failed to get edfparametermodel from uvmconfigdb failed to get edfparametermodel from uvmconfigdb,8
+dsi3_sync_channels.log,comerr is not set correctly got 1 but expected 0 regmodeldsi0dsi 3channelregistersdsiirqstatcomerr comerr is not set correctly got 1 but expected 0 regmodeldsi1dsi 3channelregistersdsiirqstatcomerr,6
+dsi3_sync_pin.log,pd 0 flag in status word found but no data is expected to be contained in pdcm buffer of channel 0 pd 1 flag in status word found but no data is expected to be contained in pdcm buffer of channel 1,4
+dsi3_sync_pin_sim.log,recorded unexpected number of master transactions at channel 0 expected 1 got 0 recorded unexpected number of master transactions at channel 0 expected 3 got 0
+dsi3_wait.log,unable to get clkoscif interface from config db unable to get clkoscif interface from config db,8
+ic_startup.log,unexpected spi status word flags flag sci was not set correctly exp 0 but got 1 unexpected spi status word flags flag sci was not set correctly exp 0 but got 1,5
+ic_status_word.log,hwfail is not set correctly got 0 but expected 1 regmodelinterruptinterruptregistersirqstathwfail unexpected spi status word flags flag spicrc was not set correctly exp 0 but got 1,9
+interrupts_test_sim.log,injected error no cr 0 flag in status word found but there seems to be data contained in crm buffer of channel 0 injected error no cr 1 flag in status word found but there seems to be data contained in crm buffer of channel 1,4
+jtag_test.log,value at pin intb is not expected for static low 0 got x but expected 0 value at pin intb is not expected for static high 1 got x but expected 1,10
+otp_pulse_width.log,write otp bist with soak data  adress 513 is expected cd 8 but is c 86 write otp bist with soak data  adress 514 is expected bdd but is cd 8,8
+otp_trimming.log,mirroring error 2 word 0 x 6 e 79 of 2 command has not been mirrored output data is 0 x 43 db,11
+p52143_489.log,expected pdcm period of channel 1 differ by 0000000 us expected maximum difference is 0001000 us expected pdcm period of channel 0 differ by 0000000 us expected maximum difference is 0001000 us,2
+p52143_701.log,unexpected sce symbol count error flag in packet header at channel 0 expected 0 read 0 unexpected sce symbol count error flag in packet header at channel 1 expected 0 read 0,1
+register_access.log,64 writes per spi frame read unexpected value in register address 0 x 62 expected 0 x 0 got 0 x 7 f 64 writes per spi frame read unexpected value in register address 0 x 81 expected 0 x 0 got 0 x 1 f,12
+shut_off.log,comerr is not set correctly got 1 but expected 0 regmodeldsi0dsi 3channelregistersdsiirqstatcomerr comerr is not set correctly got 1 but expected 0 regmodeldsi1dsi 3channelregistersdsiirqstatcomerr,6
+spi_errors_sim.log,injected mirroring error 1 word 0 x 5051 of 1 command has not been mirrored correctly output data is 0 x 4265 injected mirroring error 2 word 0 x 167 f of 1 command has not been mirrored correctly output data is 0 x 044 b,11
+spi_framing.log,unexpected crc flag for crcen  0 in packet header at channel 0 expected 0 read 0 unexpected crc flag for crcen  0 in packet header at channel 1 expected 0 read 0,7
+sram_bist.log,unexpected value for sram bist status expected 0000 got 0000 unexpected value for sram bist status expected 0000 got 0000,13
+upload_tdma.log,unexpected spi status word flags flag sci was not set correctly exp 0 but got 1 unexpected spi status word flags flag sci was not set correctly exp 0 but got 1,5

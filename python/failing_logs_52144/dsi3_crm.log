@@ -1,0 +1,1286 @@
++++ calling  ./simv_52144_dsi3_crm +UVM_VERBOSITY=UVM_MEDIUM +bus_conflict_off +warn=noFCICIO -ucli -assert nopostproc +UVM_LOG_RECORD -verdi_opts '-ssr Verdi.ses' +uvm_set_type_override=top_default_seq,dsi3_crm_seq -i run.tcl -vcs_assert off +UVM_VERDI_TRACE="UVM_AWARE+RAL+TLM+MSG+HIER+PRINT" +UVM_LOG_RECORD +UVM_TESTNAME=top_test +UVM_TR_RECORD +vcs+lic+wait -reportstats -cm line+cond+fsm+tgl+branch+assert -cm_dir DIGITAL/results/vcs/dsi3_crm.vdb -lca   +fsdbfile+dsi3_crm.fsdb
+ ++ in dir   /nfs/wrk.zaa/sim/52144/m52144a/dsi3_crm
+ ++ on host  ex04.elmos.de
+ ++ user     zaa
+ ++ start    2025-05-06T22:11:20
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Warning-[LCA_FEATURES_ENABLED] Usage warning
+  LCA features enabled by '-lca' argument on the command line.  For more 
+  information regarding list of LCA features please refer to Chapter "LCA 
+  features" in the VCS Release Notes
+
+Chronologic VCS simulator copyright 1991-2021
+Contains Synopsys proprietary information.
+Compiler version S-2021.09-1_Full64; Runtime version S-2021.09-1_Full64;  May  7 00:11 2025
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+
+ VCS Coverage Metrics Release S-2021.09-1_Full64 Copyright (c) 1991-2021 by Synopsys Inc.
+ucli% source dump.tcl
+*Verdi* Loading libsscore_vcsmx202109.so
+FSDB Dumper for VCS-MX, Release Verdi_U-2023.03-1, Linux x86_64/64bit, 04/17/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'dsi3_crm.fsdb'
+*Verdi* : fsdbDumpon("glitch") - All FSDB files at 0 ps.
+*Verdi* : Begin traversing the scope (top_tb), layer (0).
+*Verdi* : Enable +all dumping.
+*Verdi* : End of traversing.
+*Verdi* : Flush all FSDB Files at 0 ps.
+1
+ucli% if { [info exists ::env(GATE_LEVEL)] } {
+	source tcheck.tcl
+}
+ucli% run
+*Verdi* Enable Verdi Message Catcher.
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/verdi/uvm_custom_install_verdi_recorder.sv(283) @ 0: reporter [VERDI_TR_AUTO] +UVM_TR_RECORD implicitly enables recording_details to UVM_FULL for all components. For explicit control use +UVM_DISABLE_AUTO_COMPONENT and set recording_detail on components accordingly
+UVM_INFO @ 0: reporter [RNTST] Running test top_test...
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VRR applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VREF applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VBG applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+UVM_INFO @ 0: reporter [UVM_CMDLINE_PROC] Applying type override from the command line: +uvm_set_type_override=top_default_seq,dsi3_crm_seq
+UVM_INFO   @       0.0000000us:  [UVM_VERDI_DPI]         uvm_verdi DPI routines are compiled off. Recompile without +define+UVM_NO_VERDI_DPI 
+UVM_INFO   @       0.0000000us:  [dsi3_crm_seq]          dsi3_crm_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+*Verdi* Enable Verdi Recorder.
+Info: Verdi UVM 1.2 Hooks File 06/17/2014 
+UVM_INFO   @       0.0010000us:  [sim:task]              dsi3_crm 
+UVM_INFO   @    2120.0010000us:  [sim:description]       '''Basic testcase for command response mode''' 
+UVM_INFO   @    2120.0010000us:  [crm_single_channel_transmit_seq] crm_single_channel_transmit_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2120.0020000us:  [sim:description:1]     *single CRM transmit and read data 
+UVM_INFO   @    2120.0020000us:  [sim:description:2]     **single CRM transmit and read data at channel 0 
+UVM_INFO   @    2730.5620000us:  [sim:description:2]     **single CRM transmit and read data at channel 1 
+UVM_INFO   @    3341.1220000us:  [sim:description:1]     *single CRM transmit on all channels 
+UVM_INFO   @    3341.1220000us:  [single_crm_on_all_channels_seq] single_crm_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    3341.1230000us:  [sim:description:2]     **single CRM transmit on all channels 
+UVM_INFO   @    3954.5630000us:  [single_crm_on_each_channel_seq] single_crm_on_each_channel_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    3954.5640000us:  [sim:description:1]     *single CRM TRANSMIT on each channel within one frame 
+UVM_INFO   @    4573.7640000us:  [crm_command_without_data_seq] crm_command_without_data_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    4573.7650000us:  [sim:description:1]     *CRM Command Sequence without slave response 
+UVM_INFO   @    6210.2450000us:  [crm_broadcast_and_read_seq] crm_broadcast_and_read_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    6210.2460000us:  [sim:description:1]     *CRM broadcast command and readout of data without  slave response 
+UVM_INFO   @    6823.6860000us:  [crm_read_empty_data_seq] crm_read_empty_data_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    6826.5670000us:  [sim:description:1]     *Read empty CRM data on all channels 
+UVM_INFO   @    7049.6070000us:  [sim:description:1]     *Read one empty channel and one with data 
+UVM_INFO   @    9614.8870000us:  [crm_with_ffff_data_seq] crm_with_ffff_data_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    9614.8880000us:  [sim:description:1]     *CRM Command with defined 0xffff as data 
+UVM_INFO   @    9623.5680000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @   10090.8480000us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @   10094.6880000us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @   10098.5280000us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @   10102.3680000us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @   11591.7680000us:  [sim:description:1]     *CRM Command with defined 0x0000 as data 
+UVM_INFO   @   11600.4480000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @   12067.7280000us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @   12071.5680000us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @   12075.4080000us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @   12079.2480000us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @   13568.6480000us:  [crm_many_on_one_channel_one_on_all_channels_seq] crm_many_on_one_channel_one_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   13568.6490000us:  [sim:description:1]     *multiple CRMs on one channel and one on all channels in a single SPI frame 
+UVM_INFO   @   23631.0490000us:  [crm_read_data_using_multiple_tx_crc_seq] crm_read_data_using_multiple_tx_crc_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   23631.0500000us:  [sim:description:1]     *CRM and read data using multiple TX CRCs 
+UVM_INFO   @   24652.1700000us:  [crm_without_slave_answer_seq] crm_without_slave_answer_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   24652.1710000us:  [sim:description:1]     *CRM without slave answer 
+UVM_INFO   @   24652.1710000us:  [sim:description:1]     *single CRM without answer at channel 0 
+UVM_INFO   @   25262.7310000us:  [sim:description:1]     *single CRM without answer at channel 1 
+UVM_INFO   @   25873.2910000us:  [crm_transmit_and_read_in_one_frame_seq] crm_transmit_and_read_in_one_frame_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   25873.2920000us:  [sim:description:1]     *CRM transmit and read data within one frame 
+UVM_INFO   @   28543.3720000us:  [crm_many_crm_in_one_spi_frame_started_with_tx_crc_seq] crm_many_crm_in_one_spi_frame_started_with_tx_crc_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   28543.3730000us:  [sim:description:1]     *Many CRMs in one SPI frame started with TX CRCs 
+UVM_INFO   @   28552.0530000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @   33284.6530000us:  [crm_wrong_symbol_counts_seq] crm_wrong_symbol_counts_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   33284.6540000us:  [sim:description:1]     *receive symbol counts != 8 
+UVM_INFO   @   33284.6540000us:  [sim:description:2]     **receive 1 symbols at channel 0 
+UVM_INFO   @   33895.2140000us:  [sim:description:2]     **receive 2 symbols at channel 0 
+UVM_INFO   @   34505.7740000us:  [sim:description:2]     **receive 3 symbols at channel 0 
+UVM_INFO   @   35116.3340000us:  [sim:description:2]     **receive 4 symbols at channel 0 
+UVM_INFO   @   35626.7890000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   35726.8940000us:  [sim:description:2]     **receive 5 symbols at channel 0 
+UVM_INFO   @   36237.3490000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   36337.4540000us:  [sim:description:2]     **receive 6 symbols at channel 0 
+UVM_INFO   @   36847.9090000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   36948.0140000us:  [sim:description:2]     **receive 7 symbols at channel 0 
+UVM_INFO   @   37458.4690000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   37558.5740000us:  [sim:description:2]     **receive 8 symbols at channel 0 
+UVM_INFO   @   38069.0290000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   38169.1340000us:  [sim:description:2]     **receive 9 symbols at channel 0 
+UVM_INFO   @   38679.5890000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   38779.6940000us:  [sim:description:2]     **receive 10 symbols at channel 0 
+UVM_INFO   @   39290.1490000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   39390.2540000us:  [sim:description:2]     **receive 11 symbols at channel 0 
+UVM_INFO   @   39900.7090000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   40000.8140000us:  [sim:description:2]     **receive 12 symbols at channel 0 
+UVM_INFO   @   40511.2690000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   40611.3740000us:  [sim:description:2]     **receive 1 symbols at channel 1 
+UVM_INFO   @   41221.9340000us:  [sim:description:2]     **receive 2 symbols at channel 1 
+UVM_INFO   @   41832.4940000us:  [sim:description:2]     **receive 3 symbols at channel 1 
+UVM_INFO   @   42443.0540000us:  [sim:description:2]     **receive 4 symbols at channel 1 
+UVM_INFO   @   42953.5090000us:  [m_master_transmission_checker_1] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   43053.6140000us:  [sim:description:2]     **receive 5 symbols at channel 1 
+UVM_INFO   @   43564.0690000us:  [m_master_transmission_checker_1] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   43664.1740000us:  [sim:description:2]     **receive 6 symbols at channel 1 
+UVM_INFO   @   44174.6290000us:  [m_master_transmission_checker_1] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   44274.7340000us:  [sim:description:2]     **receive 7 symbols at channel 1 
+UVM_INFO   @   44785.1890000us:  [m_master_transmission_checker_1] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   44885.2940000us:  [sim:description:2]     **receive 8 symbols at channel 1 
+UVM_INFO   @   45395.7490000us:  [m_master_transmission_checker_1] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   45495.8540000us:  [sim:description:2]     **receive 9 symbols at channel 1 
+UVM_INFO   @   46006.3090000us:  [m_master_transmission_checker_1] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   46106.4140000us:  [sim:description:2]     **receive 10 symbols at channel 1 
+UVM_INFO   @   46616.8690000us:  [m_master_transmission_checker_1] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   46716.9740000us:  [sim:description:2]     **receive 11 symbols at channel 1 
+UVM_INFO   @   47227.4290000us:  [m_master_transmission_checker_1] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   47327.5340000us:  [sim:description:2]     **receive 12 symbols at channel 1 
+UVM_INFO   @   47837.9890000us:  [m_master_transmission_checker_1] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @   47938.0940000us:  [crm_CRM_TIME_lower_than_transmission_time_seq] crm_CRM_TIME_lower_than_transmission_time_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   47938.0950000us:  [sim:description:1]     *CRM with a minimum CRM_TIME setting 
+UVM_INFO   @   47946.7750000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @   47946.7750000us:  [sim:description:2]     **CRM with a bit time of BITTIME_8US and CRM_TIME = 0 without slave response 
+UVM_INFO   @   47955.4550000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   48500.4950000us:  [sim:description:2]     **CRM with a bit time of BITTIME_8US and CRM_TIME = 50 without slave response 
+UVM_INFO   @   48509.1750000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   49054.2150000us:  [sim:description:2]     **CRM with a bit time of BITTIME_8US and CRM_TIME = 100 without slave response 
+UVM_INFO   @   49062.8950000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   49607.9350000us:  [sim:description:2]     **CRM with a bit time of BITTIME_8US and CRM_TIME = 150 without slave response 
+UVM_INFO   @   49616.6150000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   50161.6550000us:  [sim:description:2]     **CRM with a bit time of BITTIME_8US and CRM_TIME = 200 without slave response 
+UVM_INFO   @   50170.3350000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   50715.3750000us:  [sim:description:2]     **CRM with a bit time of BITTIME_8US and CRM_TIME = 250 without slave response 
+UVM_INFO   @   50724.0550000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   51269.0950000us:  [sim:description:2]     **CRM with a bit time of BITTIME_8US and CRM_TIME = 0    with slave response 
+UVM_INFO   @   51277.7750000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   51658.2683610us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   51661.0014140us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   51822.8150000us:  [sim:description:2]     **CRM with a bit time of BITTIME_8US and CRM_TIME = 50    with slave response 
+UVM_INFO   @   51831.4950000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   52219.3240460us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   52222.6110620us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   52376.5350000us:  [sim:description:2]     **CRM with a bit time of BITTIME_8US and CRM_TIME = 100    with slave response 
+UVM_INFO   @   52385.2150000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   52759.4882750us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   52763.6393060us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   52930.2550000us:  [sim:description:2]     **CRM with a bit time of BITTIME_8US and CRM_TIME = 150    with slave response 
+UVM_INFO   @   52938.9350000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   53312.2224940us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   53316.9675100us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   53483.9750000us:  [sim:description:2]     **CRM with a bit time of BITTIME_8US and CRM_TIME = 200    with slave response 
+UVM_INFO   @   53492.6550000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   53876.0646980us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   53885.3447270us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   54037.6950000us:  [sim:description:2]     **CRM with a bit time of BITTIME_8US and CRM_TIME = 250    with slave response 
+UVM_INFO   @   54046.3750000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   54417.2649420us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   54430.5719580us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   54600.0950000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @   54600.0950000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME = 0 without slave response 
+UVM_INFO   @   54608.7750000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   55409.8150000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME = 50 without slave response 
+UVM_INFO   @   55418.4950000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   56219.5350000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME = 100 without slave response 
+UVM_INFO   @   56228.2150000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   57029.2550000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME = 150 without slave response 
+UVM_INFO   @   57037.9350000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   57838.9750000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME = 200 without slave response 
+UVM_INFO   @   57847.6550000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   58648.6950000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME = 250 without slave response 
+UVM_INFO   @   58657.3750000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   59458.4150000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME = 300 without slave response 
+UVM_INFO   @   59467.0950000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   60268.1350000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME = 350 without slave response 
+UVM_INFO   @   60276.8150000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   61077.8550000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME = 400 without slave response 
+UVM_INFO   @   61086.5350000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   61887.5750000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME = 450 without slave response 
+UVM_INFO   @   61896.2550000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   62697.2950000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME = 500 without slave response 
+UVM_INFO   @   62705.9750000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   63507.0150000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME = 0    with slave response 
+UVM_INFO   @   63515.6950000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   64210.6908340us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   64211.7748180us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   64316.7350000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME = 50    with slave response 
+UVM_INFO   @   64325.4150000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   64983.5710380us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   64999.4000540us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   65126.4550000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME = 100    with slave response 
+UVM_INFO   @   65135.1350000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   65825.1932740us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   65830.8982580us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   65936.1750000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME = 150    with slave response 
+UVM_INFO   @   65944.8550000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   66645.3884780us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   66647.3644940us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   66745.8950000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME = 200    with slave response 
+UVM_INFO   @   66754.5750000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   67436.3126980us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   67460.6767140us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   67555.6150000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME = 250    with slave response 
+UVM_INFO   @   67564.2950000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   68241.3699180us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   68266.2859340us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   68365.3350000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME = 300    with slave response 
+UVM_INFO   @   68374.0150000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   69031.3681380us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   69047.5871540us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   69175.0550000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME = 350    with slave response 
+UVM_INFO   @   69183.7350000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   69844.2113740us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   69887.3723610us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   69984.7750000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME = 400    with slave response 
+UVM_INFO   @   69993.4550000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   70649.9405940us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   70670.4375910us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   70794.4950000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME = 450    with slave response 
+UVM_INFO   @   70803.1750000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   71459.7148210us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   71497.9258140us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   71604.2150000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME = 500    with slave response 
+UVM_INFO   @   71612.8950000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   72289.0810510us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   72289.4930340us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @   72422.6150000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @   72422.6150000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 0 without slave response 
+UVM_INFO   @   72431.2950000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   73744.3350000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 50 without slave response 
+UVM_INFO   @   73753.0150000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   75066.0550000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 100 without slave response 
+UVM_INFO   @   75074.7350000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   76387.7750000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 150 without slave response 
+UVM_INFO   @   76396.4550000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   77709.4950000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 200 without slave response 
+UVM_INFO   @   77718.1750000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   79031.2150000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 250 without slave response 
+UVM_INFO   @   79039.8950000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   80352.9350000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 300 without slave response 
+UVM_INFO   @   80361.6150000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   81674.6550000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 350 without slave response 
+UVM_INFO   @   81683.3350000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   82996.3750000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 400 without slave response 
+UVM_INFO   @   83005.0550000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   84318.0950000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 450 without slave response 
+UVM_INFO   @   84326.7750000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   85639.8150000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 500 without slave response 
+UVM_INFO   @   85648.4950000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   86961.5350000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 550 without slave response 
+UVM_INFO   @   86970.2150000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   88283.2550000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 600 without slave response 
+UVM_INFO   @   88291.9350000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   89604.9750000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 650 without slave response 
+UVM_INFO   @   89613.6550000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   90926.6950000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 700 without slave response 
+UVM_INFO   @   90935.3750000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   92248.4150000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 750 without slave response 
+UVM_INFO   @   92257.0950000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   93570.1350000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 800 without slave response 
+UVM_INFO   @   93578.8150000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   94891.8550000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 850 without slave response 
+UVM_INFO   @   94900.5350000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   96213.5750000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 900 without slave response 
+UVM_INFO   @   96222.2550000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   97535.2950000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 950 without slave response 
+UVM_INFO   @   97543.9750000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @   98857.0150000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 1000 without slave response 
+UVM_INFO   @   98865.6950000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  100178.7350000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 0    with slave response 
+UVM_INFO   @  100187.4150000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  101417.8091500us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  101474.6601660us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  101500.4550000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 50    with slave response 
+UVM_INFO   @  101509.1350000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  102743.7473780us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  102792.3083830us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  102822.1750000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 100    with slave response 
+UVM_INFO   @  102830.8550000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  104062.5325900us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  104143.8950000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 150    with slave response 
+UVM_INFO   @  104145.1546050us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  104152.5750000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  105382.2668430us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  105418.8568580us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  105465.6150000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 200    with slave response 
+UVM_INFO   @  105474.2950000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  106699.5310650us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  106776.2760700us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  106787.3350000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 250    with slave response 
+UVM_INFO   @  106796.0150000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  108031.8902820us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  108105.0892980us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  108109.0550000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 300    with slave response 
+UVM_INFO   @  108117.7350000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  109344.8824940us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  109392.4845100us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  109430.7750000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 350    with slave response 
+UVM_INFO   @  109439.4550000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  110752.4950000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 400    with slave response 
+UVM_INFO   @  110753.8217060us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  110761.1750000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  110772.4097220us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  112047.7029340us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  112064.3099370us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  112074.2150000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 450    with slave response 
+UVM_INFO   @  112082.8950000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  113331.9911460us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  113349.9121590us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  113395.9350000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 500    with slave response 
+UVM_INFO   @  113404.6150000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  114639.2164140us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  114643.8503970us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  114717.6550000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 550    with slave response 
+UVM_INFO   @  114726.3350000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  116030.3026260us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  116039.3750000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 600    with slave response 
+UVM_INFO   @  116044.7886190us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  116048.0550000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  117306.1898380us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  117308.5488540us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  117361.0950000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 650    with slave response 
+UVM_INFO   @  117369.7750000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  118620.9190500us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  118682.8150000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 700    with slave response 
+UVM_INFO   @  118691.4950000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  118704.5720660us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  119993.8147220us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  120004.5350000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 750    with slave response 
+UVM_INFO   @  120009.0327060us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  120013.2150000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  121311.8079340us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  121322.0159370us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  121326.2550000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 800    with slave response 
+UVM_INFO   @  121334.9350000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  122552.5731590us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  122589.4101460us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  122647.9750000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 850    with slave response 
+UVM_INFO   @  122656.6550000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  123969.6950000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 900    with slave response 
+UVM_INFO   @  123971.2963970us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  123972.3524140us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  123978.3750000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  125278.7176260us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  125290.5656190us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  125291.4150000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 950    with slave response 
+UVM_INFO   @  125300.0950000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  126520.0958380us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  126531.6388540us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  126613.1350000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 1000    with slave response 
+UVM_INFO   @  126621.8150000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  127874.5480660us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  127878.4330500us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  127944.5350000us:  [crm_CRM_TIME_NR_lower_than_transmission_time_seq] crm_CRM_TIME_NR_lower_than_transmission_time_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  127944.5360000us:  [sim:description:1]     *CRM without expected response and a minimum CRM_TIME_NR setting 
+UVM_INFO   @  127953.2160000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @  127953.2160000us:  [sim:description:2]     **CRM with a bit time of BITTIME_8US and CRM_TIME_NR = 0 
+UVM_INFO   @  127961.8960000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  129040.4560000us:  [sim:description:2]     **CRM with a bit time of BITTIME_8US and CRM_TIME_NR = 50 
+UVM_INFO   @  129049.1360000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  130127.6960000us:  [sim:description:2]     **CRM with a bit time of BITTIME_8US and CRM_TIME_NR = 100 
+UVM_INFO   @  130136.3760000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  131214.9360000us:  [sim:description:2]     **CRM with a bit time of BITTIME_8US and CRM_TIME_NR = 150 
+UVM_INFO   @  131223.6160000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  132302.1760000us:  [sim:description:2]     **CRM with a bit time of BITTIME_8US and CRM_TIME_NR = 200 
+UVM_INFO   @  132310.8560000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  133389.4160000us:  [sim:description:2]     **CRM with a bit time of BITTIME_8US and CRM_TIME_NR = 250 
+UVM_INFO   @  133398.0960000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  134485.3360000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @  134485.3360000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME_NR = 0 
+UVM_INFO   @  134494.0160000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  136340.5760000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME_NR = 50 
+UVM_INFO   @  136349.2560000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  138195.8160000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME_NR = 100 
+UVM_INFO   @  138204.4960000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  140051.0560000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME_NR = 150 
+UVM_INFO   @  140059.7360000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  141906.2960000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME_NR = 200 
+UVM_INFO   @  141914.9760000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  143761.5360000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME_NR = 250 
+UVM_INFO   @  143770.2160000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  145616.7760000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME_NR = 300 
+UVM_INFO   @  145625.4560000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  147472.0160000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME_NR = 350 
+UVM_INFO   @  147480.6960000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  149327.2560000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME_NR = 400 
+UVM_INFO   @  149335.9360000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  151182.4960000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME_NR = 450 
+UVM_INFO   @  151191.1760000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  153037.7360000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME_NR = 500 
+UVM_INFO   @  153046.4160000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  154901.6560000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @  154901.6560000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME_NR = 0 
+UVM_INFO   @  154910.3360000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  158292.8960000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME_NR = 50 
+UVM_INFO   @  158301.5760000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  161684.1360000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME_NR = 100 
+UVM_INFO   @  161692.8160000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  165075.3760000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME_NR = 150 
+UVM_INFO   @  165084.0560000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  168466.6160000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME_NR = 200 
+UVM_INFO   @  168475.2960000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  171857.8560000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME_NR = 250 
+UVM_INFO   @  171866.5360000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  175249.0960000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME_NR = 300 
+UVM_INFO   @  175257.7760000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  178640.3360000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME_NR = 350 
+UVM_INFO   @  178649.0160000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  182031.5760000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME_NR = 400 
+UVM_INFO   @  182040.2560000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  185422.8160000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME_NR = 450 
+UVM_INFO   @  185431.4960000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  188814.0560000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME_NR = 500 
+UVM_INFO   @  188822.7360000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  192205.2960000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME_NR = 550 
+UVM_INFO   @  192213.9760000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  195596.5360000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME_NR = 600 
+UVM_INFO   @  195605.2160000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  198987.7760000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME_NR = 650 
+UVM_INFO   @  198996.4560000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  202379.0160000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME_NR = 700 
+UVM_INFO   @  202387.6960000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  205770.2560000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME_NR = 750 
+UVM_INFO   @  205778.9360000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  209161.4960000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME_NR = 800 
+UVM_INFO   @  209170.1760000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  212552.7360000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME_NR = 850 
+UVM_INFO   @  212561.4160000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  215943.9760000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME_NR = 900 
+UVM_INFO   @  215952.6560000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  219335.2160000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME_NR = 950 
+UVM_INFO   @  219343.8960000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  222726.4560000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME_NR = 1000 
+UVM_INFO   @  222735.1360000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  226127.3760000us:  [crm_maximum_CRM_TIME_seq] crm_maximum_CRM_TIME_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  226127.3770000us:  [sim:description:1]     *CRM with maximum CRM_TIME setting 
+UVM_INFO   @  226136.0570000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @  226144.7370000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  226144.7370000us:  [sim:description:2]     **CRM with a bit time of BITTIME_8US and CRM_TIME = 2047 
+UVM_INFO   @  228413.8570000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @  228422.5370000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  228422.5370000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME = 2047 
+UVM_INFO   @  230691.6570000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @  230700.3370000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  230700.3370000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 2047 
+UVM_INFO   @  232970.4570000us:  [crm_maximum_CRM_TIME_NR_seq] crm_maximum_CRM_TIME_NR_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  232970.4580000us:  [sim:description:1]     *CRM without expected response and maximum CRM_TIME_NR setting 
+UVM_INFO   @  232979.1380000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @  232987.8180000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  232987.8180000us:  [sim:description:2]     **CRM with a bit time of BITTIME_8US and CRM_TIME = 2047 
+UVM_INFO   @  239448.0580000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @  239456.7380000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  239456.7380000us:  [sim:description:2]     **CRM with a bit time of BITTIME_16US and CRM_TIME = 2047 
+UVM_INFO   @  245916.9780000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @  245925.6580000us:  [sim:measure]           'CRM_TIME_NR' status = PASS 
+UVM_INFO   @  245925.6580000us:  [sim:description:2]     **CRM with a bit time of BITTIME_32US and CRM_TIME = 2047 
+UVM_INFO   @  252391.7380000us:  [crm_maximum_CRM_TIME_with_multiple_answers_seq] crm_maximum_CRM_TIME_with_multiple_answers_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  252391.7390000us:  [sim:description:1]     *CRM with maximum CRM_TIME and multiple slave responses 
+UVM_INFO   @  252400.4190000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  252986.0595220us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  252987.2565190us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  253187.3445190us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  253189.2995220us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  253268.6990000us:  [crm_CRM_TIME_change_during_crm_transmission_seq] crm_CRM_TIME_change_during_crm_transmission_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  253268.7000000us:  [sim:description:1]     *change CRM_TIME during CRM transmission 
+UVM_INFO   @  253778.8750000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @  253883.8200000us:  [crm_late_long_slave_answers_seq] crm_late_long_slave_answers_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  253883.8210000us:  [sim:description:1]     *late too long slave answers in CRM 
+UVM_INFO   @  253892.5010000us:  [sim:description:2]     **late too long slave answers in CRM using 2 us chiptime 
+UVM_INFO   @  259482.7810000us:  [sim:description:2]     **late too long slave answers in CRM using 3 us chiptime 
+UVM_INFO   @  265073.0610000us:  [sim:description:2]     **late too long slave answers in CRM using 4 us chiptime 
+UVM_INFO   @  270663.3410000us:  [sim:description:2]     **late too long slave answers in CRM using 5 us chiptime 
+UVM_INFO   @  276249.7810000us:  [crm_late_short_slave_answers_seq] crm_late_short_slave_answers_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  276249.7820000us:  [sim:description:1]     *late too short slave answers in CRM 
+UVM_INFO   @  276258.4620000us:  [sim:description:2]     **late too short slave answers in CRM using 2 us chiptime 
+UVM_INFO   @  283430.3420000us:  [sim:description:2]     **late too short slave answers in CRM using 3 us chiptime 
+UVM_INFO   @  290602.2220000us:  [sim:description:2]     **late too short slave answers in CRM using 4 us chiptime 
+UVM_INFO   @  297774.1020000us:  [sim:description:2]     **late too short slave answers in CRM using 5 us chiptime 
+UVM_INFO   @  304942.1420000us:  [crm_very_long_slave_answers_seq] crm_very_long_slave_answers_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  304942.1430000us:  [sim:description:1]     *receive very long slave answers in CRM 
+UVM_INFO   @  312063.2630000us:  [crm_very_long_slave_answers_with_additional_crm_seq] crm_very_long_slave_answers_with_additional_crm_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  312063.2640000us:  [sim:description:1]     *receive very long slave answer and additional CRM 
+UVM_INFO   @  318197.8240000us:  [crm_two_short_slave_answers_seq] crm_two_short_slave_answers_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  318197.8250000us:  [sim:description:1]     *receive two short slave answers in one CRM 
+UVM_INFO   @  318227.0024100us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  318616.6710000us:  [m_master_transmission_checker_0] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  318921.1560000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @  319352.8870000us:  [m_master_transmission_checker_1] ignored unexpected slave response  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(418) 
+UVM_INFO   @  319657.1080000us:  [m_master_transmission_checker_1] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @  319765.8530000us:  [crm_clock_ref_error_during_crm_transmission_seq] crm_clock_ref_error_during_crm_transmission_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  319765.8540000us:  [sim:description:1]     *clock ref error during CRM master transmission 
+UVM_INFO   @  319774.5340000us:  [sim:measure]           'CLKREF_CONF' status = PASS 
+UVM_INFO   @  321787.9740000us:  [crm_clock_ref_error_in_crm_for_all_channels_seq] crm_clock_ref_error_in_crm_for_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  321787.9750000us:  [sim:description:1]     *receive packets with clock ref error (CE) on all channels 
+UVM_INFO   @  321787.9750000us:  [sim:description:2]     **receive clock ref error for CLKREF configuration of  0.50Mhz 
+UVM_INFO   @  321796.6550000us:  [sim:measure]           'CLKREF_CONF' status = PASS 
+UVM_INFO   @  325033.5350000us:  [sim:description:2]     **receive clock ref error for CLKREF configuration of  1.00Mhz 
+UVM_INFO   @  325042.2150000us:  [sim:measure]           'CLKREF_CONF' status = PASS 
+UVM_INFO   @  328279.0950000us:  [sim:description:2]     **receive clock ref error for CLKREF configuration of  2.00Mhz 
+UVM_INFO   @  328287.7750000us:  [sim:measure]           'CLKREF_CONF' status = PASS 
+UVM_INFO   @  331524.6550000us:  [sim:description:2]     **receive clock ref error for CLKREF configuration of  4.00Mhz 
+UVM_INFO   @  331533.3350000us:  [sim:measure]           'CLKREF_CONF' status = PASS 
+UVM_INFO   @  335775.0550000us:  [crm_clock_ref_inside_crm_transmission_seq] crm_clock_ref_inside_crm_transmission_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  335775.0560000us:  [sim:description:1]     *clock ref error inside CRM master transmission 
+UVM_INFO   @  335783.7360000us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @  335792.4160000us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  339260.7360000us:  [crm_clock_ref_disable_during_crm_transmission_seq] crm_clock_ref_disable_during_crm_transmission_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  339260.7370000us:  [sim:description:1]     *disable clock ref error during CRM master transmission 
+UVM_INFO   @  341219.3770000us:  [crm_clock_ref_error_during_crm_transmission_without_slave_answer_seq] crm_clock_ref_error_during_crm_transmission_without_slave_answer_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  341219.3780000us:  [sim:description:1]     *clock ref error during CRM master transmission without slave answer 
+UVM_INFO   @  341228.0580000us:  [sim:measure]           'CLKREF_CONF' status = PASS 
+UVM_INFO   @  343028.4012940us:  [crm_disable_clock_ref_during_transmission_p52143_697_seq] crm_disable_clock_ref_during_transmission_p52143_697_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  343028.4022940us:  [sim:description:1]     *disable clock ref during CRM master transmission 
+UVM_INFO   @  343028.4022940us:  [sim:description:2]     **disable clock ref during CRM master transmission, channel shift = 0, clkref shutoff duration = 1000 us 
+UVM_INFO   @  343075.8022940us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @  343084.4822940us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  344296.9622940us:  [sim:measure]           'IRQ_STAT' status = PASS 
+UVM_INFO   @  344915.2822940us:  [sim:description:2]     **disable clock ref during CRM master transmission, channel shift = 0, clkref shutoff duration = 10 us 
+UVM_INFO   @  344962.6822940us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @  344971.3622940us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  346183.8422940us:  [sim:measure]           'IRQ_STAT' status = PASS 
+UVM_INFO   @  346802.1622940us:  [sim:description:2]     **disable clock ref during CRM master transmission, channel shift = 200, clkref shutoff duration = 1000 us 
+UVM_INFO   @  346849.5622940us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @  346858.2422940us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  348070.7222940us:  [sim:measure]           'IRQ_STAT' status = PASS 
+UVM_INFO   @  349289.0422940us:  [crm_voltage_error_in_crm_for_all_channels_seq] crm_voltage_error_in_crm_for_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  349289.0432940us:  [sim:description:1]     *receive packets with voltage error (VE) on all channels 
+UVM_INFO   @  349289.0432940us:  [sim:description:2]     **receive under voltage error at channel 0 without slave answer 
+UVM_INFO   @  349654.6832940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  349658.5232940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  349662.3632940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  349666.2032940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  350190.2032940us:  [sim:description:2]     **receive  over voltage error at channel 0 without slave answer 
+UVM_INFO   @  350571.8432940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  350575.6832940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  350579.5232940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  350583.3632940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  351107.3632940us:  [sim:description:2]     **receive under voltage error at channel 1 without slave answer 
+UVM_INFO   @  351446.0032940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  351449.8432940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  351453.6832940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  351457.5232940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  351981.5232940us:  [sim:description:2]     **receive  over voltage error at channel 1 without slave answer 
+UVM_INFO   @  352243.1632940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  352247.0032940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  352250.8432940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  352254.6832940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  352778.6832940us:  [sim:description:2]     **receive under voltage error at channel 0    with slave answer 
+UVM_INFO   @  353177.3232940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  353181.1632940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  353185.0032940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  353188.8432940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  353712.8432940us:  [sim:description:2]     **receive  over voltage error at channel 0    with slave answer 
+UVM_INFO   @  354056.4832940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  354060.3232940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  354064.1632940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  354068.0032940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  354592.0032940us:  [sim:description:2]     **receive under voltage error at channel 1    with slave answer 
+UVM_INFO   @  354914.6432940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  354918.4832940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  354922.3232940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  354926.1632940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  355450.1632940us:  [sim:description:2]     **receive  over voltage error at channel 1    with slave answer 
+UVM_INFO   @  355845.6982940us:  [m_master_transmission_checker_0] ignored CR0 flag in status word, because of gray zone timing between status read and reception of DSI data  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(290) 
+UVM_INFO   @  355845.6982940us:  [m_master_transmission_checker_1] ignored CR1 flag in status word, because of gray zone timing between status read and reception of DSI data  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(290) 
+UVM_INFO   @  355845.8032940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  355849.5382940us:  [m_master_transmission_checker_0] ignored CR0 flag in status word, because of gray zone timing between status read and reception of DSI data  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(290) 
+UVM_INFO   @  355849.5382940us:  [m_master_transmission_checker_1] ignored CR1 flag in status word, because of gray zone timing between status read and reception of DSI data  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(290) 
+UVM_INFO   @  355849.6432940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  355853.3782940us:  [m_master_transmission_checker_1] ignored CR1 flag in status word, because of gray zone timing between status read and reception of DSI data  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(290) 
+UVM_INFO   @  355853.4832940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  355857.2182940us:  [m_master_transmission_checker_1] ignored CR1 flag in status word, because of gray zone timing between status read and reception of DSI data  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(290) 
+UVM_INFO   @  355857.3232940us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @  356481.3232940us:  [crm_symbol_coding_error_in_crm_for_all_channels_seq] crm_symbol_coding_error_in_crm_for_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  356481.3242940us:  [sim:description:1]     *receive packets with symbol coding error (SE) on all channels 
+UVM_INFO   @  356481.3242940us:  [sim:description:2]     **receive symbol coding error at channel 0 
+UVM_INFO   @  356994.7642940us:  [sim:description:2]     **receive symbol coding error at channel 1 
+UVM_INFO   @  357608.2042940us:  [crm_chip_coding_error_in_crm_for_all_channels_seq] crm_chip_coding_error_in_crm_for_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  357608.2052940us:  [sim:description:1]     *receive packets with chip coding error (SE) on all channels 
+UVM_INFO   @  357608.2052940us:  [sim:description:2]     **receive symbol coding error at channel 0 with delay of 331us 
+UVM_INFO   @  358034.3800180us:  [sim:description:2]     **receive symbol coding error at channel 1 with delay of 339us 
+UVM_INFO   @  358509.1577780us:  [sim:description:2]     **receive symbol coding error at channel 0 with delay of 325us 
+UVM_INFO   @  358939.3244410us:  [sim:description:2]     **receive symbol coding error at channel 1 with delay of 327us 
+UVM_INFO   @  359397.7133830us:  [sim:description:2]     **receive symbol coding error at channel 0 with delay of 342us 
+UVM_INFO   @  359850.8800060us:  [sim:description:2]     **receive symbol coding error at channel 1 with delay of 336us 
+UVM_INFO   @  360306.2133610us:  [sim:description:2]     **receive symbol coding error at channel 0 with delay of 332us 
+UVM_INFO   @  360779.4355740us:  [sim:description:2]     **receive symbol coding error at channel 1 with delay of 342us 
+UVM_INFO   @  361239.4355820us:  [sim:description:2]     **receive symbol coding error at channel 0 with delay of 327us 
+UVM_INFO   @  361674.4355770us:  [sim:description:2]     **receive symbol coding error at channel 1 with delay of 338us 
+UVM_INFO   @  362134.5466930us:  [sim:description:2]     **receive symbol coding error at channel 0 with delay of 336us 
+UVM_INFO   @  362599.2689220us:  [sim:description:2]     **receive symbol coding error at channel 1 with delay of 342us 
+UVM_INFO   @  363050.6022660us:  [sim:description:2]     **receive symbol coding error at channel 0 with delay of 326us 
+UVM_INFO   @  363497.3800180us:  [sim:description:2]     **receive symbol coding error at channel 1 with delay of 342us 
+UVM_INFO   @  363954.9911180us:  [sim:description:2]     **receive symbol coding error at channel 0 with delay of 329us 
+UVM_INFO   @  364425.5466940us:  [sim:description:2]     **receive symbol coding error at channel 1 with delay of 340us 
+UVM_INFO   @  364871.9355540us:  [sim:description:2]     **receive symbol coding error at channel 0 with delay of 342us 
+UVM_INFO   @  365345.6578210us:  [sim:description:2]     **receive symbol coding error at channel 1 with delay of 333us 
+UVM_INFO   @  365788.7689090us:  [sim:description:2]     **receive symbol coding error at channel 0 with delay of 326us 
+UVM_INFO   @  366245.1022620us:  [sim:description:2]     **receive symbol coding error at channel 1 with delay of 333us 
+UVM_INFO   @  366796.2689150us:  [crm_crc_en_seq]        crm_crc_en_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  366796.2699150us:  [sim:description:1]     *CRM transmit with different CRC_EN, broad cast and wrong/correct CRC 
+UVM_INFO   @  366804.9499150us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @  366804.9499150us:  [sim:description:2]     **CRM transmit CRC_EN=0, BROAD_CAST=0, CRC correct = 0 at channel 0 
+UVM_INFO   @  367319.3499150us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  367323.1899150us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  367327.0299150us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  367427.0299150us:  [sim:description:2]     **CRM transmit CRC_EN=0, BROAD_CAST=0, CRC correct = 1 at channel 0 
+UVM_INFO   @  367941.4299150us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  367945.2699150us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  367949.1099150us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  368049.1099150us:  [sim:description:2]     **CRM transmit CRC_EN=0, BROAD_CAST=0, CRC correct = 0 at channel 1 
+UVM_INFO   @  368563.5099150us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  368567.3499150us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  368571.1899150us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  368671.1899150us:  [sim:description:2]     **CRM transmit CRC_EN=0, BROAD_CAST=0, CRC correct = 1 at channel 1 
+UVM_INFO   @  369185.5899150us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  369189.4299150us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  369193.2699150us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  369293.2699150us:  [sim:description:2]     **CRM transmit CRC_EN=0, BROAD_CAST=1, CRC correct = 0 at channel 0 
+UVM_INFO   @  369807.6699150us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  369811.5099150us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  369911.5099150us:  [sim:description:2]     **CRM transmit CRC_EN=0, BROAD_CAST=1, CRC correct = 1 at channel 0 
+UVM_INFO   @  370425.9099150us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  370429.7499150us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  370529.7499150us:  [sim:description:2]     **CRM transmit CRC_EN=0, BROAD_CAST=1, CRC correct = 0 at channel 1 
+UVM_INFO   @  371044.1499150us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  371047.9899150us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  371147.9899150us:  [sim:description:2]     **CRM transmit CRC_EN=0, BROAD_CAST=1, CRC correct = 1 at channel 1 
+UVM_INFO   @  371662.3899150us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  371666.2299150us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  371774.9099150us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @  371774.9099150us:  [sim:description:2]     **CRM transmit CRC_EN=1, BROAD_CAST=0, CRC correct = 0 at channel 0 
+UVM_INFO   @  372289.3099150us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  372293.1499150us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  372296.9899150us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  372396.9899150us:  [sim:description:2]     **CRM transmit CRC_EN=1, BROAD_CAST=0, CRC correct = 1 at channel 0 
+UVM_INFO   @  372911.3899150us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  372915.2299150us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  372919.0699150us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  373019.0699150us:  [sim:description:2]     **CRM transmit CRC_EN=1, BROAD_CAST=0, CRC correct = 0 at channel 1 
+UVM_INFO   @  373533.4699150us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  373537.3099150us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  373541.1499150us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  373641.1499150us:  [sim:description:2]     **CRM transmit CRC_EN=1, BROAD_CAST=0, CRC correct = 1 at channel 1 
+UVM_INFO   @  374155.5499150us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  374159.3899150us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  374163.2299150us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  374263.2299150us:  [sim:description:2]     **CRM transmit CRC_EN=1, BROAD_CAST=1, CRC correct = 0 at channel 0 
+UVM_INFO   @  374777.6299150us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  374781.4699150us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  374881.4699150us:  [sim:description:2]     **CRM transmit CRC_EN=1, BROAD_CAST=1, CRC correct = 1 at channel 0 
+UVM_INFO   @  375395.8699150us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  375399.7099150us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  375499.7099150us:  [sim:description:2]     **CRM transmit CRC_EN=1, BROAD_CAST=1, CRC correct = 0 at channel 1 
+UVM_INFO   @  376014.1099150us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  376017.9499150us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  376117.9499150us:  [sim:description:2]     **CRM transmit CRC_EN=1, BROAD_CAST=1, CRC correct = 1 at channel 1 
+UVM_INFO   @  376632.3499150us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  376636.1899150us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  376741.0299150us:  [crm_multiple_crms_in_one_command_frame_seq] crm_multiple_crms_in_one_command_frame_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  376741.0309150us:  [sim:description:1]     *multiple CRM TRANSMIT in one SPI command frame 
+UVM_INFO   @  376741.0309150us:  [sim:description:2]     **do multiple CRM TRANSMIT in one SPI command frame with chip time of  2us 
+UVM_INFO   @  378386.1909150us:  [sim:description:2]     **do multiple CRM TRANSMIT in one SPI command frame with chip time of  3us 
+UVM_INFO   @  380031.3509150us:  [sim:description:2]     **do multiple CRM TRANSMIT in one SPI command frame with chip time of  4us 
+UVM_INFO   @  381567.7659150us:  [m_master_transmission_checker_0] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @  381676.5109150us:  [sim:description:2]     **do multiple CRM TRANSMIT in one SPI command frame with chip time of  5us 
+UVM_INFO   @  383426.5109150us:  [crm_multiple_broadcast_crms_in_one_command_frame_seq] crm_multiple_broadcast_crms_in_one_command_frame_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  383426.5119150us:  [sim:description:1]     *multiple broadcast CRM TRANSMIT in one SPI command frame 
+UVM_INFO   @  384937.0719150us:  [crm_symbol_noise_on_all_channels_seq] crm_symbol_noise_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  384937.0729150us:  [sim:description:1]     *CRM and symbol noise on all channels 
+UVM_INFO   @  384937.0729150us:  [sim:description:2]     **CRM and 1 symbols noise on all channels 
+UVM_INFO   @  385450.4079150us:  [m_master_transmission_checker_1] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @  385503.3929150us:  [sim:description:2]     **CRM and 2 symbols noise on all channels 
+UVM_INFO   @  386069.7129150us:  [sim:description:2]     **CRM and 3 symbols noise on all channels 
+UVM_INFO   @  386583.0479150us:  [m_master_transmission_checker_0] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @  386736.0329150us:  [crm_dsi_fast_config_access_seq] crm_dsi_fast_config_access_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  386736.0339150us:  [sim:description:1]     *use short filter for different chip times 
+UVM_INFO   @  386744.7139150us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @  386744.7139150us:  [sim:description:2]     **do CRM with configured chiptime of: 2 
+UVM_INFO   @  387177.0466740us:  [sim:description:2]     **do CRM with configured chiptime of: 3 
+UVM_INFO   @  387652.2688820us:  [sim:description:2]     **do CRM with configured chiptime of: 4 
+UVM_INFO   @  388156.4355500us:  [sim:description:2]     **do CRM with configured chiptime of: 5 
+UVM_INFO   @  388683.2755500us:  [crm_check_different_chiptimes_and_bittimes_seq] crm_check_different_chiptimes_and_bittimes_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  388683.2765500us:  [sim:description:1]     *do CRM with different chip times and different TX bit times 
+UVM_INFO   @  388691.9565500us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @  388700.6365500us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @  388700.6365500us:  [sim:description:2]     **do CRM with chip time of  2us and TX bit time BITTIME_8US 
+UVM_INFO   @  388713.1565500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  388716.9965500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  388725.6765500us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  388725.6765500us:  [crm_check_different_chiptimes_and_bittimes] wrote CRM_TIME register to value 400  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_check_different_chiptimes_and_bittimes_seq.svh(49) 
+UVM_INFO   @  388754.3165500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  388758.1565500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  389154.3165500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  389158.1565500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  389170.6365500us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  389174.4765500us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  389178.3165500us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  389182.1565500us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  389185.9965500us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  389189.8365500us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  390189.8365500us:  [sim:description:2]     **do CRM with chip time of  3us and TX bit time BITTIME_8US 
+UVM_INFO   @  390202.3565500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  390206.1965500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  390214.8765500us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  390214.8765500us:  [crm_check_different_chiptimes_and_bittimes] wrote CRM_TIME register to value 426  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_check_different_chiptimes_and_bittimes_seq.svh(49) 
+UVM_INFO   @  390243.5165500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  390247.3565500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  390669.5165500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  390673.3565500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  390685.8365500us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  390689.6765500us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  390693.5165500us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  390697.3565500us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  390701.1965500us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  390705.0365500us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  391705.0365500us:  [sim:description:2]     **do CRM with chip time of  4us and TX bit time BITTIME_8US 
+UVM_INFO   @  391717.5565500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  391721.3965500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  391730.0765500us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  391730.0765500us:  [crm_check_different_chiptimes_and_bittimes] wrote CRM_TIME register to value 451  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_check_different_chiptimes_and_bittimes_seq.svh(49) 
+UVM_INFO   @  391758.7165500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  391762.5565500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  392209.7165500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  392213.5565500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  392226.0365500us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  392229.8765500us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  392233.7165500us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  392237.5565500us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  392241.3965500us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  392245.2365500us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  393245.2365500us:  [sim:description:2]     **do CRM with chip time of  5us and TX bit time BITTIME_8US 
+UVM_INFO   @  393257.7565500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  393261.5965500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  393270.2765500us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  393270.2765500us:  [crm_check_different_chiptimes_and_bittimes] wrote CRM_TIME register to value 476  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_check_different_chiptimes_and_bittimes_seq.svh(49) 
+UVM_INFO   @  393298.9165500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  393302.7565500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  393774.9165500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  393778.7565500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  393791.2365500us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  393795.0765500us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  393798.9165500us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  393802.7565500us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  393806.5965500us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  393810.4365500us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  394819.1165500us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @  394819.1165500us:  [sim:description:2]     **do CRM with chip time of  2us and TX bit time BITTIME_16US 
+UVM_INFO   @  394831.6365500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  394835.4765500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  394844.1565500us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  394844.1565500us:  [crm_check_different_chiptimes_and_bittimes] wrote CRM_TIME register to value 720  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_check_different_chiptimes_and_bittimes_seq.svh(49) 
+UVM_INFO   @  394872.7965500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  394876.6365500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  395592.7965500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  395596.6365500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  395609.1165500us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  395612.9565500us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  395616.7965500us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  395620.6365500us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  395624.4765500us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  395628.3165500us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  396628.3165500us:  [sim:description:2]     **do CRM with chip time of  3us and TX bit time BITTIME_16US 
+UVM_INFO   @  396640.8365500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  396644.6765500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  396653.3565500us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  396653.3565500us:  [crm_check_different_chiptimes_and_bittimes] wrote CRM_TIME register to value 746  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_check_different_chiptimes_and_bittimes_seq.svh(49) 
+UVM_INFO   @  396681.9965500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  396685.8365500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  397427.9965500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  397431.8365500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  397444.3165500us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  397448.1565500us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  397451.9965500us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  397455.8365500us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  397459.6765500us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  397463.5165500us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  398463.5165500us:  [sim:description:2]     **do CRM with chip time of  4us and TX bit time BITTIME_16US 
+UVM_INFO   @  398476.0365500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  398479.8765500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  398488.5565500us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  398488.5565500us:  [crm_check_different_chiptimes_and_bittimes] wrote CRM_TIME register to value 771  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_check_different_chiptimes_and_bittimes_seq.svh(49) 
+UVM_INFO   @  398517.1965500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  398521.0365500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  399288.1965500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  399292.0365500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  399304.5165500us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  399308.3565500us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  399312.1965500us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  399316.0365500us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  399319.8765500us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  399323.7165500us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  400323.7165500us:  [sim:description:2]     **do CRM with chip time of  5us and TX bit time BITTIME_16US 
+UVM_INFO   @  400336.2365500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  400340.0765500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  400348.7565500us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  400348.7565500us:  [crm_check_different_chiptimes_and_bittimes] wrote CRM_TIME register to value 796  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_check_different_chiptimes_and_bittimes_seq.svh(49) 
+UVM_INFO   @  400377.3965500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  400381.2365500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  401173.3965500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  401177.2365500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  401189.7165500us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  401193.5565500us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  401197.3965500us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  401201.2365500us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  401205.0765500us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  401208.9165500us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  402217.5965500us:  [sim:measure]           'DSI_CFG' status = PASS 
+UVM_INFO   @  402217.5965500us:  [sim:description:2]     **do CRM with chip time of  2us and TX bit time BITTIME_32US 
+UVM_INFO   @  402230.1165500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  402233.9565500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  402242.6365500us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  402242.6365500us:  [crm_check_different_chiptimes_and_bittimes] wrote CRM_TIME register to value 1360  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_check_different_chiptimes_and_bittimes_seq.svh(49) 
+UVM_INFO   @  402271.2765500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  402275.1165500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  403631.2765500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  403635.1165500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  403647.5965500us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  403651.4365500us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  403655.2765500us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  403659.1165500us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  403662.9565500us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  403666.7965500us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  404666.7965500us:  [sim:description:2]     **do CRM with chip time of  3us and TX bit time BITTIME_32US 
+UVM_INFO   @  404679.3165500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  404683.1565500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  404691.8365500us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  404691.8365500us:  [crm_check_different_chiptimes_and_bittimes] wrote CRM_TIME register to value 1386  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_check_different_chiptimes_and_bittimes_seq.svh(49) 
+UVM_INFO   @  404720.4765500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  404724.3165500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  406106.4765500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  406110.3165500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  406118.8515500us:  [m_master_transmission_checker_0] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @  406122.7965500us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  406126.6365500us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  406130.4765500us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  406134.3165500us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  406138.1565500us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  406141.9965500us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  407141.9965500us:  [sim:description:2]     **do CRM with chip time of  4us and TX bit time BITTIME_32US 
+UVM_INFO   @  407154.5165500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  407158.3565500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  407167.0365500us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  407167.0365500us:  [crm_check_different_chiptimes_and_bittimes] wrote CRM_TIME register to value 1411  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_check_different_chiptimes_and_bittimes_seq.svh(49) 
+UVM_INFO   @  407195.6765500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  407199.5165500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  408606.6765500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  408610.5165500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  408619.0515500us:  [m_master_transmission_checker_1] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @  408622.9965500us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  408626.8365500us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  408630.6765500us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  408634.5165500us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  408638.3565500us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  408642.1965500us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  409642.1965500us:  [sim:description:2]     **do CRM with chip time of  5us and TX bit time BITTIME_32US 
+UVM_INFO   @  409654.7165500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  409658.5565500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  409667.2365500us:  [sim:measure]           'CRM_TIME' status = PASS 
+UVM_INFO   @  409667.2365500us:  [crm_check_different_chiptimes_and_bittimes] wrote CRM_TIME register to value 1436  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_check_different_chiptimes_and_bittimes_seq.svh(49) 
+UVM_INFO   @  409695.8765500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  409699.7165500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  411131.8765500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  411135.7165500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @  411148.1965500us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  411152.0365500us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  411155.8765500us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  411159.7165500us:  [sim:measure]           'CRM_WORD1' status = PASS 
+UVM_INFO   @  411163.5565500us:  [sim:measure]           'CRM_WORD2' status = PASS 
+UVM_INFO   @  411167.3965500us:  [sim:measure]           'PACKET_STAT' status = PASS 
+UVM_INFO   @  412186.7565500us:  [crm_fill_buffer_seq]   crm_fill_buffer_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  412186.7575500us:  [sim:description:1]     *do many CRM TRANSMITs on all channels without reading data 
+UVM_INFO   @  412186.7575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  412704.0775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 2  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  413221.3975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 3  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  413738.7175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 4  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  414256.0375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 5  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  414773.3575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 6  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  415290.6775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 7  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  415807.9975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 8  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  416325.3175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 9  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  416842.6375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 10  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  417359.9575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 11  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  417877.2775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 12  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  418394.5975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 13  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  418911.9175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 14  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  419429.2375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 15  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  419946.5575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 16  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  420463.8775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 17  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  420981.1975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 18  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  421498.5175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 19  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  422015.8375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 20  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  422533.1575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 21  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  423050.4775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 22  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  423567.7975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 23  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  424085.1175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 24  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  424602.4375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 25  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  425119.7575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 26  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  425637.0775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 27  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  426154.3975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 28  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  426671.7175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 29  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  427189.0375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 30  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  427706.3575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 31  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  428223.6775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 32  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  428740.9975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 33  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  429258.3175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 34  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  429775.6375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 35  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  430292.9575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 36  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  430810.2775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 37  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  431327.5975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 38  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  431844.9175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 39  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  432362.2375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 40  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  432879.5575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 41  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  433396.8775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 42  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  433914.1975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 43  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  434430.5175500us:  [sim:measure]           'STATUS_WORD' status = PASS 
+UVM_INFO   @  434435.3575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 44  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  434951.6775500us:  [sim:measure]           'STATUS_WORD' status = PASS 
+UVM_INFO   @  434956.5175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 45  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  435472.8375500us:  [sim:measure]           'STATUS_WORD' status = PASS 
+UVM_INFO   @  435477.6775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 46  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  435993.9975500us:  [sim:measure]           'STATUS_WORD' status = PASS 
+UVM_INFO   @  435998.8375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 47  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  436515.1575500us:  [sim:measure]           'STATUS_WORD' status = PASS 
+UVM_INFO   @  436519.9975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 48  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  437036.3175500us:  [sim:measure]           'STATUS_WORD' status = PASS 
+UVM_INFO   @  437041.1575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 49  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  437557.4775500us:  [sim:measure]           'STATUS_WORD' status = PASS 
+UVM_INFO   @  437562.3175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 50  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  438078.6375500us:  [sim:measure]           'STATUS_WORD' status = PASS 
+UVM_INFO   @  438083.4775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 51  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  438599.7975500us:  [sim:measure]           'STATUS_WORD' status = PASS 
+UVM_INFO   @  438604.6375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT number 52  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(23) 
+UVM_INFO   @  439120.9575500us:  [sim:measure]           'STATUS_WORD' status = PASS 
+UVM_INFO   @  439228.6775500us:  [sim:description:1]     *do many CRMs without answer on all channels without reading data 
+UVM_INFO   @  439228.6775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  439745.9975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 2  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  440263.3175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 3  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  440780.6375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 4  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  441297.9575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 5  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  441815.2775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 6  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  442332.5975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 7  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  442849.9175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 8  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  443367.2375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 9  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  443884.5575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 10  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  444401.8775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 11  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  444919.1975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 12  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  445436.5175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 13  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  445953.8375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 14  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  446471.1575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 15  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  446988.4775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 16  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  447505.7975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 17  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  448023.1175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 18  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  448540.4375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 19  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  449057.7575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 20  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  449575.0775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 21  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  450092.3975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 22  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  450609.7175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 23  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  451127.0375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 24  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  451644.3575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 25  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  452161.6775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 26  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  452678.9975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 27  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  453196.3175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 28  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  453713.6375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 29  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  454230.9575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 30  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  454748.2775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 31  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  455265.5975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 32  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  455782.9175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 33  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  456300.2375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 34  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  456817.5575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 35  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  457334.8775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 36  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  457852.1975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 37  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  458369.5175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 38  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  458886.8375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 39  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  459404.1575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 40  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  459921.4775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 41  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  460438.7975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 42  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  460956.1175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 43  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  461473.4375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 44  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  461990.7575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 45  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  462508.0775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 46  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  463025.3975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 47  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  463542.7175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 48  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  464060.0375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 49  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  464577.3575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 50  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  465094.6775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 51  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  465611.9975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 52  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  466129.3175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 53  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  466646.6375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 54  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  467163.9575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 55  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  467681.2775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 56  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  468198.5975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 57  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  468715.9175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 58  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  469233.2375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 59  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  469750.5575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 60  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  470267.8775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 61  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  470785.1975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 62  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  471302.5175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 63  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  471819.8375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 64  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  472337.1575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 65  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  472854.4775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 66  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  473371.7975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 67  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  473889.1175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 68  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  474406.4375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 69  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  474923.7575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 70  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  475441.0775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 71  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  475958.3975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 72  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  476475.7175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 73  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  476993.0375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 74  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  477510.3575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 75  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  478027.6775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 76  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  478544.9975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 77  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  479062.3175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 78  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  479579.6375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 79  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  480096.9575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 80  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  480614.2775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 81  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  481131.5975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 82  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  481648.9175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 83  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  482166.2375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 84  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  482683.5575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 85  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  483200.8775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 86  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  483718.1975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 87  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  484235.5175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 88  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  484752.8375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 89  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  485270.1575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 90  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  485787.4775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 91  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  486304.7975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 92  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  486822.1175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 93  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  487339.4375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 94  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  487856.7575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 95  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  488374.0775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 96  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  488891.3975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 97  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  489408.7175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 98  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  489926.0375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 99  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  490443.3575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 100  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  490960.6775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 101  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  491477.9975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 102  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  491995.3175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 103  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  492512.6375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 104  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  493029.9575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 105  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  493547.2775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 106  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  494064.5975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 107  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  494581.9175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 108  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  495099.2375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 109  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  495616.5575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 110  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  496133.8775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 111  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  496651.1975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 112  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  497168.5175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 113  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  497685.8375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 114  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  498203.1575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 115  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  498720.4775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 116  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  499237.7975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 117  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  499755.1175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 118  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  500272.4375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 119  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  500789.7575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 120  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  501307.0775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 121  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  501824.3975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 122  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  502341.7175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 123  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  502859.0375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 124  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  503376.3575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 125  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  503893.6775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 126  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  504410.9975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 127  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  504927.3175500us:  [sim:measure]           'STATUS_WORD' status = PASS 
+UVM_INFO   @  504932.1575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 128  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  505448.4775500us:  [sim:measure]           'STATUS_WORD' status = PASS 
+UVM_INFO   @  505453.3175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 129  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  505969.6375500us:  [sim:measure]           'STATUS_WORD' status = PASS 
+UVM_INFO   @  505974.4775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 130  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  506490.7975500us:  [sim:measure]           'STATUS_WORD' status = PASS 
+UVM_INFO   @  506495.6375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 131  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  507011.9575500us:  [sim:measure]           'STATUS_WORD' status = PASS 
+UVM_INFO   @  507016.7975500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 132  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  507533.1175500us:  [sim:measure]           'STATUS_WORD' status = PASS 
+UVM_INFO   @  507537.9575500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 133  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  508054.2775500us:  [sim:measure]           'STATUS_WORD' status = PASS 
+UVM_INFO   @  508059.1175500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 134  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  508575.4375500us:  [sim:measure]           'STATUS_WORD' status = PASS 
+UVM_INFO   @  508580.2775500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 135  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  509096.5975500us:  [sim:measure]           'STATUS_WORD' status = PASS 
+UVM_INFO   @  509101.4375500us:  [crm_fill_buffer_seq]   CRM TRANSMIT nummber 136  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/crm/crm_fill_buffer_seq.svh(61) 
+UVM_INFO   @  509617.7575500us:  [sim:measure]           'STATUS_WORD' status = PASS 
+UVM_INFO   @  509725.4775500us:  [crm_random_on_different_channels_seq] crm_random_on_different_channels_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  509725.4785500us:  [sim:description:1]     *CRM TRANSMIT on random channel 
+UVM_INFO   @  520665.3735500us:  [m_master_transmission_checker_0] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1350) 
+UVM_INFO   @  522000.0385500us:  [crm_read_status_during_reception_seq] crm_read_status_during_reception_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  522000.0395500us:  [sim:description:1]     *read IC status during CRM transmission on all channels 
+UVM_INFO   @  522379.1345500us:  [m_master_transmission_checker_1] ignored CR1 flag in status word, because of gray zone timing between status read and reception of DSI data  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(290) 
+UVM_INFO   @  522379.1345500us:  [m_master_transmission_checker_1] ignored CR1 flag in status word, because of gray zone timing between status read and reception of DSI data  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(290) 
+UVM_INFO   @  522382.0145500us:  [m_master_transmission_checker_0] ignored CR0 flag in status word, because of gray zone timing between status read and reception of DSI data  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(290) 
+UVM_INFO   @  522382.0145500us:  [m_master_transmission_checker_0] ignored CR0 flag in status word, because of gray zone timing between status read and reception of DSI data  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(290) 
+UVM_INFO   @  522382.0145500us:  [m_master_transmission_checker_1] ignored CR1 flag in status word, because of gray zone timing between status read and reception of DSI data  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(290) 
+UVM_INFO   @  522382.0145500us:  [m_master_transmission_checker_1] ignored CR1 flag in status word, because of gray zone timing between status read and reception of DSI data  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(290) 
+UVM_INFO   @  522384.8945500us:  [m_master_transmission_checker_0] ignored CR0 flag in status word, because of gray zone timing between status read and reception of DSI data  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(290) 
+UVM_INFO   @  522384.8945500us:  [m_master_transmission_checker_0] ignored CR0 flag in status word, because of gray zone timing between status read and reception of DSI data  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(290) 
+UVM_INFO   @  522384.8945500us:  [m_master_transmission_checker_1] ignored CR1 flag in status word, because of gray zone timing between status read and reception of DSI data  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(290) 
+UVM_INFO   @  522384.8945500us:  [m_master_transmission_checker_1] ignored CR1 flag in status word, because of gray zone timing between status read and reception of DSI data  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(290) 
+UVM_INFO   @  522387.7745500us:  [m_master_transmission_checker_0] ignored CR0 flag in status word, because of gray zone timing between status read and reception of DSI data  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(290) 
+UVM_INFO   @  522387.7745500us:  [m_master_transmission_checker_0] ignored CR0 flag in status word, because of gray zone timing between status read and reception of DSI data  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(290) 
+UVM_INFO   @  522387.7745500us:  [m_master_transmission_checker_1] ignored CR1 flag in status word, because of gray zone timing between status read and reception of DSI data  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(290) 
+UVM_INFO   @  522387.7745500us:  [m_master_transmission_checker_1] ignored CR1 flag in status word, because of gray zone timing between status read and reception of DSI data  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(290) 
+UVM_INFO   @  522390.6545500us:  [m_master_transmission_checker_0] ignored CR0 flag in status word, because of gray zone timing between status read and reception of DSI data  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(290) 
+UVM_INFO   @  522390.6545500us:  [m_master_transmission_checker_0] ignored CR0 flag in status word, because of gray zone timing between status read and reception of DSI data  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(290) 
+UVM_INFO   @  522390.6545500us:  [m_master_transmission_checker_1] ignored CR1 flag in status word, because of gray zone timing between status read and reception of DSI data  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(290) 
+UVM_INFO   @  522390.6545500us:  [m_master_transmission_checker_1] ignored CR1 flag in status word, because of gray zone timing between status read and reception of DSI data  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(290) 
+UVM_INFO   @  522393.5345500us:  [m_master_transmission_checker_0] ignored CR0 flag in status word, because of gray zone timing between status read and reception of DSI data  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(290) 
+UVM_INFO   @  522393.5345500us:  [m_master_transmission_checker_0] ignored CR0 flag in status word, because of gray zone timing between status read and reception of DSI data  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(290) 
+UVM_ERROR  @  522505.5345500us:  [spi_dsi_data_packet]   Unexpected flags at channel 0! Flag SE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_INFO   @  523665.6395500us:  [sim:status]            PASS 
+UVM_INFO   @  523665.6395500us:  [sim:end]               dsi3_crm sequence completed 
+UVM_INFO   @  523665.6395500us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  523665.6395500us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  523665.6395500us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  523665.6395500us:  [dsi3_master_coverage]  Coverage score = 50.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/dsi3_master/dsi3_master_coverage.sv(52) 
+UVM_INFO   @  523665.6395500us:  [dsi3_master_coverage]  Coverage score = 50.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/dsi3_master/dsi3_master_coverage.sv(52) 
+UVM_INFO   @  523665.6395500us:  [dsi3_slave_coverage]   Coverage score = 25.7%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/dsi3_slave/dsi3_slave_coverage.sv(57) 
+UVM_INFO   @  523665.6395500us:  [dsi3_slave_coverage]   Coverage score = 25.7%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/dsi3_slave/dsi3_slave_coverage.sv(57) 
+UVM_INFO   @  523665.6395500us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  523665.6395500us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  523665.6395500us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  523665.6395500us:  [jtag_master_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/jtag_master/jtag_master_coverage.sv(57) 
+UVM_INFO   @  523665.6395500us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  523665.6395500us:  [osc_coverage]          Coverage score = 25.8%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/osc/osc_coverage.sv(52) 
+UVM_INFO   @  523665.6395500us:  [digital_signal_coverage] Coverage score = 37.5%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  523665.6395500us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  523665.6395500us:  [digital_signal_coverage] Coverage score = 37.5%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  523665.6395500us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  523665.6395500us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  523665.6395500us:  [digital_signal_coverage] Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  523665.6395500us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  523665.6395500us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  523665.6395500us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  523665.6395500us:  [UVM/REPORT/CATCHER]    
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+  	/common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_report_catcher.svh(705) 
+UVM_INFO   @  523665.6395500us:  [UVM/REPORT/SERVER]     
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO : 1105
+UVM_WARNING :    0
+UVM_ERROR :    1
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[UVM_CMDLINE_PROC]     1
+[UVM_VERDI_DPI]     1
+[VERDI_TR_AUTO]     1
+[crm_CRM_TIME_NR_lower_than_transmission_time_seq]     1
+[crm_CRM_TIME_change_during_crm_transmission_seq]     1
+[crm_CRM_TIME_lower_than_transmission_time_seq]     1
+[crm_broadcast_and_read_seq]     1
+[crm_check_different_chiptimes_and_bittimes]    12
+[crm_check_different_chiptimes_and_bittimes_seq]     1
+[crm_chip_coding_error_in_crm_for_all_channels_seq]     1
+[crm_clock_ref_disable_during_crm_transmission_seq]     1
+[crm_clock_ref_error_during_crm_transmission_seq]     1
+[crm_clock_ref_error_during_crm_transmission_without_slave_answer_seq]     1
+[crm_clock_ref_error_in_crm_for_all_channels_seq]     1
+[crm_clock_ref_inside_crm_transmission_seq]     1
+[crm_command_without_data_seq]     1
+[crm_crc_en_seq]     1
+[crm_disable_clock_ref_during_transmission_p52143_697_seq]     1
+[crm_dsi_fast_config_access_seq]     1
+[crm_fill_buffer_seq]   189
+[crm_late_long_slave_answers_seq]     1
+[crm_late_short_slave_answers_seq]     1
+[crm_many_crm_in_one_spi_frame_started_with_tx_crc_seq]     1
+[crm_many_on_one_channel_one_on_all_channels_seq]     1
+[crm_maximum_CRM_TIME_NR_seq]     1
+[crm_maximum_CRM_TIME_seq]     1
+[crm_maximum_CRM_TIME_with_multiple_answers_seq]     1
+[crm_multiple_broadcast_crms_in_one_command_frame_seq]     1
+[crm_multiple_crms_in_one_command_frame_seq]     1
+[crm_random_on_different_channels_seq]     1
+[crm_read_data_using_multiple_tx_crc_seq]     1
+[crm_read_empty_data_seq]     1
+[crm_read_status_during_reception_seq]     1
+[crm_single_channel_transmit_seq]     1
+[crm_symbol_coding_error_in_crm_for_all_channels_seq]     1
+[crm_symbol_noise_on_all_channels_seq]     1
+[crm_transmit_and_read_in_one_frame_seq]     1
+[crm_two_short_slave_answers_seq]     1
+[crm_very_long_slave_answers_seq]     1
+[crm_very_long_slave_answers_with_additional_crm_seq]     1
+[crm_voltage_error_in_crm_for_all_channels_seq]     1
+[crm_with_ffff_data_seq]     1
+[crm_without_slave_answer_seq]     1
+[crm_wrong_symbol_counts_seq]     1
+[digital_signal_coverage]     8
+[dsi3_crm_seq]     1
+[dsi3_master_coverage]     2
+[dsi3_slave_coverage]     2
+[jtag_master_coverage]     1
+[m_master_transmission_checker_0]    68
+[m_master_transmission_checker_1]    68
+[osc_coverage]     1
+[real_signal_coverage]     8
+[sim:description]     1
+[sim:description:1]    47
+[sim:description:2]   231
+[sim:end]     1
+[sim:measure]   416
+[sim:status]     1
+[sim:task]     1
+[single_crm_on_all_channels_seq]     1
+[single_crm_on_each_channel_seq]     1
+  	/common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_report_server.svh(904) 
+$finish called from file "/common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_root.svh", line 527.
+$finish at simulation time         523665639550
+Reporting coverage at the end of simulation ...
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, FSM, branch, tgl was monitored
+---------------------------------------------------------------------------
+
+ Coverage status: End of All Coverages ...
+
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 523665639550 ps
+
+Simulation Performance Summary
+==============================
+Simulation started at :  Wed May  7 00:11:21 2025
+Elapsed Time          :  629 sec
+CPU Time              :  736.3 sec
+Virtual memory size   :  895.1 MB
+Resident set size     :  430.3 MB
+Shared memory size    :  2.6 MB
+Private memory size   :  427.7 MB
+Major page faults     :  5
+Machine name          :  ex04.elmos.de
+==============================
+
+Wed May  7 00:21:49 2025
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++ ready:   ./simv_52144_dsi3_crm +UVM_VERBOSITY=UVM_MEDIUM +bus_conflict_off +warn=noFCICIO -ucli -assert nopostproc +UVM_LOG_RECORD -verdi_opts '-ssr Verdi.ses' +uvm_set_type_override=top_default_seq,dsi3_crm_seq -i run.tcl -vcs_assert off +UVM_VERDI_TRACE="UVM_AWARE+RAL+TLM+MSG+HIER+PRINT" +UVM_LOG_RECORD +UVM_TESTNAME=top_test +UVM_TR_RECORD +vcs+lic+wait -reportstats -cm line+cond+fsm+tgl+branch+assert -cm_dir DIGITAL/results/vcs/dsi3_crm.vdb -lca   +fsdbfile+dsi3_crm.fsdb
+ ++ in dir   /nfs/wrk.zaa/sim/52144/m52144a/dsi3_crm
+ ++ on host  ex04.elmos.de
+ ++ user     zaa
+ ++ endtime  2025-05-06T22:21:49
+ ++ took     629 seconds
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

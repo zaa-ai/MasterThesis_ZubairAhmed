@@ -1,0 +1,736 @@
++++ calling  ./simv_52144_jtag_test +UVM_VERBOSITY=UVM_MEDIUM +bus_conflict_off +warn=noFCICIO -ucli -assert nopostproc +UVM_LOG_RECORD -verdi_opts '-ssr Verdi.ses' +uvm_set_type_override=top_default_seq,jtag_test_seq -i run.tcl -vcs_assert off +UVM_VERDI_TRACE="UVM_AWARE+RAL+TLM+MSG+HIER+PRINT" +UVM_LOG_RECORD +UVM_TESTNAME=top_test +UVM_TR_RECORD +vcs+lic+wait -reportstats -cm line+cond+fsm+tgl+branch+assert -cm_dir DIGITAL/results/vcs/jtag_test.vdb -lca   +fsdbfile+jtag_test.fsdb
+ ++ in dir   /nfs/wrk.zaa/sim/52144/m52144a/jtag_test
+ ++ on host  ex04.elmos.de
+ ++ user     zaa
+ ++ start    2025-06-08T16:52:22
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Warning-[LCA_FEATURES_ENABLED] Usage warning
+  LCA features enabled by '-lca' argument on the command line.  For more 
+  information regarding list of LCA features please refer to Chapter "LCA 
+  features" in the VCS Release Notes
+
+Chronologic VCS simulator copyright 1991-2021
+Contains Synopsys proprietary information.
+Compiler version S-2021.09-1_Full64; Runtime version S-2021.09-1_Full64;  Jun  8 18:52 2025
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+
+ VCS Coverage Metrics Release S-2021.09-1_Full64 Copyright (c) 1991-2021 by Synopsys Inc.
+ucli% source dump.tcl
+*Verdi* Loading libsscore_vcsmx202109.so
+FSDB Dumper for VCS-MX, Release Verdi_U-2023.03-1, Linux x86_64/64bit, 04/17/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'jtag_test.fsdb'
+*Verdi* : fsdbDumpon("glitch") - All FSDB files at 0 ps.
+*Verdi* : Begin traversing the scope (top_tb), layer (0).
+*Verdi* : Enable +all dumping.
+*Verdi* : End of traversing.
+*Verdi* : Flush all FSDB Files at 0 ps.
+1
+ucli% if { [info exists ::env(GATE_LEVEL)] } {
+	source tcheck.tcl
+}
+ucli% run
+*Verdi* Enable Verdi Message Catcher.
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/verdi/uvm_custom_install_verdi_recorder.sv(283) @ 0: reporter [VERDI_TR_AUTO] +UVM_TR_RECORD implicitly enables recording_details to UVM_FULL for all components. For explicit control use +UVM_DISABLE_AUTO_COMPONENT and set recording_detail on components accordingly
+UVM_INFO @ 0: reporter [RNTST] Running test top_test...
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VRR applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VREF applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VBG applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+UVM_INFO @ 0: reporter [UVM_CMDLINE_PROC] Applying type override from the command line: +uvm_set_type_override=top_default_seq,jtag_test_seq
+UVM_INFO   @       0.0000000us:  [UVM_VERDI_DPI]         uvm_verdi DPI routines are compiled off. Recompile without +define+UVM_NO_VERDI_DPI 
+UVM_INFO   @       0.0000000us:  [jtag_test_seq]         jtag_test_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+*Verdi* Enable Verdi Recorder.
+Info: Verdi UVM 1.2 Hooks File 06/17/2014 
+UVM_INFO   @       0.0010000us:  [sim:task]              jtag_test 
+UVM_INFO   @    2120.0010000us:  [sim:description]       '''Basic testcase for JTAG and test''' 
+UVM_INFO   @    2141.4250000us:  [sim:description:1]     *Check output of DSI UV and OV at overtemperature (P52143-472) 
+UVM_INFO   @    2765.0389500us:  [sim:description:2]     **Check output of DSI UV and OV at overtemperature with synced output=0 (P52143-472) 
+UVM_INFO   @    2831.7389500us:  [sim:description:2]     **Check output of DSI UV and OV at overtemperature with synced output=1 (P52143-472) 
+UVM_INFO   @    3031.5429500us:  [sim:description:1]     *Check scan test 
+UVM_INFO   @    3838.4269500us:  [sim:description:1]     *Check tdo unlatched for OTP programming 
+UVM_INFO   @    3904.1909500us:  [sim:description:1]     *Check JTAG ID 
+UVM_INFO   @    3928.5989500us:  [sim:description:1]     *Check TEST_TOP DR output shift (P52143-442) 
+UVM_INFO   @    4102.1229500us:  [sim:description:1]     *check TMR_ANA 
+UVM_INFO   @    4102.1229500us:  [sim:description:2]     **check TMR_ANA_SUP 
+UVM_INFO   @    4140.1629500us:  [sim:measure]           'TMR_ANA_SUPPLY' status = PASS 
+UVM_INFO   @    4140.1629500us:  [sim:description:2]     **check TMR_ANA_TEMP_SENSOR 
+UVM_INFO   @    4159.1829500us:  [sim:measure]           'TMR_ANA_TEMP_SENSOR' status = PASS 
+UVM_INFO   @    4159.1829500us:  [sim:description:2]     **check TMR_ANA_OTP 
+UVM_INFO   @    4203.5629500us:  [sim:measure]           'TMR_ANA_OTP' status = PASS 
+UVM_INFO   @    4203.5629500us:  [sim:description:2]     **check TMR_ANA_TB_OSC 
+UVM_INFO   @    4228.9229500us:  [sim:measure]           'TMR_ANA_TB_OSC' status = PASS 
+UVM_INFO   @    4228.9229500us:  [sim:description:2]     **check TMR_ANA_TB_PLL 
+UVM_INFO   @    4279.6429500us:  [sim:measure]           'TMR_ANA_TB_PLL' status = PASS 
+UVM_INFO   @    4279.6429500us:  [sim:description:2]     **check TMR_ANA_DSI_TX[0] 
+UVM_INFO   @    4330.3629500us:  [sim:measure]           'TMR_ANA_DSI3_TX' status = PASS 
+UVM_INFO   @    4330.3629500us:  [sim:description:2]     **check TMR_ANA_DSI_RX[0] 
+UVM_INFO   @    4343.0429500us:  [sim:measure]           'TMR_ANA_DSI3_RX' status = PASS 
+UVM_INFO   @    4343.0429500us:  [sim:description:2]     **check TMR_ANA_DSI_TX[1] 
+UVM_INFO   @    4393.7629500us:  [sim:measure]           'TMR_ANA_DSI3_TX' status = PASS 
+UVM_INFO   @    4393.7629500us:  [sim:description:2]     **check TMR_ANA_DSI_RX[1] 
+UVM_INFO   @    4406.4429500us:  [sim:measure]           'TMR_ANA_DSI3_RX' status = PASS 
+UVM_INFO   @    4406.4429500us:  [sim:description:1]     *check TMR_SEL/_VAL 
+UVM_INFO   @    4406.4429500us:  [sim:description:2]     **check TMR_SEL/_VAL DSI on channel 0 
+UVM_INFO   @    4550.6029500us:  [sim:measure]           'TMR_SEL_DSI3' status = PASS 
+UVM_INFO   @    4550.6029500us:  [sim:measure]           'TMR_VAL_DSI3' status = PASS 
+UVM_INFO   @    4550.6029500us:  [sim:description:2]     **check TMR_SEL/_VAL DSI on channel 1 
+UVM_INFO   @    4694.7629500us:  [sim:measure]           'TMR_SEL_DSI3' status = PASS 
+UVM_INFO   @    4694.7629500us:  [sim:measure]           'TMR_VAL_DSI3' status = PASS 
+UVM_INFO   @    4694.7629500us:  [sim:description:2]     **check TMR_SEL/_VAL time base 
+UVM_INFO   @    4766.8429500us:  [sim:measure]           'TMR_SEL_TB' status = PASS 
+UVM_INFO   @    4766.8429500us:  [sim:measure]           'TMR_VAL_TB' status = PASS 
+UVM_INFO   @    4766.8429500us:  [sim:description:1]     *JTAG elip register read/write test 
+UVM_INFO   @    5171.6029500us:  [sim:description:1]     *JTAG elip RAM read/write of first and last 10 RAM cells 
+UVM_INFO   @    5271.6029500us:  [sim:description:2]     **check JTAG elip RAM access to first 100 addresses 
+UVM_INFO   @    7319.2029500us:  [sim:description:2]     **check JTAG elip RAM access to last 100 addresses 
+UVM_INFO   @    9446.3269500us:  [base_dsi_master_seq]   base_dsi_master_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    9446.3279500us:  [sim:description:1]     *Check TMR_OUT for pad INTB 
+UVM_INFO   @    9464.4119500us:  [sim:description:2]     **Check TMR_OUT[0]( static LOW ) for pad INTB 
+UVM_ERROR  @    9475.1919500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for static LOW (0)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @    9475.2919500us:  [sim:measure]           'Row 0' status = PASS 
+UVM_INFO   @    9514.3959500us:  [sim:description:2]     **Check TMR_OUT[1]( static HIGH ) for pad INTB 
+UVM_ERROR  @    9525.1759500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for static HIGH (1)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @    9525.2759500us:  [sim:measure]           'Row 1' status = PASS 
+UVM_INFO   @    9564.3799500us:  [sim:description:2]     **Check TMR_OUT[2]( TDO ) for pad INTB 
+UVM_ERROR  @    9575.3099500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for TDO (2)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @    9575.4599500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for TDO (2)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @    9575.4599500us:  [sim:measure]           'Row 2' status = PASS 
+UVM_INFO   @    9614.5639500us:  [sim:description:2]     **Check TMR_OUT[3]( CSB ) for pad INTB 
+UVM_ERROR  @    9625.4939500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for CSB (3)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @    9625.6439500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for CSB (3)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @    9625.6439500us:  [sim:measure]           'Row 3' status = PASS 
+UVM_INFO   @    9664.7479500us:  [sim:description:2]     **Check TMR_OUT[4]( SCK ) for pad INTB 
+UVM_ERROR  @    9675.6779500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for SCK (4)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @    9675.8279500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for SCK (4)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @    9675.8279500us:  [sim:measure]           'Row 4' status = PASS 
+UVM_INFO   @    9714.9319500us:  [sim:description:2]     **Check TMR_OUT[5]( MISO ) for pad INTB 
+UVM_ERROR  @    9725.8619500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for MISO (5)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @    9726.0119500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for MISO (5)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @    9726.0119500us:  [sim:measure]           'Row 5' status = PASS 
+UVM_INFO   @    9765.1159500us:  [sim:description:2]     **Check TMR_OUT[6]( MOSI ) for pad INTB 
+UVM_ERROR  @    9776.0459500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for MOSI (6)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @    9776.1959500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for MOSI (6)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @    9776.1959500us:  [sim:measure]           'Row 6' status = PASS 
+UVM_INFO   @    9815.2999500us:  [sim:description:2]     **Check TMR_OUT[7]( RFC ) for pad INTB 
+UVM_ERROR  @    9826.2299500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for RFC (7)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @    9826.3799500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for RFC (7)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @    9826.3799500us:  [sim:measure]           'Row 7' status = PASS 
+UVM_INFO   @    9865.4839500us:  [sim:description:2]     **Check TMR_OUT[8]( INTB ) for pad INTB 
+UVM_ERROR  @    9876.4139500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for INTB (8)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @    9876.5639500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for INTB (8)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @    9876.5639500us:  [sim:measure]           'Row 8' status = PASS 
+UVM_INFO   @    9915.6679500us:  [sim:description:2]     **Check TMR_OUT[9]( DAB ) for pad INTB 
+UVM_ERROR  @    9926.5979500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DAB (9)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @    9926.7479500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DAB (9)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @    9926.7479500us:  [sim:measure]           'Row 9' status = PASS 
+UVM_INFO   @    9965.8519500us:  [sim:description:2]     **Check TMR_OUT[10]( BFWB ) for pad INTB 
+UVM_ERROR  @    9976.7819500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for BFWB (10)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @    9976.9319500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for BFWB (10)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @    9976.9319500us:  [sim:measure]           'Row 10' status = PASS 
+UVM_INFO   @   10016.0359500us:  [sim:description:2]     **Check TMR_OUT[11]( SYNCB ) for pad INTB 
+UVM_ERROR  @   10026.9659500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for SYNCB (11)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   10027.1159500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for SYNCB (11)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   10027.1159500us:  [sim:measure]           'Row 11' status = PASS 
+UVM_INFO   @   10066.2199500us:  [sim:description:2]     **Check TMR_OUT[12]( RESB ) for pad INTB 
+UVM_ERROR  @   10077.1499500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for RESB (12)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   10077.2999500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for RESB (12)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   10077.2999500us:  [sim:measure]           'Row 12' status = PASS 
+UVM_INFO   @   10116.4039500us:  [sim:description:2]     **Check TMR_OUT[13]( OT_WARN ) for pad INTB 
+UVM_ERROR  @   10127.3339500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for OT_WARN (13)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   10127.4839500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for OT_WARN (13)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   10127.4839500us:  [sim:measure]           'Row 13' status = PASS 
+UVM_INFO   @   10166.5879500us:  [sim:description:2]     **Check TMR_OUT[14]( OT_ERROR ) for pad INTB 
+UVM_ERROR  @   10177.5179500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for OT_ERROR (14)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   10177.6679500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for OT_ERROR (14)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   10177.6679500us:  [sim:measure]           'Row 14' status = PASS 
+UVM_INFO   @   10216.7719500us:  [sim:description:2]     **Check TMR_OUT[15]( VCC_OK ) for pad INTB 
+UVM_ERROR  @   10227.7019500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for VCC_OK (15)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   10227.8519500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for VCC_OK (15)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   10227.8519500us:  [sim:measure]           'Row 15' status = PASS 
+UVM_INFO   @   10266.9559500us:  [sim:description:2]     **Check TMR_OUT[16]( LDO_OK ) for pad INTB 
+UVM_ERROR  @   10277.8859500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for LDO_OK (16)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   10278.0359500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for LDO_OK (16)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   10278.0359500us:  [sim:measure]           'Row 16' status = PASS 
+UVM_INFO   @   10317.1399500us:  [sim:description:2]     **Check TMR_OUT[17]( VRR_OK ) for pad INTB 
+UVM_ERROR  @   10328.0699500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for VRR_OK (17)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   10328.2199500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for VRR_OK (17)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   10328.2199500us:  [sim:measure]           'Row 17' status = PASS 
+UVM_INFO   @   10367.3239500us:  [sim:description:2]     **Check TMR_OUT[18]( CLKREF filtered ) for pad INTB 
+UVM_ERROR  @   10378.2539500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for CLKREF filtered (18)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   10378.4039500us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for CLKREF filtered (18)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   10884.0810000us:  [tmr_out_checker_INTB]  measured clock frequency is   0.500MHz  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(185) 
+UVM_INFO   @   10890.1626320us:  [tmr_out_checker_INTB]  measured clock frequency is   0.490MHz  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(185) 
+UVM_INFO   @   11391.1626320us:  [sim:measure]           'Row 18' status = PASS 
+UVM_INFO   @   11430.2666320us:  [sim:description:2]     **Check TMR_OUT[19]( CLKREF divided ) for pad INTB 
+UVM_ERROR  @   11441.1966320us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for CLKREF divided (19)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   11441.3466320us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for CLKREF divided (19)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   11946.2034480us:  [tmr_out_checker_INTB]  measured clock frequency is   0.500MHz  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(185) 
+UVM_INFO   @   11952.2850800us:  [tmr_out_checker_INTB]  measured clock frequency is   0.490MHz  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(185) 
+UVM_INFO   @   12453.2850800us:  [sim:measure]           'Row 19' status = PASS 
+UVM_INFO   @   12492.3890800us:  [sim:description:2]     **Check TMR_OUT[20]( CLKOSC ) for pad INTB 
+UVM_ERROR  @   12503.3190800us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for CLKOSC (20)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   12503.4690800us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for CLKOSC (20)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   13005.5441600us:  [tmr_out_checker_INTB]  measured clock frequency is  17.986MHz  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(185) 
+UVM_INFO   @   13506.5441600us:  [sim:measure]           'Row 20' status = PASS 
+UVM_INFO   @   13545.6481600us:  [sim:description:2]     **Check TMR_OUT[21]( CLKPLL ) for pad INTB 
+UVM_ERROR  @   13556.5781600us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for CLKPLL (21)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   13556.7281600us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for CLKPLL (21)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   14058.8258260us:  [tmr_out_checker_INTB]  measured clock frequency is  18.000MHz  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(185) 
+UVM_INFO   @   14559.8258260us:  [sim:measure]           'Row 21' status = PASS 
+UVM_INFO   @   14598.9298260us:  [sim:description:2]     **Check TMR_OUT[22]( System clock ) for pad INTB 
+UVM_ERROR  @   14609.8598260us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for System clock (22)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   14610.0098260us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for System clock (22)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   15112.1036060us:  [tmr_out_checker_INTB]  measured clock frequency is  18.000MHz  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(185) 
+UVM_INFO   @   15613.1036060us:  [sim:measure]           'Row 22' status = PASS 
+UVM_INFO   @   15652.2076060us:  [sim:description:2]     **Check TMR_OUT[23]( CLKOSC divided ) for pad INTB 
+UVM_ERROR  @   15663.1376060us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for CLKOSC divided (23)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   15663.2876060us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for CLKOSC divided (23)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   16169.1285600us:  [tmr_out_checker_INTB]  measured clock frequency is   0.500MHz  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(185) 
+UVM_INFO   @   16670.1285600us:  [sim:measure]           'Row 23' status = PASS 
+UVM_INFO   @   16709.2325600us:  [sim:description:2]     **Check TMR_OUT[24]( CLKPLL divided ) for pad INTB 
+UVM_ERROR  @   16720.1625600us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for CLKPLL divided (24)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   16720.3125600us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for CLKPLL divided (24)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   17225.9924990us:  [tmr_out_checker_INTB]  measured clock frequency is   0.500MHz  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(185) 
+UVM_INFO   @   17726.9924990us:  [sim:measure]           'Row 24' status = PASS 
+UVM_INFO   @   17766.0964990us:  [sim:description:2]     **Check TMR_OUT[25]( CLKSYS divided ) for pad INTB 
+UVM_ERROR  @   17777.0264990us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for CLKSYS divided (25)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   17777.1764990us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for CLKSYS divided (25)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   18282.4925140us:  [tmr_out_checker_INTB]  measured clock frequency is   0.500MHz  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(185) 
+UVM_INFO   @   18783.4925140us:  [sim:measure]           'Row 25' status = PASS 
+UVM_INFO   @   18822.5965140us:  [sim:description:2]     **Check TMR_OUT[26]( I_CLKPLL_DIV ) for pad INTB 
+UVM_ERROR  @   18833.5265140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for I_CLKPLL_DIV (26)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   18833.6765140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for I_CLKPLL_DIV (26)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   18833.6765140us:  [sim:measure]           'Row 26' status = PASS 
+UVM_INFO   @   18872.7805140us:  [sim:description:2]     **Check TMR_OUT[27]( I_PLL_DOWN_MON ) for pad INTB 
+UVM_ERROR  @   18883.7105140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for I_PLL_DOWN_MON (27)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   18883.8605140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for I_PLL_DOWN_MON (27)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   18883.8605140us:  [sim:measure]           'Row 27' status = PASS 
+UVM_INFO   @   18922.9645140us:  [sim:description:2]     **Check TMR_OUT[28]( I_PLL_UP_MON ) for pad INTB 
+UVM_ERROR  @   18933.8945140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for I_PLL_UP_MON (28)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   18934.0445140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for I_PLL_UP_MON (28)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   18934.0445140us:  [sim:measure]           'Row 28' status = PASS 
+UVM_INFO   @   18973.1485140us:  [sim:description:2]     **Check TMR_OUT[29]( I_PLL_LOCK_MON ) for pad INTB 
+UVM_ERROR  @   18984.0785140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for I_PLL_LOCK_MON (29)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   18984.2285140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for I_PLL_LOCK_MON (29)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   18984.2285140us:  [sim:measure]           'Row 29' status = PASS 
+UVM_INFO   @   19023.3325140us:  [sim:description:2]     **Check TMR_OUT[30]( CLKREF ok ) for pad INTB 
+UVM_ERROR  @   19034.2625140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for CLKREF ok (30)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   19034.4125140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for CLKREF ok (30)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   19034.4125140us:  [sim:measure]           'Row 30' status = PASS 
+UVM_INFO   @   19073.5165140us:  [sim:description:2]     **Check TMR_OUT[31]( PLL locked ) for pad INTB 
+UVM_ERROR  @   19084.4465140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for PLL locked (31)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   19084.5965140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for PLL locked (31)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   19084.5965140us:  [sim:measure]           'Row 31' status = PASS 
+UVM_INFO   @   19123.7005140us:  [sim:description:2]     **Check TMR_OUT[32]( I_OSC_READY ) for pad INTB 
+UVM_ERROR  @   19134.6305140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for I_OSC_READY (32)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   19134.7805140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for I_OSC_READY (32)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   19134.7805140us:  [sim:measure]           'Row 32' status = PASS 
+UVM_INFO   @   19173.8845140us:  [sim:description:2]     **Check TMR_OUT[33]( DSI0 RXD1 ) for pad INTB 
+UVM_ERROR  @   19184.8145140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI0 RXD1 (33)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   19184.9645140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI0 RXD1 (33)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   19184.9645140us:  [sim:measure]           'Row 33' status = PASS 
+UVM_INFO   @   19224.0685140us:  [sim:description:2]     **Check TMR_OUT[34]( DSI0 RXD2 ) for pad INTB 
+UVM_ERROR  @   19234.9985140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI0 RXD2 (34)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   19235.1485140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI0 RXD2 (34)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   19235.1485140us:  [sim:measure]           'Row 34' status = PASS 
+UVM_INFO   @   19274.2525140us:  [sim:description:2]     **Check TMR_OUT[35]( DSI0 UV   ) for pad INTB 
+UVM_ERROR  @   19285.1825140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI0 UV   (35)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   19285.3325140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI0 UV   (35)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   19285.3325140us:  [sim:measure]           'Row 35' status = PASS 
+UVM_INFO   @   19324.4365140us:  [sim:description:2]     **Check TMR_OUT[36]( DSI0 OV   ) for pad INTB 
+UVM_ERROR  @   19335.3665140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI0 OV   (36)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   19335.5165140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI0 OV   (36)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   19335.5165140us:  [sim:measure]           'Row 36' status = PASS 
+UVM_INFO   @   19374.6205140us:  [sim:description:2]     **Check TMR_OUT[37]( DSI0 ICMP ) for pad INTB 
+UVM_ERROR  @   19385.5505140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI0 ICMP (37)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   19385.7005140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI0 ICMP (37)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   19385.7005140us:  [sim:measure]           'Row 37' status = PASS 
+UVM_INFO   @   19424.8045140us:  [sim:description:2]     **Check TMR_OUT[38]( DSI1 RXD1 ) for pad INTB 
+UVM_ERROR  @   19435.7345140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI1 RXD1 (38)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   19435.8845140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI1 RXD1 (38)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   19435.8845140us:  [sim:measure]           'Row 38' status = PASS 
+UVM_INFO   @   19474.9885140us:  [sim:description:2]     **Check TMR_OUT[39]( DSI1 RXD2 ) for pad INTB 
+UVM_ERROR  @   19485.9185140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI1 RXD2 (39)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   19486.0685140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI1 RXD2 (39)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   19486.0685140us:  [sim:measure]           'Row 39' status = PASS 
+UVM_INFO   @   19525.1725140us:  [sim:description:2]     **Check TMR_OUT[40]( DSI1 UV   ) for pad INTB 
+UVM_ERROR  @   19536.1025140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI1 UV   (40)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   19536.2525140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI1 UV   (40)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   19536.2525140us:  [sim:measure]           'Row 40' status = PASS 
+UVM_INFO   @   19575.3565140us:  [sim:description:2]     **Check TMR_OUT[41]( DSI1 OV   ) for pad INTB 
+UVM_ERROR  @   19586.2865140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI1 OV   (41)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   19586.4365140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI1 OV   (41)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   19586.4365140us:  [sim:measure]           'Row 41' status = PASS 
+UVM_INFO   @   19625.5405140us:  [sim:description:2]     **Check TMR_OUT[42]( DSI1 ICMP ) for pad INTB 
+UVM_ERROR  @   19636.4705140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI1 ICMP (42)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   19636.6205140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI1 ICMP (42)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   19636.6205140us:  [sim:measure]           'Row 42' status = PASS 
+UVM_INFO   @   19675.7245140us:  [sim:description:2]     **Check TMR_OUT[43]( nothing ) for pad INTB 
+UVM_ERROR  @   19686.5045140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for nothing (43)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   19686.6045140us:  [sim:measure]           'Row 43' status = PASS 
+UVM_INFO   @   19725.7085140us:  [sim:description:2]     **Check TMR_OUT[44]( nothing ) for pad INTB 
+UVM_ERROR  @   19736.4885140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for nothing (44)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   19736.5885140us:  [sim:measure]           'Row 44' status = PASS 
+UVM_INFO   @   19775.6925140us:  [sim:description:2]     **Check TMR_OUT[45]( nothing ) for pad INTB 
+UVM_ERROR  @   19786.4725140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for nothing (45)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   19786.5725140us:  [sim:measure]           'Row 45' status = PASS 
+UVM_INFO   @   19825.6765140us:  [sim:description:2]     **Check TMR_OUT[46]( nothing ) for pad INTB 
+UVM_ERROR  @   19836.4565140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for nothing (46)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   19836.5565140us:  [sim:measure]           'Row 46' status = PASS 
+UVM_INFO   @   19875.6605140us:  [sim:description:2]     **Check TMR_OUT[47]( nothing ) for pad INTB 
+UVM_ERROR  @   19886.4405140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for nothing (47)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   19886.5405140us:  [sim:measure]           'Row 47' status = PASS 
+UVM_INFO   @   19925.6445140us:  [sim:description:2]     **Check TMR_OUT[48]( nothing ) for pad INTB 
+UVM_ERROR  @   19936.4245140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for nothing (48)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   19936.5245140us:  [sim:measure]           'Row 48' status = PASS 
+UVM_INFO   @   19975.6285140us:  [sim:description:2]     **Check TMR_OUT[49]( I_OSC_READY synced ) for pad INTB 
+UVM_ERROR  @   19986.5585140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for I_OSC_READY synced (49)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   19986.7085140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for I_OSC_READY synced (49)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   19986.7085140us:  [sim:measure]           'Row 49' status = PASS 
+UVM_INFO   @   20025.8125140us:  [sim:description:2]     **Check TMR_OUT[50]( OTP_READY ) for pad INTB 
+UVM_ERROR  @   20036.7425140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for OTP_READY (50)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20036.8925140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for OTP_READY (50)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20036.8925140us:  [sim:measure]           'Row 50' status = PASS 
+UVM_INFO   @   20075.9965140us:  [sim:description:2]     **Check TMR_OUT[51]( DSI0 RXD1 filtered ) for pad INTB 
+UVM_ERROR  @   20086.9265140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI0 RXD1 filtered (51)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20087.0765140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI0 RXD1 filtered (51)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20087.0765140us:  [sim:measure]           'Row 51' status = PASS 
+UVM_INFO   @   20126.1805140us:  [sim:description:2]     **Check TMR_OUT[52]( DSI0 RXD2 filtered ) for pad INTB 
+UVM_ERROR  @   20137.1105140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI0 RXD2 filtered (52)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20137.2605140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI0 RXD2 filtered (52)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20137.2605140us:  [sim:measure]           'Row 52' status = PASS 
+UVM_INFO   @   20176.3645140us:  [sim:description:2]     **Check TMR_OUT[53]( DSI1 RXD1 filtered ) for pad INTB 
+UVM_ERROR  @   20187.2945140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI1 RXD1 filtered (53)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20187.4445140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI1 RXD1 filtered (53)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20187.4445140us:  [sim:measure]           'Row 53' status = PASS 
+UVM_INFO   @   20226.5485140us:  [sim:description:2]     **Check TMR_OUT[54]( DSI1 RXD2 filtered ) for pad INTB 
+UVM_ERROR  @   20237.4785140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI1 RXD2 filtered (54)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20237.6285140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for DSI1 RXD2 filtered (54)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20237.6285140us:  [sim:measure]           'Row 54' status = PASS 
+UVM_INFO   @   20276.7325140us:  [sim:description:2]     **Check TMR_OUT[55]( nothing ) for pad INTB 
+UVM_ERROR  @   20287.5125140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for nothing (55)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20287.6125140us:  [sim:measure]           'Row 55' status = PASS 
+UVM_INFO   @   20326.7165140us:  [sim:description:2]     **Check TMR_OUT[56]( nothing ) for pad INTB 
+UVM_ERROR  @   20337.4965140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for nothing (56)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20337.5965140us:  [sim:measure]           'Row 56' status = PASS 
+UVM_INFO   @   20376.7005140us:  [sim:description:2]     **Check TMR_OUT[57]( nothing ) for pad INTB 
+UVM_ERROR  @   20387.4805140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for nothing (57)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20387.5805140us:  [sim:measure]           'Row 57' status = PASS 
+UVM_INFO   @   20426.6845140us:  [sim:description:2]     **Check TMR_OUT[58]( nothing ) for pad INTB 
+UVM_ERROR  @   20437.4645140us:  [tmr_out_checker_INTB]  Value at pin INTB is not expected for nothing (58)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20437.5645140us:  [sim:measure]           'Row 58' status = PASS 
+UVM_INFO   @   20494.7525140us:  [base_dsi_master_seq]   base_dsi_master_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   20494.7535140us:  [sim:description:1]     *Check TMR_OUT for pad RFC 
+UVM_INFO   @   20512.8375140us:  [sim:description:2]     **Check TMR_OUT[0]( static LOW ) for pad RFC 
+UVM_ERROR  @   20518.2775140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for static LOW (0)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20523.6175140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for static LOW (0)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20523.7175140us:  [sim:measure]           'Row 0' status = PASS 
+UVM_ERROR  @   20529.1575140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for static LOW (0)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20544.8375140us:  [sim:description:2]     **Check TMR_OUT[1]( static HIGH ) for pad RFC 
+UVM_ERROR  @   20550.2775140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for static HIGH (1)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20555.6175140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for static HIGH (1)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20555.7175140us:  [sim:measure]           'Row 1' status = PASS 
+UVM_ERROR  @   20561.1575140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for static HIGH (1)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20576.8375140us:  [sim:description:2]     **Check TMR_OUT[2]( TDO ) for pad RFC 
+UVM_ERROR  @   20582.2775140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for TDO (2)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20587.7675140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for TDO (2)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20587.9175140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for TDO (2)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20587.9175140us:  [sim:measure]           'Row 2' status = PASS 
+UVM_ERROR  @   20593.3575140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for TDO (2)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20609.0375140us:  [sim:description:2]     **Check TMR_OUT[3]( CSB ) for pad RFC 
+UVM_ERROR  @   20614.4775140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CSB (3)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20619.9675140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CSB (3)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20620.1175140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CSB (3)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20620.1175140us:  [sim:measure]           'Row 3' status = PASS 
+UVM_ERROR  @   20625.5575140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CSB (3)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20641.2375140us:  [sim:description:2]     **Check TMR_OUT[4]( SCK ) for pad RFC 
+UVM_ERROR  @   20646.6775140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for SCK (4)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20652.1675140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for SCK (4)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20652.3175140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for SCK (4)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20652.3175140us:  [sim:measure]           'Row 4' status = PASS 
+UVM_ERROR  @   20657.7575140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for SCK (4)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20673.4375140us:  [sim:description:2]     **Check TMR_OUT[5]( MISO ) for pad RFC 
+UVM_ERROR  @   20678.8775140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for MISO (5)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20684.3675140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for MISO (5)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20684.5175140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for MISO (5)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20684.5175140us:  [sim:measure]           'Row 5' status = PASS 
+UVM_ERROR  @   20689.9575140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for MISO (5)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20705.6375140us:  [sim:description:2]     **Check TMR_OUT[6]( MOSI ) for pad RFC 
+UVM_ERROR  @   20711.0775140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for MOSI (6)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20716.5675140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for MOSI (6)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20716.7175140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for MOSI (6)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20716.7175140us:  [sim:measure]           'Row 6' status = PASS 
+UVM_ERROR  @   20722.1575140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for MOSI (6)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20737.8375140us:  [sim:description:2]     **Check TMR_OUT[7]( RFC ) for pad RFC 
+UVM_ERROR  @   20743.2775140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for RFC (7)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20748.7675140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for RFC (7)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20748.9175140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for RFC (7)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20748.9175140us:  [sim:measure]           'Row 7' status = PASS 
+UVM_ERROR  @   20754.3575140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for RFC (7)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20770.0375140us:  [sim:description:2]     **Check TMR_OUT[8]( INTB ) for pad RFC 
+UVM_ERROR  @   20775.4775140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for INTB (8)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20780.9675140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for INTB (8)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20781.1175140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for INTB (8)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20781.1175140us:  [sim:measure]           'Row 8' status = PASS 
+UVM_ERROR  @   20786.5575140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for INTB (8)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20802.2375140us:  [sim:description:2]     **Check TMR_OUT[9]( DAB ) for pad RFC 
+UVM_ERROR  @   20807.6775140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DAB (9)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20813.1675140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DAB (9)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20813.3175140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DAB (9)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20813.3175140us:  [sim:measure]           'Row 9' status = PASS 
+UVM_ERROR  @   20818.7575140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DAB (9)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20834.4375140us:  [sim:description:2]     **Check TMR_OUT[10]( BFWB ) for pad RFC 
+UVM_ERROR  @   20839.8775140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for BFWB (10)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20845.3675140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for BFWB (10)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20845.5175140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for BFWB (10)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20845.5175140us:  [sim:measure]           'Row 10' status = PASS 
+UVM_ERROR  @   20850.9575140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for BFWB (10)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20866.6375140us:  [sim:description:2]     **Check TMR_OUT[11]( SYNCB ) for pad RFC 
+UVM_ERROR  @   20872.0775140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for SYNCB (11)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20877.5675140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for SYNCB (11)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20877.7175140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for SYNCB (11)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20877.7175140us:  [sim:measure]           'Row 11' status = PASS 
+UVM_ERROR  @   20883.1575140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for SYNCB (11)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20898.8375140us:  [sim:description:2]     **Check TMR_OUT[12]( RESB ) for pad RFC 
+UVM_ERROR  @   20904.2775140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for RESB (12)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20909.7675140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for RESB (12)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20909.9175140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for RESB (12)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20909.9175140us:  [sim:measure]           'Row 12' status = PASS 
+UVM_ERROR  @   20915.3575140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for RESB (12)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20931.0375140us:  [sim:description:2]     **Check TMR_OUT[13]( OT_WARN ) for pad RFC 
+UVM_ERROR  @   20936.4775140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for OT_WARN (13)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20941.9675140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for OT_WARN (13)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20942.1175140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for OT_WARN (13)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20942.1175140us:  [sim:measure]           'Row 13' status = PASS 
+UVM_ERROR  @   20947.5575140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for OT_WARN (13)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20963.2375140us:  [sim:description:2]     **Check TMR_OUT[14]( OT_ERROR ) for pad RFC 
+UVM_ERROR  @   20968.6775140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for OT_ERROR (14)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20974.1675140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for OT_ERROR (14)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   20974.3175140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for OT_ERROR (14)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20974.3175140us:  [sim:measure]           'Row 14' status = PASS 
+UVM_ERROR  @   20979.7575140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for OT_ERROR (14)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   20995.4375140us:  [sim:description:2]     **Check TMR_OUT[15]( VCC_OK ) for pad RFC 
+UVM_ERROR  @   21000.8775140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for VCC_OK (15)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   21006.3675140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for VCC_OK (15)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   21006.5175140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for VCC_OK (15)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   21006.5175140us:  [sim:measure]           'Row 15' status = PASS 
+UVM_ERROR  @   21011.9575140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for VCC_OK (15)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   21027.6375140us:  [sim:description:2]     **Check TMR_OUT[16]( LDO_OK ) for pad RFC 
+UVM_ERROR  @   21033.0775140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for LDO_OK (16)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   21038.5675140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for LDO_OK (16)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   21038.7175140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for LDO_OK (16)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   21038.7175140us:  [sim:measure]           'Row 16' status = PASS 
+UVM_ERROR  @   21044.1575140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for LDO_OK (16)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   21059.8375140us:  [sim:description:2]     **Check TMR_OUT[17]( VRR_OK ) for pad RFC 
+UVM_ERROR  @   21065.2775140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for VRR_OK (17)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   21070.7675140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for VRR_OK (17)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   21070.9175140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for VRR_OK (17)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   21070.9175140us:  [sim:measure]           'Row 17' status = PASS 
+UVM_ERROR  @   21076.3575140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for VRR_OK (17)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   21092.0375140us:  [sim:description:2]     **Check TMR_OUT[18]( CLKREF filtered ) for pad RFC 
+UVM_ERROR  @   21097.4775140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKREF filtered (18)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   21102.9675140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKREF filtered (18)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   21103.1175140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKREF filtered (18)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   21608.3258960us:  [tmr_out_checker_RFC]   measured clock frequency is   0.500MHz  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(185) 
+UVM_INFO   @   21614.4075280us:  [tmr_out_checker_RFC]   measured clock frequency is   0.490MHz  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(185) 
+UVM_INFO   @   22115.4075280us:  [sim:measure]           'Row 18' status = PASS 
+UVM_ERROR  @   22120.8475280us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKREF filtered (18)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   22136.5275280us:  [sim:description:2]     **Check TMR_OUT[19]( CLKREF divided ) for pad RFC 
+UVM_ERROR  @   22141.9675280us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKREF divided (19)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   22147.4575280us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKREF divided (19)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   22147.6075280us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKREF divided (19)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   22652.4483440us:  [tmr_out_checker_RFC]   measured clock frequency is   0.500MHz  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(185) 
+UVM_INFO   @   22658.5299760us:  [tmr_out_checker_RFC]   measured clock frequency is   0.490MHz  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(185) 
+UVM_INFO   @   23159.5299760us:  [sim:measure]           'Row 19' status = PASS 
+UVM_ERROR  @   23164.9699760us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKREF divided (19)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   23180.6499760us:  [sim:description:2]     **Check TMR_OUT[20]( CLKOSC ) for pad RFC 
+UVM_ERROR  @   23186.0899760us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKOSC (20)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   23191.5799760us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKOSC (20)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   23191.7299760us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKOSC (20)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   23693.8101600us:  [tmr_out_checker_RFC]   measured clock frequency is  17.986MHz  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(185) 
+UVM_INFO   @   24194.8101600us:  [sim:measure]           'Row 20' status = PASS 
+UVM_ERROR  @   24200.2501600us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKOSC (20)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   24215.9301600us:  [sim:description:2]     **Check TMR_OUT[21]( CLKPLL ) for pad RFC 
+UVM_ERROR  @   24221.3701600us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKPLL (21)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   24226.8601600us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKPLL (21)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   24227.0101600us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKPLL (21)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   24729.0707140us:  [tmr_out_checker_RFC]   measured clock frequency is  18.000MHz  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(185) 
+UVM_INFO   @   25230.0707140us:  [sim:measure]           'Row 21' status = PASS 
+UVM_ERROR  @   25235.5107140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKPLL (21)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   25251.1907140us:  [sim:description:2]     **Check TMR_OUT[22]( System clock ) for pad RFC 
+UVM_ERROR  @   25256.6307140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for System clock (22)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   25262.1207140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for System clock (22)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   25262.2707140us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for System clock (22)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   25764.3485030us:  [tmr_out_checker_RFC]   measured clock frequency is  18.001MHz  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(185) 
+UVM_INFO   @   26265.3485030us:  [sim:measure]           'Row 22' status = PASS 
+UVM_ERROR  @   26270.7885030us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for System clock (22)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   26286.4685030us:  [sim:description:2]     **Check TMR_OUT[23]( CLKOSC divided ) for pad RFC 
+UVM_ERROR  @   26291.9085030us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKOSC divided (23)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   26297.3985030us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKOSC divided (23)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   26297.5485030us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKOSC divided (23)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   26803.0177600us:  [tmr_out_checker_RFC]   measured clock frequency is   0.500MHz  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(185) 
+UVM_INFO   @   27304.0177600us:  [sim:measure]           'Row 23' status = PASS 
+UVM_ERROR  @   27309.4577600us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKOSC divided (23)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   27325.1377600us:  [sim:description:2]     **Check TMR_OUT[24]( CLKPLL divided ) for pad RFC 
+UVM_ERROR  @   27330.5777600us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKPLL divided (24)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   27336.0677600us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKPLL divided (24)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   27336.2177600us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKPLL divided (24)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   27841.4040770us:  [tmr_out_checker_RFC]   measured clock frequency is   0.500MHz  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(185) 
+UVM_INFO   @   28342.4040770us:  [sim:measure]           'Row 24' status = PASS 
+UVM_ERROR  @   28347.8440770us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKPLL divided (24)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   28363.5240770us:  [sim:description:2]     **Check TMR_OUT[25]( CLKSYS divided ) for pad RFC 
+UVM_ERROR  @   28368.9640770us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKSYS divided (25)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   28374.4540770us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKSYS divided (25)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   28374.6040770us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKSYS divided (25)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   28879.7929500us:  [tmr_out_checker_RFC]   measured clock frequency is   0.500MHz  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(185) 
+UVM_INFO   @   29380.7929500us:  [sim:measure]           'Row 25' status = PASS 
+UVM_ERROR  @   29386.2329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKSYS divided (25)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29401.9129500us:  [sim:description:2]     **Check TMR_OUT[26]( I_CLKPLL_DIV ) for pad RFC 
+UVM_ERROR  @   29407.3529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for I_CLKPLL_DIV (26)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29412.8429500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for I_CLKPLL_DIV (26)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29412.9929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for I_CLKPLL_DIV (26)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29412.9929500us:  [sim:measure]           'Row 26' status = PASS 
+UVM_ERROR  @   29418.4329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for I_CLKPLL_DIV (26)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29434.1129500us:  [sim:description:2]     **Check TMR_OUT[27]( I_PLL_DOWN_MON ) for pad RFC 
+UVM_ERROR  @   29439.5529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for I_PLL_DOWN_MON (27)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29445.0429500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for I_PLL_DOWN_MON (27)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29445.1929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for I_PLL_DOWN_MON (27)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29445.1929500us:  [sim:measure]           'Row 27' status = PASS 
+UVM_ERROR  @   29450.6329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for I_PLL_DOWN_MON (27)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29466.3129500us:  [sim:description:2]     **Check TMR_OUT[28]( I_PLL_UP_MON ) for pad RFC 
+UVM_ERROR  @   29471.7529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for I_PLL_UP_MON (28)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29477.2429500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for I_PLL_UP_MON (28)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29477.3929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for I_PLL_UP_MON (28)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29477.3929500us:  [sim:measure]           'Row 28' status = PASS 
+UVM_ERROR  @   29482.8329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for I_PLL_UP_MON (28)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29498.5129500us:  [sim:description:2]     **Check TMR_OUT[29]( I_PLL_LOCK_MON ) for pad RFC 
+UVM_ERROR  @   29503.9529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for I_PLL_LOCK_MON (29)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29509.4429500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for I_PLL_LOCK_MON (29)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29509.5929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for I_PLL_LOCK_MON (29)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29509.5929500us:  [sim:measure]           'Row 29' status = PASS 
+UVM_ERROR  @   29515.0329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for I_PLL_LOCK_MON (29)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29530.7129500us:  [sim:description:2]     **Check TMR_OUT[30]( CLKREF ok ) for pad RFC 
+UVM_ERROR  @   29536.1529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKREF ok (30)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29541.6429500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKREF ok (30)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29541.7929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKREF ok (30)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29541.7929500us:  [sim:measure]           'Row 30' status = PASS 
+UVM_ERROR  @   29547.2329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for CLKREF ok (30)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29562.9129500us:  [sim:description:2]     **Check TMR_OUT[31]( PLL locked ) for pad RFC 
+UVM_ERROR  @   29568.3529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for PLL locked (31)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29573.8429500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for PLL locked (31)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29573.9929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for PLL locked (31)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29573.9929500us:  [sim:measure]           'Row 31' status = PASS 
+UVM_ERROR  @   29579.4329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for PLL locked (31)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29595.1129500us:  [sim:description:2]     **Check TMR_OUT[32]( I_OSC_READY ) for pad RFC 
+UVM_ERROR  @   29600.5529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for I_OSC_READY (32)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29606.0429500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for I_OSC_READY (32)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29606.1929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for I_OSC_READY (32)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29606.1929500us:  [sim:measure]           'Row 32' status = PASS 
+UVM_ERROR  @   29611.6329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for I_OSC_READY (32)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29627.3129500us:  [sim:description:2]     **Check TMR_OUT[33]( DSI0 RXD1 ) for pad RFC 
+UVM_ERROR  @   29632.7529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 RXD1 (33)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29638.2429500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 RXD1 (33)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29638.3929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 RXD1 (33)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29638.3929500us:  [sim:measure]           'Row 33' status = PASS 
+UVM_ERROR  @   29643.8329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 RXD1 (33)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29659.5129500us:  [sim:description:2]     **Check TMR_OUT[34]( DSI0 RXD2 ) for pad RFC 
+UVM_ERROR  @   29664.9529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 RXD2 (34)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29670.4429500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 RXD2 (34)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29670.5929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 RXD2 (34)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29670.5929500us:  [sim:measure]           'Row 34' status = PASS 
+UVM_ERROR  @   29676.0329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 RXD2 (34)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29691.7129500us:  [sim:description:2]     **Check TMR_OUT[35]( DSI0 UV   ) for pad RFC 
+UVM_ERROR  @   29697.1529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 UV   (35)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29702.6429500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 UV   (35)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29702.7929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 UV   (35)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29702.7929500us:  [sim:measure]           'Row 35' status = PASS 
+UVM_ERROR  @   29708.2329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 UV   (35)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29723.9129500us:  [sim:description:2]     **Check TMR_OUT[36]( DSI0 OV   ) for pad RFC 
+UVM_ERROR  @   29729.3529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 OV   (36)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29734.8429500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 OV   (36)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29734.9929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 OV   (36)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29734.9929500us:  [sim:measure]           'Row 36' status = PASS 
+UVM_ERROR  @   29740.4329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 OV   (36)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29756.1129500us:  [sim:description:2]     **Check TMR_OUT[37]( DSI0 ICMP ) for pad RFC 
+UVM_ERROR  @   29761.5529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 ICMP (37)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29767.0429500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 ICMP (37)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29767.1929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 ICMP (37)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29767.1929500us:  [sim:measure]           'Row 37' status = PASS 
+UVM_ERROR  @   29772.6329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 ICMP (37)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29788.3129500us:  [sim:description:2]     **Check TMR_OUT[38]( DSI1 RXD1 ) for pad RFC 
+UVM_ERROR  @   29793.7529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 RXD1 (38)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29799.2429500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 RXD1 (38)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29799.3929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 RXD1 (38)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29799.3929500us:  [sim:measure]           'Row 38' status = PASS 
+UVM_ERROR  @   29804.8329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 RXD1 (38)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29820.5129500us:  [sim:description:2]     **Check TMR_OUT[39]( DSI1 RXD2 ) for pad RFC 
+UVM_ERROR  @   29825.9529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 RXD2 (39)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29831.4429500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 RXD2 (39)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29831.5929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 RXD2 (39)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29831.5929500us:  [sim:measure]           'Row 39' status = PASS 
+UVM_ERROR  @   29837.0329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 RXD2 (39)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29852.7129500us:  [sim:description:2]     **Check TMR_OUT[40]( DSI1 UV   ) for pad RFC 
+UVM_ERROR  @   29858.1529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 UV   (40)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29863.6429500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 UV   (40)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29863.7929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 UV   (40)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29863.7929500us:  [sim:measure]           'Row 40' status = PASS 
+UVM_ERROR  @   29869.2329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 UV   (40)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29884.9129500us:  [sim:description:2]     **Check TMR_OUT[41]( DSI1 OV   ) for pad RFC 
+UVM_ERROR  @   29890.3529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 OV   (41)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29895.8429500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 OV   (41)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29895.9929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 OV   (41)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29895.9929500us:  [sim:measure]           'Row 41' status = PASS 
+UVM_ERROR  @   29901.4329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 OV   (41)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29917.1129500us:  [sim:description:2]     **Check TMR_OUT[42]( DSI1 ICMP ) for pad RFC 
+UVM_ERROR  @   29922.5529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 ICMP (42)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29928.0429500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 ICMP (42)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29928.1929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 ICMP (42)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29928.1929500us:  [sim:measure]           'Row 42' status = PASS 
+UVM_ERROR  @   29933.6329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 ICMP (42)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29949.3129500us:  [sim:description:2]     **Check TMR_OUT[43]( nothing ) for pad RFC 
+UVM_ERROR  @   29954.7529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (43)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29960.0929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (43)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29960.1929500us:  [sim:measure]           'Row 43' status = PASS 
+UVM_ERROR  @   29965.6329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (43)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29981.3129500us:  [sim:description:2]     **Check TMR_OUT[44]( nothing ) for pad RFC 
+UVM_ERROR  @   29986.7529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (44)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   29992.0929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (44)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   29992.1929500us:  [sim:measure]           'Row 44' status = PASS 
+UVM_ERROR  @   29997.6329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (44)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30013.3129500us:  [sim:description:2]     **Check TMR_OUT[45]( nothing ) for pad RFC 
+UVM_ERROR  @   30018.7529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (45)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30024.0929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (45)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30024.1929500us:  [sim:measure]           'Row 45' status = PASS 
+UVM_ERROR  @   30029.6329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (45)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30045.3129500us:  [sim:description:2]     **Check TMR_OUT[46]( nothing ) for pad RFC 
+UVM_ERROR  @   30050.7529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (46)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30056.0929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (46)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30056.1929500us:  [sim:measure]           'Row 46' status = PASS 
+UVM_ERROR  @   30061.6329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (46)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30077.3129500us:  [sim:description:2]     **Check TMR_OUT[47]( nothing ) for pad RFC 
+UVM_ERROR  @   30082.7529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (47)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30088.0929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (47)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30088.1929500us:  [sim:measure]           'Row 47' status = PASS 
+UVM_ERROR  @   30093.6329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (47)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30109.3129500us:  [sim:description:2]     **Check TMR_OUT[48]( nothing ) for pad RFC 
+UVM_ERROR  @   30114.7529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (48)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30120.0929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (48)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30120.1929500us:  [sim:measure]           'Row 48' status = PASS 
+UVM_ERROR  @   30125.6329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (48)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30141.3129500us:  [sim:description:2]     **Check TMR_OUT[49]( I_OSC_READY synced ) for pad RFC 
+UVM_ERROR  @   30146.7529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for I_OSC_READY synced (49)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30152.2429500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for I_OSC_READY synced (49)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30152.3929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for I_OSC_READY synced (49)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30152.3929500us:  [sim:measure]           'Row 49' status = PASS 
+UVM_ERROR  @   30157.8329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for I_OSC_READY synced (49)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30173.5129500us:  [sim:description:2]     **Check TMR_OUT[50]( OTP_READY ) for pad RFC 
+UVM_ERROR  @   30178.9529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for OTP_READY (50)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30184.4429500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for OTP_READY (50)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30184.5929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for OTP_READY (50)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30184.5929500us:  [sim:measure]           'Row 50' status = PASS 
+UVM_ERROR  @   30190.0329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for OTP_READY (50)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30205.7129500us:  [sim:description:2]     **Check TMR_OUT[51]( DSI0 RXD1 filtered ) for pad RFC 
+UVM_ERROR  @   30211.1529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 RXD1 filtered (51)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30216.6429500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 RXD1 filtered (51)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30216.7929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 RXD1 filtered (51)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30216.7929500us:  [sim:measure]           'Row 51' status = PASS 
+UVM_ERROR  @   30222.2329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 RXD1 filtered (51)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30237.9129500us:  [sim:description:2]     **Check TMR_OUT[52]( DSI0 RXD2 filtered ) for pad RFC 
+UVM_ERROR  @   30243.3529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 RXD2 filtered (52)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30248.8429500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 RXD2 filtered (52)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30248.9929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 RXD2 filtered (52)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30248.9929500us:  [sim:measure]           'Row 52' status = PASS 
+UVM_ERROR  @   30254.4329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI0 RXD2 filtered (52)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30270.1129500us:  [sim:description:2]     **Check TMR_OUT[53]( DSI1 RXD1 filtered ) for pad RFC 
+UVM_ERROR  @   30275.5529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 RXD1 filtered (53)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30281.0429500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 RXD1 filtered (53)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30281.1929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 RXD1 filtered (53)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30281.1929500us:  [sim:measure]           'Row 53' status = PASS 
+UVM_ERROR  @   30286.6329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 RXD1 filtered (53)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30302.3129500us:  [sim:description:2]     **Check TMR_OUT[54]( DSI1 RXD2 filtered ) for pad RFC 
+UVM_ERROR  @   30307.7529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 RXD2 filtered (54)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30313.2429500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 RXD2 filtered (54)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30313.3929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 RXD2 filtered (54)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30313.3929500us:  [sim:measure]           'Row 54' status = PASS 
+UVM_ERROR  @   30318.8329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for DSI1 RXD2 filtered (54)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30334.5129500us:  [sim:description:2]     **Check TMR_OUT[55]( nothing ) for pad RFC 
+UVM_ERROR  @   30339.9529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (55)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30345.2929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (55)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30345.3929500us:  [sim:measure]           'Row 55' status = PASS 
+UVM_ERROR  @   30350.8329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (55)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30366.5129500us:  [sim:description:2]     **Check TMR_OUT[56]( nothing ) for pad RFC 
+UVM_ERROR  @   30371.9529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (56)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30377.2929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (56)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30377.3929500us:  [sim:measure]           'Row 56' status = PASS 
+UVM_ERROR  @   30382.8329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (56)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30398.5129500us:  [sim:description:2]     **Check TMR_OUT[57]( nothing ) for pad RFC 
+UVM_ERROR  @   30403.9529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (57)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30409.2929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (57)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30409.3929500us:  [sim:measure]           'Row 57' status = PASS 
+UVM_ERROR  @   30414.8329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (57)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30430.5129500us:  [sim:description:2]     **Check TMR_OUT[58]( nothing ) for pad RFC 
+UVM_ERROR  @   30435.9529500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (58)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30441.2929500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (58)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30441.3929500us:  [sim:measure]           'Row 58' status = PASS 
+UVM_ERROR  @   30446.8329500us:  [tmr_out_checker_RFC]   Value at pin RFC is not expected for nothing (58)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30480.5969500us:  [base_dsi_master_seq]   base_dsi_master_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   30480.5979500us:  [sim:description:1]     *Check TMR_OUT for pad SCK 
+UVM_INFO   @   30498.6819500us:  [sim:description:2]     **Check TMR_OUT[0]( static LOW ) for pad SCK 
+UVM_ERROR  @   30504.1219500us:  [tmr_out_checker_SCK]   Value at pin SCK is not expected for static LOW (0)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30509.4619500us:  [tmr_out_checker_SCK]   Value at pin SCK is not expected for static LOW (0)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30509.5619500us:  [sim:measure]           'Row 0' status = PASS 
+UVM_ERROR  @   30515.0019500us:  [tmr_out_checker_SCK]   Value at pin SCK is not expected for static LOW (0)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30530.6819500us:  [sim:description:2]     **Check TMR_OUT[1]( static HIGH ) for pad SCK 
+UVM_ERROR  @   30536.1219500us:  [tmr_out_checker_SCK]   Value at pin SCK is not expected for static HIGH (1)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30541.4619500us:  [tmr_out_checker_SCK]   Value at pin SCK is not expected for static HIGH (1)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30541.5619500us:  [sim:measure]           'Row 1' status = PASS 
+UVM_ERROR  @   30547.0019500us:  [tmr_out_checker_SCK]   Value at pin SCK is not expected for static HIGH (1)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30562.6819500us:  [sim:description:2]     **Check TMR_OUT[2]( TDO ) for pad SCK 
+UVM_ERROR  @   30568.1219500us:  [tmr_out_checker_SCK]   Value at pin SCK is not expected for TDO (2)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30573.6119500us:  [tmr_out_checker_SCK]   Value at pin SCK is not expected for TDO (2)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30573.7619500us:  [tmr_out_checker_SCK]   Value at pin SCK is not expected for TDO (2)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30573.7619500us:  [sim:measure]           'Row 2' status = PASS 
+UVM_ERROR  @   30579.2019500us:  [tmr_out_checker_SCK]   Value at pin SCK is not expected for TDO (2)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30594.8819500us:  [sim:description:2]     **Check TMR_OUT[3]( CSB ) for pad SCK 
+UVM_ERROR  @   30600.3219500us:  [tmr_out_checker_SCK]   Value at pin SCK is not expected for CSB (3)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30605.8119500us:  [tmr_out_checker_SCK]   Value at pin SCK is not expected for CSB (3)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30605.9619500us:  [tmr_out_checker_SCK]   Value at pin SCK is not expected for CSB (3)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30605.9619500us:  [sim:measure]           'Row 3' status = PASS 
+UVM_ERROR  @   30611.4019500us:  [tmr_out_checker_SCK]   Value at pin SCK is not expected for CSB (3)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30627.0819500us:  [sim:description:2]     **Check TMR_OUT[4]( SCK ) for pad SCK 
+UVM_ERROR  @   30632.5219500us:  [tmr_out_checker_SCK]   Value at pin SCK is not expected for SCK (4)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30638.0119500us:  [tmr_out_checker_SCK]   Value at pin SCK is not expected for SCK (4)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_ERROR  @   30638.1619500us:  [tmr_out_checker_SCK]   Value at pin SCK is not expected for SCK (4)! Got x but expected 1  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+UVM_INFO   @   30638.1619500us:  [sim:measure]           'Row 4' status = PASS 
+UVM_ERROR  @   30643.6019500us:  [tmr_out_checker_SCK]   Value at pin SCK is not expected for SCK (4)! Got x but expected 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/tmr_out_seq.svh(122) 
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++ ready:   ./simv_52144_jtag_test +UVM_VERBOSITY=UVM_MEDIUM +bus_conflict_off +warn=noFCICIO -ucli -assert nopostproc +UVM_LOG_RECORD -verdi_opts '-ssr Verdi.ses' +uvm_set_type_override=top_default_seq,jtag_test_seq -i run.tcl -vcs_assert off +UVM_VERDI_TRACE="UVM_AWARE+RAL+TLM+MSG+HIER+PRINT" +UVM_LOG_RECORD +UVM_TESTNAME=top_test +UVM_TR_RECORD +vcs+lic+wait -reportstats -cm line+cond+fsm+tgl+branch+assert -cm_dir DIGITAL/results/vcs/jtag_test.vdb -lca   +fsdbfile+jtag_test.fsdb
+ ++ in dir   /nfs/wrk.zaa/sim/52144/m52144a/jtag_test
+ ++ on host  ex04.elmos.de
+ ++ user     zaa
+ ++ endtime  2025-06-08T16:54:25
+ ++ took     123 seconds
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

@@ -1,0 +1,479 @@
++++ calling  ./simv_52144_dsi3_crc +UVM_VERBOSITY=UVM_MEDIUM +bus_conflict_off +warn=noFCICIO -ucli -assert nopostproc +UVM_LOG_RECORD -verdi_opts '-ssr Verdi.ses' +uvm_set_type_override=top_default_seq,dsi3_crc_seq -Xdprof=timeline -simprofile time -i run.tcl -vcs_assert off +UVM_VERDI_TRACE="UVM_AWARE+RAL+TLM+MSG+HIER+PRINT" +UVM_LOG_RECORD +UVM_TESTNAME=top_test +UVM_TR_RECORD +vcs+lic+wait -reportstats -cm line+cond+fsm+tgl+branch+assert -cm_dir DIGITAL/results/vcs/dsi3_crc.vdb -lca   +fsdbfile+dsi3_crc.fsdb
+ ++ in dir   /nfs/wrk.zaa/sim/52144/m52144a/dsi3_crc
+ ++ on host  ex04.elmos.de
+ ++ user     zaa
+ ++ start    2025-06-08T18:22:03
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Warning-[LCA_FEATURES_ENABLED] Usage warning
+  LCA features enabled by '-lca' argument on the command line.  For more 
+  information regarding list of LCA features please refer to Chapter "LCA 
+  features" in the VCS Release Notes
+
+[dprof-info] generating timeline profile dprof.dir/timeline.txt
+Chronologic VCS simulator copyright 1991-2021
+Contains Synopsys proprietary information.
+Compiler version S-2021.09-1_Full64; Runtime version S-2021.09-1_Full64;  Jun  8 20:22 2025
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+
+ VCS Coverage Metrics Release S-2021.09-1_Full64 Copyright (c) 1991-2021 by Synopsys Inc.
+ucli% source dump.tcl
+*Verdi* Loading libsscore_vcsmx202109.so
+FSDB Dumper for VCS-MX, Release Verdi_U-2023.03-1, Linux x86_64/64bit, 04/17/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'dsi3_crc.fsdb'
+*Verdi* : fsdbDumpon("glitch") - All FSDB files at 0 ps.
+*Verdi* : Begin traversing the scope (top_tb), layer (0).
+*Verdi* : Enable +all dumping.
+*Verdi* : End of traversing.
+*Verdi* : Flush all FSDB Files at 0 ps.
+1
+ucli% if { [info exists ::env(GATE_LEVEL)] } {
+	source tcheck.tcl
+}
+ucli% run
+*Verdi* Enable Verdi Message Catcher.
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/verdi/uvm_custom_install_verdi_recorder.sv(283) @ 0: reporter [VERDI_TR_AUTO] +UVM_TR_RECORD implicitly enables recording_details to UVM_FULL for all components. For explicit control use +UVM_DISABLE_AUTO_COMPONENT and set recording_detail on components accordingly
+UVM_INFO @ 0: reporter [RNTST] Running test top_test...
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VRR applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VREF applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VBG applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+UVM_INFO @ 0: reporter [UVM_CMDLINE_PROC] Applying type override from the command line: +uvm_set_type_override=top_default_seq,dsi3_crc_seq
+UVM_INFO   @       0.0000000us:  [UVM_VERDI_DPI]         uvm_verdi DPI routines are compiled off. Recompile without +define+UVM_NO_VERDI_DPI 
+UVM_INFO   @       0.0000000us:  [dsi3_crc_seq]          dsi3_crc_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+*Verdi* Enable Verdi Recorder.
+Info: Verdi UVM 1.2 Hooks File 06/17/2014 
+UVM_INFO   @    2120.0010000us:  [sim:task]              DSI3 CRC calculation - PDCM 8bit - SEED xFF 
+UVM_INFO   @    2120.0010000us:  [random_pdcm_and_read_data_seq] random_pdcm_and_read_data_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2120.0020000us:  [sim:description:2]     **14 periods of random 10 packets using SID SID_0Bit on channels 0b11 
+UVM_INFO   @    2120.0020000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2212.2430000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 10 packets, period = 4603 us
+  0 | Symbols:  33 | SID_0Bit | Start:    22 -    60
+  1 | Symbols:  46 | SID_0Bit | Start:   401 -   425
+  2 | Symbols:  44 | SID_0Bit | Start:   913 -   947
+  3 | Symbols:  30 | SID_0Bit | Start:  1411 -  1434
+  4 | Symbols:  46 | SID_0Bit | Start:  1779 -  1789
+  5 | Symbols:  37 | SID_0Bit | Start:  2286 -  2332
+  6 | Symbols:  28 | SID_0Bit | Start:  2748 -  2795
+  7 | Symbols:  46 | SID_0Bit | Start:  3117 -  3133
+  8 | Symbols:  34 | SID_0Bit | Start:  3629 -  3662
+  9 | Symbols:  38 | SID_0Bit | Start:  4010 -  4052  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    2215.0180000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 14 pulses and a PDCM period of 4603  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    2215.0180000us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 14 pulses and a PDCM period of 4603  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    2225.8098260us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @    2229.6498260us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @    2233.4898260us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @    2237.3298260us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @    2238.1798180us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @    2240.1798340us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @    6828.8098580us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @    6832.6498580us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @    6841.1798500us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @    6841.1798500us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 4603.000000 us - 12 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @    6843.1798350us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @    6843.1798350us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 4603.000000 us - 12 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @    6941.9848580us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 10 packets
+  0 |   |   |   |   |   |   |  33 symbols:  0x2097 0xca06 0x2071 0x459d 0xf733 0xa10f 0xedba 0xa4dd 0xb000
+  1 |   |   | TE|   |   |   |  46 symbols:  0x22aa 0xaf70 0x3d62 0x8b07 0xa8ff 0x4d4c 0xf72c 0xd06e 0xf8cb 0x49cf 0x9eee 0x7200
+  2 |   |   |   |   |   |   |  44 symbols:  0x922b 0x8c58 0x4bdf 0xbe54 0xf419 0xce10 0xdbe3 0xf9d7 0x7d9d 0x62c0 0x29ba
+  3 |   |CRC|   |   |   |   |  30 symbols:  0xddad 0xd88e 0xc393 0x68d8 0x4ffc 0x08d6 0x0e91 0x6400
+  4 |   |   |   |   |   |   |  46 symbols:  0xf427 0x3b77 0xd51d 0x0e0f 0xf1a6 0x64f3 0x406c 0x85b9 0xe763 0x8a13 0x1e48 0x5700
+  5 |   |CRC|   |   |   |   |  37 symbols:  0x95aa 0x99ce 0x8942 0x1167 0xa6ff 0xb73c 0x65f9 0xc522 0xcf18 0xc000
+  6 |   |   |   |   |   |   |  28 symbols:  0x53a0 0x27a5 0x4b37 0x52a8 0x0760 0xabab 0x44dd
+  7 |   |   |   |   |   |   |  46 symbols:  0xf861 0x28d6 0x66b9 0xd3de 0x4ce9 0xf053 0x496a 0x7d25 0x3814 0x2894 0x93a3 0xcd00
+  8 |   |   |   |   |   |   |  34 symbols:  0xf680 0x16ec 0x23ae 0xfe4f 0x9053 0x5ac2 0xf59c 0xd139 0xf500
+  9 |   |CRC|   |   |   |   |  38 symbols:  0x3f66 0x5ad8 0x6771 0x0c03 0x05b7 0x8797 0xb53d 0x8ae2 0x4c31 0x3b00  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @    6941.9848580us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @    6941.9848580us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 1 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    6941.9848580us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 1 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_ERROR  @    6941.9848580us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 2 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @    6941.9848580us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 3 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @    6941.9848580us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 4 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    6941.9848580us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 4 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_ERROR  @    6941.9848580us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 5 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @    6941.9848580us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 6 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @    6941.9848580us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 7 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @    6941.9848580us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 8 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @    6941.9848580us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 9 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    6945.9298580us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @    6949.7698580us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @    7059.1048580us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b10
+ channel 0b01 [  ] 10 packets
+  0 |   |   |   |   |   |   |  33 symbols:  0x2097 0xca06 0x2071 0x459d 0xf733 0xa10f 0xedba 0xa4dd 0xb000
+  1 |   |   |   |   |   |   |  46 symbols:  0x22aa 0xaf70 0x3d62 0x8b07 0xa8ff 0x4d4c 0xf72c 0xd06e 0xf8cb 0x49cf 0x9eee 0x7200
+  2 |   |   |   |   |   |   |  44 symbols:  0x922b 0x8c58 0x4bdf 0xbe54 0xf419 0xce10 0xdbe3 0xf9d7 0x7d9d 0x62c0 0x29ba
+  3 |   |CRC|   |   |   |   |  30 symbols:  0xddad 0xd88e 0xc393 0x68d8 0x4ffc 0x08d6 0x0e91 0x6400
+  4 |   |   | TE|   |   |   |  46 symbols:  0xf427 0x3b77 0xd51d 0x0e0f 0xf1a6 0x64f3 0x406c 0x85b9 0xe763 0x8a13 0x1e48 0x5700
+  5 |   |CRC|   |   |   |   |  37 symbols:  0x95aa 0x99ce 0x8942 0x1167 0xa6ff 0xb73c 0x65f9 0xc522 0xcf18 0xc000
+  6 |   |   |   |   |   |   |  28 symbols:  0x53a0 0x27a5 0x4b37 0x52a8 0x0760 0xabab 0x44dd
+  7 |   |   |   |   |   |   |  46 symbols:  0xf861 0x28d6 0x66b9 0xd3de 0x4ce9 0xf053 0x496a 0x7d25 0x3814 0x2894 0x93a3 0xcd00
+  8 |   |   |   |   |   |   |  34 symbols:  0xf680 0x16ec 0x23ae 0xfe4f 0x9053 0x5ac2 0xf59c 0xd139 0xf500
+  9 |   |CRC|   |   |   |   |  38 symbols:  0x3f66 0x5ad8 0x6771 0x0c03 0x05b7 0x8797 0xb53d 0x8ae2 0x4c31 0x3b00  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @    7059.1048580us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    7059.1048580us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_ERROR  @    7059.1048580us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 1 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @    7059.1048580us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 2 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @    7059.1048580us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 3 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @    7059.1048580us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 4 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    7059.1048580us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 4 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_ERROR  @    7059.1048580us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 5 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @    7059.1048580us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 6 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @    7059.1048580us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 7 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @    7059.1048580us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 8 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @    7059.1048580us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 9 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   11431.8098180us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   11435.6498180us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @   11444.1798150us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   11444.1798150us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 4603.000000 us - 11 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   11446.1798260us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   11446.1798260us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 4603.000000 us - 11 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   11544.9848180us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 10 packets
+  0 |   |   |   |   |   |   |  33 symbols:  0xf2e6 0x5270 0x1e46 0x3412 0x4c43 0xd3eb 0x33da 0xec6c 0x8000
+  1 |   |   |   |   |   |   |  46 symbols:  0x44f2 0x4d33 0x65b1 0xdce0 0x2272 0x7858 0x6ce6 0x5292 0x5ddb 0x4314 0x92f4 0x4900
+  2 |   |   |   |   |   |   |  44 symbols:  0xd1f7 0x4ebb 0x55e0 0x7bf6 0x1a50 0xd9a8 0x9bf2 0x74bd 0x754b 0xd5ed 0x3ffb
+  3 |   |   |   |   |   |   |  30 symbols:  0xc2a6 0xa0af 0xfa18 0x14ab 0x8073 0x68c0 0xf355 0xb000
+  4 |   |   |   |   |   |   |  46 symbols:  0x617d 0x999f 0xe06a 0xdef5 0x8865 0x172d 0x3616 0x6e23 0xdcab 0x3f03 0x7166 0xea00
+  5 |   |   |   |   |   |   |  37 symbols:  0x5d7f 0x89e2 0x1e0b 0x3b2f 0xe232 0xcdc7 0x0f0d 0xfa32 0x5cfa 0x7000
+  6 |   |   |   |   |   |   |  28 symbols:  0x5d72 0xf5d0 0x6559 0x3d41 0x7ee9 0x9932 0x4131
+  7 |   |   |   |   |   |   |  46 symbols:  0xa9b2 0xf010 0x86d0 0xde2a 0x8374 0xa926 0xb9a5 0xe3ac 0xe8b4 0xaa27 0x8895 0x3500
+  8 |   |CRC|   |   |   |   |  34 symbols:  0x07d2 0x5f1e 0x2d92 0x7ead 0x7ed7 0x79ed 0x6213 0x1506 0x6700
+  9 |   |CRC|   |   |   |   |  38 symbols:  0xbb79 0xa956 0x3fbc 0x32dc 0xb8ad 0xd00d 0x38f9 0xbda4 0xe5f4 0xe100  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   11544.9848180us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   11544.9848180us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 1 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   11544.9848180us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 1 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_ERROR  @   11544.9848180us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 2 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   11544.9848180us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 2 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_ERROR  @   11544.9848180us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 3 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   11544.9848180us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 4 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   11544.9848180us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 5 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   11544.9848180us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 6 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   11544.9848180us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 7 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   11544.9848180us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 8 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   11544.9848180us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 9 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   11548.9298180us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   11552.7698180us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @   11662.1048180us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b10
+ channel 0b01 [  ] 10 packets
+  0 |   |   |   |   |   |   |  33 symbols:  0xf2e6 0x5270 0x1e46 0x3412 0x4c43 0xd3eb 0x33da 0xec6c 0x8000
+  1 |   |   |   |   |   |   |  46 symbols:  0x44f2 0x4d33 0x65b1 0xdce0 0x2272 0x7858 0x6ce6 0x5292 0x5ddb 0x4314 0x92f4 0x4900
+  2 |   |   |   |   |   |   |  44 symbols:  0xd1f7 0x4ebb 0x55e0 0x7bf6 0x1a50 0xd9a8 0x9bf2 0x74bd 0x754b 0xd5ed 0x3ffb
+  3 |   |   |   |   |   |   |  30 symbols:  0xc2a6 0xa0af 0xfa18 0x14ab 0x8073 0x68c0 0xf355 0xb000
+  4 |   |   |   |   |   |   |  46 symbols:  0x617d 0x999f 0xe06a 0xdef5 0x8865 0x172d 0x3616 0x6e23 0xdcab 0x3f03 0x7166 0xea00
+  5 |   |   |   |   |   |   |  37 symbols:  0x5d7f 0x89e2 0x1e0b 0x3b2f 0xe232 0xcdc7 0x0f0d 0xfa32 0x5cfa 0x7000
+  6 |   |   |   |   |   |   |  28 symbols:  0x5d72 0xf5d0 0x6559 0x3d41 0x7ee9 0x9932 0x4131
+  7 |   |   |   |   |   |   |  46 symbols:  0xa9b2 0xf010 0x86d0 0xde2a 0x8374 0xa926 0xb9a5 0xe3ac 0xe8b4 0xaa27 0x8895 0x3500
+  8 |   |CRC|   |   |   |   |  34 symbols:  0x07d2 0x5f1e 0x2d92 0x7ead 0x7ed7 0x79ed 0x6213 0x1506 0x6700
+  9 |   |CRC|   |   |   |   |  38 symbols:  0xbb79 0xa956 0x3fbc 0x32dc 0xb8ad 0xd00d 0x38f9 0xbda4 0xe5f4 0xe100  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   11662.1048180us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   11662.1048180us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 1 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   11662.1048180us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 2 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   11662.1048180us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 3 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   11662.1048180us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 4 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   11662.1048180us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 5 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   11662.1048180us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 6 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   11662.1048180us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 7 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   11662.1048180us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 8 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   11662.1048180us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 9 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   16034.8098500us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   16038.6498500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @   16047.1798420us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   16047.1798420us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 4603.000000 us - 10 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   16049.1798580us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   16049.1798580us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 4603.000000 us - 10 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   16147.9848500us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 10 packets
+  0 |   |CRC|   |   |   |   |  33 symbols:  0xcfae 0x427a 0x0ff8 0x2229 0xde25 0xab8c 0x0633 0x78e6 0x9000
+  1 |   |CRC|   |   |   |   |  46 symbols:  0x42e7 0x4d79 0xf3b5 0xfb43 0xcd8d 0x51fe 0x4981 0x136e 0x27d9 0x0d86 0x6a03 0x7600
+  2 |   |   |   |   |   |   |  44 symbols:  0x10f4 0xee92 0x5d3f 0x4373 0x7153 0x543f 0x7322 0x7a21 0x3680 0xfe26 0x8b1e
+  3 |   |   |   |   |   |   |  30 symbols:  0x4b17 0x8579 0x4324 0x80b9 0x1d76 0x5a7f 0xa026 0x3900
+  4 |   |CRC|   |   |   |   |  46 symbols:  0x31ab 0x1344 0x95d2 0xcd07 0x3e70 0x4388 0xf137 0xe9dd 0x6388 0xc2a4 0x61bd 0x3700
+  5 |   |CRC|   |   |   |   |  37 symbols:  0xc3bb 0xf031 0x66b4 0x5e28 0x5150 0xdbc8 0x3707 0xd71f 0x1e57 0xe000
+  6 |   |CRC|   |   |   |   |  28 symbols:  0x57eb 0xf384 0x1fac 0xdea6 0x8f8c 0x81e7 0xbab6
+  7 |   |   |   |   |   |   |  46 symbols:  0x13fd 0x2caf 0x1071 0x3281 0x3397 0x5489 0x654c 0xbb00 0x6bf7 0x0c3c 0x7f29 0x5700
+  8 |   |   |   |   |   |   |  34 symbols:  0xf6e6 0x5bf5 0xb152 0x686b 0x5753 0xb07b 0x922e 0xffbd 0x0300
+  9 |   |CRC|   |   |   |   |  38 symbols:  0x2bc8 0xb5d3 0x155f 0xef62 0x721e 0x0e8d 0x9511 0x73bd 0x3eae 0x4b00  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   16147.9848500us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   16147.9848500us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 1 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   16147.9848500us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 2 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   16147.9848500us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 3 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   16147.9848500us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 4 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   16147.9848500us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 4 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_ERROR  @   16147.9848500us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 5 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   16147.9848500us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 6 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   16147.9848500us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 7 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   16147.9848500us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 7 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_ERROR  @   16147.9848500us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 8 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   16147.9848500us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 9 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   16151.9298500us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   16155.7698500us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @   16265.1048500us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b10
+ channel 0b01 [  ] 10 packets
+  0 |   |CRC|   |   |   |   |  33 symbols:  0xcfae 0x427a 0x0ff8 0x2229 0xde25 0xab8c 0x0633 0x78e6 0x9000
+  1 |   |CRC|   |   |   |   |  46 symbols:  0x42e7 0x4d79 0xf3b5 0xfb43 0xcd8d 0x51fe 0x4981 0x136e 0x27d9 0x0d86 0x6a03 0x7600
+  2 |   |   |   |   |   |   |  44 symbols:  0x10f4 0xee92 0x5d3f 0x4373 0x7153 0x543f 0x7322 0x7a21 0x3680 0xfe26 0x8b1e
+  3 |   |   |   |   |   |   |  30 symbols:  0x4b17 0x8579 0x4324 0x80b9 0x1d76 0x5a7f 0xa026 0x3900
+  4 |   |CRC|   |   |   |   |  46 symbols:  0x31ab 0x1344 0x95d2 0xcd07 0x3e70 0x4388 0xf137 0xe9dd 0x6388 0xc2a4 0x61bd 0x3700
+  5 |   |CRC|   |   |   |   |  37 symbols:  0xc3bb 0xf031 0x66b4 0x5e28 0x5150 0xdbc8 0x3707 0xd71f 0x1e57 0xe000
+  6 |   |CRC|   |   |   |   |  28 symbols:  0x57eb 0xf384 0x1fac 0xdea6 0x8f8c 0x81e7 0xbab6
+  7 |   |   |   |   |   |   |  46 symbols:  0x13fd 0x2caf 0x1071 0x3281 0x3397 0x5489 0x654c 0xbb00 0x6bf7 0x0c3c 0x7f29 0x5700
+  8 |   |   |   |   |   |   |  34 symbols:  0xf6e6 0x5bf5 0xb152 0x686b 0x5753 0xb07b 0x922e 0xffbd 0x0300
+  9 |   |CRC|   |   |   |   |  38 symbols:  0x2bc8 0xb5d3 0x155f 0xef62 0x721e 0x0e8d 0x9511 0x73bd 0x3eae 0x4b00  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   16265.1048500us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   16265.1048500us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_ERROR  @   16265.1048500us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 1 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   16265.1048500us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 1 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_ERROR  @   16265.1048500us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 2 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   16265.1048500us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 3 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   16265.1048500us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 4 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   16265.1048500us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 4 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_ERROR  @   16265.1048500us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 5 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   16265.1048500us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 5 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_ERROR  @   16265.1048500us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 6 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   16265.1048500us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 7 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   16265.1048500us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 7 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_ERROR  @   16265.1048500us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 8 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   16265.1048500us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 9 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   20637.8098150us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   20641.6498150us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @   20650.1798070us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   20650.1798070us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 4603.000000 us - 9 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   20652.1798180us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   20652.1798180us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 4603.000000 us - 9 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   20750.9848150us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 10 packets
+  0 |   |   |   |   |   |   |  33 symbols:  0x30f1 0x6046 0xc168 0xfcf9 0x57f9 0x0dc6 0x0c4a 0x2f99 0xa000
+  1 |   |CRC|   |   |   |   |  46 symbols:  0x2306 0xb90b 0xb216 0x30e8 0x6ed7 0x44c1 0x4d57 0xb933 0x4f2e 0xd803 0x441e 0xae00
+  2 |   |   |   |   |   |   |  44 symbols:  0x74f3 0x9a63 0x19e1 0xcf52 0xe059 0x6146 0x702f 0x769f 0xf6e7 0x5905 0xf894
+  3 |   |   |   |   |   |   |  30 symbols:  0xa084 0xbcba 0x3e2b 0xa0a9 0xa7d5 0x4ff3 0x2f17 0x3700
+  4 |   |   |   |   |   |   |  46 symbols:  0x77d6 0x94d8 0xd2a2 0xdaf5 0xa139 0xc072 0xe695 0xbbe4 0x95da 0x60f4 0x956c 0xe400
+  5 |   |   |   |   |   |   |  37 symbols:  0x2285 0x853d 0xa1d9 0x9ae7 0x103b 0xb8f6 0x4c65 0xd3cf 0x2015 0x1000
+  6 |   |   |   |   |   |   |  28 symbols:  0x6456 0xea47 0x9f94 0x2687 0x06ce 0x2402 0x0e23
+  7 |   |   |   |   |   |   |  46 symbols:  0x038b 0x8570 0x15d4 0xe46f 0x36f3 0xa3c2 0xfcf0 0xd5b9 0xc2dc 0x4061 0x493a 0x4000
+  8 |   |   |   |   |   |   |  34 symbols:  0x4453 0x896c 0x97a8 0xe915 0xf9e6 0xfd22 0x3e24 0xb6b1 0x7500
+  9 |   |   |   |   |   |   |  38 symbols:  0xfd82 0x78c2 0xb178 0x3494 0x98d3 0x6246 0xe58c 0x3e14 0xd840 0x0500  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   20750.9848150us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   20750.9848150us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 1 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   20750.9848150us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 2 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   20750.9848150us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 2 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_ERROR  @   20750.9848150us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 3 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   20750.9848150us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 4 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   20750.9848150us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 5 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   20750.9848150us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 6 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   20750.9848150us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 7 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   20750.9848150us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 8 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   20750.9848150us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 9 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   20754.9298150us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   20758.7698150us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @   20868.1048150us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b10
+ channel 0b01 [  ] 10 packets
+  0 |   |   |   |   |   |   |  33 symbols:  0x30f1 0x6046 0xc168 0xfcf9 0x57f9 0x0dc6 0x0c4a 0x2f99 0xa000
+  1 |   |CRC|   |   |   |   |  46 symbols:  0x2306 0xb90b 0xb216 0x30e8 0x6ed7 0x44c1 0x4d57 0xb933 0x4f2e 0xd803 0x441e 0xae00
+  2 |   |   |   |   |   |   |  44 symbols:  0x74f3 0x9a63 0x19e1 0xcf52 0xe059 0x6146 0x702f 0x769f 0xf6e7 0x5905 0xf894
+  3 |   |   |   |   |   |   |  30 symbols:  0xa084 0xbcba 0x3e2b 0xa0a9 0xa7d5 0x4ff3 0x2f17 0x3700
+  4 |   |   |   |   |   |   |  46 symbols:  0x77d6 0x94d8 0xd2a2 0xdaf5 0xa139 0xc072 0xe695 0xbbe4 0x95da 0x60f4 0x956c 0xe400
+  5 |   |   |   |   |   |   |  37 symbols:  0x2285 0x853d 0xa1d9 0x9ae7 0x103b 0xb8f6 0x4c65 0xd3cf 0x2015 0x1000
+  6 |   |   |   |   |   |   |  28 symbols:  0x6456 0xea47 0x9f94 0x2687 0x06ce 0x2402 0x0e23
+  7 |   |   |   |   |   |   |  46 symbols:  0x038b 0x8570 0x15d4 0xe46f 0x36f3 0xa3c2 0xfcf0 0xd5b9 0xc2dc 0x4061 0x493a 0x4000
+  8 |   |   |   |   |   |   |  34 symbols:  0x4453 0x896c 0x97a8 0xe915 0xf9e6 0xfd22 0x3e24 0xb6b1 0x7500
+  9 |   |   |   |   |   |   |  38 symbols:  0xfd82 0x78c2 0xb178 0x3494 0x98d3 0x6246 0xe58c 0x3e14 0xd840 0x0500  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   20868.1048150us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   20868.1048150us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 1 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   20868.1048150us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 2 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   20868.1048150us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 3 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   20868.1048150us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 4 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   20868.1048150us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 5 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   20868.1048150us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 6 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   20868.1048150us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 6 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_ERROR  @   20868.1048150us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 7 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   20868.1048150us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 8 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   20868.1048150us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 9 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   25240.8098420us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   25244.6498420us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @   25253.1798340us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   25253.1798340us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 4603.000000 us - 8 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   25255.1798500us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   25255.1798500us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 4603.000000 us - 8 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   25353.9848420us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 10 packets
+  0 |   |CRC|   |   |   |   |  33 symbols:  0xc83f 0x8b23 0xe299 0xe3ea 0x0eb1 0xe49e 0x01a8 0xeff7 0x3000
+  1 |   |CRC|   |   |   |   |  46 symbols:  0xc7c1 0xc116 0x86b0 0x2213 0x433c 0x1871 0xbe00 0x3d8e 0x1f4a 0x5cd2 0x9d2c 0x4000
+  2 |   |CRC|   |   |   |   |  44 symbols:  0x29a9 0x740e 0x041a 0xe092 0xd64e 0xa1b6 0x74c0 0x8431 0xa48c 0x21e9 0x3ad9
+  3 |   |   |   |   |   |   |  30 symbols:  0x85d3 0xdf03 0x85aa 0xc16b 0x7176 0x3d3a 0xf918 0xaf00
+  4 |   |   |   |   |   |   |  46 symbols:  0x0505 0x4ef5 0xc593 0xbf73 0x954d 0x0111 0x75b4 0x2037 0xebb3 0xad41 0x86ca 0xec00
+  5 |   |CRC|   |   |   |   |  37 symbols:  0x229f 0xefc4 0xd473 0xf654 0xdcb7 0x28c6 0x35bd 0xf13d 0x012b 0x7000
+  6 |   |   |   |   |   |   |  28 symbols:  0x8b28 0x3003 0x9623 0xb92c 0xee0a 0x10da 0xeb7a
+  7 |   |   |   |   |   |   |  46 symbols:  0x1f25 0x26d1 0xf511 0xfbfc 0xee33 0xe43d 0x67c2 0x18ba 0x0763 0x1046 0xeeda 0x7400
+  8 |   |   |   |   |   |   |  34 symbols:  0x855f 0xe660 0x8978 0x3322 0xe529 0x7b65 0x741b 0x7135 0x8500
+  9 |   |   |   |   |   |   |  38 symbols:  0xccc1 0xaf31 0x8b72 0xca5e 0x8a6e 0xadbe 0x0de9 0xeb03 0x4b42 0x6c00  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   25353.9848420us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   25353.9848420us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 1 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   25353.9848420us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 2 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   25353.9848420us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 3 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   25353.9848420us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 3 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_ERROR  @   25353.9848420us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 4 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   25353.9848420us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 5 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   25353.9848420us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 6 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   25353.9848420us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 7 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   25353.9848420us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 8 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   25353.9848420us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 9 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   25357.9298420us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   25361.7698420us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @   25471.1048420us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b10
+ channel 0b01 [  ] 10 packets
+  0 |   |CRC|   |   |   |   |  33 symbols:  0xc83f 0x8b23 0xe299 0xe3ea 0x0eb1 0xe49e 0x01a8 0xeff7 0x3000
+  1 |   |CRC|   |   |   |   |  46 symbols:  0xc7c1 0xc116 0x86b0 0x2213 0x433c 0x1871 0xbe00 0x3d8e 0x1f4a 0x5cd2 0x9d2c 0x4000
+  2 |   |CRC|   |   |   |   |  44 symbols:  0x29a9 0x740e 0x041a 0xe092 0xd64e 0xa1b6 0x74c0 0x8431 0xa48c 0x21e9 0x3ad9
+  3 |   |   |   |   |   |   |  30 symbols:  0x85d3 0xdf03 0x85aa 0xc16b 0x7176 0x3d3a 0xf918 0xaf00
+  4 |   |   | TE|   |   |   |  46 symbols:  0x0505 0x4ef5 0xc593 0xbf73 0x954d 0x0111 0x75b4 0x2037 0xebb3 0xad41 0x86ca 0xec00
+  5 |   |CRC|   |   |   |   |  37 symbols:  0x229f 0xefc4 0xd473 0xf654 0xdcb7 0x28c6 0x35bd 0xf13d 0x012b 0x7000
+  6 |   |   |   |   |   |   |  28 symbols:  0x8b28 0x3003 0x9623 0xb92c 0xee0a 0x10da 0xeb7a
+  7 |   |   |   |   |   |   |  46 symbols:  0x1f25 0x26d1 0xf511 0xfbfc 0xee33 0xe43d 0x67c2 0x18ba 0x0763 0x1046 0xeeda 0x7400
+  8 |   |   |   |   |   |   |  34 symbols:  0x855f 0xe660 0x8978 0x3322 0xe529 0x7b65 0x741b 0x7135 0x8500
+  9 |   |   |   |   |   |   |  38 symbols:  0xccc1 0xaf31 0x8b72 0xca5e 0x8a6e 0xadbe 0x0de9 0xeb03 0x4b42 0x6c00  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   25471.1048420us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   25471.1048420us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 1 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   25471.1048420us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 2 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   25471.1048420us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 3 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   25471.1048420us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 3 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_ERROR  @   25471.1048420us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 4 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   25471.1048420us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 4 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_ERROR  @   25471.1048420us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 5 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   25471.1048420us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 6 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   25471.1048420us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 7 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   25471.1048420us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 8 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   25471.1048420us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 9 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   29843.8098070us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   29847.6498070us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @   29856.1798660us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   29856.1798660us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 4603.000000 us - 7 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   29858.1798150us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   29858.1798150us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 4603.000000 us - 7 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   29956.9848070us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 10 packets
+  0 |   |CRC|   |   |   |   |  33 symbols:  0x78e8 0xb777 0xfa51 0x0072 0x7ea5 0x5037 0x1d2d 0x3a4a 0x7000
+  1 |   |   |   |   |   |   |  46 symbols:  0xd7ba 0x1716 0x5d93 0xb832 0xa04a 0x4c33 0x4dd0 0xd0d1 0xc1f7 0x0d2c 0x83da 0x9300
+  2 |   |   |   |   |   |   |  44 symbols:  0x4067 0xa574 0xae90 0xb341 0x5880 0x0121 0x0c05 0xbee7 0x4a71 0x1c66 0xf026
+  3 |   |CRC|   |   |   |   |  30 symbols:  0x6fa3 0x91b4 0x6e2e 0xb5e6 0x57a8 0x9f16 0x50ae 0x0300
+  4 |   |   | TE|   |   |   |  46 symbols:  0x3c21 0x25b7 0x8090 0x1224 0xffa3 0x98cc 0xbb01 0x9880 0x79eb 0xb793 0x303e 0x7200
+  5 |   |   |   |   |   |   |  37 symbols:  0xd266 0x60c0 0xfc61 0x3566 0xd2fb 0x4714 0x800c 0x92a5 0x7125 0xb000
+  6 |   |   |   |   |   |   |  28 symbols:  0xa37d 0xf8db 0x8e68 0x1d00 0xad26 0xf201 0x7968
+  7 |   |CRC|   |   |   |   |  46 symbols:  0x7944 0xc56b 0x980b 0x72d4 0xc2e1 0x17f5 0x58cd 0xd65f 0x7203 0x358e 0xeebf 0x7100
+  8 |   |   |   |   |   |   |  34 symbols:  0xa5b9 0x7502 0x87aa 0xd54e 0xd676 0xa3dc 0xc6cc 0xc6ef 0xa300
+  9 |   |CRC|   |   |   |   |  38 symbols:  0x31d5 0x6a06 0x34a7 0xf768 0x933c 0xdc75 0x5e18 0xf134 0xa9eb 0x5500  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   29956.9848070us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   29956.9848070us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 1 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   29956.9848070us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 2 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   29956.9848070us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 3 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   29956.9848070us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 4 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   29956.9848070us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 4 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_ERROR  @   29956.9848070us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 5 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   29956.9848070us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 6 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   29956.9848070us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 7 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   29956.9848070us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 7 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_ERROR  @   29956.9848070us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 8 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   29956.9848070us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 9 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   29960.9298070us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   29964.7698070us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @   30074.1048070us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b10
+ channel 0b01 [  ] 10 packets
+  0 |   |CRC|   |   |   |   |  33 symbols:  0x78e8 0xb777 0xfa51 0x0072 0x7ea5 0x5037 0x1d2d 0x3a4a 0x7000
+  1 |   |   |   |   |   |   |  46 symbols:  0xd7ba 0x1716 0x5d93 0xb832 0xa04a 0x4c33 0x4dd0 0xd0d1 0xc1f7 0x0d2c 0x83da 0x9300
+  2 |   |   |   |   |   |   |  44 symbols:  0x4067 0xa574 0xae90 0xb341 0x5880 0x0121 0x0c05 0xbee7 0x4a71 0x1c66 0xf026
+  3 |   |CRC|   |   |   |   |  30 symbols:  0x6fa3 0x91b4 0x6e2e 0xb5e6 0x57a8 0x9f16 0x50ae 0x0300
+  4 |   |   |   |   |   |   |  46 symbols:  0x3c21 0x25b7 0x8090 0x1224 0xffa3 0x98cc 0xbb01 0x9880 0x79eb 0xb793 0x303e 0x7200
+  5 |   |   |   |   |   |   |  37 symbols:  0xd266 0x60c0 0xfc61 0x3566 0xd2fb 0x4714 0x800c 0x92a5 0x7125 0xb000
+  6 |   |   |   |   |   |   |  28 symbols:  0xa37d 0xf8db 0x8e68 0x1d00 0xad26 0xf201 0x7968
+  7 |   |CRC|   |   |   |   |  46 symbols:  0x7944 0xc56b 0x980b 0x72d4 0xc2e1 0x17f5 0x58cd 0xd65f 0x7203 0x358e 0xeebf 0x7100
+  8 |   |   |   |   |   |   |  34 symbols:  0xa5b9 0x7502 0x87aa 0xd54e 0xd676 0xa3dc 0xc6cc 0xc6ef 0xa300
+  9 |   |CRC| TE|   |   |   |  38 symbols:  0x31d5 0x6a06 0x34a7 0xf768 0x933c 0xdc75 0x5e18 0xf134 0xa9eb 0x5500  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   30074.1048070us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   30074.1048070us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 1 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   30074.1048070us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 2 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   30074.1048070us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 3 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   30074.1048070us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 3 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_ERROR  @   30074.1048070us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 4 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   30074.1048070us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 4 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_ERROR  @   30074.1048070us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 5 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   30074.1048070us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 6 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   30074.1048070us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 7 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   30074.1048070us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 8 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   30074.1048070us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 9 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   30074.1048070us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 9 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_INFO   @   34446.8098340us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   34450.6498340us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @   34459.1798260us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   34459.1798260us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 4603.000000 us - 6 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   34461.1798420us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   34461.1798420us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 4603.000000 us - 6 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   34559.9848340us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 10 packets
+  0 |   |   |   |   |   |   |  33 symbols:  0x573c 0xc48d 0x814a 0x8d85 0xc491 0x4f7e 0x4666 0x636c 0xa000
+  1 |   |CRC|   |   |   |   |  46 symbols:  0xd674 0xc1ba 0x0811 0xd03e 0xa191 0xd355 0x02f0 0x70e6 0x2542 0x0ab8 0x10ac 0x3800
+  2 |   |   |   |   |   |   |  44 symbols:  0x50f1 0x9067 0xcbcc 0x48a5 0x62d0 0x423f 0x01f7 0xccc5 0x32ec 0x5216 0x0b65
+  3 |   |CRC|   |   |   |   |  30 symbols:  0x7bfe 0x670f 0x1959 0xc397 0xcbfd 0x94fc 0xcbfa 0x6f00
+  4 |   |   |   |   |   |   |  46 symbols:  0x0f93 0xa859 0xac2a 0x5d0b 0x23ce 0xc99e 0x405d 0x539b 0x82d2 0x911a 0x851d 0x0200
+  5 |   |CRC|   |   |   |   |  37 symbols:  0x8e08 0x6f90 0x25dc 0x7f01 0x643b 0x5418 0x236d 0x1ef2 0x11a0 0xd000
+  6 |   |   |   |   |   |   |  28 symbols:  0xf865 0x2780 0x69ad 0x0895 0x58ad 0x88d2 0xb9e0
+  7 |   |CRC|   |   |   |   |  46 symbols:  0x0aab 0x107f 0xe44e 0x3572 0x719d 0xd74c 0x5581 0x2454 0x52c4 0xead8 0xed54 0xc000
+  8 |   |   |   |   |   |   |  34 symbols:  0xcb5b 0xd94e 0xc54c 0xb8b1 0x3fc9 0x7f98 0x9e89 0x4aab 0xbb00
+  9 |   |   |   |   |   |   |  38 symbols:  0x71c0 0xd014 0xc6d8 0xd30d 0x6601 0x6258 0x8a50 0xa2de 0xc730 0xe500  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   34559.9848340us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   34559.9848340us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_ERROR  @   34559.9848340us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 1 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   34559.9848340us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 2 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   34559.9848340us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 3 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   34559.9848340us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 4 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   34559.9848340us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 5 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   34559.9848340us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 6 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   34559.9848340us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 7 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   34559.9848340us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 8 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   34559.9848340us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 9 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   34563.9298340us:  [sim:measure]           'DSI_STAT' status = PASS 
+UVM_INFO   @   34567.7698340us:  [sim:measure]           'DSI_CMD' status = PASS 
+UVM_INFO   @   34677.1048340us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b10
+ channel 0b01 [  ] 10 packets
+  0 |   |   |   |   |   |   |  33 symbols:  0x573c 0xc48d 0x814a 0x8d85 0xc491 0x4f7e 0x4666 0x636c 0xa000
+  1 |   |CRC|   |   |   |   |  46 symbols:  0xd674 0xc1ba 0x0811 0xd03e 0xa191 0xd355 0x02f0 0x70e6 0x2542 0x0ab8 0x10ac 0x3800
+  2 |   |   |   |   |   |   |  44 symbols:  0x50f1 0x9067 0xcbcc 0x48a5 0x62d0 0x423f 0x01f7 0xccc5 0x32ec 0x5216 0x0b65
+  3 |   |CRC|   |   |   |   |  30 symbols:  0x7bfe 0x670f 0x1959 0xc397 0xcbfd 0x94fc 0xcbfa 0x6f00
+  4 |   |   |   |   |   |   |  46 symbols:  0x0f93 0xa859 0xac2a 0x5d0b 0x23ce 0xc99e 0x405d 0x539b 0x82d2 0x911a 0x851d 0x0200
+  5 |   |CRC|   |   |   |   |  37 symbols:  0x8e08 0x6f90 0x25dc 0x7f01 0x643b 0x5418 0x236d 0x1ef2 0x11a0 0xd000
+  6 |   |   |   |   |   |   |  28 symbols:  0xf865 0x2780 0x69ad 0x0895 0x58ad 0x88d2 0xb9e0
+  7 |   |CRC|   |   |   |   |  46 symbols:  0x0aab 0x107f 0xe44e 0x3572 0x719d 0xd74c 0x5581 0x2454 0x52c4 0xead8 0xed54 0xc000
+  8 |   |   |   |   |   |   |  34 symbols:  0xcb5b 0xd94e 0xc54c 0xb8b1 0x3fc9 0x7f98 0x9e89 0x4aab 0xbb00
+  9 |   |   |   |   |   |   |  38 symbols:  0x71c0 0xd014 0xc6d8 0xd30d 0x6601 0x6258 0x8a50 0xa2de 0xc730 0xe500  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   34677.1048340us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   34677.1048340us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 1 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   34677.1048340us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 2 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   34677.1048340us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 2 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_ERROR  @   34677.1048340us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 3 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   34677.1048340us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 4 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   34677.1048340us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 5 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   34677.1048340us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 6 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   34677.1048340us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 7 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   34677.1048340us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 8 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   34677.1048340us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 9 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
