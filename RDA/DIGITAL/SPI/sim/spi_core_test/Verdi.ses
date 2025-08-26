@@ -1,0 +1,131 @@
+@verdi rc file Version 1.0
+[General]
+saveDB = FALSE
+relativePath = FALSE
+saveSingleView = FALSE
+saveNWaveWinId = 3
+VerdiVersion = Verdi_Q-2020.03
+[KeyNote]
+Line1 = invoke directory: /nfs/wrk.jvoi/sim/52144/m52144a/SPI/spi_core_test
+Line2 = command line: -top "WORK.uvm_custom_install_recording WORK.uvm_custom_install_verdi_recording WORK.testrunner" +UVM_TESTNAME=top_test -ba 
+Line3 = current trace scope: testrunner
+Line4 = memo:
+Line5 = Save Open Database Information: No
+Line6 = Path Option: Absolute Paths
+Line7 = Windows Option: All Windows
+[OneSearch]
+isExisted = TRUE
+[TestBench]
+ConstrViewShow = 0
+InherViewShow = 0
+FSDBMsgShow = 0
+AnnotationShow = 0
+Console = TRUE
+TBHierShow = 1
+powerDumped = 0
+[fusa]
+fdb_server = 
+fdb_proj = 
+fdb_campaign = 
+fdb_tool = 
+[hb]
+postSimFile = /nfs/wrk.jvoi/sim/52144/m52144a/SPI/spi_core_test/spi_core_test.fsdb
+syncTime = 0
+viewport = 0 0 2560 1377 0 0 435 2558
+activeNode = "testrunner"
+activeScope = "testrunner"
+activeFile = "/nfs/wrk.jvoi/projekte/52144/m52144a/ANALOG/../DIGITAL/SPI/tb/tb_spi_core/spi_testrunner.sv"
+interactiveMode = False
+viewType = Source
+simulatorMode = False
+sourceBeginLine = 4
+baMode = False
+srcLineNum = True
+AutoWrap = True
+IdentifyFalseLogic = False
+syncSignal = False
+traceMode = Hierarchical
+showTraceInSchema = True
+paMode = False
+funcMode = False
+powerAwareAnnot = True
+amsAnnot = True
+traceCrossHier = True
+DnDtraceCrossHierOnly = True
+traceIncTopPort = False
+leadingZero = False
+signalPane = True
+Scope1 = "testrunner"
+Scope2 = "_vcs_unit__1203839835"
+Scope3 = "testrunner.spi_ts.spi_ct.i_spi_core"
+Scope4 = "testrunner.spi_ts.spi_ct"
+rangeSelection = 40 40 1 6 1 1
+sdfCheckUndef = FALSE
+simFlow = TRUE
+[hb.design]
+importCmd = "-simflow" "-dbdir" "./simv.daidir" 
+invokeDir = /nfs/wrk.jvoi/sim/52144/m52144a/SPI/spi_core_test
+[hb.sourceTab.1]
+scope = testrunner
+File = /nfs/wrk.jvoi/projekte/52144/m52144a/DIGITAL/SPI/tb/tb_spi_core/spi_testrunner.sv
+Line = 5
+[nMemoryManager]
+WaveformFile = /nfs/wrk.jvoi/sim/52144/m52144a/SPI/spi_core_test/spi_core_test.fsdb
+UserActionNum = 0
+nMemWindowNum = 0
+[paBrowser.0]
+viewport = 0 25 2560 530
+fsdb = /nfs/wrk.jvoi/sim/52144/m52144a/SPI/spi_core_test/spi_core_test.fsdb
+SelectRow = -1
+SelectRadix = 0
+commonStreamRowHeight = 32
+UTBDisplayType = true
+stream1 = $trans_root/uvm_test_top/m_env/spi_agent/m_sequencer
+drawOffsetHeight = 97319
+drawOffsetWidth = 0
+drawTimeZoomScale = 216.111327
+drawChannelZoomScale = 1.000000
+drawVisibleStartTime = 4278454538.671723
+drawVisibleEndTime = 4368886838.490338
+timeScaleUnit = p
+timeMultiplier = 1.000000
+drawCursorTime = 18948000000
+middleColumnFullName = m_sequencer
+middleColumnTopMargin = -20
+selectedStreamRows = 0:1
+ExpandedTreeWidgetItem1 = $trans_root/uvm_test_top/m_env/spi_agent
+HierTreeSelectedStreamItem = $trans_root/uvm_test_top/m_env/spi_agent/m_sequencer
+pabHighlightPredSucc = On
+pabAllDescendants = On
+pabAllAncestors = On
+pabHighlightParentChild = On
+pabDetailTransactionInfo = On
+pabDisplayAttrName = On
+pabShowGloablDrawArea = On
+pabNWSyncAll = On
+pabSyncnCursorTime = On
+pabNWViewRange = On
+pabNWMarkTransaction = On
+pabPanMode = On
+pabHierTreeArea = On
+[wave.0]
+viewPort = 0 25 2560 763 497 107
+primaryWindow = TRUE
+SessionFile = /nfs/wrk.jvoi/sim/52144/m52144a/SPI/spi_core_test/Verdi.ses.wave.0
+displayGrid = FALSE
+hierarchicalName = FALSE
+snap = TRUE
+displayLeadingZeros = TRUE
+fixDelta = FALSE
+displayCursorMarker = FALSE
+autoUpdate = FALSE
+highlightGlitchs = FALSE
+waveformSyncCursorMarker = FALSE
+waveformSyncHorizontalRange = FALSE
+waveformSyncVerticalscroll = FALSE
+displayErrors = TRUE
+displayMsgSymbols = TRUE
+showMsgDescriptions = TRUE
+autoFit = FALSE
+displayDeltaY = FALSE
+centerCursor = FALSE

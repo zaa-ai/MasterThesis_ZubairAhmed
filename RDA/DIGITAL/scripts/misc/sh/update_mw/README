@@ -1,0 +1,6 @@
+update_mw.sh is used to add SX-Pin to Milkyway data of Samsung IP cells (RAM, ROM)
+
+Usage: ./update_mw.sh <MW> <Liberty>
+
+<MW> Milkyway librarie where the SX pin should be added
+<Liberty> one of the liberty files of the generated Memory

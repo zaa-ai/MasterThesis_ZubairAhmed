@@ -1,0 +1,28 @@
+
+plan Configuration_CRM_Commands;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14936886;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14936886";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature configuration_CRM_commands;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14938907";
+    edfId = 14938907;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature configuration_CRM_commands_2;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14938908";
+    edfId = 14938908;
+    edfType = GRAPHIC;
+    customer = true;
+  endfeature
+
+endplan

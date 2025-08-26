@@ -1,0 +1,21 @@
+
+plan OTP_test;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14704465;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704465";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature OTP_Control_Module_Test_Registers;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704466";
+    edfId = 14704466;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+endplan

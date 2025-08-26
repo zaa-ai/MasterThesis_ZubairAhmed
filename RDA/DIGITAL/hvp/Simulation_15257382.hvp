@@ -1,0 +1,18 @@
+`include "Digital_Gate_Level_Simulation_14704583.hvp"
+`include "Mixed_Signal_Simulation_14704586.hvp"
+
+plan Simulation;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 15257382;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=15257382";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  subplan Digital_Gate_Level_Simulation;
+  subplan Mixed_Signal_Simulation;
+endplan

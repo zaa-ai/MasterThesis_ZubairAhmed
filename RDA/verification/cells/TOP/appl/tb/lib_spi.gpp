@@ -1,0 +1,616 @@
+
+**------------------------------------------------
+** CRC
+**------------------------------------------------
+
+`var(name=spi_write_word            type=reg [15:0])
+`var(name=spi_read_word             type=reg [15:0])
+`var(name=spi_crc_in1               type=reg [15:0])
+`var(name=spi_crc_in2               type=reg [15:0])
+`var(name=spi_crc_in3               type=reg [15:0])
+`var(name=spi_crc_in4               type=reg [15:0])
+`var(name=spi_crc_in5               type=reg [15:0])
+`var(name=spi_crc                   type=reg [15:0])
+`var(name=spi_crc_i2                type=integer)
+`var(name=spi_crc_i1                type=integer)
+`var(name=spi_crc_msk               type=reg [15:0])
+`var(name=spi_crc_t1                type=reg [15:0])
+`var(name=spi_crc_t2                type=reg [15:0])
+`var(name=spi_crc_t3                type=reg [15:0])
+`var(name=spi_crc_int               type=reg [15:0])
+  
+*		das CRC Berechnungs-Objekt für die SPI
+*		private static ChecksumIF spiCrcObject = new Crc(16, 0x84cf, 0x1021);	
+*		das CRC Berechnungs-Objekt für die DSI Kommunikation
+*		private static ChecksumIF dsiCrcObject = new Crc(8, 0xff, 0x2f);
+
+`if "$SPSCR_MACROTYPE" eq "SV"
+
+  task calculate_spicrc;
+    input integer i;
+    begin
+    
+      spi_crc     = 'h84cf;
+      spi_crc_msk = 'hffff;
+
+      for (spi_crc_i1 = 0; spi_crc_i1 <= i; spi_crc_i1 = spi_crc_i1+1) begin
+  
+        for (spi_crc_i2 = 15; spi_crc_i2 >= 0; spi_crc_i2 = spi_crc_i2-1) begin
+        
+	  if (spi_crc_i1 < i) begin
+            if (spi_crc_i1 == 0) spi_crc_t1 = ((spi_crc << 1) | ((spi_crc_in1 >> spi_crc_i2) & 1)) & spi_crc_msk;
+            if (spi_crc_i1 == 1) spi_crc_t1 = ((spi_crc << 1) | ((spi_crc_in2 >> spi_crc_i2) & 1)) & spi_crc_msk;
+            if (spi_crc_i1 == 2) spi_crc_t1 = ((spi_crc << 1) | ((spi_crc_in3 >> spi_crc_i2) & 1)) & spi_crc_msk;
+            if (spi_crc_i1 == 3) spi_crc_t1 = ((spi_crc << 1) | ((spi_crc_in4 >> spi_crc_i2) & 1)) & spi_crc_msk;
+            if (spi_crc_i1 == 4) spi_crc_t1 = ((spi_crc << 1) | ((spi_crc_in5 >> spi_crc_i2) & 1)) & spi_crc_msk;
+	  end
+	  else begin	
+            spi_crc_t1 = ((spi_crc << 1) | ((spi_crc_int >> spi_crc_i2) & 1)) & spi_crc_msk;
+	  end
+	   
+          spi_crc_t2 = 0;
+	
+          if ((spi_crc & (1 << 15)) != 0) spi_crc_t2 = spi_crc_msk;
+          spi_crc_t3 = (spi_crc_t2 & 'h1021) & spi_crc_msk;
+          spi_crc = (spi_crc_t1 ^ spi_crc_t3) & spi_crc_msk;
+		
+        end
+		
+      end
+  
+    end
+  endtask
+
+`endif
+
+**---------- 
+
+define calculate_spicrc(__i__=1)
+
+  `if "$SPSCR_MACROTYPE" eq "SV"
+    calculate_spicrc(__i__);
+  `endif
+
+enddefine
+
+**------------------------------------------------
+** SPI Common Routines
+**------------------------------------------------
+
+`spi_master_init(w=16)
+
+**----------
+
+define lib_spi_start(__f__=fspi __use_model__=0)
+
+  `set_var(name=spi_crc_in1 val=0)
+  `set_var(name=spi_crc_in2 val=0)
+  `set_var(name=spi_crc_in3 val=0)
+  `set_var(name=spi_crc_in4 val=0)
+  
+  `if __use_model__ && models[16]
+  
+    `set_vsrc(src=vcsb_i_model_en v=1 print=0)
+    `set_vsrc(src=vsck_i_model_en v=1 print=0)
+    `set_vsrc(src=vsdi_i_model_en v=1 print=0)
+    `set_vsrc(src=vsdo_o_model_en v=1 print=0)
+    `set_vsrc(src=vsdo_o_model    v=1 print=0)
+  
+    `spi_master_start( vcsn  = vcsb_i_model
+                       vsck  = vsck_i_model
+                       vmosi = vsdi_i_model
+		       v     = vvio
+		       f     = __f__)
+  
+  `else
+  
+    `spi_master_start( vcsn  = vcsb
+                       vsck  = vsck
+                       vmosi = vmosi
+		       v     = vvio
+		       f     = __f__)
+		     	     
+  `endif
+  
+enddefine
+
+**----------
+
+define spi_end(__f__=fspi __use_model__=0)
+  
+  `if __use_model__ && models[16]
+  
+    `spi_master_end( vcsn = vcsb_i_model
+                     v    = vvio
+		     f    = __f__)
+  
+    `set_vsrc(src=vcsb_i_model_en v=0 print=0)
+    `set_vsrc(src=vsck_i_model_en v=0 print=0)
+    `set_vsrc(src=vsdi_i_model_en v=0 print=0)
+    `set_vsrc(src=vsdo_o_model_en v=0 print=0)
+    
+  `else
+  
+    `spi_master_end( vcsn = vcsb
+                     v    = vvio
+		     f    = __f__)
+		     
+  `endif
+
+enddefine
+
+**----------
+
+define spi_word(__f__=fspi __use_model__=0)
+		    
+  `if __use_model__ && models[16]
+  
+    `spi_master_data( vsck  = vsck_i_model
+                      vmosi = vsdi_i_model
+		      miso  = xdut.xdigi.O_SDO && snps_sptop.xdut.xdigi.O_SDO_OE
+		      data  = spi_write_word
+		      n     = 16
+		      v     = vvio
+		      f     = __f__
+		      type  = logic)
+		    
+  `else
+    
+    `spi_master_data( vsck  = vsck
+                      vmosi = vmosi
+		      miso  = miso_pcb
+		      data  = spi_write_word
+		      n     = 16
+		      v     = vvio
+		      f     = __f__)
+		    
+  `endif
+  
+enddefine
+
+**------------------------------------------------
+** Error Bits Check
+**------------------------------------------------
+
+`var(name=spi_read_ic_status_trigger       type=reg)
+`var(name=spi_read_irq_status_trigger      type=reg)
+`var(name=spi_read_register_trigger        type=reg)
+`var(name=spi_read_dsi_data_status_trigger type=reg)
+`var(name=spi_read_dsi_data1_trigger       type=reg)
+`var(name=spi_read_dsi_data2_trigger       type=reg)
+
+`var(name=spi_read_ic_status       type=reg [15:0])
+`var(name=spi_read_irq_status      type=reg [15:0])
+`var(name=spi_read_register        type=reg [15:0])
+`var(name=spi_read_dsi_data_status type=reg [15:0])
+`var(name=spi_read_dsi_data_data1  type=reg [15:0])
+`var(name=spi_read_dsi_data_data2  type=reg [15:0])
+`var(name=spi_read_crm_data        type=reg [31:0])
+
+`var(name=crm_data                  type=reg [31:0])
+`var(name=read_register_val         type=reg [31:0])
+`var(name=read_register_target      type=reg [31:0])
+`var(name=read_register_target_mask type=reg [31:0])
+`var(name=read_register_diff        type=reg [31:0])
+
+**----------
+
+define spi_read_check(__name__ __slice__=15:0 __min__=-0.5 __typ__=0 __max__=0.5)
+
+  `calc( name  = __name__
+         expr  = spi_read_word[__slice__]
+	 print = 0)
+	 
+	 *min  = __min__
+	 *typ  = __typ__
+	 *max  = __max__)
+
+enddefine
+
+**----------
+
+`always(name=Read IC Status)
+  
+  `cross_d(name=cross_read_ic_status s=xtbctrl.spi_read_ic_status_trigger dir=1 t=1`k)
+  
+  `set_var(name=spi_read_ic_status val=spi_read_word)
+  
+  `spi_read_check(name=spi_read_ic_status_spi_he  slice=15)
+  `spi_read_check(name=spi_read_ic_status_spi_bf  slice=14)
+  `spi_read_check(name=spi_read_ic_status_spi_sci slice=13)
+  `spi_read_check(name=spi_read_ic_status_spi_crc slice=12)
+*spi_read_check(name=spi_read_ic_status_spi_cn  slice=3:0)
+  
+  `set_var(name=spi_read_ic_status_trigger val=0)
+  
+`endalways
+
+**----------
+
+`always(name=Read IRQ Status)
+  
+  `cross_d(name=cross_read_irq_status s=xtbctrl.spi_read_irq_status_trigger dir=1 t=1`k)
+  
+  `set_var(name=spi_read_irq_status val=spi_read_word)
+  
+  `spi_read_check(name=spi_read_irq_status_hw_faix  slice=12)
+  `spi_read_check(name=spi_read_irq_status_ecc_faix slice=10)
+  `spi_read_check(name=spi_read_irq_status_supply   slice=9)
+  `spi_read_check(name=spi_read_irq_status_dsi      slice=6:5)
+  `spi_read_check(name=spi_read_irq_status_buf      slice=4)
+  `spi_read_check(name=spi_read_irq_status_spi      slice=3)
+  `spi_read_check(name=spi_read_irq_status_reset    slice=2)
+  `spi_read_check(name=spi_read_irq_status_clkref   slice=1)
+  `spi_read_check(name=spi_read_irq_status_otpfaix  slice=0)
+  
+  `set_var(name=spi_read_irq_status_trigger val=0)
+  
+  `set_var(name=intb_checker_trigger val=1)
+  
+`endalways
+
+**----------
+
+`always(name=Read Register)
+  
+  `cross_d(name=cross_read_register s=xtbctrl.spi_read_register_trigger dir=1 t=1`k)
+  
+  `set_var(name=read_register_val    val=spi_read_word)
+  
+  `set_var(name=read_register_val    val=read_register_val    & read_register_target_mask)
+  `set_var(name=read_register_target val=read_register_target & read_register_target_mask)
+  `set_var(name=read_register_diff   val=read_register_val - read_register_target)
+
+  `calc( name = spi_read_register_diff
+         expr = read_register_diff
+	 min  = -0.5
+	 typ  = 0
+	 max  = 0.5)
+
+  `set_var(name=spi_read_register_trigger val=0)
+  
+`endalways
+
+**----------
+
+`always(name=Read DSI Data Status)
+  
+  `cross_d(name=cross_spi_read_dsi_data_status s=xtbctrl.spi_read_dsi_data_status_trigger dir=1 t=1`k)
+  
+  `set_var(name=spi_read_dsi_data_status val=spi_read_word)
+  
+  `spi_read_check(name=spi_read_dsi_data_status_pse  slice=15)
+  `spi_read_check(name=spi_read_dsi_data_status_pt   slice=14 min=0.5 typ=1 max=1.5)
+  `spi_read_check(name=spi_read_dsi_data_status_sce  slice=13)
+  `spi_read_check(name=spi_read_dsi_data_status_crc  slice=12)
+  `spi_read_check(name=spi_read_dsi_data_status_ecc  slice=11)
+  `spi_read_check(name=spi_read_dsi_data_status_se   slice=10)
+  `spi_read_check(name=spi_read_dsi_data_status_ve   slice=9)
+  `spi_read_check(name=spi_read_dsi_data_status_ce   slice=8)
+  `spi_read_check(name=spi_read_dsi_data_status_symb slice=7:0 min=7.5 typ=8 max=8.5)
+  
+  `set_var(name=spi_read_dsi_data_status_trigger val=0)
+  
+`endalways
+
+**----------
+
+`always(name=Read DSI Data 1)
+  
+  `cross_d(name=cross_spi_read_dsi_data1 s=xtbctrl.spi_read_dsi_data1_trigger dir=1 t=1`k)
+  
+  `set_var(name=spi_read_dsi_data_data1  val=spi_read_word)
+  
+  `spi_read_check(name=spi_read_dsi_data1 min= typ= max=)
+
+  `calc( name  = spi_read_dsi_data1_sent
+         expr  = crm_data[31:16]
+         print = 0)
+
+  `calc( name = spi_read_dsi_data1_diff
+         expr = spi_read_word - spi_read_dsi_data1_sent
+         min  = -0.5
+         typ  = 0
+         max  = 0.5)
+  
+  `set_var(name=spi_read_dsi_data1_trigger val=0)
+  
+`endalways
+
+**----------
+
+`always(name=Read DSI Data 2)
+  
+  `cross_d(name=cross_spi_read_dsi_data2 s=xtbctrl.spi_read_dsi_data2_trigger dir=1 t=1`k)
+  
+  `set_var(name=spi_read_dsi_data_data2  val=spi_read_word)
+
+  `spi_read_check(name=spi_read_dsi_data2 min= typ= max=)
+
+  `calc( name  = spi_read_dsi_data2_sent
+         expr  = crm_data[15:0]
+         print = 0)
+
+  `calc( name = spi_read_dsi_data2_diff
+         expr = spi_read_word - spi_read_dsi_data2_sent
+         min  = -0.5
+         typ  = 0
+         max  = 0.5)
+  
+  `set_var(name=spi_read_dsi_data2_trigger val=0)
+  
+`endalways
+
+**------------------------------------------------
+** SPI Read Access
+**------------------------------------------------
+
+define spi_read_ic_status(__use_model__=1)
+
+  `comment(SPI read IC status)
+    
+  `lib_spi_start(use_model=__use_model__)
+  
+  `set_var(name=spi_write_word        val=0)
+  `set_var(name=spi_crc_in1           val=spi_write_word)
+  `spi_word(use_model=__use_model__)
+  
+  `set_var(name=spi_write_word        val=0)
+  `set_var(name=spi_write_word[15:12] val='b0001)
+  `set_var(name=spi_crc_in2           val=spi_write_word)
+  `spi_word(use_model=__use_model__)
+  
+  `set_var(name=spi_read_word         val=spi_master_rdata)
+  
+  `calculate_spicrc(i=2)
+  `set_var(name=spi_write_word        val=spi_crc)
+  `spi_word(use_model=__use_model__)
+
+  `spi_end(use_model=__use_model__)
+  
+  `set_var(name=spi_read_ic_status_trigger val=1)
+
+enddefine
+
+**---------
+
+define spi_read_register(__name__ __block__= __data__=0 __mask__='hffff __pkg__=addresses_pkg:: __use_model__=1 __print__=1)
+  
+  `if __print__
+    `comment(SPI read register __block__.__name__)
+  `endif
+  
+  `lib_spi_start(use_model=__use_model__)
+  
+  `set_var(name=spi_write_word        val=0)
+  `set_var(name=spi_write_word[15:12] val='b0010)
+  `set_var(name=spi_write_word[11:0]  val=__pkg__ADDR___block_____name__)
+  `set_var(name=spi_crc_in1           val=spi_write_word)
+  `spi_word(use_model=__use_model__)
+  
+  `set_var(name=spi_write_word        val=0)
+  `set_var(name=spi_write_word[15:12] val='b0010)
+  `set_var(name=spi_crc_in2           val=spi_write_word)
+  `spi_word(use_model=__use_model__)
+  
+  `set_var(name=spi_write_word        val=0)
+  `set_var(name=spi_write_word[15:12] val='b0001)
+  `set_var(name=spi_crc_in3           val=spi_write_word)
+  `spi_word(use_model=__use_model__)
+  
+  `set_var(name=spi_read_word         val=spi_master_rdata)
+  
+  `calculate_spicrc(i=3)
+  `set_var(name=spi_write_word        val=spi_crc)
+  `spi_word(use_model=__use_model__)
+  
+  `spi_end(use_model=__use_model__)
+  
+  `set_var(name=read_register_target      val=__data__)
+  `set_var(name=read_register_target_mask val=__mask__)
+  `set_var(name=spi_read_register_trigger val=1)
+
+enddefine
+
+**---------
+
+define spi_read_dsi_data(__c__=1 __use_model__=1)
+
+  `comment(SPI read DSI data packets)
+  
+  `lib_spi_start(use_model=__use_model__)
+
+  `set_var(name=spi_write_word        val=0)
+  `set_var(name=spi_write_word[15:12] val='b0011)
+  `set_var(name=spi_write_word[11:10] val=__c__)
+  `set_var(name=spi_crc_in1           val=spi_write_word)
+  `spi_word(use_model=__use_model__)
+
+  `set_var(name=spi_write_word        val=0)
+  `set_var(name=spi_write_word[15:12] val='b0011)
+  `set_var(name=spi_crc_in2           val=spi_write_word)
+  `spi_word(use_model=__use_model__)
+  
+  `set_var(name=spi_write_word        val=0)
+  `set_var(name=spi_write_word[15:12] val='b0011)
+  `set_var(name=spi_crc_in3           val=spi_write_word)
+  `spi_word(use_model=__use_model__)
+  `set_var(name=spi_read_dsi_data_status_trigger val=1)
+  
+  `set_var(name=spi_write_word        val=0)
+  `set_var(name=spi_write_word[15:12] val='b0011)
+  `set_var(name=spi_crc_in4           val=spi_write_word)
+  `spi_word(use_model=__use_model__)
+  
+  `set_var(name=spi_read_word              val=spi_master_rdata)
+  `set_var(name=spi_read_crm_data[31:16]   val=spi_master_rdata)
+  `set_var(name=spi_read_dsi_data1_trigger val=1)
+  
+  `set_var(name=spi_write_word        val=0)
+  `set_var(name=spi_write_word[15:12] val='b0001)
+  `set_var(name=spi_crc_in5           val=spi_write_word)
+  `spi_word(use_model=__use_model__)
+  
+  `set_var(name=spi_read_word              val=spi_master_rdata)
+  `set_var(name=spi_read_crm_data[15:0]    val=spi_master_rdata)
+  `set_var(name=spi_read_dsi_data2_trigger val=1)
+  
+  `calculate_spicrc(i=5)
+  `set_var(name=spi_write_word        val=spi_crc)
+  `spi_word(use_model=__use_model__)
+  
+  `spi_end(use_model=__use_model__)
+  
+  **Clear data buffer
+  `lib_spi_start(use_model=__use_model__)
+  
+  `set_var(name=spi_write_word        val=0)
+  `set_var(name=spi_write_word[15:12] val='b0111)
+  `set_var(name=spi_write_word[11:10] val=__c__)
+  `set_var(name=spi_write_word[1:0]   val=3)
+  `set_var(name=spi_crc_in1           val=spi_write_word)
+  `spi_word(use_model=__use_model__)
+  
+  `set_var(name=spi_write_word        val=0)
+  `set_var(name=spi_write_word[15:12] val='b0001)
+  `set_var(name=spi_crc_in2           val=spi_write_word)
+  `spi_word(use_model=__use_model__)
+  
+  `calculate_spicrc(i=2)
+  `set_var(name=spi_write_word        val=spi_crc)
+  `spi_word(use_model=__use_model__)
+  
+  `spi_end(use_model=__use_model__)
+  
+enddefine
+
+**------------------------------------------------
+** SPI Write Access
+**------------------------------------------------
+
+define spi_write_register(__name__ __block__= __data__=0 __mask__='hffff __pkg__=addresses_pkg:: __use_model__=1 __reread__=1)
+
+  `comment(SPI write register __block__.__name__ __data__)
+    
+  `lib_spi_start(use_model=__use_model__)
+  
+  `set_var(name=spi_write_word        val=0)
+  `set_var(name=spi_write_word[15:12] val='b0101)
+  `set_var(name=spi_write_word[11:0]  val=__pkg__ADDR___block_____name__)
+  `set_var(name=spi_crc_in1           val=spi_write_word)
+  `spi_word(use_model=__use_model__)
+  
+  `set_var(name=spi_write_word        val=__data__)
+  `set_var(name=spi_crc_in2           val=spi_write_word)
+  `spi_word(use_model=__use_model__)
+  
+  `set_var(name=spi_write_word        val=0)
+  `set_var(name=spi_write_word[15:12] val='b0001)
+  `set_var(name=spi_crc_in3           val=spi_write_word)
+  `spi_word(use_model=__use_model__)
+  
+  `calculate_spicrc(i=3)
+  `set_var(name=spi_write_word        val=spi_crc)
+  `spi_word(use_model=__use_model__)
+
+  `spi_end(use_model=__use_model__)
+  
+  `if __reread__
+    `spi_read_register(name=__name__ block=__block__ data=__data__ mask=__mask__ pkg=__pkg__ use_model=__use_model__ print=0)
+  `endif
+   
+enddefine
+
+**---------
+
+define spi_transmit_crm(__data1__='h07e4 __data2__='hdab5 __nr__=0 __c__=1 __use_model__=1)
+  
+  `comment(SPI CRM write slave register __data1__ __data2__)
+  
+  `lib_spi_start(use_model=__use_model__)
+  
+  `set_var(name=spi_write_word        val=0)
+  `set_var(name=spi_write_word[15:12] val='b1000)
+  `set_var(name=spi_write_word[11:10] val=__c__)
+  `set_var(name=spi_write_word[0]     val=__nr__)
+  `set_var(name=spi_crc_in1           val=spi_write_word)
+  `spi_word(use_model=__use_model__)
+  
+  `set_var(name=spi_write_word        val=__data1__)
+  `set_var(name=spi_crc_in2           val=spi_write_word)
+  `spi_word(use_model=__use_model__)
+  
+  `set_var(name=spi_write_word        val=__data2__)
+  `set_var(name=spi_crc_in3           val=spi_write_word)
+  `spi_word(use_model=__use_model__)
+  
+  `set_var(name=spi_write_word        val=0)
+  `set_var(name=spi_write_word[15:12] val='b0001)
+  `set_var(name=spi_crc_in4           val=spi_write_word)
+  `spi_word(use_model=__use_model__)
+  
+  `calculate_spicrc(i=4)
+  `set_var(name=spi_write_word        val=spi_crc)
+  `spi_word(use_model=__use_model__)
+
+  `spi_end(use_model=__use_model__)
+
+enddefine
+
+**---------
+
+define spi_dsi_sync(__p__=0 __c__=3 __use_model__=1)
+  
+  `comment(SPI sync)
+  
+  `lib_spi_start(use_model=__use_model__)
+  
+  `set_var(name=spi_write_word        val=0)
+  `set_var(name=spi_write_word[15:12] val='b1110)
+  `set_var(name=spi_write_word[11:10] val=__c__)
+  `set_var(name=spi_write_word[0]     val=__p__)
+  `set_var(name=spi_crc_in1           val=spi_write_word)
+  `spi_word(use_model=__use_model__)
+  
+  `set_var(name=spi_write_word        val=0)
+  `set_var(name=spi_write_word[15:12] val='b0001)
+  `set_var(name=spi_crc_in2           val=spi_write_word)
+  `spi_word(use_model=__use_model__)
+  
+  `calculate_spicrc(i=2)
+  `set_var(name=spi_write_word        val=spi_crc)
+  `spi_word(use_model=__use_model__)
+
+  `spi_end(use_model=__use_model__)
+
+enddefine
+
+**---------
+
+define spi_dsi_iquietcomp(__c__=3 __use_model__=1)
+  
+  `comment(SPI quiescent current compensation)
+  
+  `lib_spi_start(use_model=__use_model__)
+  
+  `set_var(name=spi_write_word        val=0)
+  `set_var(name=spi_write_word[15:12] val='b1001)
+  `set_var(name=spi_write_word[11:10] val=__c__)
+  `set_var(name=spi_crc_in1           val=spi_write_word)
+  `spi_word(use_model=__use_model__)
+  
+  `set_var(name=spi_write_word        val=0)
+  `set_var(name=spi_write_word[15:12] val='b0001)
+  `set_var(name=spi_crc_in2           val=spi_write_word)
+  `spi_word(use_model=__use_model__)
+  
+  `calculate_spicrc(i=2)
+  `set_var(name=spi_write_word        val=spi_crc)
+  `spi_word(use_model=__use_model__)
+
+  `spi_end(use_model=__use_model__)
+
+enddefine
+
+**------------------------------------------------
+**------------------------------------------------

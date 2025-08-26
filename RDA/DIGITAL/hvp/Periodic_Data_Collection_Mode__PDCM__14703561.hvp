@@ -1,0 +1,117 @@
+`include "PDCM_Packet_Formats_14703562.hvp"
+`include "Synchronization_of_PDCM_Pulses_14910791.hvp"
+
+plan Periodic_Data_Collection_Mode__PDCM_;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14703561;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703561";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature P01__PDCM_;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703587";
+    edfId = 14703587;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature PDCM__organization_of_packets_and_frames;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703588";
+    edfId = 14703588;
+    edfType = GRAPHIC;
+    customer = true;
+  endfeature
+
+  feature PDCM_timing_operating_conditions;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703589";
+    edfId = 14703589;
+    edfType = RECOMMENDED_TABLE;
+    customer = true;
+    feature t__PDCM_PER__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703592";
+      edfId = 14703592;
+      edfType = RECOMMENDED;
+      customer = true;
+      description = "PDCM period";
+      spec = 0.1 < spec && spec < 65.0;
+      measure spec spect__PDCM_PER__;
+        source = "t__PDCM_PER__";
+      endmeasure
+    endfeature
+    feature t__PDCM_START__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703590";
+      edfId = 14703590;
+      edfType = RECOMMENDED;
+      customer = true;
+      description = "Time between start of PDCM pulse and first data packet";
+      measure spec spect__PDCM_START__;
+        source = "t__PDCM_START__";
+      endmeasure
+    endfeature
+    feature t__PDCM_END__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703591";
+      edfId = 14703591;
+      edfType = RECOMMENDED;
+      customer = true;
+      description = "Quiet time between end of last packet in a PDCM frame and start of next PDCM pulse";
+      spec = 10.0 < spec;
+      measure spec spect__PDCM_END__;
+        source = "t__PDCM_END__";
+      endmeasure
+    endfeature
+  endfeature
+
+  feature PDCM_properties;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703856";
+    edfId = 14703856;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature PDCM_timing;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704124";
+    edfId = 14704124;
+    edfType = GRAPHIC;
+    customer = true;
+  endfeature
+
+  feature PDCM_multiple_packet_frames;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14891917";
+    edfId = 14891917;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature PDCM_multiple_packet_frames_2;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14891919";
+    edfId = 14891919;
+    edfType = GRAPHIC;
+    customer = true;
+  endfeature
+
+  feature PDCM_timing_operating_conditions_multiple_packets;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14892005";
+    edfId = 14892005;
+    edfType = RECOMMENDED_TABLE;
+    customer = true;
+    feature t__PDCM_IPS__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14825221";
+      edfId = 14825221;
+      edfType = RECOMMENDED;
+      customer = true;
+      description = "inter packet separation time in PDCM mode";
+      spec = 6.0 < spec;
+      measure spec spect__PDCM_IPS__;
+        source = "t__PDCM_IPS__";
+      endmeasure
+    endfeature
+  endfeature
+
+  subplan PDCM_Packet_Formats;
+  subplan Synchronization_of_PDCM_Pulses;
+endplan

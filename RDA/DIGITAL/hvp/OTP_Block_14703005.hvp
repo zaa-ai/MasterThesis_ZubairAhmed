@@ -1,0 +1,116 @@
+`include "Sidense_4k_x_12_OTP_14703006.hvp"
+`include "OTP_WRAPPER_TSMC_24MHZ_14703073.hvp"
+`include "OTP_CTRL_14703164.hvp"
+`include "OTP_Usage_for_Reconfiguration_15070226.hvp"
+
+plan OTP_Block;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14703005;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703005";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature ___Has_to_be_synced_with_STDC__not_with_521_42_______;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=15257381";
+    edfId = 15257381;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+  feature Hintergrundinformation;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703187";
+    edfId = 14703187;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+  feature Info;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703188";
+    edfId = 14703188;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+  feature OTP_ECC;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703189";
+    edfId = 14703189;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+  feature Readout_of_OTP;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703191";
+    edfId = 14703191;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+  feature OTP_register_setup;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=15109130";
+    edfId = 15109130;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+  feature OTP_content_for_readout;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=15273942";
+    edfId = 15273942;
+    edfType = GRAPHIC;
+    customer = false;
+  endfeature
+
+  feature OTP_read_in_application;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=15357547";
+    edfId = 15357547;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+  feature OTP_content;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=15375177";
+    edfId = 15375177;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+  feature OTP_content_2;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=15375178";
+    edfId = 15375178;
+    edfType = UNIVERSAL_TABLE;
+    customer = false;
+    feature Row_0;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=15375179";
+      edfId = 15375179;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+    endfeature
+    feature Row_1;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=15375180";
+      edfId = 15375180;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+    endfeature
+    feature Row_2;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=15375186";
+      edfId = 15375186;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+    endfeature
+    feature Row_3;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=15375182";
+      edfId = 15375182;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+    endfeature
+  endfeature
+
+  subplan Sidense_4k_x_12_OTP;
+  subplan OTP_WRAPPER_TSMC_24MHZ;
+  subplan OTP_CTRL;
+  subplan OTP_Usage_for_Reconfiguration;
+endplan

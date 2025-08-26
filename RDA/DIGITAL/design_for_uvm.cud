@@ -1,0 +1,33 @@
+# The Compilation Unit Definition (CUD) is where files and folders that make the compilation unit are specified.
+# The following can be specified directly (without any flags):
+#    Verilog source files
+#    Other CUD files (this allows hierarchical structures)
+#    Folders (results in all of its member Verilog source files being added to the compilation unit)
+# Paths can be relative to project roots, relative to the working directory, or absolute.
+# Each path or command, should be in a separate line.
+# For content assistance which shows all available flags, type '-' in a new line outside the commented area, and press CTRL+SPACE.
+
+-f -ebox -ruleset ignore_all DIGITAL/tech/TSMC_180_BCD/files.f
+-f -box -ruleset ignore_all DIGITAL/COMMON_LIB/files.f
+-f -box -ruleset ignore_all DIGITAL/ECC/files.f
+-f -box -ruleset ignore_all DIGITAL/STD_COMPONENTS/files.f
+-f -box -ruleset ignore_all DIGITAL/edf_registers/files.f
+-f -box -ruleset ignore_all DIGITAL/DATA_STORAGE/files.f
+-f -box -ruleset ignore_all DIGITAL/DSI3_MASTER/files.f
+
+-f -box -ruleset ignore_all DIGITAL/MAIN_CONTROL/files.f
+-f -box -ruleset ignore_all DIGITAL/OTP_MEM/files.f
+-f -box -ruleset ignore_all DIGITAL/SPI/files.f
+-f -box -ruleset ignore_all DIGITAL/TEST/files.f
+-box -ruleset ignore_all DIGITAL/OTP_MEM/rtl/mem_black_box.sv
+-f -box -ruleset ignore_all DIGITAL/TIMEBASE/files.f
+-f -box -ruleset ignore_all DIGITAL/rtl/files.f
+-property -top_synth rtl/digtop.sv
+
+-property -box -ruleset ignore_all DIGITAL/tech/
+-property -box -ruleset ignore_all ${DESIGN}/${DIGITAL}/COMMON_LIB/models/rtl/DW_ecc.v
+-property -box -ruleset ignore_all ${SYNOPSYS}/dw/sim_ver/DW_ecc_function.inc
+-property -box DIGITAL/tech/TSMC_180_BCD/ip/SRAM_3072X23U18/lib/models/SRAM_3072X23U18.v
+-property -box DIGITAL/tech/TSMC_180_BCD/TCB018GBWP7T/models/tcb018gbwp7t.v
+-property -box DIGITAL/tech/TSMC_180_BCD/ip/OTP_4kx12_tm5_TSMC/models/slp_b_tsmc180bcd50_4kx12_cm16d_ab_r20.v
+-property -box -ruleset ignore_all DIGITAL/COMMON_LIB/models/rtl/DW_ecc.v

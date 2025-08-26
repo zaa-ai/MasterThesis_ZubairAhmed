@@ -1,0 +1,41 @@
+`include "OTP_Control_Module__OTP_CTRL__14703074.hvp"
+`include "OTP_ECC_Control_14703133.hvp"
+`include "OTP_write_control__key_lock__14703145.hvp"
+
+plan OTP_WRAPPER_TSMC_24MHZ;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14703073;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703073";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature Hint;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703161";
+    edfId = 14703161;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+  feature Features;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703162";
+    edfId = 14703162;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+  feature Description;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703163";
+    edfId = 14703163;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+  subplan OTP_Control_Module__OTP_CTRL_;
+  subplan OTP_ECC_Control;
+  subplan OTP_write_control__key_lock_;
+endplan

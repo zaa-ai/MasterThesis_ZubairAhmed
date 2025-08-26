@@ -1,0 +1,16 @@
+#!/bin/csh
+
+##------------------------------------------------
+## Main
+##------------------------------------------------
+
+mkdir /temp/wrk/$USER/projekte/52144/pe
+cd /temp/wrk/$USER/projekte/52144/pe
+mkdir /temp/wrk/$USER/projekte/52144/pe/main
+cd /temp/wrk/$USER/projekte/52144/pe/main
+svn co http://svnhost.elmos.de/product/P52144/patternexplorer/trunk/ .
+cd ~
+
+##------------------------------------------------
+##------------------------------------------------
+

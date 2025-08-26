@@ -1,0 +1,21 @@
+
+plan ECC;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14703165;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703165";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature Calculation_and_Storage;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703166";
+    edfId = 14703166;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+endplan

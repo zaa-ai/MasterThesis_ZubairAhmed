@@ -1,0 +1,17 @@
+#!/bin/csh
+
+##------------------------------------------------
+## Main
+##------------------------------------------------
+
+module load stove/develop
+
+#perl consistency_check_epm.pl      "m521.44a.epm_export.gpp"                                "../cells/TOP/test/tb"
+
+#perl consistency_check_snippets.pl "../../../../pe/main/settings/edf-name-maps.xml" "../cells/TOP/test/results/MAIN"
+perl consistency_check_snippets.pl "../../../../pe/main/settings/edf-name-maps.xml" "../cells/TOP/test/tb"
+
+##------------------------------------------------
+##------------------------------------------------
+
+ 

@@ -1,0 +1,86 @@
+
+plan IC_Status_Word;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14703988;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703988";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature Intro;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703989";
+    edfId = 14703989;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature IC_status_word_content;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14860896";
+    edfId = 14860896;
+    edfType = UNIVERSAL_TABLE;
+    customer = true;
+    feature Row_0;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14860897";
+      edfId = 14860897;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_1;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14860898";
+      edfId = 14860898;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_2;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14860899";
+      edfId = 14860899;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_3;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14860912";
+      edfId = 14860912;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_4;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14860913";
+      edfId = 14860913;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+  endfeature
+
+  feature hardware_error_conditions;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14860915";
+    edfId = 14860915;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature SCE_bit;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14992711";
+    edfId = 14992711;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature BF_status_bit;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=15247876";
+    edfId = 15247876;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature CRC_status_bit;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14992801";
+    edfId = 14992801;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+endplan

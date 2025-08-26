@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+  <!-- technology config -->
+  <config>
+    <tech>tech/TSMC_180_BCD</tech>
+	<name>digtop</name>
+  	<test>
+		<test_mode>   I_TMODE   </test_mode>
+		<scan_res>    I_RESB    </scan_res>  
+		<scan_clk>    I_BFWB    </scan_clk>
+		<scan_sck>    I_SCK     </scan_sck>   
+		<scan_enable> I_RFC     </scan_enable>
+		<scan_din1>   I_SDI     </scan_din1>   
+		<scan_dout1>  O_SDO     </scan_dout1>  
+		<scan_din2>   I_DAB     </scan_din2>   
+		<scan_dout2>  O_INTB    </scan_dout2>  
+		<scan_din3>   I_CSB     </scan_din3>   
+		<scan_dout3>  O_SYNCB   </scan_dout3>
+		<porb> 		  I_PORB    </porb>
+		<tdi>         I_SYNCB   </tdi>
+	</test>
+  </config>

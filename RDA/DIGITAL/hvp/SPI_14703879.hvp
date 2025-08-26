@@ -1,0 +1,44 @@
+`include "SPI_Parameters_and_Basic_Data_Format_14703952.hvp"
+`include "SPI_Frame_Format_14703974.hvp"
+`include "SPI_Commands_Overview_14703975.hvp"
+`include "Master_Access_Commands_14704036.hvp"
+`include "DSI3_Communication_Commands_14704049.hvp"
+`include "Control_Commands_14891996.hvp"
+`include "SPI_Implementation_14703880.hvp"
+`include "SPI_Command_Sequence_Examples_14936884.hvp"
+
+plan SPI;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14703879;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703879";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature SPI_Intro;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704178";
+    edfId = 14704178;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature SPI_Purpose;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704179";
+    edfId = 14704179;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  subplan SPI_Parameters_and_Basic_Data_Format;
+  subplan SPI_Frame_Format;
+  subplan SPI_Commands_Overview;
+  subplan Master_Access_Commands;
+  subplan DSI3_Communication_Commands;
+  subplan Control_Commands;
+  subplan SPI_Implementation;
+  subplan SPI_Command_Sequence_Examples;
+endplan

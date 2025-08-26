@@ -1,0 +1,72 @@
+
+plan PDCM_Packet_Formats;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14703562;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703562";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature P01;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703563";
+    edfId = 14703563;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature PDCM_packet_constraints;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703564";
+    edfId = 14703564;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature periodic_data_collection_mode___response_format;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703565";
+    edfId = 14703565;
+    edfType = UNIVERSAL_TABLE;
+    customer = true;
+    feature Row_0;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703566";
+      edfId = 14703566;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_1;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703567";
+      edfId = 14703567;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_2;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703568";
+      edfId = 14703568;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_3;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703569";
+      edfId = 14703569;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_4;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703570";
+      edfId = 14703570;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+  endfeature
+
+  feature P02;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703571";
+    edfId = 14703571;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+endplan

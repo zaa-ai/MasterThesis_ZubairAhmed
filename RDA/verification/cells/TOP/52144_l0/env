@@ -1,0 +1,24 @@
+#!/bin/csh
+
+source ../../../env
+
+##------------------------------------------------
+## Main
+##------------------------------------------------
+
+setenv SPSCR_TB        "$SPSCR_PRJ/cells/TOP/52144_l0"
+setenv SPSCR_TASK_NAME "52144_l0"
+
+##----------
+
+#setenv IC_VER "MAIN"
+
+##----------
+
+#setenv SPSCR_SIMULATOR "XA"
+#setenv SPSCR_SIMULATOR "VCS"
+#setenv SPSCR_SIMFLOW "MIXED"
+
+##------------------------------------------------
+##------------------------------------------------
+

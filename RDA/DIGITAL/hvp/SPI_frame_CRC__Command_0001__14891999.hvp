@@ -1,0 +1,42 @@
+
+plan SPI_frame_CRC__Command_0001_;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14891999;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14891999";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature SPI_frame_CRC_intro;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14938529";
+    edfId = 14938529;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature SPI_frame_CRC_command;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14938531";
+    edfId = 14938531;
+    edfType = GRAPHIC;
+    customer = true;
+  endfeature
+
+  feature SPI_frame_CRC_ongoing_communication;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14993013";
+    edfId = 14993013;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature SPI_frame_CRC_with_ongoing_communication;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14993014";
+    edfId = 14993014;
+    edfType = GRAPHIC;
+    customer = true;
+  endfeature
+
+endplan

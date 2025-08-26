@@ -1,0 +1,30 @@
+`include "Loop_filter_14704216.hvp"
+
+plan PLL;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14704215;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704215";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature PLL_top_schematic;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704226";
+    edfId = 14704226;
+    edfType = GRAPHIC;
+    customer = false;
+  endfeature
+
+  feature PLL_core_schematic;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704227";
+    edfId = 14704227;
+    edfType = GRAPHIC;
+    customer = false;
+  endfeature
+
+  subplan Loop_filter;
+endplan

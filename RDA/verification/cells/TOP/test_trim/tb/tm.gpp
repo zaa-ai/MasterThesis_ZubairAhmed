@@ -1,0 +1,127 @@
+
+**------------------------------------------------
+** TM
+**------------------------------------------------
+
+define TM_IC_INIT
+  
+  `comment(TM TM_IC_INIT)
+  
+    `set_bitfield(name=TMR_DIG_USE_JTAG val=1)
+  `jtag_write_testreg(name=TMR_DIG block=TOP comment=Disable appl pin functionality [open drain] init=1)
+  
+    `set_bitfield(name=TMR_OUT_RFC_SEL_RFC val=2)
+    `set_bitfield(name=TMR_OUT_RFC_EN_RFC  val=1)
+  `jtag_write_testreg(name=TMR_OUT_RFC block=TOP comment=Switch TDO to RFC)
+  
+    `set_bitfield(name=TMR_DIG_SUPPLY_PREVENT_OVERTEMPERATURE_SWITCH_OFF val=1)
+  `jtag_write_testreg(name=TMR_DIG_SUPPLY block=SUP)
+  
+    `set_bitfield(name=TMR_DIG_DSI3_PREVENT_DEACTIVATION val=1)
+  `jtag_write_testreg(name=TMR_DIG_DSI3 block=DSI[0])
+  `jtag_write_testreg(name=TMR_DIG_DSI3 block=DSI[1])
+  
+  `jtag_write_register(name=IO_CTRL block=SUPPLY data=1)
+  
+    `set_bitfield(name=TMR_ANA_ENABLE_ATB val=1)
+  `jtag_write_testreg(name=TMR_ANA block=TOP)
+  
+  `wait(t=1`m)
+  `jtag_read_register(name=IC_REVISION block=INFO)
+
+enddefine
+
+**----------
+
+define TM_IDDQ
+  
+  `comment(TM TM_IDDQ)
+  
+    `set_bitfield(name=SCAN_DISABLE_OSC   val=1)
+    `set_bitfield(name=SCAN_VDD_DIS       val=1)
+    `set_bitfield(name=SCAN_VDD_RDIV_DIS  val=1)
+    `set_bitfield(name=SCAN_VDD_ILOAD_DIS val=1)
+    `set_bitfield(name=SCAN_SCAN          val=1)
+  `jtag_write_testreg(name=SCAN block=TOP)
+
+enddefine
+
+**----------
+
+define TM_SCAN
+  
+  `comment(TM TM_SCAN)
+  
+    `set_bitfield(name=SCAN_DISABLE_OSC   val=1)
+    `set_bitfield(name=SCAN_VDD_DIS       val=1)
+    `set_bitfield(name=SCAN_VDD_RDIV_DIS  val=1)
+    `set_bitfield(name=SCAN_VDD_ILOAD_DIS val=1)
+    `set_bitfield(name=SCAN_SCAN          val=1)
+  `jtag_write_testreg(name=SCAN block=TOP)
+
+enddefine
+
+**----------
+
+define TM_SCAN_COMPR
+  
+  `comment(TM TM_SCAN_COMPR)
+  
+    `set_bitfield(name=SCAN_DISABLE_OSC   val=1)
+    `set_bitfield(name=SCAN_VDD_DIS       val=1)
+    `set_bitfield(name=SCAN_VDD_RDIV_DIS  val=1)
+    `set_bitfield(name=SCAN_VDD_ILOAD_DIS val=1)
+    `set_bitfield(name=SCAN_COMPRESSION   val=1)
+    `set_bitfield(name=SCAN_SCAN          val=1)
+  `jtag_write_testreg(name=SCAN block=TOP)
+
+enddefine
+
+**------------------------------------------------
+** ATB
+**------------------------------------------------
+
+define ATB_reset
+  
+  `comment(TM ATB_reset)
+  
+    `set_bitfield(name=TMR_ANA_SUPPLY_IBP10U_2_ATB val=0)
+    `set_bitfield(name=TMR_ANA_SUPPLY_IC5U_2_ATB   val=0)
+    `set_bitfield(name=TMR_ANA_SUPPLY_VDDD_2_ATB   val=0)
+    `set_bitfield(name=TMR_ANA_SUPPLY_VBG_2_ATB    val=0)
+    `set_bitfield(name=TMR_ANA_SUPPLY_VRR_2_ATB    val=0)
+    `set_bitfield(name=TMR_ANA_SUPPLY_VDSI_2_ATB   val=0)
+  `jtag_write_testreg(name=TMR_ANA_SUPPLY block=SUP)
+  
+    `set_bitfield(name=TMR_ANA_TEMP_SENSOR_TS_2_ATB      val=0)
+    `set_bitfield(name=TMR_ANA_TEMP_SENSOR_DISCONNECT_TS val=0)
+  `jtag_write_testreg(name=TMR_ANA_TEMP_SENSOR block=SUP)
+  
+    `set_bitfield(name=TMR_ANA_OTP_OTP_VRR_LOAD val=0)
+    `set_bitfield(name=TMR_ANA_OTP_OTP_VPP_LOAD val=0)
+    `set_bitfield(name=TMR_ANA_OTP_OTP_VPP      val=0)
+    `set_bitfield(name=TMR_ANA_OTP_OTP_VRR      val=0)
+    `set_bitfield(name=TMR_ANA_OTP_OTP_VREF     val=0)
+    `set_bitfield(name=TMR_ANA_OTP_OTP_VBG      val=0)
+  `jtag_write_testreg(name=TMR_ANA_OTP block=SUP)
+  
+    `set_bitfield(name=TMR_ANA_DSI3_RX_I_TRIM_RX2 val=0)
+    `set_bitfield(name=TMR_ANA_DSI3_RX_I_TRIM_RX1 val=0)
+  `jtag_write_testreg(name=TMR_ANA_DSI3_RX block=DSI[0])
+  `jtag_write_testreg(name=TMR_ANA_DSI3_RX block=DSI[1])
+
+    `set_bitfield(name=TMR_ANA_DSI3_TX_IDAC_TX_CH1_2   val=0)
+    `set_bitfield(name=TMR_ANA_DSI3_TX_VBN5V_DIV_CH1_2 val=0)
+    `set_bitfield(name=TMR_ANA_DSI3_TX_INP_CH1_2       val=0)
+    `set_bitfield(name=TMR_ANA_DSI3_TX_INN_CH1_2       val=0)
+    `set_bitfield(name=TMR_ANA_DSI3_TX_VNG0_CH1_2      val=0)
+    `set_bitfield(name=TMR_ANA_DSI3_TX_VNC0_CH1_2      val=0)
+    `set_bitfield(name=TMR_ANA_DSI3_TX_VNC2_CH1_2      val=0)
+  `jtag_write_testreg(name=TMR_ANA_DSI3_TX block=DSI[0])
+  `jtag_write_testreg(name=TMR_ANA_DSI3_TX block=DSI[1])
+  
+enddefine
+
+**------------------------------------------------
+**------------------------------------------------
+  

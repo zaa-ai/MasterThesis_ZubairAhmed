@@ -1,0 +1,9 @@
+vlogan +v2k -nc -full64 -sverilog $DESIGN/17402/CLKREF_LPF/systemverilog/verilog.sv
+vlogan +v2k -nc -full64 -sverilog $DESIGN/17402_PLL/PLL_TOP/systemverilog/verilog.sv
+
+echo "##---------"
+
+vhdlan -verbose -xlrm -full64 -vhdl08 $DESIGN/STD_CV018_OSC20M_20170720/OSC20M/ENTITY/vhdl.vhd
+vhdlan -verbose -xlrm -full64 -vhdl08 $DESIGN/STD_CV018_OSC20M_20170720/OSC20M/ARCH_BEHAVE/vhdl.vhd
+
+

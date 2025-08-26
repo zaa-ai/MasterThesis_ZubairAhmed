@@ -1,0 +1,12 @@
+WORK                : ./WORK
+
+WAVEFORM_UPDATE                 = FALSE
+TIMEBASE                        = NS
+TIME_RESOLUTION                 = NS
+
+CCI_SH_CONTINUE_ON_ERROR        = FALSE
+CS_ASSERT_STOP_NEXT_WAIT        = TRUE
+
+ASSERT_STOP                     = FAILURE
+
+

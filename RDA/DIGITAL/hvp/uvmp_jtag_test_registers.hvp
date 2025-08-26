@@ -1,0 +1,1081 @@
+plan sys_jtag_test_registers;
+    feature block_TEST_TOP;
+        feature regfile_TEST_TOP;
+        feature reg_TMR_ANA;
+                        feature ENABLE_ATB_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_TOP_TMR_ANA::cg_bits.TEST_TOP.TEST_TOP.TMR_ANA_bits.ENABLE_ATB";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_TMR_DIG;
+                        feature USE_JTAG_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_TOP_TMR_DIG::cg_bits.TEST_TOP.TEST_TOP.TMR_DIG_bits.USE_JTAG";
+                endmeasure
+            endfeature
+            feature SEL_SYNC_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_TOP_TMR_DIG::cg_bits.TEST_TOP.TEST_TOP.TMR_DIG_bits.SEL_SYNC";
+                endmeasure
+            endfeature
+            feature IGNORE_OSC_READY_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_TOP_TMR_DIG::cg_bits.TEST_TOP.TEST_TOP.TMR_DIG_bits.IGNORE_OSC_READY";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_TMR_IN;
+                        feature tmr_in_0_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_TOP_TMR_IN::cg_bits.TEST_TOP.TEST_TOP.TMR_IN_bits.tmr_in_0";
+                endmeasure
+            endfeature
+            feature tmr_in_1_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_TOP_TMR_IN::cg_bits.TEST_TOP.TEST_TOP.TMR_IN_bits.tmr_in_1";
+                endmeasure
+            endfeature
+            feature tmr_in_2_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_TOP_TMR_IN::cg_bits.TEST_TOP.TEST_TOP.TMR_IN_bits.tmr_in_2";
+                endmeasure
+            endfeature
+            feature tmr_in_3_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_TOP_TMR_IN::cg_bits.TEST_TOP.TEST_TOP.TMR_IN_bits.tmr_in_3";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_TMR_OUT_CSB_SCK;
+                        feature SEL_SCK_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_TOP_TMR_OUT_CSB_SCK::cg_bits.TEST_TOP.TEST_TOP.TMR_OUT_CSB_SCK_bits.SEL_SCK";
+                endmeasure
+            endfeature
+            feature EN_SCK_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_TOP_TMR_OUT_CSB_SCK::cg_bits.TEST_TOP.TEST_TOP.TMR_OUT_CSB_SCK_bits.EN_SCK";
+                endmeasure
+            endfeature
+            feature SEL_CSB_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_TOP_TMR_OUT_CSB_SCK::cg_bits.TEST_TOP.TEST_TOP.TMR_OUT_CSB_SCK_bits.SEL_CSB";
+                endmeasure
+            endfeature
+            feature EN_CSB_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_TOP_TMR_OUT_CSB_SCK::cg_bits.TEST_TOP.TEST_TOP.TMR_OUT_CSB_SCK_bits.EN_CSB";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_TMR_OUT_MOSI_MISO;
+                        feature SEL_MISO_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_TOP_TMR_OUT_MOSI_MISO::cg_bits.TEST_TOP.TEST_TOP.TMR_OUT_MOSI_MISO_bits.SEL_MISO";
+                endmeasure
+            endfeature
+            feature EN_MISO_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_TOP_TMR_OUT_MOSI_MISO::cg_bits.TEST_TOP.TEST_TOP.TMR_OUT_MOSI_MISO_bits.EN_MISO";
+                endmeasure
+            endfeature
+            feature SEL_MOSI_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_TOP_TMR_OUT_MOSI_MISO::cg_bits.TEST_TOP.TEST_TOP.TMR_OUT_MOSI_MISO_bits.SEL_MOSI";
+                endmeasure
+            endfeature
+            feature EN_MOSI_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_TOP_TMR_OUT_MOSI_MISO::cg_bits.TEST_TOP.TEST_TOP.TMR_OUT_MOSI_MISO_bits.EN_MOSI";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_TMR_OUT_BFWB_SYNCB;
+                        feature SEL_SYNCB_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_TOP_TMR_OUT_BFWB_SYNCB::cg_bits.TEST_TOP.TEST_TOP.TMR_OUT_BFWB_SYNCB_bits.SEL_SYNCB";
+                endmeasure
+            endfeature
+            feature EN_SYNCB_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_TOP_TMR_OUT_BFWB_SYNCB::cg_bits.TEST_TOP.TEST_TOP.TMR_OUT_BFWB_SYNCB_bits.EN_SYNCB";
+                endmeasure
+            endfeature
+            feature SEL_BFWB_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_TOP_TMR_OUT_BFWB_SYNCB::cg_bits.TEST_TOP.TEST_TOP.TMR_OUT_BFWB_SYNCB_bits.SEL_BFWB";
+                endmeasure
+            endfeature
+            feature EN_BFWB_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_TOP_TMR_OUT_BFWB_SYNCB::cg_bits.TEST_TOP.TEST_TOP.TMR_OUT_BFWB_SYNCB_bits.EN_BFWB";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_TMR_OUT_DAB_INTB;
+                        feature SEL_INTB_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_TOP_TMR_OUT_DAB_INTB::cg_bits.TEST_TOP.TEST_TOP.TMR_OUT_DAB_INTB_bits.SEL_INTB";
+                endmeasure
+            endfeature
+            feature EN_INTB_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_TOP_TMR_OUT_DAB_INTB::cg_bits.TEST_TOP.TEST_TOP.TMR_OUT_DAB_INTB_bits.EN_INTB";
+                endmeasure
+            endfeature
+            feature SEL_DAB_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_TOP_TMR_OUT_DAB_INTB::cg_bits.TEST_TOP.TEST_TOP.TMR_OUT_DAB_INTB_bits.SEL_DAB";
+                endmeasure
+            endfeature
+            feature EN_DAB_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_TOP_TMR_OUT_DAB_INTB::cg_bits.TEST_TOP.TEST_TOP.TMR_OUT_DAB_INTB_bits.EN_DAB";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_TMR_OUT_RFC;
+                        feature SEL_RFC_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_TOP_TMR_OUT_RFC::cg_bits.TEST_TOP.TEST_TOP.TMR_OUT_RFC_bits.SEL_RFC";
+                endmeasure
+            endfeature
+            feature EN_RFC_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_TOP_TMR_OUT_RFC::cg_bits.TEST_TOP.TEST_TOP.TMR_OUT_RFC_bits.EN_RFC";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        endfeature
+        feature regfile_JTAG_standard_registers;
+        feature reg_JTAG_ID;
+                        feature MANUFACTURER_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_JTAG_standard_registers_JTAG_ID::cg_bits.TEST_TOP.JTAG_standard_registers.JTAG_ID_bits.MANUFACTURER";
+                endmeasure
+            endfeature
+            feature PROJECT_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_JTAG_standard_registers_JTAG_ID::cg_bits.TEST_TOP.JTAG_standard_registers.JTAG_ID_bits.PROJECT";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_JTAG_BYPASS;
+            
+
+        endfeature
+        endfeature
+    endfeature
+    feature block_TEST_SUP;
+        feature regfile_TEST_SUPPLY;
+        feature reg_TMR_ANA_SUPPLY;
+                        feature IBP10U_2_ATB_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_SUPPLY_TMR_ANA_SUPPLY::cg_bits.TEST_SUP.TEST_SUPPLY.TMR_ANA_SUPPLY_bits.IBP10U_2_ATB";
+                endmeasure
+            endfeature
+            feature IC5U_2_ATB_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_SUPPLY_TMR_ANA_SUPPLY::cg_bits.TEST_SUP.TEST_SUPPLY.TMR_ANA_SUPPLY_bits.IC5U_2_ATB";
+                endmeasure
+            endfeature
+            feature VDDD_2_ATB_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_SUPPLY_TMR_ANA_SUPPLY::cg_bits.TEST_SUP.TEST_SUPPLY.TMR_ANA_SUPPLY_bits.VDDD_2_ATB";
+                endmeasure
+            endfeature
+            feature VBG_2_ATB_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_SUPPLY_TMR_ANA_SUPPLY::cg_bits.TEST_SUP.TEST_SUPPLY.TMR_ANA_SUPPLY_bits.VBG_2_ATB";
+                endmeasure
+            endfeature
+            feature VRR_2_ATB_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_SUPPLY_TMR_ANA_SUPPLY::cg_bits.TEST_SUP.TEST_SUPPLY.TMR_ANA_SUPPLY_bits.VRR_2_ATB";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_TMR_ANA_TEMP_SENSOR;
+                        feature TS_2_ATB_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_SUPPLY_TMR_ANA_TEMP_SENSOR::cg_bits.TEST_SUP.TEST_SUPPLY.TMR_ANA_TEMP_SENSOR_bits.TS_2_ATB";
+                endmeasure
+            endfeature
+            feature DISCONNECT_TS_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_SUPPLY_TMR_ANA_TEMP_SENSOR::cg_bits.TEST_SUP.TEST_SUPPLY.TMR_ANA_TEMP_SENSOR_bits.DISCONNECT_TS";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_TMR_ANA_OTP;
+                        feature OTP_VBG_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_SUPPLY_TMR_ANA_OTP::cg_bits.TEST_SUP.TEST_SUPPLY.TMR_ANA_OTP_bits.OTP_VBG";
+                endmeasure
+            endfeature
+            feature OTP_VREF_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_SUPPLY_TMR_ANA_OTP::cg_bits.TEST_SUP.TEST_SUPPLY.TMR_ANA_OTP_bits.OTP_VREF";
+                endmeasure
+            endfeature
+            feature OTP_VRR_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_SUPPLY_TMR_ANA_OTP::cg_bits.TEST_SUP.TEST_SUPPLY.TMR_ANA_OTP_bits.OTP_VRR";
+                endmeasure
+            endfeature
+            feature OTP_VPP_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_SUPPLY_TMR_ANA_OTP::cg_bits.TEST_SUP.TEST_SUPPLY.TMR_ANA_OTP_bits.OTP_VPP";
+                endmeasure
+            endfeature
+            feature OTP_VPP_LOAD_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_SUPPLY_TMR_ANA_OTP::cg_bits.TEST_SUP.TEST_SUPPLY.TMR_ANA_OTP_bits.OTP_VPP_LOAD";
+                endmeasure
+            endfeature
+            feature OTP_VRR_LOAD_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_SUPPLY_TMR_ANA_OTP::cg_bits.TEST_SUP.TEST_SUPPLY.TMR_ANA_OTP_bits.OTP_VRR_LOAD";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_TMR_DIG_SUPPLY;
+                        feature PREVENT_OVERTEMPERATURE_SWITCH_OFF_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_SUPPLY_TMR_DIG_SUPPLY::cg_bits.TEST_SUP.TEST_SUPPLY.TMR_DIG_SUPPLY_bits.PREVENT_OVERTEMPERATURE_SWITCH_OFF";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        endfeature
+    endfeature
+    feature block_TEST_OSC;
+        feature regfile_TEST_OSC;
+        feature reg_TMR_ANA_TB_PLL;
+                        feature PLL_IC5U_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_OSC_TMR_ANA_TB_PLL::cg_bits.TEST_OSC.TEST_OSC.TMR_ANA_TB_PLL_bits.PLL_IC5U";
+                endmeasure
+            endfeature
+            feature PLL_DOWN_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_OSC_TMR_ANA_TB_PLL::cg_bits.TEST_OSC.TEST_OSC.TMR_ANA_TB_PLL_bits.PLL_DOWN";
+                endmeasure
+            endfeature
+            feature PLL_UP_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_OSC_TMR_ANA_TB_PLL::cg_bits.TEST_OSC.TEST_OSC.TMR_ANA_TB_PLL_bits.PLL_UP";
+                endmeasure
+            endfeature
+            feature PLL_HiZ_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_OSC_TMR_ANA_TB_PLL::cg_bits.TEST_OSC.TEST_OSC.TMR_ANA_TB_PLL_bits.PLL_HiZ";
+                endmeasure
+            endfeature
+            feature PLL_PD_N_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_OSC_TMR_ANA_TB_PLL::cg_bits.TEST_OSC.TEST_OSC.TMR_ANA_TB_PLL_bits.PLL_PD_N";
+                endmeasure
+            endfeature
+            feature PLL_VCTRL_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_OSC_TMR_ANA_TB_PLL::cg_bits.TEST_OSC.TEST_OSC.TMR_ANA_TB_PLL_bits.PLL_VCTRL";
+                endmeasure
+            endfeature
+            feature PLL_VTUNE_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_OSC_TMR_ANA_TB_PLL::cg_bits.TEST_OSC.TEST_OSC.TMR_ANA_TB_PLL_bits.PLL_VTUNE";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_TMR_ANA_TB_OSC;
+                        feature OSC_SFMIN_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_OSC_TMR_ANA_TB_OSC::cg_bits.TEST_OSC.TEST_OSC.TMR_ANA_TB_OSC_bits.OSC_SFMIN";
+                endmeasure
+            endfeature
+            feature OSC_SFMAX_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_OSC_TMR_ANA_TB_OSC::cg_bits.TEST_OSC.TEST_OSC.TMR_ANA_TB_OSC_bits.OSC_SFMAX";
+                endmeasure
+            endfeature
+            feature OSC_PREAMP_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_OSC_TMR_ANA_TB_OSC::cg_bits.TEST_OSC.TEST_OSC.TMR_ANA_TB_OSC_bits.OSC_PREAMP";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_TMR_DIG_TB;
+                        feature CLKSW_TST_EN_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_OSC_TMR_DIG_TB::cg_bits.TEST_OSC.TEST_OSC.TMR_DIG_TB_bits.CLKSW_TST_EN";
+                endmeasure
+            endfeature
+            feature CLKSW_TST_SEL_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_OSC_TMR_DIG_TB::cg_bits.TEST_OSC.TEST_OSC.TMR_DIG_TB_bits.CLKSW_TST_SEL";
+                endmeasure
+            endfeature
+            feature CLK_AUTO_TRIM_EN_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_OSC_TMR_DIG_TB::cg_bits.TEST_OSC.TEST_OSC.TMR_DIG_TB_bits.CLK_AUTO_TRIM_EN";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_TMR_VAL_TB;
+                        feature PLL_ON_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_OSC_TMR_VAL_TB::cg_bits.TEST_OSC.TEST_OSC.TMR_VAL_TB_bits.PLL_ON";
+                endmeasure
+            endfeature
+            feature PLL_HOLD_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_OSC_TMR_VAL_TB::cg_bits.TEST_OSC.TEST_OSC.TMR_VAL_TB_bits.PLL_HOLD";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_TMR_SEL_TB;
+                        feature PLL_ON_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_OSC_TMR_SEL_TB::cg_bits.TEST_OSC.TEST_OSC.TMR_SEL_TB_bits.PLL_ON";
+                endmeasure
+            endfeature
+            feature PLL_HOLD_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_OSC_TMR_SEL_TB::cg_bits.TEST_OSC.TEST_OSC.TMR_SEL_TB_bits.PLL_HOLD";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        endfeature
+    endfeature
+    feature block_TEST_DSI0;
+        feature regfile_TEST_DSI;
+        feature reg_TMR_ANA_DSI3_TX;
+                        feature VNC2_CH1_2_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_ANA_DSI3_TX::cg_bits.TEST_DSI[0].TEST_DSI.TMR_ANA_DSI3_TX_bits.VNC2_CH1_2";
+                endmeasure
+            endfeature
+            feature VNC0_CH1_2_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_ANA_DSI3_TX::cg_bits.TEST_DSI[0].TEST_DSI.TMR_ANA_DSI3_TX_bits.VNC0_CH1_2";
+                endmeasure
+            endfeature
+            feature VNG0_CH1_2_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_ANA_DSI3_TX::cg_bits.TEST_DSI[0].TEST_DSI.TMR_ANA_DSI3_TX_bits.VNG0_CH1_2";
+                endmeasure
+            endfeature
+            feature INN_CH1_2_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_ANA_DSI3_TX::cg_bits.TEST_DSI[0].TEST_DSI.TMR_ANA_DSI3_TX_bits.INN_CH1_2";
+                endmeasure
+            endfeature
+            feature INP_CH1_2_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_ANA_DSI3_TX::cg_bits.TEST_DSI[0].TEST_DSI.TMR_ANA_DSI3_TX_bits.INP_CH1_2";
+                endmeasure
+            endfeature
+            feature VBN5V_DIV_CH1_2_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_ANA_DSI3_TX::cg_bits.TEST_DSI[0].TEST_DSI.TMR_ANA_DSI3_TX_bits.VBN5V_DIV_CH1_2";
+                endmeasure
+            endfeature
+            feature IDAC_TX_CH1_2_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_ANA_DSI3_TX::cg_bits.TEST_DSI[0].TEST_DSI.TMR_ANA_DSI3_TX_bits.IDAC_TX_CH1_2";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_TMR_ANA_DSI3_RX;
+                        feature I_Q_2_ATB_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_ANA_DSI3_RX::cg_bits.TEST_DSI[0].TEST_DSI.TMR_ANA_DSI3_RX_bits.I_Q_2_ATB";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_TMR_DIG_DSI3;
+                        feature PREVENT_DEACTIVATION_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_DIG_DSI3::cg_bits.TEST_DSI[0].TEST_DSI.TMR_DIG_DSI3_bits.PREVENT_DEACTIVATION";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_TMR_SEL_DSI3;
+                        feature TX_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_SEL_DSI3::cg_bits.TEST_DSI[0].TEST_DSI.TMR_SEL_DSI3_bits.TX";
+                endmeasure
+            endfeature
+            feature RX_TXN_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_SEL_DSI3::cg_bits.TEST_DSI[0].TEST_DSI.TMR_SEL_DSI3_bits.RX_TXN";
+                endmeasure
+            endfeature
+            feature TX_ON_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_SEL_DSI3::cg_bits.TEST_DSI[0].TEST_DSI.TMR_SEL_DSI3_bits.TX_ON";
+                endmeasure
+            endfeature
+            feature HVCASC_ON_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_SEL_DSI3::cg_bits.TEST_DSI[0].TEST_DSI.TMR_SEL_DSI3_bits.HVCASC_ON";
+                endmeasure
+            endfeature
+            feature RX_ON_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_SEL_DSI3::cg_bits.TEST_DSI[0].TEST_DSI.TMR_SEL_DSI3_bits.RX_ON";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_TMR_VAL_DSI3;
+                        feature TX_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_VAL_DSI3::cg_bits.TEST_DSI[0].TEST_DSI.TMR_VAL_DSI3_bits.TX";
+                endmeasure
+            endfeature
+            feature RX_TXN_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_VAL_DSI3::cg_bits.TEST_DSI[0].TEST_DSI.TMR_VAL_DSI3_bits.RX_TXN";
+                endmeasure
+            endfeature
+            feature TX_ON_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_VAL_DSI3::cg_bits.TEST_DSI[0].TEST_DSI.TMR_VAL_DSI3_bits.TX_ON";
+                endmeasure
+            endfeature
+            feature HVCASC_ON_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_VAL_DSI3::cg_bits.TEST_DSI[0].TEST_DSI.TMR_VAL_DSI3_bits.HVCASC_ON";
+                endmeasure
+            endfeature
+            feature RX_ON_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_VAL_DSI3::cg_bits.TEST_DSI[0].TEST_DSI.TMR_VAL_DSI3_bits.RX_ON";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_TMR_IN_DSI3;
+                        feature tmr_in_tx_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_IN_DSI3::cg_bits.TEST_DSI[0].TEST_DSI.TMR_IN_DSI3_bits.tmr_in_tx";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        endfeature
+    endfeature
+    feature block_TEST_DSI1;
+        feature regfile_TEST_DSI;
+        feature reg_TMR_ANA_DSI3_TX;
+                        feature VNC2_CH1_2_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_ANA_DSI3_TX::cg_bits.TEST_DSI[1].TEST_DSI.TMR_ANA_DSI3_TX_bits.VNC2_CH1_2";
+                endmeasure
+            endfeature
+            feature VNC0_CH1_2_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_ANA_DSI3_TX::cg_bits.TEST_DSI[1].TEST_DSI.TMR_ANA_DSI3_TX_bits.VNC0_CH1_2";
+                endmeasure
+            endfeature
+            feature VNG0_CH1_2_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_ANA_DSI3_TX::cg_bits.TEST_DSI[1].TEST_DSI.TMR_ANA_DSI3_TX_bits.VNG0_CH1_2";
+                endmeasure
+            endfeature
+            feature INN_CH1_2_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_ANA_DSI3_TX::cg_bits.TEST_DSI[1].TEST_DSI.TMR_ANA_DSI3_TX_bits.INN_CH1_2";
+                endmeasure
+            endfeature
+            feature INP_CH1_2_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_ANA_DSI3_TX::cg_bits.TEST_DSI[1].TEST_DSI.TMR_ANA_DSI3_TX_bits.INP_CH1_2";
+                endmeasure
+            endfeature
+            feature VBN5V_DIV_CH1_2_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_ANA_DSI3_TX::cg_bits.TEST_DSI[1].TEST_DSI.TMR_ANA_DSI3_TX_bits.VBN5V_DIV_CH1_2";
+                endmeasure
+            endfeature
+            feature IDAC_TX_CH1_2_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_ANA_DSI3_TX::cg_bits.TEST_DSI[1].TEST_DSI.TMR_ANA_DSI3_TX_bits.IDAC_TX_CH1_2";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_TMR_ANA_DSI3_RX;
+                        feature I_Q_2_ATB_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_ANA_DSI3_RX::cg_bits.TEST_DSI[1].TEST_DSI.TMR_ANA_DSI3_RX_bits.I_Q_2_ATB";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_TMR_DIG_DSI3;
+                        feature PREVENT_DEACTIVATION_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_DIG_DSI3::cg_bits.TEST_DSI[1].TEST_DSI.TMR_DIG_DSI3_bits.PREVENT_DEACTIVATION";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_TMR_SEL_DSI3;
+                        feature TX_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_SEL_DSI3::cg_bits.TEST_DSI[1].TEST_DSI.TMR_SEL_DSI3_bits.TX";
+                endmeasure
+            endfeature
+            feature RX_TXN_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_SEL_DSI3::cg_bits.TEST_DSI[1].TEST_DSI.TMR_SEL_DSI3_bits.RX_TXN";
+                endmeasure
+            endfeature
+            feature TX_ON_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_SEL_DSI3::cg_bits.TEST_DSI[1].TEST_DSI.TMR_SEL_DSI3_bits.TX_ON";
+                endmeasure
+            endfeature
+            feature HVCASC_ON_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_SEL_DSI3::cg_bits.TEST_DSI[1].TEST_DSI.TMR_SEL_DSI3_bits.HVCASC_ON";
+                endmeasure
+            endfeature
+            feature RX_ON_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_SEL_DSI3::cg_bits.TEST_DSI[1].TEST_DSI.TMR_SEL_DSI3_bits.RX_ON";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_TMR_VAL_DSI3;
+                        feature TX_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_VAL_DSI3::cg_bits.TEST_DSI[1].TEST_DSI.TMR_VAL_DSI3_bits.TX";
+                endmeasure
+            endfeature
+            feature RX_TXN_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_VAL_DSI3::cg_bits.TEST_DSI[1].TEST_DSI.TMR_VAL_DSI3_bits.RX_TXN";
+                endmeasure
+            endfeature
+            feature TX_ON_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_VAL_DSI3::cg_bits.TEST_DSI[1].TEST_DSI.TMR_VAL_DSI3_bits.TX_ON";
+                endmeasure
+            endfeature
+            feature HVCASC_ON_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_VAL_DSI3::cg_bits.TEST_DSI[1].TEST_DSI.TMR_VAL_DSI3_bits.HVCASC_ON";
+                endmeasure
+            endfeature
+            feature RX_ON_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_VAL_DSI3::cg_bits.TEST_DSI[1].TEST_DSI.TMR_VAL_DSI3_bits.RX_ON";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_TMR_IN_DSI3;
+                        feature tmr_in_tx_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_DSI_TMR_IN_DSI3::cg_bits.TEST_DSI[1].TEST_DSI.TMR_IN_DSI3_bits.tmr_in_tx";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        endfeature
+    endfeature
+    feature block_TEST_SCAN;
+        feature regfile_scan_registers;
+        feature reg_SCAN;
+                        feature SCAN_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_scan_registers_SCAN::cg_bits.TEST_SCAN.scan_registers.SCAN_bits.SCAN";
+                endmeasure
+            endfeature
+            feature VDD_RDIV_DIS_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_scan_registers_SCAN::cg_bits.TEST_SCAN.scan_registers.SCAN_bits.VDD_RDIV_DIS";
+                endmeasure
+            endfeature
+            feature COMPRESSION_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_scan_registers_SCAN::cg_bits.TEST_SCAN.scan_registers.SCAN_bits.COMPRESSION";
+                endmeasure
+            endfeature
+            feature VDD_ILOAD_DIS_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_scan_registers_SCAN::cg_bits.TEST_SCAN.scan_registers.SCAN_bits.VDD_ILOAD_DIS";
+                endmeasure
+            endfeature
+            feature VDD_DIS_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_scan_registers_SCAN::cg_bits.TEST_SCAN.scan_registers.SCAN_bits.VDD_DIS";
+                endmeasure
+            endfeature
+            feature DISABLE_OSC_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_scan_registers_SCAN::cg_bits.TEST_SCAN.scan_registers.SCAN_bits.DISABLE_OSC";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        endfeature
+    endfeature
+    feature block_TEST_SRAM;
+        feature regfile_SRAM_BIST_registers;
+        feature reg_SRAM_BIST_CTRL;
+                        feature EN_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_SRAM_BIST_registers_SRAM_BIST_CTRL::cg_bits.TEST_SRAM.SRAM_BIST_registers.SRAM_BIST_CTRL_bits.EN";
+                endmeasure
+            endfeature
+            feature BITWISE_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_SRAM_BIST_registers_SRAM_BIST_CTRL::cg_bits.TEST_SRAM.SRAM_BIST_registers.SRAM_BIST_CTRL_bits.BITWISE";
+                endmeasure
+            endfeature
+            feature FOUR_6N_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_SRAM_BIST_registers_SRAM_BIST_CTRL::cg_bits.TEST_SRAM.SRAM_BIST_registers.SRAM_BIST_CTRL_bits.FOUR_6N";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_SRAM_BIST_STAT;
+                        feature STATUS_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_SRAM_BIST_registers_SRAM_BIST_STAT::cg_bits.TEST_SRAM.SRAM_BIST_registers.SRAM_BIST_STAT_bits.STATUS";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_SRAM_ECC_CONTROL;
+                        feature SRAM_ECC_VAL_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_SRAM_BIST_registers_SRAM_ECC_CONTROL::cg_bits.TEST_SRAM.SRAM_BIST_registers.SRAM_ECC_CONTROL_bits.SRAM_ECC_VAL";
+                endmeasure
+            endfeature
+            feature SRAM_ECC_SEL_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_SRAM_BIST_registers_SRAM_ECC_CONTROL::cg_bits.TEST_SRAM.SRAM_BIST_registers.SRAM_ECC_CONTROL_bits.SRAM_ECC_SEL";
+                endmeasure
+            endfeature
+            feature SRAM_ECC_SWAP_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_SRAM_BIST_registers_SRAM_ECC_CONTROL::cg_bits.TEST_SRAM.SRAM_BIST_registers.SRAM_ECC_CONTROL_bits.SRAM_ECC_SWAP";
+                endmeasure
+            endfeature
+            feature ELIP_ECC_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_SRAM_BIST_registers_SRAM_ECC_CONTROL::cg_bits.TEST_SRAM.SRAM_BIST_registers.SRAM_ECC_CONTROL_bits.ELIP_ECC";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        endfeature
+    endfeature
+    feature block_TEST_OTP_CONFIG;
+        feature regfile_OTP_test_registers;
+        feature reg_OTP_WRITE_PULSE_WIDTH;
+                        feature PULSE_WIDTH_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_OTP_test_registers_OTP_WRITE_PULSE_WIDTH::cg_bits.TEST_OTP_CONFIG.OTP_test_registers.OTP_WRITE_PULSE_WIDTH_bits.PULSE_WIDTH";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        endfeature
+    endfeature
+    feature block_TEST_OTP;
+        feature regfile_Test_Registers;
+        feature reg_OTP_CONTROL;
+                        feature EN_AUTO_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_CONTROL::cg_bits.TEST_OTP.Test_Registers.OTP_CONTROL_bits.EN_AUTO";
+                endmeasure
+            endfeature
+            feature VRREN_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_CONTROL::cg_bits.TEST_OTP.Test_Registers.OTP_CONTROL_bits.VRREN";
+                endmeasure
+            endfeature
+            feature VPPEN_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_CONTROL::cg_bits.TEST_OTP.Test_Registers.OTP_CONTROL_bits.VPPEN";
+                endmeasure
+            endfeature
+            feature EN_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_CONTROL::cg_bits.TEST_OTP.Test_Registers.OTP_CONTROL_bits.EN";
+                endmeasure
+            endfeature
+            feature SEL_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_CONTROL::cg_bits.TEST_OTP.Test_Registers.OTP_CONTROL_bits.SEL";
+                endmeasure
+            endfeature
+            feature CTRL_CLK_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_CONTROL::cg_bits.TEST_OTP.Test_Registers.OTP_CONTROL_bits.CTRL_CLK";
+                endmeasure
+            endfeature
+            feature CTRL_WE_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_CONTROL::cg_bits.TEST_OTP.Test_Registers.OTP_CONTROL_bits.CTRL_WE";
+                endmeasure
+            endfeature
+            feature OTP_MON_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_CONTROL::cg_bits.TEST_OTP.Test_Registers.OTP_CONTROL_bits.OTP_MON";
+                endmeasure
+            endfeature
+            feature AUTOINC_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_CONTROL::cg_bits.TEST_OTP.Test_Registers.OTP_CONTROL_bits.AUTOINC";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_OTP_CONFIG;
+                        feature OTP_MPP_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_CONFIG::cg_bits.TEST_OTP.Test_Registers.OTP_CONFIG_bits.OTP_MPP";
+                endmeasure
+            endfeature
+            feature OTP_MRR_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_CONFIG::cg_bits.TEST_OTP.Test_Registers.OTP_CONFIG_bits.OTP_MRR";
+                endmeasure
+            endfeature
+            feature OTP_MR_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_CONFIG::cg_bits.TEST_OTP.Test_Registers.OTP_CONFIG_bits.OTP_MR";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_OTP_WRITE;
+                        feature data_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_WRITE::cg_bits.TEST_OTP.Test_Registers.OTP_WRITE_bits.data";
+                endmeasure
+            endfeature
+            feature address_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_WRITE::cg_bits.TEST_OTP.Test_Registers.OTP_WRITE_bits.address";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_OTP_READ;
+                        feature data_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_READ::cg_bits.TEST_OTP.Test_Registers.OTP_READ_bits.data";
+                endmeasure
+            endfeature
+            feature address_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_READ::cg_bits.TEST_OTP.Test_Registers.OTP_READ_bits.address";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_OTP_BIST_CONTROL;
+                        feature OTP_PGM_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_BIST_CONTROL::cg_bits.TEST_OTP.Test_Registers.OTP_BIST_CONTROL_bits.OTP_PGM";
+                endmeasure
+            endfeature
+            feature OTP_READ_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_BIST_CONTROL::cg_bits.TEST_OTP.Test_Registers.OTP_BIST_CONTROL_bits.OTP_READ";
+                endmeasure
+            endfeature
+            feature SOAK_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_BIST_CONTROL::cg_bits.TEST_OTP.Test_Registers.OTP_BIST_CONTROL_bits.SOAK";
+                endmeasure
+            endfeature
+            feature EN_SOAK_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_BIST_CONTROL::cg_bits.TEST_OTP.Test_Registers.OTP_BIST_CONTROL_bits.EN_SOAK";
+                endmeasure
+            endfeature
+            feature STRESS_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_BIST_CONTROL::cg_bits.TEST_OTP.Test_Registers.OTP_BIST_CONTROL_bits.STRESS";
+                endmeasure
+            endfeature
+            feature SEL_TRP_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_BIST_CONTROL::cg_bits.TEST_OTP.Test_Registers.OTP_BIST_CONTROL_bits.SEL_TRP";
+                endmeasure
+            endfeature
+            feature SEL_RD_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_BIST_CONTROL::cg_bits.TEST_OTP.Test_Registers.OTP_BIST_CONTROL_bits.SEL_RD";
+                endmeasure
+            endfeature
+            feature SEL_MPP_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_BIST_CONTROL::cg_bits.TEST_OTP.Test_Registers.OTP_BIST_CONTROL_bits.SEL_MPP";
+                endmeasure
+            endfeature
+            feature SEL_MRR_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_BIST_CONTROL::cg_bits.TEST_OTP.Test_Registers.OTP_BIST_CONTROL_bits.SEL_MRR";
+                endmeasure
+            endfeature
+            feature SEL_MR_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_BIST_CONTROL::cg_bits.TEST_OTP.Test_Registers.OTP_BIST_CONTROL_bits.SEL_MR";
+                endmeasure
+            endfeature
+            feature MAX_SOAK_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_BIST_CONTROL::cg_bits.TEST_OTP.Test_Registers.OTP_BIST_CONTROL_bits.MAX_SOAK";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_OTP_READ_CONFIG;
+                        feature TRP_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_READ_CONFIG::cg_bits.TEST_OTP.Test_Registers.OTP_READ_CONFIG_bits.TRP";
+                endmeasure
+            endfeature
+            feature RD_MODE_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_READ_CONFIG::cg_bits.TEST_OTP.Test_Registers.OTP_READ_CONFIG_bits.RD_MODE";
+                endmeasure
+            endfeature
+            feature ECCERR_L_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_READ_CONFIG::cg_bits.TEST_OTP.Test_Registers.OTP_READ_CONFIG_bits.ECCERR_L";
+                endmeasure
+            endfeature
+            feature ECCERR_H_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_READ_CONFIG::cg_bits.TEST_OTP.Test_Registers.OTP_READ_CONFIG_bits.ECCERR_H";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_OTP_BIST_STATUS;
+                        feature PROG_BIT_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_BIST_STATUS::cg_bits.TEST_OTP.Test_Registers.OTP_BIST_STATUS_bits.PROG_BIT";
+                endmeasure
+            endfeature
+            feature DONE_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_BIST_STATUS::cg_bits.TEST_OTP.Test_Registers.OTP_BIST_STATUS_bits.DONE";
+                endmeasure
+            endfeature
+            feature SOAK_PULSE_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_BIST_STATUS::cg_bits.TEST_OTP.Test_Registers.OTP_BIST_STATUS_bits.SOAK_PULSE";
+                endmeasure
+            endfeature
+            feature BUSY_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_BIST_STATUS::cg_bits.TEST_OTP.Test_Registers.OTP_BIST_STATUS_bits.BUSY";
+                endmeasure
+            endfeature
+            feature FAIL0_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_BIST_STATUS::cg_bits.TEST_OTP.Test_Registers.OTP_BIST_STATUS_bits.FAIL0";
+                endmeasure
+            endfeature
+            feature FAIL1_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_BIST_STATUS::cg_bits.TEST_OTP.Test_Registers.OTP_BIST_STATUS_bits.FAIL1";
+                endmeasure
+            endfeature
+            feature SOAK_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_Test_Registers_OTP_BIST_STATUS::cg_bits.TEST_OTP.Test_Registers.OTP_BIST_STATUS_bits.SOAK";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        endfeature
+    endfeature
+    feature block_TEST_ELIP;
+        feature regfile_ELIP_test_register;
+        feature reg_IR_ELIP_RDF;
+                        feature DATA_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_ELIP_test_register_IR_ELIP_RDF::cg_bits.TEST_ELIP.ELIP_test_register.IR_ELIP_RDF_bits.DATA";
+                endmeasure
+            endfeature
+            feature ADDR_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_ELIP_test_register_IR_ELIP_RDF::cg_bits.TEST_ELIP.ELIP_test_register.IR_ELIP_RDF_bits.ADDR";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_IR_ELIP_RD;
+                        feature DATA_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_ELIP_test_register_IR_ELIP_RD::cg_bits.TEST_ELIP.ELIP_test_register.IR_ELIP_RD_bits.DATA";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_IR_ELIP_RDI;
+                        feature DATA_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_ELIP_test_register_IR_ELIP_RDI::cg_bits.TEST_ELIP.ELIP_test_register.IR_ELIP_RDI_bits.DATA";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_IR_ELIP_WRF;
+                        feature DATA_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_ELIP_test_register_IR_ELIP_WRF::cg_bits.TEST_ELIP.ELIP_test_register.IR_ELIP_WRF_bits.DATA";
+                endmeasure
+            endfeature
+            feature ADDR_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_ELIP_test_register_IR_ELIP_WRF::cg_bits.TEST_ELIP.ELIP_test_register.IR_ELIP_WRF_bits.ADDR";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_IR_ELIP_WR;
+                        feature DATA_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_ELIP_test_register_IR_ELIP_WR::cg_bits.TEST_ELIP.ELIP_test_register.IR_ELIP_WR_bits.DATA";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_IR_ELIP_WRI;
+            
+
+        endfeature
+        endfeature
+    endfeature
+    feature block_TEST_WS_0;
+        feature regfile_TEST_WS;
+        feature reg_TMR_SEL_WS;
+                        feature DAC_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_WS_TMR_SEL_WS::cg_bits.TEST_WS_0.TEST_WS.TMR_SEL_WS_bits.DAC";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_TMR_VAL_WS;
+                        feature DAC_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_WS_TMR_VAL_WS::cg_bits.TEST_WS_0.TEST_WS.TMR_VAL_WS_bits.DAC";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        endfeature
+    endfeature
+    feature block_TEST_WS_1;
+        feature regfile_TEST_WS;
+        feature reg_TMR_SEL_WS;
+                        feature DAC_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_WS_TMR_SEL_WS::cg_bits.TEST_WS_1.TEST_WS.TMR_SEL_WS_bits.DAC";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        feature reg_TMR_VAL_WS;
+                        feature DAC_bits;
+                measure Group fcov;
+                    source = "group instance:**::ral_reg_TEST_WS_TMR_VAL_WS::cg_bits.TEST_WS_1.TEST_WS.TMR_VAL_WS_bits.DAC";
+                endmeasure
+            endfeature
+
+
+        endfeature
+        endfeature
+    endfeature
+endplan
+
+

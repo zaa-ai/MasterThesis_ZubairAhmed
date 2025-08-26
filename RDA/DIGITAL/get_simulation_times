@@ -1,0 +1,10 @@
+#!/bin/csh
+rm -rf simulation_times.rpt
+fgrep "++ took" logs/vcs/. -R > simulation_times.rpt
+sed -i 's/logs\/vcs\/\.\///g' simulation_times.rpt
+sed -i 's/\.log://g' simulation_times.rpt
+sed -i 's/\+\+ took//g' simulation_times.rpt
+sed -i 's/\s*seconds//g' simulation_times.rpt
+#sed -r -i 's/(\w+)\s+([[:digit:]]+)/\2\t\1/g' simulation_times.rpt
+sed -r -i 's/([a-zA-Z_0-9]+)\s+([[:digit:]]+)/\2\t\1/g' simulation_times.rpt
+sort -g -r simulation_times.rpt -o simulation_times.rpt

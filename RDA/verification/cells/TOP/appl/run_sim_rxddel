@@ -1,0 +1,27 @@
+#!/bin/csh
+
+source env
+
+##------------------------------------------------
+## Main
+##------------------------------------------------
+
+#setenv IC_VER "M52144A"
+
+##----------
+
+$SPSCR_COMMON/run_sim  dsi_rxddel_tmin_c0  batch
+$SPSCR_COMMON/run_sim  dsi_rxddel_tmax_c0  batch
+$SPSCR_COMMON/run_sim  dsi_rxddel_tmin_c1  batch
+$SPSCR_COMMON/run_sim  dsi_rxddel_tmax_c1  batch
+$SPSCR_COMMON/run_sim  dsi_rxddel_tmin_c2  batch
+$SPSCR_COMMON/run_sim  dsi_rxddel_tmax_c2  batch
+$SPSCR_COMMON/run_sim  dsi_rxddel_tmin_c3  batch
+$SPSCR_COMMON/run_sim  dsi_rxddel_tmax_c3  batch
+$SPSCR_COMMON/run_sim  dsi_rxddel_tmin_c4  batch
+$SPSCR_COMMON/run_sim  dsi_rxddel_tmax_c4  batch
+
+##------------------------------------------------
+##------------------------------------------------
+
+

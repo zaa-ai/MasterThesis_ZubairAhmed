@@ -1,0 +1,28 @@
+
+plan Multiple_Frame_PDCM_Read;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14936889;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14936889";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature multiple_frame_PDCM_read;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14945236";
+    edfId = 14945236;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature multiple_frame_PDCM_read_2;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14945237";
+    edfId = 14945237;
+    edfType = GRAPHIC;
+    customer = true;
+  endfeature
+
+endplan

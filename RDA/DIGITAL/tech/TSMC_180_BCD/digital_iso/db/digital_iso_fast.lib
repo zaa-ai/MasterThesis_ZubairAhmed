@@ -1,0 +1,50 @@
+/*----------------------------------------------------------------------------*/
+/*                                                                            */
+/* Synopsys Confidential and Proprietary                                      */
+/*                                                                            */
+/*----------------------------------------------------------------------------*/
+
+
+library(digital_iso_fast) {
+
+  operating_conditions (fast) {
+    process : 1.0;
+    voltage : 1.98;
+    temperature : -40.0;
+  }
+  default_operating_conditions : fast;
+  
+  voltage_map(VDD_NBL, 1.80);
+  voltage_map(VSS, 0.0);
+  voltage_map(PSUB, 0.0);
+ 
+ slew_lower_threshold_pct_rise :  30.00
+ slew_upper_threshold_pct_rise :  70.00
+ slew_derate_from_library :  0.50
+ input_threshold_pct_fall :  50.00
+ output_threshold_pct_fall :  50.00
+ input_threshold_pct_rise :  50.00
+ output_threshold_pct_rise :  50.00
+ slew_lower_threshold_pct_fall :  30.00
+ slew_upper_threshold_pct_fall :  70.00
+  
+  cell(digital_iso) {
+
+    pg_pin(PSUB) {
+      voltage_name : PSUB;
+      pg_type : primary_ground;
+    }
+
+    pg_pin(VSS) {
+      voltage_name : VSS;
+      pg_type : primary_ground;
+    }
+
+    pg_pin(VDD) {
+      voltage_name : VDD_NBL;
+      pg_type : primary_power;
+    }
+
+  }
+}
+

@@ -1,0 +1,33 @@
+#set ($exclude = ["JTAG_standard_registers", "DSI3_wave_shaping_registers", "Test_Registers", "ELIP_test_register"])
+
+#set($funcInstances = $edfTool.getInstances("func"))
+#set($usedRegisterTables = []) ## list of already processed register tables
+#foreach($instance in $funcInstances)
+  #set($registerTables = $edfTool.getRegisterTables($instance))
+  #foreach($registerTable in $registerTables)
+    #set($registerTableName = $registerTable.name.replaceAll(" ", "_"))
+    #if(!$usedRegisterTables.contains($registerTableName))
+      #set($bla = $usedRegisterTables.add($registerTableName))
+      #if (!${exclude.contains($registerTableName)})
+set_ungroup [get_cells {  i_${registerTableName}*}  -hier] true
+      #end
+    #end
+  #end
+#end  
+#set($funcInstances = $edfTool.getInstances("test"))
+#set($usedRegisterTables = []) ## list of already processed register tables
+#foreach($instance in $funcInstances)
+  #set($registerTables = $edfTool.getRegisterTables($instance))
+  #foreach($registerTable in $registerTables)
+    #set($registerTableName = $registerTable.name.replaceAll(" ", "_"))
+    #if(!$usedRegisterTables.contains($registerTableName))
+      #set($bla = $usedRegisterTables.add($registerTableName))
+      #if (!${exclude.contains($registerTableName)})
+set_ungroup [get_cells {  i_${registerTableName}*}  -hier] true
+      #end
+    #end
+  #end
+#end  
+##foreach( $register in $registerFile.getRegisters() )
+##set_ungroup [get_cells {  i_${register.RegisterTableName}*}  -hier] true
+##end

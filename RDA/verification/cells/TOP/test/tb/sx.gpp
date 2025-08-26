@@ -1,0 +1,178 @@
+
+**------------------------------------------------
+** Begin
+**------------------------------------------------
+
+`wv_begin(tmax=10`m)
+
+`wv_d(s=xtbctrl/jtag_block_string type=asc)
+`wv_d(s=xtbctrl/jtag_addr_string  type=asc)
+`wv_d(s=xtbctrl/jtag_master_ir    type=hex)
+`wv_d(s=xtbctrl/jtag_master_wdata type=hex)
+`wv_d(s=xtbctrl/jtag_master_rdata type=hex)
+`wv_d(s=xdut/xdigi/I_DAB)
+`wv_d(s=xdut/xdigi/I_BFWB)
+`wv_d(s=xdut/xdigi/I_SYNCB)
+`wv_d(s=xdut/xdigi/O_INTB)
+
+**------------------------------------------------
+** Supply and References     (7:0,   0000_0000_0000_00ff)
+**------------------------------------------------
+
+`if simcase[7:0] > 0
+
+  `wv_vbegin()
+    `wv_v(nr=0 p=vsup_pcb)
+    `wv_v(nr=1 p=cldo_pcb)
+  `wv_vend()
+
+  `wv_vbegin()
+    `wv_v(nr=0 p=vio_pcb)
+    `wv_v(nr=1 p=vcc_pcb)
+    `wv_v(nr=2 p=vdd_pcb)
+  `wv_vend()
+
+  `wv_vbegin()
+    `wv_v(nr=0 p=sck_pcb)
+  `wv_vend()
+  
+`endif
+
+**------------------------------------------------
+** DSI3 Interface            (15:8,  0000_0000_0000_ff00)
+**------------------------------------------------
+
+`if simcase[15:8] > 0
+
+  `wv_vbegin()
+    `wv_v(nr=0 p=vsup_pcb)
+    `wv_v(nr=1 p=dsi0_pcb)
+    `wv_v(nr=2 p=dsi1_pcb)
+    `wv_v(nr=5 p=cldo_pcb)
+  `wv_vend()
+
+  `wv_ibegin()
+    `wv_i(nr=0 p=xdut.vsup_p)
+    `wv_i(nr=1 p=xdut.dsi0_p)
+    `wv_i(nr=2 p=xdut.dsi1_p)
+  `wv_iend()
+
+`endif
+
+**------------------------------------------------
+** SPI                       (23:16, 0000_0000_00ff_0000)
+**------------------------------------------------
+
+`if simcase[23:16] > 0
+`endif
+
+**------------------------------------------------
+** Command and Data Memory   (31:24, 0000_0000_ff00_0000)
+**------------------------------------------------
+
+`if simcase[31:24] > 0
+`endif
+
+**------------------------------------------------
+** Interrupt System          (39:32, 0000_00ff_0000_0000)
+**------------------------------------------------
+
+`if simcase[39:32] > 0
+`endif
+
+**------------------------------------------------
+** Timebase                  (47:40, 0000_ff00_0000_0000)
+**------------------------------------------------
+
+`if simcase[47:40] > 0
+
+  `wv_d(s=xdut/xdigi/I_CLKOSC)
+  `wv_d(s=xdut/xdigi/I_OSC_READY)
+  `wv_d(s=xdut/xdigi/I_CLKPLL)
+  `wv_d(s=xdut/xdigi/I_CLKPLL_DIV)
+  `wv_d(s=xdut/xdigi/I_PLL_UP_MON)
+  `wv_d(s=xdut/xdigi/I_PLL_DOWN_MON)
+  `wv_d(s=xdut/xdigi/I_PLL_LOCK_MON)
+
+  `wv_d(s=xdut/xdigi/O_OSC_ON)
+  `wv_d(s=xdut/xdigi/O_PLL_ON)
+  `wv_d(s=xdut/xdigi/O_PLL_HOLD)
+  
+  `wv_rbegin(unit=Hz)
+    `wv_r(nr=0 s=xtbctrl/clkosc_freq)
+    `wv_r(nr=1 s=xtbctrl/clkpll_freq)
+    `wv_r(nr=2 s=xtbctrl/clkref_freq)
+  `wv_rend()
+
+`endif
+
+**------------------------------------------------
+** Miscellaneous             (63:48, ffff_0000_0000_0000)
+**------------------------------------------------
+
+`if simcase[61:48] > 0
+
+  `wv_vbegin()
+    `wv_v(nr=0  p=bfwb_pcb)
+    `wv_v(nr=1  p=csb_pcb)
+    `wv_v(nr=2  p=clkref_pcb)
+    `wv_v(nr=3  p=dab_pcb)
+    `wv_v(nr=4  p=intb_pcb)
+    `wv_v(nr=5  p=miso_pcb)
+    `wv_v(nr=6  p=mosi_pcb)
+    `wv_v(nr=7  p=resb_pcb)
+    `wv_v(nr=0  p=rfc_pcb)
+    `wv_v(nr=1  p=sck_pcb)
+    `wv_v(nr=2  p=syncb_pcb)
+  `wv_vend()
+
+  `wv_ibegin()
+    `wv_i(nr=0  p=xdut.bfwb_p)
+    `wv_i(nr=1  p=xdut.csb_p)
+    `wv_i(nr=2  p=xdut.clkref_p)
+    `wv_i(nr=3  p=xdut.dab_p)
+    `wv_i(nr=4  p=xdut.intb_p)
+    `wv_i(nr=5  p=xdut.miso_p)
+    `wv_i(nr=6  p=xdut.mosi_p)
+    `wv_i(nr=7  p=xdut.resb_p)
+    `wv_i(nr=0  p=xdut.rfc_p)
+    `wv_i(nr=1  p=xdut.sck_p)
+    `wv_i(nr=2  p=xdut.syncb_p)
+  `wv_iend()
+  
+`endif
+
+**----------
+
+`if simcase[63:62] > 0
+
+  `wv_ibegin()
+    `wv_i(nr=0 p=xdut.vdd_p)
+  `wv_iend()
+  
+  `wv_d(s=xdut/xdigi/I_RESB)
+  `wv_d(s=xdut/xdigi/I_RFC)
+  `wv_d(s=xdut/xdigi/I_BFWB)
+  `wv_d(s=xdut/xdigi/I_SDI)
+  `wv_d(s=xdut/xdigi/O_SDO)
+  `wv_d(s=xdut/xdigi/I_DAB)
+  `wv_d(s=xdut/xdigi/O_INTB)
+  `wv_d(s=xdut/xdigi/I_CSB)
+  `wv_d(s=xdut/xdigi/O_SYNCB)
+  
+  `wv_rbegin(unit=Hz)
+    `wv_r(nr=0 s=xtbctrl/miso_duty)
+    `wv_r(nr=1 s=xtbctrl/intb_duty)
+    `wv_r(nr=2 s=xtbctrl/syncb_duty)
+  `wv_rend()
+  
+`endif
+
+**------------------------------------------------
+** End
+**------------------------------------------------
+
+`wv_end()
+
+**------------------------------------------------
+**------------------------------------------------

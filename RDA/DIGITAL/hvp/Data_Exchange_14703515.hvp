@@ -1,0 +1,18 @@
+`include "Forward_communication_channel__FCC___data_encoding_14703516.hvp"
+`include "Reverse_communication_channel__RCC___data_decoding_14703520.hvp"
+
+plan Data_Exchange;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14703515;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703515";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  subplan Forward_communication_channel__FCC___data_encoding;
+  subplan Reverse_communication_channel__RCC___data_decoding;
+endplan

@@ -1,0 +1,16 @@
+`include "Block_Symbol_14702766.hvp"
+
+plan Block_Ports;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14702765;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702765";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  subplan Block_Symbol;
+endplan

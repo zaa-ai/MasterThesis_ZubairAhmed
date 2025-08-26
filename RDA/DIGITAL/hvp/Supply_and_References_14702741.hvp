@@ -1,0 +1,164 @@
+`include "VCC_Supply_14827087.hvp"
+`include "VDD_Supply_14702742.hvp"
+`include "DSI3_Supply_14702888.hvp"
+`include "Power_Sequences_14702752.hvp"
+`include "Temperature_Monitoring_14702934.hvp"
+`include "Supplies_and_References_____internal_____14702763.hvp"
+`include "Sidense_Integrated_Power_Supply__P1R__14702799.hvp"
+
+plan Supply_and_References;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14702741;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702741";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature P01;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702946";
+    edfId = 14702946;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature supplies_and_references___block_diagram;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702947";
+    edfId = 14702947;
+    edfType = GRAPHIC;
+    customer = true;
+  endfeature
+
+  feature Supplies_and_references___Block_diagram_____internal____;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702948";
+    edfId = 14702948;
+    edfType = GRAPHIC;
+    customer = false;
+  endfeature
+
+  feature power_supply_operating_conditions;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702963";
+    edfId = 14702963;
+    edfType = RECOMMENDED_TABLE;
+    customer = true;
+    feature V__VSUP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702964";
+      edfId = 14702964;
+      edfType = RECOMMENDED;
+      customer = true;
+      description = "supply voltage range at pin [!14702950]]";
+      spec = 6.0 < spec && spec < 18.0;
+      measure spec specV__VSUP__;
+        source = "V__VSUP__";
+      endmeasure
+    endfeature
+    feature dV__VSUP___dt;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=15375188";
+      edfId = 15375188;
+      edfType = RECOMMENDED;
+      customer = true;
+      description = "voltage change at [!14702950]]during startup";
+      spec = spec < 1.0;
+      measure spec specdV__VSUP___dt;
+        source = "dV__VSUP___dt";
+      endmeasure
+    endfeature
+    feature V__VIO__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702967";
+      edfId = 14702967;
+      edfType = RECOMMENDED;
+      customer = true;
+      description = "Supply voltage range at pin [!14702953]]";
+      spec = 1.62 < spec && spec < 5.5;
+      measure spec specV__VIO__;
+        source = "V__VIO__";
+      endmeasure
+    endfeature
+    feature T__AMB__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702968";
+      edfId = 14702968;
+      edfType = RECOMMENDED;
+      customer = true;
+      description = "ambient temperature";
+      spec = -40.0 < spec && spec < 105.0;
+      measure spec specT__AMB__;
+        source = "T__AMB__";
+      endmeasure
+    endfeature
+    feature C__VSUP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14910891";
+      edfId = 14910891;
+      edfType = RECOMMENDED;
+      customer = true;
+      description = "capacitor between IC supply and ground";
+      measure spec specC__VSUP__;
+        source = "C__VSUP__";
+      endmeasure
+    endfeature
+  endfeature
+
+  feature power_supply_electrical_parameters;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702969";
+    edfId = 14702969;
+    edfType = EPM_TABLE;
+    customer = true;
+    feature I__VSUP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702970";
+      edfId = 14702970;
+      edfType = EPM;
+      customer = true;
+      description = "Current consumption at [!14702950]]";
+      spec = 5.0 < spec && spec < 20.0;
+      measure spec specI__VSUP__;
+        source = "I__VSUP__";
+      endmeasure
+    endfeature
+    feature I__VIO_idle__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702976";
+      edfId = 14702976;
+      edfType = EPM;
+      customer = false;
+      description = "Idle current consumption at [!14702953]]";
+      spec = spec < 10.0;
+      measure spec specI__VIO_idle__;
+        source = "I__VIO_idle__";
+      endmeasure
+    endfeature
+    feature I__VIO__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702977";
+      edfId = 14702977;
+      edfType = EPM;
+      customer = true;
+      description = "Current consumption at [!14702953]]";
+      spec = spec < 1.0;
+      measure spec specI__VIO__;
+        source = "I__VIO__";
+      endmeasure
+    endfeature
+  endfeature
+
+  feature voltage_supervision;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702978";
+    edfId = 14702978;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature reverse_protection;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702979";
+    edfId = 14702979;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  subplan VCC_Supply;
+  subplan VDD_Supply;
+  subplan DSI3_Supply;
+  subplan Power_Sequences;
+  subplan Temperature_Monitoring;
+  subplan Supplies_and_References_____internal____;
+  subplan Sidense_Integrated_Power_Supply__P1R_;
+endplan

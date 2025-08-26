@@ -1,0 +1,20 @@
+# The Compilation Unit Definition (CUD) is where files and folders that make the compilation unit are specified.
+# The following can be specified directly (without any flags):
+#    Verilog source files
+#    Other CUD files (this allows hierarchical structures)
+#    Folders (results in all of its member Verilog source files being added to the compilation unit)
+# Paths can be relative to project roots, relative to the working directory, or absolute.
+# Each path or command, should be in a separate line.
+# For content assistance which shows all available flags, type '-' in a new line outside the commented area, and press CTRL+SPACE.
++define+VCS
++setvar+DESIGN=$PROJECT_LOC
++setvar+DIGITAL=DIGITAL
+-f -ruleset rtl DIGITAL/COMMON_LIB/files.f
+-f -ruleset rtl DIGITAL/edf_registers/files.f
+-f -ruleset rtl DIGITAL/ECC/files.f
+-f -ruleset rtl DIGITAL/DSI3_MASTER/files.f
+DIGITAL/tb_easier_uvm/registers/test_addresses_pkg.sv
+-f DIGITAL/SPI/files.f
+-f DIGITAL/SPI/tb/tb_spi_core/files.f
+#-property -ruleset testbench DIGITAL/SPI/tb/tb_spi_core/spi_unit_test_pkg.sv
+-scope_property -top testrunner

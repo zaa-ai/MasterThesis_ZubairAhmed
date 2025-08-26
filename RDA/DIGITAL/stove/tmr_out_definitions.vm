@@ -1,0 +1,33 @@
+################## TMR IN/OUT DEFINITONS ##################
+################### TMR OUT ##################
+$log.info('##### parsing TMR_OUT #####')
+#set ( $tmr_out = {})
+#set ( $tmr_out_signals = [])
+#set ( $tmr_vectors = [])
+#set ( $tmr_fields  = [])
+#set ( $tmrOutContents  = {})
+#set ( $register_search_name = "TMR_OUT")#*
+*#$log.info("parsing ${tmr_name}: searching for registers containing >${register_search_name}<")#*
+*#
+  #foreach( $register in $registerFile.getRegisters() )
+    #if ($register.Name != "")
+      #if( $register.name.contains($register_search_name))
+        #foreach ($tmr_field in $register.getAllUsedFields())
+          #set ( $fieldName = $tmr_field.name)
+          #set ($BitWidth = $tmr_field.bits)
+          #set ($MSB = $tmr_field.bits - 1)
+          #set ($MSBnumber = $number.toNumber($MSB))
+          #if ($MSBnumber > 0)#set($isArray = true)#else#set($isArray = false)#end
+          #set ($tmp = $tmrOutContents.put($fieldName,{"msb":$MSBnumber, "isArray":$isArray, "register":$register}))
+        #end
+        $log.info("tmrOutContents=$tmrOutContents")
+      	#set ($tmp = $tmr_out.put("has_tmr", true))
+      	#set ($tmp = $tmr_out.put("contents", $tmrOutContents))
+      #end
+    #end
+  #end
+  #if ($tmr_out.isEmpty())
+    #set ($tmp = $tmr_out.put("has_tmr", false))
+  #end
+$log.info("tmr_out:${tmr_out}")
+$log.info('##########################')

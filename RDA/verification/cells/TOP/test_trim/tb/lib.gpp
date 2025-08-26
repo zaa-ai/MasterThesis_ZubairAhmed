@@ -1,0 +1,218 @@
+
+**------------------------------------------------
+** Frequency Meters
+**------------------------------------------------
+
+`dfreq_meter(name=clkosc     s=snps_sptop.xdut.xdigi.I_CLKOSC)
+`dfreq_meter(name=clkpll     s=snps_sptop.xdut.xdigi.I_CLKPLL)
+`dfreq_meter(name=clkpll_div s=snps_sptop.xdut.xdigi.I_CLKPLL_DIV)
+`dfreq_meter(name=clkref     s=snps_sptop.xdut.xdigi.I_CLKREF)
+
+`dfreq_meter(name=csb        s=snps_sptop.xdut.xdigi.I_CSB)
+`dfreq_meter(name=sck        s=snps_sptop.xdut.xdigi.I_SCK)
+`dfreq_meter(name=mosi       s=snps_sptop.xdut.xdigi.I_SDI)
+`dfreq_meter(name=miso       s=snps_sptop.xdut.xdigi.O_SDO)
+
+`dfreq_meter(name=intb       s=snps_sptop.xdut.xdigi.O_INTB)
+`dfreq_meter(name=syncb      s=snps_sptop.xdut.xdigi.O_SYNCB)
+`dfreq_meter(name=rfc        s=snps_sptop.xdut.xdigi.O_RFC)
+
+**------------------------------------------------
+** ATB Measurement
+**------------------------------------------------
+
+define meas_v_aout(__name__ __p__ __n__=gnd __scale__=1 __t__=100`u __min__= __typ__= __max__= __abstol__=10`m __reltol__=0.01 __hz__=1 __x__=temp_j __xunit__=degC)
+    
+  `if "__hz__" == "1"
+    `set_hz(src=vaout)
+  `endif
+  
+  `wait(t=__t__)
+  
+  `meas_v_atb( name   = __name__
+               p      = __p__
+	       n      = __n__
+	       atb    = aout_pcb
+	       scale  = __scale__
+	       min    = __min__
+	       typ    = __typ__
+	       max    = __max__
+	       abstol = __abstol__ * __scale__
+	       reltol = __reltol__
+	       x      = __x__
+	       xunit  = __xunit__)
+
+enddefine
+
+**---------
+
+define meas_v_aout_post(__name__ __p__ __n__=gnd __t__=100`u __min__= __typ__= __max__=)
+		   
+  `wait(t=__t__ print=0)
+  
+  `meas_v_atb_post( name = __name__
+                    p    = __p__
+	            n    = __n__
+	            min  = __min__
+	            typ  = __typ__
+	            max   = __max__)
+		    
+enddefine
+
+**---------
+
+define meas_i_aout(__name__ __p__ __scale__=1 __v__=2.5 __t__=100`u __min__= __typ__= __max__= __abstol__=100`n __reltol__=0.01 __x__=temp_j __xunit__=degC)
+  
+  `set_vsrc(src=vaout v=__v__)
+  `wait(t=__t__)
+  
+  `meas_i_atb( name   = __name__
+               p      = __p__
+	       atb    = xdut.aout_p
+	       scale  = __scale__
+	       min    = __min__
+	       typ    = __typ__
+	       max    = __max__
+	       abstol = __abstol__
+	       reltol = __reltol__
+	       x      = __x__
+	       xunit  = __xunit__)
+  
+enddefine
+
+**---------
+
+define meas_vcomp_aout(__name__ __p__ __out__ __start__ __stop__ __t__=100`u __min__= __typ__= __max__= __x__=temp_j __xunit__=degC __drop__=10`m)
+   
+  `meas_vcomp_atb( name   = __name__
+               src    = vaout
+	       p      = __p__
+	       atb    = aout_pcb
+	       out    = __out__
+	       start  = __start__
+	       stop   = __stop__
+	       min    = __min__
+	       typ    = __typ__
+	       max    = __max__
+	       abstol = __drop__
+	       x      = __x__
+	       xunit  = __xunit__)
+  
+enddefine
+
+**------------------------------------------------
+** DTB Measurement
+**------------------------------------------------
+
+define set_dout_model
+
+  `set_vsrc(src=vrfc_o_model_en v=1 print=0)
+  `set_vsrc(src=vrfc_o_model    v=0 print=0)
+		
+enddefine
+
+*----------
+
+define reset_dout_model
+
+  `set_vsrc(src=vrfc_o_model_en v=0 print=0)
+  
+enddefine
+
+*----------
+
+define meas_clk_dout(__name__ __s__ __scale__=1 __wait__=10`u __min__= __typ__= __max__= __abstol__=10`m __x__=temp_j __xunit__=degC)
+
+  	*wait(t=__wait__ print=0)
+  `cross_d(name=t1_meas_clk_dout___name__ s=xdut.xdigi.O_RFC)
+  `cross_d(name=t2_meas_clk_dout___name__ s=xdut.xdigi.O_RFC)
+  `cross_d(name=t3_meas_clk_dout___name__ s=xdut.xdigi.O_RFC)
+  `wait(t=1`n print=0)
+
+  `calc( name  = f____name___intern__
+         expr  = __s___freq
+	 unit  = Hz
+	 x     = __x__
+	 xunit = __xunit__
+	 min   = __min__
+	 typ   = __typ__
+	 max   = __max__)
+  
+  `calc( name  = duty____name___intern__
+         expr  = __s___duty
+	 x     = __x__
+	 xunit = __xunit__
+	 min   = 0.45
+	 typ   = 0.50
+	 max   = 0.55)
+  
+  `calc( name  = f____name____
+         expr  = rfc_freq * __scale__
+	 unit  = Hz
+	 x     = __x__
+	 xunit = __xunit__
+	 min   = __min__
+	 typ   = __typ__
+	 max   = __max__)
+
+enddefine
+
+**------------------------------------------------
+** Trim Variables
+**------------------------------------------------
+
+`trimfile_init()
+
+*----------
+
+define var_trim(__name__ __val__=1e9)
+
+  `var(name=__name___best   val=0)
+  `var(name=__name___target val=0)
+  `var(name=__name___int    val=__val__)
+
+enddefine
+
+*----------
+
+`var_trim(name=trim_dsi_rx1_rise)
+`var_trim(name=trim_dsi_rx1_fall)
+`var_trim(name=trim_dsi_rx2_rise)
+`var_trim(name=trim_dsi_rx2_fall)
+`var_trim(name=trim_i5u)
+`var_trim(name=trim_osc_f)
+`var_trim(name=trim_osc_tcf)
+`var_trim(name=trim_ot)
+
+`var(name=trim_osc_f_coarse_best val=0)
+
+*----------
+
+define calc_besttrim(__var__ __d__ __result__ __target__)
+
+  `if "$SPSCR_MACROTYPE" eq "SV"
+    
+    __var___target = __target__;
+    
+    if (__result__ - __target__ >= 0 && __result__ - __target__ < __var___int) begin
+      __var___int  = __result__ - __target__;
+      __var___best = __d__;
+    end
+    if (__result__ - __target__ < 0 && __result__ - __target__ > -1 * __var___int) begin
+      __var___int  = __target__ - __result__;
+      __var___best = __d__;
+    end
+
+  `endif
+
+enddefine
+
+**------------------------------------------------
+** Local Includes
+**------------------------------------------------
+
+`include "$SPSCR_TB/tb/lib_jtag.gpp"
+`include "$SPSCR_TB/tb/sx.gpp"
+  
+**------------------------------------------------
+**------------------------------------------------

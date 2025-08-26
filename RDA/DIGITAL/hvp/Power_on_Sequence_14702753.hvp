@@ -1,0 +1,45 @@
+
+plan Power_on_Sequence;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14702753;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702753";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature description_power_up;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702754";
+    edfId = 14702754;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature RFC_Pin;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702755";
+    edfId = 14702755;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature startup_parameters;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702756";
+    edfId = 14702756;
+    edfType = EPM_TABLE;
+    customer = true;
+    feature t__startup__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702757";
+      edfId = 14702757;
+      edfType = EPM;
+      customer = true;
+      description = "time between VSUP is in recommended operating condition range and IC is ready for communication";
+      measure spec spect__startup__;
+        source = "t__startup__";
+      endmeasure
+    endfeature
+  endfeature
+
+endplan

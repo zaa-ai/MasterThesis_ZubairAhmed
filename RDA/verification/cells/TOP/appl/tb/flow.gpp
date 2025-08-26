@@ -1,0 +1,79 @@
+  
+**------------------------------------------------
+** Start                     (unconditional)
+**------------------------------------------------
+  
+`if "$SPSCR_MACROTYPE" eq "SV" && models[0]
+  `if $SPSCR_SDF
+    snps_sptop.xdut.xdigi.i_logic_top.i_test.i_test_control.i_otp_wrapper.u_otpwrap_l3_top.u_otpwrap_l2_cpu.u_otpwrap_l1_jtag.u_otpwrap_l0_atpg.gen_tsmc_u_otp4kx12.u_otp4kx12.readOtp("otp.dat");
+  `else
+    snps_sptop.xdut.xdigi.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12.u_otp4kx12.readOtp("otp.dat");
+  `endif
+`endif
+
+**----------
+
+`perform(task=powerup)
+
+**------------------------------------------------
+** Supply and References     (7:0,   0000_0000_0000_00ff)
+**------------------------------------------------
+
+`simcase(bit=0  task=sup_ot)
+`simcase(bit=1  task=sup_short_vdd)
+`simcase(bit=2  task=sup_short_vcc)
+`simcase(bit=3  task=sup_cldo)
+`simcase(bit=4  task=sup_short_cldo)
+
+`simcase(bit=7  task=powerdown)
+
+**------------------------------------------------
+** DSI3 Interface            (15:8,  0000_0000_0000_ff00)
+**------------------------------------------------
+
+`simcase(bit=8  task=dsi_short2gnd)
+`simcase(bit=9  task=dsi_short2vsup)
+`simcase(bit=10 task=dsi_iquietcomp)
+`simcase(bit=11 task=dsi_wv)
+
+`simcase(bit=12 task=dsi_crm)
+*simcase(bit=13 task=dsi_pdcm)
+`simcase(bit=14 task=dsi_crm_txshift)
+`simcase(bit=15 task=dsi_crm_rxddel)
+
+**------------------------------------------------
+** SPI                       (23:16, 0000_0000_00ff_0000)
+**------------------------------------------------
+
+`simcase(bit=16 task=spi_if)
+
+**------------------------------------------------
+** Command and Data Memory   (31:24, 0000_0000_ff00_0000)
+**------------------------------------------------
+
+**------------------------------------------------
+** Interrupt System          (39:32, 0000_00ff_0000_0000)
+**------------------------------------------------
+
+**------------------------------------------------
+** Timebase                  (47:40, 0000_ff00_0000_0000)
+**------------------------------------------------
+
+`simcase(bit=40 task=timebase_clkref_err)
+`simcase(bit=41 task=timebase_clkref)
+
+**------------------------------------------------
+** Miscellaneous             (63:48, ffff_0000_0000_0000)
+**------------------------------------------------
+
+`simcase(bit=48 task=reset)
+
+**----------
+
+`simcase(bit=61 task=emi_dsi_iquietcomp)
+`simcase(bit=62 task=emi_dsi)
+`simcase(bit=63 task=eme_dsi)
+
+**------------------------------------------------
+**------------------------------------------------
+

@@ -1,0 +1,54 @@
+
+plan DSI3_CRC_calculation;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14703644;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703644";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature P01;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703645";
+    edfId = 14703645;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature CRC_calculation;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703646";
+    edfId = 14703646;
+    edfType = UNIVERSAL_TABLE;
+    customer = true;
+    feature Row_0;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703647";
+      edfId = 14703647;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_1;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703648";
+      edfId = 14703648;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+  endfeature
+
+  feature P02;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703649";
+    edfId = 14703649;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature Description;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703699";
+    edfId = 14703699;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+endplan

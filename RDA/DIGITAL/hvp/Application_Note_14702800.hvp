@@ -1,0 +1,35 @@
+
+plan Application_Note;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14702800;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702800";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature Design_Note_with_Test_Bus_for_Test_Purpose;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702801";
+    edfId = 14702801;
+    edfType = GRAPHIC;
+    customer = false;
+  endfeature
+
+  feature Design_Note_with_extended_Test_Suport;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702802";
+    edfId = 14702802;
+    edfType = GRAPHIC;
+    customer = false;
+  endfeature
+
+  feature Design_and_Layout_Notes;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702803";
+    edfId = 14702803;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+endplan

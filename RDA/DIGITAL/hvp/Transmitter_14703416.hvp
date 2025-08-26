@@ -1,0 +1,105 @@
+`include "DSI3_Transmitter_Bit_Timing_14703417.hvp"
+`include "DSI3_Transmitter_Start_Time_Shift_14910760.hvp"
+`include "Wave_Shaping_14703425.hvp"
+`include "DSI3_Current_14703452.hvp"
+
+plan Transmitter;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14703416;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703416";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature P01;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703465";
+    edfId = 14703465;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature DSI_transmitter_operating_conditions;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703466";
+    edfId = 14703466;
+    edfType = RECOMMENDED_TABLE;
+    customer = true;
+    feature I__DSI_Q__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703467";
+      edfId = 14703467;
+      edfType = RECOMMENDED;
+      customer = true;
+      description = "Quiescent current at DSI pins";
+      spec = -0.5 < spec && spec < 0.0;
+      measure spec specI__DSI_Q__;
+        source = "I__DSI_Q__";
+      endmeasure
+    endfeature
+    feature C__DSI_sum__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703468";
+      edfId = 14703468;
+      edfType = RECOMMENDED;
+      customer = true;
+      description = "total capacitance on each DSI3 pin";
+      spec = 15.0 < spec && spec < 30.0;
+      measure spec specC__DSI_sum__;
+        source = "C__DSI_sum__";
+      endmeasure
+    endfeature
+  endfeature
+
+  feature DSI_transmitter_electrical_parameters;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703471";
+    edfId = 14703471;
+    edfType = EPM_TABLE;
+    customer = true;
+    feature V__DSI_HIGH__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14981201";
+      edfId = 14981201;
+      edfType = EPM;
+      customer = true;
+      description = "Idle voltage at DSI3 lines";
+      spec = 4.1 < spec && spec < 4.9;
+      measure spec specV__DSI_HIGH__;
+        source = "V__DSI_HIGH__";
+      endmeasure
+    endfeature
+    feature ___Delta__V__DSI__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703472";
+      edfId = 14703472;
+      edfType = EPM;
+      customer = true;
+      description = "Differential signaling voltage($$\Delta$$V__DSI__ = V__DSI,HIGH__ - V__DSI,LOW__)";
+      spec = 1.75 < spec && spec < 2.25;
+      measure spec spec___Delta__V__DSI__;
+        source = "___Delta__V__DSI__";
+      endmeasure
+    endfeature
+    feature R__DSI_M__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703473";
+      edfId = 14703473;
+      edfType = EPM;
+      customer = false;
+      description = "Master source resistance";
+      spec = spec < 6.0;
+      measure spec specR__DSI_M__;
+        source = "R__DSI_M__";
+      endmeasure
+    endfeature
+  endfeature
+
+  feature V__DSI_HIGH___deviations_from_ideal__typical_;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703476";
+    edfId = 14703476;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  subplan DSI3_Transmitter_Bit_Timing;
+  subplan DSI3_Transmitter_Start_Time_Shift;
+  subplan Wave_Shaping;
+  subplan DSI3_Current;
+endplan

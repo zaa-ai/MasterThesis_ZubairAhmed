@@ -1,0 +1,109 @@
+current_design "digtop"
+
+# Virtual Clock for analog/asynchronous inputs
+# --------------------------------------------------------
+clock -tag VCLK
+
+#PROBABLE CLOCKS:
+clock -name "digtop.I_CLKOSC" -domain domain1 -tag OSC
+clock -name "digtop.I_SCK" -domain domain2 -tag SCK
+clock -name "digtop.I_CLKPLL" -domain domain3 -tag PLL
+clock -name "digtop.i_logic_top.i_test.i_test_control.i_clock_switch.o_clk" -domain domain1_3 -tag SYS_CLK
+clock -name "digtop.I_BFWB" -domain domain4 -tag TCK
+clock -name "digtop.I_CSB" -domain domain5 -tag CSB
+
+clock -name "digtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.u_otpwrap_l3_top.u_otpwrap_l2_cpu.u_otpwrap_l1_jtag.u_otpwrap_l0_atpg.u_otp4kx12.u_ips.PPCLKOUT" -domain domain6 -tag IPS_PP_CLK
+clock -name "digtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.u_otpwrap_l3_top.u_otpwrap_l2_cpu.u_otpwrap_l1_jtag.u_otpwrap_l0_atpg.u_otp4kx12.u_ips.CLKOUT" -domain domain6_1 -tag IPS_CLK
+
+##ASYNCHRONOUS RESETS##
+#DEFINE RESETS:
+reset -name "digtop.I_TMODE" -value 0 -async
+# set no testmode
+#set_case_analysis -name digtop.I_TMODE -value 0
+
+#PROBABLE RESETS:
+reset -name "digtop.I_PORB"  -value 0 -async
+reset -name "digtop.I_RESB"  -value 0 -async
+reset -name "digtop.I_CSB"   -value 1 -async
+reset -name "digtop.I_TMODE" -value 0 -async
+
+################################################################################
+# Case analysis for mux where clocks converges
+################################################################################
+# I_BFWB (TCK) and PPCLKOUT/CLKOUT of IPS 
+set_case_analysis -name digtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.u_otpwrap_l3_top.u_otpwrap_l2_cpu.u_otpwrap_l1_jtag.otp_tst_active -value 1
+#set_case_analysis -name digtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.u_otpwrap_l3_top.u_otpwrap_l2_cpu.u_otpwrap_l1_jtag.otp_tstctrl[10] -value 1
+#set_case_analysis -name digtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.u_otpwrap_l3_top.u_otpwrap_l2_cpu.u_otpwrap_l1_jtag.otp_tstctrl[11] -value 0
+
+# No Scan
+set_case_analysis -name "digtop.i_logic_top.i_test.i_test_control.i_scan_registers.i_scan_registers_SCAN.SCAN" -value 0
+
+################################################################################
+
+# CDC false path examples
+#cdc_false_path -from block1.flop1 –to block2.flop2
+#cdc_false_path -from block1.clk1
+#cdc_false_path -from config_module::fifo_config_reg[1]
+
+#cdc_false_path -from TCK -to SYS_CLK
+#cdc_false_path -from SYS_CLK -to TCK
+ 
+cdc_false_path -through "digtop.i_logic_top.i_test.i_test_control.i_jtag_elip.elip_addr[15:0]"
+cdc_false_path -through "digtop.i_logic_top.i_test.i_test_control.i_jtag_elip.data_write[15:0]"
+cdc_false_path -through "digtop.i_logic_top.i_test.i_test_control.i_jtag_elip.o_data_shift_register"
+cdc_false_path -through "digtop.i_logic_top.i_test.i_test_control.i_jtag_elip.elip_data_read[15:0]"
+cdc_false_path -through "digtop.i_logic_top.i_test.i_test_control.i_jtag_tap.ir_register[7:0]"
+cdc_false_path -through "digtop.i_logic_top.i_timebase.i_clkref_divider.o_clkref_div"
+cdc_false_path -through "digtop.tmr_out_signals"
+cdc_false_path -through "digtop.i_logic_top.i_spi.i_spi_core.o_data_received"
+
+#cdc_false_path -from    "digtop.i_logic_top.i_timebase.i_clkref_divider.o_clkref_div" -to "digtop.i_logic_top.i_timebase.i_sync_clkref_osc.i_in" 
+
+#set_false_path   -from [get_ports I_BFWB]  -through [list [get_pins {i_logic_top/i_test/i_test_control/jtag_elip/elip_data_write[21]}] [get_pins {i_logic_top/i_test/i_test_control/jtag_elip/elip_data_write[20]}] [get_pins {i_logic_top/i_test/i_test_control/jtag_elip/elip_data_write[19]}] [get_pins {i_logic_top/i_test/i_test_control/jtag_elip/elip_data_write[18]}] [get_pins {i_logic_top/i_test/i_test_control/jtag_elip/elip_data_write[17]}] [get_pins {i_logic_top/i_test/i_test_control/jtag_elip/elip_data_write[16]}] [get_pins {i_logic_top/i_test/i_test_control/jtag_elip/elip_data_write[15]}] [get_pins {i_logic_top/i_test/i_test_control/jtag_elip/elip_data_write[14]}] [get_pins {i_logic_top/i_test/i_test_control/jtag_elip/elip_data_write[13]}] [get_pins {i_logic_top/i_test/i_test_control/jtag_elip/elip_data_write[12]}] [get_pins {i_logic_top/i_test/i_test_control/jtag_elip/elip_data_write[11]}] [get_pins {i_logic_top/i_test/i_test_control/jtag_elip/elip_data_write[10]}] [get_pins {i_logic_top/i_test/i_test_control/jtag_elip/elip_data_write[9]}] [get_pins {i_logic_top/i_test/i_test_control/jtag_elip/elip_data_write[8]}] [get_pins {i_logic_top/i_test/i_test_control/jtag_elip/elip_data_write[7]}] [get_pins {i_logic_top/i_test/i_test_control/jtag_elip/elip_data_write[6]}] [get_pins {i_logic_top/i_test/i_test_control/jtag_elip/elip_data_write[5]}] [get_pins {i_logic_top/i_test/i_test_control/jtag_elip/elip_data_write[4]}] [get_pins {i_logic_top/i_test/i_test_control/jtag_elip/elip_data_write[3]}] [get_pins {i_logic_top/i_test/i_test_control/jtag_elip/elip_data_write[2]}] [get_pins {i_logic_top/i_test/i_test_control/jtag_elip/elip_data_write[1]}] [get_pins {i_logic_top/i_test/i_test_control/jtag_elip/elip_data_write[0]}]]
+#set_false_path   -from [list [get_ports I_CLKPLL] [get_ports I_CLKOSC]]  -through [list [get_pins i_logic_top/i_test/i_test_control/jtag_elip/elip_data_read_21_] [get_pins i_logic_top/i_test/i_test_control/jtag_elip/elip_data_read_20_] [get_pins i_logic_top/i_test/i_test_control/jtag_elip/elip_data_read_19_] [get_pins i_logic_top/i_test/i_test_control/jtag_elip/elip_data_read_18_] [get_pins i_logic_top/i_test/i_test_control/jtag_elip/elip_data_read_17_] [get_pins i_logic_top/i_test/i_test_control/jtag_elip/elip_data_read_16_] [get_pins i_logic_top/i_test/i_test_control/jtag_elip/elip_data_read_15_] [get_pins i_logic_top/i_test/i_test_control/jtag_elip/elip_data_read_14_] [get_pins i_logic_top/i_test/i_test_control/jtag_elip/elip_data_read_13_] [get_pins i_logic_top/i_test/i_test_control/jtag_elip/elip_data_read_12_] [get_pins i_logic_top/i_test/i_test_control/jtag_elip/elip_data_read_11_] [get_pins i_logic_top/i_test/i_test_control/jtag_elip/elip_data_read_10_] [get_pins i_logic_top/i_test/i_test_control/jtag_elip/elip_data_read_9_] [get_pins i_logic_top/i_test/i_test_control/jtag_elip/elip_data_read_8_] [get_pins i_logic_top/i_test/i_test_control/jtag_elip/elip_data_read_7_] [get_pins i_logic_top/i_test/i_test_control/jtag_elip/elip_data_read_6_]]
+#set_false_path   -from [get_ports I_SCK]  -through [list [get_pins {i_logic_top/i_spi/i_spi_core/o_data_received[21]}] [get_pins {i_logic_top/i_spi/i_spi_core/o_data_received[20]}] [get_pins {i_logic_top/i_spi/i_spi_core/o_data_received[19]}] [get_pins {i_logic_top/i_spi/i_spi_core/o_data_received[18]}] [get_pins {i_logic_top/i_spi/i_spi_core/o_data_received[17]}] [get_pins {i_logic_top/i_spi/i_spi_core/o_data_received[16]}] [get_pins {i_logic_top/i_spi/i_spi_core/o_data_received[15]}] [get_pins {i_logic_top/i_spi/i_spi_core/o_data_received[14]}] [get_pins {i_logic_top/i_spi/i_spi_core/o_data_received[13]}] [get_pins {i_logic_top/i_spi/i_spi_core/o_data_received[12]}] [get_pins {i_logic_top/i_spi/i_spi_core/o_data_received[11]}] [get_pins {i_logic_top/i_spi/i_spi_core/o_data_received[10]}] [get_pins {i_logic_top/i_spi/i_spi_core/o_data_received[9]}] [get_pins {i_logic_top/i_spi/i_spi_core/o_data_received[8]}] [get_pins {i_logic_top/i_spi/i_spi_core/o_data_received[7]}] [get_pins {i_logic_top/i_spi/i_spi_core/o_data_received[6]}] [get_pins {i_logic_top/i_spi/i_spi_core/o_data_received[5]}] [get_pins {i_logic_top/i_spi/i_spi_core/o_data_received[4]}] [get_pins {i_logic_top/i_spi/i_spi_core/o_data_received[3]}] [get_pins {i_logic_top/i_spi/i_spi_core/o_data_received[2]}] [get_pins {i_logic_top/i_spi/i_spi_core/o_data_received[1]}] [get_pins {i_logic_top/i_spi/i_spi_core/o_data_received[0]}]]
+#set_false_path   -from [list [get_ports I_CLKPLL] [get_ports I_CLKOSC]]  -through [list [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_15_/SDN] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_15_/D] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_15_/CP] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_15_/Q] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_14_/SDN] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_14_/D] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_14_/CP] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_14_/Q] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_13_/SDN] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_13_/D] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_13_/CP] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_13_/Q] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_12_/SDN] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_12_/D] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_12_/CP] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_12_/Q] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_11_/SDN] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_11_/D] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_11_/CP] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_11_/Q] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_10_/SDN] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_10_/D] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_10_/CP] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_10_/Q] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_9_/SDN] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_9_/D] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_9_/CP] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_9_/Q] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_8_/SDN] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_8_/D] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_8_/CP] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_8_/Q] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_7_/SDN] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_7_/D] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_7_/CP] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_7_/Q] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_6_/SDN] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_6_/D] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_6_/CP] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_6_/Q] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_5_/SDN] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_5_/D] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_5_/CP] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_5_/Q] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_4_/SDN] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_4_/D] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_4_/CP] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_4_/Q] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_3_/SDN] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_3_/D] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_3_/CP] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_3_/Q] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_2_/SDN] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_2_/D] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_2_/CP] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_2_/Q] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_1_/SDN] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_1_/D] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_1_/CP] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_1_/Q] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_0_/SDN] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_0_/D] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_0_/CP] [get_pins i_logic_top/i_spi/i_spi_core/shift_out_reg_0_/Q]]
+
+################################################################################
+#
+# Purpose:
+#     Lists the abstract_port constraints as generated by Clock_info15
+#     An abstract port constraint is generated for input or inout port which are
+#     unconstrained and directly/indirectly connected (after ignoring combinational 
+#     logic) to data/enable of flop/latch/sequential-instance
+# Format:
+#     This file is displayed in standard SGDC format. Syntax:
+#     current_design <block-name>
+#        abstract_port -ports <port-name> -scope cdc -clock <clk-name> [-combo no]
+#
+################################################################################
+# SPI INTERFACE
+# --------------------------------------------------------
+## sensor interface ##
+abstract_port -ports I_SDI          	-direction input -clock "digtop.I_SCK"
+abstract_port -ports I_SDO  			-direction input -clock "digtop.I_SCK"
+abstract_port -ports I_CSB  			-direction input -clock "digtop.I_SCK"
+                       
+abstract_port -ports I_RFC				-direction input -clock VCLK                      
+abstract_port -ports I_INTB             -direction input -clock VCLK         
+abstract_port -ports I_DAB              -direction input -clock VCLK        
+abstract_port -ports I_BFWB             -direction input -clock VCLK         
+abstract_port -ports I_SYNCB            -direction input -clock VCLK          
+abstract_port -ports I_CLKPLL_DIV       -direction input -clock VCLK -combo no   
+abstract_port -ports I_OSC_READY        -direction input -clock VCLK              
+abstract_port -ports I_PLL_DOWN_MON     -direction input -clock VCLK                 
+abstract_port -ports I_PLL_UP_MON       -direction input -clock VCLK               
+abstract_port -ports I_PLL_LOCK_MON     -direction input -clock VCLK                 
+abstract_port -ports I_VCC_OK           -direction input -clock VCLK           
+abstract_port -ports I_VRR_OK           -direction input -clock VCLK           
+abstract_port -ports I_LDO_OK           -direction input -clock VCLK           
+abstract_port -ports I_DSI_UVB[1]       -direction input -clock VCLK               
+abstract_port -ports I_DSI_UVB[0]       -direction input -clock VCLK               
+abstract_port -ports I_DSI_OV[1]        -direction input -clock VCLK              
+abstract_port -ports I_DSI_OV[0]        -direction input -clock VCLK              
+abstract_port -ports I_DSI_RXD1[1]      -direction input -clock VCLK                
+abstract_port -ports I_DSI_RXD1[0]      -direction input -clock VCLK                
+abstract_port -ports I_DSI_RXD2[1]      -direction input -clock VCLK
+abstract_port -ports I_DSI_RXD2[0]      -direction input -clock VCLK
+abstract_port -ports I_OT_ERROR         -direction input -clock VCLK
+abstract_port -ports I_OT_WARN          -direction input -clock VCLK

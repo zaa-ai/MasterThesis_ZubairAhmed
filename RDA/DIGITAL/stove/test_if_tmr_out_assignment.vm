@@ -1,0 +1,4 @@
+#parse( "tmr_definitions.vm" )
+#foreach ($signal in $tmr_out_signals)
+  assign tmr_out_${test_name}_signals.${signal.name} = sup_top_io.${signal.name};
+#end

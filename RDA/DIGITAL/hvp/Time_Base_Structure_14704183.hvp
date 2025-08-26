@@ -1,0 +1,103 @@
+
+plan Time_Base_Structure;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14704183;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704183";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature Intro;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704184";
+    edfId = 14704184;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature time_base_block_diagram;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704186";
+    edfId = 14704186;
+    edfType = GRAPHIC;
+    customer = false;
+  endfeature
+
+  feature time_base_counter;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704185";
+    edfId = 14704185;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+  feature time_base_recommended_operating_conditions;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704206";
+    edfId = 14704206;
+    edfType = RECOMMENDED_TABLE;
+    customer = true;
+    feature f__CLKREF__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704207";
+      edfId = 14704207;
+      edfType = RECOMMENDED;
+      customer = true;
+      description = "Clock reference input frequency range";
+      spec = 480.0 < spec && spec < 520.0;
+      measure spec specf__CLKREF__;
+        source = "f__CLKREF__";
+      endmeasure
+    endfeature
+    feature D__CLKREF__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704208";
+      edfId = 14704208;
+      edfType = RECOMMENDED;
+      customer = true;
+      description = "Duty cycle of the [!14704204]] signal";
+      spec = 40.0 < spec && spec < 60.0;
+      measure spec specD__CLKREF__;
+        source = "D__CLKREF__";
+      endmeasure
+    endfeature
+  endfeature
+
+  feature time_base_parameters;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704187";
+    edfId = 14704187;
+    edfType = EPM_TABLE;
+    customer = true;
+    feature f__CLK_PLL__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704188";
+      edfId = 14704188;
+      edfType = EPM;
+      customer = true;
+      description = "System clock frequency";
+      spec = 17.982 < spec && spec < 18.018;
+      measure spec specf__CLK_PLL__;
+        source = "f__CLK_PLL__";
+      endmeasure
+    endfeature
+    feature f__OSC_RC__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702778";
+      edfId = 14702778;
+      edfType = EPM;
+      customer = false;
+      description = "oscillator output frequency after trimming, absolute";
+      spec = 17.46 < spec && spec < 18.54;
+      measure spec specf__OSC_RC__;
+        source = "f__OSC_RC__";
+      endmeasure
+    endfeature
+    feature f__CLK_step__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704190";
+      edfId = 14704190;
+      edfType = EPM;
+      customer = false;
+      description = "oscillator step size of trimming for build-in self trimming";
+      measure spec specf__CLK_step__;
+        source = "f__CLK_step__";
+      endmeasure
+    endfeature
+  endfeature
+
+endplan

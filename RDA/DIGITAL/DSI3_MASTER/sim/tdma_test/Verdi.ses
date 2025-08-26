@@ -1,0 +1,149 @@
+@verdi rc file Version 1.0
+[General]
+saveDB = FALSE
+relativePath = TRUE
+saveSingleView = FALSE
+saveNWaveWinId = 3
+VerdiVersion = Verdi_R-2020.12-1
+[KeyNote]
+Line1 = invoke directory: .
+Line2 = command line: -elab ./simv_52143_block_test.daidir/kdb.elab++ +UVM_TESTNAME=top_test -ba 
+Line3 = current trace scope: testrunner.ts.ut.i_dsi3_block.i_dsi3_core
+Line4 = memo:
+Line5 = Save Open Database Information: No
+Line6 = Path Option: Relative Paths
+Line7 = Windows Option: All Windows
+[OneSearch]
+isExisted = TRUE
+[TestBench]
+ConstrViewShow = 0
+InherViewShow = 0
+FSDBMsgShow = 0
+AnnotationShow = 0
+Console = TRUE
+TBHierShow = 1
+TBHierSelectedNode = uvm_test_top
+TBHierHasData = 1
+powerDumped = 0
+[fusa]
+fdb_server = 
+fdb_proj = 
+fdb_campaign = 
+fdb_tool = All Tools
+[hb]
+postSimFile = ./${TESTCASE}.fsdb
+syncTime = 14055013373
+viewport = 0 0 2560 1387 0 0 445 2558
+activeNode = "testrunner.ts.ut.i_dsi3_block.i_dsi3_core"
+activeScope = "testrunner.ts.ut.i_dsi3_block.i_dsi3_core"
+activeFile = "${PROJECT_HOME}/DSI3_MASTER/rtl/dsi3_core.sv"
+interactiveMode = False
+viewType = Source
+simulatorMode = False
+sourceBeginLine = 5
+baMode = True
+srcLineNum = True
+AutoWrap = True
+IdentifyFalseLogic = False
+syncSignal = False
+traceMode = Hierarchical
+showTraceInSchema = True
+paMode = False
+funcMode = True
+powerAwareAnnot = True
+safetyAwareAnnot = False
+amsAnnot = True
+DnDtraceCrossHierOnly = True
+leadingZero = False
+signalPane = True
+SourceVerticalScrollLines = 5
+Scope1 = "testrunner.ts.ut.i_dsi3_block.i_dsi3_core"
+Scope2 = "testrunner.ts.ut.i_dsi3_block"
+Scope3 = "testrunner"
+Scope4 = "testrunner.ts.ut"
+multipleSelection = 1 5 2 0 0
+sdfCheckUndef = FALSE
+simFlow = FALSE
+[hb.design]
+importCmd = "-simflow" "-dbdir" "./simv_52143_block_test.daidir" 
+[hb.sourceTab.1]
+scope = testrunner
+File = ${PROJECT_HOME}/DSI3_MASTER/tb/tb_dsi3_block/testrunner.sv
+Line = 1
+[hb.sourceTab.2]
+scope = testrunner
+File = ${PROJECT_HOME}/DSI3_MASTER/tb/tb_dsi3_block/testrunner.sv
+Line = 23
+[hb.sourceTab.3]
+scope = testrunner.ts.ut.i_dsi3_block
+File = ${PROJECT_HOME}/DSI3_MASTER/rtl/dsi3_block.sv
+Line = 6
+[hb.sourceTab.4]
+scope = testrunner.ts.ut.i_dsi3_block.i_dsi3_core
+File = ${PROJECT_HOME}/DSI3_MASTER/rtl/dsi3_core.sv
+Line = 6
+Active = TRUE
+[nMemoryManager]
+WaveformFile = block_test.fsdb
+UserActionNum = 0
+nMemWindowNum = 0
+[paBrowser.0]
+viewport = 0 25 2560 728
+fsdb = ./${TESTCASE}.fsdb
+SelectRow = -1
+SelectRadix = 0
+commonStreamRowHeight = 32
+UTBDisplayType = true
+stream1 = $trans_root/uvm_test_top/m_env/writer_agent/m_sequencer
+drawOffsetHeight = 0
+drawOffsetWidth = 0
+drawTimeZoomScale = 1.006231
+drawChannelZoomScale = 1.000000
+drawVisibleStartTime = 0.000000
+drawVisibleEndTime = 14200785183.524923
+timeScaleUnit = p
+timeMultiplier = 1.000000
+drawCursorTime = 14055013373
+middleColumnFullName = m_sequencer
+middleColumnTopMargin = -20
+selectedStreamRows = 0:1
+ExpandedTreeWidgetItem1 = $trans_root/uvm_test_top/m_env/writer_agent
+HierTreeSelectedStreamItem = $trans_root/uvm_test_top/m_env/writer_agent/m_sequencer
+pabHighlightPredSucc = On
+pabAllDescendants = On
+pabAllAncestors = On
+pabHighlightParentChild = On
+pabDetailTransactionInfo = On
+pabDisplayAttrName = On
+pabShowGloablDrawArea = On
+pabNWSyncAll = On
+pabSyncnCursorTime = On
+pabNWViewRange = On
+pabNWMarkTransaction = On
+pabPanMode = On
+pabHierTreeArea = On
+[wave.0]
+viewPort = 0 25 2560 575 497 107
+primaryWindow = TRUE
+SessionFile = /nfs/wrk.jvoi/sim/52143/m52143a/DSI3_MASTER/block_test/Verdi.ses.wave.0
+displayGrid = FALSE
+hierarchicalName = FALSE
+snap = TRUE
+displayLeadingZeros = TRUE
+fixDelta = FALSE
+displayCursorMarker = FALSE
+autoUpdate = FALSE
+highlightGlitchs = FALSE
+waveformSyncCursorMarker = FALSE
+waveformSyncHorizontalRange = FALSE
+waveformSyncVerticalscroll = FALSE
+displayErrors = TRUE
+displayMsgSymbols = TRUE
+showMsgDescriptions = TRUE
+autoFit = FALSE
+displayDeltaY = FALSE
+centerCursor = FALSE
+fsaRegMask = TRUE
+fsaCoreMask = TRUE
+fsaSfsmMask = TRUE
+fsaEcrMask = TRUE

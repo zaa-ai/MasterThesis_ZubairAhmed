@@ -1,0 +1,11 @@
+<?xml version="1.0"  encoding="UTF-8" standalone="yes" ?>
+	<!-- Technology root (not used ..) -->
+<tech path="$PROJECT_HOME/tech/XILINX_UNISIM">
+
+  <sim_hdl>
+    <none>ip/xilinx.v</none>
+  </sim_hdl>
+
+</tech>
+
+

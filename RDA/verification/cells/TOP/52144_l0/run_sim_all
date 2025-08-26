@@ -1,0 +1,31 @@
+#!/bin/csh
+
+##------------------------------------------------
+## Common Script Call
+##------------------------------------------------
+
+setenv cmd "batch"
+#setenv cmd "wv"
+
+##----------
+
+./run_sim p1  $cmd
+./run_sim p2  $cmd
+./run_sim p3  $cmd
+./run_sim p4  $cmd
+./run_sim p5  $cmd
+./run_sim p6  $cmd
+./run_sim p7  $cmd
+./run_sim p8  $cmd
+./run_sim p9  $cmd
+./run_sim p10 $cmd
+./run_sim p11 $cmd
+./run_sim p12 $cmd
+./run_sim p13 $cmd
+./run_sim p14 $cmd
+./run_sim p15 $cmd
+
+##------------------------------------------------
+##------------------------------------------------
+
+

@@ -1,0 +1,77 @@
+
+plan Loop_filter;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14704216;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704216";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature Loop_Filter_parameter_of_design_script;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704217";
+    edfId = 14704217;
+    edfType = UNIVERSAL_TABLE;
+    customer = false;
+    feature Row_0;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704218";
+      edfId = 14704218;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+      description = "VCO constant ... specified rf_opt +/- 10%";
+    endfeature
+    feature Row_1;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704219";
+      edfId = 14704219;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+      description = "Phase/Frequency Detector constant = DC current of charge pump output";
+    endfeature
+    feature Row_2;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704220";
+      edfId = 14704220;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+      description = "Design specificationratio c1 / c3";
+    endfeature
+    feature Row_3;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704221";
+      edfId = 14704221;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+      description = "VCO frequency";
+    endfeature
+    feature Row_4;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704222";
+      edfId = 14704222;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+      description = "Reference frequency";
+    endfeature
+    feature Row_5;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704223";
+      edfId = 14704223;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+      description = "phase inflection point";
+    endfeature
+    feature Row_6;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704224";
+      edfId = 14704224;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+      description = "phase margin";
+    endfeature
+    feature Row_7;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704225";
+      edfId = 14704225;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+      description = "Attenuation of lowpass filter [dB]";
+    endfeature
+  endfeature
+
+endplan

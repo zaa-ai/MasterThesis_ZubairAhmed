@@ -1,0 +1,56 @@
+ #generate_info("Standard test module interface for ${registerFile.name}")
+interface tmr_${test_name}_if;
+#set($tmrInSignalNames = [])
+#if($tmr_in.has_tmr)#set($vectorMSB = 0)
+#foreach($tmr_in_signal in $tmr_in.contents.entrySet())
+#set ($vectorNumber =  $number.toNumber(${tmr_in_signal.key}))#if ($vectorNumber > $vectorMSB)#set ($vectorMSB = $vectorNumber)#end
+#if(!$foreach.hasNext())
+
+	logic [${tmr_in_signal.value.msb}:0] tmr_in[${vectorMSB}:0];
+#end
+#end
+#end
+
+#if ($tmr_out.has_tmr)
+  #foreach($tmr_out_signal in ${tmr_out.contents.entrySet()})
+	logic #if(${tmr_out_signal.value.isArray}) [${tmr_out_signal.value.msb}:0]	#end tmr_out_${tmr_out_signal.key.toLowerCase()};
+  #end
+#end
+#if ($has_tmr_ana)
+  #foreach( $field in $tmr_ana_signals )
+ 	logic	${field.field};
+  #end
+#end
+#if($has_tmr_dig)
+  #foreach ($signal in $tmr_dig_signals.entrySet())	logic	tmr_dig_${signal.key.toLowerCase()};
+  #end
+#end
+
+	modport master (
+#if($has_tmr_dig)		output	#foreach ($signal in $tmr_dig_signals.entrySet())tmr_dig_${signal.key.toLowerCase()}, #end
+#end
+#if ($tmr_in.has_tmr)		output	tmr_in,
+#end
+#if ($tmr_out.has_tmr)		output	#foreach($tmr_out_signal in ${tmr_out.contents.entrySet()})tmr_out_${tmr_out_signal.key.toLowerCase()}, #end
+#end
+		#tmr_ana_signal_modport("output")
+	);
+
+	modport slave (
+#if($has_tmr_dig)		input	#foreach ($signal in $tmr_dig_signals.entrySet())tmr_dig_${signal.key.toLowerCase()}, #end
+#end
+#if ($tmr_in.has_tmr)		input	tmr_in,
+#end
+#if ($tmr_out.has_tmr)		input	#foreach($tmr_out_signal in ${tmr_out.contents.entrySet()})tmr_out_${tmr_out_signal.key.toLowerCase()}, #end
+#end
+		#tmr_ana_signal_modport("input")
+	);
+
+#if ($has_tmr_ana)
+	modport scanmux (
+		input	#foreach ($tmrAnaSignal in $tmr_ana_signals)${tmrAnaSignal.field}#if(!($foreach.last)),#end #end
+	);
+#end
+
+	
+endinterface

@@ -1,0 +1,39 @@
+################### MACROS ###################
+#macro( tmr_dig_signal_modport $direction )
+  #set ($first = 1)
+  #foreach( $register in $registerFile.getRegisters() )
+    #if ($register.Name != "")
+      #if( $register.Name.contains("TMR_DIG")) ##if ($first == 0) , #else #set ($first = 0) #end
+		$direction #if($register.edfRegister.getProperty("regdef","combineBitFields") == "1") $register.name.toLowerCase()#if( $foreach.hasNext )#if($registerFile.getRegisters().get($foreach.count).Name.contains("TMR_DIG")),#end#end#else #foreach ($bitfield in $register.getAllUsedFields())${bitfield.name.toLowerCase()}#if( $foreach.hasNext ), #end#end#end
+      #end
+    #end
+  #end
+#end#*
+*################## TMR DIG ##################
+$log.info('##### parsing TMR_DIG #####')
+#set($tmr_dig_signals = {})
+#set ($tmr_dig_combined = false)
+#set ($tmr_dig_combined_msb = 0)
+#foreach( $register in $registerFile.getRegisters() )
+  #if( $register.name.contains("TMR_DIG"))
+    #if($register.edfRegister.getProperty("regdef","combineBitFields") == "1")
+      $log.info("TMR_DIG register has combineBitFields options set. Therefore just add (combined) tmr_dig signal to variable")
+      #set ($tmr_dig_combined_msb = $register.getBitsFromFields(false) - 1)
+      #set ($tmp = $tmr_dig_signals.add({"field":${register.name.toLowerCase()}, "msb":${tmr_dig_combined_msb}}))
+      #set ($tmr_dig_combined = true)
+    #else
+      $log.info("TMR_DIG register ${register.name} has combineBitFields options NOT set. Therefore add each bitfield as signal to variable")
+      #foreach ($field in $register.getAllUsedFields())
+        #if ($field)
+          #set ($tmp = $tmr_dig_signals.put($field.name,$register))
+        #end
+      #end
+    #end
+  #end
+#end
+#set ($tmr_dig_signals_size = ($tmr_dig_signals.size()))
+$log.info("tmr_dig_signals = $tmr_dig_signals")
+#set ( $has_tmr_dig = false)
+#if (! $tmr_dig_signals.isEmpty())
+  #set ( $has_tmr_dig = true)
+#end

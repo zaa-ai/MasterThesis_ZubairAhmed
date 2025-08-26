@@ -1,0 +1,18 @@
+usage_mode: binning
+
+##############################################################
+# regression: specify a file containing a list of regression log files for AutoRCA
+##############################################################
+regression:
+  latest_fail_list: ./reg_vcs_bamboo.txt               #MUST HAVE
+
+##############################################################
+# regression binning setting
+##############################################################
+binning:
+  # specify rule file to extend binning capability  
+  # refer to the template "binning_rule.txt" and get details
+  #multiple_error_binning: true
+  user_defined_rule: ./binning_rule.txt            #OPTIONAL
+  predefined_rule_priority: 1        #OPTIONAL , default is 1 
+  user_defined_rule_priority: 1      #OPTIONAL , default is 1

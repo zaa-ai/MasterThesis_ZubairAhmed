@@ -1,0 +1,72 @@
+#!/bin/sh
+
+##------------------------------------------------
+## All Compiled to WORK
+##------------------------------------------------
+
+echo ""
+#echo "DSI3_MASTER > default" > synopsys_sim.setup
+
+echo "OTP_MEM_tb           > default" >  synopsys_sim.setup
+echo "DSI3_MASTER          > default" >> synopsys_sim.setup
+echo "JTAG                 > default" >> synopsys_sim.setup
+echo "JTAG_TB              > default" >> synopsys_sim.setup
+echo "JTAG_BEHAV           > default" >> synopsys_sim.setup
+echo "MUTEC_tb             > default" >> synopsys_sim.setup
+echo "COMMON_LIB_TB        > default" >> synopsys_sim.setup
+echo "COMMON_LIB_MODEL     > default" >> synopsys_sim.setup
+echo "DIGITAL              > default" >> synopsys_sim.setup
+echo "PURECELLS            > default" >> synopsys_sim.setup
+echo "MUTEC                > default" >> synopsys_sim.setup
+echo "JTAG_OVM             > default" >> synopsys_sim.setup
+echo "MUTEC_MEMORY         > default" >> synopsys_sim.setup
+echo "MUTEC_JTAG           > default" >> synopsys_sim.setup
+echo "JTAG_OVM_VS          > default" >> synopsys_sim.setup
+echo "MUTEC_WATCHDOG       > default" >> synopsys_sim.setup
+echo "JTAG_UVM_VS          > default" >> synopsys_sim.setup
+echo "PLL                  > default" >> synopsys_sim.setup
+echo "MUTEC_DEBUGGER       > default" >> synopsys_sim.setup
+echo "COMMON_LIB           > default" >> synopsys_sim.setup
+echo "MUTEC_TIMER          > default" >> synopsys_sim.setup
+echo "JTAG_UVM             > default" >> synopsys_sim.setup
+echo "WORK                 > default" >> synopsys_sim.setup
+echo "OTP_MEM              > default" >> synopsys_sim.setup
+echo "DATA_STORAGE         > default" >> synopsys_sim.setup
+
+##------------------------------------------------
+## Re-direct Compile Folder to Digital Testbench
+##------------------------------------------------
+
+echo "WORK > default" >> synopsys_sim.setup
+
+if [ "$SPSCR_SDF" == "1" ]
+then
+  echo "default : $SPSCR_SIMDIR/$IC_VER_DIG/$SPSCR_SIMDIRDIG_LAY/WORK" >> synopsys_sim.setup
+  cp -f $SPSCR_SIMDIR/$IC_VER_DIG/$SPSCR_SIMDIRDIG_LAY/otp.dat $SPSCR_OUTPATH/
+else
+  echo "default : $SPSCR_SIMDIR/$IC_VER_DIG/$SPSCR_SIMDIRDIG/WORK" >> synopsys_sim.setup
+  cp -f $SPSCR_SIMDIR/$IC_VER_DIG/$SPSCR_SIMDIRDIG/otp.dat $SPSCR_OUTPATH/
+fi
+    
+echo "" >> synopsys_sim.setup
+
+vlogan +v2k -nc -full64 -sverilog $PROJECT_DIR/DIGITAL/tb_eugene/registers/addresses_pkg.sv
+
+##------------------------------------------------
+## Patter-Explorer
+##------------------------------------------------
+
+vlogan +v2k -nc -full64 +incdir+$SPSCR_PRJ/pattern/ecps_simulation -sverilog $SPSCR_PRJ/pattern/ecps_simulation/ecps_simulation_pkg.sv
+vlogan +v2k -nc -full64 +incdir+$SPSCR_PRJ/pattern/ecps_simulation -sverilog $SPSCR_PRJ/pattern/${PARAM_PE_PAT}.sv
+
+COMPILE_CPSRC="$SPSCR_PRJ/pattern/*.efv"
+cp -f $COMPILE_CPSRC $SPSCR_OUTPATH/
+
+##------------------------------------------------
+## Miscellaneous
+##------------------------------------------------
+
+cp -f $PROJECT_DIR/DIGITAL/sim/tcheck.tcl $SPSCR_OUTPATH/
+
+##------------------------------------------------
+##------------------------------------------------

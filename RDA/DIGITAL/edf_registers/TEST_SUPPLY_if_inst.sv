@@ -1,0 +1,7 @@
+/* ###   interface instances   ###################################################### */
+
+TEST_SUPPLY_TMR_ANA_SUPPLY_if TEST_SUPPLY_TMR_ANA_SUPPLY (); 
+TEST_SUPPLY_TMR_DIG_SUPPLY_if TEST_SUPPLY_TMR_DIG_SUPPLY (); 
+TEST_SUPPLY_TMR_ANA_TEMP_SENSOR_if TEST_SUPPLY_TMR_ANA_TEMP_SENSOR (); 
+TEST_SUPPLY_TMR_ANA_OTP_if TEST_SUPPLY_TMR_ANA_OTP (); 
+

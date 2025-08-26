@@ -1,0 +1,244 @@
+Magic 271485
+Revision Verdi_R-2020.12-1
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 25 1920 974 497 138
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/nfs/wrk.jvoi/sim/52143/m52143a/DSI3_MASTER/shift_test/shift_test.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+windowTimeUnit 1us
+
+; waveform viewport range
+zoom 3005.147245 3008.116841 1u
+cursor 3005.386663
+marker 3006.098865
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; show marker information
+; showMarkerValue [absolute|adjacent|relative|frequency]
+showMarkerValue adjacent
+showMarkerValue relative
+
+; visible top row signal index
+top 9
+; marker line index
+markerPos 60
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "dsi3_start_manager"
+addSubGroup "clk_rst(slave)"
+activeDirFile "" "/nfs/wrk.jvoi/sim/52143/m52143a/DSI3_MASTER/shift_test/shift_test.fsdb"
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/clk_rst/clk
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/clk_rst/rstn
+endSubGroup "clk_rst(slave)"
+addSubGroup "common_config(dsi3_common_config_if)"
+addSignal -h 15 -UNSIGNED -UDEC /testrunner/ts/ut/common_config/pdcm_period[15:0]
+addSignal -h 15 -UNSIGNED /testrunner/ts/ut/common_config/bit_time[1:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/common_config/chip_time[1:0]
+addSignal -h 15 /testrunner/ts/ut/common_config/crc_enable
+addSignal -h 15 -UNSIGNED /testrunner/ts/ut/common_config/sid_length[1:0]
+addSignal -h 15 /testrunner/ts/ut/common_config/sync_pdcm
+addSignal -h 15 -UNSIGNED -UDEC /testrunner/ts/ut/common_config/tx_shift[7:0]
+endSubGroup "common_config(dsi3_common_config_if)"
+addSignal -h 15 -UNSIGNED /testrunner/ts/ut/_status[3][31:0]
+addSignal -h 15 -UNSIGNED /testrunner/ts/ut/_status[2][31:0]
+addSignal -h 15 -UNSIGNED /testrunner/ts/ut/_status[1][31:0]
+addSignal -h 15 -UNSIGNED /testrunner/ts/ut/_status[0][31:0]
+addGroup "dsi3_start_manager#1"
+addSubGroup "i_txshift_controller"
+addSubGroup "i_transmit_tx_shift_generator[2]" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_transmit_tx_shift_generator[2]/cnt[7:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_transmit_tx_shift_generator[2]/cnt_nxt[7:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_transmit_tx_shift_generator[2]/i_shift[7:0]
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_transmit_tx_shift_generator[2]/i_tick
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_transmit_tx_shift_generator[2]/o_tick
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_transmit_tx_shift_generator[2]/tick
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_transmit_tx_shift_generator[2]/tick_next
+endSubGroup "i_transmit_tx_shift_generator[2]"
+addSubGroup "i_transmit_tx_shift_generator[1]" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_transmit_tx_shift_generator[1]/cnt[7:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_transmit_tx_shift_generator[1]/cnt_nxt[7:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_transmit_tx_shift_generator[1]/i_shift[7:0]
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_transmit_tx_shift_generator[1]/i_tick
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_transmit_tx_shift_generator[1]/o_tick
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_transmit_tx_shift_generator[1]/tick
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_transmit_tx_shift_generator[1]/tick_next
+endSubGroup "i_transmit_tx_shift_generator[1]"
+addSubGroup "i_transmit_tx_shift_generator[0]" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_transmit_tx_shift_generator[0]/cnt[7:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_transmit_tx_shift_generator[0]/cnt_nxt[7:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_transmit_tx_shift_generator[0]/i_shift[7:0]
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_transmit_tx_shift_generator[0]/i_tick
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_transmit_tx_shift_generator[0]/o_tick
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_transmit_tx_shift_generator[0]/tick
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_transmit_tx_shift_generator[0]/tick_next
+endSubGroup "i_transmit_tx_shift_generator[0]"
+addSubGroup "i_tbit_generator" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_tbit_generator/cnt[8:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_tbit_generator/cnt_nxt[8:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_tbit_generator/i_shift[8:0]
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_tbit_generator/i_tick
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_tbit_generator/o_tick
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_tbit_generator/tick
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_tbit_generator/tick_next
+endSubGroup "i_tbit_generator"
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_any_transmit_ongoing
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/i_request_tick[3:0]
+addSignal -expanded -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/o_tick[3:0]
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/o_tick[3]
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/o_tick[2]
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/o_tick[1]
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/o_tick[0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/request_in_previous_channel[3:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/request_me[3:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/request_me_next[3:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/request_me_edge[3:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/start_shift[3:0]
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/start_tbit
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/tbit_shift_time[8:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/tbit_shift_time_nominal[8:0]
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/tick_tbit
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_txshift_controller/tick_transmit_shifted[3:0]
+endSubGroup "i_txshift_controller"
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/any_pdcm_in_progress
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/first_channel[4:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/periods[3:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/pdcm_in_progress_at_channel[3:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/period_in_clock_cycles[20:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/period_running[3:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/start_period_counter[3:0]
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/start_pdcms_next
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/start_pdcms
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/start_transmission
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/start_transmission_for_channel[3:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/tick_pdcm[3:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/tick_transmit[3:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/transmit_in_progress_at_channel[3:0]
+addSubGroup "i_period_counter[3]" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_period_counter[3]/i_new_period_value[20:0]
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_period_counter[3]/i_start
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_period_counter[3]/o_running
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_period_counter[3]/period_counter[20:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_period_counter[3]/period_counter_next[20:0]
+endSubGroup "i_period_counter[3]"
+addSubGroup "i_period_counter[2]" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_period_counter[2]/i_new_period_value[20:0]
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_period_counter[2]/i_start
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_period_counter[2]/o_running
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_period_counter[2]/period_counter[20:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_period_counter[2]/period_counter_next[20:0]
+endSubGroup "i_period_counter[2]"
+addSubGroup "i_period_counter[1]" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_period_counter[1]/i_new_period_value[20:0]
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_period_counter[1]/i_start
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_period_counter[1]/o_running
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_period_counter[1]/period_counter[20:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_period_counter[1]/period_counter_next[20:0]
+endSubGroup "i_period_counter[1]"
+addSubGroup "i_period_counter[0]" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_period_counter[0]/i_new_period_value[20:0]
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_period_counter[0]/i_start
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/i_period_counter[0]/o_running
+addSignal -h 15 -UNSIGNED -UDEC /testrunner/ts/ut/dsi3_start_manager/i_period_counter[0]/period_counter[20:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/dsi3_start_manager/i_period_counter[0]/period_counter_next[20:0]
+endSubGroup "i_period_counter[0]"
+addGroup "dsi3_start_manager_block"
+addSubGroup "request(slave)"
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[0]/dsi3_start_manager_block/request/mode
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[0]/dsi3_start_manager_block/request/transmitting
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[0]/dsi3_start_manager_block/request/request
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[0]/dsi3_start_manager_block/request/acknowledge
+endSubGroup "request(slave)"
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[0]/dsi3_start_manager_block/i_pdcm_period_running
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[0]/dsi3_start_manager_block/i_tick_pdcm
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[0]/dsi3_start_manager_block/i_tick_transmit
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[0]/dsi3_start_manager_block/i_transmit_ongoing
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[0]/dsi3_start_manager_block/i_any_pdcm_in_progress
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[0]/dsi3_start_manager_block/o_start_transmission
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[0]/dsi3_start_manager_block/o_start_period_counter
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[0]/dsi3_start_manager_block/o_pdcm_in_progress
+addSignal -h 15 -UNSIGNED /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[0]/dsi3_start_manager_block/state[2:0]
+addSignal -h 15 -UNSIGNED /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[0]/dsi3_start_manager_block/state_next[2:0]
+addGroup "dsi3_start_manager_block#1" -e FALSE
+addSubGroup "request(slave)#1"
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[1]/dsi3_start_manager_block/request/mode
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[1]/dsi3_start_manager_block/request/transmitting
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[1]/dsi3_start_manager_block/request/request
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[1]/dsi3_start_manager_block/request/acknowledge
+endSubGroup "request(slave)#1"
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[1]/dsi3_start_manager_block/i_pdcm_period_running
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[1]/dsi3_start_manager_block/i_tick_pdcm
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[1]/dsi3_start_manager_block/i_tick_transmit
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[1]/dsi3_start_manager_block/i_transmit_ongoing
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[1]/dsi3_start_manager_block/i_any_pdcm_in_progress
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[1]/dsi3_start_manager_block/o_start_transmission
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[1]/dsi3_start_manager_block/o_start_period_counter
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[1]/dsi3_start_manager_block/o_pdcm_in_progress
+addSignal -h 15 -UNSIGNED /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[1]/dsi3_start_manager_block/state[2:0]
+addSignal -h 15 -UNSIGNED /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[1]/dsi3_start_manager_block/state_next[2:0]
+addGroup "dsi3_start_manager_block#2"
+addSubGroup "request(slave)" -e FALSE
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[2]/dsi3_start_manager_block/request/mode
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[2]/dsi3_start_manager_block/request/transmitting
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[2]/dsi3_start_manager_block/request/request
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[2]/dsi3_start_manager_block/request/acknowledge
+endSubGroup "request(slave)"
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[2]/dsi3_start_manager_block/i_pdcm_period_running
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[2]/dsi3_start_manager_block/i_tick_pdcm
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[2]/dsi3_start_manager_block/i_tick_transmit
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[2]/dsi3_start_manager_block/i_transmit_ongoing
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[2]/dsi3_start_manager_block/i_any_pdcm_in_progress
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[2]/dsi3_start_manager_block/o_start_transmission
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[2]/dsi3_start_manager_block/o_start_period_counter
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[2]/dsi3_start_manager_block/o_pdcm_in_progress
+addSignal -h 15 -UNSIGNED /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[2]/dsi3_start_manager_block/state[2:0]
+addSignal -h 15 -UNSIGNED /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[2]/dsi3_start_manager_block/state_next[2:0]
+addGroup "dsi3_start_manager_block#3"
+addSubGroup "request(slave)"
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[3]/dsi3_start_manager_block/request/mode
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[3]/dsi3_start_manager_block/request/transmitting
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[3]/dsi3_start_manager_block/request/request
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[3]/dsi3_start_manager_block/request/acknowledge
+endSubGroup "request(slave)"
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[3]/dsi3_start_manager_block/i_pdcm_period_running
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[3]/dsi3_start_manager_block/i_tick_pdcm
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[3]/dsi3_start_manager_block/i_tick_transmit
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[3]/dsi3_start_manager_block/i_transmit_ongoing
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[3]/dsi3_start_manager_block/i_any_pdcm_in_progress
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[3]/dsi3_start_manager_block/o_start_transmission
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[3]/dsi3_start_manager_block/o_start_period_counter
+addSignal -h 15 /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[3]/dsi3_start_manager_block/o_pdcm_in_progress
+addSignal -h 15 -UNSIGNED /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[3]/dsi3_start_manager_block/state[2:0]
+addSignal -h 15 -UNSIGNED /testrunner/ts/ut/dsi3_start_manager/generate_start_modules[3]/dsi3_start_manager_block/state_next[2:0]
+addGroup "G10"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+

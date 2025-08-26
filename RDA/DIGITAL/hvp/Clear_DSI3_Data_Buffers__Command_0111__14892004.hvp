@@ -1,0 +1,80 @@
+
+plan Clear_DSI3_Data_Buffers__Command_0111_;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14892004;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14892004";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature clear_DSI3_data_buffers_intro;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14938545";
+    edfId = 14938545;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature clear_DSI3_data_buffers_framing;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=15357512";
+    edfId = 15357512;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature clear_DSI3_data_buffers;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14938546";
+    edfId = 14938546;
+    edfType = GRAPHIC;
+    customer = true;
+  endfeature
+
+  feature clear_DSI3_data_buffers_command_options;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14938549";
+    edfId = 14938549;
+    edfType = UNIVERSAL_TABLE;
+    customer = true;
+    feature Row_0;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14938550";
+      edfId = 14938550;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_1;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14938551";
+      edfId = 14938551;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_2;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14938552";
+      edfId = 14938552;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_3;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14938553";
+      edfId = 14938553;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+  endfeature
+
+  feature clear_DSI3_data_buffers_operation;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14938547";
+    edfId = 14938547;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature clear_DSI3_data_buffers_position;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14981097";
+    edfId = 14981097;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+endplan

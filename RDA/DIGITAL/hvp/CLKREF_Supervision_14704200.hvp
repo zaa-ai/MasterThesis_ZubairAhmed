@@ -1,0 +1,100 @@
+
+plan CLKREF_Supervision;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14704200;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704200";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature Intro;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704201";
+    edfId = 14704201;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature Startup;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704202";
+    edfId = 14704202;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+  feature POR_Measurement;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704205";
+    edfId = 14704205;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+  feature time_base_clock_parameters;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704209";
+    edfId = 14704209;
+    edfType = EPM_TABLE;
+    customer = true;
+    feature f__CLKREF_err_ul___f__CLKREF__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=15006912";
+      edfId = 15006912;
+      edfType = EPM;
+      customer = true;
+      description = "upper limit of frequency at CLKREF (higher frequencies are rated as an error)";
+      spec = 1.04 < spec && spec < 1.14;
+      measure spec specf__CLKREF_err_ul___f__CLKREF__;
+        source = "f__CLKREF_err_ul___f__CLKREF__";
+      endmeasure
+    endfeature
+    feature f__CLKREF_err_ll___f__CLKREF__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=15006913";
+      edfId = 15006913;
+      edfType = EPM;
+      customer = true;
+      description = "lower limit of frequency at CLKREF (lower frequencies are rated as an error)";
+      spec = 0.88 < spec && spec < 0.96;
+      measure spec specf__CLKREF_err_ll___f__CLKREF__;
+        source = "f__CLKREF_err_ll___f__CLKREF__";
+      endmeasure
+    endfeature
+    feature t__CLKREF_filt__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704212";
+      edfId = 14704212;
+      edfType = EPM;
+      customer = false;
+      description = "analog input filter time on CLKREF pin, positive and negative pulses shorter than t__CLKREF,filt__ are supressed";
+      spec = spec < 120.0;
+      measure spec spect__CLKREF_filt__;
+        source = "t__CLKREF_filt__";
+      endmeasure
+    endfeature
+    feature t__CLKREF_sync__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704213";
+      edfId = 14704213;
+      edfType = EPM;
+      customer = false;
+      description = "time between applying a valid clock signal at CLKREF and end of synchronization process of the timebase";
+      spec = spec < 2.0;
+      measure spec spect__CLKREF_sync__;
+        source = "t__CLKREF_sync__";
+      endmeasure
+    endfeature
+  endfeature
+
+  feature CLKREF_error_range;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704214";
+    edfId = 14704214;
+    edfType = GRAPHIC;
+    customer = true;
+  endfeature
+
+  feature CLKREF_interrupt;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14979526";
+    edfId = 14979526;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+endplan

@@ -1,0 +1,79 @@
+
+plan Start_PDCM__Automatic_Broadcast_Read_Command_1100_;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14704115;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704115";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature start_PDCM_intro;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704116";
+    edfId = 14704116;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature start_PDCM_CRC;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=15314643";
+    edfId = 15314643;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+  feature start_PDCM_SPI_command;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704117";
+    edfId = 14704117;
+    edfType = GRAPHIC;
+    customer = true;
+  endfeature
+
+  feature start_PDCM_command_option_bits;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704118";
+    edfId = 14704118;
+    edfType = UNIVERSAL_TABLE;
+    customer = true;
+    feature Row_0;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704119";
+      edfId = 14704119;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_1;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704120";
+      edfId = 14704120;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_2;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14891724";
+      edfId = 14891724;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_3;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14891725";
+      edfId = 14891725;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_4;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14891726";
+      edfId = 14891726;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+  endfeature
+
+  feature start_PDCM_operation;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704121";
+    edfId = 14704121;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+endplan

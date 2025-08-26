@@ -1,0 +1,2156 @@
+
+#==================================================
+# Copyright (c) 2023 Elmos SE
+# Author: stove
+# Description : Note: This file has been generated automatically by stove
+#               Note: This file should not be modified manually.
+#               This file is the RAL file for generating the UVM register model
+#==================================================
+ regfile IC_revision_and_ID_registers {
+  register IC_REVISION (i_IC_revision_and_ID_registers.i_IC_revision_and_ID_registers_IC_REVISION) @'h1f {
+    doc {
+      Revision of the IC
+    }
+    attributes {
+      NO_REG_HW_RESET_TEST 1,NO_REG_BIT_BASH_TEST 1 
+    }
+
+    field REVISION (REVISION) {
+      doc {
+        Revision of the IC
+      }
+      bits 16;
+      access ro;
+      reset 1178;
+    }
+  }
+  register CHIP_ID_LOW (i_IC_revision_and_ID_registers.i_IC_revision_and_ID_registers_CHIP_ID_LOW) @'h1 {
+    doc {
+      Chip identification - lower word
+    }
+
+    field CHIP_ID_LOW (CHIP_ID_LOW) {
+      doc {
+        lower word of the chip ID
+      }
+      bits 16;
+      access ro;
+      reset 0;
+    }
+  }
+  register CHIP_ID_HIGH (i_IC_revision_and_ID_registers.i_IC_revision_and_ID_registers_CHIP_ID_HIGH) @'h2 {
+    doc {
+      Chip identification - upper word
+    }
+
+    field CHIP_ID_HIGH (CHIP_ID_HIGH) {
+      doc {
+        upper word of the chip ID
+      }
+      bits 16;
+      access ro;
+      reset 0;
+    }
+  }
+}
+   
+regfile supply_registers {
+  register TRIM_IREF (i_supply_registers.i_supply_registers_TRIM_IREF) @'h3 {
+    doc {
+      trim register for reference current
+    }
+
+    field IREF (IREF) {
+      doc {
+        Trim value for reference current
+      }
+      bits 4;
+      access ro;
+      reset 0;
+    }
+    field unused {
+      bits 12;
+    }
+  }
+  register TRIM_OT (i_supply_registers.i_supply_registers_TRIM_OT) @'h4 {
+    doc {
+      trim register for overtemperature adaption
+    }
+
+    field TRIM_OT (TRIM_OT) {
+      doc {
+        Trim value for overtemperature adaption
+      }
+      bits 2;
+      access ro;
+      reset 0;
+    }
+    field unused {
+      bits 14;
+    }
+  }
+  register SUP_HW_CTRL (i_supply_registers.i_supply_registers_SUP_HW_CTRL) @'h3c {
+    doc {
+      control register for DSI3 supply
+
+    }
+
+    field IGNORE_UV (IGNORE_UV) {
+      doc {
+        ignore under voltage during startup
+0: DSI3 transceivers only switched on when [!18596234]] is in nominal range
+1: DSI3 transceivers switched on independent of voltage at [!18596234]]
+      }
+      bits 1;
+      access rw;
+      reset 0;
+    }
+
+    field IGNORE_HWF (IGNORE_HWF) {
+      doc {
+        ignore hardware failure during startup
+      }
+      bits 1;
+      access rw;
+      reset 0;
+    }
+    field unused {
+      bits 14;
+    }
+  }
+  register SUP_IRQ_STAT (i_supply_registers.i_supply_registers_SUP_IRQ_STAT) @'h3a {
+    doc {
+      supply interrupt status register
+    }
+
+    field REF_FAIL (REF_FAIL) {
+      doc {
+        failure in internal reference system
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+
+    field VCCUV (VCCUV) {
+      doc {
+        undervoltage of VCC supply
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+
+    field LDOUV (LDOUV) {
+      doc {
+        undervoltage of DSI3 supply
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+
+    field OTE (OTE) {
+      doc {
+        over temperature error interrupt
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+
+    field OTW (OTW) {
+      doc {
+        over temperature warning interrupt
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+  }
+  register SUP_IRQ_MASK (i_supply_registers.i_supply_registers_SUP_IRQ_MASK) @'h3b {
+    doc {
+      supply interrupt mask register
+    }
+
+    field REF_FAIL (REF_FAIL) {
+      doc {
+        unmask failure in internal reference system interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field VCCUV (VCCUV) {
+      doc {
+        unmask undervoltage of VCC supply interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field LDOUV (LDOUV) {
+      doc {
+        unmask undervoltage of DSI3 supply interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field OTE (OTE) {
+      doc {
+        unmask over temperature warning interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field OTW (OTW) {
+      doc {
+        unmask over temperature error interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+  }
+  register SUP_STAT (i_supply_registers.i_supply_registers_SUP_STAT) @'h3d {
+    doc {
+      DSI3 supply status register
+    }
+
+    field REF_FAIL (REF_FAIL) {
+      doc {
+        failure status of reference system
+0: no failure
+1: failure
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+
+    field VCCUV (VCCUV) {
+      doc {
+        voltage status of VCC supply
+0: no undervoltage
+1: undervoltage
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+
+    field LDOUV (LDOUV) {
+      doc {
+        voltage status of DSI3 supply
+0: no undervoltage
+1: undervoltage
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+
+    field OTE (OTE) {
+      doc {
+        temperature switch off status
+0: normal operation
+1: switch off due to over temperature
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+
+    field OTW (OTW) {
+      doc {
+        temperature warning monitor status
+0: no over temperature
+1: over temperature
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+  }
+  register SUP_CTRL (i_supply_registers.i_supply_registers_SUP_CTRL) @'h3e {
+    doc {
+      control register for DSI3 supply
+
+    }
+
+    field EN_LDO (EN_LDO) {
+      doc {
+        enable DSI3 supply
+If disabled, DSI3 transceivers are switched off.
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+  }
+  register IO_CTRL (i_supply_registers.i_supply_registers_IO_CTRL) @'h3f {
+    doc {
+      digital IO pads control register
+    }
+
+    field HICUR (HICUR) {
+      doc {
+        driving strength of digital outputs
+0: normal driver
+1: strong driver
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+  }
+}
+   
+regfile time_base_registers {
+  register CLKREF_CONF (i_time_base_registers.i_time_base_registers_CLKREF_CONF) @'h40 {
+    doc {
+      timebase configuration register
+
+    }
+
+    field CLKREF_FREQ (CLKREF_FREQ) {
+      doc {
+        selector for [!18597165]] frequency
+'00' $$\rightarrow$$ 0.5 MHz
+'01' $$\rightarrow$$ 1.0 MHz
+'10' $$\rightarrow$$ 2.0 MHz
+'11' $$\rightarrow$$ 4.0 MHz
+      }
+      bits 2;
+      access rw;
+      reset 0;
+    }
+  }
+  register TB_CNT (i_time_base_registers.i_time_base_registers_TB_CNT) @'h41 {
+    doc {
+      timebase counter register
+    }
+    attributes {
+      NO_REG_HW_RESET_TEST 1, NO_REG_BIT_BASH_TEST 1 
+    }
+
+    field CNT (CNT) {
+      doc {
+        counter value (1 µs / LSB)
+      }
+      bits 16;
+      access ro;
+      reset 0;
+    }
+  }
+  register TRIM_OSC (i_time_base_registers.i_time_base_registers_TRIM_OSC) @'h6 {
+    doc {
+      trim value of oscillator
+    }
+
+    field TRIM_OSC (TRIM_OSC) {
+      doc {
+        Trim value of oscillator frequency
+      }
+      bits 7;
+      access ro;
+      reset 32;
+    }
+  }
+  register TRIM_OSC_TCF (i_time_base_registers.i_time_base_registers_TRIM_OSC_TCF) @'h7 {
+    doc {
+      temperature dependency trim value of oscillator
+    }
+
+    field TCF (TCF) {
+      doc {
+        Trim temperature dependency
+      }
+      bits 3;
+      access ro;
+      reset 3;
+    }
+  }
+}
+   
+regfile Interrupt_Registers {
+  register IRQ_STAT (i_Interrupt_Registers.i_Interrupt_Registers_IRQ_STAT) @'h50 {
+    doc {
+      interrupt status register
+    }
+
+    field OTPFAIL (OTPFAIL) {
+      doc {
+        there was a failure during read of OTP configuration
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+
+    field CLKREF (CLKREF) {
+      doc {
+        [!18597165]] supervision error
+See chapter [[18597186]] for details.
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+
+    field RESET (RESET) {
+      doc {
+        reset either due to active power on reset or due to active RESB pin
+      }
+      bits 1;
+      access w1c;
+      reset 1;
+    }
+
+    field SPI (SPI) {
+      doc {
+        interrupt from SPI block (see register [!18596947]] for interrupt source)
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+
+    field BUF (BUF) {
+      doc {
+        interrupt from data buffer and command queue control (see register [!18597065]] for interrupt source)
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+
+    field DSI (DSI) {
+      doc {
+        interrupt from DSI3 blocks (see register [!18596580]] for interrupt source)
+      }
+      bits 2;
+      access ro;
+      reset 0;
+    }
+    field unused {
+      bits 2;
+    }
+
+    field SUPPLY (SUPPLY) {
+      doc {
+        interrupt from supply block (see register [!18596293]] for interrupt source)
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+
+    field ECC_FAIL (ECC_FAIL) {
+      doc {
+        any ECC interrupt (see register [!18597123]] for interrupt source)
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+
+    field RESERVED (RESERVED) {
+      doc {
+        reserved for internal use
+ignore value of this bit
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+
+    field HW_FAIL (HW_FAIL) {
+      doc {
+        hardware failure in digital control
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+    field unused {
+      bits 3;
+    }
+  }
+  register IRQ_MASK (i_Interrupt_Registers.i_Interrupt_Registers_IRQ_MASK) @'h51 {
+    doc {
+      interrupt mask register
+    }
+
+    field OTPFAIL (OTPFAIL) {
+      doc {
+        unmask OTP read failure interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field CLKREF (CLKREF) {
+      doc {
+        unmask CLKREF supervision interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field RESET (RESET) {
+      doc {
+        unmask reset interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field SPI (SPI) {
+      doc {
+        unmask SPI interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field BUF (BUF) {
+      doc {
+        unmask interrupt from buffer block
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field DSI (DSI) {
+      doc {
+        unmask interrupt from DSI blocks
+      }
+      bits 2;
+      access rw;
+      reset 3;
+    }
+    field unused {
+      bits 2;
+    }
+
+    field SUPPLY (SUPPLY) {
+      doc {
+        unmask supply block interrupts
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field ECC_FAIL (ECC_FAIL) {
+      doc {
+        unmask ECC failure interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field RESERVED (RESERVED) {
+      doc {
+        reserved for internal use
+      }
+      bits 1;
+      access rw;
+      reset 0;
+    }
+
+    field HW_FAIL (HW_FAIL) {
+      doc {
+        unmask hardware failure in digital control interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+  }
+  register ECC_IRQ_STAT (i_Interrupt_Registers.i_Interrupt_Registers_ECC_IRQ_STAT) @'h52 {
+    doc {
+      ECC failure interrupt status register
+    }
+
+    field DSI_CRM_DATA_BUF (DSI_CRM_DATA_BUF) {
+      doc {
+        ECC failure in buffer control of DSI CRM data buffers
+      }
+      bits 2;
+      access w1c;
+      reset 0;
+    }
+
+    field DSI_PDCM_DATA_BUF (DSI_PDCM_DATA_BUF) {
+      doc {
+        ECC failure in buffer control of DSI PDCM data buffers
+      }
+      bits 2;
+      access w1c;
+      reset 0;
+    }
+
+    field DSI_CMD_BUF (DSI_CMD_BUF) {
+      doc {
+        ECC failure in buffer control of DSI command buffers
+      }
+      bits 2;
+      access w1c;
+      reset 0;
+    }
+
+    field DSI_TDMA (DSI_TDMA) {
+      doc {
+        ECC failure in TDMA scheme handling
+      }
+      bits 2;
+      access w1c;
+      reset 0;
+    }
+
+    field DSI_CMD (DSI_CMD) {
+      doc {
+        DSI3 channel command queue was cleared due to an uncorrectable ECC failure
+      }
+      bits 2;
+      access w1c;
+      reset 0;
+    }
+    field unused {
+      bits 2;
+    }
+
+    field SPI_CMD_BUF (SPI_CMD_BUF) {
+      doc {
+        ECC failure in buffer control of SPI command buffer
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+
+    field SPI_CMD (SPI_CMD) {
+      doc {
+        SPI command queue was cleared due to an uncorrectable ECC failure
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+
+    field SPI_DATA (SPI_DATA) {
+      doc {
+        Data channel between DSI3 receiver and SPI transmitter had an uncorrectable ECC failure
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+
+    field RAM (RAM) {
+      doc {
+        ECC failure in RAM control
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+  }
+  register ECC_IRQ_MASK (i_Interrupt_Registers.i_Interrupt_Registers_ECC_IRQ_MASK) @'h53 {
+    doc {
+      ECC failure interrupt mask register
+    }
+
+    field DSI_CRM_DATA_BUF (DSI_CRM_DATA_BUF) {
+      doc {
+        unmask ECC failure in DSI3 CRM data buffer control interrupt
+      }
+      bits 2;
+      access rw;
+      reset 3;
+    }
+
+    field DSI_PDCM_DATA_BUF (DSI_PDCM_DATA_BUF) {
+      doc {
+        unmask ECC failure in DSI3 PDCM data buffer control interrupt
+      }
+      bits 2;
+      access rw;
+      reset 3;
+    }
+
+    field DSI_CMD_BUF (DSI_CMD_BUF) {
+      doc {
+        unmask ECC failure in DSI3 command buffer control interrupt
+      }
+      bits 2;
+      access rw;
+      reset 3;
+    }
+
+    field DSI_TDMA (DSI_TDMA) {
+      doc {
+        unmask ECC failure in TDMA scheme handling
+      }
+      bits 2;
+      access rw;
+      reset 3;
+    }
+
+    field DSI_CMD (DSI_CMD) {
+      doc {
+        unmask ECC failure on DSI3 command queue interrupt
+      }
+      bits 2;
+      access rw;
+      reset 3;
+    }
+    field unused {
+      bits 2;
+    }
+
+    field SPI_CMD_BUF (SPI_CMD_BUF) {
+      doc {
+        unmask ECC failure in SPI command buffer control interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field SPI_CMD (SPI_CMD) {
+      doc {
+        unmask ECC failure in SPI command interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field SPI_DATA (SPI_DATA) {
+      doc {
+        unmask ECC failure in SPI transmitted data interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field RAM (RAM) {
+      doc {
+        unmask ECC failure in RAM interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+  }
+  register ECC_CORR_IRQ_STAT (i_Interrupt_Registers.i_Interrupt_Registers_ECC_CORR_IRQ_STAT) @'h54 {
+    doc {
+      ECC correction interrupt status register
+    }
+
+    field DSI_CRM_DATA_BUF (DSI_CRM_DATA_BUF) {
+      doc {
+        ECC correction in buffer control of DSI CRM data buffers
+      }
+      bits 2;
+      access w1c;
+      reset 0;
+    }
+
+    field DSI_PDCM_DATA_BUF (DSI_PDCM_DATA_BUF) {
+      doc {
+        ECC correction in buffer control of DSI PDCM data buffers
+      }
+      bits 2;
+      access w1c;
+      reset 0;
+    }
+
+    field DSI_CMD_BUF (DSI_CMD_BUF) {
+      doc {
+        ECC correction in buffer control of DSI command buffers
+      }
+      bits 2;
+      access w1c;
+      reset 0;
+    }
+
+    field DSI_TDMA (DSI_TDMA) {
+      doc {
+        ECC correction in TDMA scheme handling
+      }
+      bits 2;
+      access w1c;
+      reset 0;
+    }
+
+    field DSI_CMD (DSI_CMD) {
+      doc {
+        ECC correction in DSI3 channel command queue
+      }
+      bits 2;
+      access w1c;
+      reset 0;
+    }
+    field unused {
+      bits 2;
+    }
+
+    field SPI_CMD_BUF (SPI_CMD_BUF) {
+      doc {
+        ECC correction in buffer control of SPI command buffer
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+
+    field SPI_CMD (SPI_CMD) {
+      doc {
+        ECC correction in SPI command queue
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+
+    field SPI_DATA (SPI_DATA) {
+      doc {
+        ECC correction in data channel between DSI3 receiver and SPI transmitter
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+
+    field RAM (RAM) {
+      doc {
+        ECC correction in RAM data
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+  }
+  register ECC_CORR_IRQ_MASK (i_Interrupt_Registers.i_Interrupt_Registers_ECC_CORR_IRQ_MASK) @'h55 {
+    doc {
+      ECC correction interrupt mask register
+    }
+
+    field DSI_CRM_DATA_BUF (DSI_CRM_DATA_BUF) {
+      doc {
+        unmask ECC correction in buffer control of DSI CRM data buffers interrupt
+      }
+      bits 2;
+      access rw;
+      reset 3;
+    }
+
+    field DSI_PDCM_DATA_BUF (DSI_PDCM_DATA_BUF) {
+      doc {
+        unmask ECC correction in buffer control of DSI PDCM data buffers interrupt
+      }
+      bits 2;
+      access rw;
+      reset 3;
+    }
+
+    field DSI_CMD_BUF (DSI_CMD_BUF) {
+      doc {
+        unmask ECC correction in buffer control of DSI command buffers interrupt
+      }
+      bits 2;
+      access rw;
+      reset 3;
+    }
+
+    field DSI_TDMA (DSI_TDMA) {
+      doc {
+        unmask ECC correction in TDMA scheme handling
+      }
+      bits 2;
+      access rw;
+      reset 3;
+    }
+
+    field DSI_CMD (DSI_CMD) {
+      doc {
+        unmask ECC correction in DSI3 channel command queue interrupt
+      }
+      bits 2;
+      access rw;
+      reset 3;
+    }
+    field unused {
+      bits 2;
+    }
+
+    field SPI_CMD_BUF (SPI_CMD_BUF) {
+      doc {
+        unmask ECC correction in buffer control of SPI command interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field SPI_CMD (SPI_CMD) {
+      doc {
+        unmask ECC correction in SPI command queue interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field SPI_DATA (SPI_DATA) {
+      doc {
+        unmask ECC correction in data channel between DSI3 receiver and SPI transmitter interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field RAM (RAM) {
+      doc {
+        unmask ECC correction in RAM data interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+  }
+}
+   
+regfile buffer_interrupt_registers {
+  register BUF_IRQ_STAT (i_buffer_interrupt_registers.i_buffer_interrupt_registers_BUF_IRQ_STAT) @'h61 {
+    doc {
+      ring buffer interrupt register
+    }
+
+    field DSI_CRM_FE (DSI_CRM_FE) {
+      doc {
+        DSI3 CRM data buffer fill error. Data might be lost.
+      }
+      bits 2;
+      access w1c;
+      reset 0;
+    }
+
+    field DSI_PDCM_FE (DSI_PDCM_FE) {
+      doc {
+        DSI3 PDCM data buffer fill error. Data might be lost.
+      }
+      bits 2;
+      access w1c;
+      reset 0;
+    }
+
+    field DSI_CMD_FE (DSI_CMD_FE) {
+      doc {
+        DSI3 command queue fill error. Data might be lost.
+      }
+      bits 2;
+      access w1c;
+      reset 0;
+    }
+
+    field SPI_CMD_FE (SPI_CMD_FE) {
+      doc {
+        SPI command queue fill error. Data might be lost.
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+    field unused {
+      bits 9;
+    }
+  }
+  register BUF_IRQ_MASK (i_buffer_interrupt_registers.i_buffer_interrupt_registers_BUF_IRQ_MASK) @'h62 {
+    doc {
+      ring buffer interrupt mask register
+    }
+
+    field DSI_CRM_FE (DSI_CRM_FE) {
+      doc {
+        unmask DSI_CRM_FE interrupt bits
+      }
+      bits 2;
+      access rw;
+      reset 3;
+    }
+
+    field DSI_PDCM_FE (DSI_PDCM_FE) {
+      doc {
+        unmask DSI_PDCM_FE interrupt bits
+      }
+      bits 2;
+      access rw;
+      reset 3;
+    }
+
+    field DSI_CMD_FE (DSI_CMD_FE) {
+      doc {
+        unmask DSI_CMD_FE interrupt bits
+      }
+      bits 2;
+      access rw;
+      reset 3;
+    }
+
+    field SPI_CMD_FE (SPI_CMD_FE) {
+      doc {
+        unmask SPI_CMD_FE interrupt bit
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+    field unused {
+      bits 9;
+    }
+  }
+  register BUF_FILL_WARN (i_buffer_interrupt_registers.i_buffer_interrupt_registers_BUF_FILL_WARN) @'h63 {
+    doc {
+      buffer fill warning register
+    }
+
+    field DSI_CRM_FW (DSI_CRM_FW) {
+      doc {
+        DSI3 CRM data buffer fill warning
+      }
+      bits 2;
+      access ro;
+      reset 0;
+    }
+
+    field DSI_PDCM_FW (DSI_PDCM_FW) {
+      doc {
+        DSI3 PDCM data buffer fill warning
+      }
+      bits 2;
+      access ro;
+      reset 0;
+    }
+
+    field DSI_CMD_FW (DSI_CMD_FW) {
+      doc {
+        DSI3 command queue fill warning
+      }
+      bits 2;
+      access ro;
+      reset 0;
+    }
+
+    field SPI_CMD_FW (SPI_CMD_FW) {
+      doc {
+        SPI command queue fill warning
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+  }
+}
+   
+regfile SPI_registers {
+  register SPI_IRQ_STAT (i_SPI_registers.i_SPI_registers_SPI_IRQ_STAT) @'h80 {
+    doc {
+      SPI interrupt status register
+    }
+
+    field CMD_INC (CMD_INC) {
+      doc {
+        Received incomplete command
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+
+    field CRC_ERR (CRC_ERR) {
+      doc {
+        CRC error detected in received command
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+
+    field ALI_ERR (ALI_ERR) {
+      doc {
+        receiver data is not 16bit aligned
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+
+    field HW_FAIL (HW_FAIL) {
+      doc {
+        hardware failure in SPI FSM
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+
+    field CMD_IGN (CMD_IGN) {
+      doc {
+        SPI command ignored
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+    field unused {
+      bits 11;
+    }
+  }
+  register SPI_IRQ_MASK (i_SPI_registers.i_SPI_registers_SPI_IRQ_MASK) @'h81 {
+    doc {
+      SPI interrupt mask register
+    }
+
+    field CMD_INC (CMD_INC) {
+      doc {
+        unmask Received incomplete command interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field CRC_ERR (CRC_ERR) {
+      doc {
+        unmask SPI CRC error interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field ALI_ERR (ALI_ERR) {
+      doc {
+        unmask alignment error interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field HW_FAIL (HW_FAIL) {
+      doc {
+        unmask hardware failure in SPI FSM interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field CMD_IGN (CMD_IGN) {
+      doc {
+        unmask SPI command ignored
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+    field unused {
+      bits 11;
+    }
+  }
+  register STATUS_WORD (i_SPI_registers.i_SPI_registers_STATUS_WORD) @'h85 {
+    doc {
+      IC status word
+    }
+
+    field CR (CR) {
+      doc {
+        DSI3 channel CRM data buffer contains unread data
+      }
+      bits 2;
+      access ro;
+      reset 0;
+    }
+
+    field PD (PD) {
+      doc {
+        DSI3 channel PDCM data buffer contains unread data
+      }
+      bits 2;
+      access ro;
+      reset 0;
+    }
+    field unused {
+      bits 6;
+    }
+
+    field NT (NT) {
+      doc {
+        no TDMA scheme defined
+      }
+      bits 2;
+      access ro;
+      reset 3;
+    }
+
+    field CRC (CRC) {
+      doc {
+        CRC error on previous SPI command
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+
+    field SCE (SCE) {
+      doc {
+        previous SPI command had a SPI command error
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+
+    field BF (BF) {
+      doc {
+        any command queue or data buffer fill warning is active
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+
+    field HE (HE) {
+      doc {
+        any hardware error occurred
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+  }
+}
+   
+regfile common_DSI3_block_registers {
+  register DSI_ENABLE (i_common_DSI3_block_registers.i_common_DSI3_block_registers_DSI_ENABLE) @'h91 {
+    doc {
+      configuration of DSI3 transceiver
+    }
+
+    field TRE (TRE) {
+      doc {
+        Physical layer transceiver enable
+
+The transceiver is not switched on as long as [!18596267]].EN_LDO is '0' independent from value of the bits TRE.
+      }
+      bits 2;
+      access rw;
+      reset 3;
+    }
+  }
+  register DSI_CFG (i_common_DSI3_block_registers.i_common_DSI3_block_registers_DSI_CFG) @'h92 {
+    doc {
+      common configuration of DSI3 transceivers
+    }
+
+    field CHIPTIME (CHIPTIME) {
+      doc {
+        Chip time (t__DSI,CHIP__) configuration:
+'00' $$\rightarrow$$ 2µs
+'01' $$\rightarrow$$ 3µs
+'10' $$\rightarrow$$ 4µs
+'11' $$\rightarrow$$ 5µs
+'''Note: Adapt CRM_TIME and CRM_TIME_NR according BITTIME and CHIPTIME!'''
+      }
+      bits 2;
+      access rw;
+      reset 1;
+    }
+
+    field BITTIME (BITTIME) {
+      doc {
+        Factor selector for TX bit time
+'00' $$\rightarrow$$ 8µs
+'01' $$\rightarrow$$ 16µs
+'10' $$\rightarrow$$ 32µs
+'11' $$\rightarrow$$ reserved (do not use)
+'''Note: Adapt CRM_TIME and CRM_TIME_NR according BITTIME and CHIPTIME!'''
+      }
+      bits 2;
+      access rw;
+      reset 0;
+    }
+
+    field CRC_EN (CRC_EN) {
+      doc {
+        0: 
+- the DSI3 CRC is sent on DSI3 bus as received from the host
+- no CRC check is performed on incoming data
+1:
+- the CRC of CRM commands is calculated by the master IC and replaces the least significant 8 bits of the command.
+- the CRC of received CRM responses and PDCM packets is checked by the DSI3 master IC
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field SYNC_PDCM (SYNC_PDCM) {
+      doc {
+        if set PDCM pulses of DSI3 channels are synchronized
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field SYNC_MASTER (SYNC_MASTER) {
+      doc {
+        Enables sync pulse creation at SYNCB for synchronisation with external sync
+      }
+      bits 1;
+      access rw;
+      reset 0;
+    }
+  }
+  register DSI_TX_SHIFT (i_common_DSI3_block_registers.i_common_DSI3_block_registers_DSI_TX_SHIFT) @'h94 {
+    doc {
+      start time difference between the leading edges of DSI channel transmit pulses
+    }
+
+    field SHIFT (SHIFT) {
+      doc {
+        start time difference between the leading edges of DSI channel transmit pulses in system clock cycles (see chapter [[18596317]] for details)
+      }
+      bits 7;
+      access rw;
+      reset 36;
+    }
+  }
+  register SYNC_IDLE_REG (i_common_DSI3_block_registers.i_common_DSI3_block_registers_SYNC_IDLE_REG) @'h95 {
+    doc {
+      Idle information for synchronization of DSI3 channels
+    }
+
+    field DSI (DSI) {
+      doc {
+        0: DSI3 channel is idle or ready for synchronisation
+1: DSI3 channel is busy
+      }
+      bits 2;
+      access ro;
+      reset 0;
+    }
+    field unused {
+      bits 13;
+    }
+
+    field PIN (PIN) {
+      doc {
+        pin [!18596716]] input value
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+  }
+  register CRM_TIME (i_common_DSI3_block_registers.i_common_DSI3_block_registers_CRM_TIME) @'h98 {
+    doc {
+      time of the CRM command
+    }
+
+    field TIME (TIME) {
+      doc {
+        timeout after which the CRM command is finished - in µs
+      }
+      bits 11;
+      access rw;
+      reset 450;
+    }
+    field unused {
+      bits 5;
+    }
+  }
+  register CRM_TIME_NR (i_common_DSI3_block_registers.i_common_DSI3_block_registers_CRM_TIME_NR) @'h99 {
+    doc {
+      time of the CRM command without response
+    }
+
+    field TIME (TIME) {
+      doc {
+        timeout after which the CRM command is finished when no response is expected - in µs
+      }
+      bits 11;
+      access rw;
+      reset 300;
+    }
+    field unused {
+      bits 5;
+    }
+  }
+}
+   
+regfile OTP_readout_register {
+  register OTP_READ_ADDRESS (i_OTP_readout_register.i_OTP_readout_register_OTP_READ_ADDRESS) @'h70 {
+    doc {
+      Address of OTP cell to read
+    }
+
+    field ADDR (ADDR) {
+      doc {
+        address to be read
+      }
+      bits 12;
+      access rw;
+      reset 0;
+    }
+    field unused {
+      bits 4;
+    }
+  }
+  register OTP_READ_VALUE (i_OTP_readout_register.i_OTP_readout_register_OTP_READ_VALUE) @'h71 {
+    doc {
+      Value of previous OTP read access
+    }
+
+    field VALUE (VALUE) {
+      doc {
+        data part of value read from OTP
+      }
+      bits 8;
+      access ro;
+      reset 0;
+    }
+
+    field ECC (ECC) {
+      doc {
+        ECC part of value read from OTP
+      }
+      bits 4;
+      access ro;
+      reset 0;
+    }
+    field unused {
+      bits 4;
+    }
+  }
+  register OTP_READ_STATUS (i_OTP_readout_register.i_OTP_readout_register_OTP_READ_STATUS) @'h72 {
+    doc {
+      Status of the OTP read operation
+    }
+
+    field STATUS (STATUS) {
+      doc {
+        status of OTP read out
+0: initial
+1: busy
+2: ready
+3: fail
+      }
+      bits 2;
+      access ro;
+      reset 0;
+    }
+    field unused {
+      bits 14;
+    }
+  }
+}
+   
+regfile DSI3_channel_trimming_registers {
+  register TRIM_DSI_REC_FALL (i_DSI3_channel_trimming_registers.i_DSI3_channel_trimming_registers_TRIM_DSI_REC_FALL) @'h0 {
+    doc {
+      Trimming register for DSI receiver falling edge
+    }
+
+    field TRIM_REC1 (TRIM_REC1) {
+      doc {
+        Trim value for lower current threshold (for falling edge)
+      }
+      bits 4;
+      access ro;
+      reset 0;
+    }
+
+    field TRIM_REC2 (TRIM_REC2) {
+      doc {
+        Trim value for upper current threshold (for falling edge)
+      }
+      bits 4;
+      access ro;
+      reset 0;
+    }
+    field unused {
+      bits 8;
+    }
+  }
+  register TRIM_DSI_REC_RISE (i_DSI3_channel_trimming_registers.i_DSI3_channel_trimming_registers_TRIM_DSI_REC_RISE) @'h1 {
+    doc {
+      Trimming register for DSI receiver rising edge
+    }
+
+    field TRIM_REC1 (TRIM_REC1) {
+      doc {
+        Trim value for lower current threshold (for rising edge)
+      }
+      bits 4;
+      access ro;
+      reset 0;
+    }
+
+    field TRIM_REC2 (TRIM_REC2) {
+      doc {
+        Trim value for upper current threshold (for rising edge)
+      }
+      bits 4;
+      access ro;
+      reset 0;
+    }
+    field unused {
+      bits 8;
+    }
+  }
+}
+   
+   
+regfile DSI3_channel_registers {
+  register DSI_STAT (i_DSI3_channel_registers.i_DSI3_channel_registers_DSI_STAT) @'h0 {
+    doc {
+      DSI3 status
+    }
+
+    field PULSECNT (PULSECNT) {
+      doc {
+        Number of PDCM frames including the currently running one.
+'''Note:''' If PULSECNT=0, PDCM pulses are transmitted until clearing of DSI3 command queue
+      }
+      bits 8;
+      access ro;
+      reset 0;
+    }
+
+    field DSIOV (DSIOV) {
+      doc {
+        0: no over voltage on DSI3 channel
+1: DSI3 channel overvoltage (e.g. due to short to high potential)
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+
+    field DSIUV (DSIUV) {
+      doc {
+        0: no undervoltage on DSI3 channel
+1: DSI3 channel undervoltage
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+
+    field SYNC (SYNC) {
+      doc {
+        0: DSI3 channel does not wait for a synchronization
+1: DSI3 channel waits for a synchronization
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+
+    field SLAVES (SLAVES) {
+      doc {
+        Number of slaves detected in DM
+Note: This value is updated after DM finished
+      }
+      bits 4;
+      access ro;
+      reset 0;
+    }
+  }
+  register PDCM_PERIOD (i_DSI3_channel_registers.i_DSI3_channel_registers_PDCM_PERIOD) @'h4 {
+    doc {
+      DSI3 PDCM period configuration
+    }
+
+    field PDCMPER (PDCMPER) {
+      doc {
+        Period of PDCM pulses
+t__PDCM__= PDCMPER $$\cdot$$ 1µs
+minimum value of PDCMPER is 100 (0x0064)
+maximum value of PDCMPER is 65520 (0xFFF0)
+Register will be set via [!19030550]].
+      }
+      bits 16;
+      access ro;
+      reset 1000;
+    }
+  }
+  register DSI_LOAD (i_DSI3_channel_registers.i_DSI3_channel_registers_DSI_LOAD) @'h5 {
+    doc {
+      load current of this DSI3 channel
+    }
+    attributes {
+      NO_REG_BIT_BASH_TEST 1, NO_REG_ACCESS_TEST 1
+    }
+
+    field LOAD (LOAD) {
+      doc {
+        setting of quiescent current of DSI channel
+'''Note:''' It is adviced to use the command [!19034106]] to compensate the quiescent current
+      }
+      bits 5;
+      access rw;
+      reset 0;
+    }
+    field unused {
+      bits 9;
+    }
+
+    field IDLE (IDLE) {
+      doc {
+        load current sensing ciruit is idle and a new measurement can be initiated
+      }
+      bits 1;
+      access ro;
+      reset 1;
+    }
+
+    field START_MEASUREMENT (START_MEASUREMENT) {
+      doc {
+        start measurement of quiescent current
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+  }
+  register DSI_IRQ_STAT (i_DSI3_channel_registers.i_DSI3_channel_registers_DSI_IRQ_STAT) @'h8 {
+    doc {
+      IRQ status register
+    }
+
+    field DSIOV (DSIOV) {
+      doc {
+        DSI3 channel is switched off due to overvoltage at DSI pin
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+
+    field DSIUV (DSIUV) {
+      doc {
+        DSI3 channel is switched off due to undervoltage at DSI pin
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+
+    field SYNC_ERR (SYNC_ERR) {
+      doc {
+        Synchronization error in DSI3 channel
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+
+    field HW_FAIL (HW_FAIL) {
+      doc {
+        hardware failure in DSI3 FSM
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+
+    field DMOF (DMOF) {
+      doc {
+        Discovery mode detected more than maximum number of slaves
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+
+    field COM_ERR (COM_ERR) {
+      doc {
+        communitcation error
+e.g. 
+*Start of PDCM without valid TDMA scheme
+*Start of CRM/PDCM/DM while channel is disabled
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+
+    field IQ_ERR (IQ_ERR) {
+      doc {
+        quiescent current at DSI3 channel is either too low or too high
+      }
+      bits 1;
+      access w1c;
+      reset 0;
+    }
+  }
+  register DSI_IRQ_MASK (i_DSI3_channel_registers.i_DSI3_channel_registers_DSI_IRQ_MASK) @'h9 {
+    doc {
+      DSI channel IRQ mask register
+    }
+
+    field DSIOV (DSIOV) {
+      doc {
+        unmask overvoltage at DSI3 channel interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field DSIUV (DSIUV) {
+      doc {
+        unmask undervoltage at DSI3 channel interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field SYNC_ERR (SYNC_ERR) {
+      doc {
+        unmask synchronization error in DSI3 channel interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field HW_FAIL (HW_FAIL) {
+      doc {
+        unmask hardware failure in DSI3 FSM interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field DMOF (DMOF) {
+      doc {
+        unmask Discovery mode failure
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field COM_ERR (COM_ERR) {
+      doc {
+        unmask communitcation error interrupt
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+
+    field IQ_ERR (IQ_ERR) {
+      doc {
+        unmask quiescent current error
+      }
+      bits 1;
+      access rw;
+      reset 1;
+    }
+  }
+  register DSI_CMD (i_DSI3_channel_registers.i_DSI3_channel_registers_DSI_CMD) @'h10 {
+    doc {
+      (SPI) command in execution
+    }
+
+    field DATA (DATA) {
+      doc {
+        12 less significant bits of the SPI command
+      }
+      bits 12;
+      access ro;
+      reset 0;
+    }
+
+    field CMD (CMD) {
+      doc {
+        contains the command that is currently in execution.
+0x0000 if DSI3 channel is IDLE.
+      }
+      bits 4;
+      access ro;
+      reset 0;
+    }
+  }
+  register CRM_WORD2 (i_DSI3_channel_registers.i_DSI3_channel_registers_CRM_WORD2) @'h11 {
+    doc {
+      CRM command (lower word)
+    }
+
+    field CRM_WORD2 (CRM_WORD2) {
+      doc {
+        Command to be transmitted (word 2)
+      }
+      bits 16;
+      access ro;
+      reset 255;
+    }
+  }
+  register CRM_WORD1 (i_DSI3_channel_registers.i_DSI3_channel_registers_CRM_WORD1) @'h12 {
+    doc {
+      CRM command (higher word)
+    }
+
+    field CRM_WORD1 (CRM_WORD1) {
+      doc {
+        Command to be transmitted (word 1)
+      }
+      bits 16;
+      access ro;
+      reset 0;
+    }
+  }
+  register PACKET_STAT (i_DSI3_channel_registers.i_DSI3_channel_registers_PACKET_STAT) @'h18 {
+    doc {
+      current status of the DSI3 package in reception
+    }
+
+    field SYMBOL_COUNT (SYMBOL_COUNT) {
+      doc {
+        symbol count
+      }
+      bits 8;
+      access ro;
+      reset 0;
+    }
+
+    field CLK_ERR (CLK_ERR) {
+      doc {
+        Clock reference is not OK
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+
+    field VDSI_ERR (VDSI_ERR) {
+      doc {
+        DSI3 channel voltage failure
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+
+    field SYMBOL_ERROR (SYMBOL_ERROR) {
+      doc {
+        Either symbol decoding error or chip decoding error
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+
+    field TE (TE) {
+      doc {
+        Timing error occurred
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+
+    field CRC_ERR (CRC_ERR) {
+      doc {
+        the packet CRC is not correct
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+
+    field SCE (SCE) {
+      doc {
+        symbol count error
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+    field unused {
+      bits 2;
+    }
+  }
+  register FRAME_STAT (i_DSI3_channel_registers.i_DSI3_channel_registers_FRAME_STAT) @'h1b {
+    doc {
+      current status of PDCM frame in reception
+    }
+
+    field PACKET_COUNT (PACKET_COUNT) {
+      doc {
+        number of packets received in frame
+      }
+      bits 8;
+      access ro;
+      reset 0;
+    }
+    field unused {
+      bits 7;
+    }
+
+    field PC (PC) {
+      doc {
+        packet count error occured
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+  }
+  register WAIT_TIME (i_DSI3_channel_registers.i_DSI3_channel_registers_WAIT_TIME) @'h19 {
+    doc {
+      remaining wait time (in µs)
+    }
+
+    field TIME (TIME) {
+      doc {
+        remaining wait time
+      }
+      bits 15;
+      access ro;
+      reset 0;
+    }
+  }
+  register SYNC (i_DSI3_channel_registers.i_DSI3_channel_registers_SYNC) @'h1a {
+    doc {
+      current synchronization channel selection for synchronization
+    }
+
+    field CHANNELS (CHANNELS) {
+      doc {
+        synchronizing DSI3 channels
+      }
+      bits 2;
+      access ro;
+      reset 0;
+    }
+    field unused {
+      bits 2;
+    }
+
+    field PIN (PIN) {
+      doc {
+        synchronizing with pin [!18596716]]
+      }
+      bits 1;
+      access ro;
+      reset 0;
+    }
+  }
+}
+   
+   
+regfile ring_buffer_registers {
+  register BUF_VALID_COUNT (i_ring_buffer_registers.i_ring_buffer_registers_BUF_VALID_COUNT) @'h0 {
+    doc {
+      number of valid data words in the buffer
+    }
+
+    field VALID_COUNT (VALID_COUNT) {
+      doc {
+        number of valid data words in the buffer
+      }
+      bits 12;
+      access ro;
+      reset 0;
+    }
+  }
+  register BUF_FREE (i_ring_buffer_registers.i_ring_buffer_registers_BUF_FREE) @'h2 {
+    doc {
+      number of currently free memory cells
+    }
+    attributes {
+      NO_REG_HW_RESET_TEST 1,NO_REG_BIT_BASH_TEST 1
+    }
+
+    field FREE (FREE) {
+      doc {
+        number of currently free memory cells
+      }
+      bits 16;
+      access ro;
+      reset 0;
+    }
+  }
+  register BUF_READ_POINTER (i_ring_buffer_registers.i_ring_buffer_registers_BUF_READ_POINTER) @'h8 {
+    doc {
+      value of the read pointer
+    }
+    attributes {
+      NO_REG_HW_RESET_TEST 1,NO_REG_BIT_BASH_TEST 1
+    }
+
+    field READ_POINTER (READ_POINTER) {
+      doc {
+        value of the read pointer
+      }
+      bits 16;
+      access ro;
+      reset 0;
+    }
+  }
+  register BUF_WRITE_POINTER (i_ring_buffer_registers.i_ring_buffer_registers_BUF_WRITE_POINTER) @'h9 {
+    doc {
+      value of the write pointer
+    }
+    attributes {
+      NO_REG_HW_RESET_TEST 1,NO_REG_BIT_BASH_TEST 1
+    }
+
+    field WRITE_POINTER (WRITE_POINTER) {
+      doc {
+        value of the write pointer
+      }
+      bits 16;
+      access ro;
+      reset 0;
+    }
+  }
+  register BUF_VALID_POINTER (i_ring_buffer_registers.i_ring_buffer_registers_BUF_VALID_POINTER) @'ha {
+    doc {
+      value of the valid pointer
+    }
+    attributes {
+      NO_REG_HW_RESET_TEST 1,NO_REG_BIT_BASH_TEST 1
+    }
+
+    field VALID_POINTER (VALID_POINTER) {
+      doc {
+        value of the valid pointer
+      }
+      bits 16;
+      access ro;
+      reset 0;
+    }
+  }
+}
+   
+   
+   
+   
+   
+   
+   
+
+block info {
+  bytes 2;
+
+  regfile IC_revision_and_ID_registers @'h0;
+}
+
+block supply {
+  bytes 2;
+
+  regfile supply_registers @'h0;
+}
+
+block timebase {
+  bytes 2;
+
+  regfile time_base_registers @'h0;
+}
+
+block interrupt {
+  bytes 2;
+
+  regfile Interrupt_Registers @'h0;
+}
+
+block ring_buffer_interrupt {
+  bytes 2;
+
+  regfile buffer_interrupt_registers @'h0;
+}
+
+block spi {
+  bytes 2;
+
+  regfile SPI_registers @'h0;
+}
+
+block dsi3 {
+  bytes 2;
+
+  regfile common_DSI3_block_registers @'h0;
+}
+
+block otp_reader {
+  bytes 2;
+
+  regfile OTP_readout_register @'h0;
+}
+
+block dsi3_trim {
+  bytes 2;
+
+  regfile DSI3_channel_trimming_registers @'h0;
+}
+
+block dsi3_block {
+  bytes 2;
+
+  regfile DSI3_channel_registers @'h0;
+}
+
+block buf_ctrl {
+  bytes 2;
+
+  regfile ring_buffer_registers @'h0;
+}
+
+            
+system device_registers {
+  bytes 2;
+	
+  block info=Info (i_main_control) @'h0;
+  block supply=Supply (i_main_control) @'h0;
+  block timebase=Timebase (i_timebase) @'h0;
+  block interrupt=Interrupt (i_main_control) @'h0;
+  block ring_buffer_interrupt=Buffer_IRQs (i_buffers) @'h0;
+  block spi=SPI (i_spi) @'h0;
+  block dsi3=DSI_common (i_dsi3) @'h0;
+  block otp_reader=OTP_CTRL (i_main_control.i_main_fsm.i_otp_reader) @'h0;
+  block dsi3_trim=DSI_TRIMMING[2] (i_dsi3.generate_dsi3_blocks[%g].i_dsi3_block) @'h10 +'h2;
+  block dsi3_block=DSI[2] (i_dsi3.generate_dsi3_blocks[%g].i_dsi3_block) @'ha0 +'h20;
+  block buf_ctrl=SPI_CMD_STAT (i_buffers.i_command_buffer) @'h100;
+  block buf_ctrl=DSI_CMD_STAT[2] (i_buffers.generate_dsi_buffers[%g].i_dsi3_command_buffer) @'h110 +'h10;
+  block buf_ctrl=DSI_CRM_STAT[2] (i_buffers.generate_dsi_buffers[%g].i_dsi3_crm_data_buffer) @'h130 +'h10;
+  block buf_ctrl=DSI_PDCM_STAT[2] (i_buffers.generate_dsi_buffers[%g].i_dsi3_pdcm_data_buffer) @'h150 +'h10;
+}

@@ -1,0 +1,2 @@
+set_clock_uncertainty -setup 0.3   [all_clocks]
+set_clock_uncertainty -hold  0.25 [all_clocks]

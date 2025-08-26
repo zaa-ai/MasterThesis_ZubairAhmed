@@ -1,0 +1,3 @@
+`define target_technology_FPGA
+`define target_technology_FPGA_ARTIX7
+

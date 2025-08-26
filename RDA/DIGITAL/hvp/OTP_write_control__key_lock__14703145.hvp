@@ -1,0 +1,35 @@
+
+plan OTP_write_control__key_lock_;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14703145;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703145";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature Features;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703146";
+    edfId = 14703146;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+  feature Description;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703147";
+    edfId = 14703147;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+  feature OTP_Key_States;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703148";
+    edfId = 14703148;
+    edfType = GRAPHIC;
+    customer = false;
+  endfeature
+
+endplan

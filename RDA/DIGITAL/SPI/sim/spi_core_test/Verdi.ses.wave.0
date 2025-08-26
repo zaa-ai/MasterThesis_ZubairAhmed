@@ -1,0 +1,139 @@
+Magic 271485
+Revision Verdi_S-2021.09-1
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 25 2560 1003 497 107
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/nfs/wrk.jvoi/sim/52144/m52144a/SPI/spi_core_test/spi_core_test.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+windowTimeUnit 1ps
+
+; waveform viewport range
+zoom 0.000000 80800000.000000 1p
+cursor 20000000.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; show marker information
+; showMarkerValue [absolute|adjacent|relative|frequency]
+showMarkerValue adjacent
+showMarkerValue relative
+
+; visible top row signal index
+top 2
+; marker line index
+markerPos 15
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "spi_if_agent(spi_if)"
+activeDirFile "" "/nfs/wrk.jvoi/sim/52144/m52144a/SPI/spi_core_test/spi_core_test.fsdb"
+addSignal -h 15 /testrunner/spi_ts/spi_ct/spi_if_agent/SCK
+addSignal -h 15 /testrunner/spi_ts/spi_ct/spi_if_agent/SDI
+addSignal -h 15 /testrunner/spi_ts/spi_ct/spi_if_agent/SDO
+addSignal -h 15 /testrunner/spi_ts/spi_ct/spi_if_agent/CSN
+addGroup "spi_if_dut(spi_int_if)"
+addSignal -h 15 /testrunner/spi_ts/spi_ct/spi_if_dut/csb
+addSignal -h 15 /testrunner/spi_ts/spi_ct/spi_if_dut/sck
+addSignal -h 15 /testrunner/spi_ts/spi_ct/spi_if_dut/sdi
+addSignal -h 15 /testrunner/spi_ts/spi_ct/spi_if_dut/sdo
+addSignal -h 15 /testrunner/spi_ts/spi_ct/spi_if_dut/csb_resn
+addGroup "Test bench signals"
+addSubGroup "clk_rst(clk_reset_if)"
+addSignal -h 15 /testrunner/spi_ts/spi_ct/clk_rst/clk
+addSignal -h 15 /testrunner/spi_ts/spi_ct/clk_rst/rstn
+addSignal -h 15 /testrunner/spi_ts/spi_ct/enable_clk
+endSubGroup "clk_rst(clk_reset_if)"
+addSignal -h 15 /testrunner/spi_ts/spi_ct/command_running
+addSignal -h 15 /testrunner/spi_ts/spi_ct/crc_in_correct
+addSignal -h 15 -UNSIGNED -HEX /testrunner/spi_ts/spi_ct/current_crc_in[15:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/spi_ts/spi_ct/current_crc_out[15:0]
+addSignal -h 15 /testrunner/spi_ts/spi_ct/disable_core_command_interpretation
+addSignal -h 15 /testrunner/spi_ts/spi_ct/name
+addSignal -h 15 /testrunner/spi_ts/spi_ct/rx_data
+addSignal -h 15 /testrunner/spi_ts/spi_ct/rxd_valid
+addSignal -h 15 /testrunner/spi_ts/spi_ct/sck
+addSignal -h 15 -UNSIGNED -HEX /testrunner/spi_ts/spi_ct/status_word[15:0]
+addSignal -h 15 -UNSIGNED /testrunner/spi_ts/spi_ct/status_word_mode[31:0]
+addSignal -h 15 /testrunner/spi_ts/spi_ct/transfer_incomplete
+addSignal -h 15 -UNSIGNED -HEX /testrunner/spi_ts/spi_ct/transfer_incomplete_fifo[1:0]
+addSignal -h 15 /testrunner/spi_ts/spi_ct/tx_data
+addSignal -h 15 /testrunner/spi_ts/spi_ct/tx_data_available
+addSignal -h 15 /testrunner/spi_ts/spi_ct/tx_data_available_synced
+addSignal -h 15 -UNSIGNED /testrunner/spi_ts/spi_ct/tx_data_mode[31:0]
+addSignal -h 15 -UNSIGNED /testrunner/spi_ts/spi_ct/tx_transmit[31:0]
+addSignal -h 15 /testrunner/spi_ts/spi_ct/txd_en_clear
+addSignal -h 15 /testrunner/spi_ts/spi_ct/word_based_crc_of_input_correct
+addGroup "i_spi_core"
+addSignal -h 15 -UNSIGNED -HEX /testrunner/spi_ts/spi_ct/i_spi_core/cnt[3:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/spi_ts/spi_ct/i_spi_core/cnt_nxt[3:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/spi_ts/spi_ct/i_spi_core/cnt_rst_domain[3:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/spi_ts/spi_ct/i_spi_core/crc_in[15:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/spi_ts/spi_ct/i_spi_core/crc_in_next[15:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/spi_ts/spi_ct/i_spi_core/crc_out[15:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/spi_ts/spi_ct/i_spi_core/crc_out_for_miso[15:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/spi_ts/spi_ct/i_spi_core/crc_out_for_miso_next[15:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/spi_ts/spi_ct/i_spi_core/crc_out_next[15:0]
+addSignal -h 15 -UNSIGNED -HEX /spi_implementation_pkg/crc_reset[15:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/spi_ts/spi_ct/i_spi_core/data_received[15:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/spi_ts/spi_ct/i_spi_core/data_received_ecc[5:0]
+addSignal -h 15 /testrunner/spi_ts/spi_ct/i_spi_core/i_command_running
+addSignal -h 15 /testrunner/spi_ts/spi_ct/i_spi_core/i_disable_core_command_interpretation
+addSignal -h 15 -UNSIGNED -HEX /testrunner/spi_ts/spi_ct/i_spi_core/i_status_word[15:0]
+addSignal -h 15 /testrunner/spi_ts/spi_ct/i_spi_core/i_tx_data
+addSignal -h 15 /testrunner/spi_ts/spi_ct/i_spi_core/i_tx_data_available_synced
+addSignal -h 15 /testrunner/spi_ts/spi_ct/i_spi_core/o_data_received
+addSignal -h 15 /testrunner/spi_ts/spi_ct/i_spi_core/o_input_crc_correct
+addSignal -h 15 /testrunner/spi_ts/spi_ct/i_spi_core/o_rxd_valid
+addSignal -h 15 /testrunner/spi_ts/spi_ct/i_spi_core/o_transfer_incomplete
+addSignal -h 15 /testrunner/spi_ts/spi_ct/i_spi_core/o_txd_en_clear
+addSignal -h 15 /testrunner/spi_ts/spi_ct/i_spi_core/o_word_based_crc_of_input_correct
+addSignal -h 15 /testrunner/spi_ts/spi_ct/i_spi_core/rxd_valid_nxt
+addSignal -h 15 -UNSIGNED -HEX /testrunner/spi_ts/spi_ct/i_spi_core/shift_in[15:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/spi_ts/spi_ct/i_spi_core/shift_in_nxt[15:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/spi_ts/spi_ct/i_spi_core/shift_in_nxt_ecc[5:0]
+addSignal -h 15 -UNSIGNED -HEX /spi_implementation_pkg/shift_length[31:0]
+addSignal -h 15 -UNSIGNED -HEX /spi_implementation_pkg/shift_length_width[31:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/spi_ts/spi_ct/i_spi_core/shift_out[15:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/spi_ts/spi_ct/i_spi_core/shift_out_nxt[15:0]
+addSignal -h 15 /testrunner/spi_ts/spi_ct/i_spi_core/transfer_incomplete
+addSignal -h 15 -UNSIGNED -HEX /testrunner/spi_ts/spi_ct/i_spi_core/tx_data_ecc_corrected[15:0]
+addSignal -h 15 /testrunner/spi_ts/spi_ct/i_spi_core/txd_en_clear_nxt
+addSignal -h 15 /testrunner/spi_ts/spi_ct/i_spi_core/was_crc_command
+addSignal -h 15 /testrunner/spi_ts/spi_ct/i_spi_core/was_crc_command_next
+addSignal -h 15 /testrunner/spi_ts/spi_ct/i_spi_core/word_based_crc_of_input_correct
+addSubGroup "ecc_error(master)"
+addSignal -h 15 /testrunner/spi_ts/spi_ct/i_spi_core/ecc_error/single_error[0:0]
+addSignal -h 15 /testrunner/spi_ts/spi_ct/i_spi_core/ecc_error/double_error[0:0]
+endSubGroup "ecc_error(master)"
+addGroup "G5"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+

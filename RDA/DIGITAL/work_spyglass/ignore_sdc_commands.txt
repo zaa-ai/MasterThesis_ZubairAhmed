@@ -1,0 +1,9 @@
+set_load
+set_driving_cell
+set_clock_gating_check
+set_multicycle_path
+set_false_path
+set_propagated_clock
+set_ideal_network
+set_input_delay
+set_output_delay

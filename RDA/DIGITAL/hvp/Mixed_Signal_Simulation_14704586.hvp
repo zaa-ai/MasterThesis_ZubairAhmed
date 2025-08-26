@@ -1,0 +1,21 @@
+
+plan Mixed_Signal_Simulation;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14704586;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704586";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature Intro;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=15249524";
+    edfId = 15249524;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+endplan

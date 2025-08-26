@@ -1,0 +1,87 @@
+
+plan Pads;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14704281;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704281";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature Pin_Assignment;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704300";
+    edfId = 14704300;
+    edfType = UNIVERSAL_TABLE;
+    customer = false;
+    feature Row_0;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704302";
+      edfId = 14704302;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+    endfeature
+    feature Row_1;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704306";
+      edfId = 14704306;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+    endfeature
+    feature Row_2;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704307";
+      edfId = 14704307;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+    endfeature
+    feature Row_3;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704304";
+      edfId = 14704304;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+    endfeature
+    feature Row_4;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704305";
+      edfId = 14704305;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+    endfeature
+    feature Row_5;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704303";
+      edfId = 14704303;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+    endfeature
+    feature Row_6;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704301";
+      edfId = 14704301;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+    endfeature
+    feature Row_7;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704308";
+      edfId = 14704308;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+    endfeature
+    feature Row_8;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704309";
+      edfId = 14704309;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+    endfeature
+    feature Row_9;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704310";
+      edfId = 14704310;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+    endfeature
+    feature Row_10;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=15033323";
+      edfId = 15033323;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+    endfeature
+  endfeature
+
+endplan

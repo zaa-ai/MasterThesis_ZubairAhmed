@@ -1,0 +1,6 @@
+Please use module vivado/2019.2 instead of xilinx/2017.4
+
+copy and paste the following to your console prompt
+
+module unload xilinx
+module load vivado

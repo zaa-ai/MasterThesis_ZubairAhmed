@@ -1,0 +1,44 @@
+#### Binning User-defined Rule Template ############################################
+#
+# User-defined Rule provides several rule features to extend binning capability.
+# This template is as the reference and you could remove the comment '#' before 
+# the rule on demand and fill the require fields to customize binning rule.
+#
+####################################################################################
+#### Control the Message Chosen Mechanism ##########################################
+#
+#                           ## Capture the target message
+# filter = /pattern/        # RULE REQUIRED [regular expression enclosed by the "/"]
+# testcase =                # OPTIONAL      [testcase names separated by ","]
+# priority =                # OPTIONAL      [1 by default]
+# desc =                    # OPTIONAL      [rule description]
+#
+#                           ## Ignore the target message
+# waive = /pattern/         # RULE REQUIRED [regular expression enclosed by the "/"]
+# testcase =                # OPTIONAL      [testcase names separated by ","]
+# desc =                    # OPTIONAL      [rule description]
+#
+####################################################################################
+#### Adjust the Binning Result #####################################################
+#
+#                           ## Capture the message as pass one
+# pass = /pattern/          # RULE REQUIRED [regular expression enclosed by the "/"]
+# testcase =                # OPTIONAL      [testcase names separated by ","]
+# desc =                    # OPTIONAL      [rule description]
+#
+#                           ## Replace the certain pattern or word in messages
+# replace_src = /pattern/   # RULE REQUIRED [regular expression enclosed by the "/"]
+# replace_dest = /string/   # RULE REQUIRED [replacing string enclosed by the "/"]
+# testcase =                # OPTIONAL      [testcase names separated by ","]
+# desc =                    # OPTIONAL      [rule description]
+#
+####################################################################################
+#### Control the Following RDA Flow ################################################
+#
+#                           ## Disable the following RDA flow
+# filter = /pattern/        # RULE REQUIRED [regular expression enclosed by the "/"]
+# testcase =                # OPTIONAL      [testcase names separated by ","]
+# disable =                 # RULE REQUIRED [DF | RCA | DF,RCA]
+# desc =                    # OPTIONAL      [rule description]
+#
+####################################################################################

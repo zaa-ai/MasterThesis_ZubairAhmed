@@ -1,0 +1,42 @@
+
+plan Multiple_Packet_Frame_PDCM_Read;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14980746;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14980746";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature multiple_packet_frame_PDCM_read;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14980747";
+    edfId = 14980747;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature multiple_packet_frame_PDCM_read__time_oriented_packet_order_;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14980748";
+    edfId = 14980748;
+    edfType = GRAPHIC;
+    customer = true;
+  endfeature
+
+  feature multiple_packet_frame_PDCM_read_2;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14997682";
+    edfId = 14997682;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature multiple_packet_frame_PDCM_read__channel_oriented_packet_order_;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14997683";
+    edfId = 14997683;
+    edfType = GRAPHIC;
+    customer = true;
+  endfeature
+
+endplan

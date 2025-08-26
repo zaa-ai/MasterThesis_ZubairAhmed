@@ -1,0 +1,25 @@
+#parse( "tmr_definitions.vm" )
+#if ( $tmr_out.has_tmr )
+#generate_info("interface for TMR_OUT of ...")
+interface tmr_out_${test_name}_signals_if;
+
+#foreach ($signal in ${tmr_out.signal_definitions})
+	logic #if($signal.isArray)[${signal.msb}:0]#end	$signal.name;
+#end
+#set ($vectorSize = ($tmr_out.signals.size() - 1))
+	logic [$vectorSize:0] vector;
+
+	modport master (
+			output	#tmr_out_signal_definition
+			input	vector
+		);
+	
+	modport slave (
+			input	#tmr_out_signal_definition
+			input	vector
+		);
+	
+	assign vector = {#foreach ($signal in $collection.sort( ${tmr_out.signals}, 'bit:desc'))#if ($signal)#if($signal.isEmpty) 1'b0#else ${signal.name}#end#if( $foreach.hasNext ),#end#end#end};
+
+endinterface
+#end

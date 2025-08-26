@@ -1,0 +1,35 @@
+
+plan Common_DSI3_registers;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14900071;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14900071";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature No_Write_Blocking;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14858093";
+    edfId = 14858093;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature register_DSI_ENABLE;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=15375154";
+    edfId = 15375154;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature DSI3_channel_on_off;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=15375001";
+    edfId = 15375001;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+endplan

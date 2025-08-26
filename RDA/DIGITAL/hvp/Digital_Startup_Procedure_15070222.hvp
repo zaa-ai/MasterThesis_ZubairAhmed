@@ -1,0 +1,28 @@
+
+plan Digital_Startup_Procedure;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 15070222;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=15070222";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature https___confluence_elmos_de_display_DEVPROJECTS_Main_Control;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=15070256";
+    edfId = 15070256;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+  feature digital_startup;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=15070257";
+    edfId = 15070257;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+endplan

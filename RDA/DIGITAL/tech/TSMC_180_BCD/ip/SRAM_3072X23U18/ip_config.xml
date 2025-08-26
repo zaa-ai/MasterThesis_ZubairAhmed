@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<tech>
+	<module_name>SRAM_3072X23U18</module_name>
+	<sim_hdl>
+        	<none>ip/SRAM_3072X23U18/lib/models/SRAM_3072X23U18.v</none>
+ 	</sim_hdl>
+	<!-- Milkyway -->
+	<mw>
+		<macros path="ip/SRAM_3072X23U18/lib/mw">
+		SRAM_3072X23U18_LIB
+		</macros>
+	</mw>
+	<models>
+		<fault path="ip/SRAM_3072X23U18/lib/tmax">
+		SRAM_3072X23U18.tv
+		</fault>
+	</models>		
+
+  <!-- SRAM-->
+  <lib path="ip/SRAM_3072X23U18/lib/db" v_domain="1.8" name="SRAM">
+	  <min type="macro" format="db">
+		  SRAM_3072X23U18_nldm_ff_1p98v_1p98v_m40c.db
+		  <name>SRAM_3072X23U18_nldm_ff_1p98v_1p98v_m40c</name>
+		  <oc>ff_1p98v_1p98v_m40c</oc>
+	  </min>
+	  <typ type="macro" format="db">
+		  SRAM_3072X23U18_nldm_tt_1p80v_1p80v_25c.db
+		  <name>SRAM_3072X23U18_nldm_tt_1p80v_1p80v_25c</name>
+		  <oc>tt_1p80v_1p80v_25c</oc>
+	  </typ>
+	  <max type="macro" format="db">
+		  SRAM_3072X23U18_nldm_ss_1p62v_1p62v_125c.db
+		  <name>SRAM_3072X23U18_nldm_ss_1p62v_1p62v_125c</name>
+		  <oc>ss_1p62v_1p62v_125c</oc>
+	  </max>
+  </lib>
+</tech>

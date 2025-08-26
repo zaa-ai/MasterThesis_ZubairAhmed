@@ -1,0 +1,52 @@
+################### MACROS ###################
+#macro( tmr_out_signal_definition ) #foreach($d in $tmr_out.signal_definitions)$d.name#if( $foreach.hasNext ),#end #end #end
+#macro( tmr_ana_signal_modport $direction )
+  #set ($first = 1)
+  #foreach( $register in $registerFile.getRegisters() )
+    #if ($register.Name != "")
+      #if( $register.Name.contains("TMR_ANA")) ##if ($first == 0) , #else #set ($first = 0) #end
+		$direction #if($register.edfRegister.getProperty("regdef","combineBitFields") == "1") $register.name.toLowerCase()#if( $foreach.hasNext )#if($registerFile.getRegisters().get($foreach.count).Name.contains("TMR_ANA")),#end#end#else #foreach ($bitfield in $register.getAllUsedFields())${bitfield.name.toLowerCase()}#if( $foreach.hasNext ), #end#end#end
+      #end
+    #end
+  #end
+#end
+$log.info('##### parsing TMR_ANA #####')
+#set($tmr_ana_signals = [])
+#set ($tmr_ana_combined = false)
+#set ($tmr_ana_combined_msb = 0)
+#foreach( $register in $registerFile.getRegisters() )
+  #if( $register.name.contains("TMR_ANA"))
+    #if($register.edfRegister.getProperty("regdef","combineBitFields") == "1")
+      $log.info("TMR_ANA register has combineBitFields options set. Therefore just add (combined) tmr_ana signal to variable")
+      #set ($field_msb = 0)
+      #foreach( $field in $register.Fields )
+        #if ('UNUSED' != $field.Name)
+          #if( $field.Bits > 1)
+            #set ($field_msb = $math.add($field.lsb, $field.bits, -1))
+            ##$log.info("field_range = ${field.lsb}-${field_msb}")
+          #else
+            #set ($field_msb = $field.lsb)
+            ##$log.info("field_range = ${field.lsb}-${field.lsb}")
+          #end
+        #end
+      #end
+      $log.info("${register.name.toLowerCase()} = ${field_msb}")
+      #set ($tmp = $tmr_ana_signals.add({"field":${register.name.toLowerCase()}, "msb":${field_msb}}))
+      #set ($tmr_ana_combined = true)
+    #else
+      $log.info("TMR_ANA register has combineBitFields options NOT set. Therefore add each bitfield as signal to variable")
+      #foreach ($field in $register.getAllUsedFields())
+        #if ($field)
+          #set ($tmp = $tmr_ana_signals.add($field.name.toLowerCase()))
+        #end
+      #end
+    #end
+  #end
+#end
+#set ($tmr_ana_signals_size = ($tmr_ana_signals.size()))
+$log.info("tmr_ana_signals_size = $tmr_ana_signals_size")
+#set ( $has_tmr_ana = false)
+#if ( $tmr_ana_signals_size > 0)
+  #set ( $has_tmr_ana = true)
+#end
+$log.info("TMR_ANA signals: $tmr_ana_signals")

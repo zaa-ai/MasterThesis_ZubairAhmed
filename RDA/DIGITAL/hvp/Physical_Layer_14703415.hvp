@@ -1,0 +1,32 @@
+`include "Transmitter_14703416.hvp"
+`include "Receiver_14703477.hvp"
+
+plan Physical_Layer;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14703415;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703415";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature P01;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703512";
+    edfId = 14703512;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature R_ckspeisung;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703513";
+    edfId = 14703513;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  subplan Transmitter;
+  subplan Receiver;
+endplan

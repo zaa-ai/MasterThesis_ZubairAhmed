@@ -1,0 +1,20 @@
+`include "Power_on_Sequence_14702753.hvp"
+`include "DSI_Restart_Sequence_14702758.hvp"
+`include "Digital_Startup_Procedure_15070222.hvp"
+
+plan Power_Sequences;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14702752;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702752";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  subplan Power_on_Sequence;
+  subplan DSI_Restart_Sequence;
+  subplan Digital_Startup_Procedure;
+endplan

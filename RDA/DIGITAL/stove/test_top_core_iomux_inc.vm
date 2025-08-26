@@ -1,0 +1,25 @@
+#parse( "tmr_definitions.vm" )
+#if($test_name == "top")
+#generate_info
+  #if ($has_tmr_out)
+	//==========================================================================
+	// TMR_OUT section
+	//==========================================================================
+	logic#if(${tmr_out.vectors}>1)[${tmr_out.vectors_msb}:0]#end	tmr_out;
+	
+	#foreach ($tmr_out_index in [0..${tmr_out.vectors_msb}])
+	always_comb begin
+		tmr_out[${tmr_out_index}] = \'0;
+		
+	end
+	#end
+	
+  #end
+  
+  #if ($has_tmr_in)
+	//==========================================================================
+	// TMR_IN section
+	//==========================================================================
+	logic#if($tmr_in_vector_msb>0)[$tmr_in_vector_msb:0]#end	tmr_in;
+  #end
+#end

@@ -1,0 +1,5 @@
+
+set_bridge_max_op_constraints
+
+set_common_constraints
+set_bridge_scan_constraints

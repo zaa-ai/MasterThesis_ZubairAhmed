@@ -1,0 +1,16 @@
+`include "ECC_14703165.hvp"
+
+plan OTP_CTRL;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14703164;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703164";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  subplan ECC;
+endplan

@@ -1,0 +1,15 @@
+@verdi rc file Version 1.0
+[Form]
+version = Verdi_R-2020.12-SP1-1
+[General]
+autoSaveSession = FALSE
+TclAutoSource = 
+cmd_enter_form = TRUE
+SyncBrowserDir = TRUE
+version = Verdi_R-2020.12-SP1-1
+SignalCaseInSensitive = FALSE
+ShowWndCtntDuringResizing = FALSE
+DblClick = 250
+Find_Delimiter = .
+ViewMouse13Swap = FALSE
+ToolbarIconSize = 

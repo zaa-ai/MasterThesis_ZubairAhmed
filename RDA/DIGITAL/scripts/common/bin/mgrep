@@ -1,0 +1,39 @@
+#!/usr/bin/perl
+
+use strict;
+
+if ((@ARGV != 3) && (@ARGV != 4)) {
+  die("Usage: mgrep <file-name> <start-pattern> <end-pattern>");
+}
+
+my $filename = shift;
+my $start    = shift;
+my $end      = shift;
+my $skip_end = "";
+
+if (@ARGV == 1) {
+  $skip_end = shift;
+}
+
+my $line;
+my $inside = 0;
+
+open(IN, "<$filename") || die("ERROR: mgrep could open input file !\n");
+while (<IN>) {
+  $line = $_;
+
+  if ($line =~ m/$start/) {
+    $inside = 1;
+  }
+  if (($skip_end ne "") && ($line =~ m/$end/)) {
+    $inside = 0;
+  }
+  if ($inside) {
+    print $line;
+  }
+  if ($line =~ m/$end/) {
+    $inside = 0;
+  }
+}
+close(IN);
+

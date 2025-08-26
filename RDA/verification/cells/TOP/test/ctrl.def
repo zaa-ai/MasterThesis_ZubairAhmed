@@ -1,0 +1,65 @@
+
+**------------------------------------------------
+** Temperature
+**------------------------------------------------
+
+`define models        'h0000_0000_0003_0007
+`define models_nopads 'h0000_0000_0000_0007
+
+**------------------------------------------------
+** Corner, Temperature
+**------------------------------------------------
+
+define task_corner(__tag__= __c__=c0 __temp__=typ __debug__=0)
+  
+  task=start__tag__        simcase='h0000_0000_0000_0000  models=`models        corner=__c__ temp_j=__temp__  debug=1
+  task=sup__tag__          simcase='h0000_0000_0000_00ff  models=`models        corner=__c__ temp_j=__temp__  debug=__debug__
+  task=dsi__tag__          simcase='h0000_0000_0000_ff00  models=`models        corner=__c__ temp_j=__temp__  debug=__debug__
+  task=dsi_1ch__tag__      simcase='h0000_0000_0000_ff00  models=`models        corner=__c__ temp_j=__temp__  debug=__debug__ do_4dsi=0
+  task=spi__tag__          simcase='h0000_0000_00ff_0000  models=`models        corner=__c__ temp_j=__temp__  debug=__debug__
+  task=dig__tag__          simcase='h0000_0000_ff00_0000  models=`models        corner=__c__ temp_j=__temp__  debug=__debug__
+  task=irq__tag__          simcase='h0000_00ff_0000_0000  models=`models        corner=__c__ temp_j=__temp__  debug=__debug__
+  task=timebase__tag__     simcase='h0000_ff00_0000_0000  models=`models        corner=__c__ temp_j=__temp__  debug=__debug__
+  task=pads__tag__         simcase='h000f_0000_0000_0000  models=`models        corner=__c__ temp_j=__temp__  debug=__debug__
+  task=pads__tag___ana     simcase='h000f_0000_0000_0000  models=`models_nopads corner=__c__ temp_j=__temp__  debug=__debug__ do_sweep=0
+  task=atpg__tag__         simcase='hc000_0000_0000_0000  models=`models        corner=__c__ temp_j=__temp__  debug=__debug__ use_float=1
+  task=atpg__tag___nofloat simcase='hc000_0000_0000_0000  models=`models        corner=__c__ temp_j=__temp__  debug=__debug__ use_float=0
+  task=atpg__tag___ana     simcase='hc000_0000_0000_0000  models=`models_nopads corner=__c__ temp_j=__temp__  debug=__debug__ do_sweep=0
+  
+enddefine
+
+*----------
+
+define task_temp(__tag__= __temp__=25)
+
+  `task_corner(tag=__tag___c0 c=c0 temp=__temp__)
+  `task_corner(tag=__tag___c1 c=c1 temp=__temp__)
+  `task_corner(tag=__tag___c2 c=c2 temp=__temp__)
+  `task_corner(tag=__tag___c3 c=c3 temp=__temp__)
+  `task_corner(tag=__tag___c4 c=c4 temp=__temp__)
+
+enddefine
+
+**------------------------------------------------
+** Main
+**------------------------------------------------
+  
+`task_corner()
+
+*----------
+
+*task_temp(tag=_tmin temp=min)
+*task_temp(tag=_ttyp temp=typ)
+*task_temp(tag=_tmax temp=max)
+
+*----------
+
+*task_corner(tag=_ot temp=160)
+
+*----------
+  
+task=debug  simcase='h0001_0000_0000_0000  models=`models  debug=1
+task=doc    simcase='hffff_ffff_ffff_ffff  models=`models
+          
+**------------------------------------------------
+**------------------------------------------------

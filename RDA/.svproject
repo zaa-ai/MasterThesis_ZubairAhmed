@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><svproject>
+<defines/>
+<includePaths/>
+<buildPaths/>
+<pluginPaths/>
+<libraryPaths/>
+<argFilePaths>
+<argFilePath path="${project_loc}/DIGITAL/COMMON_LIB/files.f"/>
+<argFilePath path="${project_loc}/DIGITAL/DATA_STORAGE/files.f"/>
+<argFilePath path="${project_loc}/DIGITAL/DATA_STORAGE/tb/tb_buffer/files.f"/>
+<argFilePath path="${project_loc}/DIGITAL/DSI3_MASTER/files.f"/>
+<argFilePath path="${project_loc}/DIGITAL/DSI3_MASTER/tb/tb_dsi3_block/files.f"/>
+<argFilePath path="${project_loc}/DIGITAL/EASIER_UVM/tb/files.f"/>
+<argFilePath path="${project_loc}/DIGITAL/edf_registers/files.f"/>
+<argFilePath path="${project_loc}/DIGITAL/MAIN_CONTROL/files.f"/>
+<argFilePath path="${project_loc}/DIGITAL/model/files.f"/>
+<argFilePath path="${project_loc}/DIGITAL/OTP_MEM/files.f"/>
+<argFilePath path="${project_loc}/DIGITAL/rtl/files.f"/>
+<argFilePath path="${project_loc}/DIGITAL/SPI/files.f"/>
+<argFilePath path="${project_loc}/DIGITAL/SPI/tb/tb_spi_core/files.f"/>
+<argFilePath path="${project_loc}/DIGITAL/SPI/tb/tb_spi_core/files.f"/>
+<argFilePath path="${project_loc}/DIGITAL/SPI/tb/tb_spi/files.f"/>
+<argFilePath path="${project_loc}/DIGITAL/STD_COMPONENTS/files.f"/>
+<argFilePath path="${project_loc}/DIGITAL/TIMEBASE/files.f"/>
+<argFilePath path="${project_loc}/DIGITAL/TIMEBASE/tb/files.f"/>
+<argFilePath path="${project_loc}/DIGITAL/tb/tb_command_control/files.f"/>
+<argFilePath path="${project_loc}/DIGITAL/tb_easier_uvm/files.f"/>
+<argFilePath path="${project_loc}/DIGITAL/tech/TSMC_180_BCD/files.f"/>
+<argFilePath path="${project_loc}/DIGITAL/TEST/files.f"/>
+<argFilePath path="${project_loc}/DIGITAL/ECC/files.f"/>
+<argFilePath path="${project_loc}/DIGITAL/DSI3_MASTER/tb/tb_dsi3_receiver/files.f"/>
+</argFilePaths>
+<sourceCollections/>
+<projectRefs/>
+<templatePaths/>
+</svproject>

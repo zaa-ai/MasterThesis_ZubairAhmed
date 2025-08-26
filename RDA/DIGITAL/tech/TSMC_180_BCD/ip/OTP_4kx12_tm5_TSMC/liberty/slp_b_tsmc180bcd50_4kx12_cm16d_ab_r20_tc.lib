@@ -1,0 +1,611 @@
+library (slp_b_tsmc180bcd50_4kx12_cm16d_ab_r20_tc) {
+  date : "Thu Aug 17 16:21:26 EDT 2017";
+  revision : 1.0;
+  comment : "Copyright (c) 2007 - 2015 Sidense Corp. All Rights Reserved.";
+  delay_model : table_lookup;
+  time_unit : "1ns";
+  voltage_unit : "1V";
+  current_unit : "1uA";
+  leakage_power_unit : "1uW";
+  pulling_resistance_unit : "1kohm";
+  capacitive_load_unit(1.0,pf);
+  default_input_pin_cap : 0.01;
+  default_inout_pin_cap : 0.01;
+  default_output_pin_cap : 0.0;
+  default_max_fanout : 999.0;
+  default_fanout_load : 1.0;
+  default_cell_leakage_power : 0.0;
+  default_leakage_power_density : 0.0;
+  slew_derate_from_library : 1.0;
+  default_max_transition : 3.0;
+  default_max_capacitance : 0.3;
+  slew_lower_threshold_pct_fall : 10.0;
+  slew_upper_threshold_pct_fall : 90.0;
+  slew_lower_threshold_pct_rise : 10.0;
+  slew_upper_threshold_pct_rise : 90.0;
+  input_threshold_pct_fall : 50.0;
+  output_threshold_pct_fall : 50.0;
+  input_threshold_pct_rise : 50.0;
+  output_threshold_pct_rise : 50.0;
+  nom_process : 1.0;
+  nom_voltage : 1.8;
+  nom_temperature : 25.0;
+  operating_conditions (tc) {
+    process : 1.0;
+    voltage : 1.8;
+    temperature : 25.0;
+  }
+  default_operating_conditions : tc;
+  voltage_map(VDD, 1.8);
+  voltage_map(VSS, 0.0);
+  lu_table_template (setup_hold) {
+    variable_1 : related_pin_transition;
+    variable_2 : constrained_pin_transition;
+    index_1("0.02, 0.2, 1.0, 3.0");
+    index_2("0.02, 0.2, 1.0, 3.0");
+  }
+  lu_table_template (delay_transition) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    index_1("0.02, 0.2, 1.0, 3.0");
+    index_2("0.0, 0.015, 0.075, 0.3");
+  }
+  type (bus_MODE) {
+    base_type : array;
+    data_type : bit;
+    bit_width : 8;
+    bit_from : 7;
+    bit_to : 0;
+    downto : true;
+  }
+  type (bus_DATA) {
+    base_type : array;
+    data_type : bit;
+    bit_width : 12;
+    bit_from : 11;
+    bit_to : 0;
+    downto : true;
+  }
+  type (bus_ADDR) {
+    base_type : array;
+    data_type : bit;
+    bit_width : 12;
+    bit_from : 11;
+    bit_to : 0;
+    downto : true;
+  }
+  cell (slp_b_tsmc180bcd50_4kx12_cm16d_ab_r20) {
+    area : 152444.8224;
+    dont_use : true;
+    dont_touch : true;
+    map_only : true;
+    interface_timing : true;
+    pg_pin (VDD) {
+      voltage_name : VDD;
+      pg_type : primary_power;
+    }
+    pg_pin (VSS) {
+      voltage_name : VSS;
+      pg_type : primary_ground;
+    }
+    bus (A) {
+      bus_type : bus_ADDR;
+      direction : input;
+      capacitance : 0.01;
+      max_transition : 3.0;
+      related_power_pin : "VDD";
+      related_ground_pin : "VSS";
+      pin (A[11:0]) {
+        internal_power () {
+          related_pg_pin : "VDD";
+          rise_power (scalar) {
+            values("0.0");
+          }
+          fall_power (scalar) {
+            values("0.0");
+          }
+        }
+      }
+      timing () {
+        when : "SEL";
+        sdf_cond : "SEL";
+        related_pin : "CK";
+        timing_type : setup_rising;
+        rise_constraint (setup_hold) {
+          values("6.0, 6.0, 6.0, 6.0",\
+                 "6.0, 6.0, 6.0, 6.0",\
+                 "6.0, 6.0, 6.0, 6.0",\
+                 "6.0, 6.0, 6.0, 6.0");
+        }
+        fall_constraint (setup_hold) {
+          values("6.0, 6.0, 6.0, 6.0",\
+                 "6.0, 6.0, 6.0, 6.0",\
+                 "6.0, 6.0, 6.0, 6.0",\
+                 "6.0, 6.0, 6.0, 6.0");
+        }
+      }
+      timing () {
+        when : "SEL";
+        sdf_cond : "SEL";
+        related_pin : "CK";
+        timing_type : hold_rising;
+        rise_constraint (setup_hold) {
+          values("1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0");
+        }
+        fall_constraint (setup_hold) {
+          values("1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0");
+        }
+      }
+    }
+    pin (CK) {
+      direction : input;
+      capacitance : 0.015;
+      max_transition : 3.0;
+      related_power_pin : "VDD";
+      related_ground_pin : "VSS";
+      internal_power () {
+        related_pg_pin : "VDD";
+        rise_power (scalar) {
+          values("0.0");
+        }
+        fall_power (scalar) {
+          values("0.0");
+        }
+      }
+      min_pulse_width () {
+        when : "SEL * WE";
+        sdf_cond : "SEL_EQ_1_AND_WE_EQ_1";
+        constraint_high : 100000.0;
+      }
+      min_pulse_width () {
+        when : "SEL * !WE * !MR[0] * !MR[4]";
+        sdf_cond : "SEL_EQ_1_AND_WE_EQ_0_AND_DIFF_EQ_0_AND_ORED_EQ_0";
+        constraint_high : 23.0;
+      }
+      min_pulse_width () {
+        when : "SEL * !WE * MR[0] * !MR[4]";
+        sdf_cond : "SEL_EQ_1_AND_WE_EQ_0_AND_DIFF_EQ_1_AND_ORED_EQ_0";
+        constraint_high : 11.0;
+      }
+      min_pulse_width () {
+        when : "SEL * !WE * !MR[0] * MR[4]";
+        sdf_cond : "SEL_EQ_1_AND_WE_EQ_0_AND_DIFF_EQ_0_AND_ORED_EQ_1";
+        constraint_high : 9.0;
+      }
+      min_pulse_width () {
+        when : "SEL * !WE * MR[0] * MR[4]";
+        sdf_cond : "SEL_EQ_1_AND_WE_EQ_0_AND_DIFF_EQ_1_AND_ORED_EQ_1";
+        constraint_high : 6.0;
+      }
+      min_pulse_width () {
+        when : "WE";
+        sdf_cond : "PGM";
+        constraint_low : 100.0;
+      }
+      min_pulse_width () {
+        when : "!WE";
+        sdf_cond : "~PGM";
+        constraint_low : 6.0;
+      }
+    }
+    bus (D) {
+      bus_type : bus_DATA;
+      direction : input;
+      capacitance : 0.0050;
+      max_transition : 3.0;
+      related_power_pin : "VDD";
+      related_ground_pin : "VSS";
+      pin (D[11:0]) {
+        internal_power () {
+          related_pg_pin : "VDD";
+          rise_power (scalar) {
+            values("0.0");
+          }
+          fall_power (scalar) {
+            values("0.0");
+          }
+        }
+      }
+      timing () {
+        when : "SEL * WE";
+        sdf_cond : "SEL_EQ_1_AND_WE_EQ_1";
+        related_pin : "CK";
+        timing_type : setup_rising;
+        rise_constraint (setup_hold) {
+          values("1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0");
+        }
+        fall_constraint (setup_hold) {
+          values("1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0");
+        }
+      }
+      timing () {
+        when : "SEL * WE";
+        sdf_cond : "SEL_EQ_1_AND_WE_EQ_1";
+        related_pin : "CK";
+        timing_type : hold_rising;
+        rise_constraint (setup_hold) {
+          values("1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0");
+        }
+        fall_constraint (setup_hold) {
+          values("1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0");
+        }
+      }
+    }
+    bus (MR) {
+      bus_type : bus_MODE;
+      direction : input;
+      capacitance : 0.035;
+      max_transition : 3.0;
+      related_power_pin : "VDD";
+      related_ground_pin : "VSS";
+      pin (MR[7:0]) {
+        internal_power () {
+          related_pg_pin : "VDD";
+          rise_power (scalar) {
+            values("0.0");
+          }
+          fall_power (scalar) {
+            values("0.0");
+          }
+        }
+      }
+      timing () {
+        related_pin : "CK";
+        timing_type : nochange_high_high;
+        rise_constraint (setup_hold) {
+          values("6.0, 6.0, 6.0, 6.0",\
+                 "6.0, 6.0, 6.0, 6.0",\
+                 "6.0, 6.0, 6.0, 6.0",\
+                 "6.0, 6.0, 6.0, 6.0");
+        }
+        fall_constraint (setup_hold) {
+          values("5.0, 5.0, 5.0, 5.0",\
+                 "5.0, 5.0, 5.0, 5.0",\
+                 "5.0, 5.0, 5.0, 5.0",\
+                 "5.0, 5.0, 5.0, 5.0");
+        }
+      }
+      timing () {
+        related_pin : "CK";
+        timing_type : nochange_low_high;
+        rise_constraint (setup_hold) {
+          values("5.0, 5.0, 5.0, 5.0",\
+                 "5.0, 5.0, 5.0, 5.0",\
+                 "5.0, 5.0, 5.0, 5.0",\
+                 "5.0, 5.0, 5.0, 5.0");
+        }
+        fall_constraint (setup_hold) {
+          values("6.0, 6.0, 6.0, 6.0",\
+                 "6.0, 6.0, 6.0, 6.0",\
+                 "6.0, 6.0, 6.0, 6.0",\
+                 "6.0, 6.0, 6.0, 6.0");
+        }
+      }
+    }
+    pin (OE) {
+      direction : input;
+      capacitance : 0.025;
+      max_transition : 3.0;
+      related_power_pin : "VDD";
+      related_ground_pin : "VSS";
+      internal_power () {
+        related_pg_pin : "VDD";
+        rise_power (scalar) {
+          values("0.0");
+        }
+        fall_power (scalar) {
+          values("0.0");
+        }
+      }
+    }
+    bus (Q) {
+      bus_type : bus_DATA;
+      direction : output;
+      max_capacitance : 0.015;
+      related_power_pin : "VDD";
+      related_ground_pin : "VSS";
+      power_down_function : "!VDD + VSS";
+      three_state : "!OE";
+      pin (Q[11:0]) {
+        internal_power () {
+          related_pg_pin : "VDD";
+          rise_power (scalar) {
+            values("0.0");
+          }
+          fall_power (scalar) {
+            values("0.0");
+          }
+        }
+      }
+      timing () {
+        related_pin : "CK";
+        timing_type : falling_edge;
+        cell_rise (delay_transition) {
+          values("1.4, 1.401, 1.402, 1.403",\
+                 "1.401, 1.402, 1.403, 1.404",\
+                 "1.402, 1.403, 1.404, 1.405",\
+                 "1.403, 1.404, 1.405, 1.406");
+        }
+        cell_fall (delay_transition) {
+          values("1.4, 1.401, 1.402, 1.403",\
+                 "1.401, 1.402, 1.403, 1.404",\
+                 "1.402, 1.403, 1.404, 1.405",\
+                 "1.403, 1.404, 1.405, 1.406");
+        }
+        rise_transition (delay_transition) {
+          values("0.0, 0.015, 0.075, 0.3",\
+                 "0.0, 0.015, 0.075, 0.3",\
+                 "0.0, 0.015, 0.075, 0.3",\
+                 "0.0, 0.015, 0.075, 0.3");
+        }
+        fall_transition (delay_transition) {
+          values("0.0, 0.015, 0.075, 0.3",\
+                 "0.0, 0.015, 0.075, 0.3",\
+                 "0.0, 0.015, 0.075, 0.3",\
+                 "0.0, 0.015, 0.075, 0.3");
+        }
+      }
+      timing () {
+        related_pin : "OE";
+        timing_type : three_state_enable;
+        timing_sense : positive_unate;
+        cell_rise (delay_transition) {
+          values("0.3, 0.301, 0.302, 0.303",\
+                 "0.301, 0.302, 0.303, 0.304",\
+                 "0.302, 0.303, 0.304, 0.305",\
+                 "0.303, 0.304, 0.305, 0.306");
+        }
+        cell_fall (delay_transition) {
+          values("0.3, 0.301, 0.302, 0.303",\
+                 "0.301, 0.302, 0.303, 0.304",\
+                 "0.302, 0.303, 0.304, 0.305",\
+                 "0.303, 0.304, 0.305, 0.306");
+        }
+        rise_transition (delay_transition) {
+          values("0.0, 0.015, 0.075, 0.3",\
+                 "0.0, 0.015, 0.075, 0.3",\
+                 "0.0, 0.015, 0.075, 0.3",\
+                 "0.0, 0.015, 0.075, 0.3");
+        }
+        fall_transition (delay_transition) {
+          values("0.0, 0.015, 0.075, 0.3",\
+                 "0.0, 0.015, 0.075, 0.3",\
+                 "0.0, 0.015, 0.075, 0.3",\
+                 "0.0, 0.015, 0.075, 0.3");
+        }
+      }
+      timing () {
+        related_pin : "OE";
+        timing_type : three_state_disable;
+        timing_sense : negative_unate;
+        cell_rise (delay_transition) {
+          values("0.4, 0.401, 0.402, 0.403",\
+                 "0.401, 0.402, 0.403, 0.404",\
+                 "0.402, 0.403, 0.404, 0.405",\
+                 "0.403, 0.404, 0.405, 0.406");
+        }
+        cell_fall (delay_transition) {
+          values("0.4, 0.401, 0.402, 0.403",\
+                 "0.401, 0.402, 0.403, 0.404",\
+                 "0.402, 0.403, 0.404, 0.405",\
+                 "0.403, 0.404, 0.405, 0.406");
+        }
+        rise_transition (delay_transition) {
+          values("0.0, 0.015, 0.075, 0.3",\
+                 "0.0, 0.015, 0.075, 0.3",\
+                 "0.0, 0.015, 0.075, 0.3",\
+                 "0.0, 0.015, 0.075, 0.3");
+        }
+        fall_transition (delay_transition) {
+          values("0.0, 0.015, 0.075, 0.3",\
+                 "0.0, 0.015, 0.075, 0.3",\
+                 "0.0, 0.015, 0.075, 0.3",\
+                 "0.0, 0.015, 0.075, 0.3");
+        }
+      }
+    }
+    pin (SEL) {
+      direction : input;
+      capacitance : 0.015;
+      max_transition : 3.0;
+      related_power_pin : "VDD";
+      related_ground_pin : "VSS";
+      internal_power () {
+        related_pg_pin : "VDD";
+        rise_power (scalar) {
+          values("0.0");
+        }
+        fall_power (scalar) {
+          values("0.0");
+        }
+      }
+      timing () {
+        when : "WE";
+        sdf_cond : "WE";
+        related_pin : "CK";
+        timing_type : setup_rising;
+        rise_constraint (setup_hold) {
+          values("100.0, 100.0, 100.0, 100.0",\
+                 "100.0, 100.0, 100.0, 100.0",\
+                 "100.0, 100.0, 100.0, 100.0",\
+                 "100.0, 100.0, 100.0, 100.0");
+        }
+        fall_constraint (setup_hold) {
+          values("6.0, 6.0, 6.0, 6.0",\
+                 "6.0, 6.0, 6.0, 6.0",\
+                 "6.0, 6.0, 6.0, 6.0",\
+                 "6.0, 6.0, 6.0, 6.0");
+        }
+      }
+      timing () {
+        when : "!WE";
+        sdf_cond : "~WE";
+        related_pin : "CK";
+        timing_type : setup_rising;
+        rise_constraint (setup_hold) {
+          values("6.0, 6.0, 6.0, 6.0",\
+                 "6.0, 6.0, 6.0, 6.0",\
+                 "6.0, 6.0, 6.0, 6.0",\
+                 "6.0, 6.0, 6.0, 6.0");
+        }
+        fall_constraint (setup_hold) {
+          values("6.0, 6.0, 6.0, 6.0",\
+                 "6.0, 6.0, 6.0, 6.0",\
+                 "6.0, 6.0, 6.0, 6.0",\
+                 "6.0, 6.0, 6.0, 6.0");
+        }
+      }
+      timing () {
+        related_pin : "CK";
+        timing_type : hold_rising;
+        rise_constraint (setup_hold) {
+          values("1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0");
+        }
+        fall_constraint (setup_hold) {
+          values("1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0");
+        }
+      }
+    }
+    pin (WE) {
+      direction : input;
+      capacitance : 0.01;
+      max_transition : 3.0;
+      related_power_pin : "VDD";
+      related_ground_pin : "VSS";
+      internal_power () {
+        related_pg_pin : "VDD";
+        rise_power (scalar) {
+          values("0.0");
+        }
+        fall_power (scalar) {
+          values("0.0");
+        }
+      }
+      timing () {
+        when : "SEL";
+        sdf_cond : "SEL";
+        related_pin : "CK";
+        timing_type : setup_rising;
+        rise_constraint (setup_hold) {
+          values("100.0, 100.0, 100.0, 100.0",\
+                 "100.0, 100.0, 100.0, 100.0",\
+                 "100.0, 100.0, 100.0, 100.0",\
+                 "100.0, 100.0, 100.0, 100.0");
+        }
+        fall_constraint (setup_hold) {
+          values("16.0, 16.0, 16.0, 16.0",\
+                 "16.0, 16.0, 16.0, 16.0",\
+                 "16.0, 16.0, 16.0, 16.0",\
+                 "16.0, 16.0, 16.0, 16.0");
+        }
+      }
+      timing () {
+        when : "SEL";
+        sdf_cond : "SEL";
+        related_pin : "CK";
+        timing_type : hold_rising;
+        rise_constraint (setup_hold) {
+          values("1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0");
+        }
+        fall_constraint (setup_hold) {
+          values("1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0",\
+                 "1.0, 1.0, 1.0, 1.0");
+        }
+      }
+    }
+    pin (VREF) {
+      direction : inout;
+      capacitance : 1.0;
+      is_analog : true;
+      related_power_pin : "VDD";
+      related_ground_pin : "VSS";
+      internal_power () {
+        related_pg_pin : "VDD";
+        rise_power (scalar) {
+          values("0.0");
+        }
+        fall_power (scalar) {
+          values("0.0");
+        }
+      }
+    }
+    pin (EHV) {
+      direction : input;
+      capacitance : 0.01;
+      is_analog : true;
+      max_transition : 3.0;
+      related_power_pin : "VDD";
+      related_ground_pin : "VSS";
+      internal_power () {
+        related_pg_pin : "VDD";
+        rise_power (scalar) {
+          values("0.0");
+        }
+        fall_power (scalar) {
+          values("0.0");
+        }
+      }
+    }
+    pin (VPP) {
+      direction : inout;
+      capacitance : 25.0;
+      is_analog : true;
+      related_power_pin : "VDD";
+      related_ground_pin : "VSS";
+      internal_power () {
+        related_pg_pin : "VDD";
+        rise_power (scalar) {
+          values("0.0");
+        }
+        fall_power (scalar) {
+          values("0.0");
+        }
+      }
+    }
+    pin (VRR) {
+      direction : inout;
+      capacitance : 70.0;
+      is_analog : true;
+      related_power_pin : "VDD";
+      related_ground_pin : "VSS";
+      internal_power () {
+        related_pg_pin : "VDD";
+        rise_power (scalar) {
+          values("0.0");
+        }
+        fall_power (scalar) {
+          values("0.0");
+        }
+      }
+    }
+  }
+}

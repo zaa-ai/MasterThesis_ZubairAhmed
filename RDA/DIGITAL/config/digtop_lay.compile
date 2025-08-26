@@ -1,0 +1,15 @@
+# DIGTOP_lay components	
+cp -vf $DESIGN/$DIGITAL/work_be_flow/results/digtop.output.v  $DESIGN/$DIGITAL/work_be_flow/results/digtop.output_mod_pg.v
+perl -pi.bak -e 'undef $/; s/module digtop\s*\(([^;]*)\);/module digtop\(\1, VDD, VSS, VCC\);\ninput VDD, VSS, VCC ;\nwire VDD, VSS, VCC ;/gs' $DESIGN/$DIGITAL/work_be_flow/results/digtop.output_mod_pg.v
+rm -f $DESIGN/$DIGITAL/work_be_flow/results/digtop.output_mod_pg.v.bak
+
+#vlogan -V +v2k -nc -full64 -sverilog -f $DESIGN/$DIGITAL/DSI3_MASTER/files.f
+vlogan -V -nc -full64 -sverilog $DESIGN/$DIGITAL/DSI3_MASTER/rtl/dsi3_pkg.sv
+
+vlogan -V +v2k -nc -full64 -sverilog -f $DESIGN/$DIGITAL/models/memorys/files.f
+vlogan -V +v2k -nc -full64 -sverilog -work DIGITAL $DESIGN/$DIGITAL/rtl/vector_to_array_converter.sv
+vlogan -V +v2k -nc -full64 -sverilog -work DIGITAL $DESIGN/$DIGITAL/libs/TCB018GBWP7T/models/tcb018gbwp7t.v 
+vlogan -V +v2k -nc -full64 -sverilog -work DIGITAL $DESIGN/$DIGITAL/libs/OTP_Charge_Pump_p1r_TSMC/libs/models/ips_tsmc180bcd50_p1r_ad.v
+vlogan -V +v2k -nc -full64 -sverilog -work DIGITAL $DESIGN/$DIGITAL/libs/OTP_4kx12_TSMC/libs/models/slp_b_tsmc180bcd50_4kx12_cm16d_ab.v
+vlogan -V +v2k -nc -full64 -sverilog -work DIGITAL $DESIGN/$DIGITAL/work_be_flow/results/digtop.output_mod_pg.v
+

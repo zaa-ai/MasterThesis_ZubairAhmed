@@ -1,0 +1,93 @@
+
+plan Transmit_CRM_Command__Command_100__;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14704050;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704050";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature transmit_CRM_command_intro;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704051";
+    edfId = 14704051;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature transmit_CRM_command_CRC;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704052";
+    edfId = 14704052;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+  feature transmit_CRM_command_SPI_command;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704053";
+    edfId = 14704053;
+    edfType = GRAPHIC;
+    customer = true;
+  endfeature
+
+  feature transmit_CRM_command_option_bits;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704054";
+    edfId = 14704054;
+    edfType = UNIVERSAL_TABLE;
+    customer = true;
+    feature Row_0;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704057";
+      edfId = 14704057;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_1;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704058";
+      edfId = 14704058;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_2;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704059";
+      edfId = 14704059;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_3;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14865711";
+      edfId = 14865711;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_4;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14865712";
+      edfId = 14865712;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+  endfeature
+
+  feature transmit_CRM_command_operation;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704061";
+    edfId = 14704061;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature FuSi__ReRead_transmitted_CRM_command;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704062";
+    edfId = 14704062;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature CRM_reception_status_information;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14865708";
+    edfId = 14865708;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+endplan

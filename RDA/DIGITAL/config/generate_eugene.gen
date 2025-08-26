@@ -1,0 +1,7 @@
+#!/bin/csh -f
+set cpath = `pwd`
+
+cd $DESIGN/$DIGITAL/tb_eugene
+$DESIGN/$DIGITAL/tb_eugene/generate_testbench.csh
+
+cd $cpath

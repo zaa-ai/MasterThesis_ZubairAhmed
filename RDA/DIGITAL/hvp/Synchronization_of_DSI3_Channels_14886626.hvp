@@ -1,0 +1,35 @@
+
+plan Synchronization_of_DSI3_Channels;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14886626;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14886626";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature synchronization_of_DSI3_channels_intro;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14936883";
+    edfId = 14936883;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature DSI3_channel_idle_register;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14936891";
+    edfId = 14936891;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature synchronization_of_DSI3_channels_examples;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14937074";
+    edfId = 14937074;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+endplan

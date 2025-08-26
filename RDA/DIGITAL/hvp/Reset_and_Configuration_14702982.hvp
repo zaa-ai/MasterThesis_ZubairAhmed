@@ -1,0 +1,64 @@
+
+plan Reset_and_Configuration;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14702982;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702982";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature reset_behaviour;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703312";
+    edfId = 14703312;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature IC_config;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703315";
+    edfId = 14703315;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature main_control_operating_conditions;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703337";
+    edfId = 14703337;
+    edfType = RECOMMENDED_TABLE;
+    customer = true;
+    feature t__RESB__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703338";
+      edfId = 14703338;
+      edfType = RECOMMENDED;
+      customer = true;
+      description = "Active reset pulse width at RESB";
+      spec = 20.0 < spec;
+      measure spec spect__RESB__;
+        source = "t__RESB__";
+      endmeasure
+    endfeature
+  endfeature
+
+  feature main_control_parameters;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703339";
+    edfId = 14703339;
+    edfType = EPM_TABLE;
+    customer = false;
+    feature t__RESB_deb__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703340";
+      edfId = 14703340;
+      edfType = EPM;
+      customer = false;
+      description = "debounce time for RESB reset signal";
+      spec = 0.7 < spec && spec < 1.6;
+      measure spec spect__RESB_deb__;
+        source = "t__RESB_deb__";
+      endmeasure
+    endfeature
+  endfeature
+
+endplan

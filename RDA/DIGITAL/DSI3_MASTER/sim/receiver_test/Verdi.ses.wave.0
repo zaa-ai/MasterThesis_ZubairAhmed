@@ -1,0 +1,192 @@
+Magic 271485
+Revision Verdi_R-2020.12-1
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 25 2560 1058 358 107
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/nfs/wrk.jvoi/sim/52143/e52143a/DSI3_MASTER/receiver_test/receiver_test.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+windowTimeUnit 1us
+
+; waveform viewport range
+zoom 1193.439421 3239.335571 1u
+cursor 2658.247980
+marker 66513.225145
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+userMarker 66525.875145 pa_begin ID_GREEN5 long_dashed
+userMarker 66598.535145 pa_end ID_GREEN5 long_dashed
+
+; show marker information
+; showMarkerValue [absolute|adjacent|relative|frequency]
+showMarkerValue adjacent
+showMarkerValue relative
+
+; visible top row signal index
+top 0
+; marker line index
+markerPos 93
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "ut"
+addSubGroup "chip_in(dsi3_chip_if)"
+endSubGroup "chip_in(dsi3_chip_if)"
+addSubGroup "clk_rst(clk_reset_if)#1"
+activeDirFile "" "/nfs/wrk.jvoi/sim/52143/e52143a/DSI3_MASTER/receiver_test/receiver_test.fsdb"
+addSignal -h 15 /testrunner/ts/fut/clk_rst/clk
+addSignal -h 15 /testrunner/ts/fut/clk_rst/rstn
+endSubGroup "clk_rst(clk_reset_if)#1"
+addSubGroup "fut" -e FALSE
+addSignal -w analog -ds pwc -h 98 -UNSIGNED -UDEC /testrunner/ts/fut/rx_as_chip[1:0]
+addSignal -w analog -ds pwc -h 98 -UNSIGNED /testrunner/ts/fut/dsi3_filter/chip_in/chip[1:0]
+addSignal -w analog -ds pwc -h 98 -UNSIGNED /testrunner/ts/fut/chip_filtered_if/chip[1:0]
+addSignal -w analog -ds pwc -h 98 -UNSIGNED -UDEC /testrunner/ts/fut/expected_chip[1:0]
+addSignal -h 15 /testrunner/ts/fut/miscompare
+addSignal -h 15 -UNSIGNED /testrunner/ts/fut/chip_filtered[1:0]
+addSignal -h 15 -UNSIGNED /testrunner/ts/fut/rx[1:0]
+endSubGroup "fut"
+addSubGroup "slave_if(dsi3_slave_if)"
+addSignal -expanded -h 15 /testrunner/ts/ut/slave_if/cable
+addSignal -h 15 /testrunner/ts/ut/slave_if/cable.Voltage
+addSignal -w analog -ds pwc -h 98 -UNSIGNED -UDEC /testrunner/ts/ut/slave_if/cable.Current[31:0]
+endSubGroup "slave_if(dsi3_slave_if)"
+addSubGroup "clk_rst(clk_reset_if)" -e FALSE
+addSignal -h 15 /testrunner/ts/ut/clk_rst/clk
+addSignal -h 15 /testrunner/ts/ut/clk_rst/rstn
+endSubGroup "clk_rst(clk_reset_if)"
+addSignal -h 15 /testrunner/ts/ut/SYMBOL_ERROR
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/chip_time_config[1:0]
+addSignal -h 15 /testrunner/ts/ut/current_selector
+addSignal -h 15 /testrunner/ts/ut/enable
+addSignal -h 15 /testrunner/ts/ut/enable_clk
+addSignal -w analog -ds pwc -h 98 -UNSIGNED -UDEC /testrunner/ts/ut/i_dsi3_in[1:0]
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_symbol_builder/o_received_0_as_first
+addSignal -h 15 /testrunner/ts/ut/name
+addSignal -h 15 /testrunner/ts/ut/o_rec_pending
+addSignal -h 15 /testrunner/ts/ut/o_symbol_error_set_for_mon
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/receive_time_out[15:0]
+addSignal -h 15 /testrunner/ts/ut/received_data
+addSignal -h 15 /testrunner/ts/ut/response_finished
+addSignal -h 15 /testrunner/ts/ut/rx_data
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/symbol_count[7:0]
+addSignal -h 15 /testrunner/ts/ut/symbol_count_over_flow
+addSignal -h 15 /testrunner/ts/ut/tick_1us
+addSignal -h 15 /testrunner/ts/ut/tick_3MHz
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/time_base[15:0]
+addGroup "i_dsi3_receive" -e FALSE
+addSubGroup "chip_filtered(dsi3_chip_if)"
+addSignal -h 15 -UNSIGNED /testrunner/ts/ut/i_dsi3_receive/chip_filtered/chip[1:0]
+endSubGroup "chip_filtered(dsi3_chip_if)"
+addSubGroup "chip_sampled(dsi3_chip_if)"
+addSignal -h 15 -UNSIGNED /testrunner/ts/ut/i_dsi3_receive/chip_sampled/chip[1:0]
+endSubGroup "chip_sampled(dsi3_chip_if)"
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/chip_ready
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/error_invalid_chip
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/error_invalid_symbol
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_enable_receiver
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_mode
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_receive_time_out
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/i_dsi3_receive/i_rx[1:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/i_dsi3_receive/i_sample_cfg[1:0]
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/next_chip_not_C0
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/o_data
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/o_rec_pending
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/o_received_data
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/o_response_finished
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/i_dsi3_receive/o_rx_test[1:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/i_dsi3_receive/o_symbol_count[8:0]
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/o_symbol_count_overflow
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/o_symbol_error_set
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/received_3_C0_chips
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/receiving_started_tick
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/stop_receiving
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/i_dsi3_receive/symbol_decoded[3:0]
+addSignal -h 15 -UNSIGNED /testrunner/ts/ut/i_dsi3_receive/symbol_out[2:0]
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/symbol_ready
+addGroup "i_dsi3_receive_data_collect" -e FALSE
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_data_collect/data_word_ready
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_data_collect/i_enable_receiver
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_data_collect/i_mode
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_data_collect/i_rec_pending
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_data_collect/i_receive_time_out
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_data_collect/i_receiving_started_tick
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_data_collect/i_response_finished
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_data_collect/i_symbol[3:0]
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_data_collect/i_symbol_ready
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_data_collect/o_data
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_data_collect/o_received_data
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_data_collect/o_response_finished
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_data_collect/o_stop_receiving
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_data_collect/o_symbol_count[8:0]
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_data_collect/o_symbol_count_overflow
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_data_collect/rec_data_ecc[5:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_data_collect/rec_data_temp[15:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_data_collect/rec_data_temp_next[15:0]
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_data_collect/received_data_next
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_data_collect/response_finished_next
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_data_collect/response_finished_with_unsaved_data
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_data_collect/save_data
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_data_collect/symbol_count_overflow
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_data_collect/symbol_count_temp[8:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_data_collect/symbol_count_temp_next[8:0]
+addGroup "i_dsi3_receive_sampling" -e FALSE
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/chip_change
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/chip_change_from_0
+addSignal -h 15 -UNSIGNED /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/chip_prev[1:0]
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/chip_ready_nxt
+addSignal -h 15 -UNSIGNED /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/chip_sampled[1:0]
+addSignal -h 15 -UNSIGNED /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/chip_sampled_nxt[1:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/count_sample_ticks[7:0]
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/counter_reset_for_edge_too_late
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/counter_reset_for_edge_too_late_nxt
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/edge_too_early
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/edge_too_late
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/i_enable
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/i_sample_cfg[1:0]
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/i_stop_receiving
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/max_samples[6:0]
+addSignal -h 15 -UNSIGNED /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/new_chip[1:0]
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/new_sample_cycle
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/o_chip_ready
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/o_rec_start_tick
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/o_receiving
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/receiving_enabled
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/receiving_enabled_nxt
+addSignal -h 15 /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/reset_sample_counter
+addSignal -h 15 -UNSIGNED /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/sample_prev[1:0]
+addSignal -h 15 -UNSIGNED /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/sample_prev_nxt[1:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/sample_uncertainty[5:0]
+addSignal -h 15 -UNSIGNED /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/state[1:0]
+addSignal -h 15 -UNSIGNED /testrunner/ts/ut/i_dsi3_receive/i_dsi3_receive_sampling/state_next[1:0]
+addGroup "G5"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+

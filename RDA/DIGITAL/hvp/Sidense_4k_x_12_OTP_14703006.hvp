@@ -1,0 +1,468 @@
+`include "Application_Note_2_14703008.hvp"
+
+plan Sidense_4k_x_12_OTP;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14703006;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703006";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature Recommended_Operating_Conditions;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703023";
+    edfId = 14703023;
+    edfType = RECOMMENDED_TABLE;
+    customer = false;
+    feature T__OP_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703024";
+      edfId = 14703024;
+      edfType = RECOMMENDED;
+      customer = false;
+      description = "recommended temperature range";
+      spec = -40.0 < spec && spec < 150.0;
+      measure spec specT__OP_Sidense4kx12OTP__;
+        source = "T__OP_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+    feature V__SUP_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703025";
+      edfId = 14703025;
+      edfType = RECOMMENDED;
+      customer = false;
+      description = "supply voltage range";
+      measure spec specV__SUP_Sidense4kx12OTP__;
+        source = "V__SUP_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+    feature V__DD_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703026";
+      edfId = 14703026;
+      edfType = RECOMMENDED;
+      customer = false;
+      description = "digital supply voltage";
+      spec = 1.62 < spec && spec < 1.98;
+      measure spec specV__DD_Sidense4kx12OTP__;
+        source = "V__DD_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+    feature V__RR_rd_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703027";
+      edfId = 14703027;
+      edfType = RECOMMENDED;
+      customer = false;
+      description = "read voltage, reading";
+      spec = 2.7 < spec && spec < 3.3;
+      measure spec specV__RR_rd_Sidense4kx12OTP__;
+        source = "V__RR_rd_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+    feature V__RR_rd1_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703028";
+      edfId = 14703028;
+      edfType = RECOMMENDED;
+      customer = false;
+      description = "read voltage VRR1 for verify of programming, see programming cycle in chapter 7 in [[14703069]]";
+      measure spec specV__RR_rd1_Sidense4kx12OTP__;
+        source = "V__RR_rd1_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+    feature V__RR_rd2_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703029";
+      edfId = 14703029;
+      edfType = RECOMMENDED;
+      customer = false;
+      description = "read voltage VRR2 for verify of programming, see programming cycle in chapter 7 in [[14703069]]";
+      measure spec specV__RR_rd2_Sidense4kx12OTP__;
+        source = "V__RR_rd2_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+    feature V__RR_cs_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703030";
+      edfId = 14703030;
+      edfType = RECOMMENDED;
+      customer = false;
+      description = "read voltage during cell stress test, array clean test or leaky bit test";
+      measure spec specV__RR_cs_Sidense4kx12OTP__;
+        source = "V__RR_cs_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+    feature V__RR_lk_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703031";
+      edfId = 14703031;
+      edfType = RECOMMENDED;
+      customer = false;
+      description = "read voltage during leakage test";
+      measure spec specV__RR_lk_Sidense4kx12OTP__;
+        source = "V__RR_lk_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+    feature V__RR_bt_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703032";
+      edfId = 14703032;
+      edfType = RECOMMENDED;
+      customer = false;
+      description = "read voltage during weak bit test";
+      measure spec specV__RR_bt_Sidense4kx12OTP__;
+        source = "V__RR_bt_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+    feature V__RR_wr_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703033";
+      edfId = 14703033;
+      edfType = RECOMMENDED;
+      customer = false;
+      description = "read voltage during programming";
+      measure spec specV__RR_wr_Sidense4kx12OTP__;
+        source = "V__RR_wr_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+    feature V__RR_unselected_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703034";
+      edfId = 14703034;
+      edfType = RECOMMENDED;
+      customer = false;
+      description = "read voltage for unselected IP";
+      spec = 0.0 < spec;
+      measure spec specV__RR_unselected_Sidense4kx12OTP__;
+        source = "V__RR_unselected_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+    feature V__PP_ext_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703035";
+      edfId = 14703035;
+      edfType = RECOMMENDED;
+      customer = false;
+      description = "porgramming voltage (external programming via pad)";
+      spec = 7.9 < spec && spec < 8.4;
+      measure spec specV__PP_ext_Sidense4kx12OTP__;
+        source = "V__PP_ext_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+    feature V__PP_IPS_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703036";
+      edfId = 14703036;
+      edfType = RECOMMENDED;
+      customer = false;
+      description = "programming voltage using IPS (trimmed, target 8,0V..8,6V)";
+      spec = 7.5 < spec && spec < 8.8;
+      measure spec specV__PP_IPS_Sidense4kx12OTP__;
+        source = "V__PP_IPS_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+    feature V__PP_wr_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703037";
+      edfId = 14703037;
+      edfType = RECOMMENDED;
+      customer = false;
+      description = "VPP range, when enable writing condition togehter with an unregulated VPP source";
+      measure spec specV__PP_wr_Sidense4kx12OTP__;
+        source = "V__PP_wr_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+    feature V__PP_unselected_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703038";
+      edfId = 14703038;
+      edfType = RECOMMENDED;
+      customer = false;
+      description = "VPP level, if unselected";
+      spec = 0.0 < spec;
+      measure spec specV__PP_unselected_Sidense4kx12OTP__;
+        source = "V__PP_unselected_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+    feature V__PP_rd_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703039";
+      edfId = 14703039;
+      edfType = RECOMMENDED;
+      customer = false;
+      description = "programming voltage level during standby or reading";
+      spec = 0.0 < spec;
+      measure spec specV__PP_rd_Sidense4kx12OTP__;
+        source = "V__PP_rd_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+    feature V__REF_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703040";
+      edfId = 14703040;
+      edfType = RECOMMENDED;
+      customer = false;
+      measure spec specV__REF_Sidense4kx12OTP__;
+        source = "V__REF_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+    feature V__EHV_off_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703041";
+      edfId = 14703041;
+      edfType = RECOMMENDED;
+      customer = false;
+      description = "supply is not ready, IP is disabled for programming";
+      spec = -0.3 < spec && spec < 0.3;
+      measure spec specV__EHV_off_Sidense4kx12OTP__;
+        source = "V__EHV_off_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+    feature V__EHV_on_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703042";
+      edfId = 14703042;
+      edfType = RECOMMENDED;
+      customer = false;
+      description = "supply is ready, IP is enabled for programming";
+      measure spec specV__EHV_on_Sidense4kx12OTP__;
+        source = "V__EHV_on_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+    feature V__dig_1_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703043";
+      edfId = 14703043;
+      edfType = RECOMMENDED;
+      customer = false;
+      description = "digital '1'";
+      measure spec specV__dig_1_Sidense4kx12OTP__;
+        source = "V__dig_1_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+    feature V__dig_0_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703044";
+      edfId = 14703044;
+      edfType = RECOMMENDED;
+      customer = false;
+      description = "digital '0'";
+      spec = -0.3 < spec && spec < 0.3;
+      measure spec specV__dig_0_Sidense4kx12OTP__;
+        source = "V__dig_0_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+  endfeature
+
+  feature Electrical_Parameter_Table;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703045";
+    edfId = 14703045;
+    edfType = EPM_TABLE;
+    customer = false;
+    description = "Unless noted otherwise, the conditions for all parameter are as following:*recommended operation conditions*all digital signals set to '0'*EHV=0V";
+    feature T__PROG_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703046";
+      edfId = 14703046;
+      edfType = EPM;
+      customer = false;
+      description = "programming temperature range";
+      spec = -40.0 < spec && spec < 150.0;
+      measure spec specT__PROG_Sidense4kx12OTP__;
+        source = "T__PROG_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+    feature I__SUP_PROG_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703047";
+      edfId = 14703047;
+      edfType = EPM;
+      customer = false;
+      description = "programming supply current";
+      measure spec specI__SUP_PROG_Sidense4kx12OTP__;
+        source = "I__SUP_PROG_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+    feature t__rd_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703048";
+      edfId = 14703048;
+      edfType = EPM;
+      customer = false;
+      description = "read time in single ended mode (includes setup and recovery time)";
+      spec = spec < 69.0;
+      measure spec spect__rd_Sidense4kx12OTP__;
+        source = "t__rd_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+    feature t__rd_max_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703049";
+      edfId = 14703049;
+      edfType = EPM;
+      customer = false;
+      description = "maximum read pulse time";
+      spec = spec < 2.0;
+      measure spec spect__rd_max_Sidense4kx12OTP__;
+        source = "t__rd_max_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+    feature t__powerup_OTP_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703050";
+      edfId = 14703050;
+      edfType = EPM;
+      customer = false;
+      description = "startup time for reading (settling of VRR)";
+      spec = spec < 3.0;
+      measure spec spect__powerup_OTP_Sidense4kx12OTP__;
+        source = "t__powerup_OTP_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+    feature t__powerup_IPS_OTP_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703051";
+      edfId = 14703051;
+      edfType = EPM;
+      customer = false;
+      description = "startup time after enabling biasing of IPS and settling of VRR for reading";
+      spec = spec < 8.3;
+      measure spec spect__powerup_IPS_OTP_Sidense4kx12OTP__;
+        source = "t__powerup_IPS_OTP_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+    feature t__wakeup_OTP_Sidense4kx12OTP__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703052";
+      edfId = 14703052;
+      edfType = EPM;
+      customer = false;
+      description = "delay after selection and address settling and ready for reading";
+      spec = spec < 17.0;
+      measure spec spect__wakeup_OTP_Sidense4kx12OTP__;
+        source = "t__wakeup_OTP_Sidense4kx12OTP__";
+      endmeasure
+    endfeature
+  endfeature
+
+  feature Test_Parameter_Table;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703053";
+    edfId = 14703053;
+    edfType = EPM_TABLE;
+    customer = false;
+    description = "Unless noted otherwise, the conditions for all parameter are as following:*nominal recommended operation conditions*all digital signals set to '0'";
+    feature Sense_Amplifier_Mode_P;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703054";
+      edfId = 14703054;
+      edfType = EPM;
+      customer = false;
+      description = "Amplifier Check for not stuck at 0";
+      spec = 4094.5 < spec && spec < 4095.5;
+      measure spec specSense_Amplifier_Mode_P;
+        source = "Sense_Amplifier_Mode_P";
+      endmeasure
+    endfeature
+    feature Sense_Amplifier_Mode_N;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703055";
+      edfId = 14703055;
+      edfType = EPM;
+      customer = false;
+      description = "Amplifier Check for not stuck at 1";
+      spec = -0.5 < spec && spec < 0.5;
+      measure spec specSense_Amplifier_Mode_N;
+        source = "Sense_Amplifier_Mode_N";
+      endmeasure
+    endfeature
+    feature Wordline_Continuity;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703056";
+      edfId = 14703056;
+      edfType = EPM;
+      customer = false;
+      description = "Address Decoding";
+      spec = -0.5 < spec && spec < 0.5;
+      measure spec specWordline_Continuity;
+        source = "Wordline_Continuity";
+      endmeasure
+    endfeature
+    feature Bitline_Continuity;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703057";
+      edfId = 14703057;
+      edfType = EPM;
+      customer = false;
+      description = "Bitline Decoding";
+      spec = -0.5 < spec && spec < 0.5;
+      measure spec specBitline_Continuity;
+        source = "Bitline_Continuity";
+      endmeasure
+    endfeature
+    feature Read_Cell_Stress;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703058";
+      edfId = 14703058;
+      edfType = EPM;
+      customer = false;
+      description = "Pre-conditoning for Array Clean";
+      spec = -0.5 < spec && spec < 0.5;
+      measure spec specRead_Cell_Stress;
+        source = "Read_Cell_Stress";
+      endmeasure
+    endfeature
+    feature Array_Clean;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703059";
+      edfId = 14703059;
+      edfType = EPM;
+      customer = false;
+      description = "Leaky Bits Check";
+      spec = -0.5 < spec && spec < 0.5;
+      measure spec specArray_Clean;
+        source = "Array_Clean";
+      endmeasure
+    endfeature
+    feature Program_and_Verify;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703060";
+      edfId = 14703060;
+      edfType = EPM;
+      customer = false;
+      spec = 1.9 < spec && spec < 2.1;
+      measure spec specProgram_and_Verify;
+        source = "Program_and_Verify";
+      endmeasure
+    endfeature
+    feature Program_Soak_Pulses;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703061";
+      edfId = 14703061;
+      edfType = EPM;
+      customer = false;
+      description = "Up to 11 Prog/Soak Pulses may be used for successful programming.";
+      measure spec specProgram_Soak_Pulses;
+        source = "Program_Soak_Pulses";
+      endmeasure
+    endfeature
+    feature Mission_Mode;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703062";
+      edfId = 14703062;
+      edfType = EPM;
+      customer = false;
+      description = "Weak and Leaky Bit Test";
+      spec = -0.5 < spec && spec < 0.5;
+      measure spec specMission_Mode;
+        source = "Mission_Mode";
+      endmeasure
+    endfeature
+  endfeature
+
+  feature Elmos_Internal_Parameters;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703063";
+    edfId = 14703063;
+    edfType = UNIVERSAL_TABLE;
+    customer = false;
+    feature Row_0;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703064";
+      edfId = 14703064;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+    endfeature
+    feature Row_1;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703065";
+      edfId = 14703065;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+    endfeature
+    feature Row_2;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703066";
+      edfId = 14703066;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+    endfeature
+    feature Row_3;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703067";
+      edfId = 14703067;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+    endfeature
+    feature Row_4;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703068";
+      edfId = 14703068;
+      edfType = UNIVERSAL_PART;
+      customer = false;
+    endfeature
+  endfeature
+
+  subplan Application_Note_2;
+endplan

@@ -1,0 +1,63 @@
+
+**------------------------------------------------
+** Main
+**------------------------------------------------
+  `if 0
+`if models[0]
+  `automotive_pulse(name=automotive_pulse trig=trig p=vbat type=ISO7637_1)
+`elsif models[1]
+  `automotive_pulse(name=automotive_pulse trig=trig p=vbat type=ISO7637_2A)
+`elsif models[2]
+  `automotive_pulse(name=automotive_pulse trig=trig p=vbat type=ISO7637_2B)
+`elsif models[3]
+  `automotive_pulse(name=automotive_pulse trig=trig p=vbat type=ISO7637_3)
+`elsif models[4]
+  `automotive_pulse(name=automotive_pulse trig=trig p=vbat type=ISO7637_5)
+`elsif models[5]
+  `automotive_pulse(name=automotive_pulse trig=trig p=vbat type=LV124_E02)
+`elsif models[6]
+  `automotive_pulse(name=automotive_pulse trig=trig p=vbat type=LV124_E03)
+`elsif models[7]
+  `automotive_pulse(name=automotive_pulse trig=trig p=vbat type=LV124_E04)
+`elsif models[8]
+  `automotive_pulse(name=automotive_pulse trig=trig p=vbat type=LV124_E05)
+`elsif models[9]
+  `automotive_pulse(name=automotive_pulse trig=trig p=vbat type=LV124_E06)
+`elsif models[10]
+  `automotive_pulse(name=automotive_pulse trig=trig p=vbat type=LV124_E07)
+`elsif models[11]
+  `automotive_pulse(name=automotive_pulse trig=trig p=vbat type=LV124_E08)
+`elsif models[12]
+  `automotive_pulse(name=automotive_pulse trig=trig p=vbat type=LV124_E09)
+`elsif models[13]
+  `automotive_pulse(name=automotive_pulse trig=trig p=vbat type=LV124_E11)
+`elsif models[14]
+  `automotive_pulse(name=automotive_pulse trig=trig p=vbat type=LV124_E12)
+`endif
+  `endif
+  
+`vsupply(src=vvbat p=vbat)
+
+*----------
+
+`vsrc(src=vtrig p=trig)
+
+*----------
+
+define sources_hssw(__nr__=0)
+
+  `vsrc(src=vhssw__nr___en p=xdut.hsin__nr___en)
+  
+  `vsrc(src=vhsout__nr__      p=hsout__nr___pcb        rs=10`m hz=1)
+  `vsrc(src=vhsout__nr___vbat p=hsout__nr___pcb n=vbat rs=10`m hz=1)
+  
+  `vsrc(src=ven_us__nr__ p=en_us__nr__)
+  
+enddefine
+
+`sources_hssw(nr=0)
+`sources_hssw(nr=1)
+
+**------------------------------------------------
+**------------------------------------------------
+

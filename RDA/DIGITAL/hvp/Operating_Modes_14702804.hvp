@@ -1,0 +1,28 @@
+
+plan Operating_Modes;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14702804;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702804";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature Description;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702805";
+    edfId = 14702805;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+  feature Reference;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702806";
+    edfId = 14702806;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+endplan

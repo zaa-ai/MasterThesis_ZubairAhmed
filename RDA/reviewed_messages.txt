@@ -1,0 +1,18 @@
+# this is the review file for any warnings and errors in the project
+
+# add a section for every file that contains errors and / or warning reported during check procedure
+# <filename>   is relative to the project root directory
+# <message...> is the message from the  
+# use comments (starting with "#") for explanation why the message can be ignored
+
+# An example:
+
+############################
+# messages from file
+<filename>
+
+<message1>
+# can be ignored because of ...
+
+<message2>
+# is irrelevant because of ...

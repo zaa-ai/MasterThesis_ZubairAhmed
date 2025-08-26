@@ -1,0 +1,104 @@
+# gate level related messages to ignore
+
+################################
+# Jira DS109-1
+IGNORE MESSAGE
+  W Warning-[SDFCOM_NTCSIS] No TimingCheck specified in SDF file 
+      /nfs/wrk.tle/projekte/52143/m52143a/DIGITAL/be_run//signoff/results/digtop.func_min.signoff.sdf.gz, 630986
+      module: slp_b_tsmc180bcd50_4kx12_cm16d_ab_r20, "instance: top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.u_otpwrap_l3_top.u_otpwrap_l2_cpu.u_otpwrap_l1_jtag.u_otpwrap_l0_atpg.u_otp4kx12.u_otp4kx12"
+        SDF Warning: No Hold specified in SDF file. Please check if this is 
+        intended.
+IGNORE END
+IGNORE MESSAGE
+  W Warning-[SDFCOM_NTCSIS] No TimingCheck specified in SDF file 
+      /nfs/wrk.tle/projekte/52143/m52143a/DIGITAL/be_run//signoff/results/digtop.func_max.signoff.sdf.gz, 630986
+      module: slp_b_tsmc180bcd50_4kx12_cm16d_ab_r20, "instance: top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.u_otpwrap_l3_top.u_otpwrap_l2_cpu.u_otpwrap_l1_jtag.u_otpwrap_l0_atpg.u_otp4kx12.u_otp4kx12"
+        SDF Warning: No Hold specified in SDF file. Please check if this is 
+        intended.
+IGNORE END
+
+
+IGNORE MESSAGE
+  W WARNING: "/nfs/wrk.jvoi/projekte/52143/e52143a_release_branch/ANALOG/../DIGITAL/tech/TSMC_180_BCD/TCB018GBWP7T/models/tcb018gbwp7t.v", 20739: Timing violation in top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_clock_switch.sel_2_s_n_reg
+    $setuphold( negedge CPN &&& SE_DEFCHK:2249, negedge SE:2028, limits: (412,-118) );
+IGNORE END
+
+IGNORE MESSAGE
+  W WARNING: "/nfs/wrk.jvoi/projekte/52143/e52143a_release_branch/ANALOG/../DIGITAL/tech/TSMC_180_BCD/TCB018GBWP7T/models/tcb018gbwp7t.v", 20049: Timing violation in top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_clock_switch.sel_1_s_n_reg
+    $setuphold( negedge CPN &&& SE_DEFCHK:2157, negedge SE:2028, limits: (376,-126) );
+IGNORE END
+IGNORE MESSAGE
+  E ERROR: "/nfs/wrk.jvoi/projekte/52143/e52143a_release_branch/ANALOG/../DIGITAL/tech/TSMC_180_BCD/TCB018GBWP7T/models/tcb018gbwp7t.v", 20739: Timing violation in top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_clock_switch.sel_2_s_n_reg
+    $setuphold( negedge CPN &&& SE_DEFCHK:2249, negedge SE:2028, limits: (412,-118) );
+IGNORE END
+
+IGNORE MESSAGE
+  E ERROR: "/nfs/wrk.jvoi/projekte/52143/e52143a_release_branch/ANALOG/../DIGITAL/tech/TSMC_180_BCD/TCB018GBWP7T/models/tcb018gbwp7t.v", 20049: Timing violation in top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_clock_switch.sel_1_s_n_reg
+    $setuphold( negedge CPN &&& SE_DEFCHK:2157, negedge SE:2028, limits: (376,-126) );
+IGNORE END
+
+################################
+
+IGNORE MESSAGE
+  W WARNING: found 4 SDF annotation warnings
+IGNORE END
+
+IGNORE MESSAGES IN top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.u_otpwrap_l3_top.u_otpwrap_l2_cpu.u_otpwrap_l1_jtag.u_otpwrap_l0_atpg.gen_tsmc_u_otp4kx12.u_ips
+
+IGNORE MESSAGE
+  W WARNING: Lint-[VNGS] Variable never gets set
+      /nfs/wrk.tle/projekte/52143/m52143a/ANALOG/../DIGITAL/tech/TSMC_180_BCD/ip/STD_OTP_CHARGE_PUMP/models/ips_tsmc180bcd50_p1r_ad.v, 57
+        Following variable has never been set any value.
+        Source info: VDD
+IGNORE END
+IGNORE MESSAGE
+  W WARNING: Lint-[VNGS] Variable never gets set
+      /nfs/wrk.tle/projekte/52143/m52143a/ANALOG/../DIGITAL/tech/TSMC_180_BCD/ip/STD_OTP_CHARGE_PUMP/models/ips_tsmc180bcd50_p1r_ad.v, 58
+        Following variable has never been set any value.
+        Source info: VSS
+IGNORE END
+IGNORE MESSAGE
+  W WARNING: Lint-[VNGS] Variable never gets set
+      /nfs/wrk.tle/projekte/52143/m52143a/ANALOG/../DIGITAL/tech/TSMC_180_BCD/ip/STD_OTP_CHARGE_PUMP/models/ips_tsmc180bcd50_p1r_ad.v, 59
+        Following variable has never been set any value.
+        Source info: VCC
+IGNORE END
+
+IGNORE MESSAGE
+  W WARNING: Lint-[UI] Unused input
+      /nfs/wrk.tle/projekte/52143/e52143a/DIGITAL/be_run/layout/results/digtop.output.pg.v, 134640
+        Following is an unused input.
+        Source info: VDD
+IGNORE END
+IGNORE MESSAGE
+  W WARNING: Lint-[UI] Unused input
+      /nfs/wrk.tle/projekte/52143/e52143a/DIGITAL/be_run/layout/results/digtop.output.pg.v, 134640
+        Following is an unused input.
+        Source info: VSS
+IGNORE END
+IGNORE MESSAGE
+  W WARNING: Lint-[UI] Unused input
+      /nfs/wrk.tle/projekte/52143/e52143a/DIGITAL/be_run/layout/results/digtop.output.pg.v, 134640
+        Following is an unused input.
+        Source info: VCC
+IGNORE END
+IGNORE MESSAGE
+  W WARNING: Lint-[UI] Unused input
+      /nfs/wrk.tle/projekte/52143/e52143a/DIGITAL/be_run/layout/results/digtop.output.pg.v, 134640
+        Following is an unused input.
+        Source info: VDD_NBL
+IGNORE END
+IGNORE MESSAGE
+  W WARNING: Lint-[UI] Unused input
+      /nfs/wrk.tle/projekte/52143/e52143a/DIGITAL/be_run/layout/results/digtop.output.pg.v, 134640
+        Following is an unused input.
+        Source info: PSUB
+IGNORE END
+
+IGNORE MESSAGE
+  W Warning-[AOUP] Attempt to override undefined parameter
+      /nfs/wrk.tle/projekte/52143/m52143a/ANALOG/../DIGITAL/model/TOP.sv, 213
+        Attempting to override undefined parameter "DSI3_COUNT", will ignore it.
+IGNORE END
+
+

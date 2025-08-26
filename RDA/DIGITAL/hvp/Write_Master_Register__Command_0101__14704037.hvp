@@ -1,0 +1,35 @@
+
+plan Write_Master_Register__Command_0101_;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14704037;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704037";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature write_master_register_operation;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704038";
+    edfId = 14704038;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature write_master_register_CRC;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704039";
+    edfId = 14704039;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+  feature write_master_register_SPI_command;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704040";
+    edfId = 14704040;
+    edfType = GRAPHIC;
+    customer = true;
+  endfeature
+
+endplan

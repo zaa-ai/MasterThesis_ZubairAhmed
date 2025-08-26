@@ -1,0 +1,68 @@
+//****************************************************************************
+//
+//  Copyright (c) 2007 - 2017 Sidense Corp.
+//  
+//  This file contains confidential, proprietary information and trade
+//  secrets of Sidense. No part of this document may be used, reproduced
+//  or transmitted in any form or by any means without prior written
+//  permission of Sidense.
+//  
+//  Any trademarks are the property of their respective owner.
+//  
+//  Sidense Corp
+//  84 Hines Road, Suite 260
+//  Ottawa, ON
+//  Canada K2K 3G3
+//  
+//  email:  support@sidense.com
+//
+//****************************************************************************
+
+//****************************************************************************
+//
+//    SLP_B model 'slp_b_tsmc180bcd50_4kx12_cm16d_ab_r20'
+//    OTP memory:
+//      4Kx12 single ended
+//      2Kx12 differential or ored
+//      1Kx12 differential and ored
+//    OTP array: 2x128x192, 48K bits, column mux 16
+//    Version: v.2014.01.31
+//    Release: v.1.14.11
+//    Generated: Thu Aug 17 16:21:26 EDT 2017
+//
+//****************************************************************************
+
+module slp_b_tsmc180bcd50_4kx12_cm16d_ab_r20(
+    A,
+    CK,
+    D,
+    MR,
+    OE,
+    Q,
+    SEL,
+    WE,
+    VREF,
+    EHV,
+    VPP,
+    VRR
+);
+parameter dataWidth = 12;
+parameter addressWidth = 12;
+parameter modeWidth = 8;
+parameter diffAvailable = 1'b1;
+parameter romContentFile = "";
+parameter MODE_READ_DIFF_BIT = 0;
+parameter MODE_READ_ORED_BIT = 4;
+input SEL;
+input CK;
+input [(addressWidth-1):0] A;
+input WE;
+input [(dataWidth-1):0] D;
+output [(dataWidth-1):0] Q;
+input OE;
+input [(modeWidth-1):0] MR;
+inout VREF;
+input EHV;
+inout VPP;
+inout VRR;
+endmodule

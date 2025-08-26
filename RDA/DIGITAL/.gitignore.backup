@@ -1,0 +1,9 @@
+/results/
+/logs/
+/**/simdir
+/**/logs
+/**/results/
+/**/novas.conf
+/**/Verdi.ses
+*/**/.svn
+/**/.svn

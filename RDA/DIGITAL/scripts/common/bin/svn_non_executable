@@ -1,0 +1,9 @@
+#!/bin/csh -f
+
+foreach file ($*)
+	if (-f $file) then
+		echo $file
+		svn propdel svn:executable $file
+	endif
+end
+

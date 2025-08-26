@@ -1,0 +1,21 @@
+
+plan Ring_Buffer_Addresses;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14979135;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14979135";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature RAM_partitions;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14989887";
+    edfId = 14989887;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+endplan

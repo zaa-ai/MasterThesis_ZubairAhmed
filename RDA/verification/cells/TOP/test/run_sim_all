@@ -1,0 +1,25 @@
+#!/bin/sh
+
+##------------------------------------------------
+## Main
+##------------------------------------------------
+
+#IC_VER="MAIN"; export IC_VER
+
+##----------
+
+./run_sim  start        batch
+./run_sim  sup          batch
+./run_sim  dsi          batch
+./run_sim  timebase     batch
+./run_sim  pads         batch
+./run_sim  atpg         batch
+./run_sim  atpg_nofloat batch
+
+#./run_sim  pads_ana  batch
+#./run_sim  atpg_ana  batch
+
+##------------------------------------------------
+##------------------------------------------------
+
+

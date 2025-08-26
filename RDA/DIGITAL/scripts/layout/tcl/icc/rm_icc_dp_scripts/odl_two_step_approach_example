@@ -1,0 +1,41 @@
+## Faster ODN creation by using the two-steps approach
+#  Step 1 should be done where the single create_on_demand_netlist is used to be done
+#  Step 2 can be done separately and not needed until allocate_fp_budget  
+
+## Step 1 : Only ODN creation 
+#  Use a semaphore to hold off the creation of the FPGNs (full plan group netlist) and the internal constraints until later
+               
+  close [open tmp_locked_full_design w+ 0644] 
+  open_mw_cel Full_Design
+  set_host_options \
+  	-name my_grd_host_options -pool grd \
+  	-submit_options {-P bnormal -l arch=glinux,\
+  	cputype=emt64,mem_free=9G,mem_avail=9G -l \
+  	qsc=e -cwd} 
+  create_on_demand_netlist \
+  	-plan_groups [get_plan_groups] \
+  	-on_demand_cell Design_ODN -netlist_reduction_only \ 
+  	-host_options my_grd_host_options
+  file delete tmp_locked_full_design 
+
+## Step 2 : Create the FPGN and annotate internal constraints in a different session (e.g. overnight or in background)
+
+  while { [file exists tmp_locked_full_design] } {
+  	sh sleep 15
+  }
+  open_mw_cel Full_Design 
+  ...
+  set_host_options \
+  	-name my_grd_host_options -pool grd -submit_options \       
+  	{-P bnormal -l arch=glinux,cputype=emt64,mem_free=9G,mem_avail=9G \
+          -l qsc=e -cwd}
+  create_on_demand_netlist -plan_groups [get_plan_groups] -save_block_netlist_only
+                 
+  create_on_demand_netlist \
+  	-plan_groups [get_plan_groups] \
+      	-save_internal_constraints_only \
+  	-mcmm_map_file rm_icc_scripts/mcmm.scenarios.example \
+  	-mcmm_setup_file rm_icc_dp_scripts/odl_mcmm_map_file \ 
+                (or [-full_sdc_file $ICC_IN_SDC_FILE] for non-MCMM design)
+  	-host_options my_grd_host_options
+

@@ -1,0 +1,48 @@
+#parse( "tmr_definitions.vm" )
+#if($test_name == "top")
+  #parse( "test_if_test_top.vm" )
+#else
+/*==================================================
+ *  Copyright (c) $date.toString("yyyy") Elmos SE
+ *  Author: stove
+ *  Description : Note: This file has been generated automatically by stove
+ *                Note: This file should not be modified manually.
+ *                test interface definition for ${registerFile.name}
+ *==================================================*/
+interface tmr_${test_name}_if;
+
+#if ($tmr_in.has_tmr)	logic	[${tmr_in.vectorMSB}:0] tmr_in;
+#end
+#if ($tmr_out.has_tmr)	logic	[${tmr_out.vectors_msb}:0] tmr_out;
+#end
+#if($tmr_ana_combined == true)
+#foreach( $field in $tmr_ana_signals )	logic	[${field.msb}:0] ${field.field};
+#end
+#else
+#foreach( $field in $tmr_ana_signals )	logic	${field};
+#end
+#end
+
+#macro (modport $name $dir_tmr_in $dir_tmr_out $dir_tmr_ana)
+	modport $name (
+#if ($tmr_in.has_tmr)		$dir_tmr_in	tmr_in#if($tmr_out.has_tmr || $has_tmr_ana),#end
+#end
+#if ($tmr_out.has_tmr)		$dir_tmr_out	tmr_out#if($has_tmr_ana),#end
+#end
+		#tmr_ana_signal_modport($dir_tmr_ana)
+	);
+	
+#end
+
+#modport("master" "input" "output" "output")
+#modport("slave" "output" "input" "input")
+#modport("iomux" "output" "output" "output")
+
+#if ($has_tmr_ana)
+	modport scanmux (
+		input #if($tmr_ana_combined == true) #foreach( $field in $tmr_ana_signals ) ${field.field}#if( $foreach.hasNext ),#end #end #else    #foreach($tmrAnaSignal in $tmr_ana_signals)$tmrAnaSignal#if(!($foreach.last)),#end #end #end
+	);
+#end
+
+endinterface
+#end

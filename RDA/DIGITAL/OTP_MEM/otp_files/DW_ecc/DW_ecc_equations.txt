@@ -1,0 +1,17 @@
+-- *****************************************************  
+--  Configured for 28 data bits and 8 check bits
+-- *****************************************************  
+-- 
+-- ***************************************************** 
+--  Generation of check bit equations  
+-- *****************************************************
+-- 
+$parity +=   1 * (     $bits[ 1] ^ $bits[ 2] ^ $bits[ 3] ^ $bits[ 5] ^ $bits[ 8] ^ $bits[ 9] ^ $bits[11] ^ $bits[14] ^ $bits[17] ^ $bits[18] ^ $bits[19] ^ $bits[21] ^ $bits[24] ^ $bits[25] ^ $bits[27]); 
+$parity +=   2 * (     $bits[ 0] ^ $bits[ 1] ^ $bits[ 2] ^ $bits[ 4] ^ $bits[ 6] ^ $bits[ 8] ^ $bits[10] ^ $bits[12] ^ $bits[16] ^ $bits[17] ^ $bits[18] ^ $bits[20] ^ $bits[22] ^ $bits[24] ^ $bits[26]); 
+$parity +=   4 * ( 1 ^ $bits[ 0] ^ $bits[ 3] ^ $bits[ 4] ^ $bits[ 7] ^ $bits[ 9] ^ $bits[10] ^ $bits[13] ^ $bits[15] ^ $bits[16] ^ $bits[19] ^ $bits[20] ^ $bits[23] ^ $bits[25] ^ $bits[26]); 
+$parity +=   8 * ( 1 ^ $bits[ 0] ^ $bits[ 1] ^ $bits[ 5] ^ $bits[ 6] ^ $bits[ 7] ^ $bits[11] ^ $bits[12] ^ $bits[13] ^ $bits[16] ^ $bits[17] ^ $bits[21] ^ $bits[22] ^ $bits[23] ^ $bits[27]); 
+$parity +=  16 * ( 1 ^ $bits[ 2] ^ $bits[ 3] ^ $bits[ 4] ^ $bits[ 5] ^ $bits[ 6] ^ $bits[ 7] ^ $bits[14] ^ $bits[15] ^ $bits[18] ^ $bits[19] ^ $bits[20] ^ $bits[21] ^ $bits[22] ^ $bits[23]); 
+$parity +=  32 * ( 1 ^ $bits[ 8] ^ $bits[ 9] ^ $bits[10] ^ $bits[11] ^ $bits[12] ^ $bits[13] ^ $bits[14] ^ $bits[15] ^ $bits[24] ^ $bits[25] ^ $bits[26] ^ $bits[27]); 
+$parity +=  64 * ( 1 ^ $bits[ 0] ^ $bits[ 1] ^ $bits[ 2] ^ $bits[ 3] ^ $bits[ 4] ^ $bits[ 5] ^ $bits[ 6] ^ $bits[ 7] ^ $bits[24] ^ $bits[25] ^ $bits[26] ^ $bits[27]); 
+$parity += 128 * ( 1 ^ $bits[ 0] ^ $bits[ 1] ^ $bits[ 2] ^ $bits[ 3] ^ $bits[ 4] ^ $bits[ 5] ^ $bits[ 6] ^ $bits[ 7] ^ $bits[24] ^ $bits[25] ^ $bits[26] ^ $bits[27]); 
+ 

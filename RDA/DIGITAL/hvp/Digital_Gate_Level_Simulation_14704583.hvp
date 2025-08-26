@@ -1,0 +1,28 @@
+
+plan Digital_Gate_Level_Simulation;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14704583;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704583";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature Intro;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704584";
+    edfId = 14704584;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+  feature Note1;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704585";
+    edfId = 14704585;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+endplan

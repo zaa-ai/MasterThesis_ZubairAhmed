@@ -1,0 +1,28 @@
+
+plan Functional_Description;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14702769;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702769";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature OSC20M_Block_diagram;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702770";
+    edfId = 14702770;
+    edfType = GRAPHIC;
+    customer = false;
+  endfeature
+
+  feature Functional_Description;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702771";
+    edfId = 14702771;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+endplan

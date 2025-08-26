@@ -1,0 +1,28 @@
+
+plan Applicative_Pattern;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14704456;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704456";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature Intro;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704457";
+    edfId = 14704457;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+  feature Desciption;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704458";
+    edfId = 14704458;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+endplan

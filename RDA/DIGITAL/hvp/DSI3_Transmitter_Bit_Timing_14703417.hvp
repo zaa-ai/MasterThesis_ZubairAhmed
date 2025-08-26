@@ -1,0 +1,76 @@
+
+plan DSI3_Transmitter_Bit_Timing;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14703417;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703417";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature DSI3_TX_bit_timings;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703418";
+    edfId = 14703418;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature DSI3_transmitter_bit_timing_parameters;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703419";
+    edfId = 14703419;
+    edfType = EPM_TABLE;
+    customer = true;
+    feature t__DSI_BIT_8__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703420";
+      edfId = 14703420;
+      edfType = EPM;
+      customer = true;
+      description = "Nominal DSI3 transmit bit time";
+      measure spec spect__DSI_BIT_8__;
+        source = "t__DSI_BIT_8__";
+      endmeasure
+    endfeature
+    feature t__DSI_BIT_16__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703421";
+      edfId = 14703421;
+      edfType = EPM;
+      customer = true;
+      description = "Slower DSI3 transmit bit time";
+      measure spec spect__DSI_BIT_16__;
+        source = "t__DSI_BIT_16__";
+      endmeasure
+    endfeature
+    feature t__DSI_BIT_32__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703422";
+      edfId = 14703422;
+      edfType = EPM;
+      customer = true;
+      description = "Slowest DSI3 transmit bit time";
+      measure spec spect__DSI_BIT_32__;
+        source = "t__DSI_BIT_32__";
+      endmeasure
+    endfeature
+    feature t__DSI_BIT_TOL__;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703423";
+      edfId = 14703423;
+      edfType = EPM;
+      customer = false;
+      description = "Command bit time tolerance";
+      spec = -0.3 < spec && spec < 0.3;
+      measure spec spect__DSI_BIT_TOL__;
+        source = "t__DSI_BIT_TOL__";
+      endmeasure
+    endfeature
+  endfeature
+
+  feature bittime_accuracy;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703424";
+    edfId = 14703424;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+endplan

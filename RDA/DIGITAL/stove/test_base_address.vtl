@@ -1,0 +1,6 @@
+
+#foreach ($instance in $instances)
+  #if ($instance.name.contains("TEST_"))
+	  $instance.name = $instance.baseAddress.replace("0x","'h");
+  #end  
+#end

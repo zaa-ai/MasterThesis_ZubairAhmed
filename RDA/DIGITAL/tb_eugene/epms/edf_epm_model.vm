@@ -1,0 +1,196 @@
+#macro( generate_class $prefix $parameter $parameterName)
+#set($time_scale = "")
+	class ${prefix}_$parameterName extends edf_parameter_base;
+		const string name = "$parameter.Name";
+	#if($parameter.Unit)
+		const string unit = "$parameter.Unit";
+		#if($parameter.Unit.equals("ns"))
+			#set($time_scale = "1ns")
+		#end
+		#if($parameter.Unit.equals("us") || $parameter.Unit.equals("µs"))
+			#set($time_scale = "1us")
+		#end
+		#if($parameter.Unit.equals("ms"))
+			#set($time_scale = "1ms")
+		#end
+		#if($parameter.Unit.equals("s"))
+			#set($time_scale = "1s")
+		#end
+	#end
+	#if($tools.isNumber($parameter.Min))	
+		const real min = $parameter.Min;
+	#end
+	#if($tools.isNumber($parameter.Typ))
+		const real typ = $parameter.Typ;
+	#end
+	#if($tools.isNumber($parameter.Max))
+		const real max = $parameter.Max;
+	#end
+	
+		virtual function string get_name();
+			return name;
+		endfunction
+	#if($time_scale)
+	
+		function time get_time_scale();
+			return $time_scale;
+		endfunction
+	#end
+	#if($tools.isNumber($parameter.Min))
+		
+		virtual function real get_min();
+			return min;
+		endfunction	
+	#end
+	#if($tools.isNumber($parameter.Typ))
+	
+		virtual function real get_typ();
+			return typ;
+		endfunction	
+	#end
+	#if($tools.isNumber($parameter.Max))
+	
+		virtual function real get_max();
+			return max;
+		endfunction	
+	#end
+	endclass
+		
+#end
+`ifndef EDF_EPM_MODEL_PKG_SV
+`define EDF_EPM_MODEL_PKG_SV
+// @SuppressProblem -type fully_unread_class_field -file current
+// @SuppressProblem -type assign_int_to_real -file current
+
+package edf_epm_model_pkg;
+
+	interface class edf_parameter;
+		
+		pure virtual function string get_name();
+		
+		pure virtual function real get_min();
+		
+		pure virtual function int get_min_as_int();
+		
+		pure virtual function real get_typ();
+		
+		pure virtual function int get_typ_as_int();
+		
+		pure virtual function real get_max();
+		
+		pure virtual function int get_max_as_int();
+		
+		pure virtual function time get_time_scale();
+		
+	endclass
+	
+	class edf_parameter_base implements edf_parameter;
+		
+		function new();
+			// nothing to do here
+		endfunction
+		
+		virtual function string get_name();
+		endfunction
+		
+		virtual function real get_min();
+		endfunction
+		
+		virtual function real get_typ();
+		endfunction
+		
+		virtual function real get_max();
+		endfunction
+		
+		virtual function time get_time_scale();
+		endfunction
+
+		virtual function int get_min_as_int();
+			return int'(get_min());
+		endfunction
+		
+		virtual function int get_typ_as_int();
+			return int'(get_typ());
+		endfunction
+		
+		virtual function int get_max_as_int();
+			return int'(get_max());
+		endfunction
+		
+		virtual function time get_min_time();
+			return get_min() * get_time_scale();
+		endfunction
+		
+		virtual function time get_typ_time();
+			return get_typ() * get_time_scale();
+		endfunction
+		
+		virtual function time get_max_time();
+			return get_max() * get_time_scale();
+		endfunction
+	endclass
+
+#set($epmNames = [])
+#foreach($parameter in $project.getAllByType("EPM"))
+	#set($parameterName = $parameter.Name.replaceAll("\W", "_"))
+	#set($bla = $epmNames.add($parameterName))
+	#generate_class("epm" $parameter $parameterName)
+#end
+#set($maxRatingNames = [])
+#foreach($parameter in $project.getAllByType("MAXRATING"))
+	#set($parameterName = $parameter.Name.replaceAll("\W", "_"))
+	#set($bla = $maxRatingNames.add($parameterName))
+	#generate_class("max" $parameter $parameterName)
+#end
+#set($recommendedNames = [])
+#foreach($parameter in $project.getAllByType("RECOMMENDED"))
+	#set($parameterName = $parameter.Name.replaceAll("\W", "_"))
+	#set($bla = $recommendedNames.add($parameterName))
+	#generate_class("rec" $parameter $parameterName)
+#end
+
+ 	class edf_epms;
+#foreach($name in $epmNames) 		
+ 		epm_$name $name = new();	
+#end
+ 	
+		function new();
+			// nothing to do here
+		endfunction
+ 	endclass
+ 	
+ 	class edf_max_ratings;
+#foreach($name in $maxRatingNames) 		
+ 		max_$name $name = new();	
+#end
+ 	
+		function new();
+			// nothing to do here
+		endfunction
+ 	endclass
+ 	
+ 	class edf_recommended_parameters;
+#foreach($name in $recommendedNames) 		
+ 		rec_$name $name = new();	
+#end
+ 	
+		function new();
+			// nothing to do here
+		endfunction
+ 	endclass 	
+ 	
+ 	class edf_parameter_model;
+ 		edf_epms epms;
+ 		edf_max_ratings max_ratings;
+ 		edf_recommended_parameters recommended;
+ 		
+		function new();
+			epms = new();
+			max_ratings = new();
+			recommended = new();
+		endfunction
+ 	endclass
+
+endpackage	
+
+`endif // EDF_EPM_MODEL_PKG_SV

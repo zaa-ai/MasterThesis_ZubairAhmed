@@ -1,0 +1,51 @@
+`include "Physical_Layer_14703415.hvp"
+`include "Data_Exchange_14703515.hvp"
+`include "Communication_Modes_14703554.hvp"
+`include "DSI3_CRC_calculation_14703644.hvp"
+`include "DSI3_Command_Queue_14834891.hvp"
+`include "DSI3_Data_Buffer_14703572.hvp"
+`include "Synchronization_of_DSI3_Channels_14886626.hvp"
+`include "DSI3_Register_Set_14703651.hvp"
+
+plan DSI3_Interface;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14703414;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703414";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature P01__Intro_;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703866";
+    edfId = 14703866;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature Intro;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703867";
+    edfId = 14703867;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature DSI3_Communication_Interface;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703868";
+    edfId = 14703868;
+    edfType = GRAPHIC;
+    customer = true;
+  endfeature
+
+  subplan Physical_Layer;
+  subplan Data_Exchange;
+  subplan Communication_Modes;
+  subplan DSI3_CRC_calculation;
+  subplan DSI3_Command_Queue;
+  subplan DSI3_Data_Buffer;
+  subplan Synchronization_of_DSI3_Channels;
+  subplan DSI3_Register_Set;
+endplan

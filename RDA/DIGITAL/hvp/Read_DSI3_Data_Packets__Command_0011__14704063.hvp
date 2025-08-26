@@ -1,0 +1,94 @@
+`include "Data_Packet_Status_Word_14704008.hvp"
+
+plan Read_DSI3_Data_Packets__Command_0011_;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14704063;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704063";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature read_DSI3_data_packets_intro;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704064";
+    edfId = 14704064;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature read_DSI3_data_packets_SPI_command;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704065";
+    edfId = 14704065;
+    edfType = GRAPHIC;
+    customer = true;
+  endfeature
+
+  feature read_DSI3_data_packets_command_option_bits;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704066";
+    edfId = 14704066;
+    edfType = UNIVERSAL_TABLE;
+    customer = true;
+    feature Row_0;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704067";
+      edfId = 14704067;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_1;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704068";
+      edfId = 14704068;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_2;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14886788";
+      edfId = 14886788;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_3;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14886789";
+      edfId = 14886789;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_4;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=15002036";
+      edfId = 15002036;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_5;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14886790";
+      edfId = 14886790;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+  endfeature
+
+  feature read_DSI3_data_packets_operation;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704069";
+    edfId = 14704069;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature read_DSI3_data_packets_noData;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14886791";
+    edfId = 14886791;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature read_DSI3_data_packets_wrongSize;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14886792";
+    edfId = 14886792;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  subplan Data_Packet_Status_Word;
+endplan

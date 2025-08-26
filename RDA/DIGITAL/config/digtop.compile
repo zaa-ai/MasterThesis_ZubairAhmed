@@ -1,0 +1,26 @@
+export VLOG_OPTIONS_TB="-sverilog +define+INITIALIZE_MEMORY +define+UVM_NO_DEPRECATED -full64 +lint=all,noVCDE,noNS,noOUDPE,noIWU -nc +v2k +incdir+$UVM_HOME/src/vcs"
+export VLOG_OPTIONS_RTL="-sverilog +define+INITIALIZE_MEMORY +define+UVM_NO_DEPRECATED -full64 +lint=all,noVCDE,noNS,OUDPE:10 -nc +v2k +incdir+$UVM_HOME/src/vcs"
+export VHDL_OPTIONS=" -full64 -vhdl08 -nc -xlrm"
+export VLOG_COMPILER="vlogan"
+export VHDL_COMPILER="vhdlan"
+echo $SIMDIR/$TESTCASE/WORK
+${VHDL_COMPILER} ${VHDL_OPTIONS}  -work DIGITAL $DESIGN/$DIGITAL/rtl/DIGITAL_TECH_pkg.vhd
+${VHDL_COMPILER} ${VHDL_OPTIONS}  -work DIGITAL $DESIGN/$DIGITAL/rtl/MUTEC_project_pkg.vhd
+${VHDL_COMPILER} ${VHDL_OPTIONS}  -work COMMON_LIB -f $DESIGN/$DIGITAL/COMMON_LIB/commonlib_vhdl_pkg.f
+${VHDL_COMPILER} ${VHDL_OPTIONS}  -work DIGITAL -f $DESIGN/$DIGITAL/config/digital_vhdl_pkg.f
+${VHDL_COMPILER} ${VHDL_OPTIONS}  -work PURECELLS -f $DESIGN/$DIGITAL/PURECELLS/purecells_vhdl.f
+${VHDL_COMPILER} ${VHDL_OPTIONS}  -work COMMON_LIB -f $DESIGN/$DIGITAL/COMMON_LIB/commonlib_vhdl.f
+${VLOG_COMPILER} ${VLOG_OPTIONS_RTL}  ${VLOG_OPTIONS_TB} -timescale=1ns/1ps -sverilog -f $DESIGN/$DIGITAL/model_rom_gen/files.f +define+VCS
+${VLOG_COMPILER} ${VLOG_OPTIONS_TB}  -sverilog -f $DESIGN/$DIGITAL/models/memorys/files.f +define+VCS
+${VHDL_COMPILER} ${VHDL_OPTIONS}  -work JTAG -f $DESIGN/$DIGITAL/JTAG/jtag_vhdl_pkg.f
+${VHDL_COMPILER} ${VHDL_OPTIONS}  -work JTAG -f $DESIGN/$DIGITAL/JTAG/jtag_vhdl.f
+source $DESIGN/$DIGITAL/MUTEC/config/mutec_top.compile
+${VLOG_COMPILER} ${VLOG_OPTIONS_RTL}  -sverilog -f $DESIGN/$DIGITAL/COMMON_LIB/files.f +define+VCS -work COMMON_LIB
+${VLOG_COMPILER} ${VLOG_OPTIONS_RTL}  -sverilog -f $DESIGN/$DIGITAL/edf_registers/files.f +define+VCS
+${VLOG_COMPILER} ${VLOG_OPTIONS_RTL}  -sverilog -f $DESIGN/$DIGITAL/DSI3_MASTER/files.f +define+VCS
+${VLOG_COMPILER} ${VLOG_OPTIONS_RTL}  -sverilog -f $DESIGN/$DIGITAL/rtl/files.f +define+VCS
+${VLOG_COMPILER} ${VLOG_OPTIONS_TB}  -sverilog -f $DESIGN/$DIGITAL/config/libs.f +define+VCS
+${VLOG_COMPILER} ${VLOG_OPTIONS_TB}  -sverilog -f $DESIGN/$DIGITAL/libs/TCB018GBWP7T/hdl/files.f
+source  $DESIGN/$DIGITAL/config/otp.compile
+${VHDL_COMPILER} ${VHDL_OPTIONS}  -work MUTEC_TIMER -f $DESIGN/$DIGITAL/MUTEC/TIMER/mutec_timer_vhdl.f
+${VHDL_COMPILER} ${VHDL_OPTIONS}  -work DIGITAL -f $DESIGN/$DIGITAL/config/vhdl_core.f

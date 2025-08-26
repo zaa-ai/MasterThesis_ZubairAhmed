@@ -1,0 +1,8 @@
+#%Module1.0
+
+foreach {d} [list common layout simulation datafiles regdef bamboo] {
+	prepend-path PATH       $env(PROJECT_HOME)/scripts/$d/bin
+	prepend-path RUBYLIB    $env(PROJECT_HOME)/scripts/$d/lib
+	prepend-path PYTHONPATH $env(PROJECT_HOME)/scripts/$d/lib
+}
+

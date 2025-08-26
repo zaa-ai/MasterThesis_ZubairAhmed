@@ -1,0 +1,6 @@
+tcb018gbwp7t        ../DIGITAL/DIGITAL/tech/TSMC_180_BCD/TCB018GBWP7T/mw/tcb018gbwp7t
+SRAM_3072X23U18     ../DIGITAL/DIGITAL/tech/TSMC_180_BCD/ip/SRAM_3072X23U18/lib/mw/SRAM_3072X23U18_LIB
+STD_OTP_4KX12_TM5   ../DIGITAL/DIGITAL/tech/TSMC_180_BCD/ip/OTP_4kx12_tm5_TSMC/mw/slp_b_tsmc180bcd50_4kx12_cm16d_ab_r20_LIB
+STD_OTP_CHARGE_PUMP	../DIGITAL/DIGITAL/tech/TSMC_180_BCD/ip/STD_OTP_CHARGE_PUMP/mw/ips_tsmc180bcd50_p1r_ad_LIB
+digital	            ../DIGITAL/DIGITAL/tech/TSMC_180_BCD/digital_iso/mw/digital
+ROM_nibble_cells    ../DIGITAL/DIGITAL/tech/TSMC_180_BCD/ip/ROM_Nibble/mw/tcb018gbwp7t_rom_LIB

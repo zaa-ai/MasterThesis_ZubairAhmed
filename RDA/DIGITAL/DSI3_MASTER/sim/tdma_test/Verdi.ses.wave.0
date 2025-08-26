@@ -1,0 +1,101 @@
+Magic 271485
+Revision Verdi_S-2021.09-1
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 25 2560 819 497 107
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/nfs/wrk.jvoi/sim/52144/m52144a/DSI3_MASTER/tdma_test/tdma_test.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+windowTimeUnit 1ps
+
+; waveform viewport range
+zoom 0.000000 886550.730000 1p
+cursor 327778.000000
+marker 355555.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; show marker information
+; showMarkerValue [absolute|adjacent|relative|frequency]
+showMarkerValue adjacent
+showMarkerValue relative
+
+; visible top row signal index
+top 5
+; marker line index
+markerPos 17
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "Testbench"
+activeDirFile "" "/nfs/wrk.jvoi/sim/52144/m52144a/DSI3_MASTER/tdma_test/tdma_test.fsdb"
+addSignal -h 15 /testrunner/ts/ut/name
+addSignal -h 15 /testrunner/ts/ut/enable_clk
+addSignal -h 15 /testrunner/ts/ut/tick_1ms
+addSignal -h 15 /testrunner/ts/ut/tick_1us
+addGroup "i_tdma_buffer"
+addSignal -h 15 /testrunner/ts/ut/i_tdma_buffer/header
+addSignal -h 15 /testrunner/ts/ut/i_tdma_buffer/header_next
+addSignal -h 15 /testrunner/ts/ut/i_tdma_buffer/packet
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/i_tdma_buffer/packet_index[3:0]
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/i_tdma_buffer/packet_index_next[3:0]
+addSignal -h 15 /testrunner/ts/ut/i_tdma_buffer/packet_next
+addSignal -h 15 -UNSIGNED /testrunner/ts/ut/i_tdma_buffer/state[2:0]
+addSignal -h 15 -UNSIGNED /testrunner/ts/ut/i_tdma_buffer/state_next[2:0]
+addSignal -h 15 /testrunner/ts/ut/i_tdma_buffer/packet
+addSignal -h 15 /testrunner/ts/ut/i_tdma_buffer/packet_next
+addSignal -h 15 /testrunner/ts/ut/i_tdma_buffer/header
+addSignal -h 15 /testrunner/ts/ut/i_tdma_buffer/header_next
+addSubGroup "tdma(slave)"
+addSignal -h 15 /testrunner/ts/ut/i_tdma_buffer/tdma/request
+addSignal -h 15 /testrunner/ts/ut/i_tdma_buffer/tdma/target
+addSignal -h 15 /testrunner/ts/ut/i_tdma_buffer/tdma/write
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/i_tdma_buffer/tdma/index[3:0]
+addSignal -h 15 /testrunner/ts/ut/i_tdma_buffer/tdma/packet_to_buffer
+addSignal -h 15 /testrunner/ts/ut/i_tdma_buffer/tdma/header_to_buffer
+addSignal -h 15 /testrunner/ts/ut/i_tdma_buffer/tdma/acknowledge
+addSignal -h 15 /testrunner/ts/ut/i_tdma_buffer/tdma/packet_from_buffer
+addSignal -h 15 /testrunner/ts/ut/i_tdma_buffer/tdma/header_from_buffer
+endSubGroup "tdma(slave)"
+addSubGroup "elip(master)"
+addSignal -h 15 /testrunner/ts/ut/i_tdma_buffer/elip/wr
+addSignal -h 15 /testrunner/ts/ut/i_tdma_buffer/elip/rd
+addSignal -h 15 -UNSIGNED -HEX /testrunner/ts/ut/i_tdma_buffer/elip/addr[15:0]
+addSignal -h 15 /testrunner/ts/ut/i_tdma_buffer/elip/data_write
+addSignal -h 15 /testrunner/ts/ut/i_tdma_buffer/elip/data_read
+addSignal -h 15 /testrunner/ts/ut/i_tdma_buffer/elip/ready
+endSubGroup "elip(master)"
+addSubGroup "clk_rst(slave)"
+addSignal -h 15 /testrunner/ts/ut/i_tdma_buffer/clk_rst/clk
+addSignal -h 15 /testrunner/ts/ut/i_tdma_buffer/clk_rst/rstn
+endSubGroup "clk_rst(slave)"
+addGroup "G5"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+

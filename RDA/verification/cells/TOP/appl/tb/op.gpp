@@ -1,0 +1,129 @@
+
+**------------------------------------------------
+** Current Consumption
+**------------------------------------------------
+
+`var(name=op_active val=0)
+`var(name=op_sleep  val=0)
+
+*----------
+
+define meas_v_vsup(__name__ __p__ __n__=gnd __vmin__=6 __vmax__=40 __min__= __typ__= __max__= __print__=1 __x__=var_temp_j __xunit__=degC)
+  
+  `if "$SPSCR_MACROTYPE" eq "SV"
+    if (V__VSUP_active__ > __vmin__-0.1 && V__VSUP_active__ < __vmax__+0.1) begin
+  `endif
+  
+  `meas_v( name  = __name__
+           p     = __p__
+	   n     = __n__
+	   print = __print__
+           min   = __min__
+           typ   = __typ__
+           max   = __max__
+	   x     = __x__
+	   xunit = __xunit__)
+  
+  `if "$SPSCR_MACROTYPE" eq "SV"
+    end
+  `endif
+
+enddefine
+
+**------------------------------------------------
+** Main
+**------------------------------------------------
+
+define op_dsi(__ch__=0)
+  
+  `meas_v_vsup( name = V__DSI__ch___HIGH_active__
+                p    = dsi__ch___pcb
+	        min  = `epm__V__DSI_HIGH___min
+	        typ  = `epm__V__DSI_HIGH___typ
+	        max  = `epm__V__DSI_HIGH___max)
+
+enddefine
+
+*----------
+
+`always(name=Active Mode Operating Point)
+  
+  `if "$SPSCR_MACROTYPE" eq "SV"
+    while (op_active < 0.5) begin
+      #(1`u);
+    end
+  `endif
+  
+  `meas_v( name  = V__VSUP_active__
+           p     = vsup_pcb
+	   print = 0)
+  
+  `meas_i( name = I__VSUP_active__
+           p    = xdut.vsup_p
+	   min  = 1`m * `epm__I__VSUP___min
+	   max  = 20`m)
+  
+  `meas_v( name  = V__VIO_active__
+           p     = vio_pcb
+	   print = 0)
+  
+  `meas_i( name = I__VIO_active__
+           p    = xdut.vio_p
+	   min  = -100`u
+	   max  = 1`m)
+  
+  `meas_v_vsup( name = V__VCC_active__
+                p    = vcc_pcb
+	        min  = `epm__V__VCC___min
+	        typ  = `epm__V__VCC___typ
+	        max  = `epm__V__VCC___max)
+  
+  `meas_v_vsup( name = V__VDD_active__
+                p    = vdd_pcb
+	        min  = `epm__V__VDD___min
+	        typ  = `epm__V__VDD___typ
+	        max  = `epm__V__VDD___max)
+  
+  `meas_v_vsup( name = V__CLDO_active__
+                p    = cldo_pcb
+	        min  = `epm__V__CLDO___min
+	        typ  = `epm__V__CLDO___typ
+	        max  = `epm__V__CLDO___max)
+  
+  `calc( name = f__CLKOSC_active__
+         expr = clkosc_freq
+	 unit = Hz
+	 min  = 1`M * `epm__f__OSC_RC___min
+	 typ  = 1`M * `epm__f__OSC_RC___typ
+	 max  = 1`M * `epm__f__OSC_RC___max)
+  
+  `calc( name  = f__CLKREF_active__
+         expr  = clkref_freq
+	 unit  = Hz
+	 print = 0)
+  
+  `if "$SPSCR_MACROTYPE" eq "SV"
+    if (f__CLKREF_active__ > 479.9`k && f__CLKREF_active__ < 520.1`k) begin
+  `endif
+  `calc( name  = f__CLKPLL_active__
+         expr  = clkpll_freq
+	 unit  = Hz
+	 print = 0)
+  `calc( name = A__CLKPLL_active__
+         expr = clkpll_freq / clkref_freq
+	 min  = 2.0 * `epm__f__CLK_PLL___min
+	 typ  = 2.0 * `epm__f__CLK_PLL___typ
+	 max  = 2.0 * `epm__f__CLK_PLL___max)
+  `if "$SPSCR_MACROTYPE" eq "SV"
+    end
+  `endif
+
+  `op_dsi(ch=0)
+  `op_dsi(ch=1)
+  
+  `set_var(name=op_active val=0)
+  
+`endalways
+
+**------------------------------------------------
+**------------------------------------------------

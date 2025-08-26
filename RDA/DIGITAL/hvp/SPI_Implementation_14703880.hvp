@@ -1,0 +1,42 @@
+
+plan SPI_Implementation;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14703880;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703880";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature SPI_subblocks;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703925";
+    edfId = 14703925;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature SPI_architecture;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703926";
+    edfId = 14703926;
+    edfType = GRAPHIC;
+    customer = true;
+  endfeature
+
+  feature SPI_interrupts;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14703927";
+    edfId = 14703927;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature SPI_command_queue_fill_error;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=15375115";
+    edfId = 15375115;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+endplan

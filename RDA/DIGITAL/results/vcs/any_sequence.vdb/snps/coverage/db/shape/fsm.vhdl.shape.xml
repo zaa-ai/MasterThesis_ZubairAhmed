@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE cov SYSTEM "ucdb_fsm.dtd">
+<fsm count="0"  noconst="1"  >
+  <fsmdef file="17"  name="OTP_MEM.OTP_CTRL RTL"  chksum="1144598164"  >
+    <fsmshape >
+      <fsmfsm name="SYS_STATE"  id="0"  width="32"  line="954"  chksum="1144598164"  >
+        <state name="ST0_SLEEP"  value="0"  id="0"  flag="L"  line="954"  />
+        <state name="ST10_READ_VRR"  value="c"  id="1"  flag="L"  line="1147"  />
+        <state name="ST11_READ_A"  value="d"  id="2"  flag="L"  line="1190"  />
+        <state name="ST12_READ_CK1"  value="e"  id="3"  flag="L"  line="1199"  />
+        <state name="ST13_READ_CK0"  value="f"  id="4"  flag="L"  line="1207"  />
+        <state name="ST14_READ_EVAL"  value="10"  id="5"  flag="L"  line="1217"  />
+        <state name="ST15_FINISH"  value="11"  id="6"  flag="L"  line="1139"  />
+        <state name="ST16_VPP_OFF"  value="12"  id="7"  flag="L"  line="1261"  />
+        <state name="ST17_CPU_CK0"  value="4"  id="8"  flag="L"  line="1075"  />
+        <state name="ST1_IDLE"  value="1"  id="9"  flag="L"  line="1026"  />
+        <state name="ST20_SEL_READ"  value="2"  id="10"  flag="L"  line="1033"  />
+        <state name="ST2_CPU_CK1"  value="3"  id="11"  flag="L"  line="1068"  />
+        <state name="ST3_VPP_ON"  value="5"  id="12"  flag="L"  line="1053"  />
+        <state name="ST4_WRITE_VRR"  value="6"  id="13"  flag="L"  line="1102"  />
+        <state name="ST5_WRITE_SEL_WE"  value="7"  id="14"  flag="L"  line="1113"  />
+        <state name="ST6_WRITE_AD1"  value="8"  id="15"  flag="L"  line="1121"  />
+        <state name="ST7_WRITE_AD2"  value="9"  id="16"  flag="L"  line="1129"  />
+        <state name="ST8_WRITE_CK1"  value="a"  id="17"  flag="L"  line="1163"  />
+        <state name="ST9_WRITE_CK0"  value="b"  id="18"  flag="L"  line="1175"  />
+
+        <transition fromid="0"  toid="9"  flag="L"  line="1274"  />
+        <transition fromid="1"  toid="0"  flag="L"  line="954"  />
+        <transition fromid="1"  toid="2"  flag="L"  line="1190"  />
+        <transition fromid="2"  toid="0"  flag="L"  line="954"  />
+        <transition fromid="2"  toid="3"  flag="L"  line="1199"  />
+        <transition fromid="3"  toid="0"  flag="L"  line="954"  />
+        <transition fromid="3"  toid="4"  flag="L"  line="1207"  />
+        <transition fromid="4"  toid="0"  flag="L"  line="954"  />
+        <transition fromid="4"  toid="5"  flag="L"  line="1217"  />
+        <transition fromid="5"  toid="0"  flag="L"  line="954"  />
+        <transition fromid="5"  toid="1"  flag="L"  line="1250"  />
+        <transition fromid="5"  toid="6"  flag="L"  line="1225"  />
+        <transition fromid="5"  toid="13"  flag="L"  line="1240"  />
+        <transition fromid="6"  toid="0"  flag="L"  line="954"  />
+        <transition fromid="6"  toid="7"  flag="L"  line="1261"  />
+        <transition fromid="7"  toid="0"  flag="L"  line="954"  />
+        <transition fromid="7"  toid="9"  flag="L"  line="1266"  />
+        <transition fromid="8"  toid="0"  flag="L"  line="954"  />
+        <transition fromid="8"  toid="9"  flag="L"  line="1092"  />
+        <transition fromid="9"  toid="0"  flag="L"  line="954"  />
+        <transition fromid="9"  toid="10"  flag="L"  line="1033"  />
+        <transition fromid="9"  toid="12"  flag="L"  line="1053"  />
+        <transition fromid="10"  toid="0"  flag="L"  line="954"  />
+        <transition fromid="10"  toid="11"  flag="L"  line="1068"  />
+        <transition fromid="11"  toid="0"  flag="L"  line="954"  />
+        <transition fromid="11"  toid="8"  flag="L"  line="1075"  />
+        <transition fromid="12"  toid="0"  flag="L"  line="954"  />
+        <transition fromid="12"  toid="13"  flag="L"  line="1102"  />
+        <transition fromid="13"  toid="0"  flag="L"  line="954"  />
+        <transition fromid="13"  toid="14"  flag="L"  line="1113"  />
+        <transition fromid="14"  toid="0"  flag="L"  line="954"  />
+        <transition fromid="14"  toid="15"  flag="L"  line="1121"  />
+        <transition fromid="15"  toid="0"  flag="L"  line="954"  />
+        <transition fromid="15"  toid="1"  flag="L"  line="1147"  />
+        <transition fromid="15"  toid="6"  flag="L"  line="1139"  />
+        <transition fromid="15"  toid="16"  flag="L"  line="1129"  />
+        <transition fromid="16"  toid="0"  flag="L"  line="954"  />
+        <transition fromid="16"  toid="17"  flag="L"  line="1163"  />
+        <transition fromid="17"  toid="0"  flag="L"  line="954"  />
+        <transition fromid="17"  toid="18"  flag="L"  line="1175"  />
+        <transition fromid="18"  toid="0"  flag="L"  line="954"  />
+        <transition fromid="18"  toid="15"  flag="L"  line="1183"  />
+      </fsmfsm>
+    </fsmshape>
+    <fsminst id="4"  name="top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTP_CTRL"  />
+  </fsmdef>
+  <metric_sig chksum="48F0733F66576E9159F38810A7CE030CC0472713"  />
+</fsm>

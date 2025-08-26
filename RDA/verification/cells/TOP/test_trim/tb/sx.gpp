@@ -1,0 +1,115 @@
+
+**------------------------------------------------
+** Begin
+**------------------------------------------------
+
+`wv_begin(tmax=10`m)
+
+`wv_d(s=xtbctrl/jtag_block_string type=asc)
+`wv_d(s=xtbctrl/jtag_addr_string  type=asc)
+`wv_d(s=xtbctrl/jtag_master_ir    type=hex)
+`wv_d(s=xtbctrl/jtag_master_wdata type=hex)
+`wv_d(s=xtbctrl/jtag_master_rdata type=hex)
+`wv_d(s=xdut/xdigi/I_DAB)
+`wv_d(s=xdut/xdigi/I_BFWB)
+`wv_d(s=xdut/xdigi/I_SYNCB)
+`wv_d(s=xdut/xdigi/O_INTB)
+
+`wv_vbegin()
+  `wv_v(nr=0 p=sck_pcb)
+  `wv_v(nr=1 p=aout_pcb)
+  `wv_v(nr=2 p=syncb_pcb)
+  `wv_v(nr=3 p=intb_pcb)
+  `wv_v(nr=4 p=miso_pcb)
+  `wv_v(nr=5 p=sck_pcb)
+`wv_vend()
+
+**------------------------------------------------
+** Supply and References     (7:0,   0000_0000_0000_00ff)
+**------------------------------------------------
+
+`if simcase[7:0] > 0
+  
+  `wv_d(s=xdut/xdigi/O_TRIM_I5U)
+
+  `wv_ibegin()
+    `wv_i(nr=0 p=xdut.xana.xsup.xmux.amux)
+  `wv_iend()
+  
+  `wv_d(s=xdut/xdigi/O_TRIM_OT)
+
+  `wv_vbegin()
+    `wv_v(nr=0 p=xdut.xana.xtmon.v_tsens_i)
+  `wv_vend()
+  
+`endif
+
+**------------------------------------------------
+** DSI3 Interface            (15:8,  0000_0000_0000_ff00)
+**------------------------------------------------
+
+`if simcase[15:8] > 0
+
+  `wv_d(s=xdut/xdigi/O_TRIM_DSI_RX1)
+  `wv_d(s=xdut/xdigi/O_TRIM_DSI_RX2)
+
+`endif
+
+**------------------------------------------------
+** SPI                       (23:16, 0000_0000_00ff_0000)
+**------------------------------------------------
+
+`if simcase[23:16] > 0
+`endif
+
+**------------------------------------------------
+** Command and Data Memory   (31:24, 0000_0000_ff00_0000)
+**------------------------------------------------
+
+`if simcase[31:24] > 0
+`endif
+
+**------------------------------------------------
+** Interrupt System          (39:32, 0000_00ff_0000_0000)
+**------------------------------------------------
+
+`if simcase[39:32] > 0
+`endif
+
+**------------------------------------------------
+** Timebase                  (47:40, 0000_ff00_0000_0000)
+**------------------------------------------------
+
+`if simcase[47:40] > 0
+
+  `wv_d(s=xdut/xdigi/O_TRIM_OSC_F)
+  `wv_d(s=xdut/xdigi/O_TRIM_OSC_TCF)
+  
+  `wv_rbegin(unit=Hz)
+    `wv_r(nr=0 s=xtbctrl/clkosc_freq)
+  `wv_rend()
+
+`endif
+
+**------------------------------------------------
+** Miscellaneous             (63:48, ffff_0000_0000_0000)
+**------------------------------------------------
+
+`if simcase[61:48] > 0
+  
+`endif
+
+**----------
+
+`if simcase[63:62] > 0
+  
+`endif
+
+**------------------------------------------------
+** End
+**------------------------------------------------
+
+`wv_end()
+
+**------------------------------------------------
+**------------------------------------------------

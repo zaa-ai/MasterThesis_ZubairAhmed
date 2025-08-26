@@ -1,0 +1,79 @@
+#------------------------------------------------------------------------------
+# Common Setup Section
+#------------------------------------------------------------------------------
+
+set SPYGLASS_WAIVER_INPUT waiver/$env(TOP_MODULE).waiver.awl
+
+#------------------------------------------------------------------------------
+# Data Import Section
+#------------------------------------------------------------------------------
+
+set DESIGN $env(DESIGN)
+set DIGITAL $env(DIGITAL)
+
+foreach lib [ list $env(GATES_LIB) ] {
+   read_file -type gateslib ${lib}
+}
+
+foreach rtl [ list $env(SOURCE_LIST) ] {
+   read_file -type sourcelist ${rtl}
+}
+
+set_option lib DIGITAL ./results/DIGITAL_comp
+set_option lib OTP_MEM ./results/OTP_MEM_comp
+set_option lib JTAG ./results/JTAG_comp
+set_option libhdlf DIGITAL $DESIGN/$DIGITAL/config/digital_vhdl_pkg.f
+set_option libhdlf JTAG $DESIGN/$DIGITAL/config/jtag_vhdl.f
+set_option libhdlf OTP_MEM $DESIGN/$DIGITAL/config/otp_mem_vhdl_pkg.f
+set_option libhdlf OTP_MEM $DESIGN/$DIGITAL/config/otp_mem_vhdl.f
+
+read_file -type awl ${SPYGLASS_WAIVER_INPUT}
+
+read_file -type sgdc user_tcl/digtop.sgdc
+
+#------------------------------------------------------------------------------
+#Common Options Section
+#------------------------------------------------------------------------------
+set_option top $env(TOP_MODULE)
+set_option sort yes
+set_option top digtop
+set_option projectwdir results
+set_option handlememory yes
+set_option prefer_tech_lib yes
+set_option language_mode mixed
+set_option designread_enable_synthesis no
+set_option designread_disable_flatten no
+set_option disable_html_report {datasheet dashboard html}
+set_option active_methodology $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff
+set_option dw yes
+set_option enableSV09 yes
+set_option hdllibdu yes
+set_option project_read_only yes
+set_option consolidate_reportdir reports
+
+set_option allow_module_override yes
+
+#------------------------------------------------------------------------------
+#Goal Setup Section
+#------------------------------------------------------------------------------
+current_methodology $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff
+
+#------------------------------------------------------------------------------
+current_goal lint/lint_rtl
+#------------------------------------------------------------------------------
+set_parameter simplesense true
+set_parameter check_initialization_assignment true
+set_parameter check_latch true
+set_parameter check_sign_extend yes
+set_parameter handle_large_bus yes
+set_parameter handle_hier_clock_reset true
+set_parameter report_flop_clock_loop true
+set_parameter report_flop_reset_loop true
+
+#------------------------------------------------------------------------------
+current_goal dft/dft_scan_ready
+#------------------------------------------------------------------------------
+#test_mode -name "digtop.I_TMODE" -value 1
+#test_mode -name "digtop.I_RESB" -value 1 -scanshift
+#test_mode -name "digtop.i_logic_top.i_test.i_test_control.i_scan_registers.i_scan_registers_SCAN.SCAN" -value 1
+#clock -name "digital.I_BFWB" -testclock -value rtz

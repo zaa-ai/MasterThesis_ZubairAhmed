@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>p52144</name>
+	<comment>Auto links root location: /</comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>veride.project_builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>veride.project_nature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>External Resources</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>External Resources/common</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>External Resources/common/department</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>External Resources/common/run</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>External Resources/common/department/design</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>External Resources/common/run/synopsys</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>External Resources/common/department/design/tools</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>External Resources/common/run/synopsys/designcompiler</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>External Resources/common/run/synopsys/vcs</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>External Resources/common/department/design/tools/designflow</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>External Resources/common/run/synopsys/designcompiler/S-2021.06-SP5-1</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>External Resources/common/run/synopsys/vcs/S-2021.09-1</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>External Resources/common/department/design/tools/designflow/develop</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>External Resources/common/run/synopsys/designcompiler/S-2021.06-SP5-1/dw</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>External Resources/common/run/synopsys/vcs/S-2021.09-1/etc</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>External Resources/common/department/design/tools/designflow/develop/svunit</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>External Resources/common/run/synopsys/designcompiler/S-2021.06-SP5-1/dw/sim_ver</name>
+			<type>2</type>
+			<location>/common/run/synopsys/designcompiler/S-2021.06-SP5-1/dw/sim_ver</location>
+		</link>
+		<link>
+			<name>External Resources/common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>External Resources/common/department/design/tools/designflow/develop/svunit/svunit_base</name>
+			<type>2</type>
+			<location>/common/department/design/tools/designflow/develop/svunit/svunit_base</location>
+		</link>
+		<link>
+			<name>External Resources/common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src</name>
+			<type>2</type>
+			<location>/common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src</location>
+		</link>
+	</linkedResources>
+	<variableList>
+		<variable>
+			<name>FLOW_HOME</name>
+			<value>$%7BPROJECT_LOC%7D/designflow</value>
+		</variable>
+	</variableList>
+</projectDescription>

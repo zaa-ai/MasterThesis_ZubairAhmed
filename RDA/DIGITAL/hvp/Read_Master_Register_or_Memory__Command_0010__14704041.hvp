@@ -1,0 +1,42 @@
+
+plan Read_Master_Register_or_Memory__Command_0010_;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14704041;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704041";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature read_master_register_operation;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704042";
+    edfId = 14704042;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature read_master_register_SPI_command;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704043";
+    edfId = 14704043;
+    edfType = GRAPHIC;
+    customer = true;
+  endfeature
+
+  feature burst_register_read;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14861096";
+    edfId = 14861096;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature burst_read_master_register_SPI_command;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14861100";
+    edfId = 14861100;
+    edfType = GRAPHIC;
+    customer = true;
+  endfeature
+
+endplan

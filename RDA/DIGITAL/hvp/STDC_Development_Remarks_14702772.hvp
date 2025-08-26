@@ -1,0 +1,21 @@
+
+plan STDC_Development_Remarks;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14702772;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702772";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature Remarks;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14702773";
+    edfId = 14702773;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+endplan

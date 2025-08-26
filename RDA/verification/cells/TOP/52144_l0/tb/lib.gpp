@@ -1,0 +1,37 @@
+
+**------------------------------------------------
+** Main
+**------------------------------------------------
+
+`if "$SPSCR_MACROTYPE" eq "SEQ" || "$SPSCR_MACROTYPE" eq "SP"
+
+.subckt v_reg vs vdd gnd
+  e1 vddi gnd vs gnd 1 min=-0.3 max=v
+*  v1 vddi gnd pwl 0,0 1u,'v'
+  r1 vddi vdd 'r'
+  c1 vdd  gnd 1p
+.ends
+
+.subckt i_src p n
+  g1 p n p n 'i/0.3' min='-i' max='i'
+  r1 p n '5/i*1000'
+  c1 p n 1p
+.ends
+
+.subckt i_pmirror in out vdd
+  vin  vdd ini 0
+  xdin ini ini2 diode_ideal vf=0.7 r=1k
+  rin  ini2 in 1m
+  cin  vdd in 50f
+  fout vdd out vin 1
+  rout vdd out '1/10n'
+  cout vdd out 5f
+.ends
+
+`endif
+
+*----------
+
+**------------------------------------------------
+**------------------------------------------------
+

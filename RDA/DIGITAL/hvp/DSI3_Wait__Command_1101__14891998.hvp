@@ -1,0 +1,80 @@
+
+plan DSI3_Wait__Command_1101_;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14891998;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14891998";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature DSI3_wait_command_intro;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14937081";
+    edfId = 14937081;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature DSI3_wait_command;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14937082";
+    edfId = 14937082;
+    edfType = GRAPHIC;
+    customer = true;
+  endfeature
+
+  feature DSI3_wait_command_options;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14937205";
+    edfId = 14937205;
+    edfType = UNIVERSAL_TABLE;
+    customer = true;
+    description = "^^1)^^ bit 15 of second SPI word is ignored";
+    feature Row_0;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14937207";
+      edfId = 14937207;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_1;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14937208";
+      edfId = 14937208;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_2;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14937209";
+      edfId = 14937209;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_3;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14937210";
+      edfId = 14937210;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+    feature Row_4;
+      EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14937206";
+      edfId = 14937206;
+      edfType = UNIVERSAL_PART;
+      customer = true;
+    endfeature
+  endfeature
+
+  feature DSI3_wait_command_operation;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14937250";
+    edfId = 14937250;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+  feature DSI3_wait_command_example;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14938082";
+    edfId = 14938082;
+    edfType = GRAPHIC;
+    customer = false;
+  endfeature
+
+endplan

@@ -1,0 +1,33 @@
+#macro(out_registers $registers)
+#foreach ($register in $registers)
+    #set($address = $register.address + $register.baseAddress)
+$tools.format("%-25s", "$register.name") : $tools.format("0x%04x", $address);
+#end
+#end
+#set($testRegisters = [])
+#set($applRegisters = [])
+#set($testInstances = $edfTool.getInstances("test"))
+#set($funcInstances = $edfTool.getInstances("func"))
+
+#foreach($instance in $funcInstances)
+    #set($regs = $edfTool.getRegisters($instance))
+    #foreach ($reg in $regs)
+        #set($register = $edfTool.toStoveRegister($reg, $instance))
+		#set($bla = $applRegisters.add($register))
+    #end
+#end
+
+#foreach($instance in $testInstances)
+    #set($regs = $edfTool.getRegisters($instance))
+    #foreach ($reg in $regs)
+        #set($register = $edfTool.toStoveRegister($reg, $instance))
+		#set($bla = $testRegisters.add($register))
+    #end
+#end
+$edfTool.sortByAddress($applRegisters)
+$edfTool.sortByAddress($testRegisters)
+ ------   APPL   ----------------------------------------
+#out_registers($applRegisters)
+
+-------   TEST   ---------------------------------------
+#out_registers($testRegisters)

@@ -1,0 +1,1334 @@
+Magic 271485
+Revision Verdi_S-2021.09-1
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 25 2560 884 497 107
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/nfs/wrk.jvoi/sim/52143/e52143a/otp_pulse_width/otp_pulse_width.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 21388322176.088188 21406343633.512199
+cursor 38339329000.000000
+marker 4480803158.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; show marker information
+; showMarkerValue [absolute|adjacent|relative|frequency]
+showMarkerValue adjacent
+showMarkerValue relative
+
+; visible top row signal index
+top 5
+; marker line index
+markerPos 4
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "SPI"
+activeDirFile "" "/nfs/wrk.jvoi/sim/52143/e52143a/otp_pulse_width/otp_pulse_width.fsdb"
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/SDI_P
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/SDO_P
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/SCK_P
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/CSB_P
+addSubGroup "clk_rst(clk_reset_if)"
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/clk_rst/clk
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/clk_rst/rstn
+endSubGroup "clk_rst(clk_reset_if)"
+addSubGroup "Other pins"
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/BFWB_P
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/CLKREF_P
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/DAB_P
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/INTB_P
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/RFC_P
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/RESB_P
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/SYNCB_P
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/TMODE_P
+endSubGroup "Other pins"
+addSubGroup "G8"
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_otp_wrapper/U_OTPWRAP_L3_TOP/U_OTPWRAP_L2_CPU/U_OTPWRAP_L1_JTAG/U_OTPWRAP_L0_ATPG/GEN_TSMC/U_OTP4KX12/u_otp4kx12/A[11:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_otp_wrapper/U_OTPWRAP_L3_TOP/U_OTPWRAP_L2_CPU/U_OTPWRAP_L1_JTAG/U_OTPWRAP_L0_ATPG/GEN_TSMC/U_OTP4KX12/u_otp4kx12/CK
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_otp_wrapper/U_OTPWRAP_L3_TOP/U_OTPWRAP_L2_CPU/U_OTPWRAP_L1_JTAG/U_OTPWRAP_L0_ATPG/GEN_TSMC/U_OTP4KX12/u_otp4kx12/D[11:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_otp_wrapper/U_OTPWRAP_L3_TOP/U_OTPWRAP_L2_CPU/U_OTPWRAP_L1_JTAG/U_OTPWRAP_L0_ATPG/GEN_TSMC/U_OTP4KX12/u_otp4kx12/EHV
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_otp_wrapper/U_OTPWRAP_L3_TOP/U_OTPWRAP_L2_CPU/U_OTPWRAP_L1_JTAG/U_OTPWRAP_L0_ATPG/GEN_TSMC/U_OTP4KX12/u_otp4kx12/MR[7:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_otp_wrapper/U_OTPWRAP_L3_TOP/U_OTPWRAP_L2_CPU/U_OTPWRAP_L1_JTAG/U_OTPWRAP_L0_ATPG/GEN_TSMC/U_OTP4KX12/u_otp4kx12/OE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_otp_wrapper/U_OTPWRAP_L3_TOP/U_OTPWRAP_L2_CPU/U_OTPWRAP_L1_JTAG/U_OTPWRAP_L0_ATPG/GEN_TSMC/U_OTP4KX12/u_otp4kx12/Q[11:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_otp_wrapper/U_OTPWRAP_L3_TOP/U_OTPWRAP_L2_CPU/U_OTPWRAP_L1_JTAG/U_OTPWRAP_L0_ATPG/GEN_TSMC/U_OTP4KX12/u_otp4kx12/SEL
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_otp_wrapper/U_OTPWRAP_L3_TOP/U_OTPWRAP_L2_CPU/U_OTPWRAP_L1_JTAG/U_OTPWRAP_L0_ATPG/GEN_TSMC/U_OTP4KX12/u_otp4kx12/WE
+endSubGroup "G8"
+addSubGroup "G7"
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_otp_wrapper/U_OTPWRAP_L3_TOP/U_OTPWRAP_L2_CPU/U_OTPWRAP_L1_JTAG/U_OTPWRAP_L0_ATPG/GEN_TSMC/U_OTP4KX12/u_ips/CLKIN
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_otp_wrapper/U_OTPWRAP_L3_TOP/U_OTPWRAP_L2_CPU/U_OTPWRAP_L1_JTAG/U_OTPWRAP_L0_ATPG/GEN_TSMC/U_OTP4KX12/u_ips/CLKINSEL
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_otp_wrapper/U_OTPWRAP_L3_TOP/U_OTPWRAP_L2_CPU/U_OTPWRAP_L1_JTAG/U_OTPWRAP_L0_ATPG/GEN_TSMC/U_OTP4KX12/u_ips/CLKOUT
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_otp_wrapper/U_OTPWRAP_L3_TOP/U_OTPWRAP_L2_CPU/U_OTPWRAP_L1_JTAG/U_OTPWRAP_L0_ATPG/GEN_TSMC/U_OTP4KX12/u_ips/MPP[7:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_otp_wrapper/U_OTPWRAP_L3_TOP/U_OTPWRAP_L2_CPU/U_OTPWRAP_L1_JTAG/U_OTPWRAP_L0_ATPG/GEN_TSMC/U_OTP4KX12/u_ips/MRR[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_otp_wrapper/U_OTPWRAP_L3_TOP/U_OTPWRAP_L2_CPU/U_OTPWRAP_L1_JTAG/U_OTPWRAP_L0_ATPG/GEN_TSMC/U_OTP4KX12/u_ips/PPCLKOUT
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_otp_wrapper/U_OTPWRAP_L3_TOP/U_OTPWRAP_L2_CPU/U_OTPWRAP_L1_JTAG/U_OTPWRAP_L0_ATPG/GEN_TSMC/U_OTP4KX12/u_ips/VPPEN
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_otp_wrapper/U_OTPWRAP_L3_TOP/U_OTPWRAP_L2_CPU/U_OTPWRAP_L1_JTAG/U_OTPWRAP_L0_ATPG/GEN_TSMC/U_OTP4KX12/u_ips/VRREN
+endSubGroup "G7"
+addSubGroup "DSI_Channels" -e FALSE
+addSubGroup "DSI3"
+addSignal -h 15 -UNSIGNED /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/state[3:0]
+addSignal -h 15 /top_tb/th/dsi3_master_if_3/cable.Voltage
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/dsi3_master_if_3/cable.Current[31:0]
+endSubGroup "DSI3"
+addSubGroup "DSI2"
+addSignal -h 15 -UNSIGNED /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/state[3:0]
+addSignal -h 15 /top_tb/th/dsi3_master_if_2/cable.Voltage
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/dsi3_master_if_2/cable.Current[31:0]
+endSubGroup "DSI2"
+addSubGroup "DSI1"
+addSignal -h 15 -UNSIGNED /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/state[3:0]
+addSignal -h 15 /top_tb/th/dsi3_master_if_1/cable.Voltage
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/dsi3_master_if_1/cable.Current[31:0]
+endSubGroup "DSI1"
+addSubGroup "DSI0"
+addSignal -h 15 -UNSIGNED /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/state[3:0]
+addSignal -h 15 /top_tb/th/dsi3_master_if_0/cable.Voltage
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/dsi3_master_if_0/cable.Current[31:0]
+endSubGroup "DSI0"
+endSubGroup "DSI_Channels"
+addGroup "i_logic_top" -e FALSE
+addSubGroup "i_main_control" -e FALSE
+addSubGroup "registers" -e FALSE
+addSubGroup "IC_revision_and_ID_registers_CHIP_ID_HIGH(IC_revision_and_ID_registers_CHIP_ID_HIGH_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/IC_revision_and_ID_registers_CHIP_ID_HIGH/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/IC_revision_and_ID_registers_CHIP_ID_HIGH/CHIP_ID_HIGH[15:0]
+endSubGroup "IC_revision_and_ID_registers_CHIP_ID_HIGH(IC_revision_and_ID_registers_CHIP_ID_HIGH_if)"
+addSubGroup "IC_revision_and_ID_registers_CHIP_ID_LOW(IC_revision_and_ID_registers_CHIP_ID_LOW_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/IC_revision_and_ID_registers_CHIP_ID_LOW/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/IC_revision_and_ID_registers_CHIP_ID_LOW/CHIP_ID_LOW[15:0]
+endSubGroup "IC_revision_and_ID_registers_CHIP_ID_LOW(IC_revision_and_ID_registers_CHIP_ID_LOW_if)"
+addSubGroup "IC_revision_and_ID_registers_IC_REVISION(IC_revision_and_ID_registers_IC_REVISION_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/IC_revision_and_ID_registers_IC_REVISION/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/IC_revision_and_ID_registers_IC_REVISION/REVISION[15:0]
+endSubGroup "IC_revision_and_ID_registers_IC_REVISION(IC_revision_and_ID_registers_IC_REVISION_if)"
+addSubGroup "Interrupt_Registers_IRQ_STAT(master)" -e FALSE
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_STAT/HW_FAIL_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_STAT/RESERVED_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_STAT/ECC_FAIL_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_STAT/SUPPLY_in
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_STAT/DSI_in[3:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_STAT/BUF_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_STAT/SPI_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_STAT/CLKREF_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_STAT/OTPFAIL_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_STAT/HW_FAIL_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_STAT/CLKREF_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_STAT/OTPFAIL_set
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_STAT/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_STAT/HW_FAIL
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_STAT/RESERVED
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_STAT/ECC_FAIL
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_STAT/SUPPLY
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_STAT/DSI[3:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_STAT/BUF
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_STAT/SPI
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_STAT/RESET
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_STAT/CLKREF
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_STAT/OTPFAIL
+endSubGroup "Interrupt_Registers_IRQ_STAT(master)"
+addSubGroup "Interrupt_Registers_IRQ_MASK(master)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_MASK/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_MASK/HW_FAIL
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_MASK/RESERVED
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_MASK/ECC_FAIL
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_MASK/SUPPLY
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_MASK/DSI[3:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_MASK/BUF
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_MASK/SPI
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_MASK/RESET
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_MASK/CLKREF
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_IRQ_MASK/OTPFAIL
+endSubGroup "Interrupt_Registers_IRQ_MASK(master)"
+addSubGroup "Interrupt_Registers_ECC_IRQ_STAT(master)#1" -e FALSE
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/RAM_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/SPI_DATA_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/SPI_CMD_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/SPI_CMD_BUF_in
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/DSI_CMD_in[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/DSI_CMD_BUF_in[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/DSI_DATA_BUF_in[3:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/RAM_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/SPI_DATA_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/SPI_CMD_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/SPI_CMD_BUF_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/DSI_CMD_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/DSI_CMD_BUF_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/DSI_DATA_BUF_set
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/RAM
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/SPI_DATA
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/SPI_CMD
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/SPI_CMD_BUF
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/DSI_CMD[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/DSI_CMD_BUF[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/DSI_DATA_BUF[3:0]
+endSubGroup "Interrupt_Registers_ECC_IRQ_STAT(master)#1"
+addSubGroup "Interrupt_Registers_ECC_IRQ_MASK(master)#1" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_MASK/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_MASK/RAM
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_MASK/SPI_DATA
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_MASK/SPI_CMD
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_MASK/SPI_CMD_BUF
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_MASK/DSI_CMD[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_MASK/DSI_CMD_BUF[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_MASK/DSI_DATA_BUF[3:0]
+endSubGroup "Interrupt_Registers_ECC_IRQ_MASK(master)#1"
+addSubGroup "Interrupt_Registers_ECC_CORR_IRQ_STAT(master)" -e FALSE
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_STAT/RAM_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_STAT/SPI_DATA_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_STAT/SPI_CMD_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_STAT/SPI_CMD_BUF_in
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_STAT/DSI_CMD_in[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_STAT/DSI_CMD_BUF_in[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_STAT/DSI_DATA_BUF_in[3:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_STAT/RAM_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_STAT/SPI_DATA_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_STAT/SPI_CMD_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_STAT/SPI_CMD_BUF_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_STAT/DSI_CMD_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_STAT/DSI_CMD_BUF_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_STAT/DSI_DATA_BUF_set
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_STAT/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_STAT/RAM
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_STAT/SPI_DATA
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_STAT/SPI_CMD
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_STAT/SPI_CMD_BUF
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_STAT/DSI_CMD[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_STAT/DSI_CMD_BUF[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_STAT/DSI_DATA_BUF[3:0]
+endSubGroup "Interrupt_Registers_ECC_CORR_IRQ_STAT(master)"
+addSubGroup "Interrupt_Registers_ECC_CORR_IRQ_MASK(master)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_MASK/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_MASK/RAM
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_MASK/SPI_DATA
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_MASK/SPI_CMD
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_MASK/SPI_CMD_BUF
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_MASK/DSI_CMD[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_MASK/DSI_CMD_BUF[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_CORR_IRQ_MASK/DSI_DATA_BUF[3:0]
+endSubGroup "Interrupt_Registers_ECC_CORR_IRQ_MASK(master)"
+addSubGroup "Interrupt_Registers_ECC_IRQ_STAT(master)" -e FALSE
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/RAM_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/SPI_DATA_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/SPI_CMD_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/SPI_CMD_BUF_in
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/DSI_CMD_in[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/DSI_CMD_BUF_in[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/DSI_DATA_BUF_in[3:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/RAM_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/SPI_DATA_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/SPI_CMD_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/SPI_CMD_BUF_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/DSI_CMD_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/DSI_CMD_BUF_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/DSI_DATA_BUF_set
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/RAM
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/SPI_DATA
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/SPI_CMD
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/SPI_CMD_BUF
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/DSI_CMD[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/DSI_CMD_BUF[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_Interrupt_Registers/Interrupt_Registers_ECC_IRQ_STAT/DSI_DATA_BUF[3:0]
+endSubGroup "Interrupt_Registers_ECC_IRQ_STAT(master)"
+addSubGroup "supply_registers_CLDO_TRIM(supply_registers_CLDO_TRIM_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/supply_registers_CLDO_TRIM/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/supply_registers_CLDO_TRIM/CLDO_TRIM[2:0]
+endSubGroup "supply_registers_CLDO_TRIM(supply_registers_CLDO_TRIM_if)"
+addSubGroup "supply_registers_CLDO_VOLTAGE(supply_registers_CLDO_VOLTAGE_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/supply_registers_CLDO_VOLTAGE/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/supply_registers_CLDO_VOLTAGE/VCLDO
+endSubGroup "supply_registers_CLDO_VOLTAGE(supply_registers_CLDO_VOLTAGE_if)"
+addSubGroup "supply_registers_IO_CTRL(supply_registers_IO_CTRL_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/supply_registers_IO_CTRL/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/supply_registers_IO_CTRL/HICUR
+endSubGroup "supply_registers_IO_CTRL(supply_registers_IO_CTRL_if)"
+addSubGroup "supply_registers_SUP_CTRL(supply_registers_SUP_CTRL_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/supply_registers_SUP_CTRL/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/supply_registers_SUP_CTRL/IGNORE_UV
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/supply_registers_SUP_CTRL/EN_LDO
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/supply_registers_SUP_CTRL/EN_LDO_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/supply_registers_SUP_CTRL/EN_LDO_set
+endSubGroup "supply_registers_SUP_CTRL(supply_registers_SUP_CTRL_if)"
+addSubGroup "supply_registers_SUP_STAT(supply_registers_SUP_STAT_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/supply_registers_SUP_STAT/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/supply_registers_SUP_STAT/VCCUV
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/supply_registers_SUP_STAT/VCCUV_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/supply_registers_SUP_STAT/OTE
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/supply_registers_SUP_STAT/OTE_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/supply_registers_SUP_STAT/OTW
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/supply_registers_SUP_STAT/OTW_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/supply_registers_SUP_STAT/LDOUV
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/supply_registers_SUP_STAT/LDOUV_in
+endSubGroup "supply_registers_SUP_STAT(supply_registers_SUP_STAT_if)"
+addSubGroup "supply_registers_TRIM_IREF(supply_registers_TRIM_IREF_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/supply_registers_TRIM_IREF/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/supply_registers_TRIM_IREF/IREF[3:0]
+endSubGroup "supply_registers_TRIM_IREF(supply_registers_TRIM_IREF_if)"
+endSubGroup "registers"
+addSubGroup "i_main_fsm" -e FALSE
+addSubGroup "clk_rst(slave)" -e FALSE
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/clk_rst/clk
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/clk_rst/rstn
+endSubGroup "clk_rst(slave)"
+addSubGroup "elip(master)" -e FALSE
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/elip/wr
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/elip/rd
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/elip/addr[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/elip/data_write[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/elip/data_read[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/elip/ready
+endSubGroup "elip(master)"
+addSubGroup "i_otp_control" -e FALSE
+addSubGroup "otp_ip_bus(master)" -e FALSE
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/otp_ip_bus/ack
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/otp_ip_bus/data[11:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/otp_ip_bus/addr[11:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/otp_ip_bus/we
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/otp_ip_bus/sel[1:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/otp_ip_bus/stb
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/otp_ip_bus/sleep
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/otp_ip_bus/read_mode[1:0]
+endSubGroup "otp_ip_bus(master)"
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/address[11:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/cnt_ehv[2:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/cnt_ehv_nxt[2:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/data[11:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/ehv_nxt
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/env_timing_ready
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/goto_read
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/i_address[11:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/i_enable
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/i_read
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/i_tick_1us
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/i_vcc_uv
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/o_data[11:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/o_ehv
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/o_ready
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/read_request
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/read_request_nxt
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/ready
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/ready_next
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/set_address
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/set_data
+addSignal -h 15 -UNSIGNED /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/state_nxt[1:0]
+addSignal -h 15 -UNSIGNED /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_otp_control/state[1:0]
+endSubGroup "i_otp_control"
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/address[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/address_next[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/check_ecc
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/data
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/data_next
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/ecc_corrected
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/ecc_double_error
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/enable_ldo_next
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/enable_otp
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_ldo_ok
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_tick_1us
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/i_vcc_ok
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/o_enable_ldo
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/o_enable_transceivers
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/o_main_fsm_fail
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/o_otp_ehv
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/o_rfc
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/otp_address[11:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/otp_address_next[11:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/otp_content
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/otp_content_corrected
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/otp_content_is_unprogrammed
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/otp_content_next
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/otp_data
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/otp_read
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/otp_ready
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/rfc_next
+addSignal -h 15 -UNSIGNED /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/state[3:0]
+addSignal -h 15 -UNSIGNED /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/state_next[3:0]
+endSubGroup "i_main_fsm"
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/elip_out_ic_revision[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/elip_out_interrupt[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/elip_out_supply[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_buffer_interrupt
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_dsi_interrupts[3:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_spi_interrupt
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/intb
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/intb_next
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/ldo_ok_deb
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/ldo_ok_sync
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/o_elip_out[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/o_enable_transceivers
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/o_otp_ehv
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/o_temp_error
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/rfc
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/temp_error
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/temp_warn
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/vcc_ok_deb
+endSubGroup "i_main_control"
+addSubGroup "elip_registers(elip_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/elip_data_read[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/elip_registers/wr
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/elip_registers/rd
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/elip_registers/addr[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/elip_registers/data_write[15:0]
+endSubGroup "elip_registers(elip_if)"
+addSubGroup "i_buffers" -e FALSE
+addSubGroup "dsi_data_buffer"
+addSubGroup "dsi3_data_writer[3:0]" -e FALSE
+addSubGroup "dsi3_data_writer[3](buffer_writer_if)"
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/dsi3_data_writer[3]/data
+addSignal -h 15 -UNSIGNED /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/dsi3_data_writer[3]/action[2:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/dsi3_data_writer[3]/full
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/dsi3_data_writer[3]/nearly_full
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/dsi3_data_writer[3]/ready
+endSubGroup "dsi3_data_writer[3](buffer_writer_if)"
+addSubGroup "dsi3_data_writer[2](buffer_writer_if)"
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/dsi3_data_writer[2]/data
+addSignal -h 15 -UNSIGNED /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/dsi3_data_writer[2]/action[2:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/dsi3_data_writer[2]/full
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/dsi3_data_writer[2]/nearly_full
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/dsi3_data_writer[2]/ready
+endSubGroup "dsi3_data_writer[2](buffer_writer_if)"
+addSubGroup "dsi3_data_writer[1](buffer_writer_if)"
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/dsi3_data_writer[1]/data
+addSignal -h 15 -UNSIGNED /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/dsi3_data_writer[1]/action[2:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/dsi3_data_writer[1]/full
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/dsi3_data_writer[1]/nearly_full
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/dsi3_data_writer[1]/ready
+endSubGroup "dsi3_data_writer[1](buffer_writer_if)"
+addSubGroup "dsi3_data_writer[0](buffer_writer_if)"
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/dsi3_data_writer[0]/data
+addSignal -h 15 -UNSIGNED /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/dsi3_data_writer[0]/action[2:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/dsi3_data_writer[0]/full
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/dsi3_data_writer[0]/nearly_full
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/dsi3_data_writer[0]/ready
+endSubGroup "dsi3_data_writer[0](buffer_writer_if)"
+endSubGroup "dsi3_data_writer[3:0]"
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/i_dsi3_data_reader_channel_select[1:0]
+addSubGroup "dsi3_data_reader(slave)" -e FALSE
+addSignal -h 15 -UNSIGNED /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/dsi3_data_reader/action[1:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/dsi3_data_reader/step[5:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/dsi3_data_reader/data
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/dsi3_data_reader/empty
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/dsi3_data_reader/ready
+endSubGroup "dsi3_data_reader(slave)"
+endSubGroup "dsi_data_buffer"
+addSubGroup "dsi_command_queue"
+addSubGroup "dsi3_command_writer[3:0]"
+addSubGroup "dsi3_command_writer[3](slave)" -e FALSE
+endSubGroup "dsi3_command_writer[3](slave)"
+addSubGroup "dsi3_command_writer[2](slave)" -e FALSE
+endSubGroup "dsi3_command_writer[2](slave)"
+addSubGroup "dsi3_command_writer[1](slave)" -e FALSE
+endSubGroup "dsi3_command_writer[1](slave)"
+addSubGroup "dsi3_command_writer[0](slave)" -e FALSE
+endSubGroup "dsi3_command_writer[0](slave)"
+endSubGroup "dsi3_command_writer[3:0]"
+addSubGroup "dsi3_command_reader[3:0]"
+addSubGroup "dsi3_command_reader[3](slave)" -e FALSE
+endSubGroup "dsi3_command_reader[3](slave)"
+addSubGroup "dsi3_command_reader[2](slave)" -e FALSE
+endSubGroup "dsi3_command_reader[2](slave)"
+addSubGroup "dsi3_command_reader[1](slave)" -e FALSE
+endSubGroup "dsi3_command_reader[1](slave)"
+addSubGroup "dsi3_command_reader[0](slave)" -e FALSE
+endSubGroup "dsi3_command_reader[0](slave)"
+endSubGroup "dsi3_command_reader[3:0]"
+endSubGroup "dsi_command_queue"
+addSubGroup "command_queue" -e FALSE
+addSubGroup "command_writer(slave)"
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/command_writer/data[15:0]
+addSignal -h 15 -UNSIGNED /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/command_writer/action[2:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/command_writer/full
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/command_writer/nearly_full
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/command_writer/ready
+endSubGroup "command_writer(slave)"
+addSubGroup "command_reader(slave)" -e FALSE
+addSignal -h 15 -UNSIGNED /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/command_reader/action[1:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/command_reader/step[5:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/command_reader/data[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/command_reader/empty
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_buffers/command_reader/ready
+endSubGroup "command_reader(slave)"
+endSubGroup "command_queue"
+endSubGroup "i_buffers"
+addSubGroup "i_command_control" -e FALSE
+addSignal -h 15 -UNSIGNED /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_command_control/state[3:0]
+addSignal -h 15 -UNSIGNED /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_command_control/state_next[3:0]
+addSignal -h 15 -UNSIGNED /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_command_control/command_writer_action[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_command_control/command_writer_ready[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_command_control/command_written[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_command_control/command_written_next[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_command_control/address[11:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_command_control/address_next[11:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_command_control/channels[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_command_control/channels_next[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_command_control/cleared_dsi3_command_buffer[3:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_command_control/command
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_command_control/command_counter[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_command_control/command_counter_next[3:0]
+endSubGroup "i_command_control"
+addSubGroup "i_spi" -e FALSE
+addSubGroup "SPI_interrupt_registers_SPI_IRQ_STAT(SPI_interrupt_registers_SPI_IRQ_STAT_if)" -e FALSE
+endSubGroup "SPI_interrupt_registers_SPI_IRQ_STAT(SPI_interrupt_registers_SPI_IRQ_STAT_if)"
+addSubGroup "SPI_interrupt_registers_SPI_IRQ_MASK(master)" -e FALSE
+endSubGroup "SPI_interrupt_registers_SPI_IRQ_MASK(master)"
+addSubGroup "i_spi_core" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_core/crc_in[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_core/crc_in_next[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_core/crc_out[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_core/crc_out_next[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_core/first_transfer
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_core/i_command_running
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_core/i_status_word[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_core/i_tx_data[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_core/i_tx_data_available
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_core/o_data_received[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_core/o_rxd_valid
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_core/o_transfer_ended
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_core/o_txd_en_clear
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_core/rxd_valid_nxt
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_core/shift_in[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_core/shift_in_nxt[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_core/shift_out[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_core/shift_out_nxt[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_core/txd_en_clear_nxt
+endSubGroup "i_spi_core"
+addSubGroup "i_spi_tx_fifo" -e FALSE
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_tx_fifo/fifo_first_word_out_second_in
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_tx_fifo/i_fifo_data[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_tx_fifo/i_pop_data
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_tx_fifo/i_reset
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_tx_fifo/i_set_fifo_data
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_tx_fifo/o_data[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_tx_fifo/o_data_available
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_tx_fifo/o_full
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_tx_fifo/shift_fifo
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_tx_fifo/tx_fifo[1:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_tx_fifo/tx_fifo_nxt[1:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_tx_fifo/txd_request[1:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/i_spi_tx_fifo/txd_request_nxt[1:0]
+endSubGroup "i_spi_tx_fifo"
+addSubGroup "read_packet" -e FALSE
+addSignal -expanded -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/command_read_info
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/command_read_info.word_count[5:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/command_read_info.packet_count[1:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/command_read_info.channels[3:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/command_read_info_next
+addSignal -expanded -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/current
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/current.word_count[5:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/current.packet_count[1:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/current.channels[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/current_channel[1:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/current_channel_next[1:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/current_next
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/current_packet_header_word_count[5:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/current_packet_header_word_count_next[5:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/packet_state[3:0]
+endSubGroup "read_packet"
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/address[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/address_next[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/command
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/command_in_pending
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/command_in_pending_next
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/command_in_pending_synced
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/command_incomplete
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/command_read_info
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/command_read_info_next
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/crc_error
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/current
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/current_channel[2:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/current_channel_next[2:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/current_next
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/current_packet_header_word_count[5:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/current_packet_header_word_count_next[5:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/fifo_data[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/fifo_full
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/forbid_writing_to_buffer_and_invalidate_at_the_end
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/forbid_writing_to_buffer_and_invalidate_at_the_end_next
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/ic_status[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/o_dsi3_data_read_channel_select[1:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/o_elip_data_read[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/o_interrupt
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/packet_state[3:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/received_word
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/rx_data[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/rxd_valid
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/set_fifo_data
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/spi_ended
+addSignal -h 15 -UNSIGNED /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/state[3:0]
+addSignal -h 15 -UNSIGNED /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/state_next[3:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/store_address
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/store_packet_info
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/transfer_ended
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/tx_data[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/tx_data_available
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/tx_data_available_synced
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/tx_data_taken_over
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/tx_data_taken_over_synced
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/was_queueing_command
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/was_queueing_command_next
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/word_counter[2:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_spi/word_counter_next[2:0]
+endSubGroup "i_spi"
+addSubGroup "i_timebase" -e FALSE
+addSubGroup "clock_switch_io(timebase)" -e FALSE
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/clock_switch_io/select_clock_pll
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/clock_switch_io/test_en
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/clock_switch_io/test_sel
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/clock_switch_io/clock_switched
+endSubGroup "clock_switch_io(timebase)"
+addSubGroup "timebase_io(master)" -e FALSE
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/timebase_io/clkref
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/timebase_io/clkpll
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/timebase_io/clkpll_div
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/timebase_io/clkref_div
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/timebase_io/pll_on
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/timebase_io/pll_hold
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/timebase_io/trim_osc_f[6:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/timebase_io/trim_osc_tcf[2:0]
+endSubGroup "timebase_io(master)"
+addSubGroup "timebase_info(master)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/timebase_info/base_time[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/timebase_info/clkref_ok
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/timebase_info/tick_1us
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/timebase_info/tick_1ms
+endSubGroup "timebase_info(master)"
+addSubGroup "test_registers" -e FALSE
+addSubGroup "TEST_OSC_TMR_VAL_TB(TEST_OSC_TMR_VAL_TB_if)"
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/i_test_osc/TEST_OSC_TMR_VAL_TB/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/i_test_osc/TEST_OSC_TMR_VAL_TB/PLL_HOLD
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/i_test_osc/TEST_OSC_TMR_VAL_TB/PLL_ON
+endSubGroup "TEST_OSC_TMR_VAL_TB(TEST_OSC_TMR_VAL_TB_if)"
+addSubGroup "TEST_OSC_TMR_SEL_TB(TEST_OSC_TMR_SEL_TB_if)"
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/i_test_osc/TEST_OSC_TMR_SEL_TB/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/i_test_osc/TEST_OSC_TMR_SEL_TB/PLL_HOLD
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/i_test_osc/TEST_OSC_TMR_SEL_TB/PLL_ON
+endSubGroup "TEST_OSC_TMR_SEL_TB(TEST_OSC_TMR_SEL_TB_if)"
+endSubGroup "test_registers"
+addSubGroup "registers" -e FALSE
+addSubGroup "time_base_registers_CLKREF_CONF(time_base_registers_CLKREF_CONF_if)"
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/time_base_registers_CLKREF_CONF/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/time_base_registers_CLKREF_CONF/CLKREF_FREQ[1:0]
+endSubGroup "time_base_registers_CLKREF_CONF(time_base_registers_CLKREF_CONF_if)"
+addSubGroup "time_base_registers_TB_CNT(time_base_registers_TB_CNT_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/time_base_registers_TB_CNT/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/time_base_registers_TB_CNT/CNT[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/time_base_registers_TB_CNT/CNT_in[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/time_base_registers_TB_CNT/CNT_set
+endSubGroup "time_base_registers_TB_CNT(time_base_registers_TB_CNT_if)"
+addSubGroup "time_base_registers_TRIM_OSC(time_base_registers_TRIM_OSC_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/time_base_registers_TRIM_OSC/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/time_base_registers_TRIM_OSC/TRIM_OSC[6:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/time_base_registers_TRIM_OSC/TRIM_OSC_in[6:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/time_base_registers_TRIM_OSC/TRIM_OSC_set
+endSubGroup "time_base_registers_TRIM_OSC(time_base_registers_TRIM_OSC_if)"
+addSubGroup "time_base_registers_TRIM_OSC_TCF(time_base_registers_TRIM_OSC_TCF_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/time_base_registers_TRIM_OSC_TCF/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/time_base_registers_TRIM_OSC_TCF/TCF[2:0]
+endSubGroup "time_base_registers_TRIM_OSC_TCF(time_base_registers_TRIM_OSC_TCF_if)"
+endSubGroup "registers"
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/clk_ok
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/clk_ok_nxt
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/clkpll_div_rising
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/clkref_ok
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/clkref_rising
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/clkref_rising_osc
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/i_transmit_pending[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/o_elip_data_read[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/o_jtag_dr[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/pll_hold
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/pll_hold_nxt
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/pll_locked
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/pll_on
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/pll_on_nxt
+addSignal -h 15 -UNSIGNED /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/state[1:0]
+addSignal -h 15 -UNSIGNED /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/state_nxt[1:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/test_auto_trim_en
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/tick_3MHz
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/tmr_dig_clk_auto_trim_en_tck
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/transmission_pending_flags[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/transmission_pending_flags_nxt[3:0]
+endSubGroup "i_timebase"
+addSubGroup "clkosc_rst(slave)" -e FALSE
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/clkosc_rst/clk
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/clkosc_rst/rstn
+endSubGroup "clkosc_rst(slave)"
+addSubGroup "clk_rst(slave)" -e FALSE
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/clk_rst/clk
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_timebase/clk_rst/rstn
+endSubGroup "clk_rst(slave)"
+addGroup "i_dsi3" -e FALSE
+addSubGroup "registers" -e FALSE
+addSubGroup "common_DSI3_block_registers_DSI_CFG(common_DSI3_block_registers_DSI_CFG_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_DSI3_block_registers_DSI_CFG/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_DSI3_block_registers_DSI_CFG/SID_LENGTH[1:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_DSI3_block_registers_DSI_CFG/SYNC_PDCM
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_DSI3_block_registers_DSI_CFG/CRC_EN
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_DSI3_block_registers_DSI_CFG/BITTIME[1:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_DSI3_block_registers_DSI_CFG/CHIPTIME[1:0]
+endSubGroup "common_DSI3_block_registers_DSI_CFG(common_DSI3_block_registers_DSI_CFG_if)"
+addSubGroup "common_DSI3_block_registers_DSI_ENABLE(common_DSI3_block_registers_DSI_ENABLE_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_DSI3_block_registers_DSI_ENABLE/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_DSI3_block_registers_DSI_ENABLE/TRE[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_DSI3_block_registers_DSI_ENABLE/TRE_in[3:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_DSI3_block_registers_DSI_ENABLE/TRE_set
+endSubGroup "common_DSI3_block_registers_DSI_ENABLE(common_DSI3_block_registers_DSI_ENABLE_if)"
+addSubGroup "common_DSI3_block_registers_DSI_PDCM_PERIOD(common_DSI3_block_registers_DSI_PDCM_PERIOD_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_DSI3_block_registers_DSI_PDCM_PERIOD/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_DSI3_block_registers_DSI_PDCM_PERIOD/access_wr
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_DSI3_block_registers_DSI_PDCM_PERIOD/access_rd
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_DSI3_block_registers_DSI_PDCM_PERIOD/PDCMPER[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_DSI3_block_registers_DSI_PDCM_PERIOD/PDCMPER_in[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_DSI3_block_registers_DSI_PDCM_PERIOD/PDCMPER_set
+endSubGroup "common_DSI3_block_registers_DSI_PDCM_PERIOD(common_DSI3_block_registers_DSI_PDCM_PERIOD_if)"
+addSubGroup "common_DSI3_block_registers_DSI_TX_SHIFT(common_DSI3_block_registers_DSI_TX_SHIFT_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/i_common_DSI3_block_registers/common_DSI3_block_registers_DSI_TX_SHIFT/SHIFT[6:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_DSI3_block_registers_DSI_TX_SHIFT/value[15:0]
+endSubGroup "common_DSI3_block_registers_DSI_TX_SHIFT(common_DSI3_block_registers_DSI_TX_SHIFT_if)"
+addSubGroup "common_DSI3_block_registers_SYNC_IDLE_REG(common_DSI3_block_registers_SYNC_IDLE_REG_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_DSI3_block_registers_SYNC_IDLE_REG/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_DSI3_block_registers_SYNC_IDLE_REG/PIN
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_DSI3_block_registers_SYNC_IDLE_REG/PIN_in
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_DSI3_block_registers_SYNC_IDLE_REG/DSI[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_DSI3_block_registers_SYNC_IDLE_REG/DSI_in[3:0]
+endSubGroup "common_DSI3_block_registers_SYNC_IDLE_REG(common_DSI3_block_registers_SYNC_IDLE_REG_if)"
+endSubGroup "registers"
+addSubGroup "i_dsi3_start_manager" -e FALSE
+addSubGroup "i_period_counter[3]" -e FALSE
+endSubGroup "i_period_counter[3]"
+addSubGroup "i_period_counter[2]" -e FALSE
+endSubGroup "i_period_counter[2]"
+addSubGroup "i_period_counter[1]" -e FALSE
+endSubGroup "i_period_counter[1]"
+addSubGroup "i_period_counter[0]" -e FALSE
+endSubGroup "i_period_counter[0]"
+addSubGroup "common_config(slave)" -e FALSE
+addSignal -h 15 -UNSIGNED -UDEC /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/i_dsi3_start_manager/common_config/pdcm_period[15:0]
+addSignal -h 15 -UNSIGNED /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/i_dsi3_start_manager/common_config/bit_time[1:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/i_dsi3_start_manager/common_config/chip_time[1:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/i_dsi3_start_manager/common_config/sync_pdcm
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/i_dsi3_start_manager/common_config/tx_shift[6:0]
+endSubGroup "common_config(slave)"
+addSubGroup "i_txshift_controller" -e FALSE
+endSubGroup "i_txshift_controller"
+endSubGroup "i_dsi3_start_manager"
+addSubGroup "common_config(dsi3_common_config_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_config/pdcm_period[15:0]
+addSignal -h 15 -UNSIGNED /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_config/bit_time[1:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_config/chip_time[1:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_config/crc_enable
+addSignal -h 15 -UNSIGNED /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_config/sid_length[1:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/common_config/sync_pdcm
+endSubGroup "common_config(dsi3_common_config_if)"
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/i_ot
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/i_vdsi_en
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/o_elip_data_read[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/o_interrupt[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/o_transmit_pending[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/tx[3:0]
+addSubGroup "i_dsi3_block[0]" -e FALSE
+addSubGroup "registers" -e FALSE
+addSubGroup "DSI3_channel_registers_CRM_WORD2(master)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_CRM_WORD2/CRM_WORD2_in[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_CRM_WORD2/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_CRM_WORD2/CRM_WORD2[15:0]
+endSubGroup "DSI3_channel_registers_CRM_WORD2(master)"
+addSubGroup "DSI3_channel_registers_CRM_WORD1(master)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_CRM_WORD1/CRM_WORD1_in[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_CRM_WORD1/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_CRM_WORD1/CRM_WORD1[15:0]
+endSubGroup "DSI3_channel_registers_CRM_WORD1(master)"
+addSubGroup "DSI3_channel_registers_DSI_CMD(DSI3_channel_registers_DSI_CMD_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_DSI_CMD/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_DSI_CMD/CMD[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_DSI_CMD/CMD_in[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_DSI_CMD/DATA[11:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_DSI_CMD/DATA_in[11:0]
+endSubGroup "DSI3_channel_registers_DSI_CMD(DSI3_channel_registers_DSI_CMD_if)"
+addSubGroup "DSI3_channel_registers_DSI_IRQ_STAT(DSI3_channel_registers_DSI_IRQ_STAT_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/DSIUV
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/DSIUV_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/DSIOV
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/DSIOV_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/DSIUV_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/DSIOV_set
+endSubGroup "DSI3_channel_registers_DSI_IRQ_STAT(DSI3_channel_registers_DSI_IRQ_STAT_if)"
+addSubGroup "DSI3_channel_registers_DSI_IRQ_MASK(master)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_DSI_IRQ_MASK/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_DSI_IRQ_MASK/SYNC_ERR
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_DSI_IRQ_MASK/DSIUV
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_DSI_IRQ_MASK/DSIOV
+endSubGroup "DSI3_channel_registers_DSI_IRQ_MASK(master)"
+addSubGroup "DSI3_channel_registers_DSI_STAT(DSI3_channel_registers_DSI_STAT_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/DSIUV
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/DSIUV_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/DSIOV
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/DSIOV_in
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/PULSECNT[7:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/PULSECNT_in[7:0]
+endSubGroup "DSI3_channel_registers_DSI_STAT(DSI3_channel_registers_DSI_STAT_if)"
+addSubGroup "DSI3_channel_registers_PKG_STAT(DSI3_channel_registers_PKG_STAT_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/PT
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/PT_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SCE
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SCE_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/CRC_ERR
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/CRC_ERR_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SYMBOL_ERROR
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SYMBOL_ERROR_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/VDSI_ERR
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/VDSI_ERR_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/CLK_ERR
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/CLK_ERR_in
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SYMBOL_COUNT[7:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SYMBOL_COUNT_in[7:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/PT_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SCE_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/CRC_ERR_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SYMBOL_ERROR_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/VDSI_ERR_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/CLK_ERR_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SYMBOL_COUNT_set
+endSubGroup "DSI3_channel_registers_PKG_STAT(DSI3_channel_registers_PKG_STAT_if)"
+addSubGroup "DSI3_channel_registers_SYNC(DSI3_channel_registers_SYNC_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_SYNC/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_SYNC/PIN
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_SYNC/CHANNELS[3:0]
+endSubGroup "DSI3_channel_registers_SYNC(DSI3_channel_registers_SYNC_if)"
+addSubGroup "DSI3_channel_registers_TRIM_DSI_REC_FALL(DSI3_channel_registers_TRIM_DSI_REC_FALL_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_TRIM_DSI_REC_FALL/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_TRIM_DSI_REC_FALL/TRIM_REC2[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_TRIM_DSI_REC_FALL/TRIM_REC1[3:0]
+endSubGroup "DSI3_channel_registers_TRIM_DSI_REC_FALL(DSI3_channel_registers_TRIM_DSI_REC_FALL_if)"
+addSubGroup "DSI3_channel_registers_TRIM_DSI_REC_RISE(DSI3_channel_registers_TRIM_DSI_REC_RISE_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_TRIM_DSI_REC_RISE/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_TRIM_DSI_REC_RISE/TRIM_REC2[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_TRIM_DSI_REC_RISE/TRIM_REC1[3:0]
+endSubGroup "DSI3_channel_registers_TRIM_DSI_REC_RISE(DSI3_channel_registers_TRIM_DSI_REC_RISE_if)"
+addSubGroup "DSI3_channel_registers_TRIM_DSI_TR(DSI3_channel_registers_TRIM_DSI_TR_if)" -e FALSE
+endSubGroup "DSI3_channel_registers_TRIM_DSI_TR(DSI3_channel_registers_TRIM_DSI_TR_if)"
+addSubGroup "DSI3_channel_registers_WAIT_TIME(DSI3_channel_registers_WAIT_TIME_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_WAIT_TIME/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_WAIT_TIME/TIME[14:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_WAIT_TIME/TIME_in[14:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/DSI3_channel_registers_WAIT_TIME/TIME_set
+endSubGroup "DSI3_channel_registers_WAIT_TIME(DSI3_channel_registers_WAIT_TIME_if)"
+endSubGroup "registers"
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/broad_cast
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/broad_cast_next
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/command
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/crc[7:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/crc_data[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/crc_next[7:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/data_high[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/data_low[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/data_low_crc[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/finished
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/i_transceiver_enable
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/mode
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/o_elip_register_read[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/o_interrupt
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/o_transmit_pending
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/ov_deb
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/ov_sync
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/periods
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/periods_next
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/seed[7:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/stop_and_clear_buffer
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/stop_and_clear_buffer_next
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/store_data_high
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/store_data_low
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/uv_deb
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[0]/i_dsi3_block/uv_sync
+endSubGroup "i_dsi3_block[0]"
+addSubGroup "i_dsi3_block[1]" -e FALSE
+addSubGroup "registers" -e FALSE
+addSubGroup "DSI3_channel_registers_CRM_WORD2(master)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_CRM_WORD2/CRM_WORD2_in[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_CRM_WORD2/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_CRM_WORD2/CRM_WORD2[15:0]
+endSubGroup "DSI3_channel_registers_CRM_WORD2(master)"
+addSubGroup "DSI3_channel_registers_CRM_WORD1(master)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_CRM_WORD1/CRM_WORD1_in[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_CRM_WORD1/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_CRM_WORD1/CRM_WORD1[15:0]
+endSubGroup "DSI3_channel_registers_CRM_WORD1(master)"
+addSubGroup "DSI3_channel_registers_DSI_CMD(DSI3_channel_registers_DSI_CMD_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_DSI_CMD/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_DSI_CMD/CMD[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_DSI_CMD/CMD_in[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_DSI_CMD/DATA[11:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_DSI_CMD/DATA_in[11:0]
+endSubGroup "DSI3_channel_registers_DSI_CMD(DSI3_channel_registers_DSI_CMD_if)"
+addSubGroup "DSI3_channel_registers_DSI_IRQ_STAT(DSI3_channel_registers_DSI_IRQ_STAT_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/DSIUV
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/DSIUV_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/DSIOV
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/DSIOV_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/DSIUV_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/DSIOV_set
+endSubGroup "DSI3_channel_registers_DSI_IRQ_STAT(DSI3_channel_registers_DSI_IRQ_STAT_if)"
+addSubGroup "DSI3_channel_registers_DSI_IRQ_MASK(master)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_DSI_IRQ_MASK/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_DSI_IRQ_MASK/SYNC_ERR
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_DSI_IRQ_MASK/DSIUV
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_DSI_IRQ_MASK/DSIOV
+endSubGroup "DSI3_channel_registers_DSI_IRQ_MASK(master)"
+addSubGroup "DSI3_channel_registers_DSI_STAT(DSI3_channel_registers_DSI_STAT_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/DSIUV
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/DSIUV_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/DSIOV
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/DSIOV_in
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/PULSECNT[7:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/PULSECNT_in[7:0]
+endSubGroup "DSI3_channel_registers_DSI_STAT(DSI3_channel_registers_DSI_STAT_if)"
+addSubGroup "DSI3_channel_registers_PKG_STAT(DSI3_channel_registers_PKG_STAT_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/PT
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/PT_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SCE
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SCE_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/CRC_ERR
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/CRC_ERR_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SYMBOL_ERROR
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SYMBOL_ERROR_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/VDSI_ERR
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/VDSI_ERR_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/CLK_ERR
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/CLK_ERR_in
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SYMBOL_COUNT[7:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SYMBOL_COUNT_in[7:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/PT_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SCE_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/CRC_ERR_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SYMBOL_ERROR_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/VDSI_ERR_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/CLK_ERR_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SYMBOL_COUNT_set
+endSubGroup "DSI3_channel_registers_PKG_STAT(DSI3_channel_registers_PKG_STAT_if)"
+addSubGroup "DSI3_channel_registers_SYNC(DSI3_channel_registers_SYNC_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_SYNC/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_SYNC/PIN
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_SYNC/CHANNELS[3:0]
+endSubGroup "DSI3_channel_registers_SYNC(DSI3_channel_registers_SYNC_if)"
+addSubGroup "DSI3_channel_registers_TRIM_DSI_REC_FALL(DSI3_channel_registers_TRIM_DSI_REC_FALL_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_TRIM_DSI_REC_FALL/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_TRIM_DSI_REC_FALL/TRIM_REC2[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_TRIM_DSI_REC_FALL/TRIM_REC1[3:0]
+endSubGroup "DSI3_channel_registers_TRIM_DSI_REC_FALL(DSI3_channel_registers_TRIM_DSI_REC_FALL_if)"
+addSubGroup "DSI3_channel_registers_TRIM_DSI_REC_RISE(DSI3_channel_registers_TRIM_DSI_REC_RISE_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_TRIM_DSI_REC_RISE/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_TRIM_DSI_REC_RISE/TRIM_REC2[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_TRIM_DSI_REC_RISE/TRIM_REC1[3:0]
+endSubGroup "DSI3_channel_registers_TRIM_DSI_REC_RISE(DSI3_channel_registers_TRIM_DSI_REC_RISE_if)"
+addSubGroup "DSI3_channel_registers_TRIM_DSI_TR(DSI3_channel_registers_TRIM_DSI_TR_if)" -e FALSE
+endSubGroup "DSI3_channel_registers_TRIM_DSI_TR(DSI3_channel_registers_TRIM_DSI_TR_if)"
+addSubGroup "DSI3_channel_registers_WAIT_TIME(DSI3_channel_registers_WAIT_TIME_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_WAIT_TIME/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_WAIT_TIME/TIME[14:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_WAIT_TIME/TIME_in[14:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/DSI3_channel_registers_WAIT_TIME/TIME_set
+endSubGroup "DSI3_channel_registers_WAIT_TIME(DSI3_channel_registers_WAIT_TIME_if)"
+endSubGroup "registers"
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/broad_cast
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/broad_cast_next
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/command
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/crc[7:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/crc_data[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/crc_next[7:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/data_high[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/data_low[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/data_low_crc[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/finished
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/i_transceiver_enable
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/mode
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/o_elip_register_read[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/o_interrupt
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/o_transmit_pending
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/ov_deb
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/ov_sync
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/periods
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/periods_next
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/seed[7:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/stop_and_clear_buffer
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/stop_and_clear_buffer_next
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/store_data_high
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/store_data_low
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/uv_deb
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[1]/i_dsi3_block/uv_sync
+endSubGroup "i_dsi3_block[1]"
+addSubGroup "i_dsi3_block[2]" -e FALSE
+addSubGroup "registers" -e FALSE
+addSubGroup "DSI3_channel_registers_CRM_WORD2(master)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_CRM_WORD2/CRM_WORD2_in[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_CRM_WORD2/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_CRM_WORD2/CRM_WORD2[15:0]
+endSubGroup "DSI3_channel_registers_CRM_WORD2(master)"
+addSubGroup "DSI3_channel_registers_CRM_WORD1(master)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_CRM_WORD1/CRM_WORD1_in[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_CRM_WORD1/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_CRM_WORD1/CRM_WORD1[15:0]
+endSubGroup "DSI3_channel_registers_CRM_WORD1(master)"
+addSubGroup "DSI3_channel_registers_DSI_CMD(DSI3_channel_registers_DSI_CMD_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_DSI_CMD/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_DSI_CMD/CMD[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_DSI_CMD/CMD_in[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_DSI_CMD/DATA[11:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_DSI_CMD/DATA_in[11:0]
+endSubGroup "DSI3_channel_registers_DSI_CMD(DSI3_channel_registers_DSI_CMD_if)"
+addSubGroup "DSI3_channel_registers_DSI_IRQ_STAT(DSI3_channel_registers_DSI_IRQ_STAT_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/DSIUV
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/DSIUV_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/DSIOV
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/DSIOV_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/DSIUV_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/DSIOV_set
+endSubGroup "DSI3_channel_registers_DSI_IRQ_STAT(DSI3_channel_registers_DSI_IRQ_STAT_if)"
+addSubGroup "DSI3_channel_registers_DSI_IRQ_MASK(DSI3_channel_registers_DSI_IRQ_MASK_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_MASK/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_MASK/SYNC_ERR
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_MASK/DSIUV
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_MASK/DSIOV
+endSubGroup "DSI3_channel_registers_DSI_IRQ_MASK(DSI3_channel_registers_DSI_IRQ_MASK_if)"
+addSubGroup "DSI3_channel_registers_DSI_STAT(DSI3_channel_registers_DSI_STAT_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/DSIUV
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/DSIUV_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/DSIOV
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/DSIOV_in
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/PULSECNT[7:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/PULSECNT_in[7:0]
+endSubGroup "DSI3_channel_registers_DSI_STAT(DSI3_channel_registers_DSI_STAT_if)"
+addSubGroup "DSI3_channel_registers_PKG_STAT(DSI3_channel_registers_PKG_STAT_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/PT
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/PT_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SCE
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SCE_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/CRC_ERR
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/CRC_ERR_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SYMBOL_ERROR
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SYMBOL_ERROR_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/VDSI_ERR
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/VDSI_ERR_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/CLK_ERR
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/CLK_ERR_in
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SYMBOL_COUNT[7:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SYMBOL_COUNT_in[7:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/PT_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SCE_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/CRC_ERR_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SYMBOL_ERROR_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/VDSI_ERR_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/CLK_ERR_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SYMBOL_COUNT_set
+endSubGroup "DSI3_channel_registers_PKG_STAT(DSI3_channel_registers_PKG_STAT_if)"
+addSubGroup "DSI3_channel_registers_SYNC(DSI3_channel_registers_SYNC_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_SYNC/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_SYNC/PIN
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_SYNC/CHANNELS[3:0]
+endSubGroup "DSI3_channel_registers_SYNC(DSI3_channel_registers_SYNC_if)"
+addSubGroup "DSI3_channel_registers_TRIM_DSI_REC_FALL(DSI3_channel_registers_TRIM_DSI_REC_FALL_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_TRIM_DSI_REC_FALL/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_TRIM_DSI_REC_FALL/TRIM_REC2[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_TRIM_DSI_REC_FALL/TRIM_REC1[3:0]
+endSubGroup "DSI3_channel_registers_TRIM_DSI_REC_FALL(DSI3_channel_registers_TRIM_DSI_REC_FALL_if)"
+addSubGroup "DSI3_channel_registers_TRIM_DSI_REC_RISE(DSI3_channel_registers_TRIM_DSI_REC_RISE_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_TRIM_DSI_REC_RISE/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_TRIM_DSI_REC_RISE/TRIM_REC2[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_TRIM_DSI_REC_RISE/TRIM_REC1[3:0]
+endSubGroup "DSI3_channel_registers_TRIM_DSI_REC_RISE(DSI3_channel_registers_TRIM_DSI_REC_RISE_if)"
+addSubGroup "DSI3_channel_registers_TRIM_DSI_TR(DSI3_channel_registers_TRIM_DSI_TR_if)" -e FALSE
+endSubGroup "DSI3_channel_registers_TRIM_DSI_TR(DSI3_channel_registers_TRIM_DSI_TR_if)"
+addSubGroup "DSI3_channel_registers_WAIT_TIME(DSI3_channel_registers_WAIT_TIME_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_WAIT_TIME/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_WAIT_TIME/TIME[14:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_WAIT_TIME/TIME_in[14:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/DSI3_channel_registers_WAIT_TIME/TIME_set
+endSubGroup "DSI3_channel_registers_WAIT_TIME(DSI3_channel_registers_WAIT_TIME_if)"
+endSubGroup "registers"
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/broad_cast
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/broad_cast_next
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/command
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/crc[7:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/crc_data[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/crc_next[7:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/data_high[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/data_low[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/data_low_crc[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/finished
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/i_transceiver_enable
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/mode
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/o_elip_register_read[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/o_interrupt
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/o_transmit_pending
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/ov_deb
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/ov_sync
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/periods
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/periods_next
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/seed[7:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/stop_and_clear_buffer
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/stop_and_clear_buffer_next
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/store_data_high
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/store_data_low
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/uv_deb
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[2]/i_dsi3_block/uv_sync
+endSubGroup "i_dsi3_block[2]"
+addSubGroup "i_dsi3_block[3]" -e FALSE
+addSubGroup "registers" -e FALSE
+addSubGroup "DSI3_channel_registers_CRM_WORD2(master)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_CRM_WORD2/CRM_WORD2_in[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_CRM_WORD2/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_CRM_WORD2/CRM_WORD2[15:0]
+endSubGroup "DSI3_channel_registers_CRM_WORD2(master)"
+addSubGroup "DSI3_channel_registers_CRM_WORD1(master)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_CRM_WORD1/CRM_WORD1_in[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_CRM_WORD1/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/i_DSI3_channel_registers/DSI3_channel_registers_CRM_WORD1/CRM_WORD1[15:0]
+endSubGroup "DSI3_channel_registers_CRM_WORD1(master)"
+addSubGroup "DSI3_channel_registers_DSI_CMD(DSI3_channel_registers_DSI_CMD_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_DSI_CMD/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_DSI_CMD/CMD[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_DSI_CMD/CMD_in[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_DSI_CMD/DATA[11:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_DSI_CMD/DATA_in[11:0]
+endSubGroup "DSI3_channel_registers_DSI_CMD(DSI3_channel_registers_DSI_CMD_if)"
+addSubGroup "DSI3_channel_registers_DSI_IRQ_STAT(DSI3_channel_registers_DSI_IRQ_STAT_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/DSIUV
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/DSIUV_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/DSIOV
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/DSIOV_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/DSIUV_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_STAT/DSIOV_set
+endSubGroup "DSI3_channel_registers_DSI_IRQ_STAT(DSI3_channel_registers_DSI_IRQ_STAT_if)"
+addSubGroup "DSI3_channel_registers_DSI_IRQ_MASK(DSI3_channel_registers_DSI_IRQ_MASK_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_MASK/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_MASK/SYNC_ERR
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_MASK/DSIUV
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_DSI_IRQ_MASK/DSIOV
+endSubGroup "DSI3_channel_registers_DSI_IRQ_MASK(DSI3_channel_registers_DSI_IRQ_MASK_if)"
+addSubGroup "DSI3_channel_registers_DSI_STAT(DSI3_channel_registers_DSI_STAT_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/DSIUV
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/DSIUV_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/DSIOV
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/DSIOV_in
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/PULSECNT[7:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_DSI_STAT/PULSECNT_in[7:0]
+endSubGroup "DSI3_channel_registers_DSI_STAT(DSI3_channel_registers_DSI_STAT_if)"
+addSubGroup "DSI3_channel_registers_PKG_STAT(DSI3_channel_registers_PKG_STAT_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/PT
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/PT_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SCE
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SCE_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/CRC_ERR
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/CRC_ERR_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SYMBOL_ERROR
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SYMBOL_ERROR_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/VDSI_ERR
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/VDSI_ERR_in
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/CLK_ERR
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/CLK_ERR_in
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SYMBOL_COUNT[7:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SYMBOL_COUNT_in[7:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/PT_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SCE_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/CRC_ERR_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SYMBOL_ERROR_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/VDSI_ERR_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/CLK_ERR_set
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_PKG_STAT/SYMBOL_COUNT_set
+endSubGroup "DSI3_channel_registers_PKG_STAT(DSI3_channel_registers_PKG_STAT_if)"
+addSubGroup "DSI3_channel_registers_SYNC(DSI3_channel_registers_SYNC_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_SYNC/value[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_SYNC/PIN
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_SYNC/CHANNELS[3:0]
+endSubGroup "DSI3_channel_registers_SYNC(DSI3_channel_registers_SYNC_if)"
+addSubGroup "DSI3_channel_registers_TRIM_DSI_REC_FALL(DSI3_channel_registers_TRIM_DSI_REC_FALL_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_TRIM_DSI_REC_FALL/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_TRIM_DSI_REC_FALL/TRIM_REC2[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_TRIM_DSI_REC_FALL/TRIM_REC1[3:0]
+endSubGroup "DSI3_channel_registers_TRIM_DSI_REC_FALL(DSI3_channel_registers_TRIM_DSI_REC_FALL_if)"
+addSubGroup "DSI3_channel_registers_TRIM_DSI_REC_RISE(DSI3_channel_registers_TRIM_DSI_REC_RISE_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_TRIM_DSI_REC_RISE/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_TRIM_DSI_REC_RISE/TRIM_REC2[3:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_TRIM_DSI_REC_RISE/TRIM_REC1[3:0]
+endSubGroup "DSI3_channel_registers_TRIM_DSI_REC_RISE(DSI3_channel_registers_TRIM_DSI_REC_RISE_if)"
+addSubGroup "DSI3_channel_registers_TRIM_DSI_TR(DSI3_channel_registers_TRIM_DSI_TR_if)" -e FALSE
+endSubGroup "DSI3_channel_registers_TRIM_DSI_TR(DSI3_channel_registers_TRIM_DSI_TR_if)"
+addSubGroup "DSI3_channel_registers_WAIT_TIME(DSI3_channel_registers_WAIT_TIME_if)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_WAIT_TIME/value[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_WAIT_TIME/TIME[14:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_WAIT_TIME/TIME_in[14:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/DSI3_channel_registers_WAIT_TIME/TIME_set
+endSubGroup "DSI3_channel_registers_WAIT_TIME(DSI3_channel_registers_WAIT_TIME_if)"
+endSubGroup "registers"
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/broad_cast
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/broad_cast_next
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/command
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/crc[7:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/crc_data[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/crc_next[7:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/data_high[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/data_low[15:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/data_low_crc[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/finished
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/i_transceiver_enable
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/mode
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/o_elip_register_read[15:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/o_interrupt
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/o_transmit_pending
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/ov_deb
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/ov_sync
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/periods
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/periods_next
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/seed[7:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/stop_and_clear_buffer
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/stop_and_clear_buffer_next
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/store_data_high
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/store_data_low
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/uv_deb
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_dsi3/generate_dsi3_blocks[3]/i_dsi3_block/uv_sync
+endSubGroup "i_dsi3_block[3]"
+addGroup "TEST" -e FALSE
+addSubGroup "TMR" -e FALSE
+addSubGroup "tmr_dsi[3:0]" -e FALSE
+addSubGroup "tmr_dsi[3](tmr_dsi_if)"
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/tmr_dsi[3]/tmr_ana_dsi3_tx[6:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/tmr_dsi[3]/tmr_ana_dsi3_rx[1:0]
+endSubGroup "tmr_dsi[3](tmr_dsi_if)"
+addSubGroup "tmr_dsi[2](tmr_dsi_if)"
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/tmr_dsi[2]/tmr_ana_dsi3_tx[6:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/tmr_dsi[2]/tmr_ana_dsi3_rx[1:0]
+endSubGroup "tmr_dsi[2](tmr_dsi_if)"
+addSubGroup "tmr_dsi[1](tmr_dsi_if)"
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/tmr_dsi[1]/tmr_ana_dsi3_tx[6:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/tmr_dsi[1]/tmr_ana_dsi3_rx[1:0]
+endSubGroup "tmr_dsi[1](tmr_dsi_if)"
+addSubGroup "tmr_dsi[0](tmr_dsi_if)"
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/tmr_dsi[0]/tmr_ana_dsi3_tx[6:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/tmr_dsi[0]/tmr_ana_dsi3_rx[1:0]
+endSubGroup "tmr_dsi[0](tmr_dsi_if)"
+endSubGroup "tmr_dsi[3:0]"
+addSubGroup "tmr_supply(master)"
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/tmr_supply/tmr_ana_supply[5:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/tmr_supply/tmr_ana_temp_sensor[1:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/tmr_supply/tmr_ana_otp[5:0]
+endSubGroup "tmr_supply(master)"
+addSubGroup "tmr_scan(master)"
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/tmr_scan/scan
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/tmr_scan/vdd_disable
+endSubGroup "tmr_scan(master)"
+addSubGroup "tmr_osc(master)"
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/tmr_osc/tmr_ana_tb_pll[6:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/tmr_osc/tmr_ana_tb_osc[2:0]
+endSubGroup "tmr_osc(master)"
+endSubGroup "TMR"
+addSubGroup "i_jtag_tap" -e FALSE
+addSubGroup "i_jtag_tap"
+addSubGroup "pads(slave)" -e FALSE
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/pads/tdo
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/pads/trstn
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/pads/tck
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/pads/tdi
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/pads/tms
+endSubGroup "pads(slave)"
+addSubGroup "status(master)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/status/ir[7:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/status/dsr[31:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/status/test_rst
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/status/run_idle
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/status/capture_dr
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/status/shift_dr
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/status/update_dr
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/status/update_ir
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/status/test_rst_fe
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/status/run_idle_fe
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/status/capture_dr_fe
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/status/shift_dr_fe
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/status/update_dr_fe
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/status/update_ir_fe
+endSubGroup "status(master)"
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/capture_dr
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/capture_dr_fe
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/capture_ir
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/dr_shiftregister[31:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/i_atpgmode
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/i_dr[31:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/i_dsr2tdo
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/i_tdo_latched
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/i_tdo_unlatched
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/ir_register[7:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/ir_shiftregister[7:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/run_idle
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/run_idle_fe
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/shift_dr
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/shift_dr_fe
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/shift_ir
+addSignal -h 15 -UNSIGNED /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/tap_state[3:0]
+addSignal -h 15 -UNSIGNED /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/tap_state_nxt[3:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/tdo_latch
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/test_rst
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/test_rst_fe
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/update_dr
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/update_dr_fe
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/update_ir
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/i_test_control/i_jtag_tap/update_ir_fe
+endSubGroup "i_jtag_tap"
+endSubGroup "i_jtag_tap"
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/TMODE_P
+addGroup "otp_ip_bus(slave)" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/otp_ip_bus/addr[11:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/otp_ip_bus/we
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/otp_ip_bus/sel[1:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/otp_ip_bus/stb
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/otp_ip_bus/sleep
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/otp_ip_bus/read_mode[1:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/otp_ip_bus/ack
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_test/otp_ip_bus/data[11:0]
+addGroup "ecc_decoder" -e FALSE
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/ecc_decoder/i_correct_n
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/ecc_decoder/i_data[27:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/ecc_decoder/i_ecc[7:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/ecc_decoder/o_data[27:0]
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/ecc_decoder/o_ecc_cor
+addSignal -h 15 /top_tb/th/i_dut_wrapper/xtop/xdigtop/i_logic_top/i_main_control/i_main_fsm/ecc_decoder/o_ecc_err
+addGroup "G9"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+

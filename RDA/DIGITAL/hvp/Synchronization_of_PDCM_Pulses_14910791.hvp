@@ -1,0 +1,35 @@
+
+plan Synchronization_of_PDCM_Pulses;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14910791;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14910791";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature synchronization_of_PDCM_pulses;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14910800";
+    edfId = 14910800;
+    edfType = PARAGRAPH;
+    customer = true;
+  endfeature
+
+  feature PDCM_pulses_using_synchronization_of_channels;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14910803";
+    edfId = 14910803;
+    edfType = GRAPHIC;
+    customer = true;
+  endfeature
+
+  feature PDCM_pulses_without_synchronization_of_channels;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14910804";
+    edfId = 14910804;
+    edfType = GRAPHIC;
+    customer = true;
+  endfeature
+
+endplan

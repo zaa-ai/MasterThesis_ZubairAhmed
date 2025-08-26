@@ -1,0 +1,22 @@
+`include "Time_Base_Structure_14704183.hvp"
+`include "CLKREF_Supervision_14704200.hvp"
+`include "PLL_14704215.hvp"
+`include "OSC20M_14702764.hvp"
+
+plan Time_Base;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14704182;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704182";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  subplan Time_Base_Structure;
+  subplan CLKREF_Supervision;
+  subplan PLL;
+  subplan OSC20M;
+endplan

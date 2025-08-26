@@ -1,0 +1,10 @@
+#!/bin/csh
+set EXCLUDES='#time_base_registers,#Interrupt_Registers,#buffer_interrupt_registers,#ring_buffer_registers,#SPI_interrupt_registers,#IC_status_word,#DSI3_channel_registers,#common_DSI3_block_registers,#DSI3_wave_shaping_registers,#supply_registers,#IC_revision_and_ID_registers,#Standard_test_register,#OTP_Key_Register_8bit,#OTP_ECC_Control_Registers_8bit,#OTP_readout_register,#Test_Registers,#ELIP_test_register,#ATPG_test_register,#TEST_SUPPLY,#TEST_TOP,#TEST_OSC'
+
+## Operation_Mode_Control
+set JSON = ${DESIGN}/${DIGITAL}/config/$PROJECT_STATE.json
+
+echo "##### testing script ###################################################"
+mkdir -p ./testing_the_script
+stove edf-headers -p $JSON -o testing_the_script -t tmr_definitions.vm -e .sv --debug -x $EXCLUDES
+echo "##### generating tmr_out interfaces ####################################"

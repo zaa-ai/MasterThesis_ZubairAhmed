@@ -1,0 +1,13 @@
+DATA_STORAGE/buffer_test
+DATA_STORAGE/pdcm_buffer_test
+DATA_STORAGE/sram_ecc_test
+DATA_STORAGE/sram_bist_test
+DSI3_MASTER/receiver_test
+DSI3_MASTER/block_test
+EASIER_UVM/easier_uvm_test
+EASIER_UVM/spi_frames_test
+MAIN_CONTROL/main_fsm_test
+command_control_test
+TIMEBASE/timebase_test
+ECC/sim/ecc_register_test
+SPI/spi_test

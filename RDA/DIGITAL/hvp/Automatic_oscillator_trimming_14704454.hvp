@@ -1,0 +1,21 @@
+
+plan Automatic_oscillator_trimming;
+
+  attribute enum{true, false} customer = true;
+
+  annotation string edfType = "BLOCK";
+  annotation integer edfId = 14704454;
+  annotation string EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704454";
+
+  metric real spec;
+    aggregator = min;
+  endmetric
+
+  feature description_;
+    EDF = "http://intranet.elmos.de/apps/edf/structure/index.jsf?openid=14704455";
+    edfId = 14704455;
+    edfType = PARAGRAPH;
+    customer = false;
+  endfeature
+
+endplan
