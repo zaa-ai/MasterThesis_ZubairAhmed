@@ -1,2 +1,0 @@
-#!/bin/csh
-fm_shell -f compare.tcl | tee logs/fm.log

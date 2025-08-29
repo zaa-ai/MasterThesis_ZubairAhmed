@@ -1,3 +1,0 @@
-t:Timing_Default
-4,D1,D1,D0,EX//tap init (5x TCK)
-1,D1,D1,D0,EX

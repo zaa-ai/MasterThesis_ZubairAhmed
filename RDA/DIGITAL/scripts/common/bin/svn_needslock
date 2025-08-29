@@ -1,8 +1,0 @@
-#!/bin/csh -f
-
-foreach file ($*)
-	if (-f $file) then
-		echo $file
-		svn propset svn:needs-lock yes $file
-	endif
-end

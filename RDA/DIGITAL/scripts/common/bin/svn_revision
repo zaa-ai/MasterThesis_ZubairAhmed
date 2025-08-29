@@ -1,3 +1,0 @@
-#!/bin/tcsh -f
-
-svn info | grep Revision | awk '{printf($2)}'

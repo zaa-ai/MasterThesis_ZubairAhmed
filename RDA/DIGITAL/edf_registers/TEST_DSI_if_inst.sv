@@ -1,9 +1,0 @@
-/* ###   interface instances   ###################################################### */
-
-TEST_DSI_TMR_ANA_DSI3_TX_if TEST_DSI_TMR_ANA_DSI3_TX (); 
-TEST_DSI_TMR_ANA_DSI3_RX_if TEST_DSI_TMR_ANA_DSI3_RX (); 
-TEST_DSI_TMR_DIG_DSI3_if TEST_DSI_TMR_DIG_DSI3 (); 
-TEST_DSI_TMR_SEL_DSI3_if TEST_DSI_TMR_SEL_DSI3 (); 
-TEST_DSI_TMR_VAL_DSI3_if TEST_DSI_TMR_VAL_DSI3 (); 
-TEST_DSI_TMR_IN_DSI3_if TEST_DSI_TMR_IN_DSI3 (); 
-

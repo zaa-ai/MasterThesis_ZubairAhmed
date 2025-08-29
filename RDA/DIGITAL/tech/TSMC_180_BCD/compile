@@ -1,9 +1,0 @@
-export VLOG_OPTIONS_TB="-sverilog +define+NTC +define+RECREM +define+INITIALIZE_MEMORY +define+UVM_NO_DEPRECATED +define+UVM_NO_VERDI_RECORD -timescale=1ns/1ps  -kdb -full64 +lint=all -suppress=VCDE,NS,ZERO,EAP,PORTFRC,OUDPE,IWU -error=IPDP,IPDW,SIOB,IWNF,PCWM-W -nc +v2k +incdir+$UVM_HOME/src/vcs"
-export VLOG_OPTIONS_RTL="-sverilog +define+NTC +define+RECREM +define+INITIALIZE_MEMORY +define+UVM_NO_DEPRECATED +define+UVM_NO_VERDI_RECORD -timescale=1ns/1ps -kdb -full64 +lint=all -suppress=VCDE,NS,ZERO,EAP,PORTFRC,OUDPE,IWU -error=IPDP,IPDW,SIOB,IWNF,PCWM-W -nc +v2k +incdir+$UVM_HOME/src/vcs"
-export VHDL_OPTIONS="   -kdb -full64 -vhdl08 -nc -xlrm"
-export VLOG_COMPILER="vlogan"
-export VHDL_COMPILER="vhdlan"
-
-pwd
-
-${VLOG_COMPILER} -sverilog +define+NTC +define+RECREM +define+INITIALIZE_MEMORY +define+UVM_NO_DEPRECATED +define+UVM_NO_VERDI_RECORD -timescale=1ns/1ps -kdb -full64 +lint=all,OUDPE:10 -suppress=VCDE,NS,ZERO,EAP,OUDPE,PORTFRC,IWU -error=IPDP,IPDW,SIOB,IWNF,PCWM-W -nc +v2k +incdir+$UVM_HOME/src/vcs -P /common/run/synopsys/vcs/R-2020.12-1/include/hdl_xmr.tab -f ${DESIGN}/${DIGITAL}/tech/TSMC_180_BCD/files.f -work WORK -sverilog

@@ -1,9 +1,0 @@
-export VLOG_OPTIONS_TB="-sverilog +define+INITIALIZE_MEMORY +define+UVM_NO_DEPRECATED +define+UVM_NO_VERDI_RECORD -timescale=1ns/1ps +define+HAVE_PG_PINS  -kdb -full64 +lint=all -suppress=VCDE,NS,ZERO,EAP,PORTFRC,OUDPE,IWU -error=IPDP,IPDW,SIOB,IWNF,PCWM-W -nc +v2k +incdir+$UVM_HOME/src/vcs"
-export VLOG_OPTIONS_RTL="-sverilog +define+INITIALIZE_MEMORY +define+UVM_NO_DEPRECATED +define+UVM_NO_VERDI_RECORD -timescale=1ns/1ps +define+HAVE_PG_PINS  -kdb -full64 +lint=all,OUDPE:10 -suppress=VCDE,NS,ZERO,EAP,PORTFRC -error=IPDP,IPDW,SIOB,IWNF,PCWM-W -nc +v2k +incdir+$UVM_HOME/src/vcs"
-export VHDL_OPTIONS="   -kdb -full64 -vhdl08 -nc -xlrm"
-export VLOG_COMPILER="vlogan"
-export VHDL_COMPILER="vhdlan"
-
-${VHDL_COMPILER} ${VHDL_OPTIONS} -work JTAG -f $DESIGN/$DIGITAL/config/digital_vhdl_pkg.f
-${VHDL_COMPILER} ${VHDL_OPTIONS} -work OTP_MEM -f $DESIGN/$DIGITAL/config/otp_mem_vhdl_pkg.f
-${VHDL_COMPILER} ${VHDL_OPTIONS} -work OTP_MEM -f $DESIGN/$DIGITAL/config/otp_mem_vhdl.f

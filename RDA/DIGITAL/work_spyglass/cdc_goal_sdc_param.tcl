@@ -1,8 +1,0 @@
-set_parameter sdc_domain_mode sta_compliant
-set_parameter sdc_generated_clocks yes
-set_parameter enable_generated_clocks yes
-set_parameter tc_ignored_commands ./ignore_sdc_commands.txt
-set_parameter tc_stop_parsing_ignored_commands yes
-set_parameter use_inferred_clocks yes
-set_parameter use_inferred_resets yes
-set_parameter report_indirect_port_clock yes

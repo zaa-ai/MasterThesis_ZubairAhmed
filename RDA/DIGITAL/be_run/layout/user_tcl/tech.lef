@@ -1,9 +1,0 @@
-#
-# Used for Milkyway creation of digital iso/extra instance
-#
-
-LAYER OVERLAP
-  TYPE OVERLAP ;
-END OVERLAP
-
-END LIBRARY

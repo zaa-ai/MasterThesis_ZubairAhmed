@@ -1,7 +1,0 @@
-INCLUDE uvm_simulation.parser
-IGNORE MESSAGE
-  W WARNING: [380882414000]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_otp4kx12.core:<WARNING> Maximum read time (tRP_MAX) violation
-IGNORE END
-IGNORE MESSAGE
-[407877265000]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_otp4kx12.core:<WARNING> Maximum read time (tRP_MAX) violation
-IGNORE END
