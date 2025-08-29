@@ -1,0 +1,635 @@
++++ calling  ./simv_52144_dsi3_crm_ecc_2_bit_error +UVM_VERBOSITY=UVM_MEDIUM +bus_conflict_off +warn=noFCICIO -ucli -assert nopostproc +UVM_LOG_RECORD -verdi_opts '-ssr Verdi.ses' +uvm_set_type_override=top_default_seq,dsi3_crm_ecc_2_bit_error_seq -i run.tcl -vcs_assert off +UVM_VERDI_TRACE="UVM_AWARE+RAL+TLM+MSG+HIER+PRINT" +UVM_LOG_RECORD +UVM_TESTNAME=top_test +UVM_TR_RECORD +vcs+lic+wait -reportstats -cm line+cond+fsm+tgl+branch+assert -cm_dir DIGITAL/results/vcs/dsi3_crm_ecc_2_bit_error.vdb -lca   +fsdbfile+dsi3_crm_ecc_2_bit_error.fsdb
+ ++ in dir   /nfs/wrk.zaa/sim/52144/m52144a/dsi3_crm_ecc_2_bit_error
+ ++ on host  ex04.elmos.de
+ ++ user     zaa
+ ++ start    2025-02-20T14:16:28
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Warning-[LCA_FEATURES_ENABLED] Usage warning
+  LCA features enabled by '-lca' argument on the command line.  For more 
+  information regarding list of LCA features please refer to Chapter "LCA 
+  features" in the VCS Release Notes
+
+Chronologic VCS simulator copyright 1991-2021
+Contains Synopsys proprietary information.
+Compiler version S-2021.09-1_Full64; Runtime version S-2021.09-1_Full64;  Feb 20 15:16 2025
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+
+ VCS Coverage Metrics Release S-2021.09-1_Full64 Copyright (c) 1991-2021 by Synopsys Inc.
+ucli% source dump.tcl
+*Verdi* Loading libsscore_vcsmx202109.so
+FSDB Dumper for VCS-MX, Release Verdi_U-2023.03-1, Linux x86_64/64bit, 04/17/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'dsi3_crm_ecc_2_bit_error.fsdb'
+*Verdi* : fsdbDumpon("glitch") - All FSDB files at 0 ps.
+*Verdi* : Begin traversing the scope (top_tb), layer (0).
+*Verdi* : Enable +all dumping.
+*Verdi* : End of traversing.
+*Verdi* : Flush all FSDB Files at 0 ps.
+1
+ucli% if { [info exists ::env(GATE_LEVEL)] } {
+	source tcheck.tcl
+}
+ucli% run
+*Verdi* Enable Verdi Message Catcher.
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/verdi/uvm_custom_install_verdi_recorder.sv(283) @ 0: reporter [VERDI_TR_AUTO] +UVM_TR_RECORD implicitly enables recording_details to UVM_FULL for all components. For explicit control use +UVM_DISABLE_AUTO_COMPONENT and set recording_detail on components accordingly
+UVM_INFO @ 0: reporter [RNTST] Running test top_test...
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VRR applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VREF applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VBG applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+UVM_INFO @ 0: reporter [UVM_CMDLINE_PROC] Applying type override from the command line: +uvm_set_type_override=top_default_seq,dsi3_crm_ecc_2_bit_error_seq
+UVM_INFO   @       0.0000000us:  [UVM_VERDI_DPI]         uvm_verdi DPI routines are compiled off. Recompile without +define+UVM_NO_VERDI_DPI 
+UVM_INFO   @       0.0000000us:  [dsi3_crm_ecc_2_bit_error_seq] dsi3_crm_ecc_2_bit_error_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+*Verdi* Enable Verdi Recorder.
+Info: Verdi UVM 1.2 Hooks File 06/17/2014 
+UVM_INFO   @       0.0010000us:  [sim:task]              dsi3_crm_ecc_2_bit_error 
+UVM_INFO   @    2120.0010000us:  [sim:description]       '''Testcase for double bit ECC failures''' 
+UVM_INFO   @    2120.0010000us:  [sim:description]       '''Testcase for single bit ECC failures''' 
+UVM_INFO   @    2178.7210000us:  [ecc_dsi3_crm_data_buffer_fsm_seq] ecc_dsi3_crm_data_buffer_fsm_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2178.7220000us:  [sim:description:2]     **double bit error in DSI3 data buffer FSM state at channel 0 
+UVM_INFO   @    2187.4020000us:  [sim:measure]           'IRQ_MASK' status = PASS 
+UVM_INFO   @    2196.0820000us:  [sim:measure]           'ECC_IRQ_MASK' status = PASS 
+UVM_INFO   @    2204.7620000us:  [sim:measure]           'ECC_CORR_IRQ_MASK' status = PASS 
+UVM_INFO   @    2213.4420000us:  [sim:measure]           'ECC_CORR_IRQ_STAT' status = PASS 
+UVM_INFO   @    2222.1220000us:  [sim:measure]           'ECC_IRQ_STAT' status = PASS 
+UVM_INFO   @    2230.8020000us:  [sim:measure]           'IRQ_STAT' status = PASS 
+UVM_INFO   @    2233.6820000us:  [single_crm_on_all_channels_seq] single_crm_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2233.6830000us:  [sim:description:2]     **single CRM transmit on all channels 
+UVM_INFO   @    2574.4682780us:  [ecc_dsi3_crm_data_buffer_fsm_seq] read DSI3 data buffer FSM state with 01  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_crm_data_buffer_error_seq.svh(51) 
+UVM_INFO   @    2574.4682780us:  [ecc_dsi3_crm_data_buffer_fsm_seq] force DSI3 data buffer FSM state with 04  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_crm_data_buffer_error_seq.svh(57) 
+UVM_INFO   @    2574.4682780us:  [ecc_dsi3_crm_data_buffer_fsm_seq] force top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_buffers.generate_dsi_buffers[0].i_dsi3_crm_data_buffer.i_state_fsm_ecc_register.data_reg with 04  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_crm_data_buffer_error_seq.svh(58) 
+UVM_INFO   @    2574.5682780us:  [ecc_dsi3_crm_data_buffer_fsm_seq] release top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_buffers.generate_dsi_buffers[0].i_dsi3_crm_data_buffer.i_state_fsm_ecc_register.data_reg  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_crm_data_buffer_error_seq.svh(63) 
+mask=0001
+UVM_INFO   @    2602.4482780us:  [ecc_dsi3_crm_data_buffer_fsm_seq] bit_error = TWO_BIT_ERR  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/ecc_error_base_seq.sv(190) 
+UVM_INFO   @    2606.2882780us:  [sim:measure]           'ECC_CORR_IRQ_STAT' status = PASS 
+UVM_INFO   @    2610.1282780us:  [sim:measure]           'ECC_IRQ_STAT' status = PASS 
+UVM_INFO   @    2613.9682780us:  [sim:measure]           'IRQ_STAT' status = PASS 
+UVM_INFO   @    2626.4882780us:  [sim:measure]           'ECC_CORR_IRQ_MASK' status = PASS 
+UVM_INFO   @    2639.0082780us:  [sim:measure]           'ECC_IRQ_MASK' status = PASS 
+UVM_INFO   @    2651.5282780us:  [sim:measure]           'ECC_CORR_IRQ_MASK' status = PASS 
+UVM_INFO   @    2664.0482780us:  [sim:measure]           'ECC_IRQ_MASK' status = PASS 
+UVM_INFO   @    2676.5682780us:  [sim:measure]           'IRQ_MASK' status = PASS 
+UVM_INFO   @    2689.0882780us:  [sim:measure]           'IRQ_MASK' status = PASS 
+UVM_INFO   @    2697.7682780us:  [sim:measure]           'ECC_CORR_IRQ_STAT' status = PASS 
+UVM_INFO   @    2706.4482780us:  [sim:measure]           'ECC_IRQ_STAT' status = PASS 
+UVM_INFO   @    2715.1282780us:  [sim:measure]           'IRQ_STAT' status = PASS 
+UVM_ERROR  @    2747.1230000us:  [spi_dsi_data_packet]   Unexpected flags at channel 1! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @    2747.1230000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 1 at word index 0, expected 0x47b0, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @    2747.1230000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 1 at word index 1, expected 0x8ab4, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @    2747.1230000us:  [spi_read_crm_data_packets_seq] Unexpected symbol count at channel 1, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(147) 
+UVM_INFO   @    2850.0030000us:  [single_crm_on_all_channels_seq] single_crm_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2850.0040000us:  [sim:description:2]     **single CRM transmit on all channels 
+UVM_ERROR  @    3363.4440000us:  [spi_dsi_data_packet]   Unexpected flags at channel 0! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @    3363.4440000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 0 at word index 0, expected 0x8cb2, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @    3363.4440000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 0 at word index 1, expected 0x120d, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @    3363.4440000us:  [spi_read_crm_data_packets_seq] Unexpected symbol count at channel 0, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(147) 
+UVM_ERROR  @    3363.4440000us:  [spi_dsi_data_packet]   Unexpected flags at channel 1! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @    3363.4440000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 1 at word index 0, expected 0x896f, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @    3363.4440000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 1 at word index 1, expected 0xeabb, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @    3363.4440000us:  [spi_read_crm_data_packets_seq] Unexpected symbol count at channel 1, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(147) 
+UVM_INFO   @    3463.4440000us:  [single_pdcm_on_all_channels_seq] single_pdcm_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    3463.4450000us:  [sim:description:2]     **single PDCM on all channels 
+UVM_INFO   @    3463.4450000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    3521.1260000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_8Bit | Start:    39 -    80  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    3521.1260000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    3578.8070000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_8Bit | Start:    25 -    66  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    4642.2470000us:  [single_pdcm_on_all_channels_seq] Check read for channel 0  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(87) 
+UVM_ERROR  @    4642.2470000us:  [spi_dsi_data_packet]   Unexpected flags at packet 0 at channel 0! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @    4642.2470000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 0 at packet index 0 at word index 0, expected 0x65ff, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @    4642.2470000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 0 at packet index 0 at word index 1, expected 0x84eb, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @    4642.2470000us:  [spi_read_pdcm_frame_seq] Unexpected symbol count at packet index 0 at channel 0, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(212) 
+UVM_INFO   @    4642.2470000us:  [single_pdcm_on_all_channels_seq] Check read for channel 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(87) 
+UVM_ERROR  @    4642.2470000us:  [spi_dsi_data_packet]   Unexpected flags at packet 0 at channel 1! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @    4642.2470000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 1 at packet index 0 at word index 0, expected 0x65ff, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @    4642.2470000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 1 at packet index 0 at word index 1, expected 0x84eb, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @    4642.2470000us:  [spi_read_pdcm_frame_seq] Unexpected symbol count at packet index 0 at channel 1, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(212) 
+UVM_INFO   @    4662.8070000us:  [single_pdcm_on_all_channels_seq] Check read for channel 0  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(117) 
+UVM_INFO   @    4662.8070000us:  [single_pdcm_on_all_channels_seq] Check read for channel 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(117) 
+UVM_INFO   @    4762.8070000us:  [ecc_dsi3_crm_data_buffer_read_pointer_seq] ecc_dsi3_crm_data_buffer_read_pointer_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    4762.8080000us:  [sim:description:2]     **double bit error in DSI3 data buffer read pointer at channel 0 
+UVM_INFO   @    4771.4880000us:  [sim:measure]           'IRQ_MASK' status = PASS 
+UVM_INFO   @    4780.1680000us:  [sim:measure]           'ECC_IRQ_MASK' status = PASS 
+UVM_INFO   @    4788.8480000us:  [sim:measure]           'ECC_CORR_IRQ_MASK' status = PASS 
+UVM_INFO   @    4797.5280000us:  [sim:measure]           'ECC_CORR_IRQ_STAT' status = PASS 
+UVM_INFO   @    4806.2080000us:  [sim:measure]           'ECC_IRQ_STAT' status = PASS 
+UVM_INFO   @    4814.8880000us:  [sim:measure]           'IRQ_STAT' status = PASS 
+UVM_INFO   @    4817.7680000us:  [single_crm_on_all_channels_seq] single_crm_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    4817.7690000us:  [sim:description:2]     **single CRM transmit on all channels 
+UVM_INFO   @    5178.2398420us:  [ecc_dsi3_crm_data_buffer_read_pointer_seq] read DSI3 data buffer read pointer with 01  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_crm_data_buffer_error_seq.svh(51) 
+UVM_INFO   @    5178.2398420us:  [ecc_dsi3_crm_data_buffer_read_pointer_seq] force DSI3 data buffer read pointer with 25  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_crm_data_buffer_error_seq.svh(57) 
+UVM_INFO   @    5178.2398420us:  [ecc_dsi3_crm_data_buffer_read_pointer_seq] force top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_buffers.generate_dsi_buffers[0].i_dsi3_crm_data_buffer.i_read_ecc_register.data_reg with 25  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_crm_data_buffer_error_seq.svh(58) 
+UVM_INFO   @    5178.3398420us:  [ecc_dsi3_crm_data_buffer_read_pointer_seq] release top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_buffers.generate_dsi_buffers[0].i_dsi3_crm_data_buffer.i_read_ecc_register.data_reg  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_crm_data_buffer_error_seq.svh(63) 
+mask=0001
+UVM_INFO   @    5206.2198420us:  [ecc_dsi3_crm_data_buffer_read_pointer_seq] bit_error = TWO_BIT_ERR  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/ecc_error_base_seq.sv(190) 
+UVM_INFO   @    5210.0598420us:  [sim:measure]           'ECC_CORR_IRQ_STAT' status = PASS 
+UVM_INFO   @    5213.8998420us:  [sim:measure]           'ECC_IRQ_STAT' status = PASS 
+UVM_INFO   @    5217.7398420us:  [sim:measure]           'IRQ_STAT' status = PASS 
+UVM_INFO   @    5230.2598420us:  [sim:measure]           'ECC_CORR_IRQ_MASK' status = PASS 
+UVM_INFO   @    5242.7798420us:  [sim:measure]           'ECC_IRQ_MASK' status = PASS 
+UVM_INFO   @    5255.2998420us:  [sim:measure]           'ECC_CORR_IRQ_MASK' status = PASS 
+UVM_INFO   @    5267.8198420us:  [sim:measure]           'ECC_IRQ_MASK' status = PASS 
+UVM_INFO   @    5280.3398420us:  [sim:measure]           'IRQ_MASK' status = PASS 
+UVM_INFO   @    5292.8598420us:  [sim:measure]           'IRQ_MASK' status = PASS 
+UVM_INFO   @    5301.5398420us:  [sim:measure]           'ECC_CORR_IRQ_STAT' status = PASS 
+UVM_INFO   @    5310.2198420us:  [sim:measure]           'ECC_IRQ_STAT' status = PASS 
+UVM_INFO   @    5318.8998420us:  [sim:measure]           'IRQ_STAT' status = PASS 
+UVM_ERROR  @    5331.2090000us:  [spi_dsi_data_packet]   Unexpected flags at channel 1! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @    5331.2090000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 1 at word index 0, expected 0x7eb3, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @    5331.2090000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 1 at word index 1, expected 0xde25, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @    5331.2090000us:  [spi_read_crm_data_packets_seq] Unexpected symbol count at channel 1, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(147) 
+UVM_INFO   @    5434.0890000us:  [single_crm_on_all_channels_seq] single_crm_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    5434.0900000us:  [sim:description:2]     **single CRM transmit on all channels 
+UVM_ERROR  @    5947.5300000us:  [spi_dsi_data_packet]   Unexpected flags at channel 0! Flag CRC was not set correctly! Exp. 1 but got 0  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @    5947.5300000us:  [spi_dsi_data_packet]   Unexpected flags at channel 0! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @    5947.5300000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 0 at word index 0, expected 0x3266, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @    5947.5300000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 0 at word index 1, expected 0xb84e, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @    5947.5300000us:  [spi_read_crm_data_packets_seq] Unexpected symbol count at channel 0, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(147) 
+UVM_ERROR  @    5947.5300000us:  [spi_read_crm_data_packets_seq] Unexpected CRC flag at channel 0, expected 1, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(196) 
+UVM_ERROR  @    5947.5300000us:  [spi_dsi_data_packet]   Unexpected flags at channel 1! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @    5947.5300000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 1 at word index 0, expected 0xc7d0, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @    5947.5300000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 1 at word index 1, expected 0x80ae, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @    5947.5300000us:  [spi_read_crm_data_packets_seq] Unexpected symbol count at channel 1, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(147) 
+UVM_INFO   @    6047.5300000us:  [single_pdcm_on_all_channels_seq] single_pdcm_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    6047.5310000us:  [sim:description:2]     **single PDCM on all channels 
+UVM_INFO   @    6047.5310000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    6105.2120000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_8Bit | Start:    29 -    74  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    6105.2120000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    6162.8930000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_8Bit | Start:    64 -    77  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    7226.3330000us:  [single_pdcm_on_all_channels_seq] Check read for channel 0  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(87) 
+UVM_ERROR  @    7226.3330000us:  [spi_dsi_data_packet]   Unexpected flags at packet 0 at channel 0! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @    7226.3330000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 0 at packet index 0 at word index 0, expected 0x65ff, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @    7226.3330000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 0 at packet index 0 at word index 1, expected 0x84eb, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @    7226.3330000us:  [spi_read_pdcm_frame_seq] Unexpected symbol count at packet index 0 at channel 0, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(212) 
+UVM_INFO   @    7226.3330000us:  [single_pdcm_on_all_channels_seq] Check read for channel 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(87) 
+UVM_ERROR  @    7226.3330000us:  [spi_dsi_data_packet]   Unexpected flags at packet 0 at channel 1! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @    7226.3330000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 1 at packet index 0 at word index 0, expected 0x65ff, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @    7226.3330000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 1 at packet index 0 at word index 1, expected 0x84eb, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @    7226.3330000us:  [spi_read_pdcm_frame_seq] Unexpected symbol count at packet index 0 at channel 1, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(212) 
+UVM_INFO   @    7246.8930000us:  [single_pdcm_on_all_channels_seq] Check read for channel 0  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(117) 
+UVM_INFO   @    7246.8930000us:  [single_pdcm_on_all_channels_seq] Check read for channel 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(117) 
+UVM_INFO   @    7346.8930000us:  [ecc_dsi3_crm_data_buffer_write_pointer_seq] ecc_dsi3_crm_data_buffer_write_pointer_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    7346.8940000us:  [sim:description:2]     **double bit error in DSI3 data buffer write pointer at channel 0 
+UVM_INFO   @    7355.5740000us:  [sim:measure]           'IRQ_MASK' status = PASS 
+UVM_INFO   @    7364.2540000us:  [sim:measure]           'ECC_IRQ_MASK' status = PASS 
+UVM_INFO   @    7372.9340000us:  [sim:measure]           'ECC_CORR_IRQ_MASK' status = PASS 
+UVM_INFO   @    7381.6140000us:  [sim:measure]           'ECC_CORR_IRQ_STAT' status = PASS 
+UVM_INFO   @    7390.2940000us:  [sim:measure]           'ECC_IRQ_STAT' status = PASS 
+UVM_INFO   @    7398.9740000us:  [sim:measure]           'IRQ_STAT' status = PASS 
+UVM_INFO   @    7401.8540000us:  [single_crm_on_all_channels_seq] single_crm_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    7401.8550000us:  [sim:description:2]     **single CRM transmit on all channels 
+UVM_INFO   @    7759.8509620us:  [ecc_dsi3_crm_data_buffer_write_pointer_seq] read DSI3 data buffer write pointer with 01  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_crm_data_buffer_error_seq.svh(51) 
+UVM_INFO   @    7759.8509620us:  [ecc_dsi3_crm_data_buffer_write_pointer_seq] force DSI3 data buffer write pointer with 19  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_crm_data_buffer_error_seq.svh(57) 
+UVM_INFO   @    7759.8509620us:  [ecc_dsi3_crm_data_buffer_write_pointer_seq] force top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_buffers.generate_dsi_buffers[0].i_dsi3_crm_data_buffer.i_write_ecc_register.data_reg with 19  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_crm_data_buffer_error_seq.svh(58) 
+UVM_INFO   @    7759.9509620us:  [ecc_dsi3_crm_data_buffer_write_pointer_seq] release top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_buffers.generate_dsi_buffers[0].i_dsi3_crm_data_buffer.i_write_ecc_register.data_reg  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_crm_data_buffer_error_seq.svh(63) 
+mask=0001
+UVM_INFO   @    7787.8309620us:  [ecc_dsi3_crm_data_buffer_write_pointer_seq] bit_error = TWO_BIT_ERR  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/ecc_error_base_seq.sv(190) 
+UVM_INFO   @    7791.6709620us:  [sim:measure]           'ECC_CORR_IRQ_STAT' status = PASS 
+UVM_INFO   @    7795.5109620us:  [sim:measure]           'ECC_IRQ_STAT' status = PASS 
+UVM_INFO   @    7799.3509620us:  [sim:measure]           'IRQ_STAT' status = PASS 
+UVM_INFO   @    7811.8709620us:  [sim:measure]           'ECC_CORR_IRQ_MASK' status = PASS 
+UVM_INFO   @    7824.3909620us:  [sim:measure]           'ECC_IRQ_MASK' status = PASS 
+UVM_INFO   @    7836.9109620us:  [sim:measure]           'ECC_CORR_IRQ_MASK' status = PASS 
+UVM_INFO   @    7849.4309620us:  [sim:measure]           'ECC_IRQ_MASK' status = PASS 
+UVM_INFO   @    7861.9509620us:  [sim:measure]           'IRQ_MASK' status = PASS 
+UVM_INFO   @    7874.4709620us:  [sim:measure]           'IRQ_MASK' status = PASS 
+UVM_INFO   @    7883.1509620us:  [sim:measure]           'ECC_CORR_IRQ_STAT' status = PASS 
+UVM_INFO   @    7891.8309620us:  [sim:measure]           'ECC_IRQ_STAT' status = PASS 
+UVM_INFO   @    7900.5109620us:  [sim:measure]           'IRQ_STAT' status = PASS 
+UVM_ERROR  @    7915.2950000us:  [spi_dsi_data_packet]   Unexpected flags at channel 1! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @    7915.2950000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 1 at word index 0, expected 0x5c2a, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @    7915.2950000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 1 at word index 1, expected 0x9477, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @    7915.2950000us:  [spi_read_crm_data_packets_seq] Unexpected symbol count at channel 1, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(147) 
+UVM_INFO   @    8018.1750000us:  [single_crm_on_all_channels_seq] single_crm_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    8018.1760000us:  [sim:description:2]     **single CRM transmit on all channels 
+UVM_ERROR  @    8531.6160000us:  [spi_dsi_data_packet]   Unexpected flags at channel 0! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @    8531.6160000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 0 at word index 0, expected 0xf35e, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @    8531.6160000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 0 at word index 1, expected 0x4cdd, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @    8531.6160000us:  [spi_read_crm_data_packets_seq] Unexpected symbol count at channel 0, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(147) 
+UVM_ERROR  @    8531.6160000us:  [spi_dsi_data_packet]   Unexpected flags at channel 1! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @    8531.6160000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 1 at word index 0, expected 0xc6bb, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @    8531.6160000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 1 at word index 1, expected 0x2eca, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @    8531.6160000us:  [spi_read_crm_data_packets_seq] Unexpected symbol count at channel 1, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(147) 
+UVM_INFO   @    8631.6160000us:  [single_pdcm_on_all_channels_seq] single_pdcm_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    8631.6170000us:  [sim:description:2]     **single PDCM on all channels 
+UVM_INFO   @    8631.6170000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    8689.2980000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_8Bit | Start:    48 -    82  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    8689.2980000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    8746.9790000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_8Bit | Start:    29 -    62  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    9810.4190000us:  [single_pdcm_on_all_channels_seq] Check read for channel 0  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(87) 
+UVM_ERROR  @    9810.4190000us:  [spi_dsi_data_packet]   Unexpected flags at packet 0 at channel 0! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @    9810.4190000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 0 at packet index 0 at word index 0, expected 0x65ff, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @    9810.4190000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 0 at packet index 0 at word index 1, expected 0x84eb, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @    9810.4190000us:  [spi_read_pdcm_frame_seq] Unexpected symbol count at packet index 0 at channel 0, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(212) 
+UVM_INFO   @    9810.4190000us:  [single_pdcm_on_all_channels_seq] Check read for channel 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(87) 
+UVM_ERROR  @    9810.4190000us:  [spi_dsi_data_packet]   Unexpected flags at packet 0 at channel 1! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @    9810.4190000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 1 at packet index 0 at word index 0, expected 0x65ff, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @    9810.4190000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 1 at packet index 0 at word index 1, expected 0x84eb, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @    9810.4190000us:  [spi_read_pdcm_frame_seq] Unexpected symbol count at packet index 0 at channel 1, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(212) 
+UVM_INFO   @    9830.9790000us:  [single_pdcm_on_all_channels_seq] Check read for channel 0  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(117) 
+UVM_INFO   @    9830.9790000us:  [single_pdcm_on_all_channels_seq] Check read for channel 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(117) 
+UVM_INFO   @    9930.9790000us:  [ecc_dsi3_crm_data_buffer_valid_pointer_seq] ecc_dsi3_crm_data_buffer_valid_pointer_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    9930.9800000us:  [sim:description:2]     **double bit error in DSI3 data buffer valid pointer at channel 0 
+UVM_INFO   @    9939.6600000us:  [sim:measure]           'IRQ_MASK' status = PASS 
+UVM_INFO   @    9948.3400000us:  [sim:measure]           'ECC_IRQ_MASK' status = PASS 
+UVM_INFO   @    9957.0200000us:  [sim:measure]           'ECC_CORR_IRQ_MASK' status = PASS 
+UVM_INFO   @    9965.7000000us:  [sim:measure]           'ECC_CORR_IRQ_STAT' status = PASS 
+UVM_INFO   @    9974.3800000us:  [sim:measure]           'ECC_IRQ_STAT' status = PASS 
+UVM_INFO   @    9983.0600000us:  [sim:measure]           'IRQ_STAT' status = PASS 
+UVM_INFO   @    9985.9400000us:  [single_crm_on_all_channels_seq] single_crm_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    9985.9410000us:  [sim:description:2]     **single CRM transmit on all channels 
+UVM_INFO   @   10333.4875250us:  [ecc_dsi3_crm_data_buffer_valid_pointer_seq] read DSI3 data buffer valid pointer with 01  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_crm_data_buffer_error_seq.svh(51) 
+UVM_INFO   @   10333.4875250us:  [ecc_dsi3_crm_data_buffer_valid_pointer_seq] force DSI3 data buffer valid pointer with 02  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_crm_data_buffer_error_seq.svh(57) 
+UVM_INFO   @   10333.4875250us:  [ecc_dsi3_crm_data_buffer_valid_pointer_seq] force top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_buffers.generate_dsi_buffers[0].i_dsi3_crm_data_buffer.i_valid_ecc_register.data_reg with 02  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_crm_data_buffer_error_seq.svh(58) 
+UVM_INFO   @   10333.5875250us:  [ecc_dsi3_crm_data_buffer_valid_pointer_seq] release top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_buffers.generate_dsi_buffers[0].i_dsi3_crm_data_buffer.i_valid_ecc_register.data_reg  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_crm_data_buffer_error_seq.svh(63) 
+mask=0001
+UVM_INFO   @   10361.4675250us:  [ecc_dsi3_crm_data_buffer_valid_pointer_seq] bit_error = TWO_BIT_ERR  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/ecc_error_base_seq.sv(190) 
+UVM_INFO   @   10365.3075250us:  [sim:measure]           'ECC_CORR_IRQ_STAT' status = PASS 
+UVM_INFO   @   10369.1475250us:  [sim:measure]           'ECC_IRQ_STAT' status = PASS 
+UVM_INFO   @   10372.9875250us:  [sim:measure]           'IRQ_STAT' status = PASS 
+UVM_INFO   @   10385.5075250us:  [sim:measure]           'ECC_CORR_IRQ_MASK' status = PASS 
+UVM_INFO   @   10398.0275250us:  [sim:measure]           'ECC_IRQ_MASK' status = PASS 
+UVM_INFO   @   10410.5475250us:  [sim:measure]           'ECC_CORR_IRQ_MASK' status = PASS 
+UVM_INFO   @   10423.0675250us:  [sim:measure]           'ECC_IRQ_MASK' status = PASS 
+UVM_INFO   @   10435.5875250us:  [sim:measure]           'IRQ_MASK' status = PASS 
+UVM_INFO   @   10448.1075250us:  [sim:measure]           'IRQ_MASK' status = PASS 
+UVM_INFO   @   10456.7875250us:  [sim:measure]           'ECC_CORR_IRQ_STAT' status = PASS 
+UVM_INFO   @   10465.4675250us:  [sim:measure]           'ECC_IRQ_STAT' status = PASS 
+UVM_INFO   @   10474.1475250us:  [sim:measure]           'IRQ_STAT' status = PASS 
+UVM_ERROR  @   10499.3810000us:  [spi_dsi_data_packet]   Unexpected flags at channel 1! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @   10499.3810000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 1 at word index 0, expected 0x6205, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @   10499.3810000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 1 at word index 1, expected 0x0884, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @   10499.3810000us:  [spi_read_crm_data_packets_seq] Unexpected symbol count at channel 1, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(147) 
+UVM_INFO   @   10602.2610000us:  [single_crm_on_all_channels_seq] single_crm_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   10602.2620000us:  [sim:description:2]     **single CRM transmit on all channels 
+UVM_ERROR  @   11115.7020000us:  [spi_dsi_data_packet]   Unexpected flags at channel 0! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @   11115.7020000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 0 at word index 0, expected 0x8872, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @   11115.7020000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 0 at word index 1, expected 0x3437, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @   11115.7020000us:  [spi_read_crm_data_packets_seq] Unexpected symbol count at channel 0, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(147) 
+UVM_ERROR  @   11115.7020000us:  [spi_dsi_data_packet]   Unexpected flags at channel 1! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @   11115.7020000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 1 at word index 0, expected 0x5c1a, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @   11115.7020000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 1 at word index 1, expected 0x92fa, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @   11115.7020000us:  [spi_read_crm_data_packets_seq] Unexpected symbol count at channel 1, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(147) 
+UVM_INFO   @   11215.7020000us:  [single_pdcm_on_all_channels_seq] single_pdcm_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   11215.7030000us:  [sim:description:2]     **single PDCM on all channels 
+UVM_INFO   @   11215.7030000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   11273.3840000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_8Bit | Start:    53 -    66  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   11273.3840000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   11331.0650000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_8Bit | Start:    48 -    91  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   12394.5050000us:  [single_pdcm_on_all_channels_seq] Check read for channel 0  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(87) 
+UVM_ERROR  @   12394.5050000us:  [spi_dsi_data_packet]   Unexpected flags at packet 0 at channel 0! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @   12394.5050000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 0 at packet index 0 at word index 0, expected 0x65ff, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @   12394.5050000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 0 at packet index 0 at word index 1, expected 0x84eb, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @   12394.5050000us:  [spi_read_pdcm_frame_seq] Unexpected symbol count at packet index 0 at channel 0, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(212) 
+UVM_INFO   @   12394.5050000us:  [single_pdcm_on_all_channels_seq] Check read for channel 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(87) 
+UVM_ERROR  @   12394.5050000us:  [spi_dsi_data_packet]   Unexpected flags at packet 0 at channel 1! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @   12394.5050000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 1 at packet index 0 at word index 0, expected 0x65ff, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @   12394.5050000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 1 at packet index 0 at word index 1, expected 0x84eb, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @   12394.5050000us:  [spi_read_pdcm_frame_seq] Unexpected symbol count at packet index 0 at channel 1, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(212) 
+UVM_INFO   @   12415.0650000us:  [single_pdcm_on_all_channels_seq] Check read for channel 0  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(117) 
+UVM_INFO   @   12415.0650000us:  [single_pdcm_on_all_channels_seq] Check read for channel 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(117) 
+UVM_INFO   @   12515.0650000us:  [ecc_dsi3_pdcm_data_buffer_fsm_seq] ecc_dsi3_pdcm_data_buffer_fsm_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   12515.0660000us:  [sim:description:2]     **double bit error in DSI3 data buffer FSM state at channel 0 
+UVM_INFO   @   12523.7460000us:  [sim:measure]           'IRQ_MASK' status = PASS 
+UVM_INFO   @   12532.4260000us:  [sim:measure]           'ECC_IRQ_MASK' status = PASS 
+UVM_INFO   @   12541.1060000us:  [sim:measure]           'ECC_CORR_IRQ_MASK' status = PASS 
+UVM_INFO   @   12549.7860000us:  [sim:measure]           'ECC_CORR_IRQ_STAT' status = PASS 
+UVM_INFO   @   12558.4660000us:  [sim:measure]           'ECC_IRQ_STAT' status = PASS 
+UVM_INFO   @   12567.1460000us:  [sim:measure]           'IRQ_STAT' status = PASS 
+UVM_INFO   @   12570.0260000us:  [single_pdcm_on_all_channels_seq] single_pdcm_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   12570.0270000us:  [sim:description:2]     **single PDCM on all channels 
+UVM_INFO   @   12570.0270000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   12627.7080000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_8Bit | Start:    59 -    71  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   12627.7080000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   12685.3890000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_8Bit | Start:    48 -    78  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   12930.0260000us:  [ecc_dsi3_pdcm_data_buffer_fsm_seq] read DSI3 data buffer FSM state with 01  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_pdcm_data_buffer_error_seq.svh(39) 
+UVM_INFO   @   12930.0260000us:  [ecc_dsi3_pdcm_data_buffer_fsm_seq] force DSI3 data buffer FSM state with 0d  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_pdcm_data_buffer_error_seq.svh(45) 
+UVM_INFO   @   12930.0260000us:  [ecc_dsi3_pdcm_data_buffer_fsm_seq] force top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_buffers.generate_dsi_buffers[0].i_dsi3_pdcm_data_buffer.i_state_fsm_ecc_register.data_reg with 0d  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_pdcm_data_buffer_error_seq.svh(46) 
+UVM_INFO   @   12930.1260000us:  [ecc_dsi3_pdcm_data_buffer_fsm_seq] release top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_buffers.generate_dsi_buffers[0].i_dsi3_pdcm_data_buffer.i_state_fsm_ecc_register.data_reg  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_pdcm_data_buffer_error_seq.svh(51) 
+mask=0004
+UVM_INFO   @   13088.0060000us:  [ecc_dsi3_pdcm_data_buffer_fsm_seq] bit_error = TWO_BIT_ERR  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/ecc_error_base_seq.sv(190) 
+UVM_INFO   @   13091.8460000us:  [sim:measure]           'ECC_CORR_IRQ_STAT' status = PASS 
+UVM_INFO   @   13095.6860000us:  [sim:measure]           'ECC_IRQ_STAT' status = PASS 
+UVM_INFO   @   13099.5260000us:  [sim:measure]           'IRQ_STAT' status = PASS 
+UVM_INFO   @   13112.0460000us:  [sim:measure]           'ECC_CORR_IRQ_MASK' status = PASS 
+UVM_INFO   @   13124.5660000us:  [sim:measure]           'ECC_IRQ_MASK' status = PASS 
+UVM_INFO   @   13137.0860000us:  [sim:measure]           'ECC_CORR_IRQ_MASK' status = PASS 
+UVM_INFO   @   13149.6060000us:  [sim:measure]           'ECC_IRQ_MASK' status = PASS 
+UVM_INFO   @   13162.1260000us:  [sim:measure]           'IRQ_MASK' status = PASS 
+UVM_INFO   @   13174.6460000us:  [sim:measure]           'IRQ_MASK' status = PASS 
+UVM_INFO   @   13183.3260000us:  [sim:measure]           'ECC_CORR_IRQ_STAT' status = PASS 
+UVM_INFO   @   13192.0060000us:  [sim:measure]           'ECC_IRQ_STAT' status = PASS 
+UVM_INFO   @   13200.6860000us:  [sim:measure]           'IRQ_STAT' status = PASS 
+UVM_INFO   @   13748.8290000us:  [single_pdcm_on_all_channels_seq] Check read for channel 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(87) 
+UVM_ERROR  @   13748.8290000us:  [spi_dsi_data_packet]   Unexpected flags at packet 0 at channel 1! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @   13748.8290000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 1 at packet index 0 at word index 0, expected 0x65ff, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @   13748.8290000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 1 at packet index 0 at word index 1, expected 0x84eb, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @   13748.8290000us:  [spi_read_pdcm_frame_seq] Unexpected symbol count at packet index 0 at channel 1, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(212) 
+UVM_INFO   @   13769.3890000us:  [single_pdcm_on_all_channels_seq] Check read for channel 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(117) 
+UVM_INFO   @   13872.2690000us:  [single_crm_on_all_channels_seq] single_crm_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   13872.2700000us:  [sim:description:2]     **single CRM transmit on all channels 
+UVM_ERROR  @   14385.7100000us:  [spi_dsi_data_packet]   Unexpected flags at channel 0! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @   14385.7100000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 0 at word index 0, expected 0xf4be, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @   14385.7100000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 0 at word index 1, expected 0x9c85, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @   14385.7100000us:  [spi_read_crm_data_packets_seq] Unexpected symbol count at channel 0, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(147) 
+UVM_ERROR  @   14385.7100000us:  [spi_dsi_data_packet]   Unexpected flags at channel 1! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @   14385.7100000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 1 at word index 0, expected 0xc555, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @   14385.7100000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 1 at word index 1, expected 0xb4e8, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @   14385.7100000us:  [spi_read_crm_data_packets_seq] Unexpected symbol count at channel 1, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(147) 
+UVM_INFO   @   14485.7100000us:  [single_pdcm_on_all_channels_seq] single_pdcm_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   14485.7110000us:  [sim:description:2]     **single PDCM on all channels 
+UVM_INFO   @   14485.7110000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   14543.3920000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_8Bit | Start:    34 -    68  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   14543.3920000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   14601.0730000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_8Bit | Start:    60 -    75  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   15664.5130000us:  [single_pdcm_on_all_channels_seq] Check read for channel 0  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(87) 
+UVM_ERROR  @   15664.5130000us:  [spi_dsi_data_packet]   Unexpected flags at packet 0 at channel 0! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @   15664.5130000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 0 at packet index 0 at word index 0, expected 0x65ff, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @   15664.5130000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 0 at packet index 0 at word index 1, expected 0x84eb, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @   15664.5130000us:  [spi_read_pdcm_frame_seq] Unexpected symbol count at packet index 0 at channel 0, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(212) 
+UVM_INFO   @   15664.5130000us:  [single_pdcm_on_all_channels_seq] Check read for channel 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(87) 
+UVM_ERROR  @   15664.5130000us:  [spi_dsi_data_packet]   Unexpected flags at packet 0 at channel 1! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @   15664.5130000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 1 at packet index 0 at word index 0, expected 0x65ff, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @   15664.5130000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 1 at packet index 0 at word index 1, expected 0x84eb, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @   15664.5130000us:  [spi_read_pdcm_frame_seq] Unexpected symbol count at packet index 0 at channel 1, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(212) 
+UVM_INFO   @   15685.0730000us:  [single_pdcm_on_all_channels_seq] Check read for channel 0  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(117) 
+UVM_INFO   @   15685.0730000us:  [single_pdcm_on_all_channels_seq] Check read for channel 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(117) 
+UVM_INFO   @   15785.0730000us:  [ecc_dsi3_pdcm_data_buffer_read_pointer_seq] ecc_dsi3_pdcm_data_buffer_read_pointer_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   15785.0740000us:  [sim:description:2]     **double bit error in DSI3 data buffer read pointer at channel 0 
+UVM_INFO   @   15793.7540000us:  [sim:measure]           'IRQ_MASK' status = PASS 
+UVM_INFO   @   15802.4340000us:  [sim:measure]           'ECC_IRQ_MASK' status = PASS 
+UVM_INFO   @   15811.1140000us:  [sim:measure]           'ECC_CORR_IRQ_MASK' status = PASS 
+UVM_INFO   @   15819.7940000us:  [sim:measure]           'ECC_CORR_IRQ_STAT' status = PASS 
+UVM_INFO   @   15828.4740000us:  [sim:measure]           'ECC_IRQ_STAT' status = PASS 
+UVM_INFO   @   15837.1540000us:  [sim:measure]           'IRQ_STAT' status = PASS 
+UVM_INFO   @   15840.0340000us:  [single_pdcm_on_all_channels_seq] single_pdcm_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   15840.0350000us:  [sim:description:2]     **single PDCM on all channels 
+UVM_INFO   @   15840.0350000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   15897.7160000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_8Bit | Start:    23 -    44  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   15897.7160000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   15955.3970000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_8Bit | Start:    36 -    81  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   16315.1564970us:  [ecc_dsi3_pdcm_data_buffer_read_pointer_seq] read DSI3 data buffer read pointer with 04  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_pdcm_data_buffer_error_seq.svh(39) 
+UVM_INFO   @   16315.1564970us:  [ecc_dsi3_pdcm_data_buffer_read_pointer_seq] force DSI3 data buffer read pointer with 34  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_pdcm_data_buffer_error_seq.svh(45) 
+UVM_INFO   @   16315.1564970us:  [ecc_dsi3_pdcm_data_buffer_read_pointer_seq] force top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_buffers.generate_dsi_buffers[0].i_dsi3_pdcm_data_buffer.i_read_ecc_register.data_reg with 34  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_pdcm_data_buffer_error_seq.svh(46) 
+UVM_INFO   @   16315.2564970us:  [ecc_dsi3_pdcm_data_buffer_read_pointer_seq] release top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_buffers.generate_dsi_buffers[0].i_dsi3_pdcm_data_buffer.i_read_ecc_register.data_reg  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_pdcm_data_buffer_error_seq.svh(51) 
+mask=0004
+UVM_INFO   @   16473.1364970us:  [ecc_dsi3_pdcm_data_buffer_read_pointer_seq] bit_error = TWO_BIT_ERR  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/ecc_error_base_seq.sv(190) 
+UVM_INFO   @   16476.9764970us:  [sim:measure]           'ECC_CORR_IRQ_STAT' status = PASS 
+UVM_INFO   @   16480.8164970us:  [sim:measure]           'ECC_IRQ_STAT' status = PASS 
+UVM_INFO   @   16484.6564970us:  [sim:measure]           'IRQ_STAT' status = PASS 
+UVM_INFO   @   16497.1764970us:  [sim:measure]           'ECC_CORR_IRQ_MASK' status = PASS 
+UVM_INFO   @   16509.6964970us:  [sim:measure]           'ECC_IRQ_MASK' status = PASS 
+UVM_INFO   @   16522.2164970us:  [sim:measure]           'ECC_CORR_IRQ_MASK' status = PASS 
+UVM_INFO   @   16534.7364970us:  [sim:measure]           'ECC_IRQ_MASK' status = PASS 
+UVM_INFO   @   16547.2564970us:  [sim:measure]           'IRQ_MASK' status = PASS 
+UVM_INFO   @   16559.7764970us:  [sim:measure]           'IRQ_MASK' status = PASS 
+UVM_INFO   @   16568.4564970us:  [sim:measure]           'ECC_CORR_IRQ_STAT' status = PASS 
+UVM_INFO   @   16577.1364970us:  [sim:measure]           'ECC_IRQ_STAT' status = PASS 
+UVM_INFO   @   16585.8164970us:  [sim:measure]           'IRQ_STAT' status = PASS 
+UVM_INFO   @   17018.8370000us:  [single_pdcm_on_all_channels_seq] Check read for channel 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(87) 
+UVM_ERROR  @   17018.8370000us:  [spi_dsi_data_packet]   Unexpected flags at packet 0 at channel 1! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @   17018.8370000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 1 at packet index 0 at word index 0, expected 0x65ff, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @   17018.8370000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 1 at packet index 0 at word index 1, expected 0x84eb, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @   17018.8370000us:  [spi_read_pdcm_frame_seq] Unexpected symbol count at packet index 0 at channel 1, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(212) 
+UVM_INFO   @   17039.3970000us:  [single_pdcm_on_all_channels_seq] Check read for channel 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(117) 
+UVM_INFO   @   17142.2770000us:  [single_crm_on_all_channels_seq] single_crm_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   17142.2780000us:  [sim:description:2]     **single CRM transmit on all channels 
+UVM_ERROR  @   17655.7180000us:  [spi_dsi_data_packet]   Unexpected flags at channel 0! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @   17655.7180000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 0 at word index 0, expected 0xb82c, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @   17655.7180000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 0 at word index 1, expected 0x5253, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @   17655.7180000us:  [spi_read_crm_data_packets_seq] Unexpected symbol count at channel 0, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(147) 
+UVM_ERROR  @   17655.7180000us:  [spi_dsi_data_packet]   Unexpected flags at channel 1! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @   17655.7180000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 1 at word index 0, expected 0x6311, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @   17655.7180000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 1 at word index 1, expected 0xe6b9, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @   17655.7180000us:  [spi_read_crm_data_packets_seq] Unexpected symbol count at channel 1, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(147) 
+UVM_INFO   @   17755.7180000us:  [single_pdcm_on_all_channels_seq] single_pdcm_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   17755.7190000us:  [sim:description:2]     **single PDCM on all channels 
+UVM_INFO   @   17755.7190000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   17813.4000000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_8Bit | Start:    32 -    53  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   17813.4000000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   17871.0810000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_8Bit | Start:    31 -    53  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   18934.5210000us:  [single_pdcm_on_all_channels_seq] Check read for channel 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(87) 
+UVM_ERROR  @   18934.5210000us:  [spi_dsi_data_packet]   Unexpected flags at packet 0 at channel 1! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @   18934.5210000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 1 at packet index 0 at word index 0, expected 0x65ff, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @   18934.5210000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 1 at packet index 0 at word index 1, expected 0x84eb, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @   18934.5210000us:  [spi_read_pdcm_frame_seq] Unexpected symbol count at packet index 0 at channel 1, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(212) 
+UVM_INFO   @   18955.0810000us:  [single_pdcm_on_all_channels_seq] Check read for channel 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(117) 
+UVM_INFO   @   19055.0810000us:  [single_pdcm_on_all_channels_seq] single_pdcm_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   19055.0820000us:  [sim:description:2]     **single PDCM on all channels 
+UVM_INFO   @   19055.0820000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   19112.7630000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_8Bit | Start:    33 -    51  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   19112.7630000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   19170.4440000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_8Bit | Start:    46 -    90  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   20233.8840000us:  [single_pdcm_on_all_channels_seq] Check read for channel 0  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(87) 
+UVM_ERROR  @   20233.8840000us:  [spi_dsi_data_packet]   Unexpected flags at packet 0 at channel 0! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @   20233.8840000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 0 at packet index 0 at word index 0, expected 0x65ff, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @   20233.8840000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 0 at packet index 0 at word index 1, expected 0x84eb, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @   20233.8840000us:  [spi_read_pdcm_frame_seq] Unexpected symbol count at packet index 0 at channel 0, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(212) 
+UVM_INFO   @   20233.8840000us:  [single_pdcm_on_all_channels_seq] Check read for channel 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(87) 
+UVM_ERROR  @   20233.8840000us:  [spi_dsi_data_packet]   Unexpected flags at packet 0 at channel 1! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @   20233.8840000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 1 at packet index 0 at word index 0, expected 0x65ff, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @   20233.8840000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 1 at packet index 0 at word index 1, expected 0x84eb, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @   20233.8840000us:  [spi_read_pdcm_frame_seq] Unexpected symbol count at packet index 0 at channel 1, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(212) 
+UVM_INFO   @   20254.4440000us:  [single_pdcm_on_all_channels_seq] Check read for channel 0  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(117) 
+UVM_INFO   @   20254.4440000us:  [single_pdcm_on_all_channels_seq] Check read for channel 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(117) 
+UVM_INFO   @   20354.4440000us:  [ecc_dsi3_pdcm_data_buffer_write_pointer_seq] ecc_dsi3_pdcm_data_buffer_write_pointer_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   20354.4450000us:  [sim:description:2]     **double bit error in DSI3 data buffer write pointer at channel 0 
+UVM_INFO   @   20363.1250000us:  [sim:measure]           'IRQ_MASK' status = PASS 
+UVM_INFO   @   20371.8050000us:  [sim:measure]           'ECC_IRQ_MASK' status = PASS 
+UVM_INFO   @   20380.4850000us:  [sim:measure]           'ECC_CORR_IRQ_MASK' status = PASS 
+UVM_INFO   @   20389.1650000us:  [sim:measure]           'ECC_CORR_IRQ_STAT' status = PASS 
+UVM_INFO   @   20397.8450000us:  [sim:measure]           'ECC_IRQ_STAT' status = PASS 
+UVM_INFO   @   20406.5250000us:  [sim:measure]           'IRQ_STAT' status = PASS 
+UVM_INFO   @   20409.4050000us:  [single_pdcm_on_all_channels_seq] single_pdcm_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   20409.4060000us:  [sim:description:2]     **single PDCM on all channels 
+UVM_INFO   @   20409.4060000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   20467.0870000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_8Bit | Start:    26 -    75  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   20467.0870000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   20524.7680000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_8Bit | Start:    47 -    90  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   20769.4050000us:  [ecc_dsi3_pdcm_data_buffer_write_pointer_seq] read DSI3 data buffer write pointer with 05  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_pdcm_data_buffer_error_seq.svh(39) 
+UVM_INFO   @   20769.4050000us:  [ecc_dsi3_pdcm_data_buffer_write_pointer_seq] force DSI3 data buffer write pointer with 81  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_pdcm_data_buffer_error_seq.svh(45) 
+UVM_INFO   @   20769.4050000us:  [ecc_dsi3_pdcm_data_buffer_write_pointer_seq] force top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_buffers.generate_dsi_buffers[0].i_dsi3_pdcm_data_buffer.i_write_ecc_register.data_reg with 81  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_pdcm_data_buffer_error_seq.svh(46) 
+UVM_INFO   @   20769.5050000us:  [ecc_dsi3_pdcm_data_buffer_write_pointer_seq] release top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_buffers.generate_dsi_buffers[0].i_dsi3_pdcm_data_buffer.i_write_ecc_register.data_reg  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_pdcm_data_buffer_error_seq.svh(51) 
+mask=0004
+UVM_INFO   @   20927.3850000us:  [ecc_dsi3_pdcm_data_buffer_write_pointer_seq] bit_error = TWO_BIT_ERR  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/ecc_error_base_seq.sv(190) 
+UVM_INFO   @   20931.2250000us:  [sim:measure]           'ECC_CORR_IRQ_STAT' status = PASS 
+UVM_INFO   @   20935.0650000us:  [sim:measure]           'ECC_IRQ_STAT' status = PASS 
+UVM_INFO   @   20938.9050000us:  [sim:measure]           'IRQ_STAT' status = PASS 
+UVM_INFO   @   20951.4250000us:  [sim:measure]           'ECC_CORR_IRQ_MASK' status = PASS 
+UVM_INFO   @   20963.9450000us:  [sim:measure]           'ECC_IRQ_MASK' status = PASS 
+UVM_INFO   @   20976.4650000us:  [sim:measure]           'ECC_CORR_IRQ_MASK' status = PASS 
+UVM_INFO   @   20988.9850000us:  [sim:measure]           'ECC_IRQ_MASK' status = PASS 
+UVM_INFO   @   21001.5050000us:  [sim:measure]           'IRQ_MASK' status = PASS 
+UVM_INFO   @   21014.0250000us:  [sim:measure]           'IRQ_MASK' status = PASS 
+UVM_INFO   @   21022.7050000us:  [sim:measure]           'ECC_CORR_IRQ_STAT' status = PASS 
+UVM_INFO   @   21031.3850000us:  [sim:measure]           'ECC_IRQ_STAT' status = PASS 
+UVM_INFO   @   21040.0650000us:  [sim:measure]           'IRQ_STAT' status = PASS 
+UVM_INFO   @   21588.2080000us:  [single_pdcm_on_all_channels_seq] Check read for channel 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(87) 
+UVM_ERROR  @   21588.2080000us:  [spi_dsi_data_packet]   Unexpected flags at packet 0 at channel 1! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @   21588.2080000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 1 at packet index 0 at word index 0, expected 0x65ff, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @   21588.2080000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 1 at packet index 0 at word index 1, expected 0x84eb, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @   21588.2080000us:  [spi_read_pdcm_frame_seq] Unexpected symbol count at packet index 0 at channel 1, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(212) 
+UVM_INFO   @   21608.7680000us:  [single_pdcm_on_all_channels_seq] Check read for channel 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(117) 
+UVM_INFO   @   21711.6480000us:  [single_crm_on_all_channels_seq] single_crm_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   21711.6490000us:  [sim:description:2]     **single CRM transmit on all channels 
+UVM_ERROR  @   22225.0890000us:  [spi_dsi_data_packet]   Unexpected flags at channel 0! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @   22225.0890000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 0 at word index 0, expected 0xe587, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @   22225.0890000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 0 at word index 1, expected 0x5e33, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @   22225.0890000us:  [spi_read_crm_data_packets_seq] Unexpected symbol count at channel 0, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(147) 
+UVM_ERROR  @   22225.0890000us:  [spi_dsi_data_packet]   Unexpected flags at channel 1! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @   22225.0890000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 1 at word index 0, expected 0x54f0, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @   22225.0890000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 1 at word index 1, expected 0x4bf8, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @   22225.0890000us:  [spi_read_crm_data_packets_seq] Unexpected symbol count at channel 1, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(147) 
+UVM_INFO   @   22325.0890000us:  [single_pdcm_on_all_channels_seq] single_pdcm_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   22325.0900000us:  [sim:description:2]     **single PDCM on all channels 
+UVM_INFO   @   22325.0900000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   22382.7710000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_8Bit | Start:    51 -    71  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   22382.7710000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   22440.4520000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_8Bit | Start:    33 -    67  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   23503.8920000us:  [single_pdcm_on_all_channels_seq] Check read for channel 0  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(87) 
+UVM_ERROR  @   23503.8920000us:  [spi_dsi_data_packet]   Unexpected flags at packet 0 at channel 0! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @   23503.8920000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 0 at packet index 0 at word index 0, expected 0x65ff, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @   23503.8920000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 0 at packet index 0 at word index 1, expected 0x84eb, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @   23503.8920000us:  [spi_read_pdcm_frame_seq] Unexpected symbol count at packet index 0 at channel 0, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(212) 
+UVM_INFO   @   23503.8920000us:  [single_pdcm_on_all_channels_seq] Check read for channel 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(87) 
+UVM_ERROR  @   23503.8920000us:  [spi_dsi_data_packet]   Unexpected flags at packet 0 at channel 1! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @   23503.8920000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 1 at packet index 0 at word index 0, expected 0x65ff, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @   23503.8920000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 1 at packet index 0 at word index 1, expected 0x84eb, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @   23503.8920000us:  [spi_read_pdcm_frame_seq] Unexpected symbol count at packet index 0 at channel 1, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(212) 
+UVM_INFO   @   23524.4520000us:  [single_pdcm_on_all_channels_seq] Check read for channel 0  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(117) 
+UVM_INFO   @   23524.4520000us:  [single_pdcm_on_all_channels_seq] Check read for channel 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(117) 
+UVM_INFO   @   23624.4520000us:  [ecc_dsi3_pdcm_data_buffer_valid_pointer_seq] ecc_dsi3_pdcm_data_buffer_valid_pointer_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   23624.4530000us:  [sim:description:2]     **double bit error in DSI3 data buffer valid pointer at channel 0 
+UVM_INFO   @   23633.1330000us:  [sim:measure]           'IRQ_MASK' status = PASS 
+UVM_INFO   @   23641.8130000us:  [sim:measure]           'ECC_IRQ_MASK' status = PASS 
+UVM_INFO   @   23650.4930000us:  [sim:measure]           'ECC_CORR_IRQ_MASK' status = PASS 
+UVM_INFO   @   23659.1730000us:  [sim:measure]           'ECC_CORR_IRQ_STAT' status = PASS 
+UVM_INFO   @   23667.8530000us:  [sim:measure]           'ECC_IRQ_STAT' status = PASS 
+UVM_INFO   @   23676.5330000us:  [sim:measure]           'IRQ_STAT' status = PASS 
+UVM_INFO   @   23679.4130000us:  [single_pdcm_on_all_channels_seq] single_pdcm_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   23679.4140000us:  [sim:description:2]     **single PDCM on all channels 
+UVM_INFO   @   23679.4140000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   23737.0950000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_8Bit | Start:    29 -    43  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   23737.0950000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   23794.7760000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_8Bit | Start:    27 -    70  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   24039.4130000us:  [ecc_dsi3_pdcm_data_buffer_valid_pointer_seq] read DSI3 data buffer valid pointer with 04  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_pdcm_data_buffer_error_seq.svh(39) 
+UVM_INFO   @   24039.4130000us:  [ecc_dsi3_pdcm_data_buffer_valid_pointer_seq] force DSI3 data buffer valid pointer with 105  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_pdcm_data_buffer_error_seq.svh(45) 
+UVM_INFO   @   24039.4130000us:  [ecc_dsi3_pdcm_data_buffer_valid_pointer_seq] force top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_buffers.generate_dsi_buffers[0].i_dsi3_pdcm_data_buffer.i_valid_ecc_register.data_reg with 105  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_pdcm_data_buffer_error_seq.svh(46) 
+UVM_INFO   @   24039.5130000us:  [ecc_dsi3_pdcm_data_buffer_valid_pointer_seq] release top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_buffers.generate_dsi_buffers[0].i_dsi3_pdcm_data_buffer.i_valid_ecc_register.data_reg  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/ecc/ecc_dsi3_pdcm_data_buffer_error_seq.svh(51) 
+mask=0004
+UVM_INFO   @   24197.3930000us:  [ecc_dsi3_pdcm_data_buffer_valid_pointer_seq] bit_error = TWO_BIT_ERR  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/ecc_error_base_seq.sv(190) 
+UVM_INFO   @   24201.2330000us:  [sim:measure]           'ECC_CORR_IRQ_STAT' status = PASS 
+UVM_INFO   @   24205.0730000us:  [sim:measure]           'ECC_IRQ_STAT' status = PASS 
+UVM_INFO   @   24208.9130000us:  [sim:measure]           'IRQ_STAT' status = PASS 
+UVM_INFO   @   24221.4330000us:  [sim:measure]           'ECC_CORR_IRQ_MASK' status = PASS 
+UVM_INFO   @   24233.9530000us:  [sim:measure]           'ECC_IRQ_MASK' status = PASS 
+UVM_INFO   @   24246.4730000us:  [sim:measure]           'ECC_CORR_IRQ_MASK' status = PASS 
+UVM_INFO   @   24258.9930000us:  [sim:measure]           'ECC_IRQ_MASK' status = PASS 
+UVM_INFO   @   24271.5130000us:  [sim:measure]           'IRQ_MASK' status = PASS 
+UVM_INFO   @   24284.0330000us:  [sim:measure]           'IRQ_MASK' status = PASS 
+UVM_INFO   @   24292.7130000us:  [sim:measure]           'ECC_CORR_IRQ_STAT' status = PASS 
+UVM_INFO   @   24301.3930000us:  [sim:measure]           'ECC_IRQ_STAT' status = PASS 
+UVM_INFO   @   24310.0730000us:  [sim:measure]           'IRQ_STAT' status = PASS 
+UVM_INFO   @   24858.2160000us:  [single_pdcm_on_all_channels_seq] Check read for channel 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(87) 
+UVM_ERROR  @   24858.2160000us:  [spi_dsi_data_packet]   Unexpected flags at packet 0 at channel 1! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @   24858.2160000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 1 at packet index 0 at word index 0, expected 0x65ff, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @   24858.2160000us:  [spi_read_pdcm_frame_seq] Unexpected data in channel 1 at packet index 0 at word index 1, expected 0x84eb, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(240) 
+UVM_ERROR  @   24858.2160000us:  [spi_read_pdcm_frame_seq] Unexpected symbol count at packet index 0 at channel 1, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_pdcm_frame_seq.svh(212) 
+UVM_INFO   @   24878.7760000us:  [single_pdcm_on_all_channels_seq] Check read for channel 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/single_pdcm_on_all_channels_seq.svh(117) 
+UVM_INFO   @   24981.6560000us:  [single_crm_on_all_channels_seq] single_crm_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   24981.6570000us:  [sim:description:2]     **single CRM transmit on all channels 
+UVM_ERROR  @   25495.0970000us:  [spi_dsi_data_packet]   Unexpected flags at channel 0! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @   25495.0970000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 0 at word index 0, expected 0x8936, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @   25495.0970000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 0 at word index 1, expected 0x140b, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @   25495.0970000us:  [spi_read_crm_data_packets_seq] Unexpected symbol count at channel 0, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(147) 
+UVM_ERROR  @   25495.0970000us:  [spi_dsi_data_packet]   Unexpected flags at channel 1! Flag SCE was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(56) 
+UVM_ERROR  @   25495.0970000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 1 at word index 0, expected 0x845b, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @   25495.0970000us:  [spi_read_crm_data_packets_seq] Unexpected data at channel 1 at word index 1, expected 0x1a9f, got 0x0000!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(191) 
+UVM_ERROR  @   25495.0970000us:  [spi_read_crm_data_packets_seq] Unexpected symbol count at channel 1, expected 8 symbols, got 0!  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/spi/sequences/spi_read_crm_data_packets_seq.svh(147) 
+UVM_INFO   @   25595.0970000us:  [single_pdcm_on_all_channels_seq] single_pdcm_on_all_channels_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   25595.0980000us:  [sim:description:2]     **single PDCM on all channels 
+UVM_INFO   @   25595.0980000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   25652.7790000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_8Bit | Start:    21 -    54  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   25652.7790000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   25710.4600000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 300 us
+  0 | Symbols:   8 | SID_8Bit | Start:    68 -    96  	/nfs/wrk.zaa/52144_default/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++ ready:   ./simv_52144_dsi3_crm_ecc_2_bit_error +UVM_VERBOSITY=UVM_MEDIUM +bus_conflict_off +warn=noFCICIO -ucli -assert nopostproc +UVM_LOG_RECORD -verdi_opts '-ssr Verdi.ses' +uvm_set_type_override=top_default_seq,dsi3_crm_ecc_2_bit_error_seq -i run.tcl -vcs_assert off +UVM_VERDI_TRACE="UVM_AWARE+RAL+TLM+MSG+HIER+PRINT" +UVM_LOG_RECORD +UVM_TESTNAME=top_test +UVM_TR_RECORD +vcs+lic+wait -reportstats -cm line+cond+fsm+tgl+branch+assert -cm_dir DIGITAL/results/vcs/dsi3_crm_ecc_2_bit_error.vdb -lca   +fsdbfile+dsi3_crm_ecc_2_bit_error.fsdb
+ ++ in dir   /nfs/wrk.zaa/sim/52144/m52144a/dsi3_crm_ecc_2_bit_error
+ ++ on host  ex04.elmos.de
+ ++ user     zaa
+ ++ endtime  2025-02-20T14:17:05
+ ++ took     37 seconds
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

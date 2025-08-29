@@ -1,0 +1,413 @@
++++ calling  ./simv_52144_dsi3_pdcm_timing +UVM_VERBOSITY=UVM_MEDIUM +bus_conflict_off +warn=noFCICIO -ucli -assert nopostproc +UVM_LOG_RECORD -verdi_opts '-ssr Verdi.ses' +uvm_set_type_override=top_default_seq,dsi3_pdcm_timing_seq -i run.tcl -vcs_assert off +UVM_VERDI_TRACE="UVM_AWARE+RAL+TLM+MSG+HIER+PRINT" +UVM_LOG_RECORD +UVM_TESTNAME=top_test +UVM_TR_RECORD +vcs+lic+wait -reportstats -cm line+cond+fsm+tgl+branch+assert -cm_dir DIGITAL/results/vcs/dsi3_pdcm_timing.vdb -lca   +fsdbfile+dsi3_pdcm_timing.fsdb
+ ++ in dir   /nfs/wrk.zaa/sim/52144/m52144a/dsi3_pdcm_timing
+ ++ on host  ex04.elmos.de
+ ++ user     zaa
+ ++ start    2025-06-08T18:11:12
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Warning-[LCA_FEATURES_ENABLED] Usage warning
+  LCA features enabled by '-lca' argument on the command line.  For more 
+  information regarding list of LCA features please refer to Chapter "LCA 
+  features" in the VCS Release Notes
+
+Chronologic VCS simulator copyright 1991-2021
+Contains Synopsys proprietary information.
+Compiler version S-2021.09-1_Full64; Runtime version S-2021.09-1_Full64;  Jun  8 20:11 2025
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+
+ VCS Coverage Metrics Release S-2021.09-1_Full64 Copyright (c) 1991-2021 by Synopsys Inc.
+ucli% source dump.tcl
+*Verdi* Loading libsscore_vcsmx202109.so
+FSDB Dumper for VCS-MX, Release Verdi_U-2023.03-1, Linux x86_64/64bit, 04/17/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'dsi3_pdcm_timing.fsdb'
+*Verdi* : fsdbDumpon("glitch") - All FSDB files at 0 ps.
+*Verdi* : Begin traversing the scope (top_tb), layer (0).
+*Verdi* : Enable +all dumping.
+*Verdi* : End of traversing.
+*Verdi* : Flush all FSDB Files at 0 ps.
+1
+ucli% if { [info exists ::env(GATE_LEVEL)] } {
+	source tcheck.tcl
+}
+ucli% run
+*Verdi* Enable Verdi Message Catcher.
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/verdi/uvm_custom_install_verdi_recorder.sv(283) @ 0: reporter [VERDI_TR_AUTO] +UVM_TR_RECORD implicitly enables recording_details to UVM_FULL for all components. For explicit control use +UVM_DISABLE_AUTO_COMPONENT and set recording_detail on components accordingly
+UVM_INFO @ 0: reporter [RNTST] Running test top_test...
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VRR applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VREF applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VBG applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+UVM_INFO @ 0: reporter [UVM_CMDLINE_PROC] Applying type override from the command line: +uvm_set_type_override=top_default_seq,dsi3_pdcm_timing_seq
+UVM_INFO   @       0.0000000us:  [UVM_VERDI_DPI]         uvm_verdi DPI routines are compiled off. Recompile without +define+UVM_NO_VERDI_DPI 
+UVM_INFO   @       0.0000000us:  [dsi3_pdcm_timing_seq]  dsi3_pdcm_timing_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+*Verdi* Enable Verdi Recorder.
+Info: Verdi UVM 1.2 Hooks File 06/17/2014 
+UVM_INFO   @       0.0010000us:  [sim:task]              dsi3_pdcm_timing 
+UVM_INFO   @    2120.0010000us:  [sim:description]       '''Testcase to measure different PDCM timings''' 
+UVM_INFO   @    2120.0010000us:  [pdcm_measure_t__PDCM_END__seq] pdcm_measure_t__PDCM_END__seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2120.0020000us:  [sim:description:1]     *measure t__PDCM,END__ for all chip times 
+UVM_INFO   @    2120.0020000us:  [sim:description:2]     **measure t__PDCM,END__ for chip time of  2us 
+UVM_INFO   @    2120.0020000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2177.6830000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 200 us
+  0 | Symbols:   8 | SID_16Bit_CRC | Start:    30 -   195  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    2189.1380000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 200  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    2412.2909540us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @    2620.6580000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0xac6c 0x71f9
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @    2620.6580000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    2620.6580000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x2498 0x839d
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @    2620.6580000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    2923.5380000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 200  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    3146.6798140us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @    3355.0580000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x6c4b 0x3328
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @    3355.0580000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    3355.0580000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x97ed 0xa915
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @    3355.0580000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    3657.9380000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 200  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    3881.0687460us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @    4089.4580000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x7db7 0x2df9
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @    4089.4580000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    4089.4580000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x63a3 0x5f30
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @    4089.4580000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    4392.3380000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 200  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    4615.4576060us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @    4823.8580000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x32fc 0xf3d0
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @    4823.8580000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    4823.8580000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x8bcf 0xc451
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @    4823.8580000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    5126.7380000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 200  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    5349.8464830us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 199.999000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @    5558.2580000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x4bcc 0x0550
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @    5558.2580000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    5558.2580000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x3feb 0xa0a5
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @    5558.2580000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    5558.2580000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_INFO   @    5861.1380000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 200  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    6084.2909540us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @    6292.6580000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x4b7e 0x1acd
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @    6292.6580000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    6292.6580000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC| TE|   |   |   |   8 symbols:  0x6b07 0x025a
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @    6292.6580000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    6292.6580000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_INFO   @    6292.7630000us:  [sim:measure]           't__PDCM,END__' = '10' condition = 'at chip time  2us' 
+UVM_INFO   @    6592.7630000us:  [sim:description:2]     **measure t__PDCM,END__ for chip time of  3us 
+UVM_INFO   @    6592.7630000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    6650.4440000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 200 us
+  0 | Symbols:   8 | SID_0Bit | Start:    30 -   195  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    6661.8990000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 200  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    6885.0131740us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @    7093.4190000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x9386 0x1867
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @    7093.4190000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    7093.4190000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x76e8 0xe6ff
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @    7093.4190000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    7396.2990000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 200  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    7619.4020340us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @    7827.8190000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0xd738 0x623a
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @    7827.8190000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    7827.8190000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x0467 0xf012
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @    7827.8190000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    8130.6990000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 200  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    8353.8465220us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @    8562.2190000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x210f 0x5cb1
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @    8562.2190000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    8562.2190000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x56ac 0xb537
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @    8562.2190000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    8865.0990000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 200  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    9088.2353820us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @    9296.6190000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0xc107 0xf3b7
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @    9296.6190000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    9296.6190000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_INFO   @    9296.6190000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x45dc 0x6c8d
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @    9296.6190000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    9599.4990000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 200  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @    9822.6243030us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   10031.0190000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x7c12 0xb8ea
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   10031.0190000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   10031.0190000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_INFO   @   10031.0190000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x49c8 0xe591
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   10031.0190000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   10031.0190000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_INFO   @   10333.8990000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 200  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   10557.0131740us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   10765.4190000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x979e 0xb5aa
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   10765.4190000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   10765.4190000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_INFO   @   10765.4190000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x597b 0x45f3
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   10765.4190000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   11068.2990000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 200  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   11291.4020340us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   11499.8190000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x1e56 0xc708
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   11499.8190000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   11499.8190000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_INFO   @   11499.8190000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x1b0e 0xc0cd
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   11499.8190000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   11499.8190000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_INFO   @   11802.6990000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 200  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   12025.8465220us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   12234.2190000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x6d66 0x67e9
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   12234.2190000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   12234.2190000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_INFO   @   12234.2190000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x5119 0xd4ac
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   12234.2190000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   12234.2190000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_INFO   @   12537.0990000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 200  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   12760.2353820us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   12968.6190000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x136f 0x15b8
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   12968.6190000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   12968.6190000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_INFO   @   12968.6190000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |   | TE|   |   |   |   8 symbols:  0xf124 0x27f1
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   12968.6190000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   12968.6190000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_INFO   @   12968.7240000us:  [sim:measure]           't__PDCM,END__' = '7' condition = 'at chip time  3us' 
+UVM_INFO   @   13268.7240000us:  [sim:description:2]     **measure t__PDCM,END__ for chip time of  4us 
+UVM_INFO   @   13268.7240000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   13326.4050000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 200 us
+  0 | Symbols:   8 | SID_0Bit | Start:    30 -   195  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   13337.8600000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 200  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   13561.0131580us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   13769.3800000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x2d9f 0x8d7b
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   13769.3800000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   13769.3800000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0xb36b 0x9483
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   13769.3800000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   14072.2600000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 200  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   14295.4020510us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   14503.7800000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x3d08 0x1704
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   14503.7800000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   14503.7800000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_INFO   @   14503.7800000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x3402 0x735f
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   14503.7800000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   14806.6600000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 200  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   15029.7909500us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   15238.1800000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x2b9d 0xe1a2
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   15238.1800000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   15238.1800000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_INFO   @   15238.1800000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x24f7 0x9214
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   15238.1800000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   15238.1800000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_INFO   @   15541.0600000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 200  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   15764.1798150us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   15972.5800000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0xeb40 0x680a
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   15972.5800000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   15972.5800000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0xcb3c 0x78e0
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   15972.5800000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   15972.5800000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_INFO   @   16275.4600000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 200  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   16498.5687420us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   16706.9800000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x2ffc 0xe302
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   16706.9800000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   16706.9800000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_INFO   @   16706.9800000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x6df7 0xa7d5
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   16706.9800000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   17009.8600000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 200  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   17233.0131580us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   17441.3800000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x3f6d 0x8794
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   17441.3800000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   17441.3800000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_INFO   @   17441.3800000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x7014 0xb513
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   17441.3800000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   17441.3800000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_INFO   @   17744.2600000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 200  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   17967.4020510us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   18175.7800000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |   | TE|   |   |   |   8 symbols:  0x46ad 0xacb7
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   18175.7800000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   18175.7800000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_INFO   @   18175.7800000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0xaf90 0xe47d
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   18175.7800000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   18175.8850000us:  [sim:measure]           't__PDCM,END__' = '9' condition = 'at chip time  4us' 
+UVM_INFO   @   18475.8850000us:  [sim:description:2]     **measure t__PDCM,END__ for chip time of  5us 
+UVM_INFO   @   18475.8850000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   18533.5660000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 200 us
+  0 | Symbols:   8 | SID_4Bit | Start:    30 -   195  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   18545.0210000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 200  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   18768.1243100us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   18976.5410000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0xde40 0xd40f
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   18976.5410000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   18976.5410000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_INFO   @   18976.5410000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x5011 0x4f9e
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   18976.5410000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   19279.4210000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 200  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   19502.5687260us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   19710.9410000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x44c0 0x894b
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   19710.9410000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   19710.9410000us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |   8 symbols:  0x9b01 0x7ea6
+ channel 0b01 - no TDMA scheme  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   19710.9410000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   19710.9410000us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_INFO   @   20013.8210000us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 200  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   20236.9575860us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 200.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++ ready:   ./simv_52144_dsi3_pdcm_timing +UVM_VERBOSITY=UVM_MEDIUM +bus_conflict_off +warn=noFCICIO -ucli -assert nopostproc +UVM_LOG_RECORD -verdi_opts '-ssr Verdi.ses' +uvm_set_type_override=top_default_seq,dsi3_pdcm_timing_seq -i run.tcl -vcs_assert off +UVM_VERDI_TRACE="UVM_AWARE+RAL+TLM+MSG+HIER+PRINT" +UVM_LOG_RECORD +UVM_TESTNAME=top_test +UVM_TR_RECORD +vcs+lic+wait -reportstats -cm line+cond+fsm+tgl+branch+assert -cm_dir DIGITAL/results/vcs/dsi3_pdcm_timing.vdb -lca   +fsdbfile+dsi3_pdcm_timing.fsdb
+ ++ in dir   /nfs/wrk.zaa/sim/52144/m52144a/dsi3_pdcm_timing
+ ++ on host  ex04.elmos.de
+ ++ user     zaa
+ ++ endtime  2025-06-08T18:11:40
+ ++ took     28 seconds
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

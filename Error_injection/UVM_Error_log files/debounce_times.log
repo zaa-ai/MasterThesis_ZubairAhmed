@@ -1,0 +1,207 @@
++++ calling  ./simv_52144_debounce_times +UVM_VERBOSITY=UVM_MEDIUM +bus_conflict_off +warn=noFCICIO -ucli -assert nopostproc +UVM_LOG_RECORD -verdi_opts '-ssr Verdi.ses' +uvm_set_type_override=top_default_seq,debounce_times_seq -i run.tcl -vcs_assert off +UVM_VERDI_TRACE="UVM_AWARE+RAL+TLM+MSG+HIER+PRINT" +UVM_LOG_RECORD +UVM_TESTNAME=top_test +UVM_TR_RECORD +vcs+lic+wait -reportstats -cm line+cond+fsm+tgl+branch+assert -cm_dir DIGITAL/results/vcs/debounce_times.vdb -lca   +fsdbfile+debounce_times.fsdb
+ ++ in dir   /nfs/wrk.zaa/sim/52144/m52144a/debounce_times
+ ++ on host  ex04.elmos.de
+ ++ user     zaa
+ ++ start    2025-05-06T22:37:31
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Warning-[LCA_FEATURES_ENABLED] Usage warning
+  LCA features enabled by '-lca' argument on the command line.  For more 
+  information regarding list of LCA features please refer to Chapter "LCA 
+  features" in the VCS Release Notes
+
+Chronologic VCS simulator copyright 1991-2021
+Contains Synopsys proprietary information.
+Compiler version S-2021.09-1_Full64; Runtime version S-2021.09-1_Full64;  May  7 00:37 2025
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+
+ VCS Coverage Metrics Release S-2021.09-1_Full64 Copyright (c) 1991-2021 by Synopsys Inc.
+ucli% source dump.tcl
+*Verdi* Loading libsscore_vcsmx202109.so
+FSDB Dumper for VCS-MX, Release Verdi_U-2023.03-1, Linux x86_64/64bit, 04/17/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'debounce_times.fsdb'
+*Verdi* : fsdbDumpon("glitch") - All FSDB files at 0 ps.
+*Verdi* : Begin traversing the scope (top_tb), layer (0).
+*Verdi* : Enable +all dumping.
+*Verdi* : End of traversing.
+*Verdi* : Flush all FSDB Files at 0 ps.
+1
+ucli% if { [info exists ::env(GATE_LEVEL)] } {
+	source tcheck.tcl
+}
+ucli% run
+*Verdi* Enable Verdi Message Catcher.
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/verdi/uvm_custom_install_verdi_recorder.sv(283) @ 0: reporter [VERDI_TR_AUTO] +UVM_TR_RECORD implicitly enables recording_details to UVM_FULL for all components. For explicit control use +UVM_DISABLE_AUTO_COMPONENT and set recording_detail on components accordingly
+UVM_INFO @ 0: reporter [RNTST] Running test top_test...
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VRR applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VREF applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VBG applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+UVM_INFO @ 0: reporter [UVM_CMDLINE_PROC] Applying type override from the command line: +uvm_set_type_override=top_default_seq,debounce_times_seq
+UVM_INFO   @       0.0000000us:  [UVM_VERDI_DPI]         uvm_verdi DPI routines are compiled off. Recompile without +define+UVM_NO_VERDI_DPI 
+UVM_INFO   @       0.0000000us:  [debounce_times_seq]    debounce_times_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+*Verdi* Enable Verdi Recorder.
+Info: Verdi UVM 1.2 Hooks File 06/17/2014 
+UVM_INFO   @       0.0010000us:  [sim:task]              debounce_times 
+UVM_INFO   @    2120.0010000us:  [sim:description]       '''Testcase for measuring different debounce times''' 
+UVM_INFO   @    2120.0010000us:  [resb_debounce_measure_seq] resb_debounce_measure_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2120.0020000us:  [sim:description:1]     *measuring debounce time for parameter: t__RESB,deb__ 
+UVM_ERROR  @    4368.6441800us:  [_resb_debounce_measure_seq] condition for parameter t__RESB,deb__ did not occur after expected end time  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/debounce/debounce_measure_seq.svh(59) 
+UVM_INFO   @    5868.6441800us:  [vccuv_debounce_measure_seq] vccuv_debounce_measure_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    5868.6451800us:  [sim:description:1]     *measuring debounce time for parameter: t__VCC,UV,deb__ 
+UVM_ERROR  @   12857.0851800us:  [_vccuv_debounce_measure_seq] condition for parameter t__VCC,UV,deb__ did not occur after expected end time  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/debounce/debounce_measure_seq.svh(59) 
+UVM_INFO   @   13857.0851800us:  [ref_fail_debounce_measure_seq] ref_fail_debounce_measure_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   13857.0861800us:  [sim:description:1]     *measuring debounce time for parameter: t__VBGerr,deb__ 
+UVM_ERROR  @   49005.9036960us:  [_ref_fail_debounce_measure_seq] condition for parameter t__VBGerr,deb__ did not occur after expected end time  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/debounce/debounce_measure_seq.svh(59) 
+UVM_INFO   @   50005.9036960us:  [ldo_uv_debounce_measure_seq] ldo_uv_debounce_measure_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   50005.9046960us:  [sim:description:1]     *measuring debounce time for parameter: t__CLDO,UV__ 
+UVM_ERROR  @   57104.4046960us:  [_ldo_uv_debounce_measure_seq] condition for parameter t__CLDO,UV__ did not occur after expected end time  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/debounce/debounce_measure_seq.svh(59) 
+UVM_INFO   @   58104.4046960us:  [ot_debounce_measure_seq] ot_debounce_measure_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   58104.4056960us:  [sim:description:1]     *measuring debounce time for parameter: t__OT,deb__ 
+UVM_ERROR  @   65203.1056960us:  [_ot_debounce_measure_seq] condition for parameter t__OT,deb__ did not occur after expected end time  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/debounce/debounce_measure_seq.svh(59) 
+UVM_INFO   @   66733.4004400us:  [dsi_uv_debounce_measure_seq] dsi_uv_debounce_measure_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   66733.4014400us:  [sim:description:1]     *measuring debounce time for parameter: t__DSI,OVUV,deb__ 
+UVM_ERROR  @  209812.9285820us:  [_dsi_uv_debounce_measure_seq] condition for parameter t__DSI,OVUV,deb__ did not occur after expected end time  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/debounce/debounce_measure_seq.svh(59) 
+UVM_INFO   @  210822.6085820us:  [dsi_uv_debounce_measure_seq] dsi_uv_debounce_measure_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  210822.6095820us:  [sim:description:1]     *measuring debounce time for parameter: t__DSI,OVUV,deb__ 
+UVM_ERROR  @  354095.0396990us:  [_dsi_uv_debounce_measure_seq] condition for parameter t__DSI,OVUV,deb__ did not occur after expected end time  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/debounce/debounce_measure_seq.svh(59) 
+UVM_INFO   @  355104.7196990us:  [dsi_mon_to_debounce_measure_seq] dsi_mon_to_debounce_measure_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  355104.7206990us:  [sim:description:1]     *measuring debounce time for parameter: t__DSImon,TO__ 
+UVM_ERROR  @  470867.1346990us:  [_dsi_mon_to_debounce_measure_seq] condition for parameter t__DSImon,TO__ did not occur after expected end time  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/debounce/debounce_measure_seq.svh(59) 
+UVM_INFO   @  472397.4386100us:  [dsi_mon_to_debounce_measure_seq] dsi_mon_to_debounce_measure_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @  472397.4396100us:  [sim:description:1]     *measuring debounce time for parameter: t__DSImon,TO__ 
+UVM_ERROR  @  581159.8536100us:  [_dsi_mon_to_debounce_measure_seq] condition for parameter t__DSImon,TO__ did not occur after expected end time  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/debounce/debounce_measure_seq.svh(59) 
+UVM_INFO   @  582790.1463800us:  [sim:status]            PASS 
+UVM_INFO   @  582790.1463800us:  [sim:end]               debounce_times sequence completed 
+UVM_INFO   @  582790.1463800us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  582790.1463800us:  [digital_signal_coverage] Coverage score = 37.5%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  582790.1463800us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  582790.1463800us:  [dsi3_master_coverage]  Coverage score = 25.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/dsi3_master/dsi3_master_coverage.sv(52) 
+UVM_INFO   @  582790.1463800us:  [dsi3_master_coverage]  Coverage score = 25.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/dsi3_master/dsi3_master_coverage.sv(52) 
+UVM_INFO   @  582790.1463800us:  [dsi3_slave_coverage]   Coverage score = 18.5%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/dsi3_slave/dsi3_slave_coverage.sv(57) 
+UVM_INFO   @  582790.1463800us:  [dsi3_slave_coverage]   Coverage score = 18.5%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/dsi3_slave/dsi3_slave_coverage.sv(57) 
+UVM_INFO   @  582790.1463800us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  582790.1463800us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  582790.1463800us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  582790.1463800us:  [jtag_master_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/jtag_master/jtag_master_coverage.sv(57) 
+UVM_INFO   @  582790.1463800us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  582790.1463800us:  [osc_coverage]          Coverage score = 25.8%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/osc/osc_coverage.sv(52) 
+UVM_INFO   @  582790.1463800us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  582790.1463800us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  582790.1463800us:  [digital_signal_coverage] Coverage score = 37.5%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  582790.1463800us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  582790.1463800us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  582790.1463800us:  [digital_signal_coverage] Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @  582790.1463800us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  582790.1463800us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  582790.1463800us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @  582790.1463800us:  [UVM/REPORT/CATCHER]    
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+  	/common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_report_catcher.svh(705) 
+UVM_INFO   @  582790.1463800us:  [UVM/REPORT/SERVER]     
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   51
+UVM_WARNING :    0
+UVM_ERROR :    9
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[UVM_CMDLINE_PROC]     1
+[UVM_VERDI_DPI]     1
+[VERDI_TR_AUTO]     1
+[_dsi_mon_to_debounce_measure_seq]     2
+[_dsi_uv_debounce_measure_seq]     2
+[_ldo_uv_debounce_measure_seq]     1
+[_ot_debounce_measure_seq]     1
+[_ref_fail_debounce_measure_seq]     1
+[_resb_debounce_measure_seq]     1
+[_vccuv_debounce_measure_seq]     1
+[debounce_times_seq]     1
+[digital_signal_coverage]     8
+[dsi3_master_coverage]     2
+[dsi3_slave_coverage]     2
+[dsi_mon_to_debounce_measure_seq]     2
+[dsi_uv_debounce_measure_seq]     2
+[jtag_master_coverage]     1
+[ldo_uv_debounce_measure_seq]     1
+[osc_coverage]     1
+[ot_debounce_measure_seq]     1
+[real_signal_coverage]     8
+[ref_fail_debounce_measure_seq]     1
+[resb_debounce_measure_seq]     1
+[sim:description]     1
+[sim:description:1]     9
+[sim:end]     1
+[sim:status]     1
+[sim:task]     1
+[vccuv_debounce_measure_seq]     1
+  	/common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_report_server.svh(904) 
+$finish called from file "/common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_root.svh", line 527.
+$finish at simulation time         582790146380
+Reporting coverage at the end of simulation ...
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, FSM, branch, tgl was monitored
+---------------------------------------------------------------------------
+
+ Coverage status: End of All Coverages ...
+
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 582790146380 ps
+
+Simulation Performance Summary
+==============================
+Simulation started at :  Wed May  7 00:37:32 2025
+Elapsed Time          :  598 sec
+CPU Time              :  683.4 sec
+Virtual memory size   :  872.8 MB
+Resident set size     :  409.9 MB
+Shared memory size    :  2.6 MB
+Private memory size   :  407.3 MB
+Major page faults     :  4
+Machine name          :  ex04.elmos.de
+==============================
+
+Wed May  7 00:47:29 2025
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++ ready:   ./simv_52144_debounce_times +UVM_VERBOSITY=UVM_MEDIUM +bus_conflict_off +warn=noFCICIO -ucli -assert nopostproc +UVM_LOG_RECORD -verdi_opts '-ssr Verdi.ses' +uvm_set_type_override=top_default_seq,debounce_times_seq -i run.tcl -vcs_assert off +UVM_VERDI_TRACE="UVM_AWARE+RAL+TLM+MSG+HIER+PRINT" +UVM_LOG_RECORD +UVM_TESTNAME=top_test +UVM_TR_RECORD +vcs+lic+wait -reportstats -cm line+cond+fsm+tgl+branch+assert -cm_dir DIGITAL/results/vcs/debounce_times.vdb -lca   +fsdbfile+debounce_times.fsdb
+ ++ in dir   /nfs/wrk.zaa/sim/52144/m52144a/debounce_times
+ ++ on host  ex04.elmos.de
+ ++ user     zaa
+ ++ endtime  2025-05-06T22:47:29
+ ++ took     598 seconds
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

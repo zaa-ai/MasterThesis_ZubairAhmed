@@ -1,0 +1,1029 @@
++++ calling  ./simv_52144_dsi3_quiescent_current +UVM_VERBOSITY=UVM_MEDIUM +bus_conflict_off +warn=noFCICIO -ucli -assert nopostproc +UVM_LOG_RECORD -verdi_opts '-ssr Verdi.ses' +uvm_set_type_override=top_default_seq,dsi3_iload_seq -i run.tcl -vcs_assert off +UVM_VERDI_TRACE="UVM_AWARE+RAL+TLM+MSG+HIER+PRINT" +UVM_LOG_RECORD +UVM_TESTNAME=top_test +UVM_TR_RECORD +vcs+lic+wait -reportstats -cm line+cond+fsm+tgl+branch+assert -cm_dir DIGITAL/results/vcs/dsi3_quiescent_current.vdb -lca   +fsdbfile+dsi3_quiescent_current.fsdb
+ ++ in dir   /nfs/wrk.zaa/sim/52144/m52144a/dsi3_quiescent_current
+ ++ on host  ex04.elmos.de
+ ++ user     zaa
+ ++ start    2025-06-08T18:46:27
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Warning-[LCA_FEATURES_ENABLED] Usage warning
+  LCA features enabled by '-lca' argument on the command line.  For more 
+  information regarding list of LCA features please refer to Chapter "LCA 
+  features" in the VCS Release Notes
+
+Chronologic VCS simulator copyright 1991-2021
+Contains Synopsys proprietary information.
+Compiler version S-2021.09-1_Full64; Runtime version S-2021.09-1_Full64;  Jun  8 20:46 2025
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+
+ VCS Coverage Metrics Release S-2021.09-1_Full64 Copyright (c) 1991-2021 by Synopsys Inc.
+ucli% source dump.tcl
+*Verdi* Loading libsscore_vcsmx202109.so
+FSDB Dumper for VCS-MX, Release Verdi_U-2023.03-1, Linux x86_64/64bit, 04/17/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'dsi3_quiescent_current.fsdb'
+*Verdi* : fsdbDumpon("glitch") - All FSDB files at 0 ps.
+*Verdi* : Begin traversing the scope (top_tb), layer (0).
+*Verdi* : Enable +all dumping.
+*Verdi* : End of traversing.
+*Verdi* : Flush all FSDB Files at 0 ps.
+1
+ucli% if { [info exists ::env(GATE_LEVEL)] } {
+	source tcheck.tcl
+}
+ucli% run
+*Verdi* Enable Verdi Message Catcher.
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/verdi/uvm_custom_install_verdi_recorder.sv(283) @ 0: reporter [VERDI_TR_AUTO] +UVM_TR_RECORD implicitly enables recording_details to UVM_FULL for all components. For explicit control use +UVM_DISABLE_AUTO_COMPONENT and set recording_detail on components accordingly
+UVM_INFO @ 0: reporter [RNTST] Running test top_test...
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VRR applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VREF applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VBG applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+UVM_INFO @ 0: reporter [UVM_CMDLINE_PROC] Applying type override from the command line: +uvm_set_type_override=top_default_seq,dsi3_iload_seq
+UVM_INFO   @       0.0000000us:  [UVM_VERDI_DPI]         uvm_verdi DPI routines are compiled off. Recompile without +define+UVM_NO_VERDI_DPI 
+UVM_ERROR  @       0.0000000us:  [dsi3_iload_seq]        Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @       0.0000000us:  [dsi3_iload_seq]        dsi3_iload_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+*Verdi* Enable Verdi Recorder.
+Info: Verdi UVM 1.2 Hooks File 06/17/2014 
+UVM_INFO   @       0.0010000us:  [sim:task]              dsi3_iload 
+UVM_INFO   @    2120.0010000us:  [sim:description]       '''Basic testcase for quiescent current commands''' 
+UVM_INFO   @    2120.0010000us:  [sim:description:1]     *Quiescent current measurement on random channels with a random load 
+UVM_ERROR  @    2120.0010000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    2120.0010000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2120.0020000us:  [sim:description:2]     **Quiescent current measurement on channels 01 and a load of  3.69mA 
+UVM_INFO   @    2129.6820000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    2133.5220000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    2150.2420000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    2154.0820000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    2357.9220000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    2361.7620000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    2375.6020000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    2375.6020000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2375.6030000us:  [sim:description:2]     **Quiescent current measurement on channels 10 and a load of  3.24mA 
+UVM_INFO   @    2385.2830000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    2389.1230000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    2405.8430000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    2409.6830000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    2613.5230000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    2617.3630000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    2631.2030000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    2631.2030000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2631.2040000us:  [sim:description:2]     **Quiescent current measurement on channels 11 and a load of  3.83mA 
+UVM_INFO   @    2645.7240000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    2649.5640000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    2666.2840000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    2670.1240000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    2873.9640000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    2877.8040000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    2895.4840000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    2895.4840000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2895.4850000us:  [sim:description:2]     **Quiescent current measurement on channels 01 and a load of  3.08mA 
+UVM_INFO   @    2905.1650000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    2909.0050000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    2925.7250000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    2929.5650000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    3133.4050000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    3137.2450000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    3151.0850000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    3151.0850000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    3151.0860000us:  [sim:description:2]     **Quiescent current measurement on channels 10 and a load of  0.47mA 
+UVM_INFO   @    3160.7660000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    3164.6060000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    3181.3260000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    3185.1660000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    3389.0060000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    3392.8460000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    3406.6860000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    3406.6860000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    3406.6870000us:  [sim:description:2]     **Quiescent current measurement on channels 11 and a load of  0.25mA 
+UVM_INFO   @    3421.2070000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    3425.0470000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    3441.7670000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    3445.6070000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    3649.4470000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    3653.2870000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    3670.9670000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    3670.9670000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    3670.9680000us:  [sim:description:2]     **Quiescent current measurement on channels 01 and a load of  1.85mA 
+UVM_INFO   @    3680.6480000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    3684.4880000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    3701.2080000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    3705.0480000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    3908.8880000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    3912.7280000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    3926.5680000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    3926.5680000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    3926.5690000us:  [sim:description:2]     **Quiescent current measurement on channels 10 and a load of  2.35mA 
+UVM_INFO   @    3936.2490000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    3940.0890000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    3956.8090000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    3960.6490000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    4164.4890000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    4168.3290000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    4182.1690000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    4182.1690000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    4182.1700000us:  [sim:description:2]     **Quiescent current measurement on channels 11 and a load of  0.44mA 
+UVM_INFO   @    4196.6900000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    4200.5300000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    4217.2500000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    4221.0900000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    4424.9300000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    4428.7700000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    4446.4500000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    4446.4500000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    4446.4510000us:  [sim:description:2]     **Quiescent current measurement on channels 01 and a load of  4.32mA 
+UVM_INFO   @    4456.1310000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    4459.9710000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    4476.6910000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    4480.5310000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    4684.3710000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    4688.2110000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    4702.0510000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    4702.0510000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    4702.0520000us:  [sim:description:2]     **Quiescent current measurement on channels 10 and a load of  1.21mA 
+UVM_INFO   @    4711.7320000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    4715.5720000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    4732.2920000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    4736.1320000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    4939.9720000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    4943.8120000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    4957.6520000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    4957.6520000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    4957.6530000us:  [sim:description:2]     **Quiescent current measurement on channels 11 and a load of  3.77mA 
+UVM_INFO   @    4972.1730000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    4976.0130000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    4992.7330000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    4996.5730000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    5200.4130000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    5204.2530000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    5221.9330000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    5221.9330000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    5221.9340000us:  [sim:description:2]     **Quiescent current measurement on channels 01 and a load of  0.32mA 
+UVM_INFO   @    5231.6140000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    5235.4540000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    5252.1740000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    5256.0140000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    5459.8540000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    5463.6940000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    5477.5340000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    5477.5340000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    5477.5350000us:  [sim:description:2]     **Quiescent current measurement on channels 10 and a load of  2.86mA 
+UVM_INFO   @    5487.2150000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    5491.0550000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    5507.7750000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    5511.6150000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    5715.4550000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    5719.2950000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    5733.1350000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    5733.1350000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    5733.1360000us:  [sim:description:2]     **Quiescent current measurement on channels 11 and a load of  4.19mA 
+UVM_INFO   @    5747.6560000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    5751.4960000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    5768.2160000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    5772.0560000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    5975.8960000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    5979.7360000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    5997.4160000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    5997.4160000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    5997.4170000us:  [sim:description:2]     **Quiescent current measurement on channels 01 and a load of  2.79mA 
+UVM_INFO   @    6007.0970000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    6010.9370000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    6027.6570000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    6031.4970000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    6235.3370000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    6239.1770000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    6253.0170000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    6253.0170000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    6253.0180000us:  [sim:description:2]     **Quiescent current measurement on channels 10 and a load of  0.99mA 
+UVM_INFO   @    6262.6980000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    6266.5380000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    6283.2580000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    6287.0980000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    6490.9380000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    6494.7780000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    6508.6180000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    6508.6180000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    6508.6190000us:  [sim:description:2]     **Quiescent current measurement on channels 11 and a load of  0.89mA 
+UVM_INFO   @    6523.1390000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    6526.9790000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    6543.6990000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    6547.5390000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    6751.3790000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    6755.2190000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    6772.8990000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    6772.8990000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    6772.9000000us:  [sim:description:2]     **Quiescent current measurement on channels 01 and a load of  4.92mA 
+UVM_INFO   @    6782.5800000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    6786.4200000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    6803.1400000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    6806.9800000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    7010.8200000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    7014.6600000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    7028.5000000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    7028.5000000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    7028.5010000us:  [sim:description:2]     **Quiescent current measurement on channels 10 and a load of  3.21mA 
+UVM_INFO   @    7038.1810000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    7042.0210000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    7058.7410000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    7062.5810000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    7266.4210000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    7270.2610000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    7284.1010000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    7284.1010000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    7284.1020000us:  [sim:description:2]     **Quiescent current measurement on channels 11 and a load of  4.73mA 
+UVM_INFO   @    7298.6220000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    7302.4620000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    7319.1820000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    7323.0220000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    7526.8620000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    7530.7020000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    7548.3820000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    7548.3820000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    7548.3830000us:  [sim:description:2]     **Quiescent current measurement on channels 01 and a load of  1.00mA 
+UVM_INFO   @    7558.0630000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    7561.9030000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    7578.6230000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    7582.4630000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    7786.3030000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    7790.1430000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    7803.9830000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    7803.9830000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    7803.9840000us:  [sim:description:2]     **Quiescent current measurement on channels 10 and a load of  0.03mA 
+UVM_INFO   @    7813.6640000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    7817.5040000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    7834.2240000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    7838.0640000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    8041.9040000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    8045.7440000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    8059.5840000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    8059.5840000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    8059.5850000us:  [sim:description:2]     **Quiescent current measurement on channels 11 and a load of  4.42mA 
+UVM_INFO   @    8074.1050000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    8077.9450000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    8094.6650000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    8098.5050000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    8302.3450000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    8306.1850000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    8323.8650000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    8323.8650000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    8323.8660000us:  [sim:description:2]     **Quiescent current measurement on channels 01 and a load of  1.79mA 
+UVM_INFO   @    8333.5460000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    8337.3860000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    8354.1060000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    8357.9460000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    8561.7860000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    8565.6260000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    8579.4660000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    8579.4660000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    8579.4670000us:  [sim:description:2]     **Quiescent current measurement on channels 10 and a load of  2.87mA 
+UVM_INFO   @    8589.1470000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    8592.9870000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    8609.7070000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    8613.5470000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    8817.3870000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    8821.2270000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    8835.0670000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    8835.0670000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    8835.0680000us:  [sim:description:2]     **Quiescent current measurement on channels 11 and a load of  2.37mA 
+UVM_INFO   @    8849.5880000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    8853.4280000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    8870.1480000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    8873.9880000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    9077.8280000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    9081.6680000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    9099.3480000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    9099.3480000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    9099.3490000us:  [sim:description:2]     **Quiescent current measurement on channels 01 and a load of  2.30mA 
+UVM_INFO   @    9109.0290000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    9112.8690000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    9129.5890000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    9133.4290000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    9337.2690000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    9341.1090000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    9354.9490000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    9354.9490000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    9354.9500000us:  [sim:description:2]     **Quiescent current measurement on channels 10 and a load of  2.21mA 
+UVM_INFO   @    9364.6300000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    9368.4700000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    9385.1900000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    9389.0300000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    9592.8700000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    9596.7100000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    9610.5500000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    9610.5500000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    9610.5510000us:  [sim:description:2]     **Quiescent current measurement on channels 11 and a load of  4.91mA 
+UVM_INFO   @    9625.0710000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    9628.9110000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    9645.6310000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    9649.4710000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    9853.3110000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    9857.1510000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @    9874.8310000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @    9874.8310000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    9874.8320000us:  [sim:description:2]     **Quiescent current measurement on channels 01 and a load of  4.09mA 
+UVM_INFO   @    9884.5120000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    9888.3520000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    9905.0720000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @    9908.9120000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   10112.7520000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   10116.5920000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   10130.4320000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   10130.4320000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   10130.4330000us:  [sim:description:2]     **Quiescent current measurement on channels 10 and a load of  4.72mA 
+UVM_INFO   @   10140.1130000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   10143.9530000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   10160.6730000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   10164.5130000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   10368.3530000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   10372.1930000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   10386.0330000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   10386.0330000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   10386.0340000us:  [sim:description:2]     **Quiescent current measurement on channels 11 and a load of  2.43mA 
+UVM_INFO   @   10400.5540000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   10404.3940000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   10421.1140000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   10424.9540000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   10628.7940000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   10632.6340000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   10650.3140000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   10650.3140000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   10650.3150000us:  [sim:description:2]     **Quiescent current measurement on channels 01 and a load of  0.17mA 
+UVM_INFO   @   10659.9950000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   10663.8350000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   10680.5550000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   10684.3950000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   10888.2350000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   10892.0750000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   10905.9150000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   10905.9150000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   10905.9160000us:  [sim:description:2]     **Quiescent current measurement on channels 10 and a load of  0.55mA 
+UVM_INFO   @   10915.5960000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   10919.4360000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   10936.1560000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   10939.9960000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   11143.8360000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   11147.6760000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   11161.5160000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   11161.5160000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   11161.5170000us:  [sim:description:2]     **Quiescent current measurement on channels 11 and a load of  4.24mA 
+UVM_INFO   @   11176.0370000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   11179.8770000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   11196.5970000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   11200.4370000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   11404.2770000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   11408.1170000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   11425.7970000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   11425.7970000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   11425.7980000us:  [sim:description:2]     **Quiescent current measurement on channels 01 and a load of  4.46mA 
+UVM_INFO   @   11435.4780000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   11439.3180000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   11456.0380000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   11459.8780000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   11663.7180000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   11667.5580000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   11681.3980000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   11681.3980000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   11681.3990000us:  [sim:description:2]     **Quiescent current measurement on channels 10 and a load of  4.68mA 
+UVM_INFO   @   11691.0790000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   11694.9190000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   11711.6390000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   11715.4790000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   11919.3190000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   11923.1590000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   11936.9990000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   11936.9990000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   11937.0000000us:  [sim:description:2]     **Quiescent current measurement on channels 11 and a load of  2.74mA 
+UVM_INFO   @   11951.5200000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   11955.3600000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   11972.0800000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   11975.9200000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   12179.7600000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   12183.6000000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   12201.2800000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   12201.2800000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   12201.2810000us:  [sim:description:2]     **Quiescent current measurement on channels 01 and a load of  4.58mA 
+UVM_INFO   @   12210.9610000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   12214.8010000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   12231.5210000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   12235.3610000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   12439.2010000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   12443.0410000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   12456.8810000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   12456.8810000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   12456.8820000us:  [sim:description:2]     **Quiescent current measurement on channels 10 and a load of  2.67mA 
+UVM_INFO   @   12466.5620000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   12470.4020000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   12487.1220000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   12490.9620000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   12694.8020000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   12698.6420000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   12712.4820000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   12712.4820000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   12712.4830000us:  [sim:description:2]     **Quiescent current measurement on channels 11 and a load of  3.17mA 
+UVM_INFO   @   12727.0030000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   12730.8430000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   12747.5630000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   12751.4030000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   12955.2430000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   12959.0830000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   12976.7630000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   12976.7630000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   12976.7640000us:  [sim:description:2]     **Quiescent current measurement on channels 01 and a load of  3.29mA 
+UVM_INFO   @   12986.4440000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   12990.2840000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   13007.0040000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   13010.8440000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   13214.6840000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   13218.5240000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   13232.3640000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   13232.3640000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   13232.3650000us:  [sim:description:2]     **Quiescent current measurement on channels 10 and a load of  2.17mA 
+UVM_INFO   @   13242.0450000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   13245.8850000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   13262.6050000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   13266.4450000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   13470.2850000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   13474.1250000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   13487.9650000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   13487.9650000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   13487.9660000us:  [sim:description:2]     **Quiescent current measurement on channels 11 and a load of  4.22mA 
+UVM_INFO   @   13502.4860000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   13506.3260000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   13523.0460000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   13526.8860000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   13730.7260000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   13734.5660000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   13752.2460000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   13752.2460000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   13752.2470000us:  [sim:description:2]     **Quiescent current measurement on channels 01 and a load of  3.75mA 
+UVM_INFO   @   13761.9270000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   13765.7670000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   13782.4870000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   13786.3270000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   13990.1670000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   13994.0070000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   14007.8470000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   14007.8470000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   14007.8480000us:  [sim:description:2]     **Quiescent current measurement on channels 10 and a load of  4.00mA 
+UVM_INFO   @   14017.5280000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   14021.3680000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   14038.0880000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   14041.9280000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   14245.7680000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   14249.6080000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   14263.4480000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   14263.4480000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   14263.4490000us:  [sim:description:2]     **Quiescent current measurement on channels 11 and a load of  3.77mA 
+UVM_INFO   @   14277.9690000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   14281.8090000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   14298.5290000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   14302.3690000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   14506.2090000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   14510.0490000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   14527.7290000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   14527.7290000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   14527.7300000us:  [sim:description:2]     **Quiescent current measurement on channels 01 and a load of  1.99mA 
+UVM_INFO   @   14537.4100000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   14541.2500000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   14557.9700000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   14561.8100000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   14765.6500000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   14769.4900000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   14783.3300000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   14783.3300000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   14783.3310000us:  [sim:description:2]     **Quiescent current measurement on channels 10 and a load of  0.45mA 
+UVM_INFO   @   14793.0110000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   14796.8510000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   14813.5710000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   14817.4110000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   15021.2510000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   15025.0910000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   15038.9310000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   15038.9310000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   15038.9320000us:  [sim:description:2]     **Quiescent current measurement on channels 11 and a load of  2.95mA 
+UVM_INFO   @   15053.4520000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   15057.2920000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   15074.0120000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   15077.8520000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   15281.6920000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   15285.5320000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   15303.2120000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   15303.2120000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   15303.2130000us:  [sim:description:2]     **Quiescent current measurement on channels 01 and a load of  1.49mA 
+UVM_INFO   @   15312.8930000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   15316.7330000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   15333.4530000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   15337.2930000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   15541.1330000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   15544.9730000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   15558.8130000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   15558.8130000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   15558.8140000us:  [sim:description:2]     **Quiescent current measurement on channels 10 and a load of  4.17mA 
+UVM_INFO   @   15568.4940000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   15572.3340000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   15589.0540000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   15592.8940000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   15796.7340000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   15800.5740000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   15814.4140000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   15814.4140000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   15814.4150000us:  [sim:description:2]     **Quiescent current measurement on channels 11 and a load of  0.97mA 
+UVM_INFO   @   15828.9350000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   15832.7750000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   15849.4950000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   15853.3350000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   16057.1750000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   16061.0150000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   16078.6950000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   16078.6950000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   16078.6960000us:  [sim:description:2]     **Quiescent current measurement on channels 01 and a load of  0.81mA 
+UVM_INFO   @   16088.3760000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   16092.2160000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   16108.9360000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   16112.7760000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   16316.6160000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   16320.4560000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   16334.2960000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   16334.2960000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   16334.2970000us:  [sim:description:2]     **Quiescent current measurement on channels 10 and a load of  4.24mA 
+UVM_INFO   @   16343.9770000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   16347.8170000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   16364.5370000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   16368.3770000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   16572.2170000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   16576.0570000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   16589.8970000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   16589.8970000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   16589.8980000us:  [sim:description:2]     **Quiescent current measurement on channels 11 and a load of  2.92mA 
+UVM_INFO   @   16604.4180000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   16608.2580000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   16624.9780000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   16628.8180000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   16832.6580000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   16836.4980000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   16854.1780000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   16854.1780000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   16854.1790000us:  [sim:description:2]     **Quiescent current measurement on channels 01 and a load of  3.23mA 
+UVM_INFO   @   16863.8590000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   16867.6990000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   16884.4190000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   16888.2590000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   17092.0990000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   17095.9390000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   17109.7790000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   17109.7790000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   17109.7800000us:  [sim:description:2]     **Quiescent current measurement on channels 10 and a load of  4.86mA 
+UVM_INFO   @   17119.4600000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   17123.3000000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   17140.0200000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   17143.8600000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   17347.7000000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   17351.5400000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   17365.3800000us:  [quiescent_current_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   17365.3800000us:  [quiescent_current_seq] quiescent_current_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   17365.3810000us:  [sim:description:2]     **Quiescent current measurement on channels 11 and a load of  4.75mA 
+UVM_INFO   @   17379.9010000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   17383.7410000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   17400.4610000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   17404.3010000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   17608.1410000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   17611.9810000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   17629.6610000us:  [sim:description:1]     *Manual quiescent current measurement on random channels with a random load 
+UVM_ERROR  @   17629.6610000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   17629.6610000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   17629.6620000us:  [sim:description:2]     **Manual quiescent current measurement on channels 01 and a load of  0.65mA 
+UVM_INFO   @   17639.3420000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   17643.1820000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   17661.8620000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   17665.7020000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   17869.5420000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   17873.3820000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   17887.2220000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   17887.2220000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   17887.2230000us:  [sim:description:2]     **Manual quiescent current measurement on channels 10 and a load of  4.67mA 
+UVM_INFO   @   17896.9030000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   17900.7430000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   17919.4230000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   17923.2630000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   18127.1030000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   18130.9430000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   18144.7830000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   18144.7830000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   18144.7840000us:  [sim:description:2]     **Manual quiescent current measurement on channels 11 and a load of  2.88mA 
+UVM_INFO   @   18159.3040000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   18163.1440000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   18186.6640000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   18190.5040000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   18394.3440000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   18398.1840000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   18415.8640000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   18415.8640000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   18415.8650000us:  [sim:description:2]     **Manual quiescent current measurement on channels 01 and a load of  3.31mA 
+UVM_INFO   @   18425.5450000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   18429.3850000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   18448.0650000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   18451.9050000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   18655.7450000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   18659.5850000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   18673.4250000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   18673.4250000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   18673.4260000us:  [sim:description:2]     **Manual quiescent current measurement on channels 10 and a load of  4.25mA 
+UVM_INFO   @   18683.1060000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   18686.9460000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   18705.6260000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   18709.4660000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   18913.3060000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   18917.1460000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   18930.9860000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   18930.9860000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   18930.9870000us:  [sim:description:2]     **Manual quiescent current measurement on channels 11 and a load of  2.71mA 
+UVM_INFO   @   18945.5070000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   18949.3470000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   18972.8670000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   18976.7070000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   19180.5470000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   19184.3870000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   19202.0670000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   19202.0670000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   19202.0680000us:  [sim:description:2]     **Manual quiescent current measurement on channels 01 and a load of  1.57mA 
+UVM_INFO   @   19211.7480000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   19215.5880000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   19234.2680000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   19238.1080000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   19441.9480000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   19445.7880000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   19459.6280000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   19459.6280000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   19459.6290000us:  [sim:description:2]     **Manual quiescent current measurement on channels 10 and a load of  2.75mA 
+UVM_INFO   @   19469.3090000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   19473.1490000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   19491.8290000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   19495.6690000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   19699.5090000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   19703.3490000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   19717.1890000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   19717.1890000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   19717.1900000us:  [sim:description:2]     **Manual quiescent current measurement on channels 11 and a load of  0.64mA 
+UVM_INFO   @   19731.7100000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   19735.5500000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   19759.0700000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   19762.9100000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   19966.7500000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   19970.5900000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   19988.2700000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   19988.2700000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   19988.2710000us:  [sim:description:2]     **Manual quiescent current measurement on channels 01 and a load of  1.83mA 
+UVM_INFO   @   19997.9510000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   20001.7910000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   20020.4710000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   20024.3110000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   20228.1510000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   20231.9910000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   20245.8310000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   20245.8310000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   20245.8320000us:  [sim:description:2]     **Manual quiescent current measurement on channels 10 and a load of  1.57mA 
+UVM_INFO   @   20255.5120000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   20259.3520000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   20278.0320000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   20281.8720000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   20485.7120000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   20489.5520000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   20503.3920000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   20503.3920000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   20503.3930000us:  [sim:description:2]     **Manual quiescent current measurement on channels 11 and a load of  0.28mA 
+UVM_INFO   @   20517.9130000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   20521.7530000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   20545.2730000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   20549.1130000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   20752.9530000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   20756.7930000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   20774.4730000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   20774.4730000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   20774.4740000us:  [sim:description:2]     **Manual quiescent current measurement on channels 01 and a load of  1.25mA 
+UVM_INFO   @   20784.1540000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   20787.9940000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   20806.6740000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   20810.5140000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   21014.3540000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   21018.1940000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   21032.0340000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   21032.0340000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   21032.0350000us:  [sim:description:2]     **Manual quiescent current measurement on channels 10 and a load of  4.94mA 
+UVM_INFO   @   21041.7150000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   21045.5550000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   21064.2350000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   21068.0750000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   21271.9150000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   21275.7550000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   21289.5950000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   21289.5950000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   21289.5960000us:  [sim:description:2]     **Manual quiescent current measurement on channels 11 and a load of  2.10mA 
+UVM_INFO   @   21304.1160000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   21307.9560000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   21331.4760000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   21335.3160000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   21539.1560000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   21542.9960000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   21560.6760000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   21560.6760000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   21560.6770000us:  [sim:description:2]     **Manual quiescent current measurement on channels 01 and a load of  1.60mA 
+UVM_INFO   @   21570.3570000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   21574.1970000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   21592.8770000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   21596.7170000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   21800.5570000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   21804.3970000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   21818.2370000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   21818.2370000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   21818.2380000us:  [sim:description:2]     **Manual quiescent current measurement on channels 10 and a load of  1.41mA 
+UVM_INFO   @   21827.9180000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   21831.7580000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   21850.4380000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   21854.2780000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   22058.1180000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   22061.9580000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   22075.7980000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   22075.7980000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   22075.7990000us:  [sim:description:2]     **Manual quiescent current measurement on channels 11 and a load of  2.50mA 
+UVM_INFO   @   22090.3190000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   22094.1590000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   22117.6790000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   22121.5190000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   22325.3590000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   22329.1990000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   22346.8790000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   22346.8790000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   22346.8800000us:  [sim:description:2]     **Manual quiescent current measurement on channels 01 and a load of  4.70mA 
+UVM_INFO   @   22356.5600000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   22360.4000000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   22379.0800000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   22382.9200000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   22586.7600000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   22590.6000000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   22604.4400000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   22604.4400000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   22604.4410000us:  [sim:description:2]     **Manual quiescent current measurement on channels 10 and a load of  1.29mA 
+UVM_INFO   @   22614.1210000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   22617.9610000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   22636.6410000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   22640.4810000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   22844.3210000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   22848.1610000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   22862.0010000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   22862.0010000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   22862.0020000us:  [sim:description:2]     **Manual quiescent current measurement on channels 11 and a load of  1.60mA 
+UVM_INFO   @   22876.5220000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   22880.3620000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   22903.8820000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   22907.7220000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   23111.5620000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   23115.4020000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   23133.0820000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   23133.0820000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   23133.0830000us:  [sim:description:2]     **Manual quiescent current measurement on channels 01 and a load of  4.99mA 
+UVM_INFO   @   23142.7630000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   23146.6030000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   23165.2830000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   23169.1230000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   23372.9630000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   23376.8030000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   23390.6430000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   23390.6430000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   23390.6440000us:  [sim:description:2]     **Manual quiescent current measurement on channels 10 and a load of  3.96mA 
+UVM_INFO   @   23400.3240000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   23404.1640000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   23422.8440000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   23426.6840000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   23630.5240000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   23634.3640000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   23648.2040000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   23648.2040000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   23648.2050000us:  [sim:description:2]     **Manual quiescent current measurement on channels 11 and a load of  3.75mA 
+UVM_INFO   @   23662.7250000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   23666.5650000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   23690.0850000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   23693.9250000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   23897.7650000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   23901.6050000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   23919.2850000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   23919.2850000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   23919.2860000us:  [sim:description:2]     **Manual quiescent current measurement on channels 01 and a load of  2.92mA 
+UVM_INFO   @   23928.9660000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   23932.8060000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   23951.4860000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   23955.3260000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   24159.1660000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   24163.0060000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   24176.8460000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   24176.8460000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   24176.8470000us:  [sim:description:2]     **Manual quiescent current measurement on channels 10 and a load of  4.73mA 
+UVM_INFO   @   24186.5270000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   24190.3670000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   24209.0470000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   24212.8870000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   24416.7270000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   24420.5670000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   24434.4070000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   24434.4070000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   24434.4080000us:  [sim:description:2]     **Manual quiescent current measurement on channels 11 and a load of  4.62mA 
+UVM_INFO   @   24448.9280000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   24452.7680000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   24476.2880000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   24480.1280000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   24683.9680000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   24687.8080000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   24705.4880000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   24705.4880000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   24705.4890000us:  [sim:description:2]     **Manual quiescent current measurement on channels 01 and a load of  0.59mA 
+UVM_INFO   @   24715.1690000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   24719.0090000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   24737.6890000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   24741.5290000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   24945.3690000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   24949.2090000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   24963.0490000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   24963.0490000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   24963.0500000us:  [sim:description:2]     **Manual quiescent current measurement on channels 10 and a load of  4.99mA 
+UVM_INFO   @   24972.7300000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   24976.5700000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   24995.2500000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   24999.0900000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   25202.9300000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   25206.7700000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   25220.6100000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   25220.6100000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   25220.6110000us:  [sim:description:2]     **Manual quiescent current measurement on channels 11 and a load of  2.31mA 
+UVM_INFO   @   25235.1310000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   25238.9710000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   25262.4910000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   25266.3310000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   25470.1710000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   25474.0110000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   25491.6910000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   25491.6910000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   25491.6920000us:  [sim:description:2]     **Manual quiescent current measurement on channels 01 and a load of  2.40mA 
+UVM_INFO   @   25501.3720000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   25505.2120000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   25523.8920000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   25527.7320000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   25731.5720000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   25735.4120000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   25749.2520000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   25749.2520000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   25749.2530000us:  [sim:description:2]     **Manual quiescent current measurement on channels 10 and a load of  0.70mA 
+UVM_INFO   @   25758.9330000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   25762.7730000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   25781.4530000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   25785.2930000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   25989.1330000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   25992.9730000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   26006.8130000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   26006.8130000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   26006.8140000us:  [sim:description:2]     **Manual quiescent current measurement on channels 11 and a load of  2.45mA 
+UVM_INFO   @   26021.3340000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   26025.1740000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   26048.6940000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   26052.5340000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   26256.3740000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   26260.2140000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   26277.8940000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   26277.8940000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   26277.8950000us:  [sim:description:2]     **Manual quiescent current measurement on channels 01 and a load of  2.63mA 
+UVM_INFO   @   26287.5750000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   26291.4150000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   26310.0950000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   26313.9350000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   26517.7750000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   26521.6150000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   26535.4550000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   26535.4550000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   26535.4560000us:  [sim:description:2]     **Manual quiescent current measurement on channels 10 and a load of  0.15mA 
+UVM_INFO   @   26545.1360000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   26548.9760000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   26567.6560000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   26571.4960000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   26775.3360000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   26779.1760000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   26793.0160000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   26793.0160000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   26793.0170000us:  [sim:description:2]     **Manual quiescent current measurement on channels 11 and a load of  2.01mA 
+UVM_INFO   @   26807.5370000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   26811.3770000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   26834.8970000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   26838.7370000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   27042.5770000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   27046.4170000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   27064.0970000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   27064.0970000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   27064.0980000us:  [sim:description:2]     **Manual quiescent current measurement on channels 01 and a load of  0.03mA 
+UVM_INFO   @   27073.7780000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   27077.6180000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   27096.2980000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   27100.1380000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   27303.9780000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   27307.8180000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   27321.6580000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   27321.6580000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   27321.6590000us:  [sim:description:2]     **Manual quiescent current measurement on channels 10 and a load of  1.86mA 
+UVM_INFO   @   27331.3390000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   27335.1790000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   27353.8590000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   27357.6990000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   27561.5390000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   27565.3790000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   27579.2190000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   27579.2190000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   27579.2200000us:  [sim:description:2]     **Manual quiescent current measurement on channels 11 and a load of  2.39mA 
+UVM_INFO   @   27593.7400000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   27597.5800000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   27621.1000000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   27624.9400000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   27828.7800000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   27832.6200000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   27850.3000000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   27850.3000000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   27850.3010000us:  [sim:description:2]     **Manual quiescent current measurement on channels 01 and a load of  2.18mA 
+UVM_INFO   @   27859.9810000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   27863.8210000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   27882.5010000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   27886.3410000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   28090.1810000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   28094.0210000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   28107.8610000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   28107.8610000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   28107.8620000us:  [sim:description:2]     **Manual quiescent current measurement on channels 10 and a load of  3.25mA 
+UVM_INFO   @   28117.5420000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   28121.3820000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   28140.0620000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   28143.9020000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   28347.7420000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   28351.5820000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   28365.4220000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   28365.4220000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   28365.4230000us:  [sim:description:2]     **Manual quiescent current measurement on channels 11 and a load of  1.85mA 
+UVM_INFO   @   28379.9430000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   28383.7830000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   28407.3030000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   28411.1430000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   28614.9830000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   28618.8230000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   28636.5030000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   28636.5030000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   28636.5040000us:  [sim:description:2]     **Manual quiescent current measurement on channels 01 and a load of  4.87mA 
+UVM_INFO   @   28646.1840000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   28650.0240000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   28668.7040000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   28672.5440000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   28876.3840000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   28880.2240000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   28894.0640000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   28894.0640000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   28894.0650000us:  [sim:description:2]     **Manual quiescent current measurement on channels 10 and a load of  1.51mA 
+UVM_INFO   @   28903.7450000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   28907.5850000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   28926.2650000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   28930.1050000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   29133.9450000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   29137.7850000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   29151.6250000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   29151.6250000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   29151.6260000us:  [sim:description:2]     **Manual quiescent current measurement on channels 11 and a load of  4.49mA 
+UVM_INFO   @   29166.1460000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   29169.9860000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   29193.5060000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   29197.3460000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   29401.1860000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   29405.0260000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_ERROR  @   29422.7060000us:  [manual_quiescent_current_measurement_seq] Failed to get edf_parameter_model from uvm_config_db!  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(81) 
+UVM_INFO   @   29422.7060000us:  [manual_quiescent_current_measurement_seq] manual_quiescent_current_measurement_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   29422.7070000us:  [sim:description:2]     **Manual quiescent current measurement on channels 01 and a load of  4.88mA 
+UVM_INFO   @   29432.3870000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+UVM_INFO   @   29436.2270000us:  [sim:measure]           'DSI_LOAD' status = PASS 
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++ ready:   ./simv_52144_dsi3_quiescent_current +UVM_VERBOSITY=UVM_MEDIUM +bus_conflict_off +warn=noFCICIO -ucli -assert nopostproc +UVM_LOG_RECORD -verdi_opts '-ssr Verdi.ses' +uvm_set_type_override=top_default_seq,dsi3_iload_seq -i run.tcl -vcs_assert off +UVM_VERDI_TRACE="UVM_AWARE+RAL+TLM+MSG+HIER+PRINT" +UVM_LOG_RECORD +UVM_TESTNAME=top_test +UVM_TR_RECORD +vcs+lic+wait -reportstats -cm line+cond+fsm+tgl+branch+assert -cm_dir DIGITAL/results/vcs/dsi3_quiescent_current.vdb -lca   +fsdbfile+dsi3_quiescent_current.fsdb
+ ++ in dir   /nfs/wrk.zaa/sim/52144/m52144a/dsi3_quiescent_current
+ ++ on host  ex04.elmos.de
+ ++ user     zaa
+ ++ endtime  2025-06-08T18:47:19
+ ++ took     52 seconds
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

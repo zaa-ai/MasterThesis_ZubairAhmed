@@ -1,0 +1,343 @@
++++ calling  ./simv_52144_appl_examples_in_spec +UVM_VERBOSITY=UVM_MEDIUM +bus_conflict_off +warn=noFCICIO -ucli -assert nopostproc +UVM_LOG_RECORD -verdi_opts '-ssr Verdi.ses' +uvm_set_type_override=top_default_seq,appl_examples_in_spec_seq -i run.tcl -vcs_assert off +UVM_VERDI_TRACE="UVM_AWARE+RAL+TLM+MSG+HIER+PRINT" +UVM_LOG_RECORD +UVM_TESTNAME=top_test +UVM_TR_RECORD +vcs+lic+wait -reportstats -cm line+cond+fsm+tgl+branch+assert -cm_dir DIGITAL/results/vcs/appl_examples_in_spec.vdb -lca   +fsdbfile+appl_examples_in_spec.fsdb
+ ++ in dir   /nfs/wrk.zaa/sim/52144/m52144a/appl_examples_in_spec
+ ++ on host  ex04.elmos.de
+ ++ user     zaa
+ ++ start    2025-06-08T18:20:17
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Warning-[LCA_FEATURES_ENABLED] Usage warning
+  LCA features enabled by '-lca' argument on the command line.  For more 
+  information regarding list of LCA features please refer to Chapter "LCA 
+  features" in the VCS Release Notes
+
+Chronologic VCS simulator copyright 1991-2021
+Contains Synopsys proprietary information.
+Compiler version S-2021.09-1_Full64; Runtime version S-2021.09-1_Full64;  Jun  8 20:20 2025
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+
+ VCS Coverage Metrics Release S-2021.09-1_Full64 Copyright (c) 1991-2021 by Synopsys Inc.
+ucli% source dump.tcl
+*Verdi* Loading libsscore_vcsmx202109.so
+FSDB Dumper for VCS-MX, Release Verdi_U-2023.03-1, Linux x86_64/64bit, 04/17/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'appl_examples_in_spec.fsdb'
+*Verdi* : fsdbDumpon("glitch") - All FSDB files at 0 ps.
+*Verdi* : Begin traversing the scope (top_tb), layer (0).
+*Verdi* : Enable +all dumping.
+*Verdi* : End of traversing.
+*Verdi* : Flush all FSDB Files at 0 ps.
+1
+ucli% if { [info exists ::env(GATE_LEVEL)] } {
+	source tcheck.tcl
+}
+ucli% run
+*Verdi* Enable Verdi Message Catcher.
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/verdi/uvm_custom_install_verdi_recorder.sv(283) @ 0: reporter [VERDI_TR_AUTO] +UVM_TR_RECORD implicitly enables recording_details to UVM_FULL for all components. For explicit control use +UVM_DISABLE_AUTO_COMPONENT and set recording_detail on components accordingly
+UVM_INFO @ 0: reporter [RNTST] Running test top_test...
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VRR applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VREF applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VBG applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+UVM_INFO @ 0: reporter [UVM_CMDLINE_PROC] Applying type override from the command line: +uvm_set_type_override=top_default_seq,appl_examples_in_spec_seq
+UVM_INFO   @       0.0000000us:  [UVM_VERDI_DPI]         uvm_verdi DPI routines are compiled off. Recompile without +define+UVM_NO_VERDI_DPI 
+UVM_INFO   @       0.0000000us:  [appl_examples_in_spec_seq] appl_examples_in_spec_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+*Verdi* Enable Verdi Recorder.
+Info: Verdi UVM 1.2 Hooks File 06/17/2014 
+UVM_INFO   @       0.0010000us:  [sim:task]              appl_examples_in_spec 
+UVM_INFO   @    2120.0010000us:  [sim:description]       '''Simulate the application examples described in specification''' 
+UVM_INFO   @    2120.0010000us:  [spec_Sync_CRM_on_DSI_seq] spec_Sync_CRM_on_DSI_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2120.0020000us:  [sim:description:1]     *CRM Commands unsynchronized on DSI3 Channels 
+UVM_ERROR  @    2628.5370000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @    2628.5370000us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    3629.6420000us:  [spec_Sync_CRM_on_DSI_seq] spec_Sync_CRM_on_DSI_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    3629.6430000us:  [sim:description:1]     *CRM Commands synchronized on DSI3 Channels 
+UVM_ERROR  @    4138.1780000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @    4138.1780000us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    5139.2830000us:  [spec_Sync_CRM_on_DSI_seq] spec_Sync_CRM_on_DSI_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    5139.2840000us:  [sim:description:1]     *CRM Commands synchronized on DSI3 Channels, wait before broadcast command 
+UVM_ERROR  @    5647.8190000us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @    5647.8190000us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    6648.9240000us:  [spec_Sync_IDLE_DSI_seq] spec_Sync_IDLE_DSI_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    6648.9250000us:  [sim:description:1]     *Synchronization of IDLE DSI3 channels 
+UVM_ERROR  @    7107.3937380us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @    7107.3937380us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    7207.4987380us:  [spec_external_Sync_on_DSI_seq] spec_external_Sync_on_DSI_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    7207.4997380us:  [sim:description:1]     *External Synchronization on DSI3 Channels by using SYNCB pin 
+UVM_ERROR  @    8024.6747380us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @    8024.6747380us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @    8124.7797380us:  [spec_DSI_wait_seq]     spec_DSI_wait_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    8124.7807380us:  [sim:description:1]     *DSI Wait Command Sequence 
+UVM_INFO   @    9634.3807380us:  [sim:description:1]     *CRM Command Sequence(Equal commands) 
+UVM_INFO   @    9634.3807380us:  [spec_CRM_command_seq]  spec_CRM_command_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    9634.3817380us:  [sim:description:2]     **CRM Command Sequence(Equal commands) 
+UVM_ERROR  @   10147.7167380us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   10147.7167380us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   10661.1567380us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   10661.1567380us:  [m_master_transmission_checker_0] ignored TE (timing error) flag because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_ERROR  @   10661.1567380us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   10761.2617380us:  [spec_CRM_configuration_seq] spec_CRM_configuration_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   10761.2627380us:  [sim:description:1]     *CRM Command Configuration Sequence 
+UVM_ERROR  @   11582.2777380us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   11582.2777380us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   11682.3827380us:  [spec_single_frame_pdcm_read_seq] spec_single_frame_pdcm_read_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   11682.3837380us:  [sim:description:1]     *Single Frame PDCM Read Sequence 
+UVM_INFO   @   11682.3837380us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   11740.0647380us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 367 us
+  0 | Symbols:  25 | SID_4Bit | Start:    53 -    95  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   12147.6397380us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 3 pulses and a PDCM period of 367  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   12147.6397380us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 3 pulses and a PDCM period of 367  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   12170.8465110us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   12172.8464740us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   12537.8465140us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   12537.8465140us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 367.000000 us - 1 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   12539.8465300us:  [sim:measure]           't__DSI,BIT,8__' = '8.001000' condition = 'at channel 1' 
+UVM_INFO   @   12539.8465300us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 367.000000 us - 1 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   12584.7997380us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |  25 symbols:  0x1712 0xe12a 0x39c2 0x4ec2 0xd9e5 0x0d5e 0x9000
+ channel 0b01 [  ] 1 packets
+  0 |   |   |   |   |   |   |  25 symbols:  0x1712 0xe12a 0x39c2 0x4ec2 0xd9e5 0x0d5e 0x9000  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   12584.7997380us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   12584.7997380us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   12904.8464980us:  [sim:measure]           't__DSI,BIT,8__' = '7.999000' condition = 'at channel 0' 
+UVM_INFO   @   12904.8464980us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 367.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   12906.8465140us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   12906.8465140us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 367.001000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   12971.9597380us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |  25 symbols:  0xd58b 0xcb3f 0x716d 0xdc6f 0x13c2 0x0a10 0xa000
+ channel 0b01 [  ] 1 packets
+  0 |   |CRC| TE|   |   |   |  25 symbols:  0xd58b 0xcb3f 0x716d 0xdc6f 0x13c2 0x0a10 0xa000  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   12971.9597380us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   12971.9597380us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   12971.9597380us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_INFO   @   13359.1197380us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |  25 symbols:  0x2aa0 0xb077 0x786c 0x4b55 0x94a8 0x0824 0x4000
+ channel 0b01 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |  25 symbols:  0x2aa0 0xb077 0x786c 0x4b55 0x94a8 0x0824 0x4000  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   13359.1197380us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   13359.1197380us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   13459.2247380us:  [spec_multiple_frame_pdcm_read_seq] spec_multiple_frame_pdcm_read_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   13459.2257380us:  [sim:description:1]     *Multiple Packet Frame PDCM Read Sequence 
+UVM_INFO   @   13459.2257380us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   13520.7467380us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 2 packets, period = 426 us
+  0 | Symbols:  12 | SID_4Bit | Start:    50 -    90
+  1 | Symbols:  12 | SID_0Bit | Start:   263 -   292  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   13928.3217380us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 426  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   13928.3217380us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 2 pulses and a PDCM period of 426  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   13951.5131860us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   13953.5131590us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   14365.8417380us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b01
+ channel 0b00 [  ] 2 packets
+  0 |   |   |   |   |   |   |  12 symbols:  0xf295 0x8800 0x60d3
+  1 |   |   |   |   |   |   |  12 symbols:  0x392e 0xc840 0xe0c4  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   14365.8417380us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   14365.8417380us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 1 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   14377.3617380us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b10
+ channel 0b01 [  ] 2 packets
+  0 |   |   |   |   |   |   |  12 symbols:  0xf295 0x8800 0x60d3
+  1 |   |   |   |   |   |   |  12 symbols:  0x392e 0xc840 0xe0c4  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   14377.3617380us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   14377.3617380us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 1 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   14377.3617380us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 1 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_INFO   @   14377.5131670us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   14377.5131670us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 426.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   14379.5131540us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   14379.5131540us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 426.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   14823.5217380us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 2 packets
+  0 |   |   |   |   |   |   |  12 symbols:  0x0a34 0x0115 0x740e
+  1 |   |   |   |   |   |   |  12 symbols:  0xf67d 0xde9a 0x797c
+ channel 0b01 [  ] 2 packets
+  0 |   |   |   |   |   |   |  12 symbols:  0x0a34 0x0115 0x740e
+  1 |   |   |   |   |   |   |  12 symbols:  0xf67d 0xde9a 0x797c  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   14823.5217380us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   14823.5217380us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 1 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   14823.5217380us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   14823.5217380us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 1 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   14823.5217380us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 1 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_INFO   @   14923.6267380us:  [spec_multiple_frame_pdcm_lang_packet_read_seq] spec_multiple_frame_pdcm_lang_packet_read_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   14923.6277380us:  [sim:description:1]     *Multiple Packet (with 36 symbols) Frame PDCM Read Sequence 
+UVM_INFO   @   14923.6277380us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   14981.3087380us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 608 us
+  0 | Symbols:  36 | SID_8Bit | Start:    60 -    98  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   15388.8837380us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 2 pulses and a PDCM period of 608  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   15388.8837380us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 2 pulses and a PDCM period of 608  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   15412.0686990us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   15414.0687060us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   16020.0687300us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   16020.0687300us:  [dsi3_master_transmission_checker] measured PDCM period at channel 0: 608.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   16022.0687460us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   16022.0687460us:  [dsi3_master_transmission_checker] measured PDCM period at channel 1: 608.000000 us - 0 pulses left  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(781) 
+UVM_INFO   @   16628.8837380us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |  36 symbols:  0x51f6 0x2131 0x9d98 0x8a3a 0x9855 0xff1f 0x354a 0xf08d 0x5cab
+ channel 0b01 [  ] 1 packets
+  0 |   |   |   |   |   |   |  36 symbols:  0x51f6 0x2131 0x9d98 0x8a3a 0x9855 0xff1f 0x354a 0xf08d 0x5cab  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   16628.8837380us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   16628.8837380us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   16628.8837380us:  [m_master_transmission_checker_1] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_INFO   @   16652.8837380us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 1 packets
+  0 |   |   |   |   |   |   |  36 symbols:  0xaa89 0xfff5 0x9a5a 0x761e 0x3ff3 0x1ed3 0xaa47 0xbcc0 0xc01d
+ channel 0b01 [  ] 1 packets
+  0 |   |   |   |   |   |   |  36 symbols:  0xaa89 0xfff5 0x9a5a 0x761e 0x3ff3 0x1ed3 0xaa47 0xbcc0 0xc01d  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   16652.8837380us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   16652.8837380us:  [m_master_transmission_checker_0] ignored TE (timing error) flag of packet index 0 because of gray zone timing  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1341) 
+UVM_ERROR  @   16652.8837380us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   16752.9887380us:  [spec_measurement_command_stack_seq] spec_measurement_command_stack_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   16752.9897380us:  [sim:description:1]     *Measurement Command Stack Sequence 
+UVM_INFO   @   16752.9897380us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @   16810.6707380us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 199 us
+  0 | Symbols:   8 | SID_0Bit | Start:    51 -    95  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @   17595.1355100us:  [dsi3_master_transmission_checker] start PDCM at channel 0 with 1 pulses and a PDCM period of 199  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   17597.1355260us:  [dsi3_master_transmission_checker] start PDCM at channel 1 with 1 pulses and a PDCM period of 199  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1074) 
+UVM_INFO   @   17616.0687540us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 0' 
+UVM_INFO   @   17618.0687070us:  [sim:measure]           't__DSI,BIT,8__' = '8.000000' condition = 'at channel 1' 
+UVM_INFO   @   17848.3693100us:  [dsi3_master_transmission_checker] read PDCM frame: channels 0b11
+ channel 0b00 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x4a4c 0xe5c5
+ channel 0b01 [  ] 1 packets
+  0 |   |CRC|   |   |   |   |   8 symbols:  0x4a4c 0xe5c5  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1205) 
+UVM_ERROR  @   17848.3693100us:  [m_master_transmission_checker_0] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 0, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_ERROR  @   17848.3693100us:  [m_master_transmission_checker_1] unexpected SCE (symbol count error) flag in packet header of packet index 0 at channel 1, expected 0, read 0  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/dut/dsi3_master_transmission_checker.svh(1323) 
+UVM_INFO   @   18048.4743100us:  [sim:status]            PASS 
+UVM_INFO   @   18048.4743100us:  [sim:end]               appl_examples_in_spec sequence completed 
+UVM_INFO   @   18048.4743100us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @   18048.4743100us:  [digital_signal_coverage] Coverage score = 37.5%  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @   18048.4743100us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @   18048.4743100us:  [dsi3_master_coverage]  Coverage score = 37.5%  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/dsi3_master/dsi3_master_coverage.sv(52) 
+UVM_INFO   @   18048.4743100us:  [dsi3_master_coverage]  Coverage score = 37.5%  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/dsi3_master/dsi3_master_coverage.sv(52) 
+UVM_INFO   @   18048.4743100us:  [dsi3_slave_coverage]   Coverage score = 18.5%  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/dsi3_slave/dsi3_slave_coverage.sv(57) 
+UVM_INFO   @   18048.4743100us:  [dsi3_slave_coverage]   Coverage score = 18.5%  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/dsi3_slave/dsi3_slave_coverage.sv(57) 
+UVM_INFO   @   18048.4743100us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @   18048.4743100us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @   18048.4743100us:  [digital_signal_coverage] Coverage score = 37.5%  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @   18048.4743100us:  [jtag_master_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/jtag_master/jtag_master_coverage.sv(57) 
+UVM_INFO   @   18048.4743100us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @   18048.4743100us:  [osc_coverage]          Coverage score = 25.8%  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/osc/osc_coverage.sv(52) 
+UVM_INFO   @   18048.4743100us:  [digital_signal_coverage] Coverage score = 37.5%  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @   18048.4743100us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @   18048.4743100us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @   18048.4743100us:  [digital_signal_coverage] Coverage score = 75.0%  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @   18048.4743100us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @   18048.4743100us:  [digital_signal_coverage] Coverage score = 0.0%  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/digital_signal/digital_signal_coverage.sv(52) 
+UVM_INFO   @   18048.4743100us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @   18048.4743100us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @   18048.4743100us:  [real_signal_coverage]  Coverage score = 0.0%  	/nfs/wrk.zaa/gittea/52144/DIGITAL/tb_eugene/agents/real_signal/real_signal_coverage.sv(53) 
+UVM_INFO   @   18048.4743100us:  [UVM/REPORT/CATCHER]    
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+  	/common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_report_catcher.svh(705) 
+UVM_INFO   @   18048.4743100us:  [UVM/REPORT/SERVER]     
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  113
+UVM_WARNING :    0
+UVM_ERROR :   36
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[UVM_CMDLINE_PROC]     1
+[UVM_VERDI_DPI]     1
+[VERDI_TR_AUTO]     1
+[appl_examples_in_spec_seq]     1
+[digital_signal_coverage]     8
+[dsi3_master_coverage]     2
+[dsi3_master_transmission_checker]    25
+[dsi3_slave_coverage]     2
+[jtag_master_coverage]     1
+[m_master_transmission_checker_0]    20
+[m_master_transmission_checker_1]    22
+[osc_coverage]     1
+[real_signal_coverage]     8
+[sim:description]     1
+[sim:description:1]    12
+[sim:description:2]     1
+[sim:end]     1
+[sim:measure]    16
+[sim:status]     1
+[sim:task]     1
+[spec_CRM_command_seq]     1
+[spec_CRM_configuration_seq]     1
+[spec_DSI_wait_seq]     1
+[spec_Sync_CRM_on_DSI_seq]     3
+[spec_Sync_IDLE_DSI_seq]     1
+[spec_external_Sync_on_DSI_seq]     1
+[spec_measurement_command_stack_seq]     1
+[spec_multiple_frame_pdcm_lang_packet_read_seq]     1
+[spec_multiple_frame_pdcm_read_seq]     1
+[spec_single_frame_pdcm_read_seq]     1
+[upload_tdma_scheme_seq]     8
+  	/common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_report_server.svh(904) 
+$finish called from file "/common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_root.svh", line 527.
+$finish at simulation time          18048474310
+Reporting coverage at the end of simulation ...
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, FSM, branch, tgl was monitored
+---------------------------------------------------------------------------
+
+ Coverage status: End of All Coverages ...
+
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 18048474310 ps
+
+Simulation Performance Summary
+==============================
+Simulation started at :  Sun Jun  8 20:20:18 2025
+Elapsed Time          :  29 sec
+CPU Time              :  32.6 sec
+Virtual memory size   :  869.6 MB
+Resident set size     :  402.8 MB
+Shared memory size    :  6.0 MB
+Private memory size   :  396.8 MB
+Major page faults     :  5
+Machine name          :  ex04.elmos.de
+==============================
+
+Sun Jun  8 20:20:46 2025
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++ ready:   ./simv_52144_appl_examples_in_spec +UVM_VERBOSITY=UVM_MEDIUM +bus_conflict_off +warn=noFCICIO -ucli -assert nopostproc +UVM_LOG_RECORD -verdi_opts '-ssr Verdi.ses' +uvm_set_type_override=top_default_seq,appl_examples_in_spec_seq -i run.tcl -vcs_assert off +UVM_VERDI_TRACE="UVM_AWARE+RAL+TLM+MSG+HIER+PRINT" +UVM_LOG_RECORD +UVM_TESTNAME=top_test +UVM_TR_RECORD +vcs+lic+wait -reportstats -cm line+cond+fsm+tgl+branch+assert -cm_dir DIGITAL/results/vcs/appl_examples_in_spec.vdb -lca   +fsdbfile+appl_examples_in_spec.fsdb
+ ++ in dir   /nfs/wrk.zaa/sim/52144/m52144a/appl_examples_in_spec
+ ++ on host  ex04.elmos.de
+ ++ user     zaa
+ ++ endtime  2025-06-08T18:20:46
+ ++ took     29 seconds
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

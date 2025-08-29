@@ -1,0 +1,405 @@
++++ calling  ./simv_52144_upload_tdma +UVM_VERBOSITY=UVM_MEDIUM +bus_conflict_off +warn=noFCICIO -ucli -assert nopostproc +UVM_LOG_RECORD -verdi_opts '-ssr Verdi.ses' +uvm_set_type_override=top_default_seq,upload_tdma_seq -i run.tcl -vcs_assert off +UVM_VERDI_TRACE="UVM_AWARE+RAL+TLM+MSG+HIER+PRINT" +UVM_LOG_RECORD +UVM_TESTNAME=top_test +UVM_TR_RECORD +vcs+lic+wait -reportstats -cm line+cond+fsm+tgl+branch+assert -cm_dir DIGITAL/results/vcs/upload_tdma.vdb -lca   +fsdbfile+upload_tdma.fsdb
+ ++ in dir   /nfs/wrk.zaa/sim/52144/m52144a/upload_tdma
+ ++ on host  ex04.elmos.de
+ ++ user     zaa
+ ++ start    2025-05-06T18:21:00
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Warning-[LCA_FEATURES_ENABLED] Usage warning
+  LCA features enabled by '-lca' argument on the command line.  For more 
+  information regarding list of LCA features please refer to Chapter "LCA 
+  features" in the VCS Release Notes
+
+Chronologic VCS simulator copyright 1991-2021
+Contains Synopsys proprietary information.
+Compiler version S-2021.09-1_Full64; Runtime version S-2021.09-1_Full64;  May  6 20:21 2025
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+
+ VCS Coverage Metrics Release S-2021.09-1_Full64 Copyright (c) 1991-2021 by Synopsys Inc.
+ucli% source dump.tcl
+*Verdi* Loading libsscore_vcsmx202109.so
+FSDB Dumper for VCS-MX, Release Verdi_U-2023.03-1, Linux x86_64/64bit, 04/17/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'upload_tdma.fsdb'
+*Verdi* : fsdbDumpon("glitch") - All FSDB files at 0 ps.
+*Verdi* : Begin traversing the scope (top_tb), layer (0).
+*Verdi* : Enable +all dumping.
+*Verdi* : End of traversing.
+*Verdi* : Flush all FSDB Files at 0 ps.
+1
+ucli% if { [info exists ::env(GATE_LEVEL)] } {
+	source tcheck.tcl
+}
+ucli% run
+*Verdi* Enable Verdi Message Catcher.
+UVM_INFO /common/run/synopsys/vcs/S-2021.09-1/etc/uvm-1.2/src/verdi/uvm_custom_install_verdi_recorder.sv(283) @ 0: reporter [VERDI_TR_AUTO] +UVM_TR_RECORD implicitly enables recording_details to UVM_FULL for all components. For explicit control use +UVM_DISABLE_AUTO_COMPONENT and set recording_detail on components accordingly
+UVM_INFO @ 0: reporter [RNTST] Running test top_test...
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VRR applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VREF applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+
+<<SiDENSE_IPS_WARN [0]:\top_tb.th.i_dut_wrapper.xtop.xdigtop.i_logic_top.i_test.i_test_control.i_otp_wrapper.U_OTPWRAP_L3_TOP.U_OTPWRAP_L2_CPU.U_OTPWRAP_L1_JTAG.U_OTPWRAP_L0_ATPG.GEN_TSMC.U_OTP4KX12 .u_ips:   Not Allowed controls for VBG applied. {VRREN,MRR[15],MRR[12:7]} = x_x_xxxxxx
+UVM_INFO @ 0: reporter [UVM_CMDLINE_PROC] Applying type override from the command line: +uvm_set_type_override=top_default_seq,upload_tdma_seq
+UVM_INFO   @       0.0000000us:  [UVM_VERDI_DPI]         uvm_verdi DPI routines are compiled off. Recompile without +define+UVM_NO_VERDI_DPI 
+UVM_INFO   @       0.0000000us:  [upload_tdma_seq]       upload_tdma_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+*Verdi* Enable Verdi Recorder.
+Info: Verdi UVM 1.2 Hooks File 06/17/2014 
+UVM_INFO   @       0.0010000us:  [sim:task]              upload_tdma 
+UVM_INFO   @    2120.0010000us:  [sim:description]       '''testcase for TDMA scheme uploads''' 
+UVM_INFO   @    2120.0010000us:  [upload_random_valid_tdma_schemes_seq] upload_random_valid_tdma_schemes_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2120.0020000us:  [sim:description:1]     *upload random valid TDMA scheme on all channels 
+UVM_INFO   @    2145.7620000us:  [sim:description:2]     **uploading TDMA scheme with 12 packets at channels 00 
+UVM_INFO   @    2145.7620000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2245.6830000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 12 packets, period = 2212 us
+  0 | Symbols:  24 | SID_16Bit_CRC | Start:    44 -    91
+  1 | Symbols:  29 | SID_4Bit | Start:   267 -   278
+  2 | Symbols:  10 | SID_4Bit | Start:   514 -   550
+  3 | Symbols:  21 | SID_0Bit | Start:   670 -   687
+  4 | Symbols:  13 | SID_8Bit | Start:   869 -   908
+  5 | Symbols:  20 | SID_4Bit | Start:  1032 -  1050
+  6 | Symbols:  17 | SID_0Bit | Start:  1200 -  1238
+  7 | Symbols:  27 | SID_16Bit_CRC | Start:  1393 -  1408
+  8 | Symbols:   9 | SID_4Bit | Start:  1612 -  1623
+  9 | Symbols:  14 | SID_8Bit | Start:  1696 -  1708
+ 10 | Symbols:  24 | SID_4Bit | Start:  1809 -  1824
+ 11 | Symbols:  17 | SID_8Bit | Start:  2021 -  2038  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_ERROR  @    2297.6030000us:  [spi_status_word]       Unexpected SPI status word flags Flag SCI was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(59) 
+UVM_INFO   @    2378.2030000us:  [sim:description:2]     **uploading TDMA scheme with 10 packets at channels 11 
+UVM_INFO   @    2378.2030000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2470.4440000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 10 packets, period = 4368 us
+  0 | Symbols:  23 | SID_4Bit | Start:   112 -   132
+  1 | Symbols:  27 | SID_0Bit | Start:   447 -   487
+  2 | Symbols:  28 | SID_16Bit_CRC | Start:   877 -   893
+  3 | Symbols:  21 | SID_8Bit | Start:  1293 -  1324
+  4 | Symbols:  22 | SID_0Bit | Start:  1663 -  1710
+  5 | Symbols:  25 | SID_4Bit | Start:  2038 -  2071
+  6 | Symbols:  19 | SID_0Bit | Start:  2439 -  2485
+  7 | Symbols:  37 | SID_0Bit | Start:  2759 -  2774
+  8 | Symbols:  36 | SID_4Bit | Start:  3314 -  3339
+  9 | Symbols:  25 | SID_4Bit | Start:  3825 -  3855  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    2526.2040000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    2530.0440000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    2605.8040000us:  [sim:description:2]     **uploading TDMA scheme with 13 packets at channels 11 
+UVM_INFO   @    2605.8040000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2709.5650000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 13 packets, period = 7559 us
+  0 | Symbols:  34 | SID_4Bit | Start:    77 -   125
+  1 | Symbols:  34 | SID_8Bit | Start:   734 -   778
+  2 | Symbols:  26 | SID_16Bit_CRC | Start:  1351 -  1383
+  3 | Symbols:  32 | SID_4Bit | Start:  1850 -  1882
+  4 | Symbols:  29 | SID_0Bit | Start:  2456 -  2498
+  5 | Symbols:  28 | SID_0Bit | Start:  3023 -  3068
+  6 | Symbols:  24 | SID_8Bit | Start:  3543 -  3567
+  7 | Symbols:  38 | SID_0Bit | Start:  3983 -  3998
+  8 | Symbols:  27 | SID_0Bit | Start:  4650 -  4685
+  9 | Symbols:  31 | SID_16Bit_CRC | Start:  5183 -  5231
+ 10 | Symbols:  26 | SID_0Bit | Start:  5756 -  5785
+ 11 | Symbols:  35 | SID_0Bit | Start:  6247 -  6295
+ 12 | Symbols:  38 | SID_0Bit | Start:  6882 -  6912  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    2765.3250000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    2769.1650000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    2844.9250000us:  [sim:description:2]     **uploading TDMA scheme with 8 packets at channels 01 
+UVM_INFO   @    2844.9250000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    2929.4860000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 8 packets, period = 1438 us
+  0 | Symbols:  13 | SID_16Bit_CRC | Start:    49 -    59
+  1 | Symbols:   7 | SID_4Bit | Start:   212 -   222
+  2 | Symbols:   8 | SID_0Bit | Start:   351 -   379
+  3 | Symbols:  17 | SID_0Bit | Start:   481 -   507
+  4 | Symbols:   7 | SID_8Bit | Start:   709 -   726
+  5 | Symbols:  13 | SID_0Bit | Start:   850 -   897
+  6 | Symbols:  19 | SID_16Bit_CRC | Start:  1046 -  1089
+  7 | Symbols:   8 | SID_4Bit | Start:  1290 -  1301  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    2985.2460000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    3061.0060000us:  [sim:description:2]     **uploading TDMA scheme with 7 packets at channels 01 
+UVM_INFO   @    3061.0060000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    3141.7270000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 7 packets, period = 1306 us
+  0 | Symbols:  10 | SID_16Bit_CRC | Start:    45 -    58
+  1 | Symbols:  14 | SID_0Bit | Start:   204 -   250
+  2 | Symbols:   9 | SID_0Bit | Start:   444 -   484
+  3 | Symbols:  12 | SID_16Bit_CRC | Start:   587 -   633
+  4 | Symbols:  13 | SID_0Bit | Start:   792 -   802
+  5 | Symbols:  11 | SID_8Bit | Start:   952 -   999
+  6 | Symbols:  10 | SID_4Bit | Start:  1138 -  1149  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    3197.4870000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    3273.2470000us:  [sim:description:2]     **uploading TDMA scheme with 1 packets at channels 11 
+UVM_INFO   @    3273.2470000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    3330.9280000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 392 us
+  0 | Symbols:  21 | SID_16Bit_CRC | Start:    42 -    53  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    3386.6880000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    3390.5280000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    3466.2880000us:  [sim:description:2]     **uploading TDMA scheme with 13 packets at channels 10 
+UVM_INFO   @    3466.2880000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    3570.0490000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 13 packets, period = 6969 us
+  0 | Symbols:  53 | SID_16Bit_CRC | Start:    82 -   116
+  1 | Symbols:  57 | SID_8Bit | Start:   676 -   716
+  2 | Symbols:  46 | SID_4Bit | Start:  1306 -  1320
+  3 | Symbols:  39 | SID_4Bit | Start:  1802 -  1834
+  4 | Symbols:  31 | SID_4Bit | Start:  2252 -  2302
+  5 | Symbols:  31 | SID_8Bit | Start:  2616 -  2631
+  6 | Symbols:  44 | SID_16Bit_CRC | Start:  2943 -  2953
+  7 | Symbols:  58 | SID_16Bit_CRC | Start:  3432 -  3450
+  8 | Symbols:  50 | SID_8Bit | Start:  4021 -  4033
+  9 | Symbols:  47 | SID_16Bit_CRC | Start:  4567 -  4609
+ 10 | Symbols:  51 | SID_8Bit | Start:  5104 -  5148
+ 11 | Symbols:  61 | SID_16Bit_CRC | Start:  5656 -  5703
+ 12 | Symbols:  46 | SID_16Bit_CRC | Start:  6323 -  6349  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    3625.8090000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    3701.5690000us:  [sim:description:2]     **uploading TDMA scheme with 10 packets at channels 00 
+UVM_INFO   @    3701.5690000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    3793.8100000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 10 packets, period = 4250 us
+  0 | Symbols:  18 | SID_16Bit_CRC | Start:    89 -   127
+  1 | Symbols:  25 | SID_8Bit | Start:   459 -   477
+  2 | Symbols:  24 | SID_0Bit | Start:   947 -   973
+  3 | Symbols:  18 | SID_16Bit_CRC | Start:  1417 -  1452
+  4 | Symbols:  19 | SID_0Bit | Start:  1774 -  1787
+  5 | Symbols:  19 | SID_8Bit | Start:  2138 -  2149
+  6 | Symbols:  14 | SID_4Bit | Start:  2521 -  2536
+  7 | Symbols:  16 | SID_8Bit | Start:  2810 -  2840
+  8 | Symbols:  30 | SID_0Bit | Start:  3133 -  3157
+  9 | Symbols:  24 | SID_0Bit | Start:  3677 -  3717  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_ERROR  @    3845.7300000us:  [spi_status_word]       Unexpected SPI status word flags Flag SCI was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(59) 
+UVM_INFO   @    3926.3300000us:  [sim:description:2]     **uploading TDMA scheme with 15 packets at channels 00 
+UVM_INFO   @    3926.3300000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    4037.7710000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 15 packets, period = 4364 us
+  0 | Symbols:  22 | SID_8Bit | Start:   118 -   163
+  1 | Symbols:  30 | SID_0Bit | Start:   407 -   444
+  2 | Symbols:  31 | SID_8Bit | Start:   778 -   795
+  3 | Symbols:  14 | SID_0Bit | Start:  1153 -  1201
+  4 | Symbols:  26 | SID_4Bit | Start:  1379 -  1393
+  5 | Symbols:  31 | SID_16Bit_CRC | Start:  1694 -  1719
+  6 | Symbols:  16 | SID_0Bit | Start:  2054 -  2085
+  7 | Symbols:  17 | SID_8Bit | Start:  2254 -  2275
+  8 | Symbols:  14 | SID_8Bit | Start:  2475 -  2488
+  9 | Symbols:  14 | SID_16Bit_CRC | Start:  2647 -  2696
+ 10 | Symbols:  19 | SID_16Bit_CRC | Start:  2857 -  2893
+ 11 | Symbols:  17 | SID_16Bit_CRC | Start:  3139 -  3188
+ 12 | Symbols:  21 | SID_16Bit_CRC | Start:  3401 -  3414
+ 13 | Symbols:  16 | SID_16Bit_CRC | Start:  3636 -  3652
+ 14 | Symbols:  27 | SID_0Bit | Start:  3870 -  3918  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_ERROR  @    4089.6910000us:  [spi_status_word]       Unexpected SPI status word flags Flag SCI was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(59) 
+UVM_INFO   @    4170.2910000us:  [sim:description:2]     **uploading TDMA scheme with 15 packets at channels 00 
+UVM_INFO   @    4170.2910000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    4281.7320000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 15 packets, period = 2949 us
+  0 | Symbols:  13 | SID_0Bit | Start:    71 -   121
+  1 | Symbols:  14 | SID_8Bit | Start:   264 -   287
+  2 | Symbols:  12 | SID_0Bit | Start:   400 -   416
+  3 | Symbols:  24 | SID_4Bit | Start:   523 -   564
+  4 | Symbols:  18 | SID_0Bit | Start:   734 -   783
+  5 | Symbols:  25 | SID_0Bit | Start:   935 -   969
+  6 | Symbols:  20 | SID_16Bit_CRC | Start:  1151 -  1176
+  7 | Symbols:  27 | SID_8Bit | Start:  1357 -  1400
+  8 | Symbols:  15 | SID_16Bit_CRC | Start:  1615 -  1665
+  9 | Symbols:  28 | SID_8Bit | Start:  1788 -  1838
+ 10 | Symbols:  22 | SID_4Bit | Start:  2043 -  2075
+ 11 | Symbols:  10 | SID_16Bit_CRC | Start:  2250 -  2260
+ 12 | Symbols:  15 | SID_0Bit | Start:  2336 -  2367
+ 13 | Symbols:  16 | SID_16Bit_CRC | Start:  2514 -  2542
+ 14 | Symbols:  19 | SID_16Bit_CRC | Start:  2683 -  2700  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_ERROR  @    4333.6520000us:  [spi_status_word]       Unexpected SPI status word flags Flag SCI was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(59) 
+UVM_INFO   @    4414.2520000us:  [sim:description:2]     **uploading TDMA scheme with 9 packets at channels 11 
+UVM_INFO   @    4414.2520000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    4502.6530000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 9 packets, period = 4810 us
+  0 | Symbols:  27 | SID_16Bit_CRC | Start:    42 -    80
+  1 | Symbols:  20 | SID_4Bit | Start:   562 -   589
+  2 | Symbols:  18 | SID_16Bit_CRC | Start:   979 -  1017
+  3 | Symbols:  26 | SID_16Bit_CRC | Start:  1331 -  1345
+  4 | Symbols:  39 | SID_16Bit_CRC | Start:  1832 -  1879
+  5 | Symbols:  31 | SID_4Bit | Start:  2529 -  2559
+  6 | Symbols:  18 | SID_4Bit | Start:  3102 -  3142
+  7 | Symbols:  38 | SID_8Bit | Start:  3460 -  3472
+  8 | Symbols:  28 | SID_4Bit | Start:  4142 -  4178  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    4558.4130000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    4562.2530000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    4638.0130000us:  [sim:description:2]     **uploading TDMA scheme with 3 packets at channels 01 
+UVM_INFO   @    4638.0130000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    4703.3740000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 3 packets, period = 1108 us
+  0 | Symbols:  20 | SID_4Bit | Start:    89 -   115
+  1 | Symbols:  13 | SID_0Bit | Start:   344 -   359
+  2 | Symbols:  42 | SID_0Bit | Start:   536 -   585  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    4759.1340000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    4834.8940000us:  [sim:description:2]     **uploading TDMA scheme with 4 packets at channels 11 
+UVM_INFO   @    4834.8940000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    4904.0950000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 4 packets, period = 1141 us
+  0 | Symbols:  19 | SID_16Bit_CRC | Start:    89 -   133
+  1 | Symbols:  22 | SID_16Bit_CRC | Start:   376 -   396
+  2 | Symbols:  19 | SID_0Bit | Start:   642 -   660
+  3 | Symbols:  17 | SID_8Bit | Start:   895 -   918  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    4959.8550000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    4963.6950000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    5039.4550000us:  [sim:description:2]     **uploading TDMA scheme with 4 packets at channels 00 
+UVM_INFO   @    5039.4550000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    5108.6560000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 4 packets, period = 1793 us
+  0 | Symbols:  26 | SID_16Bit_CRC | Start:    87 -   136
+  1 | Symbols:  43 | SID_0Bit | Start:   418 -   462
+  2 | Symbols:  34 | SID_8Bit | Start:   924 -   971
+  3 | Symbols:  29 | SID_16Bit_CRC | Start:  1353 -  1365  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_ERROR  @    5160.5760000us:  [spi_status_word]       Unexpected SPI status word flags Flag SCI was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(59) 
+UVM_INFO   @    5241.1760000us:  [sim:description:2]     **uploading TDMA scheme with 4 packets at channels 11 
+UVM_INFO   @    5241.1760000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    5310.3770000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 4 packets, period = 956 us
+  0 | Symbols:  19 | SID_16Bit_CRC | Start:    33 -    76
+  1 | Symbols:  16 | SID_0Bit | Start:   244 -   292
+  2 | Symbols:  19 | SID_4Bit | Start:   443 -   474
+  3 | Symbols:  16 | SID_16Bit_CRC | Start:   646 -   667  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    5366.1370000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    5369.9770000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    5445.7370000us:  [sim:description:2]     **uploading TDMA scheme with 10 packets at channels 11 
+UVM_INFO   @    5445.7370000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    5537.9780000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 10 packets, period = 5323 us
+  0 | Symbols:  48 | SID_8Bit | Start:    49 -    66
+  1 | Symbols:  54 | SID_0Bit | Start:   551 -   599
+  2 | Symbols:  44 | SID_0Bit | Start:  1129 -  1140
+  3 | Symbols:  44 | SID_16Bit_CRC | Start:  1581 -  1598
+  4 | Symbols:  40 | SID_8Bit | Start:  2082 -  2106
+  5 | Symbols:  54 | SID_4Bit | Start:  2514 -  2556
+  6 | Symbols:  39 | SID_4Bit | Start:  3109 -  3153
+  7 | Symbols:  38 | SID_4Bit | Start:  3558 -  3575
+  8 | Symbols:  59 | SID_16Bit_CRC | Start:  3969 -  3998
+  9 | Symbols:  57 | SID_8Bit | Start:  4599 -  4644  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    5593.7380000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    5597.5780000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    5673.3380000us:  [sim:description:2]     **uploading TDMA scheme with 7 packets at channels 10 
+UVM_INFO   @    5673.3380000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    5754.0590000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 7 packets, period = 2311 us
+  0 | Symbols:  24 | SID_4Bit | Start:    31 -    72
+  1 | Symbols:  40 | SID_0Bit | Start:   325 -   356
+  2 | Symbols:  21 | SID_16Bit_CRC | Start:   789 -   834
+  3 | Symbols:  36 | SID_0Bit | Start:  1091 -  1105
+  4 | Symbols:  16 | SID_0Bit | Start:  1466 -  1487
+  5 | Symbols:  12 | SID_16Bit_CRC | Start:  1681 -  1718
+  6 | Symbols:  38 | SID_0Bit | Start:  1868 -  1907  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    5809.8190000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    5885.5790000us:  [sim:description:2]     **uploading TDMA scheme with 14 packets at channels 10 
+UVM_INFO   @    5885.5790000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    5993.1800000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 14 packets, period = 3680 us
+  0 | Symbols:  28 | SID_4Bit | Start:    27 -    43
+  1 | Symbols:  16 | SID_4Bit | Start:   268 -   299
+  2 | Symbols:  33 | SID_0Bit | Start:   450 -   483
+  3 | Symbols:  20 | SID_16Bit_CRC | Start:   746 -   786
+  4 | Symbols:  30 | SID_4Bit | Start:   929 -   948
+  5 | Symbols:  41 | SID_0Bit | Start:  1196 -  1236
+  6 | Symbols:  40 | SID_0Bit | Start:  1523 -  1561
+  7 | Symbols:  43 | SID_8Bit | Start:  1859 -  1905
+  8 | Symbols:  24 | SID_8Bit | Start:  2203 -  2227
+  9 | Symbols:  40 | SID_0Bit | Start:  2403 -  2438
+ 10 | Symbols:  25 | SID_16Bit_CRC | Start:  2742 -  2789
+ 11 | Symbols:  29 | SID_16Bit_CRC | Start:  3009 -  3050
+ 12 | Symbols:  14 | SID_0Bit | Start:  3288 -  3332
+ 13 | Symbols:  21 | SID_16Bit_CRC | Start:  3455 -  3483  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    6048.9400000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    6124.7000000us:  [sim:description:2]     **uploading TDMA scheme with 5 packets at channels 11 
+UVM_INFO   @    6124.7000000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    6197.7410000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 5 packets, period = 1345 us
+  0 | Symbols:  19 | SID_8Bit | Start:    39 -    60
+  1 | Symbols:  19 | SID_8Bit | Start:   292 -   319
+  2 | Symbols:  17 | SID_4Bit | Start:   549 -   596
+  3 | Symbols:  17 | SID_0Bit | Start:   813 -   831
+  4 | Symbols:  19 | SID_16Bit_CRC | Start:  1049 -  1084  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    6253.5010000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    6257.3410000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    6333.1010000us:  [sim:description:2]     **uploading TDMA scheme with 5 packets at channels 10 
+UVM_INFO   @    6333.1010000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    6406.1420000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 5 packets, period = 1187 us
+  0 | Symbols:  15 | SID_4Bit | Start:   115 -   151
+  1 | Symbols:  22 | SID_8Bit | Start:   281 -   296
+  2 | Symbols:  24 | SID_8Bit | Start:   451 -   472
+  3 | Symbols:  23 | SID_4Bit | Start:   680 -   707
+  4 | Symbols:  24 | SID_0Bit | Start:   899 -   940  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    6461.9020000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    6537.6620000us:  [sim:description:2]     **uploading TDMA scheme with 5 packets at channels 01 
+UVM_INFO   @    6537.6620000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    6610.7030000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 5 packets, period = 2321 us
+  0 | Symbols:  27 | SID_8Bit | Start:    51 -    70
+  1 | Symbols:  32 | SID_0Bit | Start:   357 -   406
+  2 | Symbols:  57 | SID_16Bit_CRC | Start:   766 -   797
+  3 | Symbols:  32 | SID_0Bit | Start:  1402 -  1451
+  4 | Symbols:  35 | SID_4Bit | Start:  1819 -  1857  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    6666.4630000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    6742.2230000us:  [sim:description:2]     **uploading TDMA scheme with 11 packets at channels 10 
+UVM_INFO   @    6742.2230000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    6838.3040000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 11 packets, period = 2018 us
+  0 | Symbols:  11 | SID_8Bit | Start:    50 -    87
+  1 | Symbols:   9 | SID_8Bit | Start:   250 -   299
+  2 | Symbols:   9 | SID_16Bit_CRC | Start:   412 -   448
+  3 | Symbols:   9 | SID_0Bit | Start:   559 -   597
+  4 | Symbols:  12 | SID_0Bit | Start:   748 -   794
+  5 | Symbols:  12 | SID_4Bit | Start:   931 -   950
+  6 | Symbols:  15 | SID_8Bit | Start:  1131 -  1174
+  7 | Symbols:  11 | SID_4Bit | Start:  1338 -  1349
+  8 | Symbols:  14 | SID_0Bit | Start:  1477 -  1497
+  9 | Symbols:  11 | SID_16Bit_CRC | Start:  1651 -  1686
+ 10 | Symbols:   8 | SID_16Bit_CRC | Start:  1819 -  1831  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    6894.0640000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    6969.8240000us:  [sim:description:2]     **uploading TDMA scheme with 1 packets at channels 00 
+UVM_INFO   @    6969.8240000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    7027.5050000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 1 packets, period = 397 us
+  0 | Symbols:  14 | SID_8Bit | Start:    20 -    68  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_ERROR  @    7079.4250000us:  [spi_status_word]       Unexpected SPI status word flags Flag SCI was not set correctly! Exp. 0 but got 1  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/spi/data/flags_container.svh(59) 
+UVM_INFO   @    7160.0250000us:  [sim:description:2]     **uploading TDMA scheme with 3 packets at channels 01 
+UVM_INFO   @    7160.0250000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    7225.3860000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 3 packets, period = 1216 us
+  0 | Symbols:  32 | SID_4Bit | Start:    79 -   128
+  1 | Symbols:  30 | SID_4Bit | Start:   457 -   470
+  2 | Symbols:  32 | SID_8Bit | Start:   778 -   793  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    7281.1460000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    7356.9060000us:  [sim:description:2]     **uploading TDMA scheme with 2 packets at channels 11 
+UVM_INFO   @    7356.9060000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+UVM_INFO   @    7418.4270000us:  [upload_tdma_scheme_seq] uploaded TDMA scheme:
+ TDMA Scheme: 2 packets, period = 950 us
+  0 | Symbols:  33 | SID_16Bit_CRC | Start:    43 -    87
+  1 | Symbols:  36 | SID_0Bit | Start:   417 -   457  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/sequences/sub_sequences/pdcm/upload_tdma_scheme_seq.svh(36) 
+UVM_INFO   @    7474.1870000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    7478.0270000us:  [sim:measure]           'PDCM_PERIOD' status = PASS 
+UVM_INFO   @    7553.7870000us:  [sim:description:2]     **uploading TDMA scheme with 7 packets at channels 01 
+UVM_INFO   @    7553.7870000us:  [upload_tdma_scheme_seq] upload_tdma_scheme_seq sequence starting  	/nfs/wrk.zaa/52144/DIGITAL/tb_eugene/agents/top/includes/top_seq_inc.sv(92) 
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++ ready:   ./simv_52144_upload_tdma +UVM_VERBOSITY=UVM_MEDIUM +bus_conflict_off +warn=noFCICIO -ucli -assert nopostproc +UVM_LOG_RECORD -verdi_opts '-ssr Verdi.ses' +uvm_set_type_override=top_default_seq,upload_tdma_seq -i run.tcl -vcs_assert off +UVM_VERDI_TRACE="UVM_AWARE+RAL+TLM+MSG+HIER+PRINT" +UVM_LOG_RECORD +UVM_TESTNAME=top_test +UVM_TR_RECORD +vcs+lic+wait -reportstats -cm line+cond+fsm+tgl+branch+assert -cm_dir DIGITAL/results/vcs/upload_tdma.vdb -lca   +fsdbfile+upload_tdma.fsdb
+ ++ in dir   /nfs/wrk.zaa/sim/52144/m52144a/upload_tdma
+ ++ on host  ex04.elmos.de
+ ++ user     zaa
+ ++ endtime  2025-05-06T18:21:54
+ ++ took     54 seconds
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
