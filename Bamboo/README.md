@@ -1,9 +1,10 @@
 # Bamboo Automated Integration 
-Integrate an AI-enabled EDA tool Synopsys Verdi RDA into your Atlassian Bamboo regression pipeline. This setup automates:
+Integrates an AI-enabled EDA tool 'Synopsys Verdi RDA' into the Atlassian -- Bamboo regression pipeline. This setup automates:
 1. **Regression simulation** with VCS/UVM  
-2. **AI-driven RDA “binning”** of fail logs  
-3. **HTML summary** of binning results  
+2. **AI-driven RDA “binning”** of fail logs with Verdi RDA Binning tool 
+3. **HTML summary** of binning results  from .``json`` file
 
+**Note:** The following setup has been fully integrated into Elmos’s regression system (Bamboo). Consequently, executing the visualization or simulation independently of the setup will not yield the intended outcomes. Nevertheless, the provided scripts can still be examined to gain a clear understanding of the underlying processes and system behavior.
 ## Table of Contents
 
 - [Prerequisites](#prerequisites)  
@@ -19,7 +20,16 @@ Integrate an AI-enabled EDA tool Synopsys Verdi RDA into your Atlassian Bamboo r
 - [Contributing](#contributing) 
 
 ---
+**Direct Project link:** https://buildmaster1.elmos.de/browse/DIG52144-TEM3 
 
+- Can be accessed by clicking the above link
+- Make sure the plan branch is `verdi-rda-eval`
+- Navigate to the `Actions` tab (top right)
+- Select `Configure branch`
+- From the top left menu, choose `RTL Simulations`
+- All available `Script` can be found there
+
+ 
 
 ## Prerequisites
 
@@ -40,6 +50,7 @@ Integrate an AI-enabled EDA tool Synopsys Verdi RDA into your Atlassian Bamboo r
 - Synopsys license server reachable via:
 
 ```bash
+module load verdi/W-2024.09-SP1
 export SNPSLMD_LICENSE_FILE=27020@license03:27020@aedlmgr
 ```
 - Bamboo plan with a Checkout task that places your repo at `$BAMBOO_BUILD_WORKING_DIRECTORY`
@@ -53,21 +64,21 @@ export SNPSLMD_LICENSE_FILE=27020@license03:27020@aedlmgr
 
     - Segregates passing vs. failing logs under `logs/`, `passing/`, `failing/`
 
-    - Produces `vcs.txt` (list of failure logs) and `logs.tar.gz`
+    - Produces `vcs.txt` (list of failure logs) and `logs.tar.gz` as Artifact
 
 2. `rda_binning.sh`
 
-    - Loads Verdi RDA module
+    - Loads Verdi RDA module for binning
 
-    - Generates `temp.yaml`, transforms it to `rca.yaml`
+    - Generates `temp.yaml`, transforms it to `rca.yaml` // Creating a copy of `temp.yaml` for reference
 
     - Inserts `vcs.txt` into `rca.yaml` → runs `autorca -cfg rca.yaml`
 
-    - Outputs `report.json` in the working directory
+    - Outputs `rda_report.json` in the working directory
 
 3. `html_summary.sh`
 
-    - Python-based reader of `rda_report.json`
+    - Reads `rda_report.json`
 
     - Emits an interactive `report_summary.html` for human review
 
@@ -102,7 +113,7 @@ pip3 install --user pyyaml
 
         - `selected_test.list`, `vcs.txt`
 
-        - `logs/`, `passing/`, `failing/`, `logs.tar.gz`
+        - `logs/`, `passing/`, `failing/`, `logs.tar.gz` (Artifact structure can be customized)
 
 2. **`rda_binning.sh`**
 
@@ -116,7 +127,7 @@ pip3 install --user pyyaml
 
         - `rca.yaml` (final config)
 
-        - `report.json`
+        - `rda_report.json`
 
 3. **`html_summary.sh`**
 
