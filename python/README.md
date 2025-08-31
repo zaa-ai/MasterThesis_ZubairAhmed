@@ -13,7 +13,7 @@ Most of the concepts and methodologies applied in this work are inspired by the 
 3. [Usage](#usage)  
 4. [Algorithm Overview](#algorithm-overview)  
 5. [Configuration & Hyperparameters](#configuration--hyperparameters)  
-6. [Ground-Truth Benchmarking](#ground-truth-benchmarking)  
+6. [Ground-Truth](#ground-truth)  
 7. [Clustering & Visualization](#clustering--visualization)  
 8. [Contributing](#contributing)  
 
@@ -201,7 +201,7 @@ beta  = np.sqrt(r_num  / n_num)
 - `min_samples` ∈ [2,3,4,5,6]
 **K-Means grid:**
 - `k` ∈ [2…10] (or restrict around your true count)
-## Ground-Truth (manual baseline)
+## Ground-Truth
 The core purpose of this part is for the evaluation of the framework with the manual baseline (ground truth)
 To achieve this, define your “ideal” clusters once in the script:
 
@@ -212,31 +212,31 @@ To achieve this, define your “ideal” clusters once in the script:
     "upload_tdma.log":              1,
     "ic_startup.log":               1,
     "debounce_times.log":           2,
-    "dsi3_crm_ecc_2_bit_error_sim.log": 5,
+    "dsi3_crm_ecc_2_bit_error_sim.log": 3,
     "dsi3_crm.log":                 1,
-    "dsi3_sync_pin_sim.log":        3,
-    "register_access.log":          3,
-    "dsi3_pdcm.log":                4,
-    "dsi3_sync_pin.log":            4,
+    "dsi3_sync_pin_sim.log":        4,
+    "register_access.log":          5,
+    "dsi3_pdcm.log":                6,
+    "dsi3_sync_pin.log":            6,
     "dsi3_clear_command_buffer.log":4,
-    "interrupts_test_sim.log":      4,
-    "shut_off.log":                 5,
-    "dsi3_sync_channels.log":       5,
-    "jtag_test.log":                6,
-    "applicative_pattern.log":      7,
-    "p52143_489.log":               7,
-    "p52143_701.log":               8,
-    "dsi3_pdcm_timing.log":         8,
-    "dsi3_crc.log":                 8,
-    "app_exm_in_spec.log":          8,
-    "ic_status_word.log":           9,
-    "dsi3_quiscent_current.log":   10,
-    "dsi3_wait.log":               10,
-    "dsi3_discovery_mode.log":     10,
-    "otp_pulse_width.log":         10,
-    "dsi3_crm_timing.log":         11,
-    "spi_framing.log":             11,
-    "sram_bist.log":               12, 
+    "interrupts_test_sim.log":      6,
+    "shut_off.log":                 3,
+    "dsi3_sync_channels.log":       3,
+    "jtag_test.log":                7,
+    "applicative_pattern.log":      8,
+    "p52143_489.log":               8,
+    "p52143_701.log":               9,
+    "dsi3_pdcm_timing.log":         9,
+    "dsi3_crc.log":                 9,
+    "app_exm_in_spec.log":          9,
+    "ic_status_word.log":           10,
+    "dsi3_quiscent_current.log":   11,
+    "dsi3_wait.log":               11,
+    "dsi3_discovery_mode.log":     11,
+    "otp_pulse_width.log":         11,
+    "dsi3_crm_timing.log":         12,
+    "spi_framing.log":             12,
+    "sram_bist.log":               13, 
 }
 ```
 The script then computes:
